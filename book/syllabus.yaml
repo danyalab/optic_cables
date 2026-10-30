@@ -1,0 +1,402 @@
+# Syllabus: chapters, sections, learning objectives, prerequisite edges.
+# Invariant (enforced by tools/lint.py): every prereq points to a section that
+# appears earlier in reading order, so the prerequisite graph is a DAG that is
+# consistent with the table of contents.
+#
+# status: draft (awaiting approval at gate G0)
+
+title: "Optical Interconnect and Networks, from Fiber Physics to Geopolitics"
+subtitle: "A source-verified technical text, with US and China perspectives"
+language: en
+glossary_language: zh-Hans
+
+chapters:
+
+  - id: 1
+    title: "Fiber channel physics"
+    pilot: true
+    sections:
+      - id: "1.1"
+        title: "Attenuation and fiber types"
+        prereqs: []
+        objectives:
+          - "Derive the λ⁻⁴ Rayleigh scattering law from dipole radiation and separate the loss spectrum into Rayleigh, infrared multiphonon, UV Urbach tail, and OH⁻ absorption components."
+          - "Explain why pure-silica-core (PSC) fiber reaches lower Rayleigh loss than Ge-doped core fiber (fictive temperature, concentration fluctuations)."
+          - "Compare ITU-T G.652.D, G.654.E and G.657 in loss, effective area, cutoff, and bend tolerance, and state where each is deployed."
+        worked_example: "Unamplified and amplified span loss budget for an 80 km span including splices, connectors, and aging margin."
+
+      - id: "1.2"
+        title: "Chromatic dispersion"
+        prereqs: ["1.1"]
+        objectives:
+          - "Expand β(ω) in a Taylor series and identify group delay (β₁), GVD (β₂), and third-order dispersion (β₃); derive D = −2πcβ₂/λ² and the dispersion slope S."
+          - "Separate material and waveguide dispersion and locate the zero-dispersion wavelength λ₀ for standard SMF."
+          - "Derive the dispersion length L_D = T₀²/|β₂| and the IM/DD power-fading transfer function cos(β₂ω²L/2), and explain why IM/DD data-center optics use the O-band."
+        worked_example: "First power-fading null frequency and dispersion-limited reach for 53 GBd PAM4 at 1310 nm vs 1550 nm."
+
+      - id: "1.3"
+        title: "Polarization effects: PMD and PDL"
+        prereqs: ["1.2"]
+        objectives:
+          - "Model birefringence as a random concatenation of waveplates, derive the √L scaling of mean DGD, and state the Maxwellian DGD distribution."
+          - "Distinguish first-order and second-order PMD, and PDL, and state which impairments coherent 2×2 MIMO equalization removes and which it cannot."
+        worked_example: "Outage probability for a given PMD coefficient, link length, and DGD tolerance of an IM/DD receiver."
+
+      - id: "1.4"
+        title: "Kerr nonlinearity and the NLSE"
+        prereqs: ["1.2", "1.3"]
+        objectives:
+          - "Derive the scalar nonlinear Schrödinger equation from the intensity-dependent index n = n₀ + n₂I, defining γ = n₂ω/(cA_eff)."
+          - "Derive the effective length L_eff = (1 − e^{−αL})/α and the nonlinear length L_NL = 1/(γP)."
+          - "Classify SPM, XPM, and FWM, derive the FWM phase-matching condition, and explain why nonzero local dispersion suppresses FWM (motivation for G.655 and against G.653 in WDM)."
+          - "State the Manakov equation as the dual-polarization, randomly birefringent limit."
+        worked_example: "L_eff, γ, and L_NL for G.652.D vs G.654.E at typical per-channel power, and the implied nonlinear phase per span."
+
+      - id: "1.5"
+        title: "Optical amplification and ASE noise"
+        prereqs: ["1.1"]
+        objectives:
+          - "Derive the ASE power spectral density S_ASE = n_sp hν (G − 1) per polarization and the high-gain noise figure limit F → 2n_sp ≥ 2 (3 dB)."
+          - "Derive the multi-span OSNR expression and its decibel form, the '58 dB rule' at 1550 nm in a 0.1 nm reference bandwidth, from hν·B_ref."
+          - "Relate OSNR in B_ref to electrical SNR for a coherent receiver at symbol rate R_s."
+        worked_example: "OSNR after N identical 80 km spans as a function of launch power and noise figure."
+
+      - id: "1.6"
+        title: "The GN and EGN models of nonlinear interference"
+        prereqs: ["1.4", "1.5"]
+        objectives:
+          - "State the GN-model assumptions (Gaussian-distributed signal, perturbative first order, incoherent span accumulation) and derive P_NLI = η P_ch³."
+          - "Derive the optimum launch power P_opt = (P_ASE / 2η)^{1/3}, the 1/3 NLI to 2/3 ASE ratio at optimum, and the resulting maximum GSNR."
+          - "Explain the EGN correction for modulation-format dependence and coherent span accumulation (exponent 1 + ε)."
+          - "Compute Shannon capacity per polarization from GSNR and quantify the implementation gap of practical transceivers."
+        worked_example: "Optimum launch power, GSNR, and maximum reach for 64 GBd DP-16QAM over N×80 km G.652.D, with the Shannon-gap comparison."
+
+      - id: "1.7"
+        title: "Frontier fibers and open questions"
+        prereqs: ["1.1", "1.4", "1.6"]
+        objectives:
+          - "Explain antiresonant hollow-core guidance (NANF, DNANF), why its loss floor is not set by Rayleigh scattering in glass, and its latency advantage n_g ≈ 1."
+          - "Survey space-division multiplexing fibers (uncoupled multicore, coupled-core, few-mode) and their MIMO-DSP cost."
+          - "Assess claims of record-low loss and deployment status from both Western and Chinese fiber makers (长飞 YOFC, 亨通 Hengtong, 中天 ZTT)."
+        contested:
+          - "Whether hollow-core fiber will be deployed beyond latency-sensitive niches before 2030."
+          - "Reported vs independently reproduced loss records."
+
+  - id: 2
+    title: "Modulation, coherent detection, and DSP"
+    sections:
+      - id: "2.1"
+        title: "Signal space, symbol rate, and Nyquist shaping"
+        prereqs: ["1.2"]
+        objectives:
+          - "Relate bit rate, symbol rate R_s, constellation order M, polarizations, and FEC overhead; derive raised-cosine occupied bandwidth (1 + ρ)R_s."
+      - id: "2.2"
+        title: "IM/DD: NRZ, PAM4, and receiver metrics"
+        prereqs: ["2.1", "1.2"]
+        objectives:
+          - "Derive the PAM4 SNR penalty vs NRZ, define TDECQ and OMA, and analyze RIN and multipath interference (MPI) limits."
+      - id: "2.3"
+        title: "Coherent detection"
+        prereqs: ["2.1", "1.5"]
+        objectives:
+          - "Derive the 90° hybrid and balanced detection outputs, LO shot-noise limit, and dual-polarization QAM recovery."
+      - id: "2.4"
+        title: "The coherent DSP chain"
+        prereqs: ["2.3", "1.3"]
+        objectives:
+          - "Derive frequency-domain CD compensation, 2×2 MIMO polarization demultiplexing (CMA, LMS), carrier phase recovery, and timing recovery; estimate complexity per bit."
+      - id: "2.5"
+        title: "Information rates and probabilistic shaping"
+        prereqs: ["2.3", "1.6"]
+        objectives:
+          - "Define mutual information, GMI, and achievable information rate; derive the 1.53 dB ultimate shaping gain and probabilistic amplitude shaping with Maxwell-Boltzmann distributions."
+      - id: "2.6"
+        title: "Forward error correction"
+        prereqs: ["2.2", "2.5"]
+        objectives:
+          - "Compare KP4 RS(544,514), staircase, oFEC, CFEC, and concatenated soft-decision codes in threshold, net coding gain, latency, and power."
+      - id: "2.7"
+        title: "DSP power and CMOS scaling"
+        prereqs: ["2.4", "2.6"]
+        objectives:
+          - "Build a pJ/bit model of DSP power vs CMOS node and baud rate."
+
+  - id: 3
+    title: "Photonic devices"
+    sections:
+      - id: "3.1"
+        title: "Semiconductor laser fundamentals"
+        prereqs: ["2.2"]
+        objectives:
+          - "Solve the single-mode rate equations for threshold, relaxation-oscillation frequency, RIN, and linewidth enhancement (Henry α factor); compare InP and GaAs material systems."
+      - id: "3.2"
+        title: "VCSELs and multimode links"
+        prereqs: ["3.1", "1.2"]
+        objectives:
+          - "Analyze VCSEL bandwidth limits and modal dispersion in OM3, OM4, OM5 fiber; SWDM."
+      - id: "3.3"
+        title: "DFB, EML, CW sources, and tunable lasers"
+        prereqs: ["3.1"]
+        objectives:
+          - "Compare directly modulated DFB, electro-absorption modulated lasers (EAM physics, Franz-Keldysh, QCSE), high-power CW sources for silicon photonics, and ECL/tunable lasers for coherent."
+      - id: "3.4"
+        title: "Modulators: MZM and microring"
+        prereqs: ["2.1"]
+        objectives:
+          - "Derive MZM transfer functions, Vπ·L figure of merit for Si plasma dispersion vs Pockels materials, and microring resonance, Q, thermal tuning, and wavelength locking."
+      - id: "3.5"
+        title: "Thin-film lithium niobate and other platforms"
+        prereqs: ["3.4"]
+        objectives:
+          - "Compare TFLN, InP, and BTO modulators on bandwidth, Vπ, loss, and manufacturability."
+      - id: "3.6"
+        title: "Photodetectors and receivers"
+        prereqs: ["2.2"]
+        objectives:
+          - "Analyze Ge-on-Si PIN and APD responsivity, bandwidth-efficiency tradeoff, and TIA noise."
+      - id: "3.7"
+        title: "Integration and packaging"
+        prereqs: ["3.3", "3.4", "3.6"]
+        objectives:
+          - "Compare edge and grating couplers, fiber attach, heterogeneous laser integration, and reliability qualification (Telcordia GR-468)."
+
+  - id: 4
+    title: "Transceivers, 2016 to 2026"
+    sections:
+      - id: "4.1"
+        title: "Form factors, electrical interfaces, and PMDs"
+        prereqs: ["2.2", "3.7"]
+        objectives:
+          - "Map QSFP28, QSFP-DD, OSFP form factors and SerDes lane rates to IEEE 802.3 PMDs (SR, DR, FR, LR)."
+      - id: "4.2"
+        title: "Generations: 100G to 1.6T and 3.2T"
+        prereqs: ["4.1"]
+        objectives:
+          - "Trace lane-rate × lane-count evolution and the enabling device for each step."
+      - id: "4.3"
+        title: "Power anatomy of a pluggable"
+        prereqs: ["4.2", "2.7"]
+        objectives:
+          - "Build a component-level power budget (DSP, driver, TIA, laser, MCU) for a 1.6T module in pJ/bit."
+      - id: "4.4"
+        title: "LPO and LRO"
+        prereqs: ["4.3"]
+        objectives:
+          - "Analyze what removing or halving DSP retiming saves and what it costs in host SerDes requirements and interoperability."
+      - id: "4.5"
+        title: "NPO and CPO"
+        prereqs: ["4.4", "3.7"]
+        objectives:
+          - "Compare co-packaged and near-packaged architectures, external laser sources, serviceability, and shipping switch products."
+      - id: "4.6"
+        title: "Coherent pluggables: 400ZR to 800ZR and coherent-lite"
+        prereqs: ["2.4", "4.1"]
+        objectives:
+          - "Compare OIF 400ZR, OpenZR+, 800ZR, and intra-campus coherent-lite proposals."
+      - id: "4.7"
+        title: "Open questions in transceivers"
+        prereqs: ["4.5", "4.6"]
+        contested:
+          - "CPO volume adoption timing."
+          - "LPO multi-vendor interoperability."
+          - "Optical I/O chiplets for compute."
+
+  - id: 5
+    title: "Data center fabrics"
+    sections:
+      - id: "5.1"
+        title: "Clos and fat-tree topologies"
+        prereqs: []
+        objectives:
+          - "Derive host count, bisection bandwidth, and optics count as a function of switch radix and tiers."
+      - id: "5.2"
+        title: "Reach classes and the copper boundary"
+        prereqs: ["4.2", "5.1"]
+        objectives:
+          - "Quantify how the passive copper reach shrinks with lane rate and where optics take over."
+      - id: "5.3"
+        title: "AI training networks"
+        prereqs: ["5.1"]
+        objectives:
+          - "Model ring and tree all-reduce traffic, rail-optimized topologies, and per-accelerator bandwidth requirements."
+      - id: "5.4"
+        title: "Scale-up vs scale-out"
+        prereqs: ["5.3", "4.5"]
+        objectives:
+          - "Compare NVLink-class scale-up domains with Ethernet/InfiniBand scale-out, and the case for optical scale-up."
+      - id: "5.5"
+        title: "Optical circuit switching"
+        prereqs: ["5.3"]
+        objectives:
+          - "Analyze MEMS OCS deployments in production ML clusters, reconfiguration time, and topology engineering."
+      - id: "5.6"
+        title: "Optics power and cost at cluster scale"
+        prereqs: ["5.3", "4.3"]
+        objectives:
+          - "Estimate transceiver count, power, and cost share for a 100k-accelerator cluster."
+
+  - id: 6
+    title: "Metro, DCI, and long-haul"
+    sections:
+      - id: "6.1"
+        title: "WDM grids and superchannels"
+        prereqs: ["1.6", "2.5"]
+        objectives:
+          - "Use ITU-T G.694.1 flexgrid and compute spectral efficiency of superchannels."
+      - id: "6.2"
+        title: "ROADMs"
+        prereqs: ["6.1"]
+        objectives:
+          - "Analyze WSS-based CDC-F ROADM architectures and filter-narrowing penalties."
+      - id: "6.3"
+        title: "Amplification beyond C-band"
+        prereqs: ["1.5", "6.1"]
+        objectives:
+          - "Compare EDFA, Raman, and hybrid amplification; C+L and S/U band extensions and SRS tilt."
+      - id: "6.4"
+        title: "ZR/ZR+, IP-over-DWDM, and disaggregation"
+        prereqs: ["4.6", "6.2"]
+        objectives:
+          - "Evaluate router-hosted coherent optics vs transponders, OpenROADM, and open line systems."
+      - id: "6.5"
+        title: "Terrestrial fiber plant"
+        prereqs: ["1.1", "1.6"]
+        objectives:
+          - "Assess the system gain of G.654.E in terrestrial long-haul and its deployment in China."
+      - id: "6.6"
+        title: "Planning and margins"
+        prereqs: ["1.6", "6.3"]
+        objectives:
+          - "Perform GSNR-based route planning with open tools (GNPy) and margin allocation."
+
+  - id: 7
+    title: "Subsea systems"
+    sections:
+      - id: "7.1"
+        title: "Repeatered system architecture"
+        prereqs: ["6.3"]
+        objectives:
+          - "Describe wet plant, repeaters, branching units, PFE, and SLTE."
+      - id: "7.2"
+        title: "Power-limited design"
+        prereqs: ["7.1", "1.6"]
+        objectives:
+          - "Derive capacity under an electrical power-feed constraint and why it favors many low-SE fiber pairs."
+      - id: "7.3"
+        title: "SDM cables"
+        prereqs: ["7.2"]
+        objectives:
+          - "Analyze high fiber-pair-count cables, pump sharing, and multicore subsea fiber."
+      - id: "7.4"
+        title: "Open cables and GOSNR specification"
+        prereqs: ["7.1", "6.6"]
+        objectives:
+          - "Explain open-cable procurement and GOSNR-based acceptance."
+      - id: "7.5"
+        title: "Ownership and routing"
+        prereqs: ["7.1"]
+        objectives:
+          - "Map hyperscaler cable ownership, landing permits, and route diversity concerns."
+
+  - id: 8
+    title: "US network architecture"
+    sections:
+      - id: "8.1"
+        title: "Carriers and long-haul routes"
+        prereqs: ["6.4"]
+        objectives:
+          - "Describe the national fiber footprint of major carriers and wholesale providers."
+      - id: "8.2"
+        title: "Interconnection: IXPs and carrier hotels"
+        prereqs: []
+        objectives:
+          - "Explain peering vs transit economics and the role of carrier-neutral facilities."
+      - id: "8.3"
+        title: "Hyperscaler WANs"
+        prereqs: ["6.4"]
+        objectives:
+          - "Analyze B4, SWAN, and Express Backbone as SDN traffic-engineering systems, and their optical layer."
+      - id: "8.4"
+        title: "Cross-layer optimization"
+        prereqs: ["8.3", "6.6"]
+        objectives:
+          - "Evaluate SNR-adaptive rate selection and optical-IP co-design in production WANs."
+      - id: "8.5"
+        title: "Interconnect for multi-campus AI training"
+        prereqs: ["5.3", "8.3"]
+        objectives:
+          - "Estimate inter-campus bandwidth and latency requirements for distributed training."
+
+  - id: 9
+    title: "China network architecture"
+    sections:
+      - id: "9.1"
+        title: "Operators and backbones"
+        prereqs: ["6.4"]
+        objectives:
+          - "Describe China Telecom (ChinaNet 163, CN2), China Mobile (CMNet), China Unicom (169, A网), and China Broadnet (中国广电) backbone structure."
+      - id: "9.2"
+        title: "东数西算 and the national computing network"
+        prereqs: ["9.1"]
+        objectives:
+          - "Analyze the hub-and-cluster plan, its latency targets, and the optical capacity it requires."
+      - id: "9.3"
+        title: "400G long-haul and extended-band OTN"
+        prereqs: ["6.3", "9.1"]
+        objectives:
+          - "Analyze operator 400G long-haul deployments in extended C+L band and their link design choices."
+      - id: "9.4"
+        title: "Access and fiber deployment"
+        prereqs: ["1.1"]
+        objectives:
+          - "Quantify FTTH, 10G-PON, and gigabit-city (千兆城市) deployment; F5G framing."
+      - id: "9.5"
+        title: "International gateways and cross-border links"
+        prereqs: ["9.1", "7.5"]
+        objectives:
+          - "Describe international exit capacity and its architecture."
+      - id: "9.6"
+        title: "US and China compared"
+        prereqs: ["8.3", "9.2"]
+        objectives:
+          - "Compare ownership, planning model, and technology adoption on matched metrics."
+
+  - id: 10
+    title: "Supply chain and geopolitics"
+    sections:
+      - id: "10.1"
+        title: "Value chain map"
+        prereqs: ["4.2"]
+        objectives:
+          - "Map chips, components, modules, and systems with concentration metrics per tier."
+      - id: "10.2"
+        title: "InP lasers and EMLs"
+        prereqs: ["3.3", "10.1"]
+        objectives:
+          - "Assess global and Chinese InP laser capacity and high-speed EML self-sufficiency."
+      - id: "10.3"
+        title: "DSPs and electrical ICs"
+        prereqs: ["2.7", "10.1"]
+        objectives:
+          - "Assess DSP, driver, and TIA supply concentration and domestic alternatives."
+      - id: "10.4"
+        title: "Module makers"
+        prereqs: ["4.2", "10.1"]
+        objectives:
+          - "Analyze module vendor share and the manufacturing shift to Southeast Asia."
+      - id: "10.5"
+        title: "System vendors"
+        prereqs: ["6.4", "10.1"]
+        objectives:
+          - "Compare Huawei, ZTE, FiberHome with Ciena, Nokia, Cisco/Acacia by segment and region."
+      - id: "10.6"
+        title: "Export controls and trade policy"
+        prereqs: ["10.1"]
+        objectives:
+          - "Trace US BIS controls, entity listings, tariffs, and China's controls on gallium, germanium, and related materials."
+      - id: "10.7"
+        title: "Open questions in the supply chain"
+        prereqs: ["10.2", "10.3", "4.7"]
+        contested:
+          - "Chinese high-speed laser self-sufficiency timeline."
+          - "CPO as a competitive lever in the supply chain."

@@ -1,0 +1,34 @@
+# 中英 terminology glossary. Seeded with Chapter 1 terms; zh terms will be
+# checked against Chinese primary sources (standards, CAICT, operator papers)
+# by the verifier, and `zh_source` filled in.
+
+terms:
+  - {en: "attenuation", zh: "衰减", section: "1.1"}
+  - {en: "Rayleigh scattering", zh: "瑞利散射", section: "1.1"}
+  - {en: "pure-silica-core fiber", zh: "纯二氧化硅纤芯光纤", section: "1.1"}
+  - {en: "ultra-low-loss fiber", zh: "超低损耗光纤", section: "1.1"}
+  - {en: "large effective area fiber", zh: "大有效面积光纤", section: "1.1"}
+  - {en: "bend-insensitive fiber", zh: "弯曲不敏感光纤", section: "1.1"}
+  - {en: "chromatic dispersion", zh: "色散", section: "1.2"}
+  - {en: "zero-dispersion wavelength", zh: "零色散波长", section: "1.2"}
+  - {en: "group velocity dispersion", zh: "群速度色散", section: "1.2"}
+  - {en: "polarization mode dispersion (PMD)", zh: "偏振模色散", section: "1.3"}
+  - {en: "differential group delay (DGD)", zh: "差分群时延", section: "1.3"}
+  - {en: "polarization dependent loss (PDL)", zh: "偏振相关损耗", section: "1.3"}
+  - {en: "Kerr effect", zh: "克尔效应", section: "1.4"}
+  - {en: "nonlinear Schrödinger equation", zh: "非线性薛定谔方程", section: "1.4"}
+  - {en: "self-phase modulation (SPM)", zh: "自相位调制", section: "1.4"}
+  - {en: "cross-phase modulation (XPM)", zh: "交叉相位调制", section: "1.4"}
+  - {en: "four-wave mixing (FWM)", zh: "四波混频", section: "1.4"}
+  - {en: "erbium-doped fiber amplifier (EDFA)", zh: "掺铒光纤放大器", section: "1.5"}
+  - {en: "amplified spontaneous emission (ASE)", zh: "放大自发辐射", section: "1.5"}
+  - {en: "noise figure", zh: "噪声系数", section: "1.5"}
+  - {en: "optical signal-to-noise ratio (OSNR)", zh: "光信噪比", section: "1.5"}
+  - {en: "nonlinear interference (NLI)", zh: "非线性干扰", section: "1.6"}
+  - {en: "generalized SNR (GSNR)", zh: "广义信噪比", section: "1.6"}
+  - {en: "Shannon limit", zh: "香农极限", section: "1.6"}
+  - {en: "hollow-core fiber", zh: "空芯光纤", section: "1.7"}
+  - {en: "nested antiresonant nodeless fiber (NANF)", zh: "嵌套反谐振无节点光纤", section: "1.7"}
+  - {en: "space-division multiplexing (SDM)", zh: "空分复用", section: "1.7"}
+  - {en: "multicore fiber", zh: "多芯光纤", section: "1.7"}
+  - {en: "few-mode fiber", zh: "少模光纤", section: "1.7"}

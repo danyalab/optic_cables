@@ -1,0 +1,55 @@
+# Single notation sheet for the whole book. One symbol, one meaning.
+# first_defined must be a section id from syllabus.yaml. Later chapters extend
+# this file; lint fails if a symbol is redefined with a different meaning.
+
+symbols:
+  # 1.1 attenuation
+  - {symbol: "\\lambda", meaning: "vacuum wavelength", unit: "m (nm in text)", first_defined: "1.1"}
+  - {symbol: "\\alpha", meaning: "power attenuation coefficient, linear units", unit: "1/km", first_defined: "1.1"}
+  - {symbol: "\\alpha_{\\mathrm{dB}}", meaning: "attenuation in decibels, α_dB = 10 log10(e) α ≈ 4.343 α", unit: "dB/km", first_defined: "1.1"}
+  - {symbol: "L", meaning: "fiber or span length", unit: "km", first_defined: "1.1"}
+  - {symbol: "P", meaning: "optical power (P_ch: per channel)", unit: "W (dBm in text)", first_defined: "1.1"}
+  - {symbol: "A_{\\mathrm{eff}}", meaning: "effective mode area", unit: "µm²", first_defined: "1.1"}
+  - {symbol: "n", meaning: "refractive index (n_0 linear part, n_g group index)", unit: "1", first_defined: "1.1"}
+  - {symbol: "c", meaning: "speed of light in vacuum", unit: "m/s", first_defined: "1.1"}
+
+  # 1.2 dispersion
+  - {symbol: "\\omega", meaning: "angular optical frequency", unit: "rad/s", first_defined: "1.2"}
+  - {symbol: "\\beta", meaning: "propagation constant β(ω); β_k = d^kβ/dω^k at carrier", unit: "1/m; β_2 in ps²/km", first_defined: "1.2"}
+  - {symbol: "D", meaning: "chromatic dispersion parameter, D = −2πcβ_2/λ²", unit: "ps/(nm·km)", first_defined: "1.2"}
+  - {symbol: "S", meaning: "dispersion slope dD/dλ", unit: "ps/(nm²·km)", first_defined: "1.2"}
+  - {symbol: "\\lambda_0", meaning: "zero-dispersion wavelength", unit: "nm", first_defined: "1.2"}
+  - {symbol: "L_D", meaning: "dispersion length T_0²/|β_2|", unit: "km", first_defined: "1.2"}
+  - {symbol: "R_s", meaning: "symbol rate", unit: "Bd (GBd in text)", first_defined: "1.2"}
+
+  # 1.3 polarization
+  - {symbol: "\\Delta\\tau", meaning: "differential group delay (DGD)", unit: "ps", first_defined: "1.3"}
+  - {symbol: "D_{\\mathrm{PMD}}", meaning: "PMD coefficient, ⟨Δτ⟩ = D_PMD √L", unit: "ps/√km", first_defined: "1.3"}
+
+  # 1.4 nonlinearity
+  - {symbol: "n_2", meaning: "nonlinear (Kerr) index coefficient", unit: "m²/W", first_defined: "1.4"}
+  - {symbol: "\\gamma", meaning: "nonlinear coefficient n_2 ω/(c A_eff)", unit: "1/(W·km)", first_defined: "1.4"}
+  - {symbol: "L_{\\mathrm{eff}}", meaning: "effective length (1 − e^{−αL})/α", unit: "km", first_defined: "1.4"}
+  - {symbol: "L_{\\mathrm{NL}}", meaning: "nonlinear length 1/(γP)", unit: "km", first_defined: "1.4"}
+  - {symbol: "A", meaning: "slowly varying field envelope, |A|² in W", unit: "√W", first_defined: "1.4"}
+
+  # 1.5 amplification
+  - {symbol: "G", meaning: "amplifier power gain (linear)", unit: "1", first_defined: "1.5"}
+  - {symbol: "F", meaning: "amplifier noise factor (NF = 10 log10 F)", unit: "1 (dB for NF)", first_defined: "1.5"}
+  - {symbol: "n_{\\mathrm{sp}}", meaning: "spontaneous emission (population inversion) factor", unit: "1", first_defined: "1.5"}
+  - {symbol: "h", meaning: "Planck constant", unit: "J·s", first_defined: "1.5"}
+  - {symbol: "\\nu", meaning: "optical frequency", unit: "Hz", first_defined: "1.5"}
+  - {symbol: "B_{\\mathrm{ref}}", meaning: "OSNR reference bandwidth (12.5 GHz ≈ 0.1 nm at 1550 nm)", unit: "Hz", first_defined: "1.5"}
+  - {symbol: "N_s", meaning: "number of amplified spans", unit: "1", first_defined: "1.5"}
+  - {symbol: "P_{\\mathrm{ASE}}", meaning: "accumulated ASE power in the reference or signal bandwidth", unit: "W", first_defined: "1.5"}
+  - {symbol: "\\mathrm{OSNR}", meaning: "optical SNR referred to B_ref, both polarizations of noise", unit: "1 (dB in text)", first_defined: "1.5"}
+  - {symbol: "\\mathrm{SNR}", meaning: "electrical SNR per symbol at the decision device", unit: "1 (dB in text)", first_defined: "1.5"}
+
+  # 1.6 GN model
+  - {symbol: "\\eta", meaning: "NLI efficiency, P_NLI = η P_ch³", unit: "1/W²", first_defined: "1.6"}
+  - {symbol: "P_{\\mathrm{NLI}}", meaning: "nonlinear interference power in the channel bandwidth", unit: "W", first_defined: "1.6"}
+  - {symbol: "\\mathrm{GSNR}", meaning: "generalized SNR including ASE and NLI", unit: "1 (dB in text)", first_defined: "1.6"}
+  - {symbol: "\\Delta f", meaning: "WDM channel spacing", unit: "Hz", first_defined: "1.6"}
+  - {symbol: "B_{\\mathrm{ch}}", meaning: "channel (signal) bandwidth", unit: "Hz", first_defined: "1.6"}
+  - {symbol: "\\varepsilon", meaning: "EGN coherent-accumulation exponent correction", unit: "1", first_defined: "1.6"}
+  - {symbol: "C", meaning: "Shannon capacity", unit: "bit/s or bit/symbol", first_defined: "1.6"}
