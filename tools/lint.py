@@ -8,6 +8,7 @@ Current checks (gate G0):
   * glossary: section refs are real sections, no duplicate English terms
 Later gates add ledger schema, macro resolution, and bare-number checks.
 """
+import re
 import sys
 from pathlib import Path
 
@@ -61,11 +62,78 @@ def check_glossary(errors, order):
             errors.append(f"glossary: {t['en']} refers to unknown section {t['section']}")
 
 
+LEDGER_REQUIRED = ("id", "section", "claim", "value", "unit", "kind", "source_id",
+                   "locator", "quote", "retrieved", "tier", "confidence")
+KINDS = {"spec_max", "spec_min", "spec_typ", "measured", "record", "constant", "model_param", "fact"}
+TIERS = {"A", "B", "C"}
+CONFIDENCE = {"high", "med", "low"}
+ID_RE = re.compile(r"^ch\d{2}\.[a-z0-9_.]+$")
+
+
+def load_all(subdir, pattern, key):
+    out = []
+    for path in sorted((ROOT / subdir).glob(pattern)):
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        for rec in data.get(key) or []:
+            out.append((path.name, rec))
+    return out
+
+
+def check_ledger(errors, order):
+    sources = {}
+    for fname, s in load_all("sources", "*.yaml", "sources"):
+        sid = s.get("id")
+        if sid in sources:
+            errors.append(f"{fname}: duplicate source id {sid}")
+        sources[sid] = s
+        if s.get("tier") not in TIERS:
+            errors.append(f"{fname}: source {sid} has bad tier {s.get('tier')!r}")
+
+    ids = set()
+    for fname, r in load_all("ledger", "ch*[!s].yaml", "records"):
+        rid = r.get("id", "?")
+        for k in LEDGER_REQUIRED:
+            if r.get(k) in (None, ""):
+                errors.append(f"{fname}: {rid} missing {k}")
+        if not ID_RE.match(str(rid)):
+            errors.append(f"{fname}: bad id {rid}")
+        if rid in ids:
+            errors.append(f"{fname}: duplicate record id {rid}")
+        ids.add(rid)
+        if r.get("section") not in order:
+            errors.append(f"{fname}: {rid} unknown section {r.get('section')}")
+        if r.get("kind") not in KINDS:
+            errors.append(f"{fname}: {rid} bad kind {r.get('kind')!r}")
+        if r.get("tier") not in TIERS:
+            errors.append(f"{fname}: {rid} bad tier {r.get('tier')!r}")
+        if r.get("confidence") not in CONFIDENCE:
+            errors.append(f"{fname}: {rid} bad confidence {r.get('confidence')!r}")
+        if r.get("source_id") not in sources:
+            errors.append(f"{fname}: {rid} cites unknown source {r.get('source_id')}")
+        if len(str(r.get("quote", "")).split()) > 40:
+            errors.append(f"{fname}: {rid} quote longer than 40 words")
+
+    eq_ids = set()
+    for fname, e in load_all("ledger", "*_equations.yaml", "equations"):
+        eid = e.get("id", "?")
+        if eid in eq_ids:
+            errors.append(f"{fname}: duplicate equation id {eid}")
+        eq_ids.add(eid)
+        for k in ("latex", "source_id", "locator", "section"):
+            if not e.get(k):
+                errors.append(f"{fname}: {eid} missing {k}")
+        if e.get("source_id") and e["source_id"] not in sources:
+            errors.append(f"{fname}: {eid} cites unknown source {e['source_id']}")
+    return len(ids), len(eq_ids), len(sources)
+
+
 def main():
     errors = []
     order = check_syllabus(errors)
     check_notation(errors, order)
     check_glossary(errors, order)
+    n_rec, n_eq, n_src = check_ledger(errors, order)
+    print(f"ledger: {n_rec} records, {n_eq} equations, {n_src} sources")
     for e in errors:
         print(e)
     print(f"lint: {len(order)} sections, {len(errors)} error(s)")
