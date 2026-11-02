@@ -1,0 +1,670 @@
+{
+  "ref_psd_opt": {
+    "value": 27.61821226440045,
+    "unit": "µW/GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.gn.popt_rs_smf_check",
+      "ch01.gn.ref_system_2012",
+      "ch01.kerr.gamma_smf_gn2012"
+    ]
+  },
+  "ref_popt_dbm": {
+    "value": -0.5365445854660067,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.gn.popt_rs_smf_check",
+      "ch01.gn.ref_system_2012",
+      "ch01.kerr.gamma_smf_gn2012"
+    ]
+  },
+  "ref_popt_pub": {
+    "value": -0.4,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": [
+      "ch01.gn.popt_rs_smf_check"
+    ]
+  },
+  "ref_dev_db": {
+    "value": -0.13654458546600667,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.gn.popt_rs_smf_check",
+      "ch01.gn.ref_system_2012",
+      "ch01.kerr.gamma_smf_gn2012"
+    ]
+  },
+  "ref_total_dbm": {
+    "value": 19.50666915236042,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.gn.popt_rs_smf_check",
+      "ch01.gn.ref_system_2012",
+      "ch01.kerr.gamma_smf_gn2012"
+    ]
+  },
+  "ref_asinh_arg": {
+    "value": 849.1846783985555,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.gn.popt_rs_smf_check",
+      "ch01.gn.ref_system_2012",
+      "ch01.kerr.gamma_smf_gn2012"
+    ]
+  },
+  "ref_beta2": {
+    "value": 21.0448952916674,
+    "unit": "ps²/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.gn.ref_system_2012"
+    ]
+  },
+  "ref_leff": {
+    "value": 21.49757685421096,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.gn.ref_system_2012"
+    ]
+  },
+  "ref_tol_db": {
+    "value": 0.25,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "ny100_popt_dbm": {
+    "value": -1.185297841268735,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.gn.popt_ny_smf_check",
+      "ch01.gn.ref_system_2012"
+    ]
+  },
+  "ny75_popt_dbm": {
+    "value": -2.819995746336716,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.gn.popt_ny_smf_75km_check",
+      "ch01.gn.ref_system_2012"
+    ]
+  },
+  "df_ghz": {
+    "value": 75.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": []
+  },
+  "bc_thz": {
+    "value": 4.382106968197281,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu"
+    ]
+  },
+  "nch": {
+    "value": 58.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu"
+    ]
+  },
+  "eta1": {
+    "value": 415.4148276540626,
+    "unit": "1/W²",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "eta1_db": {
+    "value": 26.184819940127824,
+    "unit": "dB(1/W²)",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "pase1_dbm": {
+    "value": -29.54269327119862,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "asinh_arg": {
+    "value": 10810.282069100245,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "lspan": {
+    "value": 16.349999999999998,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "popt_dbm": {
+    "value": 0.42072894401124916,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "popt_total_dbm": {
+    "value": 18.05500887964062,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "psd_opt": {
+    "value": 17.21444083660071,
+    "unit": "µW/GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "gmax1_db": {
+    "value": 28.202509624653054,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "num_popt_dbm": {
+    "value": 0.420728963782421,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "nli_frac": {
+    "value": 0.33333333333333354,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "snr_theory_db": {
+    "value": 12.090893532220575,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct"
+    ]
+  },
+  "snr_req_db": {
+    "value": 14.290893532220576,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct",
+      "ch01.gap.osnr_penalty_64gbd"
+    ]
+  },
+  "nmax": {
+    "value": 24.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "reach_km": {
+    "value": 1920.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "gsnr_nmax_db": {
+    "value": 14.400397207536994,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "eps": {
+    "value": 0.08,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch01.gn.eps_typical_2014"
+    ]
+  },
+  "nmax_eps": {
+    "value": 22.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.gn.eps_typical_2014",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "eps_penalty_db": {
+    "value": 0.36805633112309266,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.gn.eps_typical_2014"
+    ]
+  },
+  "eol_gsnr_loss_db": {
+    "value": 2.01064208067991,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "nmax_eol": {
+    "value": 15.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "popt_eol_dbm": {
+    "value": 1.4260499843512053,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "cap_per_pol": {
+    "value": 4.835156361193998,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "cap_total": {
+    "value": 9.670312722387996,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "cap_gbps": {
+    "value": 618.9000142328316,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "net_bits": {
+    "value": 6.666666666666667,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct"
+    ]
+  },
+  "net_gbps": {
+    "value": 426.6666666666667,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct",
+      "ch01.gap.osnr_penalty_64gbd"
+    ]
+  },
+  "snr_shannon_db": {
+    "value": 9.580556381355587,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct"
+    ]
+  },
+  "gap_total_db": {
+    "value": 4.710337150864989,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "gap_theory_db": {
+    "value": 2.510337150864988,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "nmax_shannon": {
+    "value": 72.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.cband_range_itu",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "egn_reach_gain_lo": {
+    "value": 0.3333333333333333,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.egn.nli_overestimate_near_max_reach"
+    ]
+  },
+  "egn_reach_gain_hi": {
+    "value": 0.6666666666666666,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.egn.nli_overestimate_near_max_reach"
+    ]
+  },
+  "popt_shift_1db": {
+    "value": 0.33333333333333265,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "g654_d": {
+    "value": 20.0,
+    "unit": "ps/(nm·km)",
+    "digits": 2,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range"
+    ]
+  },
+  "g654_popt_dbm": {
+    "value": 1.1126490144583814,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "g654_dpopt_db": {
+    "value": 0.6919200704471322,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "g654_gain_db": {
+    "value": 2.629781629504894,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "g654_eta_db": {
+    "value": 4.0136217703991575,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "g654_pase_db": {
+    "value": 1.9378615590577613,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "g654_nmax": {
+    "value": 45.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "g654_reach_km": {
+    "value": 3600.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  }
+}

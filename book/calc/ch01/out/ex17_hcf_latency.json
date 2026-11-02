@@ -1,0 +1,117 @@
+{
+  "t_smf": {
+    "value": 4.897388045699269,
+    "unit": "µs/km",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "t_hcf": {
+    "value": 3.3356409519815204,
+    "unit": "µs/km",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "dt": {
+    "value": 1.5617470937177482,
+    "unit": "µs/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "lat_red_pct": {
+    "value": 31.88938836670753,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "speedup_pct": {
+    "value": 46.81999999999999,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "dt_poletti_check": {
+    "value": 1.5517100597599303,
+    "unit": "µs/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "hk_rtt_fibre_ms": {
+    "value": 0.7650759513102894,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ctel_hk_link_latency",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "hk_rtt_allsmf_ms": {
+    "value": 1.077425370053839,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ctel_hk_link_latency",
+      "ch01.hcf.ng_nanf_vs_smf28"
+    ]
+  },
+  "yofc_batch_over_hero": {
+    "value": 2.9399999999999995,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.hcf.ding2025_yofc_batch_avg",
+      "ch01.hcf.ding2025_yofc_sthcf_005"
+    ]
+  },
+  "hcf1_spread_ratio": {
+    "value": 2.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch01.hcf.petrovich2025_hcf1_method_spread"
+    ]
+  },
+  "span_hcf_db": {
+    "value": 7.279999999999999,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.hcf.petrovich2025_loss_1550"
+    ]
+  },
+  "span_silica_db": {
+    "value": 11.248000000000001,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.ull.sato2025_record_1550"
+    ]
+  }
+}

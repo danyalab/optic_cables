@@ -1,0 +1,212 @@
+{
+  "rs_gbd": {
+    "value": 53.125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "nyq_ghz": {
+    "value": 26.5625,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "tsym_ps": {
+    "value": 18.823529411764707,
+    "unit": "ps",
+    "digits": 3,
+    "inputs": [
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "d1310_neg": {
+    "value": -1.3087948269211314,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "d1310_pos": {
+    "value": 0.9095191564754425,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "d1310_worst": {
+    "value": 1.3087948269211314,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "d1264_curve": {
+    "value": -5.872624333101614,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "beta2_1550": {
+    "value": -21.682619391414892,
+    "unit": "ps²/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.speed_of_light_c"
+    ]
+  },
+  "beta2_1310_abs": {
+    "value": 1.1923769987292372,
+    "unit": "ps²/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "ld_1550_km": {
+    "value": 16.341441645923275,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "ld_1310_km": {
+    "value": 297.1587508759304,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "fnull_1550_2km": {
+    "value": 42.83750784190082,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "fnull_1310_2km": {
+    "value": 182.6725432514743,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "fnull_1550_10km": {
+    "value": 19.157515904234117,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "fnull_1310_10km": {
+    "value": 81.69364486661338,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range"
+    ]
+  },
+  "reach_null_1550": {
+    "value": 5.201642430392894,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "reach_3db_1550": {
+    "value": 2.600821215196447,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "reach_null_1550max": {
+    "value": 4.754189318101032,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_d1550_range",
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "reach_3db_1550max": {
+    "value": 2.377094659050516,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_d1550_range",
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "reach_null_1310": {
+    "value": 94.58856816983482,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range",
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "reach_3db_1310": {
+    "value": 47.29428408491741,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652d_lambda0_range",
+      "ch01.cd.g652d_s0_range",
+      "ch01.pmd.fr4_dgd_max"
+    ]
+  },
+  "fnull_fr4_chan": {
+    "value": 88.75708678932456,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.fr4_channel_cd_min"
+    ]
+  },
+  "fnull_lr4_chan": {
+    "value": 39.96294352909157,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.lr4_10_channel_cd"
+    ]
+  },
+  "l1550_equiv_fr4": {
+    "value": 0.7000000000000001,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.fr4_channel_cd_min",
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  }
+}

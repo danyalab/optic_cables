@@ -1,0 +1,254 @@
+{
+  "p_dbm": {
+    "value": 0.0,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": []
+  },
+  "n2_spread_pct": {
+    "value": 25.423728813559322,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.kerr.n2_kato1995_smf",
+      "ch01.kerr.n2_kim1994_silica_core"
+    ]
+  },
+  "gamma_g652": {
+    "value": 1.3225091654628,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "alpha_lin_g652": {
+    "value": 0.041446531673892825,
+    "unit": "1/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "leff_g652": {
+    "value": 23.25145568525387,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "leffa_g652": {
+    "value": 24.12747121684732,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "lnl_g652": {
+    "value": 756.1384269500008,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "phi_g652": {
+    "value": 0.030750263254100376,
+    "unit": "rad",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "gamma_g654": {
+    "value": 0.8464058658961919,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "alpha_lin_g654": {
+    "value": 0.03592032745070712,
+    "unit": "1/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "leff_g654": {
+    "value": 26.266639796464215,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "leffa_g654": {
+    "value": 27.839389865593056,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "lnl_g654": {
+    "value": 1181.4662921093766,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "phi_g654": {
+    "value": 0.02223223800110967,
+    "unit": "rad",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "gamma_g654lo": {
+    "value": 0.9618248476093091,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "alpha_lin_g654lo": {
+    "value": 0.03592032745070712,
+    "unit": "1/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "leff_g654lo": {
+    "value": 26.266639796464215,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "leffa_g654lo": {
+    "value": 27.839389865593056,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "lnl_g654lo": {
+    "value": 1039.6903370562513,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "phi_g654lo": {
+    "value": 0.025263906819442804,
+    "unit": "rad",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g654e_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch01.kerr.pureadvance125_att"
+    ]
+  },
+  "gamma_g652_kato": {
+    "value": 1.4998571378428691,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "phi_ratio_db": {
+    "value": 1.4086565512355997,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.aeff_g654e_typ"
+    ]
+  },
+  "leffa_025": {
+    "value": 17.37177927613007,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch01.kerr.leff_asymptote_gsup47"
+    ]
+  },
+  "eta_d1_100": {
+    "value": -18.89320958803902,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  },
+  "eta_d1_50": {
+    "value": -7.620782825376108,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  },
+  "eta_d17_50": {
+    "value": -31.398880814516538,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  },
+  "lcoh50_d1": {
+    "value": 49.913416524453694,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  },
+  "lcoh50_d17": {
+    "value": 2.9360833249678646,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "asup_inv_km": {
+    "value": 17.37177927613007,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  }
+}

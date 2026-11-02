@@ -1,0 +1,268 @@
+{
+  "nu_thz": {
+    "value": 193.41448903225802,
+    "unit": "THz",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "bref_ghz": {
+    "value": 12.478354131113422,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "hnu_j": {
+    "value": 1.2815779723541474e-19,
+    "unit": "J",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "const58": {
+    "value": 57.960976592224746,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "hnuB_dbm": {
+    "value": -57.960976592224746,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "const58_125": {
+    "value": 57.95344952801763,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.bref_0p1nm_equals_12p5ghz",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "nf_db": {
+    "value": 5.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "lspan": {
+    "value": 16.349999999999998,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "lspan_eol": {
+    "value": 19.349999999999998,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "nsp": {
+    "value": 1.6067874635510433,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "nf_ideal": {
+    "value": 2.959684561985852,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.nsp_unity_full_inversion"
+    ]
+  },
+  "s_ase": {
+    "value": 8.68001954787377e-18,
+    "unit": "W/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "p_ase_bref_dbm": {
+    "value": -36.642919945164046,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "p_dbm": {
+    "value": 0.0,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": []
+  },
+  "osnr_1": {
+    "value": 36.642919945164046,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_rule_1": {
+    "value": 36.610976592224745,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_10": {
+    "value": 26.642919945164042,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_rule_10": {
+    "value": 26.610976592224745,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_20": {
+    "value": 23.632619988524233,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_rule_20": {
+    "value": 23.600676635584932,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_40": {
+    "value": 20.62232003188442,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_rule_40": {
+    "value": 20.59037667894512,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr_20_booster": {
+    "value": 23.38878364488555,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "doubling_db": {
+    "value": 3.010299956639812,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "osnr_20_eol": {
+    "value": 20.600676635584932,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "rs_gbd": {
+    "value": 64.0,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch01.gap.osnr_penalty_64gbd"
+    ]
+  },
+  "osnr_to_snr_db": {
+    "value": -7.100226673965427,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.gap.osnr_penalty_64gbd",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "snr_20": {
+    "value": 16.532393314558806,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  }
+}

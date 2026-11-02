@@ -1,1473 +1,1490 @@
-# Ledger records for chapter 1, sections 1.1 (attenuation, fiber types),
-# 1.2 (chromatic dispersion), 1.3 (PMD/PDL). Retrieval agent ch01_a.
-# Locators for ITU-T texts use clause/table numbers; page numbers were not
-# recoverable from the crawler text of the PDFs.
 records:
-
-  # =====================================================================
-  # 1.1  ITU-T G.652.D  (latest edition 08/2024; values unchanged from 11/2016)
-  # =====================================================================
-  - id: ch01.att.g652d_max_1310_1625
-    section: "1.1"
-    claim: "Maximum cabled attenuation coefficient of G.652.D fibre over 1310-1625 nm"
-    value: 0.40
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: [1310, 1625]
-      fiber: "G.652.D"
-      note: "cable attribute; not applied to short jumper/indoor/drop cables (Note 1)"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2 (ITU-T G.652.D attributes), cable attributes, row 'Attenuation coefficient'"
-    quote: "Attenuation coefficient (Note 1) | Maximum from 1310 nm to 1625 nm (Note 2) | 0.40 | dB/km"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Identical value in G.652 (11/2016) Table 2 (itu_t_g652_2016). Note 1 cites IEC 60794-2-11 allowing 1.0 dB/km for indoor cable. zh: 衰减系数."
-
-  - id: ch01.att.g652d_max_1383_after_h2
-    section: "1.1"
-    claim: "Maximum cabled attenuation of G.652.D at 1383 ± 3 nm after hydrogen ageing (water-peak region)"
-    value: 0.40
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1383
-      fiber: "G.652.D"
-      note: "after hydrogen ageing type test per IEC 60793-2-50 (Note 3)"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, cable attributes, row 'Maximum at 1383 nm ±3 nm after hydrogen ageing (Note 3)'"
-    quote: "Maximum at 1383 nm  3 nm after hydrogen ageing (Note 3) | 0.40 | dB/km"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The ± sign is dropped in the crawler text. Low-water-peak attribute that distinguishes G.652.D from G.652.B (clause 8 says categories are 'largely distinguished on the basis of attenuation requirement at 1383 nm'). zh: 低水峰."
-
-  - id: ch01.att.g652d_max_1530_1565
-    section: "1.1"
-    claim: "Maximum cabled attenuation coefficient of G.652.D in the C-band 1530-1565 nm"
-    value: 0.30
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: [1530, 1565]
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, cable attributes, row 'Maximum at 1530-1565 nm'"
-    quote: "Maximum at 1530-1565 nm | 0.30 | dB/km"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "G.652 (11/2009) Table 4 stated this as 'Maximum at 1550 nm 0.3 dB/km'; the 2016 edition edited attenuation specs to two decimals and changed the row label."
-
-  - id: ch01.att.g652d_rayleigh_extension_1260
-    section: "1.1"
-    claim: "Rayleigh-scattering increment added to the 1310 nm attenuation value to extend the G.652.D attenuation spec down to 1260 nm"
-    value: 0.07
-    unit: "dB/km"
-    kind: fact
-    conditions:
-      wavelength_nm: [1260, 1310]
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, NOTE 2"
-    quote: "This wavelength region can be extended to 1260 nm by adding 0.07 dB/km induced Rayleigh scattering loss to the attenuation value at 1310 nm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Useful check of λ^-4 scaling in the worked example. zh: 瑞利散射."
-
-  - id: ch01.fiber.g652d_mfd_1310
-    section: "1.1"
-    claim: "Range of nominal mode field diameter of G.652.D fibre at 1310 nm (tolerance ±0.4 µm)"
-    value: [8.6, 9.2]
-    unit: "µm"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1310
-      fiber: "G.652.D"
-      note: "range within which the manufacturer's nominal must lie; tolerance about nominal ±0.4 µm"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, fibre attributes, row 'Mode field diameter'"
-    quote: "| Range of nominal values | 8.6-9.2 | μm | | Tolerance |  0.4 | μm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "G.652.B keeps 8.6-9.5 µm ±0.6 µm (Table 1). zh: 模场直径."
-
-  - id: ch01.fiber.g652d_cable_cutoff
-    section: "1.1"
-    claim: "Maximum cable cut-off wavelength λcc of G.652.D fibre"
-    value: 1260
-    unit: "nm"
-    kind: spec_max
-    conditions:
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, row 'Cable cut-off wavelength'; clause 6.5"
-    quote: "Cable cut-off wavelength | Maximum | 1260 | nm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "zh: 光缆截止波长."
-
-  - id: ch01.fiber.g652d_macrobend_30mm
-    section: "1.1"
-    claim: "Maximum macrobending loss of G.652.D at 1625 nm for 100 turns on a 30 mm radius mandrel"
-    value: 0.1
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1625
-      bend_radius_mm: 30
-      turns: 100
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, row 'Macrobending loss'"
-    quote: "Radius | 30 | mm | | Number of turns | 100 | | | Maximum at 1625 nm | 0.1 | dB"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "zh: 宏弯损耗."
-
-  - id: ch01.att.g652_link_typ_cband
-    section: "1.1"
-    claim: "Representative (typical) link attenuation coefficient of concatenated G.652 links in 1530-1565 nm, used for system design"
-    value: 0.275
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: [1530, 1565]
-      fiber: "G.652 (all subcategories, incl. G.657.A)"
-      note: "typical link value corresponding to link attenuation used in G.957 and G.691; includes cabling effects"
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, clause I.4, Table I.1 'Representative values of concatenated optical fibre links'"
-    quote: "| 1530 | nm-1565 | nm | 0.275 dB/km |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same table gives 0.5 dB/km for 1260-1360 nm and 0.35 dB/km for 1565-1625 nm (see next record). Appropriate default for the 80 km span-budget worked example when only standards values are wanted."
-
-  - id: ch01.att.g652_link_typ_oband
-    section: "1.1"
-    claim: "Representative (typical) link attenuation coefficient of concatenated G.652 links in 1260-1360 nm"
-    value: 0.5
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: [1260, 1360]
-      fiber: "G.652"
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, clause I.4, Table I.1"
-    quote: "| (Note) | 1260 | nm-1360 nm | | 0.5 dB/km |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "1565-1625 nm row: 0.35 dB/km. The 100G Lambda MSA 400G-FR4 spec also uses 0.5 dB/km cabled O-band attenuation (ch01.cd.fr4_fiber_att_max)."
-
-  # =====================================================================
-  # 1.1  ITU-T G.654.E and G.654.D (08/2024)
-  # =====================================================================
-  - id: ch01.att.g654e_max_1550
-    section: "1.1"
-    claim: "Maximum cabled attenuation coefficient of G.654.E fibre at 1550 nm"
-    value: 0.23
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.654.E"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5 (ITU-T G.654.E attributes), cable attributes"
-    quote: "Attenuation coefficient (Note 4) | Maximum at 1550 nm | 0.23 | dB/km"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same 0.23 dB/km in G.654 (11/2016) and (03/2020) Table 5. zh: 截止波长位移单模光纤 (cut-off shifted SMF, G.654)."
-
-  - id: ch01.att.g654e_max_1530_1612
-    section: "1.1"
-    claim: "Maximum cabled attenuation coefficient of G.654.E over 1530-1612 nm"
-    value: 0.25
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: [1530, 1612]
-      fiber: "G.654.E"
-      note: "1612-1625 nm is TBD; Note 5 says typically 0.35 dB/km or less might be achieved there"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5, cable attributes; Note 5"
-    quote: "| | Maximum at 1530-1 612 nm | 0.25 | dB/km |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Row added in the 2020 edition (absent from 2016 Table 5)."
-
-  - id: ch01.fiber.g654e_mfd_1550
-    section: "1.1"
-    claim: "Range of nominal mode field diameter of G.654.E at 1550 nm (tolerance ±0.7 µm)"
-    value: [11.5, 12.5]
-    unit: "µm"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.654.E"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5, row 'Mode field diameter'"
-    quote: "| Range of nominal values | 11.5-12.5 |  m | | Tolerance |  0.7 |  m"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "G.654 specifies MFD, not A_eff; A_eff is not a specified attribute (see ch01.fiber.g654e_aeff_not_specified)."
-
-  - id: ch01.fiber.g654e_cable_cutoff
-    section: "1.1"
-    claim: "Maximum cable cut-off wavelength of G.654.E"
-    value: 1530
-    unit: "nm"
-    kind: spec_max
-    conditions:
-      fiber: "G.654.E"
-      note: "Note 1: should be below 1527 nm when used at G.698.2 frequencies corresponding to 1527.8-1530 nm"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5, row 'Cable cut-off wavelength (Note 1)'"
-    quote: "Cable cut-off wavelength(Note 1) | Maximum | 1530 | nm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Note 1 wording differs between editions: 2024 text says 'less than 1527 nm', 2020 text says 'less than 1527.8 nm' (see gaps file)."
-
-  - id: ch01.cd.g654e_d1550_range
-    section: "1.2"
-    claim: "Chromatic dispersion coefficient bounds of G.654.E at 1550 nm (D1550min to D1550max)"
-    value: [17, 23]
-    unit: "ps/(nm·km)"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.654.E"
-      note: "slope at 1550 nm bounded 0.050 to 0.070 ps/(nm²·km)"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5, rows 'Chromatic dispersion parameter (Note 2)'; clause 6.10 eq. (6-1)"
-    quote: "D 1550max | 23 | ps/(nm × km) | | | D 1550min | 17 | ps/(nm × km)"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "S1550 range [0.050, 0.070] ps/(nm²·km) in the same table."
-
-  - id: ch01.pmd.g654e_pmdq
-    section: "1.3"
-    claim: "Maximum PMD link design value PMDQ of G.654.E cable (M = 20 cables, Q = 0.01 %)"
-    value: 0.20
-    unit: "ps/√km"
-    kind: spec_max
-    conditions:
-      fiber: "G.654.E"
-      M_cables: 20
-      Q_percent: 0.01
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5, row 'PMD coefficient (Note 3)'"
-    quote: "| M | 20 | cables | | | Q | 0.01 | % | | | Maximum PMD Q | 0.20 | ps/"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Unit rendered 'ps/' in crawler text (√km glyph lost); 2020 PDF text shows 'ps/km½'."
-
-  - id: ch01.fiber.g654e_macrobend
-    section: "1.1"
-    claim: "Maximum macrobending loss of G.654.E at 1625 nm, 100 turns at 30 mm radius (equal to G.652.D)"
-    value: 0.1
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1625
-      bend_radius_mm: 30
-      turns: 100
-      fiber: "G.654.E"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 5, row 'Macrobending loss'; clause 8 text describing Table 5"
-    quote: "smaller macrobending loss specification equivalent to ITU-T G.652.D fibres, tightened range of nominal MFD"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "G.654.D (submarine) allows 2.0 dB at 1625 nm for the same test."
-
-  - id: ch01.fact.g654e_purpose
-    section: "1.1"
-    claim: "Deployment purpose of G.654.E: terrestrial cables with improved OSNR for high-bit-rate coherent transmission"
-    value: "terrestrial cables, improved OSNR, higher bit-rate coherent transmission (e.g. 100 Gbit/s)"
-    unit: "1"
-    kind: fact
-    conditions:
-      fiber: "G.654.E"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, description of Table 5"
-    quote: "for deployment as terrestrial cables with improved OSNR characteristics to support higher bit-rate coherent transmission, e.g., 100 Gbit/s systems."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Contrast: Table 4 G.654.D is 'recommended for higher bit-rate submarine systems'."
-
-  - id: ch01.att.g654d_max_1550
-    section: "1.1"
-    claim: "Maximum cabled attenuation coefficient of G.654.D (submarine) fibre at 1550 nm"
-    value: 0.20
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.654.D"
-      note: "MFD nominal range 11.5-15.0 µm at 1550 nm; D1550max 23 ps/(nm·km); λcc ≤ 1530 nm"
-    source_id: itu_t_g654_2024
-    locator: "Clause 8, Table 4 (ITU-T G.654.D attributes), cable attributes"
-    quote: "Attenuation coefficient (Note 1) | Maximum at 1550 nm | 0.20 | dB/km"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same Table 4: 'Range of nominal values | 11.5-15.0 | µm'."
-
-  - id: ch01.fiber.g654e_aeff_not_specified
-    section: "1.1"
-    claim: "Effective area A_eff is not a specified attribute in ITU-T fibre Recommendations; G.654.E A_eff values are typical vendor values (110-125 µm² cited)"
-    value: [110, 125]
-    unit: "µm²"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.654.E"
-    source_id: acome_g654e_whitepaper
-    locator: "Fig. 8 table 'Recommended value by ITU-T for G.652.D and G.654.E fibres', footnote **"
-    quote: "**Typical value. Aeff is not specified in ITU-T Recommendations."
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Same table row: 'Effective area (Aeff) @1,550nm [µm2] | ** Typ. 80 | | ** Typ. 110-125'. YOFC 2020 slide quotes G.654.E A_eff as 110-130 µm² (ch01.att.yofc_a130); ZTE says China backbones used A110 and A130 variants."
-
-  # =====================================================================
-  # 1.1  ITU-T G.657 (08/2024)
-  # =====================================================================
-  - id: ch01.bend.g657_design_radii
-    section: "1.1"
-    claim: "Minimum design bend radius for G.657 subcategories A1, A2 and B3"
-    value: "A1: 10 mm; A2: 7.5 mm; B3: 5 mm"
-    unit: "mm"
-    kind: fact
-    conditions:
-      fiber: "G.657.A1/A2/B3"
-    source_id: itu_t_g657_2024
-    locator: "Clause 1 (Scope)"
-    quote: "Subcategory ITU-T G.657.A1 fibres are appropriate for a minimum design radius of 10 mm. Subcategory ITU-T G.657.A2 fibres ... 7.5 mm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Scope also: 'Subcategory ITU-T G.657.B3 fibres are appropriate for a minimum design radius of 5 mm.' G.657.A fibres are a subset of and compliant with G.652.D; B fibres are not necessarily G.652.D compliant in CD and PMD. The 2024 edition lists A1, A2 and B3 only. zh: 弯曲损耗不敏感单模光纤."
-
-  - id: ch01.bend.g657a1_10mm_1550
-    section: "1.1"
-    claim: "Max uncabled macrobending loss of G.657.A1, 1 turn at 10 mm radius, 1550 nm"
-    value: 0.75
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      bend_radius_mm: 10
-      turns: 1
-      fiber: "G.657.A1"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 1 (ITU-T G.657 category A attributes), row 'Uncabled fibre macrobending loss'"
-    quote: "| Max. at 1550 | nm 0.25 | 0.75 0.03 | 0.1 0.5 | dB |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Column order A1: (15 mm,10 turns),(10 mm,1 turn); A2: (15 mm,10 turns),(10 mm,1 turn),(7.5 mm,1 turn). A1 values: 15 mm/10 turns 0.25 dB@1550, 1.0 dB@1625; 10 mm/1 turn 0.75 dB@1550, 1.5 dB@1625. Column mapping confirmed by AFL application note table (tier B)."
-
-  - id: ch01.bend.g657a1_10mm_1625
-    section: "1.1"
-    claim: "Max uncabled macrobending loss of G.657.A1, 1 turn at 10 mm radius, 1625 nm"
-    value: 1.5
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1625
-      bend_radius_mm: 10
-      turns: 1
-      fiber: "G.657.A1"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 1, row 'Max. at 1625 nm'"
-    quote: "| Max. at 1625 | nm 1.0 | 1.5 0.1 | 0.2 1.0 | dB |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Values in row order: A1 15 mm 1.0, A1 10 mm 1.5, A2 15 mm 0.1, A2 10 mm 0.2, A2 7.5 mm 1.0."
-
-  - id: ch01.bend.g657a2_7p5mm_1550
-    section: "1.1"
-    claim: "Max uncabled macrobending loss of G.657.A2, 1 turn at 7.5 mm radius, 1550 nm"
-    value: 0.5
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      bend_radius_mm: 7.5
-      turns: 1
-      fiber: "G.657.A2"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 1, row 'Max. at 1550 nm'"
-    quote: "| Max. at 1550 | nm 0.25 | 0.75 0.03 | 0.1 0.5 | dB |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "A2 other values @1550: 15 mm/10 turns 0.03 dB; 10 mm/1 turn 0.1 dB. @1625: 0.1, 0.2, 1.0 dB respectively."
-
-  - id: ch01.bend.g657a2_7p5mm_1625
-    section: "1.1"
-    claim: "Max uncabled macrobending loss of G.657.A2, 1 turn at 7.5 mm radius, 1625 nm"
-    value: 1.0
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1625
-      bend_radius_mm: 7.5
-      turns: 1
-      fiber: "G.657.A2"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 1, row 'Max. at 1625 nm'"
-    quote: "| Max. at 1625 | nm 1.0 | 1.5 0.1 | 0.2 1.0 | dB |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.bend.g657b3_5mm_1550
-    section: "1.1"
-    claim: "Max uncabled macrobending loss of G.657.B3, 1 turn at 5 mm radius, 1550 nm"
-    value: 0.15
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      bend_radius_mm: 5
-      turns: 1
-      fiber: "G.657.B3"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 2 (ITU-T G.657.B3 attributes), row 'Uncabled fibre macrobending loss'"
-    quote: "| Radius | 10 | 7.5 | 5 | mm | ... | Max. at 1550 | nm 0.03 | 0.08 | 0.15"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "B3 @1550: 10 mm 0.03, 7.5 mm 0.08, 5 mm 0.15 dB (1 turn each). @1625: 0.1, 0.25, 0.45 dB."
-
-  - id: ch01.bend.g657b3_5mm_1625
-    section: "1.1"
-    claim: "Max uncabled macrobending loss of G.657.B3, 1 turn at 5 mm radius, 1625 nm"
-    value: 0.45
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1625
-      bend_radius_mm: 5
-      turns: 1
-      fiber: "G.657.B3"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 2, row 'Max. at 1625 nm'"
-    quote: "| Max. at 1625 | nm 0.1 | 0.25 | 0.45 | dB |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.pmd.g657b3_pmdq
-    section: "1.3"
-    claim: "Maximum PMDQ of G.657.B3 cable (relaxed relative to G.652.D)"
-    value: 0.50
-    unit: "ps/√km"
-    kind: spec_max
-    conditions:
-      fiber: "G.657.B3"
-      M_cables: 20
-      Q_percent: 0.01
-      note: "B3 also allows λ0 1250-1350 nm and S0max 0.11 ps/(nm²·km)"
-    source_id: itu_t_g657_2024
-    locator: "Clause 8, Table 2, row 'PMD coefficient'"
-    quote: "| | Maximum PMDQ | | | 0.50 | ½ ps/km |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same table: 'λ0min | 1250 | nm', 'λ0max | 1350 | nm', 'S0max | 0.11'."
-
-  # =====================================================================
-  # 1.1  Vendor datasheets (typical / guaranteed product values)
-  # =====================================================================
-  - id: ch01.att.smf28ultra_max_1550
-    section: "1.1"
-    claim: "Maximum attenuation of Corning SMF-28 Ultra (G.652.D, G.657.A1-exceeding) at 1550 nm"
-    value: 0.18
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Corning SMF-28 Ultra"
-      note: "uncabled fibre spec; other rows: 1310 ≤0.32, 1383 ≤0.32 (post-H2 ageing), 1490 ≤0.21, 1625 ≤0.20 dB/km"
-    source_id: corning_smf28_ultra_pi1424_2025
-    locator: "p. 1, Optical Specifications, table 'Maximum Attenuation'"
-    quote: "| 1550 | | | ≤ 0.18 |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Datasheet PI1424 issued July 2025. Table rows: '| 1310 | | | ≤ 0.32 |', '| 1383** | | | ≤ 0.32 |', '| 1625 | | | ≤ 0.20 |'."
-
-  - id: ch01.att.smf28ultra_max_1310
-    section: "1.1"
-    claim: "Maximum attenuation of Corning SMF-28 Ultra at 1310 nm"
-    value: 0.32
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1310
-      fiber: "Corning SMF-28 Ultra"
-    source_id: corning_smf28_ultra_pi1424_2025
-    locator: "p. 1, Optical Specifications, table 'Maximum Attenuation'"
-    quote: "| 1310 | | | ≤ 0.32 |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: ""
-
-  - id: ch01.fiber.smf28ultra_group_index_1550
-    section: "1.1"
-    claim: "Effective group index of refraction of Corning SMF-28 Ultra at 1550 nm (1.4676 at 1310 nm)"
-    value: 1.4682
-    unit: "1"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Corning SMF-28 Ultra"
-      note: "characterized (typical) value; Corning labels it 'Effective Group Index of Refraction (neff)'"
-    source_id: corning_smf28_ultra_pi1424_2025
-    locator: "p. 2, Performance Characterizations"
-    quote: "Effective Group Index of Refraction (neff) | 1310 nm: 1.4676 1550 nm: 1.4682"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Latency = n_g/c ≈ 4.90 µs/km (compute in book/calc from this record and CODATA c). Neither G.652 nor G.654 specifies group index. zh: 群折射率."
-
-  - id: ch01.cd.smf28ultra_d1550_max
-    section: "1.2"
-    claim: "Maximum chromatic dispersion of SMF-28 Ultra at 1550 nm (≤23.7 at 1625 nm)"
-    value: 18
-    unit: "ps/(nm·km)"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Corning SMF-28 Ultra"
-      note: "λ0 1304-1324 nm; S0 ≤ 0.092 ps/(nm²·km); MFD 9.2±0.4 µm @1310, 10.4±0.5 µm @1550"
-    source_id: corning_smf28_ultra_pi1424_2025
-    locator: "p. 1, Optical Specifications, 'Dispersion' table"
-    quote: "| | 1550 | ≤ 18 | | | 1625 | ≤ 23.7 |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Same sheet: 'Zero Dispersion Wavelength (λ0): 1304 nm ≤ λ0 ≤ 1324 nm' (narrower than G.652.D 1300-1324 nm)."
-
-  - id: ch01.pmd.smf28ultra_ldv
-    section: "1.3"
-    claim: "PMD link design value (PMDQ) of SMF-28 Ultra, M = 20, Q = 0.01 % (max individual fibre PMD 0.1 ps/√km)"
-    value: 0.04
-    unit: "ps/√km"
-    kind: spec_max
-    conditions:
-      fiber: "Corning SMF-28 Ultra"
-      M_cables: 20
-      Q_percent: 0.01
-    source_id: corning_smf28_ultra_pi1424_2025
-    locator: "p. 1, 'Polarization Mode Dispersion (PMD)' table and footnote"
-    quote: "PMD Link Design Value | | ≤ 0.04* | | Maximum Individual Fiber PMD | | ≤ 0.1"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Footnote: 'Complies with ITU-T G.650-2 Appendix IV, (m = 20, Q = 0.01%), August 2015.' Five times below the G.652.D 0.20 limit."
-
-  - id: ch01.att.vascade_ex2000_nominal_1550
-    section: "1.1"
-    claim: "Nominal attenuation of Corning Vascade EX2000 (silica-core, G.654.B/D) at 1550 nm; max 0.16 dB/km"
-    value: 0.149
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Corning Vascade EX2000"
-      note: "nominal; A_eff 115 µm² nominal; MFD 11.9±0.5 µm; D ≤22 ps/(nm·km); λcc ≤1520 nm; n_eff(group) 1.4634"
-    source_id: corning_vascade_ex2000_pi1440_2023
-    locator: "p. 1, introductory paragraph and Optical Specifications"
-    quote: "combines ultra-low attenuation (0.149 dB/km nominal) with large effective area (115 µm2 nominal) which is ITU-T G.654.B and G.654.D compliant."
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Disagreement (product revision): PI1445 (2020) lists EX2000 typical 0.152 dB/km and 115 µm² (ch01.att.vascade_ex2000_typ_pi1445). PMD LDV ≤0.08 ps/√km uses IEC 60794-3 m=24, Q=0.1 %, not the ITU M=20/Q=0.01 % convention."
-
-  - id: ch01.att.vascade_ex2000_typ_pi1445
-    section: "1.1"
-    claim: "Typical attenuation of Vascade EX2000 at 1550 nm per the 2020 Vascade family sheet"
-    value: 0.152
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Corning Vascade EX2000"
-      note: "constituent fibre on shipping spool; ~0.003 dB/km reduction expected in loose-tube cable"
-    source_id: corning_vascade_family_pi1445_2020
-    locator: "p. 2, 'Typical Performance Values' table"
-    quote: "Attenuation at 0.154 0.152 0.198 0.182 1550 nm (dB/km)*"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Columns: EX3000, EX2000, LEAF EP, L1000. Disagrees with 0.149 nominal in PI1440 (2023); likely product improvement between sheet issues. Record both; prefer the newer sheet for 'current product'."
-
-  - id: ch01.att.vascade_ex3000_typ
-    section: "1.1"
-    claim: "Typical attenuation and effective area of Vascade EX3000 (G.654.D) at 1550 nm: 0.154 dB/km, 153 µm²"
-    value: 0.154
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Corning Vascade EX3000"
-      note: "A_eff 153 µm²; D +21.0 ps/(nm·km); slope +0.06; PMDQ 0.02 ps/√km; n_eff 1.4634; n2 2.1e-20 m²/W"
-    source_id: corning_vascade_family_pi1445_2020
-    locator: "p. 2, 'Typical Performance Values' table, EX3000 column"
-    quote: "Effective Area at 153 115 65 100 1550 nm (µm2) PMDQ (ps/√km) 0.02 0.02 0.02 0.02"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Dispersion row: 'Dispersion at +21.0 +20.2 -4.0 +18.5 1550 nm (ps/nm•km)'."
-
-  - id: ch01.att.zplus150_ull_typ
-    section: "1.1"
-    claim: "Typical attenuation of Sumitomo Z-PLUS Fiber 150 (ULL grade) at 1550 nm, with 150 µm² typical A_eff"
-    value: 0.144
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Sumitomo Z-PLUS Fiber 150, ULL grade (pure-silica core)"
-      note: "LL grade 0.150 typical; individual max ULL 0.152, LL 0.158; A_eff 150±15 µm²; D ≤23 ps/(nm·km); λcc ≤1530 nm"
-    source_id: sumitomo_zplus150_tr23164a_2023
-    locator: "p. 1, header bullets and 'Optical Characteristics' table"
-    quote: "World's lowest attenuation of 0.144 dB/km or 0.150 dB/km, and very large effective area of 150 µm 2 typical"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "G.654.D compliant. Sumitomo press release (2024) describes this product as 'transmission loss of 0.14 dB/km' (rounded; tier C)."
-
-  - id: ch01.att.zplus130_ull_typ
-    section: "1.1"
-    claim: "Typical attenuation of Sumitomo Z-PLUS Fiber 130 (ULL grade) at 1550 nm, 130 µm² typical A_eff"
-    value: 0.147
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Sumitomo Z-PLUS Fiber 130, ULL grade"
-      note: "LL grade 0.152; D ≤22 ps/(nm·km); λcc ≤1530 nm"
-    source_id: sumitomo_zplus130_tr23163b_2026
-    locator: "p. 1, header bullets"
-    quote: "Ultra-low attenuation of 0.147 dB/km or 0.152 dB/km, and large effective area of 130 µm 2 typical"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Earlier issue TR-21267A (2021) listed only 0.152 dB/km typical."
-
-  - id: ch01.att.zplus_ull_typ
-    section: "1.1"
-    claim: "Typical attenuation of Sumitomo Z-PLUS Fiber ULL at 1550 nm, 112 µm² typical A_eff"
-    value: 0.148
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Sumitomo Z-PLUS Fiber ULL (G.654.B/D)"
-      note: "individual max 0.156; batch average 0.151 dB/km; D ≤22"
-    source_id: sumitomo_zplus_ull_tr23162a_2023
-    locator: "p. 1, header bullets"
-    quote: "Ultra-low attenuation of 0.148 dB/km and large effective area of 112 µm 2 typical"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: ""
-
-  - id: ch01.att.sumitomo_pureadvance125_typ
-    section: "1.1"
-    claim: "Typical attenuation of Sumitomo PureAdvance-125 (terrestrial G.654.E, pure-silica core) at 1550 nm; ≤0.16 dB/km max; A_eff 125 µm² typ"
-    value: 0.156
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Sumitomo PureAdvance-125 (G.654.E)"
-      note: "cable cut-off ≤1520 nm; MFD typ 12.5 µm; comparison G.652.D PureBand typ 0.185 dB/km"
-    source_id: acome_g654e_whitepaper
-    locator: "Section on Sumitomo G.654.E fibre, comparison table (after Fig. 8)"
-    quote: "these fibres deliver ultra-low attenuation of 0.16dB/km or less (typically 0.156dB/km) and feature large effective areas (Aeff) of up to 125µm²"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Representative terrestrial G.654.E product (vs submarine Z-PLUS)."
-
-  - id: ch01.att.yofc_a130
-    section: "1.1"
-    claim: "YOFC FarBand Ultra A130 (G.654.E) attenuation at 1550 nm (max), with A_eff 130 µm² and MFD 12.0-13.0 µm"
-    value: 0.17
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      fiber: "YOFC 远贝 FarBand Ultra A130 (ULL-G.654.E)"
-      note: "slide compares G.654.E standard (≤0.23 cabled, A_eff 110-130) and G.652.D typical (A_eff 80, ≤0.20)"
-    source_id: yofc_g654e_presentation_2020
-    locator: "Section 02 光纤性能, parameter comparison table"
-    quote: "有效面积@1550nm μm² 110-130 130 80 衰减@1550nm dB/km ≤0.23 (成缆后) ≤0.17 ≤0.20"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "zh terms: 有效面积 = effective area; 衰减 = attenuation; 成缆后 = after cabling; 超低衰减大有效面积光纤 = ultra-low-loss large-effective-area fibre; 远贝 is YOFC's brand name. Corporate presentation, not a formal datasheet. Splice loss to G.652.D quoted typ 0.15 dB/splice; self-splice 0.022 dB."
-
-  - id: ch01.att.yofc_ct_shanghai_guangzhou
-    section: "1.1"
-    claim: "China Telecom Shanghai-Guangzhou trunk (2019) deployed ULL G.654.E with attenuation ≤0.174 dB/km and A_eff 130 µm²; longest actual line 2000 km"
-    value: 0.174
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "YOFC ULL G.654.E (A130)"
-      note: "operator deployment, vendor-reported"
-    source_id: yofc_g654e_presentation_2020
-    locator: "Section 03 工程案例及荣誉 (project cases)"
-    quote: "2019年，中国电信上海-广州一干 部署超低衰减G.654.E光纤干线线路 ... 衰减≤0.174dB/km, 有效面积 130μm 2"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "zh: 一干 = national level-1 trunk (一级干线); 超低衰减 = ultra-low attenuation. Same slide: China Unicom trial 2015-2017 fibre typical 0.167 dB/km, link 0.173-0.175 dB/km."
-
-  - id: ch01.fact.zte_g654e_a130_backbone
-    section: "1.1"
-    claim: "In China's backbone networks, G.654.E A110 and A130 were used 2015-2018; after 2018 only A130 was used"
-    value: "A130 only after 2018"
-    unit: "1"
-    kind: fact
-    conditions:
-      fiber: "G.654.E (A110 = 110 µm², A130 = 130 µm²)"
-    source_id: zte_technologies_g654e_2024
-    locator: "ZTE Technologies 2024 No. 6, article body"
-    quote: "After 2018, only the A130 fiber was used for building backbone networks."
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Same article: A130 A_eff is 47 % larger than G.652D (A80); optimal launch power ~1.7 dB higher; typical attenuation ~0.02 dB/km lower; ~1.6 dB less loss over 80 km."
-
-  - id: ch01.att.zte_g654e_vs_g652d_80km
-    section: "1.1"
-    claim: "G.654.E span loss advantage over G.652.D for an 80 km span (typical attenuation ~0.02 dB/km lower)"
-    value: 1.6
-    unit: "dB"
-    kind: spec_typ
-    conditions:
-      span_km: 80
-      fiber: "G.654.E vs G.652.D"
-    source_id: zte_technologies_g654e_2024
-    locator: "ZTE Technologies 2024 No. 6, article body"
-    quote: "The optical loss of G.654.E fiber is about 1.6 dB lower than that of G.652D fiber over an 80 km fiber span."
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Vendor statement; consistent with 0.02 dB/km × 80 km. Usable as a check in the span-budget worked example."
-
-  # =====================================================================
-  # 1.1  Loss physics: Rayleigh, OH, fictive temperature, records
-  # =====================================================================
-  - id: ch01.phys.oh_overtone_1380
-    section: "1.1"
-    claim: "Wavelength of the first overtone of the OH vibration (water peak) in silica fibre; fundamental at 2.7 µm, combination band at 1.24 µm"
-    value: 1.38
-    unit: "µm"
-    kind: constant
-    conditions:
-      material: "silica"
-    source_id: kanamori_ieice_2021
-    locator: "Section 'Initiatives of Silica Optical Fiber', paragraph on OH groups"
-    quote: "the fundamental vibration of OH occurs at a wavelength of 2.7 µm, and its first overtone appears at 1.38 µm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Next sentence: 1.24 µm absorption is OH first overtone + SiO4 fundamental. Malitson (1965) independently notes the 2.7 µm OH band with weak overtones at 2.2 and 1.4 µm in bulk fused silica. G.652.D controls this via its 1383 nm spec. zh: 羟基吸收峰 / 水峰."
-
-  - id: ch01.phys.rayleigh_coeff_bulk_silica
-    section: "1.1"
-    claim: "Rayleigh scattering coefficient A of bulk silica glass (fictive temperature usually ≤1400 °C)"
-    value: 0.6
-    unit: "dB/(km·µm⁴)"
-    kind: measured
-    conditions:
-      material: "bulk silica glass"
-    source_id: kanamori_ieice_2021
-    locator: "Section 'Evaluation of Tf and Rayleigh Scattering'"
-    quote: "For bulk silica glasses, Rayleigh scattering coefficient A in Eq. ( 1 ) is reported to be 0.6 dB/km•µm 4"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Secondary within a review (Kanamori cites ref. [52]). Same paragraph: fibres have A = 0.8-0.9 dB/(km·µm⁴) and Tf around 1600 °C (Sakaguchi)."
-
-  - id: ch01.phys.rayleigh_coeff_fiber
-    section: "1.1"
-    claim: "Range of Rayleigh scattering coefficient of drawn silica optical fibres (vs 0.6 for bulk), attributed to higher fictive temperature (~1600 °C)"
-    value: [0.8, 0.9]
-    unit: "dB/(km·µm⁴)"
-    kind: measured
-    conditions:
-      material: "silica-based SM fibres (standard and pure-silica-core examples)"
-    source_id: kanamori_ieice_2021
-    locator: "Section 'Evaluation of Tf and Rayleigh Scattering'"
-    quote: "On the other hand, A of optical fibers are 0.8 to 0.9 dB/km•µm 4 , as shown in Fig. 4 and Fig. 7 ."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Kanamori's Fig. 4 example for a typical SMF gives A = 0.93 dB/(km·µm⁴), B = 0.015 dB/km (slightly outside 0.8-0.9; internal inconsistency in the review, see gaps)."
-
-  - id: ch01.phys.rayleigh_coeff_psc_record
-    section: "1.1"
-    claim: "Rayleigh scattering coefficient of record pure-silica-core fibres (cold draw, reduced fictive temperature)"
-    value: 0.75
-    unit: "dB/(km·µm⁴)"
-    kind: measured
-    conditions:
-      fiber: "pure-silica-core (with or without traces of F), slow 'cold' draw"
-    source_id: sakr_natcommun_2020
-    locator: "Results, discussion of Fig. 3 (state-of-the-art loss comparison)"
-    quote: "Their Rayleigh scattering coefficient of ~0.75 dB km −1 µm −4 is a result of 'cold draws' aimed at reducing the fictive temperature"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same paragraph gives ~1 dB/(km·µm⁴) as compatible with high-volume Ge-doped commercial fibres (next record). zh: 假想温度 (fictive temperature)."
-
-  - id: ch01.phys.rayleigh_coeff_gedoped
-    section: "1.1"
-    claim: "Rayleigh scattering coefficient compatible with high-volume, fast-draw Ge-doped commercial fibres"
-    value: 1
-    unit: "dB/(km·µm⁴)"
-    kind: spec_typ
-    conditions:
-      fiber: "GeO2-doped core SMF, high-volume production"
-    source_id: sakr_natcommun_2020
-    locator: "Results, discussion of Fig. 3"
-    quote: "has a Rayleigh scattering coefficient of 1 dB km −1 µm −4, which is compatible with the loss experienced by high volume, fast draw speed"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same paper's introduction: Ge-doped core fibre Rayleigh loss 'is about 30% higher' than record pure-silica-core fibres."
-
-  - id: ch01.phys.ir_absorption_1550
-    section: "1.1"
-    claim: "Contribution of the infrared (multiphonon) absorption tail of SiO2 glass to loss at 1.55 µm"
-    value: 0.01
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      material: "SiO2 glass"
-    source_id: kanamori_ieice_2021
-    locator: "Section 'Formulation of Optical Fiber Loss Factors', discussion of F1 exp(-F2/λ) term"
-    quote: "In the case of SiO 2 glass [28] , the effect of IR absorption at a wavelength of 1.55 µm is about 0.01 dB/km."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same section: UV Urbach tail 'negligible in the wavelength range used for optical communication systems' for SiO2."
-
-  - id: ch01.phys.rayleigh_fraction_of_loss
-    section: "1.1"
-    claim: "Rayleigh scattering accounts for 80 % or more of total silica fibre loss (1990s understanding)"
-    value: 0.8
-    unit: "1"
-    kind: fact
-    conditions:
-      wavelength_nm: 1550
-    source_id: kanamori_ieice_2021
-    locator: "Section 'Evaluation of Tf and Rayleigh Scattering', first sentence"
-    quote: "it was widely recognized that it is necessary to reduce Rayleigh scattering loss, which accounts for 80% or more of the total loss"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Value is a lower bound (≥0.8)."
-
-  - id: ch01.phys.fictive_temp_fiber
-    section: "1.1"
-    claim: "Fictive temperature of as-drawn silica fibre (reducible to ~1400 °C by reheating), explaining higher Rayleigh loss than bulk glass"
-    value: 1600
-    unit: "°C"
-    kind: measured
-    conditions:
-      material: "as-drawn silica fibre (Raman end-face analysis, Sakaguchi et al.)"
-    source_id: kanamori_ieice_2021
-    locator: "Section 'Heat Treatment'"
-    quote: "They found that its T f was 1600 • C as drawn state, and that it was reduced to 1400 • C"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Fictive temperature definition and density-fluctuation term A_d ∝ T_f β_T in Kanamori Eq. (3) (equations file). Saito et al. estimated <0.141 dB/km possible with 1567 °C, 1 s annealing (same paper)."
-
-  - id: ch01.phys.psc_record_1986
-    section: "1.1"
-    claim: "Loss of the first record pure-silica-core SM fibre (Yokota et al., 1986) at 1.55 µm"
-    value: 0.154
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-      fiber: "pure-silica-core SMF, F-doped cladding"
-      year: 1986
-    source_id: kanamori_ieice_2021
-    locator: "Section 5 'Pure-Silica-Core Fiber'"
-    quote: "With a pure-silica-core SM fiber, Yokota et al. demonstrated a record-low loss of 0.154 dB/km achieved at a wavelength of 1.55 µm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Historical anchor; GeO2-SiO2 core fibres reached 0.20 dB/km by 1979-1981 (same paper)."
-
-  - id: ch01.rec.makovejs_ex3000_2016
-    section: "1.1"
-    claim: "Record-low attenuation (at the time) of a 148 µm² Vascade EX3000 silica-core fibre at 1560 nm (0.1467 dB/km at 1550 nm)"
-    value: 0.1460
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1560
-      fiber: "Corning Vascade EX3000, A_eff 148.3 µm², 22.65 km"
-      note: "measured on large-diameter (tension-free) spool"
-    source_id: makovejs_jlt_2016
-    locator: "Section II and Table II(A)"
-    quote: "The attenuation at 1550 nm was measured to be 0.1467 dB/km, and the lowest attenuation value was 0.1460 dB/km at 1560 nm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Superseded by Tamura et al. 2017/2018 (0.1419). Paper also reports cabled attenuation 0.001-0.002 dB/km lower than on shipping spool for 4 of 8 fibres."
-
-  - id: ch01.rec.tamura_2018_1560
-    section: "1.1"
-    claim: "Record-low transmission loss of a Ge-free (F co-doped) silica-core fibre at 1560 nm (0.1424 dB/km at 1550 nm), A_eff 147 µm²"
-    value: 0.1419
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1560
-      fiber: "Ge-free silica core with fluorine co-doping, A_eff 147 µm²"
-      year: 2017
-    source_id: tamura_jlt_2018
-    locator: "Abstract"
-    quote: "We achieved the lowest-ever transmission losses of 0.1419 dB/km at 1560 nm wavelength and 0.1424 dB/km at 1550 nm in a Ge-free silica-core optical fiber."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "First reported at OFC 2017 post-deadline ('Lowest-ever 0.1419-dB/km loss optical fiber'). Abstract only read. Superseded in 2024 (see ch01.rec.sato_ofc2024_1566 and ch01.rec.khrapko_ptl2024_qsmf). zh: 超低损耗光纤."
-
-  - id: ch01.rec.sato_ofc2024_1566
-    section: "1.1"
-    claim: "Record-low loss of a Ge-free silica-core single-mode fibre at 1566 nm (0.1406 dB/km at 1550 nm), via further fictive-temperature reduction"
-    value: 0.1397
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1566
-      fiber: "Ge-free silica-core SMF (Sumitomo)"
-      year: 2024
-    source_id: sato_ofc_2024
-    locator: "Abstract (OFC 2024 paper Tu2E.1)"
-    quote: "We have achieved low loss record of 0.1397 dB/km at 1566 nm wavelength and 0.1406 dB/km at 1550 nm on a Ge-free silica-core fiber"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only. Same result republished at OECC/PSC 2025 ('Ultra-Low-Loss Silica-Core Fiber with 0.1397dB/km'). Competing 2024 record claim: Khrapko et al. PTL 0.1400 dB/km at 1560 nm in a QUASI-single-mode fibre (0.1395 on half-lengths). Lowest-loss solid single-mode fibre per peer-reviewed sources found: this record. See gaps file."
-
-  - id: ch01.rec.khrapko_ptl2024_qsmf
-    section: "1.1"
-    claim: "Record-low attenuation of a quasi-single-mode alkali(K2O)/halide-doped silica-core fibre at 1560 nm (0.1407 dB/km at 1550 nm)"
-    value: 0.1400
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1560
-      fiber: "quasi single-mode fibre, K2O + Cl + F doped silica core (Corning), 24 km reel"
-      year: 2024
-    source_id: khrapko_ptl_2024
-    locator: "Abstract; Results section (24 km reel and half-length measurements)"
-    quote: "We report a quasi single-mode fiber setting an absolute low attenuation record of 0.1400 dB/km at 1560 nm or 0.1407 at 1550 nm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Half-lengths averaged 0.1395 dB/km at 1560 nm ('the lowest net fiber attenuation reported to date'). QSMF, not strictly single-mode; disagrees in framing with Sato OFC 2024 (0.1397 dB/km SMF at 1566 nm). Paper projects ~0.1325 dB/km as approximate silica limit for their draw conditions (next record)."
-
-  - id: ch01.phys.khrapko_projected_limit
-    section: "1.1"
-    claim: "Projected minimum attenuation of alkali-doped silica-core fibre if LP01 overlap with fluorine is zero (approximate silica-based limit for given draw conditions)"
-    value: 0.1325
-    unit: "dB/km"
-    kind: model_param
-    conditions:
-      wavelength_nm: 1560
-      note: "assumes no absorbing impurities/defects and negligible small-angle scattering; natural isotope mixture"
-    source_id: khrapko_ptl_2024
-    locator: "Results, discussion of Table I"
-    quote: "if the overlap of the LP01 mode with fluorine is set to 0, the minimum attenuation is projected to be 0.1325 dB/km."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Model projection, not a measurement. Only 'intrinsic minimum' style number found from a primary source."
-
-  - id: ch01.rec.petrovich_hcf_2025
-    section: "1.1"
-    claim: "Measured loss of a hollow-core double-nested antiresonant nodeless fibre (DNANF) at 1550 nm; <0.1 dB/km from 1481-1625 nm"
-    value: 0.091
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-      fiber: "hollow-core DNANF, 15 km (HCF2), Microsoft Azure Fiber / Southampton"
-      year: 2025
-    source_id: petrovich_natphoton_2025
-    locator: "Abstract; Results, Fig. 2c-d (HCF2 cutback)"
-    quote: "we report a microstructured optical waveguide with unprecedented transmission bandwidth and attenuation, with a measured loss of 0.091 dB km −1 at 1,550 nm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Air-guiding, not silica-guided: compare separately from the solid-core record. Same paper: 0.128 dB/km at 1310 nm; '45%' higher transmission speed (lower latency). zh: 空芯光纤 (hollow-core fibre); 亨通 reports HC-ARF ≤0.2 dB/km (tier C broker report, not recorded)."
-
-  # =====================================================================
-  # 1.2  Chromatic dispersion
-  # =====================================================================
-  - id: ch01.cd.g652d_lambda0_range
-    section: "1.2"
-    claim: "Zero-dispersion wavelength range of G.652.D (λ0min to λ0max)"
-    value: [1300, 1324]
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      fiber: "G.652.D"
-      note: "3-term Sellmeier fit to group delay, 1260-1460 nm"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, rows 'λ0min', 'λ0max'"
-    quote: "| λ 0min | 1 300 | nm | | | λ 0max | 1 324 | nm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "zh: 零色散波长."
-
-  - id: ch01.cd.g652d_s0_range
-    section: "1.2"
-    claim: "Zero-dispersion slope range of G.652.D (S0min to S0max)"
-    value: [0.073, 0.092]
-    unit: "ps/(nm²·km)"
-    kind: spec_typ
-    conditions:
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, rows 'S0min', 'S0max'"
-    quote: "| | S 0min | 0.073 | ps/(nm 2 × km) | | | S 0max | 0.092 | ps/(nm 2 × km) |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "S0min added in 2016 edition 'to bind both the minimum and maximum chromatic dispersion coefficients' (clause 6.10). 100G Lambda MSA 400G-FR4 uses S0max 0.093 (minor disagreement; see ch01.cd.fr4_fiber_s0max)."
-
-  - id: ch01.cd.g652d_d1550_range
-    section: "1.2"
-    claim: "Chromatic dispersion coefficient bounds of G.652.D at 1550 nm (linear fitting 1460-1625 nm)"
-    value: [13.3, 18.6]
-    unit: "ps/(nm·km)"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, rows 'Minimum/Maximum at 1550 nm'"
-    quote: "Minimum at 1550 nm | 13.3 | ps/(nm × km) | | | Maximum at 1550 nm | 18.6"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "At 1625 nm: min 17.2, max 23.7 ps/(nm·km) (same table). Boundary lines eq. (6-3) in equations file."
-
-  - id: ch01.cd.g652d_d1625_range
-    section: "1.2"
-    claim: "Chromatic dispersion coefficient bounds of G.652.D at 1625 nm"
-    value: [17.2, 23.7]
-    unit: "ps/(nm·km)"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1625
-      fiber: "G.652.D"
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, rows 'Minimum/Maximum at 1625 nm'"
-    quote: "Minimum at 1625 nm | 17.2 | ps/(nm × km) | | | Maximum at 1625 nm | 23.7"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.cd.g652_link_typ_d1550
-    section: "1.2"
-    claim: "Representative link chromatic dispersion coefficient D1550 of G.652 links (S1550 = 0.056 ps/(nm²·km))"
-    value: 17
-    unit: "ps/(nm·km)"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.652"
-      note: "Appendix I typical value; the NOTE says eq. (I-2) is no longer representative for G.652.D after the boundary-line spec revision"
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, Table I.1, row 'Chromatic dispersion parameter'"
-    quote: "| Chromatic dispersion parameter | | D1550 | 17 ps/(nm × km) | |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "S1550 row: '0.056 ps/(nm × km)' with superscript 2 split by the crawler. Use D = 17 ps/(nm·km) for the 1550 nm power-fading worked example."
-
-  - id: ch01.cd.g652_oband_link_dmax_m1
-    section: "1.2"
-    claim: "Statistical upper boundary of G.652.D/G.657.A link chromatic dispersion coefficient at 1337.5 nm for M = 1 cable, Q = 1e-4 (multi-vendor survey)"
-    value: 3.24
-    unit: "ps/(nm·km)"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1337.5
-      M_cables: 1
-      Q: 1.0e-4
-      fiber: "G.652.D and G.657.A products of 8 manufacturers"
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, clause I.6.2, Table I.3 (upper boundary, row 1337.5 nm, first column)"
-    quote: "| 1337.5 | 3.24 | 3.01 | 2.77 | 2.79 | 2.55 | 2.44 | 2.54 | 2.42 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Informative appendix new in 2024 edition. Manufacturers: Corning, Fujikura, Furukawa, OFS, Prysmian, Sterlite, Sumitomo, YOFC. Relevant to CWDM4/FR4 grid edge 1337.5 nm."
-
-  - id: ch01.cd.g652_oband_link_dmin_m1
-    section: "1.2"
-    claim: "Statistical lower boundary of G.652.D/G.657.A link chromatic dispersion coefficient at 1264.5 nm for M = 1 cable, Q = 1e-4"
-    value: -5.87
-    unit: "ps/(nm·km)"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1264.5
-      M_cables: 1
-      Q: 1.0e-4
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, clause I.6.2, Table I.3 (lower boundary, row 1264.5 nm, first column)"
-    quote: "| 1264.5 | −5.87 | −5.80 | −5.63 | −5.51 | −5.44 | −5.35 | −5.39 | −5.34 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Lower boundary block of Table I.3 (second set of rows). ×2 km gives −11.7 ps/nm, close to the 400G-FR4 −11.9 ps/nm channel minimum."
-
-  - id: ch01.cd.malitson_n_1529nm
-    section: "1.2"
-    claim: "Computed refractive index of fused silica at 1.52952 µm, 20 °C (Malitson Sellmeier fit)"
-    value: 1.444268
-    unit: "1"
-    kind: measured
-    conditions:
-      wavelength_nm: 1529.52
-      temperature_C: 20
-      material: "optical-quality fused silica (Corning 7940, Dynasil, GE 151)"
-    source_id: malitson_josa_1965
-    locator: "Table I, row 1.52952 µm (Hg line), 'Computed index' column"
-    quote: "1.52952 ... 1.444268"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "CAUTION: quote assembled from two columns of the same table row, not contiguous text. Quote assembled from the table's wavelength and computed-index columns (same row position, 43rd entry). Sellmeier fit valid 0.21-3.71 µm with average absolute residual 10.5e-6 (see equations file)."
-
-  - id: ch01.cd.fr4_grid
-    section: "1.2"
-    claim: "400G-FR4 CWDM lane centre wavelengths (20 nm spacing), each with ±6.5 nm range"
-    value: "1271, 1291, 1311, 1331 nm"
-    unit: "nm"
-    kind: fact
-    conditions:
-      interface: "400G-FR4 (100G Lambda MSA), 4 × 100G PAM4 (53.125 GBd)"
-    source_id: lambda_msa_400g_fr4_r2p0_2018
-    locator: "Section 2.1, Table 2-1 'Wavelength-division-multiplexed lane assignments'"
-    quote: "| L0 | 1271 nm | 1264.5 to 1277.5 nm | | L1 | 1291 nm | 1284.5 to 1297.5 nm |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "L2 1311 (1304.5-1317.5), L3 1331 (1324.5-1337.5). Same grid in IEEE 802.3cu 400GBASE-FR4 baseline (Liu, IEEE 802.3 100G_OPTX Mar 2019 presentation) and LPO MSA 400G-FR4-LPO; IEEE normative text not read (paywalled)."
-
-  - id: ch01.cd.fr4_channel_cd_max
-    section: "1.2"
-    claim: "Maximum positive channel chromatic dispersion for 400G-FR4 (2 km), over 1264.5-1337.5 nm"
-    value: 6.7
-    unit: "ps/nm"
-    kind: spec_max
-    conditions:
-      interface: "400G-FR4"
-      reach_km: 2
-    source_id: lambda_msa_400g_fr4_r2p0_2018
-    locator: "Section 4, Table 4-1 'Fiber optic cabling (channel) characteristics'"
-    quote: "| b Positive dispersion (max) | 6.7 | ps/nm |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "MSA, not IEEE; IEEE 802.3cu 400GBASE-FR4 values not independently verified."
-
-  - id: ch01.cd.fr4_channel_cd_min
-    section: "1.2"
-    claim: "Minimum (most negative) channel chromatic dispersion for 400G-FR4 (2 km), over 1264.5-1337.5 nm"
-    value: -11.9
-    unit: "ps/nm"
-    kind: spec_min
-    conditions:
-      interface: "400G-FR4"
-      reach_km: 2
-    source_id: lambda_msa_400g_fr4_r2p0_2018
-    locator: "Section 4, Table 4-1"
-    quote: "| b Negative dispersion (min) | -11.9 | ps/nm |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Channel insertion loss max 4 dB; ORL min 25 dB (same table)."
-
-  - id: ch01.cd.fr4_fiber_s0max
-    section: "1.2"
-    claim: "Maximum zero-dispersion slope S0 assumed for fibre in 400G-FR4 (with 1300 ≤ λ0 ≤ 1324 nm and 0.5 dB/km cabled attenuation)"
-    value: 0.093
-    unit: "ps/(nm²·km)"
-    kind: spec_max
-    conditions:
-      interface: "400G-FR4"
-    source_id: lambda_msa_400g_fr4_r2p0_2018
-    locator: "Section 5.1, Table 5-1 'Optical fiber and cable characteristics'"
-    quote: "| Dispersion slope (max) (S0) | | 0.093 | ps/nm | 2km |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Disagrees slightly with G.652.D S0max 0.092 and with 400G-LR4-10 Table 5-1 (0.092). 0.093 is the IEEE 802.3 legacy value for B1.1/B1.3 fibre; recorded as-is. Same table: 'Cabled optical fiber attenuation (max) | 0.5 | dB/km'."
-
-  - id: ch01.cd.fr4_fiber_att_max
-    section: "1.2"
-    claim: "Maximum cabled fibre attenuation assumed in 400G-FR4 O-band link budget"
-    value: 0.5
-    unit: "dB/km"
-    kind: spec_max
-    conditions:
-      interface: "400G-FR4"
-      wavelength_nm: [1264.5, 1337.5]
-    source_id: lambda_msa_400g_fr4_r2p0_2018
-    locator: "Section 5.1, Table 5-1"
-    quote: "| Cabled optical fiber attenuation (max) | | a 0.5 | | dB/km |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Footnote: provided for Outside Plant cable per ANSI/TIA 568-C.3."
-
-  - id: ch01.cd.lr4_10_channel_cd
-    section: "1.2"
-    claim: "Channel chromatic dispersion limits for 400G-LR4-10 (10 km): max positive 33.1 ps/nm, min negative −58.7 ps/nm"
-    value: [-58.7, 33.1]
-    unit: "ps/nm"
-    kind: spec_typ
-    conditions:
-      interface: "400G-LR4-10 (100G Lambda MSA)"
-      reach_km: 10
-      wavelength_nm: [1264.5, 1337.5]
-    source_id: lambda_msa_400g_lr4_10_r1p0_2020
-    locator: "Section 4, Table 4-1 'Fiber optic cabling (channel) characteristics'"
-    quote: "| b Positive dispersion (max) | 33.1 | ps/nm | | b Negative dispersion (min) | -58.7 | ps/nm |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Same table: insertion loss max 6.3 dB; DGD_max 5 ps; fibre attenuation 0.47 dB/km at 1264.5 nm from G.695 App. I; S0max 0.092."
-
-  # =====================================================================
-  # 1.3  PMD / DGD
-  # =====================================================================
-  - id: ch01.pmd.g652d_pmdq
-    section: "1.3"
-    claim: "Maximum PMD link design value PMDQ for G.652.D cable, defined for M = 20 cables and Q = 0.01 %"
-    value: 0.20
-    unit: "ps/√km"
-    kind: spec_max
-    conditions:
-      fiber: "G.652.D"
-      M_cables: 20
-      Q_percent: 0.01
-    source_id: itu_t_g652_2024
-    locator: "Clause 8, Table 2, row 'PMD coefficient (Note 4, 5)'; definition clause 7.2"
-    quote: "| M | 20 | cables | | | Q | 0.01 | % | | | Maximum PMD Q | 0.20"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Clause 7.2: PMDQ is a statistical upper bound for the PMD coefficient of concatenated cables in a link of M sections; Q is the probability a concatenated PMD coefficient exceeds PMDQ. zh: 偏振模色散 (PMD); 链路设计值 (link design value)."
-
-  - id: ch01.pmd.pmdq_definition
-    section: "1.3"
-    claim: "Definition of PMDQ: value the link PMD coefficient of M concatenated randomly selected cable sections exceeds with probability Q (Q = 1e-4 gives 99.99 % confidence)"
-    value: 1.0e-4
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "quadrature-average concatenation formula"
-    source_id: itu_t_g650_2_2015
-    locator: "Clause 3.1.7, eq. (3-25)"
-    quote: "If Q = 10 –4, there is 99.99% confidence that the actual PMD coefficient of M concatenated cables will be less than or equal"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Q = 0.01 % in G.652 tables equals 1e-4. Newer G.650.2 edition may exist; 2015 edition read."
-
-  - id: ch01.pmd.dgd_maxwellian_g650_2
-    section: "1.3"
-    claim: "For randomly mode-coupled fibre the DGD distribution is usually Maxwellian, and PMD_RMS = (3π/8)^1/2 PMD_AVG"
-    value: "Maxwellian; <Δτ²>^1/2 = (3π/8)^1/2 <Δτ>"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "valid only for Maxwellian DGD (random mode coupling); fibre/cable RTM reports the linear average"
-    source_id: itu_t_g650_2_2015
-    locator: "Clause 3.1.3 and 3.1.4, eq. (3-3) and NOTE 3"
-    quote: "For mode-coupled fibres, the distribution is usually Maxwellian."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "(3π/8)^1/2 ≈ 1.085. NOTE 3: point sources of elevated birefringence give a non-central chi distribution with RMS larger than eq. (3-3) implies. zh: 微分群时延 (DGD); 麦克斯韦分布."
-
-  - id: ch01.pmd.dgd_sqrt_length
-    section: "1.3"
-    claim: "Mean DGD grows roughly as the square root of fibre length (random walk); typical mean DGD 1-50 ps for 500 km depending on fibre type"
-    value: [1, 50]
-    unit: "ps"
-    kind: spec_typ
-    conditions:
-      length_km: 500
-    source_id: gordon_kogelnik_pnas_2000
-    locator: "Section 5 'PMD Vectors', paragraphs 2-3"
-    quote: "Typical mean values of the DGD are 1 to 50 ps for a 500-km long fiber, depending on fiber type."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same section: 'The DGD grows roughly as the square root of the length of fiber, as is characteristic of a random walk problem.' Year-2000 fibre population."
-
-  - id: ch01.pmd.g652_dgd_table_020
-    section: "1.3"
-    claim: "Implied fibre-induced maximum DGD for PMDQ = 0.20 ps/√km over a 3000 km link (10 Gbit/s guidance)"
-    value: 19.0
-    unit: "ps"
-    kind: spec_max
-    conditions:
-      PMDQ_ps_per_sqrtkm: 0.20
-      link_km: 3000
-      bit_rate: "10 Gbit/s"
-      note: "cable section length 10 km; for 80 km link the implied max DGD is 7.0 ps (40 Gbit/s)"
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, clause I.4, Table I.2 'Differential group delay'"
-    quote: "| 3000 | | 19.0 | 10 Gbit/s | | | 0.20 | | | | | | 80 | | 7.0"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Other rows: PMDQ 0.5 → 400 km 25.0 ps (10G), 40 km 19.0 ps (10G, also 10GbE), 2 km 7.5 ps (40G); PMDQ 0.10 → >4000 km 12.0 ps (10G), 400 km 5.0 ps (40G). NOTE: for 0.10 ps/√km >4000 km case, section length 25 km and probability 6.5e-8. Identical table in G.654 (08/2024) Table I.3."
-
-  - id: ch01.pmd.g652_pmdq_vs_m
-    section: "1.3"
-    claim: "Mean normalized PMDQ for M = 4 concatenated cables relative to M = 20 (Maxwellian assumption, numerical example)"
-    value: 1.32
-    unit: "1"
-    kind: model_param
-    conditions:
-      M_cables: 4
-      note: "M=10: 1.13; M=20: 1.00; M=30: 0.96; mean normalized DGD 0.59, 0.80, 1.00, 1.17"
-    source_id: itu_t_g652_2024
-    locator: "Appendix I, clause I.6.3, Table I.6"
-    quote: "| 4 | 1.32 | 0.59 | | 10 | 1.13 | 0.80 | | 20 | 1.00 | 1.00 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Informative; the Recommendation states it 'does not ensure the actual dependence on M value'."
-
-  - id: ch01.pmd.g959_dgd_03_bit
-    section: "1.3"
-    claim: "Rule of thumb: Tx/Rx must tolerate an actual DGD of 0.3 bit period with ~1 dB sensitivity degradation (50 % power in each PSP)"
-    value: 0.3
-    unit: "bit period"
-    kind: spec_max
-    conditions:
-      applies_to: "most G.959.1 NRZ application codes"
-      note: "≈0.1-0.2 dB penalty at 0.1 bit period instantaneous DGD; 0.1 bit period = mean DGD for max/mean ratio 3.0"
-    source_id: itu_t_g959_1_2024_amd2
-    locator: "Clause 8.2.4.5 'Maximum optical path penalty'"
-    quote: "the transmitter and receiver combination is required to tolerate an actual DGD of 0.3 bit period with a maximum sensitivity degradation of approximately 1 dB"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same text in G.959.1 (11/2009) clause 7.2.4.5. Further discussion referenced to Appendix I of G.691 (not read)."
-
-  - id: ch01.pmd.g959_ratio_3p0_prob
-    section: "1.3"
-    claim: "Maxwellian probability that instantaneous DGD exceeds 3.0 × mean DGD"
-    value: 4.2e-5
-    unit: "1"
-    kind: model_param
-    conditions:
-      ratio_max_to_mean: 3.0
-    source_id: itu_t_g959_1_2024_amd2
-    locator: "Clause 8.2.3.7, Table 8-3 'DGD means and probabilities'"
-    quote: "| | 3.0 | | | −5 4.2 × 10 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Ratio 3.5 → 7.7e-7 (same table); G.959.1 (11/2009) Table 7-2 adds ratio 4.0 → 7.4e-9. Crawler text splits the exponent '−5'."
-
-  - id: ch01.pmd.g959_ratio_3p5_prob
-    section: "1.3"
-    claim: "Maxwellian probability that instantaneous DGD exceeds 3.5 × mean DGD"
-    value: 7.7e-7
-    unit: "1"
-    kind: model_param
-    conditions:
-      ratio_max_to_mean: 3.5
-    source_id: itu_t_g959_1_2024_amd2
-    locator: "Clause 8.2.3.7, Table 8-3"
-    quote: "| | 3.5 | | | −7 7.7 × 10 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.pmd.fr4_dgd_max
-    section: "1.3"
-    claim: "Maximum DGD the 400G-FR4 system must tolerate (2 km O-band, 53 GBd PAM4)"
-    value: 3.0
-    unit: "ps"
-    kind: spec_max
-    conditions:
-      interface: "400G-FR4"
-      symbol_rate_GBd: 53.125
-    source_id: lambda_msa_400g_fr4_r2p0_2018
-    locator: "Section 4, Table 4-1, row 'DGD_max' and footnote c"
-    quote: "| c DGD_max | 3.0 | ps |"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "400G-LR4-10: DGD_max 5 ps (lambda_msa_400g_lr4_10_r1p0_2020 Table 4-1). TDECQ test channel max mean DGD 0.8 ps (Table 3-3). Useful for the 1.3 outage worked example."
-
-  - id: ch01.pmd.vascade_ex2000_ldv_iec
-    section: "1.3"
-    claim: "PMD link design value of Vascade EX2000 under IEC 60794-3 convention (m = 24, Q = 0.1 %)"
-    value: 0.08
-    unit: "ps/√km"
-    kind: spec_max
-    conditions:
-      fiber: "Corning Vascade EX2000"
-      M_cables: 24
-      Q_percent: 0.1
-    source_id: corning_vascade_ex2000_pi1440_2023
-    locator: "p. 1, 'Polarization Mode Dispersion (PMD)' table and footnote"
-    quote: "PMD Link Design Value | | ≤ 0.08* | | Maximum Individual Fiber PMD | | ≤ 0.1"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Footnote: 'Complies with IEC 60794-3 (m = 24, Q = 0.1%)'. Not directly comparable to ITU M=20, Q=0.01 % values."
+- id: ch01.att.g652d_max_1310_1625
+  section: '1.1'
+  claim: Maximum cabled attenuation coefficient of G.652.D fibre over 1310-1625 nm
+  value: 0.4
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm:
+    - 1310
+    - 1625
+    fiber: G.652.D
+    note: cable attribute; not applied to short jumper/indoor/drop cables (Note 1)
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2 (ITU-T G.652.D attributes), cable attributes, row 'Attenuation coefficient'
+  quote: Attenuation coefficient (Note 1) | Maximum from 1310 nm to 1625 nm (Note 2) | 0.40 | dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Identical value in G.652 (11/2016) Table 2 (itu_t_g652_2016). Note 1 cites IEC 60794-2-11 allowing 1.0 dB/km for
+    indoor cable. zh: 衰减系数.'
+- id: ch01.att.g652d_max_1383_after_h2
+  section: '1.1'
+  claim: Maximum cabled attenuation of G.652.D at 1383 ± 3 nm after hydrogen ageing (water-peak region)
+  value: 0.4
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1383
+    fiber: G.652.D
+    note: after hydrogen ageing type test per IEC 60793-2-50 (Note 3)
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, cable attributes, row 'Maximum at 1383 nm ±3 nm after hydrogen ageing (Note 3)'
+  quote: Maximum at 1383 nm  3 nm after hydrogen ageing (Note 3) | 0.40 | dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'The ± sign is dropped in the crawler text. Low-water-peak attribute that distinguishes G.652.D from G.652.B (clause
+    8 says categories are ''largely distinguished on the basis of attenuation requirement at 1383 nm''). zh: 低水峰.'
+- id: ch01.att.g652d_max_1530_1565
+  section: '1.1'
+  claim: Maximum cabled attenuation coefficient of G.652.D in the C-band 1530-1565 nm
+  value: 0.3
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm:
+    - 1530
+    - 1565
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, cable attributes, row 'Maximum at 1530-1565 nm'
+  quote: Maximum at 1530-1565 nm | 0.30 | dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: G.652 (11/2009) Table 4 stated this as 'Maximum at 1550 nm 0.3 dB/km'; the 2016 edition edited attenuation specs
+    to two decimals and changed the row label.
+- id: ch01.att.g652d_rayleigh_extension_1260
+  section: '1.1'
+  claim: Rayleigh-scattering increment added to the 1310 nm attenuation value to extend the G.652.D attenuation spec down
+    to 1260 nm
+  value: 0.07
+  unit: dB/km
+  kind: fact
+  conditions:
+    wavelength_nm:
+    - 1260
+    - 1310
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, NOTE 2
+  quote: This wavelength region can be extended to 1260 nm by adding 0.07 dB/km induced Rayleigh scattering loss to the attenuation
+    value at 1310 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Useful check of λ^-4 scaling in the worked example. zh: 瑞利散射.'
+- id: ch01.fiber.g652d_mfd_1310
+  section: '1.1'
+  claim: Range of nominal mode field diameter of G.652.D fibre at 1310 nm (tolerance ±0.4 µm)
+  value:
+  - 8.6
+  - 9.2
+  unit: µm
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1310
+    fiber: G.652.D
+    note: range within which the manufacturer's nominal must lie; tolerance about nominal ±0.4 µm
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, fibre attributes, row 'Mode field diameter'
+  quote: '| Range of nominal values | 8.6-9.2 | μm | | Tolerance |  0.4 | μm'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'G.652.B keeps 8.6-9.5 µm ±0.6 µm (Table 1). zh: 模场直径.'
+- id: ch01.fiber.g652d_cable_cutoff
+  section: '1.1'
+  claim: Maximum cable cut-off wavelength λcc of G.652.D fibre
+  value: 1260
+  unit: nm
+  kind: spec_max
+  conditions:
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, row 'Cable cut-off wavelength'; clause 6.5
+  quote: Cable cut-off wavelength | Maximum | 1260 | nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'zh: 光缆截止波长.'
+- id: ch01.fiber.g652d_macrobend_30mm
+  section: '1.1'
+  claim: Maximum macrobending loss of G.652.D at 1625 nm for 100 turns on a 30 mm radius mandrel
+  value: 0.1
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1625
+    bend_radius_mm: 30
+    turns: 100
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, row 'Macrobending loss'
+  quote: Radius | 30 | mm | | Number of turns | 100 | | | Maximum at 1625 nm | 0.1 | dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'zh: 宏弯损耗.'
+- id: ch01.att.g652_link_typ_cband
+  section: '1.1'
+  claim: Representative (typical) link attenuation coefficient of concatenated G.652 links in 1530-1565 nm, used for system
+    design
+  value: 0.275
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm:
+    - 1530
+    - 1565
+    fiber: G.652 (all subcategories, incl. G.657.A)
+    note: typical link value corresponding to link attenuation used in G.957 and G.691; includes cabling effects
+  source_id: itu_t_g652_2024
+  locator: Appendix I, clause I.4, Table I.1 'Representative values of concatenated optical fibre links'
+  quote: '| 1530 | nm-1565 | nm | 0.275 dB/km |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same table gives 0.5 dB/km for 1260-1360 nm and 0.35 dB/km for 1565-1625 nm (see next record). Appropriate default
+    for the 80 km span-budget worked example when only standards values are wanted.
+- id: ch01.att.g652_link_typ_oband
+  section: '1.1'
+  claim: Representative (typical) link attenuation coefficient of concatenated G.652 links in 1260-1360 nm
+  value: 0.5
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm:
+    - 1260
+    - 1360
+    fiber: G.652
+  source_id: itu_t_g652_2024
+  locator: Appendix I, clause I.4, Table I.1
+  quote: '| (Note) | 1260 | nm-1360 nm | | 0.5 dB/km |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: '1565-1625 nm row: 0.35 dB/km. The 100G Lambda MSA 400G-FR4 spec also uses 0.5 dB/km cabled O-band attenuation (ch01.cd.fr4_fiber_att_max).'
+- id: ch01.att.g654e_max_1550
+  section: '1.1'
+  claim: Maximum cabled attenuation coefficient of G.654.E fibre at 1550 nm
+  value: 0.23
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.654.E
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 5 (ITU-T G.654.E attributes), cable attributes
+  quote: Attenuation coefficient (Note 4) | Maximum at 1550 nm | 0.23 | dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same 0.23 dB/km in G.654 (11/2016) and (03/2020) Table 5. zh: 截止波长位移单模光纤 (cut-off shifted SMF, G.654).'
+- id: ch01.att.g654e_max_1530_1612
+  section: '1.1'
+  claim: Maximum cabled attenuation coefficient of G.654.E over 1530-1612 nm
+  value: 0.25
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm:
+    - 1530
+    - 1612
+    fiber: G.654.E
+    note: 1612-1625 nm is TBD; Note 5 says typically 0.35 dB/km or less might be achieved there
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 5, cable attributes; Note 5
+  quote: '| | Maximum at 1530-1 612 nm | 0.25 | dB/km |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Row added in the 2020 edition (absent from 2016 Table 5).
+- id: ch01.fiber.g654e_mfd_1550
+  section: '1.1'
+  claim: Range of nominal mode field diameter of G.654.E at 1550 nm (tolerance ±0.7 µm)
+  value:
+  - 11.5
+  - 12.5
+  unit: µm
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.654.E
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 5, row 'Mode field diameter'
+  quote: '| Range of nominal values | 11.5-12.5 |  m | | Tolerance |  0.7 |  m'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: G.654 specifies MFD, not A_eff; A_eff is not a specified attribute (see ch01.fiber.g654e_aeff_not_specified).
+- id: ch01.fiber.g654e_cable_cutoff
+  section: '1.1'
+  claim: Maximum cable cut-off wavelength of G.654.E
+  value: 1530
+  unit: nm
+  kind: spec_max
+  conditions:
+    fiber: G.654.E
+    note: 'Note 1: should be below 1527 nm when used at G.698.2 frequencies corresponding to 1527.8-1530 nm'
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 5, row 'Cable cut-off wavelength (Note 1)'
+  quote: Cable cut-off wavelength(Note 1) | Maximum | 1530 | nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Note 1 wording differs between editions: 2024 text says ''less than 1527 nm'', 2020 text says ''less than 1527.8
+    nm'' (see gaps file).'
+- id: ch01.cd.g654e_d1550_range
+  section: '1.2'
+  claim: Chromatic dispersion coefficient bounds of G.654.E at 1550 nm (D1550min to D1550max)
+  value:
+  - 17
+  - 23
+  unit: ps/(nm·km)
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.654.E
+    note: slope at 1550 nm bounded 0.050 to 0.070 ps/(nm²·km)
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 5, rows 'Chromatic dispersion parameter (Note 2)'; clause 6.10 eq. (6-1)
+  quote: D 1550max | 23 | ps/(nm × km) | | | D 1550min | 17 | ps/(nm × km)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: S1550 range [0.050, 0.070] ps/(nm²·km) in the same table.
+- id: ch01.pmd.g654e_pmdq
+  section: '1.3'
+  claim: Maximum PMD link design value PMDQ of G.654.E cable (M = 20 cables, Q = 0.01 %)
+  value: 0.2
+  unit: ps/√km
+  kind: spec_max
+  conditions:
+    fiber: G.654.E
+    M_cables: 20
+    Q_percent: 0.01
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 5, row 'PMD coefficient (Note 3)'
+  quote: '| M | 20 | cables | | | Q | 0.01 | % | | | Maximum PMD Q | 0.20 | ps/'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Unit rendered 'ps/' in crawler text (√km glyph lost); 2020 PDF text shows 'ps/km½'.
+- id: ch01.fiber.g654e_macrobend
+  section: '1.1'
+  claim: Maximum macrobending loss of G.654.E at 1625 nm, 100 turns at 30 mm radius (equal to G.652.D)
+  value: 0.1
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1625
+    bend_radius_mm: 30
+    turns: 100
+    fiber: G.654.E
+  source_id: itu_t_g654_2024
+  locator: G.654 (08/2024) Table 5, row 'Macrobending loss'
+  quote: Macrobending loss | Radius | 30 | mm | Number of turns | 100 | Maximum at 1625 nm | 0.1 | dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: G.654.D (submarine) allows 2.0 dB at 1625 nm for the same test.
+- id: ch01.fact.g654e_purpose
+  section: '1.1'
+  claim: 'Deployment purpose of G.654.E: terrestrial cables with improved OSNR for high-bit-rate coherent transmission'
+  value: terrestrial cables, improved OSNR, higher bit-rate coherent transmission (e.g. 100 Gbit/s)
+  unit: '1'
+  kind: fact
+  conditions:
+    fiber: G.654.E
+  source_id: itu_t_g654_2024
+  locator: Clause 8, description of Table 5
+  quote: for deployment as terrestrial cables with improved OSNR characteristics to support higher bit-rate coherent transmission,
+    e.g., 100 Gbit/s systems.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Contrast: Table 4 G.654.D is ''recommended for higher bit-rate submarine systems''.'
+- id: ch01.att.g654d_max_1550
+  section: '1.1'
+  claim: Maximum cabled attenuation coefficient of G.654.D (submarine) fibre at 1550 nm
+  value: 0.2
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.654.D
+    note: MFD nominal range 11.5-15.0 µm at 1550 nm; D1550max 23 ps/(nm·km); λcc ≤ 1530 nm
+  source_id: itu_t_g654_2024
+  locator: Clause 8, Table 4 (ITU-T G.654.D attributes), cable attributes
+  quote: Attenuation coefficient (Note 1) | Maximum at 1550 nm | 0.20 | dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same Table 4: ''Range of nominal values | 11.5-15.0 | µm''.'
+- id: ch01.fiber.g654e_aeff_not_specified
+  section: '1.1'
+  claim: Effective area A_eff is not a specified attribute in ITU-T fibre Recommendations; G.654.E A_eff values are typical
+    vendor values (110-125 µm² cited)
+  value:
+  - 110
+  - 125
+  unit: µm²
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.654.E
+  source_id: acome_g654e_whitepaper
+  locator: Fig. 8 table 'Recommended value by ITU-T for G.652.D and G.654.E fibres', footnote **
+  quote: '**Typical value. Aeff is not specified in ITU-T Recommendations.'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Same table row: ''Effective area (Aeff) @1,550nm [µm2] | ** Typ. 80 | | ** Typ. 110-125''. YOFC 2020 slide quotes
+    G.654.E A_eff as 110-130 µm² (ch01.att.yofc_a130); ZTE says China backbones used A110 and A130 variants.'
+- id: ch01.bend.g657_design_radii
+  section: '1.1'
+  claim: Minimum design bend radius for G.657 subcategories A1, A2 and B3
+  value: 'A1: 10 mm; A2: 7.5 mm; B3: 5 mm'
+  unit: mm
+  kind: fact
+  conditions:
+    fiber: G.657.A1/A2/B3
+  source_id: itu_t_g657_2024
+  locator: Clause 1 (Scope)
+  quote: Subcategory ITU-T G.657.A1 fibres are appropriate for a minimum design radius of 10 mm. Subcategory ITU-T G.657.A2
+    fibres ... 7.5 mm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Scope also: ''Subcategory ITU-T G.657.B3 fibres are appropriate for a minimum design radius of 5 mm.'' G.657.A fibres
+    are a subset of and compliant with G.652.D; B fibres are not necessarily G.652.D compliant in CD and PMD. The 2024 edition
+    lists A1, A2 and B3 only. zh: 弯曲损耗不敏感单模光纤.'
+- id: ch01.bend.g657a1_10mm_1550
+  section: '1.1'
+  claim: Max uncabled macrobending loss of G.657.A1, 1 turn at 10 mm radius, 1550 nm
+  value: 0.75
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    bend_radius_mm: 10
+    turns: 1
+    fiber: G.657.A1
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 1 (ITU-T G.657 category A attributes), row 'Uncabled fibre macrobending loss'
+  quote: '| Max. at 1550 | nm 0.25 | 0.75 0.03 | 0.1 0.5 | dB |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Column order A1: (15 mm,10 turns),(10 mm,1 turn); A2: (15 mm,10 turns),(10 mm,1 turn),(7.5 mm,1 turn). A1 values:
+    15 mm/10 turns 0.25 dB@1550, 1.0 dB@1625; 10 mm/1 turn 0.75 dB@1550, 1.5 dB@1625. Column mapping confirmed by AFL application
+    note table (tier B).'
+- id: ch01.bend.g657a1_10mm_1625
+  section: '1.1'
+  claim: Max uncabled macrobending loss of G.657.A1, 1 turn at 10 mm radius, 1625 nm
+  value: 1.5
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1625
+    bend_radius_mm: 10
+    turns: 1
+    fiber: G.657.A1
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 1, row 'Max. at 1625 nm'
+  quote: '| Max. at 1625 | nm 1.0 | 1.5 0.1 | 0.2 1.0 | dB |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Values in row order: A1 15 mm 1.0, A1 10 mm 1.5, A2 15 mm 0.1, A2 10 mm 0.2, A2 7.5 mm 1.0.'
+- id: ch01.bend.g657a2_7p5mm_1550
+  section: '1.1'
+  claim: Max uncabled macrobending loss of G.657.A2, 1 turn at 7.5 mm radius, 1550 nm
+  value: 0.5
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    bend_radius_mm: 7.5
+    turns: 1
+    fiber: G.657.A2
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 1, row 'Max. at 1550 nm'
+  quote: '| Max. at 1550 | nm 0.25 | 0.75 0.03 | 0.1 0.5 | dB |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'A2 other values @1550: 15 mm/10 turns 0.03 dB; 10 mm/1 turn 0.1 dB. @1625: 0.1, 0.2, 1.0 dB respectively.'
+- id: ch01.bend.g657a2_7p5mm_1625
+  section: '1.1'
+  claim: Max uncabled macrobending loss of G.657.A2, 1 turn at 7.5 mm radius, 1625 nm
+  value: 1.0
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1625
+    bend_radius_mm: 7.5
+    turns: 1
+    fiber: G.657.A2
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 1, row 'Max. at 1625 nm'
+  quote: '| Max. at 1625 | nm 1.0 | 1.5 0.1 | 0.2 1.0 | dB |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch01.bend.g657b3_5mm_1550
+  section: '1.1'
+  claim: Max uncabled macrobending loss of G.657.B3, 1 turn at 5 mm radius, 1550 nm
+  value: 0.15
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    bend_radius_mm: 5
+    turns: 1
+    fiber: G.657.B3
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 2 (ITU-T G.657.B3 attributes), row 'Uncabled fibre macrobending loss'
+  quote: '| Radius | 10 | 7.5 | 5 | mm | ... | Max. at 1550 | nm 0.03 | 0.08 | 0.15'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'B3 @1550: 10 mm 0.03, 7.5 mm 0.08, 5 mm 0.15 dB (1 turn each). @1625: 0.1, 0.25, 0.45 dB.'
+- id: ch01.bend.g657b3_5mm_1625
+  section: '1.1'
+  claim: Max uncabled macrobending loss of G.657.B3, 1 turn at 5 mm radius, 1625 nm
+  value: 0.45
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1625
+    bend_radius_mm: 5
+    turns: 1
+    fiber: G.657.B3
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 2, row 'Max. at 1625 nm'
+  quote: '| Max. at 1625 | nm 0.1 | 0.25 | 0.45 | dB |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch01.pmd.g657b3_pmdq
+  section: '1.3'
+  claim: Maximum PMDQ of G.657.B3 cable (relaxed relative to G.652.D)
+  value: 0.5
+  unit: ps/√km
+  kind: spec_max
+  conditions:
+    fiber: G.657.B3
+    M_cables: 20
+    Q_percent: 0.01
+    note: B3 also allows λ0 1250-1350 nm and S0max 0.11 ps/(nm²·km)
+  source_id: itu_t_g657_2024
+  locator: Clause 8, Table 2, row 'PMD coefficient'
+  quote: '| | Maximum PMDQ | | | 0.50 | ½ ps/km |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same table: ''λ0min | 1250 | nm'', ''λ0max | 1350 | nm'', ''S0max | 0.11''.'
+- id: ch01.att.smf28ultra_max_1550
+  section: '1.1'
+  claim: Maximum attenuation of Corning SMF-28 Ultra (G.652.D, G.657.A1-exceeding) at 1550 nm
+  value: 0.18
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    fiber: Corning SMF-28 Ultra
+    note: 'uncabled fibre spec; other rows: 1310 ≤0.32, 1383 ≤0.32 (post-H2 ageing), 1490 ≤0.21, 1625 ≤0.20 dB/km'
+  source_id: corning_smf28_ultra_pi1424_2025
+  locator: p. 1, Optical Specifications, table 'Maximum Attenuation'
+  quote: '| 1550 | | | ≤ 0.18 |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Datasheet PI1424 issued July 2025. Table rows: ''| 1310 | | | ≤ 0.32 |'', ''| 1383** | | | ≤ 0.32 |'', ''| 1625
+    | | | ≤ 0.20 |''.'
+- id: ch01.att.smf28ultra_max_1310
+  section: '1.1'
+  claim: Maximum attenuation of Corning SMF-28 Ultra at 1310 nm
+  value: 0.32
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1310
+    fiber: Corning SMF-28 Ultra
+  source_id: corning_smf28_ultra_pi1424_2025
+  locator: p. 1, Optical Specifications, table 'Maximum Attenuation'
+  quote: '| 1310 | | | ≤ 0.32 |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: ''
+- id: ch01.fiber.smf28ultra_group_index_1550
+  section: '1.1'
+  claim: Effective group index of refraction of Corning SMF-28 Ultra at 1550 nm (1.4676 at 1310 nm)
+  value: 1.4682
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Corning SMF-28 Ultra
+    note: characterized (typical) value; Corning labels it 'Effective Group Index of Refraction (neff)'
+  source_id: corning_smf28_ultra_pi1424_2025
+  locator: p. 2, Performance Characterizations
+  quote: 'Effective Group Index of Refraction (neff) | 1310 nm: 1.4676 1550 nm: 1.4682'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Latency = n_g/c ≈ 4.90 µs/km (compute in book/calc from this record and CODATA c). Neither G.652 nor G.654 specifies
+    group index. zh: 群折射率.'
+- id: ch01.cd.smf28ultra_d1550_max
+  section: '1.2'
+  claim: Maximum chromatic dispersion of SMF-28 Ultra at 1550 nm (≤23.7 at 1625 nm)
+  value: 18
+  unit: ps/(nm·km)
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    fiber: Corning SMF-28 Ultra
+    note: λ0 1304-1324 nm; S0 ≤ 0.092 ps/(nm²·km); MFD 9.2±0.4 µm @1310, 10.4±0.5 µm @1550
+  source_id: corning_smf28_ultra_pi1424_2025
+  locator: p. 1, Optical Specifications, 'Dispersion' table
+  quote: '| | 1550 | ≤ 18 | | | 1625 | ≤ 23.7 |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Same sheet: ''Zero Dispersion Wavelength (λ0): 1304 nm ≤ λ0 ≤ 1324 nm'' (narrower than G.652.D 1300-1324 nm).'
+- id: ch01.pmd.smf28ultra_ldv
+  section: '1.3'
+  claim: PMD link design value (PMDQ) of SMF-28 Ultra, M = 20, Q = 0.01 % (max individual fibre PMD 0.1 ps/√km)
+  value: 0.04
+  unit: ps/√km
+  kind: spec_max
+  conditions:
+    fiber: Corning SMF-28 Ultra
+    M_cables: 20
+    Q_percent: 0.01
+  source_id: corning_smf28_ultra_pi1424_2025
+  locator: p. 1, 'Polarization Mode Dispersion (PMD)' table and footnote
+  quote: PMD Link Design Value | | ≤ 0.04* | | Maximum Individual Fiber PMD | | ≤ 0.1
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Footnote: ''Complies with ITU-T G.650-2 Appendix IV, (m = 20, Q = 0.01%), August 2015.'' Five times below the G.652.D
+    0.20 limit.'
+- id: ch01.att.vascade_ex2000_nominal_1550
+  section: '1.1'
+  claim: Nominal attenuation of Corning Vascade EX2000 (silica-core, G.654.B/D) at 1550 nm; max 0.16 dB/km
+  value: 0.149
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Corning Vascade EX2000
+    note: nominal; A_eff 115 µm² nominal; MFD 11.9±0.5 µm; D ≤22 ps/(nm·km); λcc ≤1520 nm; n_eff(group) 1.4634
+  source_id: corning_vascade_ex2000_pi1440_2023
+  locator: p. 1, introductory paragraph and Optical Specifications
+  quote: combines ultra-low attenuation (0.149 dB/km nominal) with large effective area (115 µm2 nominal) which is ITU-T G.654.B
+    and G.654.D compliant.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Disagreement (product revision): PI1445 (2020) lists EX2000 typical 0.152 dB/km and 115 µm² (ch01.att.vascade_ex2000_typ_pi1445).
+    PMD LDV ≤0.08 ps/√km uses IEC 60794-3 m=24, Q=0.1 %, not the ITU M=20/Q=0.01 % convention.'
+- id: ch01.att.vascade_ex2000_typ_pi1445
+  section: '1.1'
+  claim: Typical attenuation of Vascade EX2000 at 1550 nm per the 2020 Vascade family sheet
+  value: 0.152
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Corning Vascade EX2000
+    note: constituent fibre on shipping spool; ~0.003 dB/km reduction expected in loose-tube cable
+  source_id: corning_vascade_family_pi1445_2020
+  locator: p. 2, 'Typical Performance Values' table
+  quote: Attenuation at 0.154 0.152 0.198 0.182 1550 nm (dB/km)*
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Columns: EX3000, EX2000, LEAF EP, L1000. Disagrees with 0.149 nominal in PI1440 (2023); likely product improvement
+    between sheet issues. Record both; prefer the newer sheet for ''current product''.'
+- id: ch01.att.vascade_ex3000_typ
+  section: '1.1'
+  claim: 'Typical attenuation and effective area of Vascade EX3000 (G.654.D) at 1550 nm: 0.154 dB/km, 153 µm²'
+  value: 0.154
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Corning Vascade EX3000
+    note: A_eff 153 µm²; D +21.0 ps/(nm·km); slope +0.06; PMDQ 0.02 ps/√km; n_eff 1.4634; n2 2.1e-20 m²/W
+  source_id: corning_vascade_family_pi1445_2020
+  locator: p. 2, 'Typical Performance Values' table, EX3000 column
+  quote: Effective Area at 153 115 65 100 1550 nm (µm2) PMDQ (ps/√km) 0.02 0.02 0.02 0.02
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Dispersion row: ''Dispersion at +21.0 +20.2 -4.0 +18.5 1550 nm (ps/nm•km)''.'
+- id: ch01.att.zplus150_ull_typ
+  section: '1.1'
+  claim: Typical attenuation of Sumitomo Z-PLUS Fiber 150 (ULL grade) at 1550 nm, with 150 µm² typical A_eff
+  value: 0.144
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Sumitomo Z-PLUS Fiber 150, ULL grade (pure-silica core)
+    note: LL grade 0.150 typical; individual max ULL 0.152, LL 0.158; A_eff 150±15 µm²; D ≤23 ps/(nm·km); λcc ≤1530 nm
+  source_id: sumitomo_zplus150_tr23164a_2023
+  locator: p. 1, header bullets and 'Optical Characteristics' table
+  quote: World's lowest attenuation of 0.144 dB/km or 0.150 dB/km, and very large effective area of 150 µm 2 typical
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: G.654.D compliant. Sumitomo press release (2024) describes this product as 'transmission loss of 0.14 dB/km' (rounded;
+    tier C).
+- id: ch01.att.zplus130_ull_typ
+  section: '1.1'
+  claim: Typical attenuation of Sumitomo Z-PLUS Fiber 130 (ULL grade) at 1550 nm, 130 µm² typical A_eff
+  value: 0.147
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Sumitomo Z-PLUS Fiber 130, ULL grade
+    note: LL grade 0.152; D ≤22 ps/(nm·km); λcc ≤1530 nm
+  source_id: sumitomo_zplus130_tr23163b_2026
+  locator: p. 1, header bullets
+  quote: Ultra-low attenuation of 0.147 dB/km or 0.152 dB/km, and large effective area of 130 µm 2 typical
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Earlier issue TR-21267A (2021) listed only 0.152 dB/km typical.
+- id: ch01.att.zplus_ull_typ
+  section: '1.1'
+  claim: Typical attenuation of Sumitomo Z-PLUS Fiber ULL at 1550 nm, 112 µm² typical A_eff
+  value: 0.148
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Sumitomo Z-PLUS Fiber ULL (G.654.B/D)
+    note: individual max 0.156; batch average 0.151 dB/km; D ≤22
+  source_id: sumitomo_zplus_ull_tr23162a_2023
+  locator: p. 1, header bullets
+  quote: Ultra-low attenuation of 0.148 dB/km and large effective area of 112 µm 2 typical
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: ''
+- id: ch01.att.sumitomo_pureadvance125_typ
+  section: '1.1'
+  claim: Typical attenuation of Sumitomo PureAdvance-125 (terrestrial G.654.E, pure-silica core) at 1550 nm; ≤0.16 dB/km max;
+    A_eff 125 µm² typ
+  value: 0.156
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: Sumitomo PureAdvance-125 (G.654.E)
+    note: cable cut-off ≤1520 nm; MFD typ 12.5 µm; comparison G.652.D PureBand typ 0.185 dB/km
+  source_id: acome_g654e_whitepaper
+  locator: Fig. 9 (PureAdvance-125 vs PureBand comparison table) and preceding paragraph
+  quote: these fibres deliver ultra-low attenuation of 0.16dB/km or less (typically 0.156dB/km) and feature large effective
+    areas (Aeff) of up to 125µm²
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Representative terrestrial G.654.E product (vs submarine Z-PLUS).
+- id: ch01.att.yofc_a130
+  section: '1.1'
+  claim: YOFC FarBand Ultra A130 (G.654.E) attenuation at 1550 nm (max), with A_eff 130 µm² and MFD 12.0-13.0 µm
+  value: 0.17
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    fiber: YOFC 远贝 FarBand Ultra A130 (ULL-G.654.E)
+    note: slide compares G.654.E standard (≤0.23 cabled, A_eff 110-130) and G.652.D typical (A_eff 80, ≤0.20)
+  source_id: yofc_g654e_presentation_2020
+  locator: Section 02 光纤性能, parameter comparison table
+  quote: 有效面积@1550nm μm² 110-130 130 80 衰减@1550nm dB/km ≤0.23 (成缆后) ≤0.17 ≤0.20
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'zh terms: 有效面积 = effective area; 衰减 = attenuation; 成缆后 = after cabling; 超低衰减大有效面积光纤 = ultra-low-loss large-effective-area
+    fibre; 远贝 is YOFC''s brand name. Corporate presentation, not a formal datasheet. Splice loss to G.652.D quoted typ 0.15
+    dB/splice; self-splice 0.022 dB.'
+- id: ch01.att.yofc_ct_shanghai_guangzhou
+  section: '1.1'
+  claim: China Telecom Shanghai-Guangzhou trunk (2019) deployed ULL G.654.E with attenuation ≤0.174 dB/km and A_eff 130 µm²;
+    longest actual line 2000 km
+  value: 0.174
+  unit: dB/km
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: YOFC ULL G.654.E (A130)
+    note: operator deployment, vendor-reported
+  source_id: yofc_g654e_presentation_2020
+  locator: Section 03 工程案例及荣誉 (project cases)
+  quote: 2019年，中国电信上海-广州一干 部署超低衰减G.654.E光纤干线线路 ... 衰减≤0.174dB/km, 有效面积 130μm 2
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'zh: 一干 = national level-1 trunk (一级干线); 超低衰减 = ultra-low attenuation. Same slide: China Unicom trial 2015-2017 fibre
+    typical 0.167 dB/km, link 0.173-0.175 dB/km.'
+- id: ch01.fact.zte_g654e_a130_backbone
+  section: '1.1'
+  claim: In China's backbone networks, G.654.E A110 and A130 were used 2015-2018; after 2018 only A130 was used
+  value: A130 only after 2018
+  unit: '1'
+  kind: fact
+  conditions:
+    fiber: G.654.E (A110 = 110 µm², A130 = 130 µm²)
+  source_id: zte_technologies_g654e_2024
+  locator: ZTE Technologies 2024 No. 6, article body
+  quote: After 2018, only the A130 fiber was used for building backbone networks.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Same article: A130 A_eff is 47 % larger than G.652D (A80); optimal launch power ~1.7 dB higher; typical attenuation
+    ~0.02 dB/km lower; ~1.6 dB less loss over 80 km.'
+- id: ch01.att.zte_g654e_vs_g652d_80km
+  section: '1.1'
+  claim: G.654.E span loss advantage over G.652.D for an 80 km span (typical attenuation ~0.02 dB/km lower)
+  value: 1.6
+  unit: dB
+  kind: spec_typ
+  conditions:
+    span_km: 80
+    fiber: G.654.E vs G.652.D
+  source_id: zte_technologies_g654e_2024
+  locator: ZTE Technologies 2024 No. 6, article body
+  quote: The optical loss of G.654E fiber is about 1.6 dB lower than that of G.652D fiber over an 80 km fiber span.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Vendor statement; consistent with 0.02 dB/km × 80 km. Usable as a check in the span-budget worked example.
+- id: ch01.phys.oh_overtone_1380
+  section: '1.1'
+  claim: Wavelength of the first overtone of the OH vibration (water peak) in silica fibre; fundamental at 2.7 µm, combination
+    band at 1.24 µm
+  value: 1.38
+  unit: µm
+  kind: constant
+  conditions:
+    material: silica
+  source_id: kanamori_ieice_2021
+  locator: Section 'Initiatives of Silica Optical Fiber', paragraph on OH groups
+  quote: the fundamental vibration of OH occurs at a wavelength of 2.7 µm, and its first overtone appears at 1.38 µm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Next sentence: 1.24 µm absorption is OH first overtone + SiO4 fundamental. Malitson (1965) independently notes the
+    2.7 µm OH band with weak overtones at 2.2 and 1.4 µm in bulk fused silica. G.652.D controls this via its 1383 nm spec.
+    zh: 羟基吸收峰 / 水峰.'
+- id: ch01.phys.rayleigh_coeff_bulk_silica
+  section: '1.1'
+  claim: Rayleigh scattering coefficient A of bulk silica glass (fictive temperature usually ≤1400 °C)
+  value: 0.6
+  unit: dB/(km·µm⁴)
+  kind: measured
+  conditions:
+    material: bulk silica glass
+  source_id: kanamori_ieice_2021
+  locator: Section 'Evaluation of Tf and Rayleigh Scattering'
+  quote: For bulk silica glasses, Rayleigh scattering coefficient A in Eq. ( 1 ) is reported to be 0.6 dB/km•µm 4
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Secondary within a review (Kanamori cites ref. [52]). Same paragraph: fibres have A = 0.8-0.9 dB/(km·µm⁴) and Tf
+    around 1600 °C (Sakaguchi).'
+- id: ch01.phys.rayleigh_coeff_fiber
+  section: '1.1'
+  claim: Range of Rayleigh scattering coefficient of drawn silica optical fibres (vs 0.6 for bulk), attributed to higher fictive
+    temperature (~1600 °C)
+  value:
+  - 0.8
+  - 0.9
+  unit: dB/(km·µm⁴)
+  kind: measured
+  conditions:
+    material: silica-based SM fibres (standard and pure-silica-core examples)
+  source_id: kanamori_ieice_2021
+  locator: Section 'Evaluation of Tf and Rayleigh Scattering'
+  quote: On the other hand, A of optical fibers are 0.8 to 0.9 dB/km•µm 4 , as shown in Fig. 4 and Fig. 7 .
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Kanamori's Fig. 4 example for a typical SMF gives A = 0.93 dB/(km·µm⁴), B = 0.015 dB/km (slightly outside 0.8-0.9;
+    internal inconsistency in the review, see gaps).
+- id: ch01.phys.rayleigh_coeff_psc_record
+  section: '1.1'
+  claim: Rayleigh scattering coefficient of record pure-silica-core fibres (cold draw, reduced fictive temperature)
+  value: 0.75
+  unit: dB/(km·µm⁴)
+  kind: measured
+  conditions:
+    fiber: pure-silica-core (with or without traces of F), slow 'cold' draw
+  source_id: sakr_natcommun_2020
+  locator: Results, discussion of Fig. 3 (state-of-the-art loss comparison)
+  quote: Their Rayleigh scattering coefficient of ~0.75 dB km −1 µm −4 is a result of 'cold draws' aimed at reducing the fictive
+    temperature
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same paragraph gives ~1 dB/(km·µm⁴) as compatible with high-volume Ge-doped commercial fibres (next record). zh:
+    假想温度 (fictive temperature).'
+- id: ch01.phys.rayleigh_coeff_gedoped
+  section: '1.1'
+  claim: Rayleigh scattering coefficient compatible with high-volume, fast-draw Ge-doped commercial fibres
+  value: 1
+  unit: dB/(km·µm⁴)
+  kind: spec_typ
+  conditions:
+    fiber: GeO2-doped core SMF, high-volume production
+  source_id: sakr_natcommun_2020
+  locator: Results, discussion of Fig. 3
+  quote: has a Rayleigh scattering coefficient of 1 dB km −1 µm −4, which is compatible with the loss experienced by high
+    volume, fast draw speed
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same paper''s introduction: Ge-doped core fibre Rayleigh loss ''is about 30% higher'' than record pure-silica-core
+    fibres.'
+- id: ch01.phys.ir_absorption_1550
+  section: '1.1'
+  claim: Contribution of the infrared (multiphonon) absorption tail of SiO2 glass to loss at 1.55 µm
+  value: 0.01
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    material: SiO2 glass
+  source_id: kanamori_ieice_2021
+  locator: Section 'Formulation of Optical Fiber Loss Factors', discussion of F1 exp(-F2/λ) term
+  quote: In the case of SiO 2 glass [28] , the effect of IR absorption at a wavelength of 1.55 µm is about 0.01 dB/km.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same section: UV Urbach tail ''negligible in the wavelength range used for optical communication systems'' for SiO2.'
+- id: ch01.phys.rayleigh_fraction_of_loss
+  section: '1.1'
+  claim: Rayleigh scattering accounts for 80 % or more of total silica fibre loss (1990s understanding)
+  value: 0.8
+  unit: '1'
+  kind: fact
+  conditions:
+    wavelength_nm: 1550
+  source_id: kanamori_ieice_2021
+  locator: Section 'Evaluation of Tf and Rayleigh Scattering', first sentence
+  quote: it was widely recognized that it is necessary to reduce Rayleigh scattering loss, which accounts for 80% or more
+    of the total loss
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Value is a lower bound (≥0.8).
+- id: ch01.phys.fictive_temp_fiber
+  section: '1.1'
+  claim: Fictive temperature of as-drawn silica fibre (reducible to ~1400 °C by reheating), explaining higher Rayleigh loss
+    than bulk glass
+  value: 1600
+  unit: °C
+  kind: measured
+  conditions:
+    material: as-drawn silica fibre (Raman end-face analysis, Sakaguchi et al.)
+  source_id: kanamori_ieice_2021
+  locator: Section 'Heat Treatment'
+  quote: They found that its T f was 1600 • C as drawn state, and that it was reduced to 1400 • C
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Fictive temperature definition and density-fluctuation term A_d ∝ T_f β_T in Kanamori Eq. (3) (equations file). Saito
+    et al. estimated <0.141 dB/km possible with 1567 °C, 1 s annealing (same paper).
+- id: ch01.phys.psc_record_1986
+  section: '1.1'
+  claim: Loss of the first record pure-silica-core SM fibre (Yokota et al., 1986) at 1.55 µm
+  value: 0.154
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+    fiber: pure-silica-core SMF, F-doped cladding
+    year: 1986
+  source_id: kanamori_ieice_2021
+  locator: Section 5 'Pure-Silica-Core Fiber'
+  quote: With a pure-silica-core SM fiber, Yokota et al. demonstrated a record-low loss of 0.154 dB/km achieved at a wavelength
+    of 1.55 µm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Historical anchor; GeO2-SiO2 core fibres reached 0.20 dB/km by 1979-1981 (same paper).
+- id: ch01.rec.makovejs_ex3000_2016
+  section: '1.1'
+  claim: Record-low attenuation (at the time) of a 148 µm² Vascade EX3000 silica-core fibre at 1560 nm (0.1467 dB/km at 1550
+    nm)
+  value: 0.146
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1560
+    fiber: Corning Vascade EX3000, A_eff 148.3 µm², 22.65 km
+    note: measured on large-diameter (tension-free) spool
+  source_id: makovejs_jlt_2016
+  locator: Section II and Table II(A)
+  quote: The attenuation at 1550 nm was measured to be 0.1467 dB/km, and the lowest attenuation value was 0.1460 dB/km at
+    1560 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Superseded by Tamura et al. 2017/2018 (0.1419). Paper also reports cabled attenuation 0.001-0.002 dB/km lower than
+    on shipping spool for 4 of 8 fibres.
+- id: ch01.rec.tamura_2018_1560
+  section: '1.1'
+  claim: Record-low transmission loss of a Ge-free (F co-doped) silica-core fibre at 1560 nm (0.1424 dB/km at 1550 nm), A_eff
+    147 µm²
+  value: 0.1419
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1560
+    fiber: Ge-free silica core with fluorine co-doping, A_eff 147 µm²
+    year: 2017
+  source_id: tamura_jlt_2018
+  locator: Abstract
+  quote: We achieved the lowest-ever transmission losses of 0.1419 dB/km at 1560 nm wavelength and 0.1424 dB/km at 1550 nm
+    in a Ge-free silica-core optical fiber.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'First reported at OFC 2017 post-deadline (''Lowest-ever 0.1419-dB/km loss optical fiber''). Abstract only read.
+    Superseded in 2024 (see ch01.rec.sato_ofc2024_1566 and ch01.rec.khrapko_ptl2024_qsmf). zh: 超低损耗光纤.'
+- id: ch01.rec.sato_ofc2024_1566
+  section: '1.1'
+  claim: Record-low loss of a Ge-free silica-core single-mode fibre at 1566 nm (0.1406 dB/km at 1550 nm), via further fictive-temperature
+    reduction
+  value: 0.1397
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1566
+    fiber: Ge-free silica-core SMF (Sumitomo)
+    year: 2024
+  source_id: sato_jlt_2025
+  locator: Abstract
+  quote: We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm on a silica-core single-mode fiber.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Abstract only. Same result republished at OECC/PSC 2025 (''Ultra-Low-Loss Silica-Core Fiber with 0.1397dB/km'').
+    Competing 2024 record claim: Khrapko et al. PTL 0.1400 dB/km at 1560 nm in a QUASI-single-mode fibre (0.1395 on half-lengths).
+    Lowest-loss solid single-mode fibre per peer-reviewed sources found: this record. See gaps file. Journal version of OFC
+    2024 Tu2E.1. Petrovich et al. 2025 mis-cite this value at 1550 nm; do not propagate.'
+- id: ch01.rec.khrapko_ptl2024_qsmf
+  section: '1.1'
+  claim: Record-low attenuation of a quasi-single-mode alkali(K2O)/halide-doped silica-core fibre at 1560 nm (0.1407 dB/km
+    at 1550 nm)
+  value: 0.14
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1560
+    fiber: quasi single-mode fibre, K2O + Cl + F doped silica core (Corning), 24 km reel
+    year: 2024
+  source_id: khrapko_ptl_2024
+  locator: Abstract; Results section (24 km reel and half-length measurements)
+  quote: We report a quasi single-mode fiber setting an absolute low attenuation record of 0.1400 dB/km at 1560 nm or 0.1407
+    at 1550 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Half-lengths averaged 0.1395 dB/km at 1560 nm ('the lowest net fiber attenuation reported to date'). QSMF, not strictly
+    single-mode; disagrees in framing with Sato OFC 2024 (0.1397 dB/km SMF at 1566 nm). Paper projects ~0.1325 dB/km as approximate
+    silica limit for their draw conditions (next record).
+- id: ch01.phys.khrapko_projected_limit
+  section: '1.1'
+  claim: Projected minimum attenuation of alkali-doped silica-core fibre if LP01 overlap with fluorine is zero (approximate
+    silica-based limit for given draw conditions)
+  value: 0.1325
+  unit: dB/km
+  kind: model_param
+  conditions:
+    wavelength_nm: 1560
+    note: assumes no absorbing impurities/defects and negligible small-angle scattering; natural isotope mixture
+  source_id: khrapko_ptl_2024
+  locator: Results, discussion of Table I
+  quote: if the overlap of the LP01 mode with fluorine is set to 0, the minimum attenuation is projected to be 0.1325 dB/km.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Model projection, not a measurement. Only 'intrinsic minimum' style number found from a primary source.
+- id: ch01.rec.petrovich_hcf_2025
+  section: '1.1'
+  claim: Measured loss of a hollow-core double-nested antiresonant nodeless fibre (DNANF) at 1550 nm; <0.1 dB/km from 1481-1625
+    nm
+  value: 0.091
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+    fiber: hollow-core DNANF, 15 km (HCF2), Microsoft Azure Fiber / Southampton
+    year: 2025
+  source_id: petrovich_natphoton_2025
+  locator: Abstract; Results, Fig. 2c-d (HCF2 cutback)
+  quote: we report a microstructured optical waveguide with unprecedented transmission bandwidth and attenuation, with a measured
+    loss of 0.091 dB km −1 at 1,550 nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Air-guiding, not silica-guided: compare separately from the solid-core record. Same paper: 0.128 dB/km at 1310 nm;
+    ''45%'' higher transmission speed (lower latency). zh: 空芯光纤 (hollow-core fibre); 亨通 reports HC-ARF ≤0.2 dB/km (tier C
+    broker report, not recorded).'
+- id: ch01.cd.g652d_lambda0_range
+  section: '1.2'
+  claim: Zero-dispersion wavelength range of G.652.D (λ0min to λ0max)
+  value:
+  - 1300
+  - 1324
+  unit: nm
+  kind: spec_typ
+  conditions:
+    fiber: G.652.D
+    note: 3-term Sellmeier fit to group delay, 1260-1460 nm
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, rows 'λ0min', 'λ0max'
+  quote: '| λ 0min | 1 300 | nm | | | λ 0max | 1 324 | nm'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'zh: 零色散波长.'
+- id: ch01.cd.g652d_s0_range
+  section: '1.2'
+  claim: Zero-dispersion slope range of G.652.D (S0min to S0max)
+  value:
+  - 0.073
+  - 0.092
+  unit: ps/(nm²·km)
+  kind: spec_typ
+  conditions:
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, rows 'S0min', 'S0max'
+  quote: '| | S 0min | 0.073 | ps/(nm 2 × km) | | | S 0max | 0.092 | ps/(nm 2 × km) |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: S0min added in 2016 edition 'to bind both the minimum and maximum chromatic dispersion coefficients' (clause 6.10).
+    100G Lambda MSA 400G-FR4 uses S0max 0.093 (minor disagreement; see ch01.cd.fr4_fiber_s0max).
+- id: ch01.cd.g652d_d1550_range
+  section: '1.2'
+  claim: Chromatic dispersion coefficient bounds of G.652.D at 1550 nm (linear fitting 1460-1625 nm)
+  value:
+  - 13.3
+  - 18.6
+  unit: ps/(nm·km)
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, rows 'Minimum/Maximum at 1550 nm'
+  quote: Minimum at 1550 nm | 13.3 | ps/(nm × km) | | | Maximum at 1550 nm | 18.6
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'At 1625 nm: min 17.2, max 23.7 ps/(nm·km) (same table). Boundary lines eq. (6-3) in equations file.'
+- id: ch01.cd.g652d_d1625_range
+  section: '1.2'
+  claim: Chromatic dispersion coefficient bounds of G.652.D at 1625 nm
+  value:
+  - 17.2
+  - 23.7
+  unit: ps/(nm·km)
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1625
+    fiber: G.652.D
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, rows 'Minimum/Maximum at 1625 nm'
+  quote: Minimum at 1625 nm | 17.2 | ps/(nm × km) | | | Maximum at 1625 nm | 23.7
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch01.cd.g652_link_typ_d1550
+  section: '1.2'
+  claim: Representative link chromatic dispersion coefficient D1550 of G.652 links (S1550 = 0.056 ps/(nm²·km))
+  value: 17
+  unit: ps/(nm·km)
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.652
+    note: Appendix I typical value; the NOTE says eq. (I-2) is no longer representative for G.652.D after the boundary-line
+      spec revision
+  source_id: itu_t_g652_2024
+  locator: Appendix I, Table I.1, row 'Chromatic dispersion parameter'
+  quote: '| Chromatic dispersion parameter | | D1550 | 17 ps/(nm × km) | |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'S1550 row: ''0.056 ps/(nm × km)'' with superscript 2 split by the crawler. Use D = 17 ps/(nm·km) for the 1550 nm
+    power-fading worked example.'
+- id: ch01.cd.g652_oband_link_dmax_m1
+  section: '1.2'
+  claim: Statistical upper boundary of G.652.D/G.657.A link chromatic dispersion coefficient at 1337.5 nm for M = 1 cable,
+    Q = 1e-4 (multi-vendor survey)
+  value: 3.24
+  unit: ps/(nm·km)
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1337.5
+    M_cables: 1
+    Q: 0.0001
+    fiber: G.652.D and G.657.A products of 8 manufacturers
+  source_id: itu_t_g652_2024
+  locator: Appendix I, clause I.6.2, Table I.3 (upper boundary, row 1337.5 nm, first column)
+  quote: '| 1337.5 | 3.24 | 3.01 | 2.77 | 2.79 | 2.55 | 2.44 | 2.54 | 2.42 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Informative appendix new in 2024 edition. Manufacturers: Corning, Fujikura, Furukawa, OFS, Prysmian, Sterlite, Sumitomo,
+    YOFC. Relevant to CWDM4/FR4 grid edge 1337.5 nm.'
+- id: ch01.cd.g652_oband_link_dmin_m1
+  section: '1.2'
+  claim: Statistical lower boundary of G.652.D/G.657.A link chromatic dispersion coefficient at 1264.5 nm for M = 1 cable,
+    Q = 1e-4
+  value: -5.87
+  unit: ps/(nm·km)
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1264.5
+    M_cables: 1
+    Q: 0.0001
+  source_id: itu_t_g652_2024
+  locator: Appendix I, clause I.6.2, Table I.3 (lower boundary, row 1264.5 nm, first column)
+  quote: '| 1264.5 | −5.87 | −5.80 | −5.63 | −5.51 | −5.44 | −5.35 | −5.39 | −5.34 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Lower boundary block of Table I.3 (second set of rows). ×2 km gives −11.7 ps/nm, close to the 400G-FR4 −11.9 ps/nm
+    channel minimum.
+- id: ch01.cd.malitson_n_1529nm
+  section: '1.2'
+  claim: Computed refractive index of fused silica at 1.52952 µm, 20 °C (Malitson Sellmeier fit)
+  value: 1.444268
+  unit: '1'
+  kind: measured
+  conditions:
+    wavelength_nm: 1529.52
+    temperature_C: 20
+    material: optical-quality fused silica (Corning 7940, Dynasil, GE 151)
+  source_id: malitson_josa_1965
+  locator: Table I, row 1.52952 µm (Hg line), 'Computed index' column
+  quote: 1.52952 ... 1.444268
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'CAUTION: quote assembled from two columns of the same table row, not contiguous text. Quote assembled from the table''s
+    wavelength and computed-index columns (same row position, 43rd entry). Sellmeier fit valid 0.21-3.71 µm with average absolute
+    residual 10.5e-6 (see equations file).'
+- id: ch01.cd.fr4_grid
+  section: '1.2'
+  claim: 400G-FR4 CWDM lane centre wavelengths (20 nm spacing), each with ±6.5 nm range
+  value: 1271, 1291, 1311, 1331 nm
+  unit: nm
+  kind: fact
+  conditions:
+    interface: 400G-FR4 (100G Lambda MSA), 4 × 100G PAM4 (53.125 GBd)
+  source_id: lambda_msa_400g_fr4_r2p0_2018
+  locator: Section 2.1, Table 2-1 'Wavelength-division-multiplexed lane assignments'
+  quote: '| L0 | 1271 nm | 1264.5 to 1277.5 nm | | L1 | 1291 nm | 1284.5 to 1297.5 nm |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: L2 1311 (1304.5-1317.5), L3 1331 (1324.5-1337.5). Same grid in IEEE 802.3cu 400GBASE-FR4 baseline (Liu, IEEE 802.3
+    100G_OPTX Mar 2019 presentation) and LPO MSA 400G-FR4-LPO; IEEE normative text not read (paywalled).
+- id: ch01.cd.fr4_channel_cd_max
+  section: '1.2'
+  claim: Maximum positive channel chromatic dispersion for 400G-FR4 (2 km), over 1264.5-1337.5 nm
+  value: 6.7
+  unit: ps/nm
+  kind: spec_max
+  conditions:
+    interface: 400G-FR4
+    reach_km: 2
+  source_id: lambda_msa_400g_fr4_r2p0_2018
+  locator: Section 4, Table 4-1 'Fiber optic cabling (channel) characteristics'
+  quote: '| b Positive dispersion (max) | 6.7 | ps/nm |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: MSA, not IEEE; IEEE 802.3cu 400GBASE-FR4 values not independently verified.
+- id: ch01.cd.fr4_channel_cd_min
+  section: '1.2'
+  claim: Minimum (most negative) channel chromatic dispersion for 400G-FR4 (2 km), over 1264.5-1337.5 nm
+  value: -11.9
+  unit: ps/nm
+  kind: spec_min
+  conditions:
+    interface: 400G-FR4
+    reach_km: 2
+  source_id: lambda_msa_400g_fr4_r2p0_2018
+  locator: Section 4, Table 4-1
+  quote: '| b Negative dispersion (min) | -11.9 | ps/nm |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Channel insertion loss max 4 dB; ORL min 25 dB (same table).
+- id: ch01.cd.fr4_fiber_s0max
+  section: '1.2'
+  claim: Maximum zero-dispersion slope S0 assumed for fibre in 400G-FR4 (with 1300 ≤ λ0 ≤ 1324 nm and 0.5 dB/km cabled attenuation)
+  value: 0.093
+  unit: ps/(nm²·km)
+  kind: spec_max
+  conditions:
+    interface: 400G-FR4
+  source_id: lambda_msa_400g_fr4_r2p0_2018
+  locator: Section 5.1, Table 5-1 'Optical fiber and cable characteristics'
+  quote: '| Dispersion slope (max) (S0) | | 0.093 | ps/nm | 2km |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 0.093 is the 400G-FR4 MSA / legacy IEEE 802.3bs value. IEEE 802.3cu changed S0 in Table 151-14 to 0.092 (matching
+    G.652.D), giving CD +6.6/-11.7 ps/nm and DGD_max about 2.3 ps for IEEE 400GBASE-FR4.
+- id: ch01.cd.fr4_fiber_att_max
+  section: '1.2'
+  claim: Maximum cabled fibre attenuation assumed in 400G-FR4 O-band link budget
+  value: 0.5
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    interface: 400G-FR4
+    wavelength_nm:
+    - 1264.5
+    - 1337.5
+  source_id: lambda_msa_400g_fr4_r2p0_2018
+  locator: Section 5.1, Table 5-1
+  quote: '| Cabled optical fiber attenuation (max) | | a 0.5 | | dB/km |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Footnote: provided for Outside Plant cable per ANSI/TIA 568-C.3.'
+- id: ch01.cd.lr4_10_channel_cd
+  section: '1.2'
+  claim: 'Channel chromatic dispersion limits for 400G-LR4-10 (10 km): max positive 33.1 ps/nm, min negative −58.7 ps/nm'
+  value:
+  - -58.7
+  - 33.1
+  unit: ps/nm
+  kind: spec_typ
+  conditions:
+    interface: 400G-LR4-10 (100G Lambda MSA)
+    reach_km: 10
+    wavelength_nm:
+    - 1264.5
+    - 1337.5
+  source_id: lambda_msa_400g_lr4_10_r1p0_2020
+  locator: Section 4, Table 4-1 'Fiber optic cabling (channel) characteristics'
+  quote: '| b Positive dispersion (max) | 33.1 | ps/nm | | b Negative dispersion (min) | -58.7 | ps/nm |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Same table: insertion loss max 6.3 dB; DGD_max 5 ps; fibre attenuation 0.47 dB/km at 1264.5 nm from G.695 App. I;
+    S0max 0.092.'
+- id: ch01.pmd.g652d_pmdq
+  section: '1.3'
+  claim: Maximum PMD link design value PMDQ for G.652.D cable, defined for M = 20 cables and Q = 0.01 %
+  value: 0.2
+  unit: ps/√km
+  kind: spec_max
+  conditions:
+    fiber: G.652.D
+    M_cables: 20
+    Q_percent: 0.01
+  source_id: itu_t_g652_2024
+  locator: Clause 8, Table 2, row 'PMD coefficient (Note 4, 5)'; definition clause 7.2
+  quote: '| M | 20 | cables | | | Q | 0.01 | % | | | Maximum PMD Q | 0.20'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Clause 7.2: PMDQ is a statistical upper bound for the PMD coefficient of concatenated cables in a link of M sections;
+    Q is the probability a concatenated PMD coefficient exceeds PMDQ. zh: 偏振模色散 (PMD); 链路设计值 (link design value).'
+- id: ch01.pmd.pmdq_definition
+  section: '1.3'
+  claim: 'Definition of PMDQ: value the link PMD coefficient of M concatenated randomly selected cable sections exceeds with
+    probability Q (Q = 1e-4 gives 99.99 % confidence)'
+  value: 0.0001
+  unit: '1'
+  kind: fact
+  conditions:
+    note: quadrature-average concatenation formula
+  source_id: itu_t_g650_2_2015
+  locator: Clause 3.1.7, eq. (3-25)
+  quote: If Q = 10 –4, there is 99.99% confidence that the actual PMD coefficient of M concatenated cables will be less than
+    or equal
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Q = 0.01 % in G.652 tables equals 1e-4. Newer G.650.2 edition may exist; 2015 edition read.
+- id: ch01.pmd.dgd_maxwellian_g650_2
+  section: '1.3'
+  claim: For randomly mode-coupled fibre the DGD distribution is usually Maxwellian, and PMD_RMS = (3π/8)^1/2 PMD_AVG
+  value: Maxwellian; <Δτ²>^1/2 = (3π/8)^1/2 <Δτ>
+  unit: '1'
+  kind: fact
+  conditions:
+    note: valid only for Maxwellian DGD (random mode coupling); fibre/cable RTM reports the linear average
+  source_id: itu_t_g650_2_2015
+  locator: Clause 3.1.3 and 3.1.4, eq. (3-3) and NOTE 3
+  quote: For mode-coupled fibres, the distribution is usually Maxwellian.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: '(3π/8)^1/2 ≈ 1.085. NOTE 3: point sources of elevated birefringence give a non-central chi distribution with RMS
+    larger than eq. (3-3) implies. zh: 微分群时延 (DGD); 麦克斯韦分布.'
+- id: ch01.pmd.dgd_sqrt_length
+  section: '1.3'
+  claim: Mean DGD grows roughly as the square root of fibre length (random walk); typical mean DGD 1-50 ps for 500 km depending
+    on fibre type
+  value:
+  - 1
+  - 50
+  unit: ps
+  kind: spec_typ
+  conditions:
+    length_km: 500
+  source_id: gordon_kogelnik_pnas_2000
+  locator: Section 5 'PMD Vectors', paragraphs 2-3
+  quote: Typical mean values of the DGD are 1 to 50 ps for a 500-km long fiber, depending on fiber type.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same section: ''The DGD grows roughly as the square root of the length of fiber, as is characteristic of a random
+    walk problem.'' Year-2000 fibre population.'
+- id: ch01.pmd.g652_dgd_table_020
+  section: '1.3'
+  claim: Implied fibre-induced maximum DGD for PMDQ = 0.20 ps/√km over a 3000 km link (10 Gbit/s guidance)
+  value: 19.0
+  unit: ps
+  kind: spec_max
+  conditions:
+    PMDQ_ps_per_sqrtkm: 0.2
+    link_km: 3000
+    bit_rate: 10 Gbit/s
+    note: cable section length 10 km; for 80 km link the implied max DGD is 7.0 ps (40 Gbit/s)
+  source_id: itu_t_g652_2024
+  locator: Appendix I, clause I.4, Table I.2 'Differential group delay'
+  quote: '| 3000 | | 19.0 | 10 Gbit/s | | | 0.20 | | | | | | 80 | | 7.0'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Other rows: PMDQ 0.5 → 400 km 25.0 ps (10G), 40 km 19.0 ps (10G, also 10GbE), 2 km 7.5 ps (40G); PMDQ 0.10 → >4000
+    km 12.0 ps (10G), 400 km 5.0 ps (40G). NOTE: for 0.10 ps/√km >4000 km case, section length 25 km and probability 6.5e-8.
+    Identical table in G.654 (08/2024) Table I.3.'
+- id: ch01.pmd.g652_pmdq_vs_m
+  section: '1.3'
+  claim: Mean normalized PMDQ for M = 4 concatenated cables relative to M = 20 (Maxwellian assumption, numerical example)
+  value: 1.32
+  unit: '1'
+  kind: model_param
+  conditions:
+    M_cables: 4
+    note: 'M=10: 1.13; M=20: 1.00; M=30: 0.96; mean normalized DGD 0.59, 0.80, 1.00, 1.17'
+  source_id: itu_t_g652_2024
+  locator: Appendix I, clause I.6.3, Table I.6
+  quote: '| 4 | 1.32 | 0.59 | | 10 | 1.13 | 0.80 | | 20 | 1.00 | 1.00 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Informative; the Recommendation states it 'does not ensure the actual dependence on M value'.
+- id: ch01.pmd.g959_dgd_03_bit
+  section: '1.3'
+  claim: 'Rule of thumb: Tx/Rx must tolerate an actual DGD of 0.3 bit period with ~1 dB sensitivity degradation (50 % power
+    in each PSP)'
+  value: 0.3
+  unit: bit period
+  kind: spec_max
+  conditions:
+    applies_to: most G.959.1 NRZ application codes
+    note: ≈0.1-0.2 dB penalty at 0.1 bit period instantaneous DGD; 0.1 bit period = mean DGD for max/mean ratio 3.0
+  source_id: itu_t_g959_1_2024_amd2
+  locator: Clause 8.2.4.5 'Maximum optical path penalty'
+  quote: the transmitter and receiver combination is required to tolerate an actual DGD of 0.3 bit period with a maximum sensitivity
+    degradation of approximately 1 dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same text in G.959.1 (11/2009) clause 7.2.4.5. Further discussion referenced to Appendix I of G.691 (not read).
+- id: ch01.pmd.g959_ratio_3p0_prob
+  section: '1.3'
+  claim: Maxwellian probability that instantaneous DGD exceeds 3.0 × mean DGD
+  value: 4.2e-05
+  unit: '1'
+  kind: model_param
+  conditions:
+    ratio_max_to_mean: 3.0
+  source_id: itu_t_g959_1_2024_amd2
+  locator: Clause 8.2.3.7, Table 8-3 'DGD means and probabilities'
+  quote: '| | 3.0 | | | −5 4.2 × 10 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Ratio 3.5 → 7.7e-7 (same table); G.959.1 (11/2009) Table 7-2 adds ratio 4.0 → 7.4e-9. Crawler text splits the exponent
+    '−5'.
+- id: ch01.pmd.g959_ratio_3p5_prob
+  section: '1.3'
+  claim: Maxwellian probability that instantaneous DGD exceeds 3.5 × mean DGD
+  value: 7.7e-07
+  unit: '1'
+  kind: model_param
+  conditions:
+    ratio_max_to_mean: 3.5
+  source_id: itu_t_g959_1_2024_amd2
+  locator: Clause 8.2.3.7, Table 8-3
+  quote: '| | 3.5 | | | −7 7.7 × 10 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch01.pmd.fr4_dgd_max
+  section: '1.3'
+  claim: Maximum DGD the 400G-FR4 system must tolerate (2 km O-band, 53 GBd PAM4)
+  value: 3.0
+  unit: ps
+  kind: spec_max
+  conditions:
+    interface: 400G-FR4
+    symbol_rate_GBd: 53.125
+  source_id: lambda_msa_400g_fr4_r2p0_2018
+  locator: Section 4, Table 4-1, row 'DGD_max' and footnote c
+  quote: '| c DGD_max | 3.0 | ps |'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: '400G-LR4-10: DGD_max 5 ps (lambda_msa_400g_lr4_10_r1p0_2020 Table 4-1). TDECQ test channel max mean DGD 0.8 ps (Table
+    3-3). Useful for the 1.3 outage worked example.'
+- id: ch01.pmd.vascade_ex2000_ldv_iec
+  section: '1.3'
+  claim: PMD link design value of Vascade EX2000 under IEC 60794-3 convention (m = 24, Q = 0.1 %)
+  value: 0.08
+  unit: ps/√km
+  kind: spec_max
+  conditions:
+    fiber: Corning Vascade EX2000
+    M_cables: 24
+    Q_percent: 0.1
+  source_id: corning_vascade_ex2000_pi1440_2023
+  locator: p. 1, 'Polarization Mode Dispersion (PMD)' table and footnote
+  quote: PMD Link Design Value | | ≤ 0.08* | | Maximum Individual Fiber PMD | | ≤ 0.1
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Footnote: ''Complies with IEC 60794-3 (m = 24, Q = 0.1%)''. Not directly comparable to ITU M=20, Q=0.01 % values.'

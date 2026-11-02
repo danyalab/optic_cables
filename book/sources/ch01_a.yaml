@@ -1,410 +1,411 @@
-# Source records for chapter 1, sections 1.1-1.3 (retrieval agent ch01_a).
-# Note on access: www.itu.int could not be fetched directly from this session
-# (proxy policy); ITU-T texts were read through the Exa crawler copy of the
-# official itu.int PDF / ePublication URLs listed below.
 sources:
-  # ---------------- ITU-T standards ----------------
-  - id: itu_t_g652_2024
-    type: standard
-    title: "Characteristics of a single-mode optical fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.652 (08/2024)"
-    year: 2024
-    doi: ""
-    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.652-202408-I!!PDF-E&lang=e&type=items"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: itu_t_g652_2016
-    type: standard
-    title: "Characteristics of a single-mode optical fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.652 (11/2016), superseded by 08/2024"
-    year: 2016
-    doi: ""
-    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.652-201611-S!!PDF-E&lang=e&type=items"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: itu_t_g654_2024
-    type: standard
-    title: "Characteristics of a cut-off shifted single-mode optical fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.654 (08/2024)"
-    year: 2024
-    doi: ""
-    url: "https://www.itu.int/epublications/publication/itu-t-g-654-2024-08-characteristics-of-a-cut-off-shifted-single-mode-optical-fibre-and-cable"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: itu_t_g654_2020
-    type: standard
-    title: "Characteristics of a cut-off shifted single-mode optical fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.654 (03/2020), superseded by 08/2024"
-    year: 2020
-    doi: ""
-    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.654-202003-S!!PDF-E&lang=e&type=items"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: itu_t_g657_2024
-    type: standard
-    title: "Characteristics of a bending-loss insensitive single-mode optical fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.657 (08/2024)"
-    year: 2024
-    doi: ""
-    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.657-202408-I!!PDF-E&lang=e&type=items"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: itu_t_g650_2_2015
-    type: standard
-    title: "Definitions and test methods for statistical and non-linear related attributes of single-mode fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.650.2 (08/2015)"
-    year: 2015
-    doi: ""
-    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.650.2-201508-I!!PDF-E&lang=s&type=items"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: itu_t_g959_1_2024_amd2
-    type: standard
-    title: "Optical transport network physical layer interfaces, Amendment 2"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.959.1 (2024) Amd. 2 (05/2025)"
-    year: 2025
-    doi: ""
-    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.959.1-202505-I!Amd2!PDF-E&lang=e&type=items"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  # ---------------- MSA specifications (public) ----------------
-  - id: lambda_msa_400g_fr4_r2p0_2018
-    type: standard
-    title: "400G-FR4 Technical Specification, Rev 2.0"
-    authors: "100G Lambda MSA Group (ed. T. Palkert)"
-    venue: "100G Lambda MSA"
-    year: 2018
-    doi: ""
-    url: "http://www.100glambda.com/specifications/send/2-specifications/7-400g-fr4-technical-spec-d2p0-2"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: lambda_msa_400g_lr4_10_r1p0_2020
-    type: standard
-    title: "400G-LR4-10 Technical Specification, Rev 1.0"
-    authors: "100G Lambda MSA Group"
-    venue: "100G Lambda MSA"
-    year: 2020
-    doi: ""
-    url: "https://100glambda.com/specifications/send/2-specifications/10-400g-lr4-10-technical-spec-rev1-0"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-
-  # ---------------- Vendor datasheets / white papers ----------------
-  - id: corning_smf28_ultra_pi1424_2025
-    type: datasheet
-    title: "Corning SMF-28 Ultra Optical Fiber, Product Information PI1424"
-    authors: "Corning Incorporated"
-    venue: "Corning product information sheet (issued July 2025)"
-    year: 2025
-    doi: ""
-    url: "https://www.corning.com/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1424-AEN.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: corning_vascade_ex2000_pi1440_2023
-    type: datasheet
-    title: "Corning Vascade EX2000 Optical Fiber, Product Information PI1440"
-    authors: "Corning Incorporated"
-    venue: "Corning product information sheet (issued March 2023)"
-    year: 2023
-    doi: ""
-    url: "https://www.corning.com/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1440.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: corning_vascade_family_pi1445_2020
-    type: datasheet
-    title: "Corning Vascade Optical Fibers, Product Information PI1445"
-    authors: "Corning Incorporated"
-    venue: "Corning product information sheet (issued March 2020)"
-    year: 2020
-    doi: ""
-    url: "https://www.corning.com/content/dam/corning/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1445-AEN.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: sumitomo_zplus150_tr23164a_2023
-    type: datasheet
-    title: "Z-PLUS Fiber 150 specification, Document TR-23164A"
-    authors: "Sumitomo Electric Industries"
-    venue: "Sumitomo Electric datasheet (issued May 2023)"
-    year: 2023
-    doi: ""
-    url: "https://sumitomoelectric.com/sites/default/files/2026-01/download_documents/TR-23164A_Z-PLUS_Fiber_150.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: sumitomo_zplus130_tr23163b_2026
-    type: datasheet
-    title: "Z-PLUS Fiber 130 specification, Document TR-23163B"
-    authors: "Sumitomo Electric Industries"
-    venue: "Sumitomo Electric datasheet (issued Jan. 2026)"
-    year: 2026
-    doi: ""
-    url: "https://sumitomoelectric.com/sites/default/files/2026-04/download_documents/TR-23163B_Z-PLUS%20Fiber%20130.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: sumitomo_zplus_ull_tr23162a_2023
-    type: datasheet
-    title: "Z-PLUS Fiber ULL specification, Document TR-23162A"
-    authors: "Sumitomo Electric Industries"
-    venue: "Sumitomo Electric datasheet (issued May 2023)"
-    year: 2023
-    doi: ""
-    url: "https://sumitomoelectric.com/sites/default/files/2026-01/download_documents/TR-23162A_Z-PLUS_Fiber_ULL.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: acome_g654e_whitepaper
-    type: whitepaper
-    title: "G.654.E Fibre Cable (white paper)"
-    authors: "ACOME (with Sumitomo Electric fibre data)"
-    venue: "ACOME white paper (publication date not printed in the text read)"
-    year: null
-    doi: ""
-    url: "https://www.acome.com/sites/default/files/inspirations/pdf/whitepaper-g654e_bd.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: yofc_g654e_presentation_2020
-    type: whitepaper
-    title: "长飞 G.654.E 光纤 (YOFC G.654.E fibre presentation)"
-    authors: "长飞光纤光缆股份有限公司 (YOFC)"
-    venue: "YOFC corporate presentation, August 2020"
-    year: 2020
-    doi: ""
-    url: "https://yofc-oss.oss-cn-beijing.aliyuncs.com/cn/upload/20200811/1efdlkf8enc6vt2j.pdf"
-    access: open
-    language: zh
-    tier: B
-    retrieved: 2026-11-02
-  - id: zte_technologies_g654e_2024
-    type: whitepaper
-    title: "Application of G.654.E Fiber for High-Capacity Long-Distance Transmission"
-    authors: "ZTE Corporation"
-    venue: "ZTE Technologies magazine, 2024 issue 6"
-    year: 2024
-    doi: ""
-    url: "https://www.zte.com.cn/content/zte-site/www-zte-com-cn/global/about/magazine/zte-technologies/2024/6-en/customer-insights-/application-of-g-654-e-fiber-for-high-capacity-long-distance-tra.html"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-
-  # ---------------- Peer-reviewed papers ----------------
-  - id: tamura_jlt_2018
-    type: journal
-    title: "The First 0.14-dB/km Loss Optical Fiber and its Impact on Submarine Transmission"
-    authors: "Y. Tamura, H. Sakuma, K. Morita, M. Suzuki, Y. Yamamoto, K. Shimada, Y. Honma, K. Sohma, T. Fujii, T. Hasegawa"
-    venue: "Journal of Lightwave Technology 36(1), 44-49"
-    year: 2018
-    doi: "10.1109/JLT.2018.2796647"
-    url: "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-36-1-44"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: sato_ofc_2024
-    type: conference
-    title: "Record Low Loss Optical Fiber with 0.1397 dB/km"
-    authors: "S. Sato, Y. Kawaguchi, H. Sakuma, T. Haruna, T. Hasegawa"
-    venue: "Optical Fiber Communication Conference (OFC) 2024, paper Tu2E.1"
-    year: 2024
-    doi: "10.1364/OFC.2024.Tu2E.1"
-    url: "https://doi.org/10.1364/ofc.2024.tu2e.1"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: khrapko_ptl_2024
-    type: journal
-    title: "Quasi Single-Mode Fiber With Record-Low Attenuation of 0.1400 dB/km"
-    authors: "R. R. Khrapko, S. L. Logunov, M.-J. Li, H. B. Matthews, P. Tandon, C. Zhou"
-    venue: "IEEE Photonics Technology Letters (2024)"
-    year: 2024
-    doi: "10.1109/LPT.2024.3372786"
-    url: "https://doi.org/10.1109/lpt.2024.3372786"
-    access: paywalled
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: makovejs_jlt_2016
-    type: journal
-    title: "Towards Superior Transmission Performance in Submarine Systems: Leveraging Ultra-Low Attenuation and Large Effective Area"
-    authors: "S. Makovejs et al. (Corning)"
-    venue: "Journal of Lightwave Technology (2016)"
-    year: 2016
-    doi: ""
-    url: "https://www.montana.edu/iroudas/documents/publications/Makovejs-2016.pdf"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: kanamori_ieice_2021
-    type: journal
-    title: "Transmission Loss of Optical Fibers; Achievements in Half a Century"
-    authors: "H. Kanamori"
-    venue: "IEICE Transactions on Communications E104-B(2)"
-    year: 2021
-    doi: "10.1587/transcom.2020EBI0002"
-    url: "https://doi.org/10.1587/transcom.2020ebi0002"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: sakr_natcommun_2020
-    type: journal
-    title: "Hollow core optical fibres with comparable attenuation to silica fibres between 600 and 1100 nm"
-    authors: "H. Sakr, Y. Chen, G. T. Jasion, T. D. Bradley, J. R. Hayes, et al."
-    venue: "Nature Communications 11, 6030"
-    year: 2020
-    doi: "10.1038/s41467-020-19910-7"
-    url: "https://www.nature.com/articles/s41467-020-19910-7"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: petrovich_natphoton_2025
-    type: journal
-    title: "Broadband optical fibre with an attenuation lower than 0.1 decibel per kilometre"
-    authors: "M. Petrovich, E. Numkam Fokoua, Y. Chen, H. Sakr, A. I. Adamu, et al., F. Poletti"
-    venue: "Nature Photonics (2025)"
-    year: 2025
-    doi: "10.1038/s41566-025-01747-5"
-    url: "https://www.nature.com/articles/s41566-025-01747-5"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: malitson_josa_1965
-    type: journal
-    title: "Interspecimen Comparison of the Refractive Index of Fused Silica"
-    authors: "I. H. Malitson"
-    venue: "Journal of the Optical Society of America 55(10), 1205-1209"
-    year: 1965
-    doi: "10.1364/JOSA.55.001205"
-    url: "https://doi.org/10.1364/josa.55.001205"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: gharbi_jphot_2019
-    type: journal
-    title: "Numerical Investigation of Long-Haul Coherent Optical Generalized Frequency Division Multiplexing Signal"
-    authors: "O. Gharbi, S. Mhatli, K. Aissaoui, A. S. Aldalbahi, R. Attia"
-    venue: "IEEE Photonics Journal (2019)"
-    year: 2019
-    doi: "10.1109/JPHOT.2019.2920454"
-    url: "https://doi.org/10.1109/jphot.2019.2920454"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: vijayan_lic_thesis_2019
-    type: thesis
-    title: "Nonlinearity mitigation in phase-sensitively amplified optical transmission links"
-    authors: "K. Vijayan"
-    venue: "Licentiate thesis, Chalmers University of Technology (Technical Report MC2-424)"
-    year: 2019
-    doi: ""
-    url: "https://research.chalmers.se/publication/513598/file/513598_Fulltext.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-  - id: zhu_electronics_2021
-    type: journal
-    title: "Imbalanced Mach-Zehnder Modulator for Fading Suppression in Dispersion-Uncompensated Direct Detection System"
-    authors: "Y. Zhu, X. Miao, Q. Wu, L. Yin, W. Hu"
-    venue: "Electronics (MDPI) 10(22), 2866"
-    year: 2021
-    doi: "10.3390/electronics10222866"
-    url: "https://doi.org/10.3390/electronics10222866"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: ouyang_jlt_2019
-    type: journal
-    title: "Iterative Block Decision Feedback Equalization for IM/DD-Based OCDM to Compensate Chromatic-Dispersion-Induced Power Fading"
-    authors: "X. Ouyang, G. Talli, M. J. Power, P. D. Townsend"
-    venue: "Journal of Lightwave Technology (2019)"
-    year: 2019
-    doi: "10.1109/JLT.2019.2923783"
-    url: "https://doi.org/10.1109/jlt.2019.2923783"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: gordon_kogelnik_pnas_2000
-    type: journal
-    title: "PMD fundamentals: Polarization mode dispersion in optical fibers"
-    authors: "J. P. Gordon, H. Kogelnik"
-    venue: "Proceedings of the National Academy of Sciences 97(9), 4541-4550"
-    year: 2000
-    doi: "10.1073/pnas.97.9.4541"
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC34323/"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-  - id: reimer_msc_thesis_2007
-    type: thesis
-    title: "Modeling and Simulation of Polarization Mode Dispersion and Polarization Dependent Loss"
-    authors: "M. A. Reimer"
-    venue: "M.Sc. thesis, University of Waterloo"
-    year: 2007
-    doi: ""
-    url: "https://www.collectionscanada.gc.ca/obj/thesescanada/vol2/002/MR34383.PDF"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-
-  # ---------------- Press (tier C, claim-of-record only) ----------------
-  - id: sumitomo_press_2024_0p1397
-    type: press
-    title: "Sumitomo Electric to Present New Ultra-Low Loss Silica Glass Optical Fiber"
-    authors: "Sumitomo Electric Industries"
-    venue: "Press release prs013"
-    year: 2024
-    doi: ""
-    url: "https://sumitomoelectric.com/press/2024/03/prs013"
-    access: open
-    language: en
-    tier: C
-    retrieved: 2026-11-02
+- id: itu_t_g652_2024
+  type: standard
+  title: Characteristics of a single-mode optical fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.652 (08/2024)
+  year: 2024
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.652-202408-I!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g652_2016
+  type: standard
+  title: Characteristics of a single-mode optical fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.652 (11/2016), superseded by 08/2024
+  year: 2016
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.652-201611-S!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g654_2024
+  type: standard
+  title: Characteristics of a cut-off shifted single-mode optical fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.654 (08/2024)
+  year: 2024
+  doi: ''
+  url: https://www.itu.int/epublications/publication/itu-t-g-654-2024-08-characteristics-of-a-cut-off-shifted-single-mode-optical-fibre-and-cable
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g654_2020
+  type: standard
+  title: Characteristics of a cut-off shifted single-mode optical fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.654 (03/2020), superseded by 08/2024
+  year: 2020
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.654-202003-S!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g657_2024
+  type: standard
+  title: Characteristics of a bending-loss insensitive single-mode optical fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.657 (08/2024)
+  year: 2024
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.657-202408-I!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g650_2_2015
+  type: standard
+  title: Definitions and test methods for statistical and non-linear related attributes of single-mode fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.650.2 (08/2015)
+  year: 2015
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.650.2-201508-I!!PDF-E&lang=s&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g959_1_2024_amd2
+  type: standard
+  title: Optical transport network physical layer interfaces, Amendment 2
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.959.1 (2024) Amd. 2 (05/2025)
+  year: 2025
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.959.1-202505-I!Amd2!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: lambda_msa_400g_fr4_r2p0_2018
+  type: standard
+  title: 400G-FR4 Technical Specification, Rev 2.0
+  authors: 100G Lambda MSA Group (ed. T. Palkert)
+  venue: 100G Lambda MSA
+  year: 2018
+  doi: ''
+  url: http://www.100glambda.com/specifications/send/2-specifications/7-400g-fr4-technical-spec-d2p0-2
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: lambda_msa_400g_lr4_10_r1p0_2020
+  type: standard
+  title: 400G-LR4-10 Technical Specification, Rev 1.0
+  authors: 100G Lambda MSA Group
+  venue: 100G Lambda MSA
+  year: 2020
+  doi: ''
+  url: https://100glambda.com/specifications/send/2-specifications/10-400g-lr4-10-technical-spec-rev1-0
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: corning_smf28_ultra_pi1424_2025
+  type: datasheet
+  title: Corning SMF-28 Ultra Optical Fiber, Product Information PI1424
+  authors: Corning Incorporated
+  venue: Corning product information sheet (issued July 2025)
+  year: 2025
+  doi: ''
+  url: https://www.corning.com/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1424-AEN.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: corning_vascade_ex2000_pi1440_2023
+  type: datasheet
+  title: Corning Vascade EX2000 Optical Fiber, Product Information PI1440
+  authors: Corning Incorporated
+  venue: Corning product information sheet (issued March 2023)
+  year: 2023
+  doi: ''
+  url: https://www.corning.com/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1440.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: corning_vascade_family_pi1445_2020
+  type: datasheet
+  title: Corning Vascade Optical Fibers, Product Information PI1445
+  authors: Corning Incorporated
+  venue: Corning product information sheet (issued March 2020)
+  year: 2020
+  doi: ''
+  url: https://www.corning.com/content/dam/corning/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1445-AEN.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: sumitomo_zplus150_tr23164a_2023
+  type: datasheet
+  title: Z-PLUS Fiber 150 specification, Document TR-23164A
+  authors: Sumitomo Electric Industries
+  venue: Sumitomo Electric datasheet (issued May 2023)
+  year: 2023
+  doi: ''
+  url: https://sumitomoelectric.com/sites/default/files/2026-01/download_documents/TR-23164A_Z-PLUS_Fiber_150.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: sumitomo_zplus130_tr23163b_2026
+  type: datasheet
+  title: Z-PLUS Fiber 130 specification, Document TR-23163B
+  authors: Sumitomo Electric Industries
+  venue: Sumitomo Electric datasheet (issued Jan. 2026)
+  year: 2026
+  doi: ''
+  url: https://sumitomoelectric.com/sites/default/files/2026-04/download_documents/TR-23163B_Z-PLUS%20Fiber%20130.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: sumitomo_zplus_ull_tr23162a_2023
+  type: datasheet
+  title: Z-PLUS Fiber ULL specification, Document TR-23162A
+  authors: Sumitomo Electric Industries
+  venue: Sumitomo Electric datasheet (issued May 2023)
+  year: 2023
+  doi: ''
+  url: https://sumitomoelectric.com/sites/default/files/2026-01/download_documents/TR-23162A_Z-PLUS_Fiber_ULL.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: acome_g654e_whitepaper
+  type: whitepaper
+  title: G.654.E Fibre Cable (white paper)
+  authors: ACOME (with Sumitomo Electric fibre data)
+  venue: ACOME white paper (publication date not printed in the text read)
+  year: null
+  doi: ''
+  url: https://www.acome.com/sites/default/files/inspirations/pdf/whitepaper-g654e_bd.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: yofc_g654e_presentation_2020
+  type: whitepaper
+  title: 长飞 G.654.E 光纤 (YOFC G.654.E fibre presentation)
+  authors: 长飞光纤光缆股份有限公司 (YOFC)
+  venue: YOFC corporate presentation, August 2020
+  year: 2020
+  doi: ''
+  url: https://yofc-oss.oss-cn-beijing.aliyuncs.com/cn/upload/20200811/1efdlkf8enc6vt2j.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: zte_technologies_g654e_2024
+  type: whitepaper
+  title: Application of G.654.E Fiber for High-Capacity Long-Distance Transmission
+  authors: Viettel engineers, published by ZTE Corporation
+  venue: ZTE Technologies magazine, 2024 issue 6
+  year: 2024
+  doi: ''
+  url: https://www.zte.com.cn/content/zte-site/www-zte-com-cn/global/about/magazine/zte-technologies/2024/6-en/customer-insights-/application-of-g-654-e-fiber-for-high-capacity-long-distance-tra.html
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: tamura_jlt_2018
+  type: journal
+  title: The First 0.14-dB/km Loss Optical Fiber and its Impact on Submarine Transmission
+  authors: Y. Tamura, H. Sakuma, K. Morita, M. Suzuki, Y. Yamamoto, K. Shimada, Y. Honma, K. Sohma, T. Fujii, T. Hasegawa
+  venue: Journal of Lightwave Technology 36(1), 44-49
+  year: 2018
+  doi: 10.1109/JLT.2018.2796647
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-36-1-44
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: sato_ofc_2024
+  type: conference
+  title: Record Low Loss Optical Fiber with 0.1397 dB/km
+  authors: S. Sato, Y. Kawaguchi, H. Sakuma, T. Haruna, T. Hasegawa
+  venue: Optical Fiber Communication Conference (OFC) 2024, paper Tu2E.1
+  year: 2024
+  doi: 10.1364/OFC.2024.Tu2E.1
+  url: https://doi.org/10.1364/ofc.2024.tu2e.1
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: khrapko_ptl_2024
+  type: journal
+  title: Quasi Single-Mode Fiber With Record-Low Attenuation of 0.1400 dB/km
+  authors: R. R. Khrapko, S. L. Logunov, M.-J. Li, H. B. Matthews, P. Tandon, C. Zhou
+  venue: IEEE Photonics Technology Letters (2024)
+  year: 2024
+  doi: 10.1109/LPT.2024.3372786
+  url: https://doi.org/10.1109/lpt.2024.3372786
+  access: paywalled
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: makovejs_jlt_2016
+  type: journal
+  title: 'Towards Superior Transmission Performance in Submarine Systems: Leveraging Ultra-Low Attenuation and Large Effective
+    Area'
+  authors: S. Makovejs et al. (Corning)
+  venue: Journal of Lightwave Technology (2016)
+  year: 2016
+  doi: ''
+  url: https://www.montana.edu/iroudas/documents/publications/Makovejs-2016.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: kanamori_ieice_2021
+  type: journal
+  title: Transmission Loss of Optical Fibers; Achievements in Half a Century
+  authors: H. Kanamori
+  venue: IEICE Transactions on Communications E104-B(2)
+  year: 2021
+  doi: 10.1587/transcom.2020EBI0002
+  url: https://doi.org/10.1587/transcom.2020ebi0002
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: sakr_natcommun_2020
+  type: journal
+  title: Hollow core optical fibres with comparable attenuation to silica fibres between 600 and 1100 nm
+  authors: H. Sakr, Y. Chen, G. T. Jasion, T. D. Bradley, J. R. Hayes, et al.
+  venue: Nature Communications 11, 6030
+  year: 2020
+  doi: 10.1038/s41467-020-19910-7
+  url: https://www.nature.com/articles/s41467-020-19910-7
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: petrovich_natphoton_2025
+  type: journal
+  title: Broadband optical fibre with an attenuation lower than 0.1 decibel per kilometre
+  authors: M. Petrovich, E. Numkam Fokoua, Y. Chen, H. Sakr, A. I. Adamu, et al., F. Poletti
+  venue: Nature Photonics (2025)
+  year: 2025
+  doi: 10.1038/s41566-025-01747-5
+  url: https://www.nature.com/articles/s41566-025-01747-5
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: malitson_josa_1965
+  type: journal
+  title: Interspecimen Comparison of the Refractive Index of Fused Silica
+  authors: I. H. Malitson
+  venue: Journal of the Optical Society of America 55(10), 1205-1209
+  year: 1965
+  doi: 10.1364/JOSA.55.001205
+  url: https://doi.org/10.1364/josa.55.001205
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: gharbi_jphot_2019
+  type: journal
+  title: Numerical Investigation of Long-Haul Coherent Optical Generalized Frequency Division Multiplexing Signal
+  authors: O. Gharbi, S. Mhatli, K. Aissaoui, A. S. Aldalbahi, R. Attia
+  venue: IEEE Photonics Journal (2019)
+  year: 2019
+  doi: 10.1109/JPHOT.2019.2920454
+  url: https://doi.org/10.1109/jphot.2019.2920454
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: vijayan_lic_thesis_2019
+  type: thesis
+  title: Nonlinearity mitigation in phase-sensitively amplified optical transmission links
+  authors: K. Vijayan
+  venue: Licentiate thesis, Chalmers University of Technology (Technical Report MC2-424)
+  year: 2019
+  doi: ''
+  url: https://research.chalmers.se/publication/513598/file/513598_Fulltext.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: zhu_electronics_2021
+  type: journal
+  title: Imbalanced Mach-Zehnder Modulator for Fading Suppression in Dispersion-Uncompensated Direct Detection System
+  authors: Y. Zhu, X. Miao, Q. Wu, L. Yin, W. Hu
+  venue: Electronics (MDPI) 10(22), 2866
+  year: 2021
+  doi: 10.3390/electronics10222866
+  url: https://doi.org/10.3390/electronics10222866
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ouyang_jlt_2019
+  type: journal
+  title: Iterative Block Decision Feedback Equalization for IM/DD-Based OCDM to Compensate Chromatic-Dispersion-Induced Power
+    Fading
+  authors: X. Ouyang, G. Talli, M. J. Power, P. D. Townsend
+  venue: Journal of Lightwave Technology (2019)
+  year: 2019
+  doi: 10.1109/JLT.2019.2923783
+  url: https://doi.org/10.1109/jlt.2019.2923783
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: gordon_kogelnik_pnas_2000
+  type: journal
+  title: 'PMD fundamentals: Polarization mode dispersion in optical fibers'
+  authors: J. P. Gordon, H. Kogelnik
+  venue: Proceedings of the National Academy of Sciences 97(9), 4541-4550
+  year: 2000
+  doi: 10.1073/pnas.97.9.4541
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC34323/
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: reimer_msc_thesis_2007
+  type: thesis
+  title: Modeling and Simulation of Polarization Mode Dispersion and Polarization Dependent Loss
+  authors: M. A. Reimer
+  venue: M.Sc. thesis, University of Waterloo
+  year: 2007
+  doi: ''
+  url: https://www.collectionscanada.gc.ca/obj/thesescanada/vol2/002/MR34383.PDF
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: sumitomo_press_2024_0p1397
+  type: press
+  title: Sumitomo Electric to Present New Ultra-Low Loss Silica Glass Optical Fiber
+  authors: Sumitomo Electric Industries
+  venue: Press release prs013
+  year: 2024
+  doi: ''
+  url: https://sumitomoelectric.com/press/2024/03/prs013
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: sato_jlt_2025
+  type: journal
+  title: Silica-Core Single-Mode Fiber With Lowest Loss of 0.1397 dB/km
+  authors: S. Sato, Y. Kawaguchi, H. Sakuma, T. Haruna, T. Hasegawa
+  venue: Journal of Lightwave Technology 43(4), 1837
+  year: 2025
+  doi: 10.1109/JLT.2025.3527933
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-43-4-1837
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'

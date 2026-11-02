@@ -1,0 +1,321 @@
+{
+  "ray_ge_1550": {
+    "value": 0.17324998565273556,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_gedoped"
+    ]
+  },
+  "tot_ge_1550": {
+    "value": 0.18324998565273556,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.ir_absorption_1550",
+      "ch01.phys.rayleigh_coeff_gedoped"
+    ]
+  },
+  "ray_psc_1550": {
+    "value": 0.12993748923955167,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_psc_record"
+    ]
+  },
+  "tot_psc_1550": {
+    "value": 0.13993748923955168,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.ir_absorption_1550",
+      "ch01.phys.rayleigh_coeff_psc_record"
+    ]
+  },
+  "ray_frac_ge_1550": {
+    "value": 0.9454297365187776,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch01.phys.ir_absorption_1550",
+      "ch01.phys.rayleigh_coeff_gedoped"
+    ]
+  },
+  "ray_ge_1310": {
+    "value": 0.339558664941034,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_gedoped"
+    ]
+  },
+  "ray_fibhi_1310": {
+    "value": 0.3056027984469306,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_fiber"
+    ]
+  },
+  "ray_bulk_1550": {
+    "value": 0.10394999139164132,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_bulk_silica"
+    ]
+  },
+  "psc_vs_ge_pct": {
+    "value": 33.33333333333333,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_gedoped",
+      "ch01.phys.rayleigh_coeff_psc_record"
+    ]
+  },
+  "psc_model_minus_record": {
+    "value": -0.6625107604483205,
+    "unit": "mdB/km",
+    "digits": 2,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_psc_record",
+      "ch01.ull.sato2025_record_1550"
+    ]
+  },
+  "ext_1260_fib_lo": {
+    "value": 0.04575371418601613,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_fiber"
+    ]
+  },
+  "ext_1260_ge": {
+    "value": 0.05719214273252016,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch01.phys.rayleigh_coeff_gedoped"
+    ]
+  },
+  "ext_1260_implied_A": {
+    "value": 1.2239443506668468,
+    "unit": "dB/(km·µm⁴)",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652d_rayleigh_extension_1260"
+    ]
+  },
+  "ext_1260_factor": {
+    "value": 0.05719214273252016,
+    "unit": "µm⁻⁴",
+    "digits": 3,
+    "inputs": []
+  },
+  "span_km": {
+    "value": 80.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": []
+  },
+  "n_splice": {
+    "value": 19.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "splice_db": {
+    "value": 0.05,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "conn_db": {
+    "value": 0.5,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": []
+  },
+  "margin_db": {
+    "value": 3.0,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": []
+  },
+  "section_km": {
+    "value": 4.0,
+    "unit": "km",
+    "digits": 1,
+    "inputs": []
+  },
+  "acc_bol": {
+    "value": 1.9500000000000002,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "g652d_spec_fiber": {
+    "value": 24.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652d_max_1530_1565"
+    ]
+  },
+  "g652d_spec_bol": {
+    "value": 25.95,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652d_max_1530_1565"
+    ]
+  },
+  "g652d_spec_eol": {
+    "value": 28.95,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652d_max_1530_1565"
+    ]
+  },
+  "g652_link_fiber": {
+    "value": 22.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "g652_link_bol": {
+    "value": 23.95,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "g652_link_eol": {
+    "value": 26.95,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "smf28u_fiber": {
+    "value": 14.399999999999999,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "smf28u_bol": {
+    "value": 16.349999999999998,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "smf28u_eol": {
+    "value": 19.349999999999998,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "g654e_spec_fiber": {
+    "value": 18.400000000000002,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g654e_max_1550"
+    ]
+  },
+  "g654e_spec_bol": {
+    "value": 20.35,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g654e_max_1550"
+    ]
+  },
+  "g654e_spec_eol": {
+    "value": 23.35,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g654e_max_1550"
+    ]
+  },
+  "pa125_fiber": {
+    "value": 12.48,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.sumitomo_pureadvance125_typ"
+    ]
+  },
+  "pa125_bol": {
+    "value": 14.43,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.sumitomo_pureadvance125_typ"
+    ]
+  },
+  "pa125_eol": {
+    "value": 17.43,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.sumitomo_pureadvance125_typ"
+    ]
+  },
+  "oband_link_fiber": {
+    "value": 40.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_oband"
+    ]
+  },
+  "oband_link_bol": {
+    "value": 41.95,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_oband"
+    ]
+  },
+  "oband_link_eol": {
+    "value": 44.95,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_oband"
+    ]
+  },
+  "smf28u_minus_pa125": {
+    "value": 1.9199999999999995,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.sumitomo_pureadvance125_typ"
+    ]
+  },
+  "oband_minus_cband_link": {
+    "value": 18.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband",
+      "ch01.att.g652_link_typ_oband"
+    ]
+  }
+}

@@ -1,0 +1,641 @@
+# Independent verification of book/ledger/ch01_a.yaml and book/ledger/ch01_a_equations.yaml
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access method: www.itu.int, corning.com, sumitomoelectric.com etc. blocked for direct curl (proxy 403);
+# all sources read through the Exa crawler copy of the URL given in book/sources/ch01_a.yaml
+# (ITU-T PDFs/ePublications read in full text; MSA PDFs in full; vendor PDFs in full;
+# Kanamori, Sakr, Petrovich, Gordon-Kogelnik, Makovejs, Malitson (USPTO exhibit scan of the JOSA pages),
+# Zhu, Gharbi, Vijayan, Reimer in full text; Tamura, Sato, Khrapko, Ouyang via abstract plus crawler full-text excerpts).
+# Numerical cross-checks run locally: Malitson Sellmeier at 1.52952 um = 1.444268; Maxwellian tail
+# P(>3.0 mean)=4.20e-5, P(>3.5 mean)=7.74e-7, P(>4.0 mean)=7.41e-9; pdf of eq. maxwellian_dgd_pdf integrates
+# to 1 with mean <dtau> and rms (3pi/8)^0.5 <dtau>; G.652.D eq. (6-3) gives 13.3/18.6 at 1550 nm and 17.2/23.7 at 1625 nm;
+# 400G-FR4 TDECQ formula gives -11.87 ps/nm at 1264.5 nm and +6.69 ps/nm at 1337.5 nm.
+summary: {checked: 99, match: 91, mismatch: 0, partial: 8, unreachable: 0}
+results:
+  # ------------------------------------------------------------------ G.652 (08/2024)
+  - id: ch01.att.g652d_max_1310_1625
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) clause 8, Table 2, cable attributes"
+    evidence: "Attenuation coefficient | Maximum from 1310 | nm to 1625 | nm 0.40 | dB/km"
+    action: "none"
+  - id: ch01.att.g652d_max_1383_after_h2
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2, cable attributes, Note 3"
+    evidence: "Maximum at 1383 | nm 3 nm after | 0.40 | dB/km | hydrogen ageing (Note 3)"
+    action: "none (quote is a reconstruction of a split table row; acceptable)"
+  - id: ch01.att.g652d_max_1530_1565
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2, cable attributes"
+    evidence: "Maximum at 1530-1565 | nm | 0.30 | dB/km"
+    action: "none"
+  - id: ch01.att.g652d_rayleigh_extension_1260
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2, NOTE 2"
+    evidence: "This wavelength region can be extended to 1260 nm ... by adding 0.07 dB/km induced Rayleigh scattering loss to the attenuation value at 1310"
+    action: "none"
+  - id: ch01.fiber.g652d_mfd_1310
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2, fibre attributes"
+    evidence: "Range of nominal values | | 8.6-9.2 | μm | | Tolerance | | 0.4 | μm"
+    action: "none"
+  - id: ch01.fiber.g652d_cable_cutoff
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2; clause 6.5"
+    evidence: "Cable cut-off wavelength | Maximum | | 1260 | nm"
+    action: "none"
+  - id: ch01.fiber.g652d_macrobend_30mm
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2"
+    evidence: "Macrobending loss | Radius | | 30 | mm | ... Number of turns | | 100 | ... Maximum at 1625 | nm | 0.1 | dB"
+    action: "none"
+  - id: ch01.att.g652_link_typ_cband
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, clause I.4, Table I.1"
+    evidence: "| | 1530 | nm-1565 | nm | 0.275 dB/km |"
+    action: "none"
+  - id: ch01.att.g652_link_typ_oband
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, Table I.1"
+    evidence: "| (Note) | 1260 | nm-1360 nm | | 0.5 dB/km |"
+    action: "none"
+  # ------------------------------------------------------------------ G.654 (08/2024)
+  - id: ch01.att.g654e_max_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024, Ed. 12, latest) clause 8, Table 5"
+    evidence: "Attenuation coefficient (Note 4) | Maximum at 1550 nm | 0.23 | dB/km"
+    action: "none (2024 is the current edition; 2016/2020 equality claim in notes not re-verified)"
+  - id: ch01.att.g654e_max_1530_1612
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) Table 5 and Note 5"
+    evidence: "Maximum at 1530-1 612 nm | 0.25 | dB/km ... Typically, an attenuation coefficient of 0.35 dB/km or less from 1612 nm to 1625 nm"
+    action: "none"
+  - id: ch01.fiber.g654e_mfd_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) Table 5"
+    evidence: "Range of nominal values | 11.5-12.5 |  m | | Tolerance |  0.7"
+    action: "none"
+  - id: ch01.fiber.g654e_cable_cutoff
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) Table 5 and Note 1"
+    evidence: "between 1527.8 and 1530 nm, then the cable cut-off wavelength should be less than 1527 nm"
+    action: "none"
+  - id: ch01.cd.g654e_d1550_range
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) Table 5; clause 6.10 eq. (6-1)"
+    evidence: "D 1550max | 23 | ps/(nm × km) | | D 1550min | 17 | ps/(nm × km) | | S 1550max | 0.070 ... S 1550min | 0.050"
+    action: "none"
+  - id: ch01.pmd.g654e_pmdq
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) Table 5"
+    evidence: "PMD coefficient (Note 3) | M | 20 | cables | | Q | 0.01 | % | | Maximum PMD Q | 0.20 | ps/"
+    action: "none"
+  - id: ch01.fiber.g654e_macrobend
+    status: PARTIAL
+    found_value: "0.1 dB (value correct)"
+    found_locator: "G.654 (08/2024) Table 5, row 'Macrobending loss'"
+    evidence: "Macrobending loss | Radius | 30 | mm | | Number of turns | 100 | | | Maximum at 1625 nm | 0.1 | dB"
+    action: "Replace quote with the Table 5 row above; the current quote (clause 8 prose) does not contain the value 0.1 dB, violating hard rule 2."
+  - id: ch01.fact.g654e_purpose
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) clause 8, paragraph introducing Table 5"
+    evidence: "for deployment as terrestrial cables with improved OSNR characteristics to support higher bit-rate coherent transmission, e.g., 100 Gbit/s systems."
+    action: "none"
+  - id: ch01.att.g654d_max_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.654 (08/2024) Table 4"
+    evidence: "Attenuation coefficient (Note 1) | Maximum at 1550 nm | 0.20 | dB/km"
+    action: "none (Table 4 also confirms MFD 11.5-15.0 um, D1550max 23, macrobend 2.0 dB at 1625 nm)"
+  - id: ch01.fiber.g654e_aeff_not_specified
+    status: MATCH
+    found_value: ""
+    found_locator: "ACOME/Sumitomo white paper, Fig. 8 table and footnote"
+    evidence: "** Typ. 110-125 ... **Typical value. Aeff is not specified in ITU-T Recommendations."
+    action: "Source record: white paper cites FY ended March 2024 and 2024 statistics, so set acome_g654e_whitepaper year to 2025 (approx.) instead of null."
+  # ------------------------------------------------------------------ G.657 (08/2024)
+  - id: ch01.bend.g657_design_radii
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) clause 1 Scope"
+    evidence: "Subcategory ITU-T G.657.A1 fibres are appropriate for a minimum design radius of 10 mm. Subcategory ITU-T G.657.A2 fibres are appropriate for ... 7.5 mm."
+    action: "none (B3 5 mm also confirmed; 2024 edition merged B2 into A2, so only A1, A2, B3 exist)"
+  - id: ch01.bend.g657a1_10mm_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 1, uncabled fibre macrobending loss"
+    evidence: "Radius | 15 | 10 15 | 10 7.5 | mm ... Number of turns | 10 | 1 10 | 1 1 ... Max. at 1550 | nm 0.25 | 0.75 0.03 | 0.1 0.5 | dB"
+    action: "none. Column interleaving checked: the radius, turns, 1550 and 1625 rows share the same cell split (A1 15/10, A1 10/1, A2 15/10, A2 10/1, A2 7.5/1), so mapping A1 10 mm = 0.75 dB is consistent."
+  - id: ch01.bend.g657a1_10mm_1625
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 1"
+    evidence: "Max. at 1625 | nm 1.0 | 1.5 0.1 | 0.2 1.0 | dB"
+    action: "none"
+  - id: ch01.bend.g657a2_7p5mm_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 1"
+    evidence: "Max. at 1550 | nm 0.25 | 0.75 0.03 | 0.1 0.5 | dB"
+    action: "none"
+  - id: ch01.bend.g657a2_7p5mm_1625
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 1"
+    evidence: "Max. at 1625 | nm 1.0 | 1.5 0.1 | 0.2 1.0 | dB"
+    action: "none"
+  - id: ch01.bend.g657b3_5mm_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 2 (G.657.B3)"
+    evidence: "Radius | 10 | 7.5 | 5 | mm ... Max. at 1550 | nm 0.03 | 0.08 | 0.15 | dB"
+    action: "none"
+  - id: ch01.bend.g657b3_5mm_1625
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 2"
+    evidence: "Max. at 1625 | nm 0.1 | 0.25 | 0.45 | dB"
+    action: "none"
+  - id: ch01.pmd.g657b3_pmdq
+    status: MATCH
+    found_value: ""
+    found_locator: "G.657 (08/2024) Table 2"
+    evidence: "PMD coefficient | Q | | | 0.01 | % | | Maximum PMDQ | | | 0.50 | ½ ps/km"
+    action: "none (lambda0 1250-1350 nm and S0max 0.11 also confirmed)"
+  # ------------------------------------------------------------------ Vendor datasheets
+  - id: ch01.att.smf28ultra_max_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1424 (issued July 2025, supersedes Feb 2024), Maximum Attenuation table"
+    evidence: "| 1550 | | | ≤ 0.18 | | 1625 | | | ≤ 0.20 |"
+    action: "none"
+  - id: ch01.att.smf28ultra_max_1310
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1424 (July 2025)"
+    evidence: "| 1310 | | | ≤ 0.32 |"
+    action: "none"
+  - id: ch01.fiber.smf28ultra_group_index_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1424, Performance Characterizations"
+    evidence: "Effective Group Index of Refraction (neff) | 1310 nm: 1.4676 1550 nm: 1.4682"
+    action: "none"
+  - id: ch01.cd.smf28ultra_d1550_max
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1424, Dispersion table"
+    evidence: "| | 1550 | ≤ 18 | | | 1625 | ≤ 23.7 | Zero Dispersion Wavelength (λ0): 1304 nm ≤ λ0 ≤ 1324 nm"
+    action: "none"
+  - id: ch01.pmd.smf28ultra_ldv
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1424, PMD table and footnote"
+    evidence: "PMD Link Design Value | | ≤ 0.04* ... Complies with ITU-T G.650-2 Appendix IV, (m = 20, Q = 0.01%)"
+    action: "none"
+  - id: ch01.att.vascade_ex2000_nominal_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1440 (issued March 2023, supersedes Jan 2022), introductory paragraph; max 0.16 in table"
+    evidence: "combines ultra-low attenuation (0.149 dB/km nominal) with large effective area (115 µm2 nominal)"
+    action: "none. Edition check: PI1440 Jan 2022 (secondary copy, Sekorm) said '≤0.150 dB/km typical'; March 2023 is the newest PI1440 found and Corning's current Fiber Selection Guide also lists 0.149 dB/km nominal."
+  - id: ch01.att.vascade_ex2000_typ_pi1445
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1445 (issued March 2020), Typical Performance Values"
+    evidence: "Attenuation at 0.154 0.152 0.198 0.182 1550 nm (dB/km)* ... Expected reduction of ~0.003 dB/km in loose tube cable."
+    action: "none (keep as historical; prefer PI1440 2023 for current product)"
+  - id: ch01.att.vascade_ex3000_typ
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1445 (March 2020), EX3000 column"
+    evidence: "Effective Area at 153 115 65 100 1550 nm (µm2) PMDQ (ps/√km) 0.02 0.02 0.02 0.02"
+    action: "none"
+  - id: ch01.att.zplus150_ull_typ
+    status: MATCH
+    found_value: ""
+    found_locator: "Sumitomo TR-23164A (May 2023), header bullet and Optical Characteristics"
+    evidence: "World's lowest attenuation of 0.144 dB/km or 0.150 dB/km, and very large effective area of 150 µm 2 typical"
+    action: "none (individual max LL 0.158 / ULL 0.152, Aeff 150±15, D ≤23, λcc ≤1530 confirmed; 'G.654.D compliant' is not printed in the sheet, so drop or source it)"
+  - id: ch01.att.zplus130_ull_typ
+    status: MATCH
+    found_value: ""
+    found_locator: "Sumitomo TR-23163B (Jan. 2026), header bullet"
+    evidence: "Ultra-low attenuation of 0.147 dB/km or 0.152 dB/km, and large effective area of 130 µm 2 typical"
+    action: "none"
+  - id: ch01.att.zplus_ull_typ
+    status: MATCH
+    found_value: ""
+    found_locator: "Sumitomo TR-23162A (May 2023), header bullet"
+    evidence: "Ultra-low attenuation of 0.148 dB/km and large effective area of 112 µm 2 typical"
+    action: "none"
+  - id: ch01.att.sumitomo_pureadvance125_typ
+    status: PARTIAL
+    found_value: "0.156 dB/km typ, ≤0.16 max (value correct)"
+    found_locator: "ACOME/Sumitomo white paper, text before Fig. 9 'Product specification comparison between G.652.D and G.654.E' (the comparison table is Fig. 9, not 'after Fig. 8')"
+    evidence: "these fibres deliver ultra-low attenuation of 0.16dB/km or less (typically 0.156dB/km) and feature large effective areas (Aeff) of up to 125µm²"
+    action: "Change locator to 'Fig. 9 (PureAdvance-125 vs PureBand comparison table) and preceding paragraph'. Values (cut-off ≤1520 nm, MFD typ 12.5 um, PureBand typ 0.185 dB/km) confirmed in Fig. 9."
+  - id: ch01.att.yofc_a130
+    status: MATCH
+    found_value: ""
+    found_locator: "YOFC Aug 2020 presentation, section 02 parameter table"
+    evidence: "有效面积@1550nm μm² 110-130 130 80 衰减@1550nm dB/km ≤0.23 (成缆后) ≤0.17 ≤0.20"
+    action: "none"
+  - id: ch01.att.yofc_ct_shanghai_guangzhou
+    status: MATCH
+    found_value: ""
+    found_locator: "YOFC Aug 2020 presentation, section 03 project cases"
+    evidence: "2019年，中国电信上海-广州一干 部署超低衰减G.654.E光纤干线线 路 ... 全G.654.E部署，实际线路最长 2000Km ... 衰减≤0.174dB/km, 有效面积 130μm 2"
+    action: "none. Note: ZTE Technologies 2024 dates the completed Shanghai-Guangzhou link to 2021 with 1,970 km; mention the date/length discrepancy if both are cited."
+  - id: ch01.fact.zte_g654e_a130_backbone
+    status: MATCH
+    found_value: ""
+    found_locator: "ZTE Technologies 2024 issue 6 (released 2024-11-14), section 'Advantages of G.654.E Fiber'"
+    evidence: "The A110 and A130 fibers were used in China's backbone networks from 2015 to 2018. After 2018, only the A130 fiber was used for building backbone networks."
+    action: "Source record zte_technologies_g654e_2024: authors are Nguyen Duc Tho, Nguyen Thanh Hai, Nguyen Ba Voc (Viettel), not 'ZTE Corporation'; venue ZTE Technologies is correct."
+  - id: ch01.att.zte_g654e_vs_g652d_80km
+    status: PARTIAL
+    found_value: "1.6 dB (value correct)"
+    found_locator: "ZTE Technologies 2024 issue 6, section 'Advantages of G.654.E Fiber'"
+    evidence: "The optical loss of G.654E fiber is about 1.6 dB lower than that of G.652D fiber over an 80 km fiber span."
+    action: "Make quote verbatim: source writes 'G.654E' (no dot) in this sentence. Also fix source authors (Viettel authors, see previous item)."
+  # ------------------------------------------------------------------ Loss physics (Kanamori, Sakr)
+  - id: ch01.phys.oh_overtone_1380
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori, IEICE Trans. Commun. E104-B(2) 2021, section 'Initiatives of Silica Optical Fiber'"
+    evidence: "the fundamental vibration of OH occurs at a wavelength of 2.7 µm, and its first overtone appears at 1.38 µm."
+    action: "none (Malitson 1965 p.1205 cross-check also confirmed: OH band 2.7 um with weak overtones at 2.2 and 1.4 um)"
+  - id: ch01.phys.rayleigh_coeff_bulk_silica
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, section 'Evaluation of Tf and Rayleigh Scattering'"
+    evidence: "For bulk silica glasses, Rayleigh scattering coefficient A in Eq. ( 1 ) is reported to be 0.6 dB/km•µm 4 [52]"
+    action: "none"
+  - id: ch01.phys.rayleigh_coeff_fiber
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, same section; Fig. 4 example A = 0.93"
+    evidence: "On the other hand, A of optical fibers are 0.8 to 0.9 dB/km•µm 4 , as shown in Fig. 4 and Fig. 7 ."
+    action: "none (internal inconsistency with Fig. 4 example A = 0.93 dB/km·um^4 confirmed)"
+  - id: ch01.phys.rayleigh_coeff_psc_record
+    status: MATCH
+    found_value: ""
+    found_locator: "Sakr et al., Nat. Commun. 11, 6030 (2020), Results, discussion of Fig. 3"
+    evidence: "Their Rayleigh scattering coefficient of ~0.75 dB km −1 µm −4 is a result of 'cold draws' aimed at reducing the fictive temperature"
+    action: "none"
+  - id: ch01.phys.rayleigh_coeff_gedoped
+    status: MATCH
+    found_value: ""
+    found_locator: "Sakr et al. 2020, Results, discussion of Fig. 3"
+    evidence: "has a Rayleigh scattering coefficient of 1 dB km −1 µm −4, which is compatible with the loss experienced by high volume, fast draw speed"
+    action: "none"
+  - id: ch01.phys.ir_absorption_1550
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, section 'Formulation of Optical Fiber Loss Factors'"
+    evidence: "In the case of SiO 2 glass [28] , the effect of IR absorption at a wavelength of 1.55 µm is about 0.01 dB/km."
+    action: "none"
+  - id: ch01.phys.rayleigh_fraction_of_loss
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, first sentence of section 'Evaluation of Tf and Rayleigh Scattering'"
+    evidence: "it is necessary to reduce Rayleigh scattering loss, which accounts for 80% or more of the total loss"
+    action: "none"
+  - id: ch01.phys.fictive_temp_fiber
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, section 'Heat Treatment'"
+    evidence: "They found that its T f was 1600 • C as drawn state, and that it was reduced to 1400 • C by heating the optical fiber piece."
+    action: "none"
+  - id: ch01.phys.psc_record_1986
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, section 5 'Pure-Silica-Core Fiber'"
+    evidence: "With a pure-silica-core SM fiber, Yokota et al. demonstrated a record-low loss of 0.154 dB/km achieved at a wavelength of 1.55 µm"
+    action: "none"
+  # ------------------------------------------------------------------ Records
+  - id: ch01.rec.makovejs_ex3000_2016
+    status: MATCH
+    found_value: ""
+    found_locator: "Makovejs et al., JLT 34(1) 2016, Section II and Table II(A)"
+    evidence: "The attenuation at 1550 nm was measured to be 0.1467 dB/km, and the lowest attenuation value was 0.1460 dB/km at 1560 nm."
+    action: "Source record makovejs_jlt_2016: add doi 10.1109/JLT.2015.2492821 (printed on p.1 of the PDF)."
+  - id: ch01.rec.tamura_2018_1560
+    status: MATCH
+    found_value: ""
+    found_locator: "Tamura et al., JLT 36(1):44-49 (2018), abstract"
+    evidence: "We achieved the lowest-ever transmission losses of 0.1419 dB/km at 1560 nm wavelength and 0.1424 dB/km at 1550 nm in a Ge-free silica-core optical fiber."
+    action: "none"
+  - id: ch01.rec.sato_ofc2024_1566
+    status: PARTIAL
+    found_value: "0.1397 dB/km at 1566 nm, 0.1406 at 1550 nm (value correct)"
+    found_locator: "OFC 2024 Tu2E.1 abstract; full paper: Sato et al., JLT 43(4):1837 (2025), abstract"
+    evidence: "We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm on a silica-core single-mode fiber."
+    action: "The OFC abstract says only 'Ge-free silica-core fiber'; the 'single-mode' condition is stated in the JLT 2025 full paper. Add/replace source with S. Sato, Y. Kawaguchi, H. Sakuma, T. Haruna, T. Hasegawa, 'Silica-Core Single-Mode Fiber With Lowest Loss of 0.1397 dB/km', J. Lightwave Technol. 43(4), 1837 (2025), doi:10.1109/JLT.2025.3527933. Note: Petrovich et al. 2025 mis-cite this as '0.1397 dB/km at 1,550 nm' and '0.1396' in their intro; do not propagate."
+  - id: ch01.rec.khrapko_ptl2024_qsmf
+    status: MATCH
+    found_value: ""
+    found_locator: "Khrapko et al., IEEE PTL 36(8):539-542 (2024), abstract and results"
+    evidence: "We report a quasi single-mode fiber setting an absolute low attenuation record of 0.1400 dB/km at 1560 nm or 0.1407 at 1550 nm."
+    action: "Source record: add volume/pages 36(8), 539-542. Half-length 0.1395 dB/km and 24 km reel confirmed. Framing of Sato (SMF, 0.1397 @1566) vs Khrapko (QSMF, 0.1400 @1560; 0.1395 on half lengths) as competing records is correct; neither superseded by a 2025-2026 solid-fibre result found."
+  - id: ch01.phys.khrapko_projected_limit
+    status: MATCH
+    found_value: ""
+    found_locator: "Khrapko et al. PTL 2024, results, discussion of Table I"
+    evidence: "if the overlap of the LP01 mode with fluorine is set to 0, the minimum attenuation is projected to be 0.1325 dB/km."
+    action: "none"
+  - id: ch01.rec.petrovich_hcf_2025
+    status: MATCH
+    found_value: ""
+    found_locator: "Petrovich et al., Nat. Photon. (2025), abstract and Results (HCF2, 15 km)"
+    evidence: "with a measured loss of 0.091 dB km −1 at 1,550 nm that remains below 0.2 dB km −1 over a window of 66 THz."
+    action: "none (0.128 dB/km at 1310 nm and <0.1 dB/km 1481-1625 nm confirmed). Notes: an Author Correction was published 17 Oct 2025 (doi 10.1038/s41566-025-01803-0), not checked for numeric changes; the paper says '45%' faster in the abstract but '30% reduced latency' in the conclusion, so quote whichever is used verbatim."
+  # ------------------------------------------------------------------ 1.2 CD
+  - id: ch01.cd.g652d_lambda0_range
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2"
+    evidence: "Chromatic dispersion | parameter λ0min | | 1 300 | nm | 3-term Sellmeier fitting | λ0max | | 1 324 | nm"
+    action: "none"
+  - id: ch01.cd.g652d_s0_range
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2; clause 6.10"
+    evidence: "S0min | | 0.073 | 2 ps/(nm × km) | | S0max | | 0.092 | 2 ps/(nm × km)"
+    action: "none"
+  - id: ch01.cd.g652d_d1550_range
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2"
+    evidence: "Linear fitting | Minimum at 1550 | nm | 13.3 | ps/(nm × km) ... Maximum at 1550 | nm | 18.6"
+    action: "none"
+  - id: ch01.cd.g652d_d1625_range
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2"
+    evidence: "Minimum at 1625 | nm | 17.2 | ps/(nm × km) | | Maximum at 1625 | nm | 23.7"
+    action: "none"
+  - id: ch01.cd.g652_link_typ_d1550
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, Table I.1; NOTE under eq. (I-2)"
+    evidence: "Chromatic dispersion parameter | | D1550 | 17 ps/(nm × km) ... S1550 | 0.056 ps/(nm | × km)"
+    action: "none"
+  - id: ch01.cd.g652_oband_link_dmax_m1
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, clause I.6.2, Table I.3, upper-boundary block, M = 1, Q = 1e-4 column"
+    evidence: "| 1337.5 | 3.24 | 3.01 | 2.77 | 2.79 | 2.55 | 2.44 | 2.54 | 2.42 |"
+    action: "none (column order checked: M=1 Q=1e-4 is the most extreme value in the row, as expected)"
+  - id: ch01.cd.g652_oband_link_dmin_m1
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table I.3, lower-boundary block, M = 1, Q = 1e-4"
+    evidence: "| 1264.5 | −5.87 | −5.80 | −5.63 | −5.51 | −5.44 | −5.35 | −5.39 | −5.34 |"
+    action: "none"
+  - id: ch01.cd.malitson_n_1529nm
+    status: MATCH
+    found_value: ""
+    found_locator: "Malitson, JOSA 55(10):1205-1209 (1965), Table I p.1206, 43rd row (Hg 1.52952 um)"
+    evidence: "1.52952 (Hg) ... computed index 1.444268"
+    action: "none (Table I read directly; independent Sellmeier evaluation gives 1.4442681)"
+  - id: ch01.cd.fr4_grid
+    status: MATCH
+    found_value: ""
+    found_locator: "100G Lambda MSA 400G-FR4 Rev 2.0 (2018-09-18), Table 2-1"
+    evidence: "| L0 | 1271 nm | 1264.5 to 1277.5 nm | | L1 | 1291 nm | 1284.5 to 1297.5 nm |"
+    action: "none"
+  - id: ch01.cd.fr4_channel_cd_max
+    status: MATCH
+    found_value: ""
+    found_locator: "400G-FR4 MSA Rev 2.0, Table 4-1"
+    evidence: "| b Positive dispersion (max) | 6.7 | ps/nm |"
+    action: "Value correct for the MSA. Add a companion record for IEEE Std 802.3cu-2021 Clause 151 400GBASE-FR4 (Table 151-13), which uses S0max 0.092 and gives +6.6 ps/nm (P802.3cu D1.0 comments #1-2, accepted; Lewis, ITU-T workshop Jan 2020). IEEE normative text itself is paywalled; record as med confidence."
+  - id: ch01.cd.fr4_channel_cd_min
+    status: MATCH
+    found_value: ""
+    found_locator: "400G-FR4 MSA Rev 2.0, Table 4-1"
+    evidence: "| b Negative dispersion (min) | -11.9 | ps/nm |"
+    action: "Value correct for the MSA. IEEE 802.3cu 400GBASE-FR4 uses -11.7 ps/nm (S0max 0.092); add as a separate record and do not mix the two in prose."
+  - id: ch01.cd.fr4_fiber_s0max
+    status: PARTIAL
+    found_value: "0.093 ps/(nm^2 km) in the MSA (value correct)"
+    found_locator: "400G-FR4 MSA Rev 2.0, Table 5-1"
+    evidence: "| Dispersion slope (max) (S0) | | 0.093 | ps/nm | 2km |"
+    action: "Correct the note: IEEE 802.3cu changed S0 in Table 151-14 from 0.093 to 0.092 (P802.3cu D1.0 comment #1, accepted: 'Due to S0 changing in Table 151-14 from 0.093 to 0.092'), so 0.093 is the legacy MSA/802.3bs value, not the current IEEE 400GBASE-FR4 value."
+  - id: ch01.cd.fr4_fiber_att_max
+    status: MATCH
+    found_value: ""
+    found_locator: "400G-FR4 MSA Rev 2.0, Table 5-1 and footnote a"
+    evidence: "Cabled optical fiber attenuation (max) | | a 0.5 | | dB/km ... provided for Outside Plant cable as defined in ANSI/TIA 568- C.3."
+    action: "none"
+  - id: ch01.cd.lr4_10_channel_cd
+    status: MATCH
+    found_value: ""
+    found_locator: "100G Lambda MSA 400G-LR4-10 Rev 1.0 (2020-09-15), Table 4-1"
+    evidence: "| b Positive dispersion (max) | 33.1 | ps/nm | | b Negative dispersion (min) | -58.7 | ps/nm |"
+    action: "none (IL 6.3 dB, DGD_max 5 ps, 0.47 dB/km, S0max 0.092 confirmed)"
+  # ------------------------------------------------------------------ 1.3 PMD
+  - id: ch01.pmd.g652d_pmdq
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Table 2; clause 7.2"
+    evidence: "PMD coefficient | M | | 20 | cables | (Note 4, | 5) Q | | 0.01 | % | | Maximum PMDQ | | 0.20"
+    action: "none"
+  - id: ch01.pmd.pmdq_definition
+    status: MATCH
+    found_value: ""
+    found_locator: "G.650.2 (08/2015) clause 3.1.7, eq. (3-25)"
+    evidence: "If Q = 10 –4, there is 99.99% confidence that the actual PMD coefficient of M concatenated cables will be less than or equal to PMDQ."
+    action: "none (08/2015 is still the edition referenced as current by G.652/G.654/G.657 (08/2024))"
+  - id: ch01.pmd.dgd_maxwellian_g650_2
+    status: MATCH
+    found_value: ""
+    found_locator: "G.650.2 (08/2015) clauses 3.1.3, 3.1.4, eq. (3-3), NOTE 3"
+    evidence: "For mode-coupled fibres, the distribution is usually Maxwellian."
+    action: "none"
+  - id: ch01.pmd.dgd_sqrt_length
+    status: MATCH
+    found_value: ""
+    found_locator: "Gordon and Kogelnik, PNAS 97(9):4541-4550 (2000), section 5 'PMD Vectors'"
+    evidence: "Typical mean values of the DGD are 1 to 50 ps for a 500-km long fiber, depending on fiber type."
+    action: "none"
+  - id: ch01.pmd.g652_dgd_table_020
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, clause I.4, Table I.2 and NOTE"
+    evidence: "| | 3000 | | 19.0 | 10 Gbit/s | | | 0.20 | ... | 80 | | 7.0 | 40 Gbit/s |"
+    action: "none (same table in G.654 (08/2024) Table I.3 confirmed)"
+  - id: ch01.pmd.g652_pmdq_vs_m
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, clause I.6.3, Table I.6"
+    evidence: "| 4 | 1.32 | 0.59 | | 10 | 1.13 | 0.80 | | 20 | 1.00 | 1.00 | | 30 | 0.96 | 1.17 |"
+    action: "none"
+  - id: ch01.pmd.g959_dgd_03_bit
+    status: MATCH
+    found_value: ""
+    found_locator: "G.959.1 (2024) Amd. 2 (05/2025), clause 8.2.4.5"
+    evidence: "for most application codes, the transmitter and receiver combination is required to tolerate an actual DGD of 0.3 bit period with a maximum sensitivity degradation of approximately 1 dB"
+    action: "Minor: source says 'most application codes', not specifically NRZ; drop 'NRZ' from conditions.applies_to or justify it."
+  - id: ch01.pmd.g959_ratio_3p0_prob
+    status: MATCH
+    found_value: ""
+    found_locator: "G.959.1 (2024) Amd. 2 (05/2025), clause 8.2.3.7, Table 8-3"
+    evidence: "Ratio of maximum to mean | | Probability of exceeding maximum | | 3.0 | | | −5 4.2 × 10"
+    action: "Fix note: Table 8-3 of the 2025 text also lists ratio 4.0 -> 7.4e-9 (not only the 2009 edition). Values agree with an independent Maxwellian calculation (4.20e-5)."
+  - id: ch01.pmd.g959_ratio_3p5_prob
+    status: MATCH
+    found_value: ""
+    found_locator: "G.959.1 (2024) Amd. 2, Table 8-3"
+    evidence: "| | 3.5 | | | −7 7.7 × 10 |"
+    action: "none (independent Maxwellian calculation 7.74e-7)"
+  - id: ch01.pmd.fr4_dgd_max
+    status: MATCH
+    found_value: ""
+    found_locator: "400G-FR4 MSA Rev 2.0, Table 4-1 and footnote c"
+    evidence: "| c DGD_max | 3.0 | ps |"
+    action: "Value correct for the MSA. IEEE 802.3cu 400GBASE-FR4 (Table 151-13) uses DGD_max 2.3 ps (2.28 ps; PMDQ 0.2, PMDmax 0.43 ps/sqrt(km), 2 km, factor 3.75 per IEEE 802.3 contributions lewis_3cu_02_0719 / kuschnerov_3df_01_2211; Lewis ITU-T workshop Jan 2020 table). Add as separate IEEE record; the TDECQ test channel max mean DGD 0.8 ps is confirmed."
+  - id: ch01.pmd.vascade_ex2000_ldv_iec
+    status: MATCH
+    found_value: ""
+    found_locator: "Corning PI1440 (March 2023), PMD table and footnote"
+    evidence: "PMD Link Design Value | | ≤ 0.08* ... Complies with IEC 60794-3 (m = 24, Q = 0.1%)"
+    action: "none"
+  # ================================================================== EQUATIONS
+  - id: ch01.eq.loss_decomposition
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, Eq. (1)"
+    evidence: "α(λ) = A/λ 4 + B + C(λ) + D(λ) +E 1 exp (E 2 /λ) + F 1 exp (-F 2 /λ) (1)"
+    action: "none (signs of exponents match: UV tail +E2/λ, IR tail -F2/λ)"
+  - id: ch01.eq.rayleigh_density_fluct
+    status: MATCH
+    found_value: ""
+    found_locator: "Kanamori 2021, Eqs. (2)-(3)"
+    evidence: "A d /λ 4 = 8π 3 3λ 4 n 8 p 2 kT f β T f ( 3 ) where n is the refractive index, p is the photo-elastic constant"
+    action: "none (factor 8π^3/(3λ^4), n^8 p^2 k T_f β_Tf confirmed)"
+  - id: ch01.eq.link_attenuation
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, clause I.1, eq. (I-1)"
+    evidence: "A L x y = α +αs +αc (I-1) ... The above equation does not include the loss of equipment connectors."
+    action: "none"
+  - id: ch01.eq.malitson_sellmeier
+    status: MATCH
+    found_value: ""
+    found_locator: "Malitson JOSA 55(10) 1965, abstract (p.1205) and Eq. (1) (p.1207)"
+    evidence: "n2-1=0.6961663λ2/(λ2-(0.0684043)2)+0.4079426λ2/(λ2-(0.1162414)2)+0.8974794λ2/(λ2-(9.896161)2) ... absolute residual of 10.5×10−6"
+    action: "none"
+  - id: ch01.eq.d_from_beta2
+    status: MATCH
+    found_value: ""
+    found_locator: "Gharbi et al., IEEE Photonics J. 2019, Eq. (11)"
+    evidence: "D = - 2πc λ2 β2 ( 11 ) where β 2 denotes the group velocity dispersion(GVD) parameter."
+    action: "Formula and sign correct. Source is a GFDM simulation paper; for a textbook relation prefer G. P. Agrawal, Fiber-Optic Communication Systems (Wiley) Sec. 2.3 (see tier_a_replacements)."
+  - id: ch01.eq.slope_from_beta
+    status: PARTIAL
+    found_value: "formula correct"
+    found_locator: "Vijayan licentiate thesis 2019, Eq. (2.6) (and D in Eq. (2.5))"
+    evidence: "S = ( 2πc λ2 ) 2 β3 + 4πc λ3 β2, (2.6)"
+    action: "Formula, signs and factors verified. Tier: thesis only; replace with Agrawal, Fiber-Optic Communication Systems, Sec. 2.3.3 (dispersion slope); formula verified verbatim in Agrawal's own course notes (2007, slide 17) but book equation number not verified."
+  - id: ch01.eq.g652_dispersion_curve
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) clause 6.10, Eq. (6-1) (G.652.B); Eqs. (6-2a)-(6-2c) G.652.D 1260-1460 nm; Appendix I Eq. (I-5)"
+    evidence: "The chromatic dispersion coefficient limit for any wavelength, λ, is calculated with ... λ0min, ... λ0max, and ... S0max, according to: ... (6-1)"
+    action: "none (equation body garbled in crawl; form λS0/4[1-(λ0/λ)^4] is the standard G.652 form and is also used in the MSA TDECQ formula)"
+  - id: ch01.eq.g652d_boundary_1460_1625
+    status: PARTIAL
+    found_value: "formula correct"
+    found_locator: "G.652 (08/2024) clause 6.10, Eq. (6-3) (also G.657 (08/2024) Eq. (6-2))"
+    evidence: "8.625 + 0.052( − 1460) ≤ ( ) ≤ 12.472 + 0.068( − 1460) (6-3)"
+    action: "Change source_id from itu_t_g652_2016 (superseded) to itu_t_g652_2024; same equation number (6-3). Evaluation gives 13.305/18.592 at 1550 nm and 17.205/23.692 at 1625 nm, consistent with Table 2."
+  - id: ch01.eq.g652_link_dispersion
+    status: MATCH
+    found_value: ""
+    found_locator: "G.652 (08/2024) Appendix I, clause I.2, Eq. (I-2) and NOTE"
+    evidence: "DLink = LLink D1550 + S1550 (λ − 1550) [ps/nm] (I-2) NOTE – ... this equation is no longer representative for this fibre type."
+    action: "none"
+  - id: ch01.eq.fr4_tdecq_channel_cd
+    status: MATCH
+    found_value: ""
+    found_locator: "400G-FR4 MSA Rev 2.0, section 3.6, Table 3-3 and footnote a"
+    evidence: "0.0465*λ*[1-(1324/λ)4] 0.0465*λ*[1-(1300/λ)4] ... The coefficient assumes 2 km for 400G-FR4."
+    action: "none. Note: IEEE 802.3cu Table 151-12 uses 0.046 (S0 0.092) per accepted comment #1; LR4-10 MSA coefficient 0.23 confirmed."
+  - id: ch01.eq.imdd_power_fading
+    status: MATCH
+    found_value: ""
+    found_locator: "Zhu et al., Electronics 10(22) 2866 (2021), Eqs. (3)-(4)"
+    evidence: "h(f) = exp jπλ2DL f 2/c ... H1(f) = h(f) + h∗(f) = 2 cos πλ 2DL f 2/c (4)"
+    action: "none (null condition πλ²DLf²/c = (1/2+n)π confirmed in source)"
+  - id: ch01.eq.imdd_power_fading_beta2
+    status: MATCH
+    found_value: ""
+    found_locator: "Ouyang et al., JLT 37(17):4349-4358 (2019), Eq. (4), section II.B"
+    evidence: "The transfer function of CD in IM/DD systems [18] is given by H CD (f) ∝ cos(2π² β2 f² z) (4)"
+    action: "Source record: accepted manuscript is open at CORA (hdl.handle.net/10468/8255), so access can be 'open'. Consistent with Zhu Eq. (4) via D = -2πcβ2/λ² (cos is even)."
+  - id: ch01.eq.pmd_rms_mean
+    status: MATCH
+    found_value: ""
+    found_locator: "G.650.2 (08/2015) clause 3.1.4, Eqs. (3-1)-(3-3), NOTE 3"
+    evidence: "If the distribution ... may be approximated by a Maxwell distribution ... PMDAVG can be mathematically related to PMDRMS ... (3-3)"
+    action: "none ((3π/8)^1/2 = 1.0854 also reproduced numerically from the Maxwellian pdf)"
+  - id: ch01.eq.pmdq_definition
+    status: MATCH
+    found_value: ""
+    found_locator: "G.650.2 (08/2015) clause 3.1.7, Eq. (3-25)"
+    evidence: "the PMD link design value, PMDQ, is defined as the value that the link PMD coefficient, XM, exceeds with probability Q"
+    action: "none"
+  - id: ch01.eq.maxwellian_dgd_pdf
+    status: PARTIAL
+    found_value: "formula correct"
+    found_locator: "Reimer M.Sc. thesis 2007, Eq. (1.19)"
+    evidence: "pmaxwell(τ ) = 32τ 2 / (π 2τ 3 avg) exp(− 4τ 2/(πτ 2 avg)) , (1.19)"
+    action: "Formula verified (normalised, mean = <dtau>, rms = (3π/8)^1/2 <dtau>, tails reproduce G.959.1 Table 8-3). Tier B only: add tier-A support ITU-T G.650.2 (08/2015) Appendix IV.4, Eqs. (IV-3)/(IV-4), which give the Maxwellian exceedance probability as a gamma(3/2) law in 4·DGDmax²/(π·<DGD>²), i.e. the integral of this pdf; plus G.652 (08/2024) clause I.3 text ('varies randomly ... as a Maxwell distribution'). Gordon-Kogelnik PNAS 2000 does NOT contain the pdf. Foschini and Poole, JLT 9(11):1439-1456 (1991), doi:10.1109/50.97630 is the original but was not accessible (paywalled); equation locator unverified."
+  - id: ch01.eq.mean_dgd_sqrt_l
+    status: MATCH
+    found_value: ""
+    found_locator: "G.650.2 (08/2015) clause 3.1.5.1"
+    evidence: "For random mode coupling, the PMD coefficient is the PMD value (PMDAVG or PMDRMS) divided by the square root of the length (L 1/2)"
+    action: "none"
+tier_a_replacements:
+  - for: ch01.eq.maxwellian_dgd_pdf
+    citation: "ITU-T Recommendation G.650.2 (08/2015), Definitions and test methods for statistical and non-linear related attributes of single-mode fibre and cable, Appendix IV.4"
+    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.650.2-201508-I!!PDF-E&lang=s&type=items"
+    locator: "Appendix IV, clause IV.4, Eqs. (IV-3) and (IV-4) (Excel form: PJ = 1-GAMMADIST(4*PMAX*PMAX/(PI()*ZI*ZI),1.5,1,TRUE))"
+    value: "P(DGD > DGDmax) = 1 - Gamma_cdf(4 DGDmax^2 / (pi <DGD>^2); shape 3/2, scale 1), which is the tail of p(dtau) = 32 dtau^2/(pi^2 <dtau>^3) exp(-4 dtau^2/(pi <dtau>^2))"
+    note: "Tier A standard; gives the Maxwellian in integrated (tail) form, not the pdf itself. Complement with G.652 (08/2024) clause I.3 statement that link DGD varies as a single-parameter Maxwell distribution."
+  - for: ch01.eq.maxwellian_dgd_pdf
+    citation: "G. J. Foschini and C. D. Poole, 'Statistical theory of polarization dispersion in single mode fibers', J. Lightwave Technol. 9(11), 1439-1456 (1991), doi:10.1109/50.97630"
+    url: "https://doi.org/10.1109/50.97630"
+    locator: "not verified (paywalled; full text not reachable from this session)"
+    value: "Maxwellian DGD pdf (original derivation)"
+    note: "Use only after someone reads the paper and records the equation number."
+  - for: ch01.rec.sato_ofc2024_1566
+    citation: "S. Sato, Y. Kawaguchi, H. Sakuma, T. Haruna, T. Hasegawa, 'Silica-Core Single-Mode Fiber With Lowest Loss of 0.1397 dB/km', J. Lightwave Technol. 43(4), 1837- (2025), doi:10.1109/JLT.2025.3527933"
+    url: "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-43-4-1837"
+    locator: "Abstract"
+    value: "0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm on a silica-core single-mode fiber; 2 mdB/km below the 2017 record"
+    note: "Journal version of the OFC 2024 paper; supports the 'single-mode' condition that the OFC abstract does not state."
+  - for: ch01.eq.slope_from_beta
+    citation: "G. P. Agrawal, Fiber-Optic Communication Systems (Wiley; 3rd ed. 2002 / 4th ed. 2010 / 5th ed. 2021), Section 2.3 (Higher-order dispersion)"
+    url: "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119737391"
+    locator: "Sec. 2.3.3 'Higher-Order Dispersion' (equation number not verified; formula verified verbatim in Agrawal's 2007 course notes, slide 17, https://studylib.net/doc/28157377/fiber-optic-communication-systems-fourth-edition)"
+    value: "S = (2πc/λ²)² β3 + (4πc/λ³) β2; D = -(2πc/λ²) β2"
+    note: "Textbook = tier A per SCHEMA; also replaces the GFDM paper for ch01.eq.d_from_beta2. Book page/equation number must be read from the book before use."
