@@ -1,0 +1,831 @@
+sources:
+- id: qsfpdd_msa_hw_rev71_2024
+  type: standard
+  title: QSFP-DD/QSFP-DD800/QSFP-DD1600 Hardware Specification for QSFP Double Density 8X Pluggable Transceivers, Rev 7.1
+  authors: QSFP-DD MSA (ed. A. Ghiasi)
+  venue: QSFP-DD MSA
+  year: 2024
+  doi: ''
+  url: http://www.qsfp-dd.com/wp-content/uploads/2024/07/QSFP-DD-Hardware-Rev7.1.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: osfp_msa_rev52_2025
+  type: standard
+  title: Specification for OSFP Octal Small Form Factor Pluggable Modules, Rev 5.2
+  authors: OSFP MSA (ed. B. Park)
+  venue: OSFP MSA
+  year: 2025
+  doi: ''
+  url: https://osfpmsa.org/assets/pdf/OSFP_Module_Specification_Rev5_2.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: osfp_msa_rev40_2021
+  type: standard
+  title: Specification for OSFP Octal Small Form Factor Pluggable Module, Rev 4.0
+  authors: OSFP MSA
+  venue: OSFP MSA
+  year: 2021
+  doi: ''
+  url: https://osfpmsa.org/assets/pdf/OSFP_Module_Specification_Rev4_0.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: osfp_xd_msa_rev11_2024
+  type: standard
+  title: Specification for OSFP-XD, Octal Small Form Factor eXtra Dense Pluggable Module, Rev 1.1
+  authors: OSFP MSA (ed. B. Park, P. Shah)
+  venue: OSFP MSA
+  year: 2024
+  doi: ''
+  url: https://osfpmsa.org/assets/pdf/OSFP-XD_Specification_Rev1.1.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: osfp_msa_whitepaper_2022
+  type: whitepaper
+  title: The Next Generation of Pluggable Optical Module Solutions from the OSFP MSA (OSFP1600 and OSFP-XD)
+  authors: S. Kocsis, B. Park
+  venue: OSFP MSA white paper, 18 Sep 2022
+  year: 2022
+  doi: ''
+  url: https://osfpmsa.org/assets/pdf/OSFP1600_and_OSFP-XD.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ieee_sa_8023bs_2017
+  type: standard
+  title: 'IEEE 802.3bs-2017, Amendment 10: MAC Parameters, Physical Layers, and Management Parameters for 200 Gb/s and 400
+    Gb/s Operation'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE Std 802.3bs-2017 (IEEE SA standard page)
+  year: 2017
+  doi: ''
+  url: https://standards.ieee.org/ieee/802.3bs/6748/
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: ieee_sa_8023cd_2018
+  type: standard
+  title: 'IEEE 802.3cd-2018, Amendment 3: MAC Parameters for 50 Gb/s and Physical Layers for 50, 100 and 200 Gb/s Operation'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE Std 802.3cd-2018 (IEEE SA standard page)
+  year: 2018
+  doi: ''
+  url: https://standards.ieee.org/ieee/802.3cd/6754/
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: ieee_sa_8023cu_2021
+  type: standard
+  title: 'IEEE 802.3cu-2021, Amendment 11: Physical Layers for 100 Gb/s and 400 Gb/s over SMF at 100 Gb/s per Wavelength'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE Std 802.3cu-2021 (IEEE SA standard page)
+  year: 2021
+  doi: ''
+  url: https://standards.ieee.org/ieee/802.3cu/7515/
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: ieee_sa_8023ck_2022
+  type: standard
+  title: 'IEEE 802.3ck-2022, Amendment 4: Electrical Interfaces for 100, 200 and 400 Gb/s Based on 100 Gb/s Signaling'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE Std 802.3ck-2022 (IEEE SA standard page)
+  year: 2022
+  doi: ''
+  url: https://standards.ieee.org/ieee/802.3ck/7322/
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: ieee_sa_8023df_2024
+  type: standard
+  title: 'IEEE 802.3df-2024, Amendment 9: MAC Parameters for 800 Gb/s and Physical Layers for 400 Gb/s and 800 Gb/s Operation'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE Std 802.3df-2024 (IEEE SA standard page)
+  year: 2024
+  doi: 10.1109/IEEESTD.2024.10472445
+  url: https://standards.ieee.org/ieee/802.3df/11107/
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: ieee_8023df_tf_page
+  type: report
+  title: IEEE P802.3df 400 Gb/s and 800 Gb/s Ethernet Task Force home page
+  authors: IEEE 802.3 Working Group
+  venue: ieee802.org task force page
+  year: 2024
+  doi: ''
+  url: https://ieee802.org/3/df/
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ieee_p8023dj_objectives_2024
+  type: report
+  title: Adopted IEEE P802.3dj Objectives (14 Mar 2024)
+  authors: J. D'Ambrosia (Task Force chair)
+  venue: IEEE P802.3dj Task Force project document
+  year: 2024
+  doi: ''
+  url: https://www.ieee802.org/3/dj/projdoc/objectives_P802d3dj_240314.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ieee_p8023dj_keymotions_2024
+  type: report
+  title: IEEE P802.3dj Key Motions (as of 16 May 2024)
+  authors: J. D'Ambrosia
+  venue: IEEE P802.3dj Task Force project document
+  year: 2024
+  doi: ''
+  url: https://www.ieee802.org/3/dj/projdoc/KeyMotions_3dj_240516.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ieee_p8023dj_clause12_2026
+  type: report
+  title: IEEE P802.3dj Clause 12 conditional approval report (recirculation ballot results)
+  authors: D. Law (IEEE 802.3 WG chair)
+  venue: IEEE 802 LMSC report, 15 Oct 2026
+  year: 2026
+  doi: ''
+  url: https://www.ieee802.org/email/stds-802-lmsc/pdf0jWlAlkt4_.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: cheng_ieee8023dj_2401
+  type: report
+  title: Adoption of coherent baselines in P802.3dj
+  authors: W. Cheng, T. Williams, H. Wang
+  venue: IEEE P802.3dj contribution cheng_3dj_01_2401, Jan 2024
+  year: 2024
+  doi: ''
+  url: https://www.ieee802.org/3/dj/public/24_01/cheng_3dj_01_2401.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ieee_p8023dv_par_2026
+  type: report
+  title: 'P802.3dv PAR: Physical Layers for 400 Gb/s, 800 Gb/s and 1.6 Tb/s Based on 400 Gb/s/lane Signaling'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE SA PAR (approved 25 Sep 2026)
+  year: 2026
+  doi: ''
+  url: https://www.ieee802.org/3/dv/P802.3dv_PAR.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ieee_8023_400gpl_sg_2026
+  type: report
+  title: IEEE 802.3 400 Gb/s/Lane Signaling Study Group home page
+  authors: IEEE 802.3 Working Group
+  venue: ieee802.org study group page
+  year: 2026
+  doi: ''
+  url: https://www.ieee802.org/3/400GPL/index.html
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: chang_yu_ieee8023df_2211
+  type: report
+  title: Relative Cost Analysis on IM-DD vs Coherent for 800G-LR
+  authors: F. Chang, R.-C. Yu
+  venue: IEEE P802.3df contribution chang_3df_01_2211, Nov 2022
+  year: 2022
+  doi: ''
+  url: https://www.ieee802.org/3/df/public/22_11/chang_3df_01_2211.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: oif_cei224g_framework_2022
+  type: whitepaper
+  title: Next Generation CEI-224G Framework (OIF-FD-CEI-224G-01.0)
+  authors: OIF Physical and Link Layer Working Group
+  venue: OIF framework document, 7 Feb 2022
+  year: 2022
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-FD-CEI-224G-01.0.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: oif_ia_list_2026
+  type: report
+  title: OIF Implementation Agreements list (web page, crawled 2026)
+  authors: OIF
+  venue: oiforum.com
+  year: 2026
+  doi: ''
+  url: https://www.oiforum.com/technical-work/implementation-agreements-ias/
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: oif_cei_05_0_2022
+  type: standard
+  title: Common Electrical I/O (CEI) - Electrical and Jitter Interoperability agreements for 6G+ to 112G+ bps I/O, OIF-CEI-05.0
+  authors: OIF Physical and Link Layer Working Group
+  venue: OIF Implementation Agreement, 5 May 2022
+  year: 2022
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-CEI-5.0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: oif_current_work_2026
+  type: report
+  title: Current OIF Work (web page)
+  authors: OIF
+  venue: oiforum.com
+  year: 2026
+  doi: ''
+  url: https://www.oiforum.com/technical-work/current-work/
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: oif_800zr_ia_2024
+  type: standard
+  title: Implementation Agreement for 800ZR Coherent Interfaces, OIF-800ZR-01.0
+  authors: OIF (ed. K. Kota)
+  venue: OIF Implementation Agreement, 8 Oct 2024
+  year: 2024
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-800ZR-01.0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: oif_800lr_ia_2025
+  type: standard
+  title: Implementation Agreement for 800LR Coherent Interface, OIF-800LR-01.0
+  authors: OIF
+  venue: OIF Implementation Agreement, 1 Apr 2025
+  year: 2025
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-800LR-01.0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: oif_1600zr_ia_2026
+  type: standard
+  title: Implementation Agreement for 1600ZR Coherent Interfaces, OIF-1600ZR-01.0
+  authors: OIF
+  venue: OIF Implementation Agreement, 1 Sep 2026
+  year: 2026
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-1600ZR-01.0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: oif_elsfp_ia_v2_2025
+  type: standard
+  title: External Laser Small Form Factor Pluggable (ELSFP) Implementation Agreement, OIF-ELSFP-02.0
+  authors: OIF (ed. J. Bovington)
+  venue: OIF Implementation Agreement, 8 Jan 2025
+  year: 2025
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-02.0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: openzrplus_spec_rev3_2023
+  type: standard
+  title: Open ZR+ MSA Technical Specification, Rev 3.0
+  authors: OpenZR+ MSA
+  venue: OpenZR+ MSA
+  year: 2023
+  doi: ''
+  url: https://openzrplus.org/wp-content/uploads/2024/04/openzrplus_rev3p0_final2.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: openzrplus_whitepaper_2023
+  type: whitepaper
+  title: Multi-Vendor 400G Coherent Optical Transceiver Interoperability (OpenZR+ white paper rev 0.92)
+  authors: OpenZR+ MSA
+  venue: OpenZR+ MSA white paper, 19 Dec 2023
+  year: 2023
+  doi: ''
+  url: https://openzrplus.org/wp-content/uploads/2024/04/openzrplus_whitepaper_rev0_92_2023-12-19_final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: openzrplus_800g_whitepaper_2025
+  type: whitepaper
+  title: 800G OpenZR+ (MSA white paper)
+  authors: OpenZR+ MSA
+  venue: OpenZR+ MSA white paper, 28 Jul 2025
+  year: 2025
+  doi: ''
+  url: https://openzrplus.org/wp-content/uploads/2025/07/OpenZRplus_800G_whitepaper_2025-07-28-Final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: juniper_qdd400gzr_spec
+  type: datasheet
+  title: QDD-400G-ZR-M-HP optical parameters
+  authors: Juniper Networks
+  venue: Juniper Hardware Compatibility Tool
+  year: 2025
+  doi: ''
+  url: https://www.juniper.net/documentation/ke-apps/hct/optStdParams/stdHtml/QDD-400G-ZR-M-HP.html
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: juniper_jco800_zr_spec
+  type: datasheet
+  title: JCO800-QDD-ZR-M-HP hardware specifications
+  authors: Juniper Networks
+  venue: Juniper Pathfinder Hardware Compatibility Tool
+  year: 2025
+  doi: ''
+  url: https://apps.juniper.net/hct/model/JCO800-QDD-ZR-M-HP/hwspecs
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: nokia_800gzr_datasheet
+  type: datasheet
+  title: 800G ZR/ZR+ pluggable coherent modules data sheet
+  authors: Nokia
+  venue: Nokia data sheet
+  year: 2025
+  doi: ''
+  url: https://www.nokia.com/asset/i/215394/
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: vandenborne_ecoc2024_mf
+  type: report
+  title: 'The Need for Speed: IP-Optical integration with 800ZR/ZR+'
+  authors: D. van den Borne (Juniper Networks)
+  venue: ECOC 2024 Market Focus presentation, 25 Sep 2024
+  year: 2024
+  doi: ''
+  url: https://www.ecocexhibition.com/wp-content/uploads/Dirk-van-den-Borne-20240925-ECOC24-Market-Focus-The-need-for-speed-IP-optical-integration-with-800ZRZR-final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: lpo_msa_100g_dr_spec_2025
+  type: standard
+  title: 100G-DR-LPO Specification for 100 Gb/s per Lane Linear Pluggable Optics, Single-Mode (Rev 1.0, doc v1p2)
+  authors: LPO MSA (ed. K. Muth)
+  venue: LPO MSA
+  year: 2025
+  doi: ''
+  url: https://www.lpo-msa.org/files/live/sites/lpomsa/files/specs/LPO_MSA_Specification_v1p2_final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: lpo_msa_formation_2024
+  type: press
+  title: Twelve Industry Leaders Collaborate to Define Specifications for Linear Pluggable Optics
+  authors: LPO MSA
+  venue: LPO MSA press release, 21 Mar 2024
+  year: 2024
+  doi: ''
+  url: https://www.lpo-msa.org/news/twelve-industry-leaders-collaborate-to-define-specifications-for-linea
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: lpo_msa_spec_release_2025
+  type: press
+  title: LPO MSA Announces Release of Specification for Linear Pluggable Optical Modules
+  authors: LPO MSA
+  venue: LPO MSA press release, 25 Mar 2025
+  year: 2025
+  doi: ''
+  url: https://www.lpo-msa.org/news/lpo-msa-announces-release-of-specification-for-linear-pluggable-optica
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: bechtolsheim_ofc2023_ocp_panel
+  type: report
+  title: 'Optics in Future AI Systems: Interconnects, Switching and Processing (OCP panel slides; A. Bechtolsheim section)'
+  authors: A. Bechtolsheim, L. Nguyen, H. Arabzadeh, U. Poosarla, V. Kozlov
+  venue: OFC 2023 OCP panel, Theater II, 7 Mar 2023
+  year: 2023
+  doi: ''
+  url: https://146a55aca6f00848c565-a7635525d40ac1c70300198708936b4e.ssl.cf1.rackcdn.com/images/6e7080eac5a5513687a99dbc590cadaf725f45e1.pdf
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: eoptolink_oif_lpo_ecoc2023
+  type: whitepaper
+  title: Linear Drive Pluggable Optics (OIF PLL demo note)
+  authors: Eoptolink
+  venue: OIF interoperability demo material, ECOC 2023
+  year: 2023
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF_PLL_Demo_Eoptolink_ECOC2023.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: lightcounting_lpo_note_2023
+  type: report
+  title: Progress in Linear Drive Pluggable Optics (research note on LPO webinar)
+  authors: V. Kozlov (LightCounting)
+  venue: LightCounting research note, 29 Sep 2023
+  year: 2023
+  doi: ''
+  url: https://www.lightcounting.com/resource/42/resourceFile/Research%20note%20on%20LPO%20webinar%20092923.pdf
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: broadcom_bailly_press_2024
+  type: press
+  title: Broadcom Delivers Industry's First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems
+  authors: Broadcom Inc.
+  venue: Broadcom press release, 14 Mar 2024
+  year: 2024
+  doi: ''
+  url: https://investors.broadcom.com/news-releases/news-release-details/broadcom-delivers-industrys-first-512-tbps-co-packaged-optics
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: broadcom_th5_bailly_slides_2023
+  type: report
+  title: TH5 51.2T Bailly CPO (Co-Packaged Optics)
+  authors: Broadcom Optical Systems Division
+  venue: Broadcom product presentation, Mar 2023
+  year: 2023
+  doi: ''
+  url: https://docs.broadcom.com/doc/th5-51.2t-bailly-cpo
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: broadcom_meta_cpo_press_2025
+  type: press
+  title: Broadcom Showcases Industry-Leading Quality and Reliability of Co-Packaged Optics
+  authors: Broadcom Inc.
+  venue: Broadcom press release, 1 Oct 2025
+  year: 2025
+  doi: ''
+  url: https://investors.broadcom.com/news-releases/news-release-details/broadcom-showcases-industry-leading-quality-and-reliability-co
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: amiralizadeh_ecoc_2025
+  type: conference
+  title: Co-packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches
+  authors: S. Amiralizadeh et al. (Meta)
+  venue: ECOC 2025
+  year: 2025
+  doi: ''
+  url: https://ocp-all.groups.io/g/OCP-SROI/attachment/371/0/ECOC_2025_CPO_Final.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: convergedigest_alduino_2025
+  type: press
+  title: 'PECC Summit: Meta''s Drew Alduino on AI Networking Reliability Walls'
+  authors: J. Carroll
+  venue: Converge Digest, 24 Oct 2025
+  year: 2025
+  doi: ''
+  url: https://convergedigest.com/pecc-summit-metas-drew-alduino-on-ai-networking-reliability-walls/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: nvidia_photonics_press_2025
+  type: press
+  title: NVIDIA Announces Spectrum-X Photonics, Co-Packaged Optics Networking Switches to Scale AI Factories to Millions of
+    GPUs
+  authors: NVIDIA
+  venue: NVIDIA press release, GTC, 18 Mar 2025
+  year: 2025
+  doi: ''
+  url: https://nvidianews.nvidia.com/news/nvidia-spectrum-x-co-packaged-optics-networking-switches-ai-factories
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: nvidia_cpo_blog_2025
+  type: press
+  title: Scaling AI Factories with Co-Packaged Optics for Better Power Efficiency
+  authors: A. Seyedi (NVIDIA)
+  venue: NVIDIA Technical Blog, 18 Aug 2025
+  year: 2025
+  doi: ''
+  url: https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: nvidia_siph_page_2026
+  type: press
+  title: Silicon Photonics Networking for Agentic AI (product page)
+  authors: NVIDIA
+  venue: nvidia.com product page (crawled 2026)
+  year: 2026
+  doi: ''
+  url: https://www.nvidia.com/en-us/networking/products/silicon-photonics/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: minkenberg_ietoe_2021
+  type: journal
+  title: 'Co-packaged datacenter optics: Opportunities and challenges'
+  authors: C. Minkenberg, R. Krishnaswamy, A. Zilkie, D. Nelson
+  venue: IET Optoelectronics 15(2):77-91
+  year: 2021
+  doi: 10.1049/ote2.12020
+  url: https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/ote2.12020
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: evans_jlt_2026
+  type: journal
+  title: Data Center Switch Power Consumption Comparison Between Co-Packaged Optics and Pluggable Transceivers
+  authors: A. F. Evans
+  venue: Journal of Lightwave Technology 44(16):7158
+  year: 2026
+  doi: ''
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-44-16-7158
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: nagarajan_ieee_2024
+  type: journal
+  title: Recent Advances in Low-Power Digital Signal Processing Technologies for Data Center Applications
+  authors: R. Nagarajan et al.
+  venue: IEEE journal paper, IEEE Xplore document 10526441 (venue to verify; likely J. Lightwave Technol.)
+  year: 2024
+  doi: ''
+  url: https://ieeexplore.ieee.org/document/10526441
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: broadcom_sian3_press_2025
+  type: press
+  title: Broadcom Extends 200G/lane DSP PHY Leadership for Next-Generation AI Infrastructure
+  authors: Broadcom Inc.
+  venue: Broadcom press release, 25 Mar 2025
+  year: 2025
+  doi: ''
+  url: https://investors.broadcom.com/news-releases/news-release-details/broadcom-extends-200glane-dsp-phy-leadership-next-generation-ai
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: marvell_ara_press_2024
+  type: press
+  title: Marvell Unveils Industry's First 3nm 1.6 Tbps PAM4 Interconnect Platform to Scale Accelerated Infrastructure
+  authors: Marvell Technology
+  venue: Marvell press release, 3 Dec 2024
+  year: 2024
+  doi: ''
+  url: https://www.marvell.com/company/newsroom/marvell-unveils-industrys-first-3nm-1-6tbps-pam4-interconnect-platform.html
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: nvidia_mms4x00_nm_datasheet
+  type: datasheet
+  title: MMS4X00-NM 800Gbps Twin-port OSFP 2x400Gb/s Single Mode 2xDR4 500m, Specifications
+  authors: NVIDIA
+  venue: NVIDIA networking docs
+  year: 2026
+  doi: ''
+  url: https://docs.nvidia.com/networking/display/MMS4X00NM800G500M/Specifications
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: jpc_1p6t_osfp_dr8_2026
+  type: datasheet
+  title: 1.6T OSFP-IHS 2xDR4 (DR8) 500m Transceivers, Rev 01
+  authors: 'JPC (Jess-link) '
+  venue: JPC datasheet RFD-20260129100-001, 29 Jan 2026
+  year: 2026
+  doi: ''
+  url: https://www.jpcco.com/storage/uploads/1783071807_1.6T%20OSFP-IHS%202xDR4(DR8)%20500m%20Datasheet-STD%20Rev%2001%20(K).pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: cisco_qdd400g_datasheet
+  type: datasheet
+  title: Cisco 400G QSFP-DD Cable and Transceiver Modules Data Sheet
+  authors: Cisco Systems
+  venue: Cisco data sheet c78-743172
+  year: 2024
+  doi: ''
+  url: https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/datasheet-c78-743172.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: cisco_qsfp400g_dr4_datasheet
+  type: datasheet
+  title: Cisco 400G QSFP-400G-DR4 Transceiver Modules Data Sheet
+  authors: Cisco Systems
+  venue: Cisco data sheet
+  year: 2024
+  doi: ''
+  url: https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/qsfp-400g-dr4-transceiver-modules-ds.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: cisco_800gzr_datasheet
+  type: datasheet
+  title: Cisco QSFP-DD and OSFP 800G ZR/ZR+ Coherent Optics Modules Data Sheet
+  authors: Cisco Systems
+  venue: Cisco data sheet
+  year: 2025
+  doi: ''
+  url: https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/qsfp-dd-osfp-800g-zr-zr-plus-coherent-optics.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: innolight_ar_2025
+  type: report
+  title: 中际旭创股份有限公司2025年年度报告 (Zhongji Innolight 2025 Annual Report)
+  authors: 中际旭创股份有限公司 (Zhongji Innolight Co., Ltd.)
+  venue: Shenzhen Stock Exchange filing 300308, Mar 2026
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: innolight_ofc2023_press
+  type: press
+  title: InnoLight Demonstrates Pluggable 1.6T OSFP-XD DR8+ and Low Power 800G Optical Transceivers at OFC 2023
+  authors: InnoLight Technology
+  venue: PR Newswire, 2 Mar 2023
+  year: 2023
+  doi: ''
+  url: https://www.prnewswire.com/news-releases/innolight-demonstrates-pluggable-1-6t-osfp-xd-dr8-and-low-power-800g-optical-transceivers-at-ofc-2023--301757786.html
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: cls_innolight_ir_2025
+  type: press
+  title: 中际旭创：预计未来两个季度1.6T将持续量产和规模出货 (report of Innolight investor-relations record)
+  authors: 财联社 (Cailian Press)
+  venue: cls.cn, 27 Aug 2025
+  year: 2025
+  doi: ''
+  url: https://www.cls.cn/detail/2128021
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: eoptolink_ar_2025
+  type: report
+  title: 成都新易盛通信技术股份有限公司2025年年度报告 (Eoptolink 2025 Annual Report)
+  authors: 成都新易盛通信技术股份有限公司 (Eoptolink Technology Inc.)
+  venue: Shenzhen Stock Exchange filing 300502, Apr 2026
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-04-24/1225172598.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: cfol_eoptolink_ofc2025
+  type: press
+  title: 新易盛在OFC 2025发布第二代1.6T OSFP及OSFP-RHS系列光模块
+  authors: 光纤在线 (C-FOL) editorial
+  venue: c-fol.net, 28 Mar 2025
+  year: 2025
+  doi: ''
+  url: https://www.c-fol.net/news/3_202503/20250328185614.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: accelink_ar_2025
+  type: report
+  title: 武汉光迅科技股份有限公司2025年年度报告 (Accelink 2025 Annual Report)
+  authors: 武汉光迅科技股份有限公司 (Accelink Technologies)
+  venue: Shenzhen Stock Exchange filing 002281, Apr 2026
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-04-23/1225148212.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: hgtech_ar_2025
+  type: report
+  title: 华工科技产业股份有限公司2025年年度报告 (HG Tech 2025 Annual Report; parent of HG Genuine 华工正源)
+  authors: 华工科技产业股份有限公司 (HGTECH)
+  venue: Shenzhen Stock Exchange filing 000988, Mar 2026
+  year: 2026
+  doi: ''
+  url: http://static.cninfo.com.cn/finalpage/2026-03-26/1225031509.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: hgtech_board_report_2025
+  type: report
+  title: 华工科技2025年度董事会工作报告 (HG Tech 2025 Board of Directors work report)
+  authors: 华工科技产业股份有限公司
+  venue: SZSE disclosure, 26 Mar 2026
+  year: 2026
+  doi: ''
+  url: https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-26/9a0cd592-285e-4e97-b87b-eaf5cfdda9c8.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: ayarlabs_teraphy_page
+  type: press
+  title: TeraPHY Optical I/O Chiplet (product page)
+  authors: Ayar Labs
+  venue: ayarlabs.com (crawled 2026)
+  year: 2026
+  doi: ''
+  url: https://ayarlabs.com/teraphy/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: ayarlabs_hotchips_2025
+  type: conference
+  title: A UCIe Optical I/O Retimer Chiplet for AI Scale-up
+  authors: V. Stojanovic et al. (Ayar Labs)
+  venue: Hot Chips 2025 presentation (not peer reviewed)
+  year: 2025
+  doi: ''
+  url: https://hc2025.hotchips.org/assets/program/conference/day2/83_Ayar_Labs_Stojanovic_final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: intel_oci_press_2024
+  type: press
+  title: Intel Demonstrates First Fully Integrated Optical I/O Chiplet
+  authors: Intel Corporation
+  venue: Intel newsroom, 26 Jun 2024
+  year: 2024
+  doi: ''
+  url: https://www.intel.com/content/www/us/en/newsroom/news/intel-unveils-first-integrated-optical-io-chiplet.html
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: intel_hotchips_2024
+  type: conference
+  title: 4 Tb/s Optical Compute Interconnect Chiplet for XPU-to-XPU Connectivity
+  authors: S. Fathololoumi (Intel)
+  venue: Hot Chips 2024 presentation (not peer reviewed)
+  year: 2024
+  doi: ''
+  url: https://hc2024.hotchips.org/assets/program/conference/day2/62_HC2024.Intel.Fathololoumi.Final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
