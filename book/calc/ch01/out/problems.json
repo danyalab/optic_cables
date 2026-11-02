@@ -48,8 +48,7 @@
     "unit": "ns",
     "digits": 3,
     "inputs": [
-      "ch01.cd.g652_link_typ_d1550",
-      "ch01.gap.osnr_penalty_64gbd"
+      "ch01.cd.g652_link_typ_d1550"
     ]
   },
   "p3_symbols": {
@@ -57,8 +56,7 @@
     "unit": "symbols",
     "digits": 3,
     "inputs": [
-      "ch01.cd.g652_link_typ_d1550",
-      "ch01.gap.osnr_penalty_64gbd"
+      "ch01.cd.g652_link_typ_d1550"
     ]
   },
   "p4_fnull": {
@@ -91,7 +89,6 @@
     "unit": "symbols",
     "digits": 3,
     "inputs": [
-      "ch01.gap.osnr_penalty_64gbd",
       "ch01.pmd.g652d_pmdq"
     ]
   },
@@ -154,12 +151,11 @@
     ]
   },
   "p9_osnr_req": {
-    "value": 21.391120206186002,
+    "value": 19.788720943153933,
     "unit": "dB",
     "digits": 3,
     "inputs": [
-      "ch01.cap.soft_fec_threshold_20pct",
-      "ch01.gap.osnr_penalty_64gbd"
+      "ch01.cap.soft_fec_threshold_20pct"
     ]
   },
   "p10_gain_db": {
@@ -175,7 +171,7 @@
     "inputs": []
   },
   "p10_nmax": {
-    "value": 28.0,
+    "value": 41.0,
     "unit": "spans",
     "digits": 3,
     "inputs": [

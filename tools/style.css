@@ -78,6 +78,7 @@ a.cite { font-family: var(--font-head); font-size: 0.78em; text-decoration: none
 .result { background: var(--rs-bg); }
 
 /* math, figures, tables, code */
+mjx-container:not([display="true"]) { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
 .math.display, mjx-container[display="true"] { display: block; overflow-x: auto; overflow-y: hidden; padding: 0.2rem 0; }
 figure { margin: 1.8rem 0; }
 figure img { display: block; width: 100%; max-width: 100%; height: auto; }
@@ -104,3 +105,6 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
   .box { break-inside: avoid; }
   h2 { break-before: page; }
 }
+
+/* the chapter title lives in the masthead; the body h1 only anchors section numbering */
+main > section.level1 > h1 { display: none; }

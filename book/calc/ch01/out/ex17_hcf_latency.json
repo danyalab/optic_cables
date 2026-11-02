@@ -113,5 +113,85 @@
     "inputs": [
       "ch01.ull.sato2025_record_1550"
     ]
+  },
+  "luis_km": {
+    "value": 1808.1,
+    "unit": "km",
+    "digits": 5,
+    "inputs": [
+      "ch01.sdm.luis2025_19core_1p02pbps"
+    ]
+  },
+  "ding_len": {
+    "value": 9.1,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.hcf.ding2025_yofc_sthcf_005"
+    ]
+  },
+  "ding_batch_len": {
+    "value": 733.3,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch01.hcf.ding2025_yofc_batch_avg"
+    ]
+  },
+  "gao83_len": {
+    "value": 83.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.hcf.gao2025_ecoc_83km_0076"
+    ]
+  },
+  "hk_hcf_km": {
+    "value": 100.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.hcf.ctel_hk_link_latency"
+    ]
+  },
+  "hk_tot_km": {
+    "value": 110.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.hcf.ctel_hk_link_latency"
+    ]
+  },
+  "thr_0p1": {
+    "value": 0.1,
+    "unit": "dB/km",
+    "digits": 1,
+    "inputs": [
+      "ch01.hcf.petrovich2025_bw_below_0p1"
+    ]
+  },
+  "thr_0p2": {
+    "value": 0.2,
+    "unit": "dB/km",
+    "digits": 1,
+    "inputs": [
+      "ch01.hcf.petrovich2025_bw_below_0p2"
+    ]
+  },
+  "gao40_len": {
+    "value": 40.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.hcf.gao2025_ecoc_40km_0052"
+    ]
+  },
+  "poletti_frac": {
+    "value": 99.7,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch01.hcf.poletti2013_speed_997pct"
+    ]
   }
 }

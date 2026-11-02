@@ -135,11 +135,38 @@ def main():
     check_notation(errors, order)
     check_glossary(errors, order)
     n_rec, n_eq, n_src = check_ledger(errors, order)
+    check_chapters(errors)
     print(f"ledger: {n_rec} records, {n_eq} equations, {n_src} sources")
     for e in errors:
         print(e)
     print(f"lint: {len(order)} sections, {len(errors)} error(s)")
     return 1 if errors else 0
+
+
+
+UNIT_RE = re.compile(r"(?<![\w.])\d+(?:\.\d+)?\s?(?:dBm|dB/km|dB|km|nm|ps|GHz|THz|GBd|Gb/s|Tb/s|µm|um|mW|W)\b")
+
+
+def check_chapters(errors):
+    """Bare numbers with units outside macros and math; tier-C records outside contested boxes."""
+    recs = {}
+    for _, r in load_all("ledger", "ch*[!s].yaml", "records"):
+        recs[r["id"]] = r
+    for path in sorted((ROOT / "chapters").glob("ch[0-9][0-9].md")):
+        text = path.read_text(encoding="utf-8")
+        in_contested = False
+        for n, line in enumerate(text.splitlines(), 1):
+            if line.startswith(":::"):
+                in_contested = "contested" in line
+            stripped = re.sub(r"\{\{[^}]*\}\}", "", line)
+            stripped = re.sub(r"\$\$.*?\$\$|\$[^$]*\$", "", stripped)
+            stripped = re.sub(r"\{[^}]*\}", "", stripped)          # pandoc attributes
+            for m in UNIT_RE.finditer(stripped):
+                errors.append(f"{path.name}:{n}: bare number with unit '{m.group(0)}'")
+            if not in_contested:
+                for rid in re.findall(r"\{\{[LQ]:([A-Za-z0-9_.\-]+)", line):
+                    if recs.get(rid, {}).get("tier") == "C":
+                        errors.append(f"{path.name}:{n}: tier-C record {rid} outside a contested box")
 
 
 if __name__ == "__main__":

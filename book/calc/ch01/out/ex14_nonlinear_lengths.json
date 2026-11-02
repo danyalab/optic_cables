@@ -191,6 +191,15 @@
       "ch01.kerr.n2_kato1995_smf"
     ]
   },
+  "n2_kato_89": {
+    "value": 2.631111111111111,
+    "unit": "10⁻²⁰ m²/W",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.n2_kato1995_smf",
+      "ch01.manakov.eight_ninths"
+    ]
+  },
   "phi_ratio_db": {
     "value": 1.4086565512355997,
     "unit": "dB",

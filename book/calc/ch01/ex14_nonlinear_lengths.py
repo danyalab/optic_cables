@@ -63,6 +63,7 @@ for key, f in fibers.items():
 # gamma with Kato's (XPM) n2 for G.652.D: the upper end of the measured spread
 r.emit("gamma_g652_kato", gamma(n2_kato, fibers["g652"]["aeff"]) * 1e3, "1/(W·km)", 3,
        ["ch01.kerr.n2_kato1995_smf", "ch01.kerr.aeff_g652d_typ"])
+r.emit("n2_kato_89", n2_kato * 8 / 9 * 1e20, "10⁻²⁰ m²/W", 3, ["ch01.kerr.n2_kato1995_smf", "ch01.manakov.eight_ninths"])
 r.emit("phi_ratio_db", cl.lin2db(out["g652"]["phi"] / out["g654"]["phi"]), "dB", 2,
        ["ch01.kerr.aeff_g652d_typ", "ch01.kerr.aeff_g654e_typ"])
 

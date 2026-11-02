@@ -45,4 +45,18 @@ r.emit("hcf1_spread_ratio", L("ch01.hcf.petrovich2025_hcf1_method_spread", "hi")
 # Loss of an 80 km span of record DNANF vs record silica
 r.emit("span_hcf_db", 80 * L("ch01.hcf.petrovich2025_loss_1550"), "dB", 3, ["ch01.hcf.petrovich2025_loss_1550"])
 r.emit("span_silica_db", 80 * L("ch01.ull.sato2025_record_1550"), "dB", 3, ["ch01.ull.sato2025_record_1550"])
+# labels taken from record conditions/claims
+r.emit("luis_km", float(cl.cond("ch01.sdm.luis2025_19core_1p02pbps", "distance_km")), "km", 5, ["ch01.sdm.luis2025_19core_1p02pbps"])
+r.emit("ding_len", float(cl.cond("ch01.hcf.ding2025_yofc_sthcf_005", "fiber_length_km")), "km", 2, ["ch01.hcf.ding2025_yofc_sthcf_005"])
+r.emit("ding_batch_len", float(cl.cond("ch01.hcf.ding2025_yofc_batch_avg", "total_length_km")), "km", 4, ["ch01.hcf.ding2025_yofc_batch_avg"])
+r.emit("gao83_len", float(cl.cond("ch01.hcf.gao2025_ecoc_83km_0076", "fiber_length_km")), "km", 2, ["ch01.hcf.gao2025_ecoc_83km_0076"])
+r.emit("hk_hcf_km", hcf_km, "km", 3, ["ch01.hcf.ctel_hk_link_latency"])
+r.emit("hk_tot_km", tot_km, "km", 3, ["ch01.hcf.ctel_hk_link_latency"])
+# thresholds named in the claims of the Petrovich bandwidth records
+r.emit("thr_0p1", 0.1, "dB/km", 1, ["ch01.hcf.petrovich2025_bw_below_0p1"])
+r.emit("thr_0p2", 0.2, "dB/km", 1, ["ch01.hcf.petrovich2025_bw_below_0p2"])
+import re as _re
+r.emit("gao40_len", float(_re.search(r"([0-9.]+) km", cl.cond("ch01.hcf.gao2025_ecoc_40km_0052", "fiber")).group(1)), "km", 2, ["ch01.hcf.gao2025_ecoc_40km_0052"])
+r.emit("poletti_frac", 99.7, "%", 3, ["ch01.hcf.poletti2013_speed_997pct"])  # from the record claim
+assert "99.7%" in cl.rec("ch01.hcf.poletti2013_speed_997pct")["claim"]
 r.save()

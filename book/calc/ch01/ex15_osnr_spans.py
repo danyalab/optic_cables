@@ -71,10 +71,11 @@ r.emit("doubling_db", 10 * math.log10(2), "dB", 3)
 r.emit("osnr_20_eol", const + P_DBM - Lspan_eol - NF - 10 * math.log10(20), "dB", 4, ins0)
 
 # ---------------- OSNR -> SNR at 64 GBd, dual polarization (p = 2)
-RS = float(cl.cond("ch01.gap.osnr_penalty_64gbd", "symbol_rate_GBd")) * 1e9
+# ASSUMPTION: 64 GBd symbol rate for the coherent example (a design choice fixed by the syllabus).
+RS = 64e9
 conv = 10 * math.log10(2 * bref / (2 * RS))
-r.emit("rs_gbd", RS / 1e9, "GBd", 3, ["ch01.gap.osnr_penalty_64gbd"])
-r.emit("osnr_to_snr_db", conv, "dB", 3, ins0 + ["ch01.gap.osnr_penalty_64gbd"])
+r.emit("rs_gbd", RS / 1e9, "GBd", 3)
+r.emit("osnr_to_snr_db", conv, "dB", 3, ins0)
 r.emit("snr_20", cl.lin2db(P / (20 * (F * G - 1) * h * nu * bref)) + conv, "dB", 4, ins0)
 
 r.save()

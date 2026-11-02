@@ -81,6 +81,11 @@ r.emit("ext_1260_ge", A_ge * d_lam, "dB/km", 2, ["ch01.phys.rayleigh_coeff_gedop
 r.emit("ext_1260_implied_A", L("ch01.att.g652d_rayleigh_extension_1260") / d_lam, "dB/(km·µm⁴)", 3,
        ["ch01.att.g652d_rayleigh_extension_1260"])
 r.emit("ext_1260_factor", d_lam, "µm⁻⁴", 3, [])
+_wl = cl.cond("ch01.att.g652d_rayleigh_extension_1260", "wavelength_nm")
+r.emit("ext_lam_lo", _wl[0], "nm", 4, ["ch01.att.g652d_rayleigh_extension_1260"])
+r.emit("ext_lam_hi", _wl[1], "nm", 4, ["ch01.att.g652d_rayleigh_extension_1260"])
+r.emit("sato_lam", cl.cond("ch01.rec.sato_ofc2024_1566", "wavelength_nm"), "nm", 4, ["ch01.rec.sato_ofc2024_1566"])
+r.emit("khrapko_lam", cl.cond("ch01.rec.khrapko_ptl2024_qsmf", "wavelength_nm"), "nm", 4, ["ch01.rec.khrapko_ptl2024_qsmf"])
 
 # ---------------------------------------------------------------- Part B
 n_splice = int(round(SPAN_KM / SECTION_KM)) - 1

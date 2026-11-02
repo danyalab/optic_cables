@@ -24,7 +24,6 @@ ROOT = Path(__file__).resolve().parent.parent
 BOOK = ROOT / "book"
 DIST = ROOT / "dist"
 MACRO = re.compile(r"\{\{([LCSQ]):([A-Za-z0-9_.\-]+)(?:\|(v))?\}\}")
-KATEX = "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/"
 
 
 def load_ledger(ch):
@@ -51,7 +50,7 @@ def fmt_num(x, digits=None):
     if isinstance(x, list):
         return "–".join(fmt_num(v, digits) for v in x)  # en dash for ranges
     if isinstance(x, str):
-        return x
+        return x.replace(">=", "\u2265").replace("<=", "\u2264")
     x = float(x)
     if digits:
         if x == 0:
@@ -130,16 +129,40 @@ def build(ch):
     tmp = DIST / f"ch{ch}.resolved.md"
     tmp.write_text(body, encoding="utf-8")
     out = DIST / f"ch{ch}.html"
+    syl = yaml.safe_load((BOOK / "syllabus.yaml").read_text(encoding="utf-8"))
+    chap = next(c for c in syl["chapters"] if c["id"] == int(ch))
+    css = (ROOT / "tools" / "style.css").read_text(encoding="utf-8")
     cmd = ["pandoc", str(tmp), "-f", "markdown+tex_math_dollars+raw_html", "-t", "html5",
-           "-s", f"--katex={KATEX}", "--toc", "--toc-depth=2", "--number-sections",
-           "--css", "style.css", "--resource-path", str(BOOK), "-o", str(out),
-           "--metadata", f"title=Chapter {int(ch)}"]
-    style = ROOT / "tools" / "style.css"
-    if style.exists():
-        cmd[cmd.index("--css") + 1] = "style.css"
-        (DIST / "style.css").write_text(style.read_text(encoding="utf-8"), encoding="utf-8")
-    subprocess.run(cmd, check=True)
-    print(f"build: {out} ({len(order)} sources cited)")
+           "-s", "--template", str(ROOT / "tools" / "template.html"), "--mathjax",
+           "--toc", "--toc-depth=2", "--number-sections", "--section-divs",
+           "--resource-path", str(BOOK),
+           "--metadata", f"title={chap['title']}",
+           "--metadata", f"pagetitle={chap['title']}",
+           "--variable", f"kicker=Chapter {int(ch)}",
+           "--variable", f"subtitle={syl['title']}",
+           "--variable", f"css={css}"]
+    html = subprocess.run(cmd, check=True, capture_output=True, text=True).stdout
+    html = postprocess(html)
+    out.write_text(html, encoding="utf-8")
+    print(f"build: {out} ({len(order)} sources cited, {len(html) // 1024} KiB)")
+
+
+def postprocess(html):
+    """Inline SVG figures as data URIs and make tables scroll in their own box."""
+    import base64
+
+    def inline_img(m):
+        src = m.group(2)
+        p = BOOK / src
+        if not p.exists():
+            return m.group(0)
+        data = base64.b64encode(p.read_bytes()).decode("ascii")
+        return f'{m.group(1)}data:image/svg+xml;base64,{data}{m.group(3)}'
+
+    html = re.sub(r'(<img[^>]*?src=")([^"]+\.svg)(")', inline_img, html)
+    html = re.sub(r"<table", '<div class="table-wrap"><table', html)
+    html = html.replace("</table>", "</table></div>")
+    return html
 
 
 if __name__ == "__main__":

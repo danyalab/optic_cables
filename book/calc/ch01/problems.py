@@ -32,12 +32,13 @@ r.emit("p2_D", D, "ps/(nm·km)", 3, ins2)
 r.emit("p2_S", S, "ps/(nm²·km)", 3, ins2)
 
 # P3: CD-induced spread in symbols, 64 GBd, 1000 km at D = 17 (ASSUMPTION: 1000 km)
-RS = float(cl.cond("ch01.gap.osnr_penalty_64gbd", "symbol_rate_GBd")) * 1e9
+# ASSUMPTION: 64 GBd symbol rate for the coherent example (a design choice fixed by the syllabus).
+RS = 64e9
 D17 = L("ch01.cd.g652_link_typ_d1550")
 lam_m = 1550e-9
 dtau = cl.d_si(D17) * 1000e3 * lam_m ** 2 * RS / c        # s
-r.emit("p3_dtau_ns", dtau * 1e9, "ns", 3, ["ch01.cd.g652_link_typ_d1550", "ch01.gap.osnr_penalty_64gbd"])
-r.emit("p3_symbols", dtau * RS, "symbols", 3, ["ch01.cd.g652_link_typ_d1550", "ch01.gap.osnr_penalty_64gbd"])
+r.emit("p3_dtau_ns", dtau * 1e9, "ns", 3, ["ch01.cd.g652_link_typ_d1550"])
+r.emit("p3_symbols", dtau * RS, "symbols", 3, ["ch01.cd.g652_link_typ_d1550"])
 
 # P4: first fading null for the 400G-LR4-10 most negative channel dispersion at 1264.5 nm
 cd = abs(L("ch01.cd.lr4_10_channel_cd", "lo")) * 1e-12 / 1e-9   # s/m
@@ -49,7 +50,7 @@ pmdq = L("ch01.pmd.g652d_pmdq")
 mean = pmdq * math.sqrt(1000)
 r.emit("p5_mean", mean, "ps", 3, ["ch01.pmd.g652d_pmdq"])
 r.emit("p5_dgd3", 3 * mean, "ps", 3, ["ch01.pmd.g652d_pmdq", "ch01.pmd.g959_ratio_3p0_prob"])
-r.emit("p5_symbols", 3 * mean * 1e-12 * RS, "symbols", 3, ["ch01.pmd.g652d_pmdq", "ch01.gap.osnr_penalty_64gbd"])
+r.emit("p5_symbols", 3 * mean * 1e-12 * RS, "symbols", 3, ["ch01.pmd.g652d_pmdq"])
 
 # P6: L_eff for the GN reference span; length beyond which L_eff grows < 1 %
 a_db = cl.parse_field("ch01.gn.ref_system_2012", "α")
@@ -78,7 +79,7 @@ r.emit("p8_diff", k1550 - k1310, "dB", 3, ["ch01.const.planck_h", "ch01.const.sp
 bref = c * dl / lam_m ** 2
 snr_req = ex16["snr_req_db"]["value"]
 r.emit("p9_osnr_req", snr_req + 10 * math.log10(RS / bref), "dB", 3,
-       ["ch01.cap.soft_fec_threshold_20pct", "ch01.gap.osnr_penalty_64gbd"])
+       ["ch01.cap.soft_fec_threshold_20pct"])
 
 # P10: 1 dB lower NF -> GSNR_max +2/3 dB -> reach factor 10^(2/30)
 r.emit("p10_gain_db", 2 / 3, "dB", 3)

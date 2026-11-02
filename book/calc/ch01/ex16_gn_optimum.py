@@ -78,6 +78,14 @@ r.emit("ref_leff", le / 1e3, "km", 3, [REF])
 TOL_DB = 0.25
 assert abs(cl.w2dbm(p_opt_ref) - L(CHK)) < TOL_DB, "GN reference case not reproduced"
 r.emit("ref_tol_db", TOL_DB, "dB", 2)
+r.emit("ref_nf_db", NF, "dB", 2, [CHK])
+_note = cl.cond(CHK, "note")
+import re as _re
+r.emit("ref_psd_pub", float(_re.search(r"PSD ([0-9.]+)", _note).group(1)), "µW/GHz", 3, [CHK])
+r.emit("ref_total_pub", float(_re.search(r"~([0-9.]+) dBm", _note).group(1)), "dBm", 2, [CHK])
+r.emit("gauss_rs", cl.cond("ch01.gn.gaussianization_distance", "symbol_rate_GBd"), "GBd", 2, ["ch01.gn.gaussianization_distance"])
+r.emit("ny75_span", 75, "km", 2, ["ch01.gn.popt_ny_smf_75km_check"])
+r.emit("ny100_span", 100, "km", 3, ["ch01.gn.popt_ny_smf_check"])
 
 # Secondary check: Nyquist-WDM variant (B_ch = Df = Rs, 157 channels), 100 km and 75 km
 NY_N = 157  # from the ledger note on ch01.gn.ref_system_2012 ('Nch = 157')
@@ -91,7 +99,8 @@ for tag, span, rid in (("ny100", 100e3, "ch01.gn.popt_ny_smf_check"), ("ny75", 7
     assert abs(cl.w2dbm(pp) - L(rid)) < 0.5, tag
 
 # =========================================================== Step 2: book example
-RS = float(cl.cond("ch01.gap.osnr_penalty_64gbd", "symbol_rate_GBd")) * 1e9
+# ASSUMPTION: 64 GBd symbol rate for the coherent example (a design choice fixed by the syllabus).
+RS = 64e9
 # ASSUMPTION: 75 GHz channel grid for 64 GBd (B_ch/Df = 0.85).
 DF = 75e9
 # ASSUMPTION: C-band fully loaded across the ITU 1530-1565 nm band.
@@ -112,7 +121,7 @@ Lspan_eol = ex11["smf28u_eol"]["value"]
 NFb = L("ch01.amp.accelink_mw_nf_max")
 Fb = cl.db2lin(NFb)
 Gb = cl.db2lin(Lspan_db)
-book_ins = ["ch01.gap.osnr_penalty_64gbd", "ch01.amp.cband_range_itu", "ch01.att.smf28ultra_max_1550",
+book_ins = ["ch01.amp.cband_range_itu", "ch01.att.smf28ultra_max_1550",
             "ch01.cd.g652_link_typ_d1550", "ch01.kerr.n2_pure_silica_gsup47", "ch01.kerr.aeff_g652d_typ",
             "ch01.amp.accelink_mw_nf_max", "ch01.const.planck_h", "ch01.const.speed_of_light_c"]
 r.emit("df_ghz", DF / 1e9, "GHz", 2)
@@ -141,7 +150,7 @@ popt = (pase1 / (2 * eta1)) ** (1 / 3)            # independent of N for eps = 0
 gmax1 = (2.0 / 3.0) * popt / pase1                # GSNR_max after one span
 alt = 1.0 / (3 * (eta1 / 4) ** (1 / 3) * pase1 ** (2 / 3))
 assert abs(alt / gmax1 - 1) < 1e-12
-r.emit("popt_dbm", cl.w2dbm(popt), "dBm", 4, book_ins)
+r.emit("popt_dbm", cl.w2dbm(popt), "dBm", 2, book_ins)
 r.emit("popt_total_dbm", cl.w2dbm(popt * NCH), "dBm", 3, book_ins)
 r.emit("psd_opt", popt / RS / 1e-15, "µW/GHz", 3, book_ins)
 r.emit("gmax1_db", cl.lin2db(gmax1), "dB", 4, book_ins)
@@ -155,19 +164,37 @@ pnli = NTEST * eta1 * popt ** 3
 pase = NTEST * pase1
 assert abs(pnli / pase - 0.5) < 1e-9
 r.emit("num_popt_dbm", res.x, "dBm", 4, book_ins)
+r.emit("num_minus_closed_db", abs(res.x - cl.w2dbm(popt)), "dB", 1, book_ins)
 r.emit("nli_frac", pnli / (pnli + pase), "1", 3, book_ins)
 
-# Required SNR: Gray-coded square 16-QAM, BER = (3/8) erfc(sqrt(SNR/10)), at the
-# 20 % SD-FEC threshold, plus the measured 64 GBd implementation penalty.
+# Required SNR. Gray-coded square 16-QAM, BER = (3/8) erfc(sqrt(SNR/10)), reaches the
+# 20 % SD-FEC threshold at snr_th. Transceiver noise (SNR_TR, ledger range) adds in
+# inverse: 1/SNR_total = 1/GSNR + 1/SNR_TR, so the line must deliver
+# GSNR_req = 1 / (1/snr_th - 1/SNR_TR).
 ber_th = L("ch01.cap.soft_fec_threshold_20pct")
 snr_th = brentq(lambda s: 3 / 8 * erfc(math.sqrt(s / 10)) - ber_th, 1.0, 100.0)
-pen = L("ch01.gap.osnr_penalty_64gbd")
-snr_req = cl.lin2db(snr_th) + pen
 r.emit("snr_theory_db", cl.lin2db(snr_th), "dB", 4, ["ch01.cap.soft_fec_threshold_20pct"])
-r.emit("snr_req_db", snr_req, "dB", 4, ["ch01.cap.soft_fec_threshold_20pct", "ch01.gap.osnr_penalty_64gbd"])
+tr_ins = ["ch01.cap.soft_fec_threshold_20pct", "ch01.gap.transceiver_snr_range"]
+greq = {}
+for tag in ("lo", "hi"):
+    snr_tr = cl.db2lin(L("ch01.gap.transceiver_snr_range", tag))
+    inv = 1 / snr_th - 1 / snr_tr
+    assert inv > 0, "transceiver SNR must exceed the threshold SNR"
+    greq[tag] = 1 / inv
+    r.emit(f"gsnr_req_{tag}", cl.lin2db(greq[tag]), "dB", 4, tr_ins)
+    r.emit(f"nmax_{tag}", math.floor(gmax1 / greq[tag]), "spans", 3, book_ins + tr_ins)
+    r.emit(f"reach_{tag}_km", math.floor(gmax1 / greq[tag]) * SPAN / 1e3, "km", 3, book_ins + tr_ins)
+# Main case: the best transceiver of the range (upper SNR_TR)
+snr_req = cl.lin2db(greq["hi"])
+r.emit("snr_req_db", snr_req, "dB", 4, tr_ins)
+r.emit("tr_penalty_hi", snr_req - cl.lin2db(snr_th), "dB", 2, tr_ins)
+# Tier-C alternative for the contested box: Rafique's 64 GBd implementation penalty added in dB
+snr_req_raf = cl.lin2db(snr_th) + L("ch01.gap.osnr_penalty_64gbd")
+r.emit("snr_req_raf", snr_req_raf, "dB", 4, ["ch01.gap.osnr_penalty_64gbd"])
+r.emit("nmax_raf", math.floor(gmax1 / cl.db2lin(snr_req_raf)), "spans", 3, ["ch01.gap.osnr_penalty_64gbd"])
 
 nmax = math.floor(gmax1 / cl.db2lin(snr_req))
-r.emit("nmax", nmax, "spans", 3, book_ins + ["ch01.gap.osnr_penalty_64gbd"])
+r.emit("nmax", nmax, "spans", 3, book_ins + tr_ins)
 r.emit("reach_km", nmax * SPAN / 1e3, "km", 3, book_ins)
 r.emit("gsnr_nmax_db", cl.lin2db(gmax1 / nmax), "dB", 4, book_ins)
 # ε > 0: upper end of the typical 2014 range
@@ -203,8 +230,9 @@ r.emit("cap_gbps", 2 * c_pol * RS / 1e9, "Gb/s", 3, book_ins)
 FEC_OH = 0.20  # from the record name/conditions of ch01.cap.soft_fec_threshold_20pct
 assert cl.cond("ch01.cap.soft_fec_threshold_20pct", "FEC_overhead") == "20%"
 net = 2 * 4 / (1 + FEC_OH)
+r.emit("fec_oh_pct", 100 * FEC_OH, "%", 2, ["ch01.cap.soft_fec_threshold_20pct"])
 r.emit("net_bits", net, "bit/symbol", 3, ["ch01.cap.soft_fec_threshold_20pct"])
-r.emit("net_gbps", net * RS / 1e9, "Gb/s", 4, ["ch01.cap.soft_fec_threshold_20pct", "ch01.gap.osnr_penalty_64gbd"])
+r.emit("net_gbps", net * RS / 1e9, "Gb/s", 4, ["ch01.cap.soft_fec_threshold_20pct"])
 snr_shannon = 2 ** (net / 2) - 1
 r.emit("snr_shannon_db", cl.lin2db(snr_shannon), "dB", 3, ["ch01.cap.soft_fec_threshold_20pct"])
 r.emit("gap_total_db", snr_req - cl.lin2db(snr_shannon), "dB", 3, book_ins)

@@ -75,6 +75,8 @@ r.emit("lmax_1e6_ds", (tol_msa / ratio_1e6 / pmd_ds) ** 2, "km", 3, ["ch01.pmd.s
 # coherent comparison: mean DGD over 1000 km with G.652.D PMDQ (ASSUMPTION: 1000 km)
 r.emit("mean_spec_1000", pmd_spec * math.sqrt(1000), "ps", 3, ["ch01.pmd.g652d_pmdq"])
 
+r.emit("gk_len", cl.cond("ch01.pmd.dgd_sqrt_length", "length_km"), "km", 3, ["ch01.pmd.dgd_sqrt_length"])
+
 # ---------------- figure
 plt = cl.setup_mpl()
 x = np.linspace(0, 4.0, 600)

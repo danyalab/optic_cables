@@ -114,6 +114,38 @@
     "digits": 3,
     "inputs": []
   },
+  "ext_lam_lo": {
+    "value": 1260.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.att.g652d_rayleigh_extension_1260"
+    ]
+  },
+  "ext_lam_hi": {
+    "value": 1310.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.att.g652d_rayleigh_extension_1260"
+    ]
+  },
+  "sato_lam": {
+    "value": 1566.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.rec.sato_ofc2024_1566"
+    ]
+  },
+  "khrapko_lam": {
+    "value": 1560.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.rec.khrapko_ptl2024_qsmf"
+    ]
+  },
   "span_km": {
     "value": 80.0,
     "unit": "km",

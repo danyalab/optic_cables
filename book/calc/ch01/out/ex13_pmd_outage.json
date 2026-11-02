@@ -237,5 +237,13 @@
     "inputs": [
       "ch01.pmd.g652d_pmdq"
     ]
+  },
+  "gk_len": {
+    "value": 500.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.pmd.dgd_sqrt_length"
+    ]
   }
 }

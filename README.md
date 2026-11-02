@@ -15,4 +15,4 @@ Shared conventions live in `book/notation.yaml`. Run `make check` before committ
 
 ## Status
 
-Gate G0: syllabus drafted, awaiting review. Pilot chapter: 1 (fiber channel physics).
+Gate G0 approved. Chapter 1 (pilot) drafted, ledger blind-verified (see `book/verify/`), awaiting review. Build with `make build CH=01`; output in `dist/`.

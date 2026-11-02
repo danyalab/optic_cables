@@ -240,9 +240,7 @@
     "value": 64.0,
     "unit": "GBd",
     "digits": 3,
-    "inputs": [
-      "ch01.gap.osnr_penalty_64gbd"
-    ]
+    "inputs": []
   },
   "osnr_to_snr_db": {
     "value": -7.100226673965427,
@@ -251,7 +249,6 @@
     "inputs": [
       "ch01.const.planck_h",
       "ch01.const.speed_of_light_c",
-      "ch01.gap.osnr_penalty_64gbd",
       "ch01.osnr.gsup39_58db_constant"
     ]
   },
