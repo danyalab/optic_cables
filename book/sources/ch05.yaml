@@ -1,0 +1,628 @@
+# Chapter 5 sources. Reused from ch04: ieee_p8023dj_objectives_2024, nvidia_cpo_blog_2025.
+sources:
+- id: alfares_sigcomm_2008
+  type: conference
+  title: A Scalable, Commodity Data Center Network Architecture
+  authors: M. Al-Fares, A. Loukissas, A. Vahdat
+  venue: ACM SIGCOMM 2008
+  year: 2008
+  doi: 10.1145/1402958.1402967
+  url: https://cseweb.ucsd.edu/~vahdat/papers/sigcomm08.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: clos_bstj_1953
+  type: journal
+  title: A Study of Non-Blocking Switching Networks
+  authors: C. Clos
+  venue: Bell System Technical Journal 32(2):406-424
+  year: 1953
+  doi: 10.1002/j.1538-7305.1953.tb01433.x
+  url: https://ia801901.us.archive.org/8/items/bstj32-2-406/bstj32-2-406_text.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: singh_sigcomm_2015
+  type: conference
+  title: 'Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google''s Datacenter Network'
+  authors: A. Singh, J. Ong, A. Agarwal, et al. (Google)
+  venue: ACM SIGCOMM 2015
+  year: 2015
+  doi: 10.1145/2785956.2787508
+  url: https://research.google.com/pubs/archive/43837.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: poutievski_sigcomm_2022
+  type: conference
+  title: 'Jupiter Evolving: Transforming Google''s Datacenter Network via Optical Circuit Switches and Software-Defined Networking'
+  authors: L. Poutievski, O. Mashayekhi, J. Ong, A. Singh, et al. (Google)
+  venue: ACM SIGCOMM 2022
+  year: 2022
+  doi: 10.1145/3544216.3544265
+  url: https://dl.acm.org/doi/pdf/10.1145/3544216.3544265
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: liu_sigcomm_2023
+  type: conference
+  title: 'Lightwave Fabrics: At-Scale Optical Circuit Switching for Datacenter and Machine Learning Systems'
+  authors: H. Liu, R. Urata, K. Yasumura, X. Zhou, et al. (Google)
+  venue: ACM SIGCOMM 2023
+  year: 2023
+  doi: 10.1145/3603269.3604836
+  url: https://cse.hkust.edu.hk/~kaichen/courses/spring24/comp7215/papers/lightwave-sigcomm23.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: urata_arxiv_2022_apollo
+  type: report
+  title: 'Mission Apollo: Landing Optical Circuit Switching at Datacenter Scale'
+  authors: R. Urata, H. Liu, K. Yasumura, et al. (Google)
+  venue: arXiv:2208.10041
+  year: 2022
+  doi: 10.48550/arXiv.2208.10041
+  url: https://arxiv.org/pdf/2208.10041
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: jouppi_isca_2023
+  type: conference
+  title: 'TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings'
+  authors: N. P. Jouppi, G. Kurian, S. Li, P. Ma, R. Nagarajan, et al. (Google)
+  venue: ISCA 2023
+  year: 2023
+  doi: 10.1145/3579371.3589350
+  url: https://arxiv.org/abs/2304.01433
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: zu_nsdi_2024
+  type: conference
+  title: 'Resiliency at Scale: Managing Google''s TPUv4 Machine Learning Supercomputer'
+  authors: Y. Zu, et al. (Google)
+  venue: USENIX NSDI 2024
+  year: 2024
+  doi: ''
+  url: https://www.usenix.org/system/files/nsdi24spring_prepub_zu.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ballani_sigcomm_2020
+  type: conference
+  title: 'Sirius: A Flat Datacenter Network with Nanosecond Optical Switching'
+  authors: H. Ballani, P. Costa, R. Behrendt, et al. (Microsoft Research)
+  venue: ACM SIGCOMM 2020
+  year: 2020
+  doi: 10.1145/3387514.3406221
+  url: https://www.microsoft.com/en-us/research/wp-content/uploads/2020/07/sirius-sigcomm20.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: patarasuk_jpdc_2009
+  type: journal
+  title: Bandwidth optimal all-reduce algorithms for clusters of workstations
+  authors: P. Patarasuk, X. Yuan
+  venue: Journal of Parallel and Distributed Computing 69(2):117-124
+  year: 2009
+  doi: 10.1016/j.jpdc.2008.09.002
+  url: https://www.cs.fsu.edu/~xyuan/paper/09jpdc.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: thakur_ijhpca_2005
+  type: journal
+  title: Optimization of Collective Communication Operations in MPICH
+  authors: R. Thakur, R. Rabenseifner, W. Gropp
+  venue: International Journal of High Performance Computing Applications 19(1):49-66
+  year: 2005
+  doi: 10.1177/1094342005051521
+  url: https://www.cs.umd.edu/class/fall2019/cmsc714/readings/Thakur-MPICH.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: jeaugey_nvidia_blog_2019
+  type: whitepaper
+  title: Massively Scale Your Deep Learning Training with NCCL 2.4
+  authors: S. Jeaugey (NVIDIA)
+  venue: NVIDIA Technical Blog
+  year: 2019
+  doi: ''
+  url: https://developer.nvidia.com/blog/massively-scale-deep-learning-training-nccl-2-4/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: gangidi_sigcomm_2024
+  type: conference
+  title: RDMA over Ethernet for Distributed AI Training at Meta Scale
+  authors: A. Gangidi, R. Miao, S. Zheng, et al. (Meta)
+  venue: ACM SIGCOMM 2024
+  year: 2024
+  doi: 10.1145/3651890.3672233
+  url: https://rmiao.github.io/assets/pdf/sigcomm24-final246.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: zeng_sigcomm_2026
+  type: conference
+  title: 'Connecting 100K+ GPUs: Building the Communication Stack for Large-Scale LLM Training'
+  authors: H. Zeng, M. Si, P. Balaji, et al. (Meta)
+  venue: ACM SIGCOMM 2026
+  year: 2026
+  doi: 10.1145/3789240.3829152
+  url: https://minlanyu.seas.harvard.edu/writeup/sigcomm26.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: llama3_arxiv_2024
+  type: report
+  title: The Llama 3 Herd of Models
+  authors: A. Grattafiori, A. Dubey, et al. (Meta)
+  venue: arXiv:2407.21783
+  year: 2024
+  doi: 10.48550/arXiv.2407.21783
+  url: https://arxiv.org/html/2407.21783
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: qian_sigcomm_2024
+  type: conference
+  title: 'Alibaba HPN: A Data Center Network for Large Language Model Training'
+  authors: K. Qian, Y. Xi, J. Cao, J. Gao, et al. (Alibaba Cloud)
+  venue: ACM SIGCOMM 2024
+  year: 2024
+  doi: 10.1145/3651890.3672265
+  url: https://qiankun11516.github.io/pdf/sigcomm24-HPN.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: jiang_nsdi_2024
+  type: conference
+  title: 'MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs'
+  authors: Z. Jiang, H. Lin, Y. Zhong, et al. (ByteDance, Peking University)
+  venue: USENIX NSDI 2024
+  year: 2024
+  doi: ''
+  url: https://www.usenix.org/system/files/nsdi24-jiang-ziheng.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: li_ztetj_2025
+  type: journal
+  title: '星脉网络：面向GPU集群集合通信与集中式路由的协同优化 (Astral Network: co-optimizing collective communication and central traffic routing
+    for GPU clusters)'
+  authors: 李宝嘉 (LI Baojia), 何春志, 夏寅贲, 何泽坤, 王晓亮 (Tencent; Nanjing University)
+  venue: 中兴通讯技术 (ZTE Technology Journal) 31(2):3-13
+  year: 2025
+  doi: 10.12142/ZTETJ.202502002
+  url: https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/mediares/magazine/publication/com_cn/article/202502/2.pdf
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: wang_telecomsci_2026
+  type: journal
+  title: 星脉3.0：面向MoE模型训推一体的大规模高性能网络设计与实践 (Astral 3.0)
+  authors: 王亚晨 (WANG Yachen), 夏寅贲, 王梓博, et al. (Tencent)
+  venue: 电信科学 (Telecommunications Science), 2026 (online first)
+  year: 2026
+  doi: 10.11959/j.issn.1000-0801.DXKX260015
+  url: https://www.telecomsci.com/zh/article/doi/10.11959/j.issn.1000-0801.DXKX260015/
+  access: abstract_only
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: tencent_cloud_2023_starnet
+  type: whitepaper
+  title: 腾讯星脉高性能计算网络：为AI大模型构筑网络底座
+  authors: Tencent Cloud
+  venue: Tencent Cloud Developer Community (operator technical article)
+  year: 2023
+  doi: ''
+  url: https://cloud.tencent.com/developer/article/2234084
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_gb200_nvl72_page
+  type: datasheet
+  title: GB200 NVL72 product page and specifications
+  authors: NVIDIA
+  venue: nvidia.com
+  year: 2025
+  doi: ''
+  url: https://www.nvidia.com/en-us/data-center/gb200-nvl72/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_gb200_techblog_2024
+  type: whitepaper
+  title: NVIDIA GB200 NVL72 Delivers Trillion-Parameter LLM Training and Real-Time Inference
+  authors: I. Goldwasser, H. Petty, P. Desale, K. Devleker (NVIDIA)
+  venue: NVIDIA Technical Blog
+  year: 2024
+  doi: ''
+  url: https://developer.nvidia.com/blog/nvidia-gb200-nvl72-delivers-trillion-parameter-llm-training-and-real-time-inference/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_ocp_gb200_blog_2024
+  type: whitepaper
+  title: NVIDIA Contributes NVIDIA GB200 NVL72 Designs to Open Compute Project
+  authors: A. Elmeleegy (NVIDIA)
+  venue: NVIDIA Technical Blog
+  year: 2024
+  doi: ''
+  url: https://developer.nvidia.com/blog/nvidia-contributes-nvidia-gb200-nvl72-designs-to-open-compute-project/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_nvlink_page
+  type: datasheet
+  title: NVLink and NVLink Switch specifications
+  authors: NVIDIA
+  venue: nvidia.com
+  year: 2026
+  doi: ''
+  url: https://www.nvidia.com/en-us/data-center/nvlink/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_connectx7_ds
+  type: datasheet
+  title: NVIDIA ConnectX-7 400G Adapters datasheet
+  authors: NVIDIA
+  venue: NVIDIA datasheet
+  year: 2023
+  doi: ''
+  url: https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-7-datasheet
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_connectx8_ds
+  type: datasheet
+  title: NVIDIA ConnectX-8 SuperNIC datasheet
+  authors: NVIDIA
+  venue: NVIDIA datasheet
+  year: 2025
+  doi: ''
+  url: https://resources.nvidia.com/en-us-accelerated-networking-resource-library/connectx-datasheet-c
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_dgx_superpod_h100_ra
+  type: whitepaper
+  title: 'NVIDIA DGX SuperPOD: Next Generation Scalable Infrastructure for AI Leadership, Reference Architecture featuring
+    DGX H100'
+  authors: NVIDIA
+  venue: docs.nvidia.com reference architecture
+  year: 2025
+  doi: ''
+  url: https://docs.nvidia.com/dgx-superpod/reference-architecture-scalable-infrastructure-h100/latest/network-fabrics.html
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_linkx_page
+  type: datasheet
+  title: LinkX Cables and Transceivers (specifications and FAQ)
+  authors: NVIDIA
+  venue: nvidia.com
+  year: 2026
+  doi: ''
+  url: https://www.nvidia.com/en-us/networking/interconnect/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_linkx_dac_acc_doc
+  type: datasheet
+  title: Copper DAC and ACC Cables Overview (400G/100G-PAM4)
+  authors: NVIDIA
+  venue: docs.nvidia.com networking
+  year: 2025
+  doi: ''
+  url: https://docs.nvidia.com/networking/display/400g100gpam4ovpub/copper+dac+and+acc+cables+overview
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ieee_p8023cd_objectives_2016
+  type: standard
+  title: IEEE 802.3cd Task Force Objectives (updated, Sept 2016)
+  authors: IEEE P802.3cd Task Force
+  venue: IEEE 802.3 project document
+  year: 2016
+  doi: ''
+  url: http://www.ieee802.org/3/cd/P802d3cd_objectives_v4.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: kocsis_ieee_b400g_2021
+  type: report
+  title: Consensus Support for 800GbE over 8-Lanes based on 100GEL
+  authors: S. Kocsis (Amphenol) et al.
+  venue: IEEE 802.3 B400G Study Group contribution, Aug 2021
+  year: 2021
+  doi: ''
+  url: https://www.ieee802.org/3/B400G/public/21_08/kocsis_b400g_01a_0812.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: lusted_ieee_8023bj_2012
+  type: report
+  title: IEEE 802.3bj Draft 1.0 Comments
+  authors: K. Lusted (Intel)
+  venue: IEEE P802.3bj Task Force contribution, Jul 2012
+  year: 2012
+  doi: ''
+  url: https://www.ieee802.org/3/bj/public/jul12/lusted_01_0712.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: dambrosia_ieee_8023bj_2012
+  type: report
+  title: Thoughts on Naming New PMDs for IEEE P802.3bj
+  authors: J. D'Ambrosia
+  venue: IEEE P802.3bj Task Force contribution, May 2012
+  year: 2012
+  doi: ''
+  url: https://ieee802.org/3/bj/public/may12/dambrosia_01_0512.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: credo_aec_800g_span_2025
+  type: datasheet
+  title: HiWire ZeroFlap SPAN AEC 800G OSFP to OSFP-RHS product brief
+  authors: Credo Technology
+  venue: Credo product brief (2025-09-26)
+  year: 2025
+  doi: ''
+  url: https://credosemi.com/wp-content/uploads/Credo_AEC_800G_SPAN_O_O_RHS_Product_Brief_2025Sept26.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: credo_aec_800g_shift_2025
+  type: datasheet
+  title: HiWire ZeroFlap SHIFT AEC 800G OSFP to 2x400G OSFP-RHS product brief
+  authors: Credo Technology
+  venue: Credo product brief (2025-09-26)
+  year: 2025
+  doi: ''
+  url: https://credosemi.com/wp-content/uploads/Credo_AEC_800G_SHIFT_OSFP-2xOSFP_RHS_Product_Brief_2025Sept26.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: credo_press_2024_zf_aec
+  type: press
+  title: Credo Introduces 800G HiWire ZeroFlap AECs to Support AI Backend Networks
+  authors: Credo Technology
+  venue: Press release (Business Wire)
+  year: 2024
+  doi: ''
+  url: https://investors.credosemi.com/news-events/news/news-details/2024/Credo-Introduces-800G-HiWire-ZeroFlap-AECs-to-Support-AI-Backend-Networks-10-10-2024/default.aspx
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: broadcom_cpo_bidi_wp
+  type: whitepaper
+  title: 'CPO BiDi: An Efficient Solution for Scale-up of AI/ML Clusters Using Optics'
+  authors: Broadcom
+  venue: Broadcom white paper
+  year: 2025
+  doi: ''
+  url: https://docs.broadcom.com/doc/cpo-bidi
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: broadcom_cpo_article_2024
+  type: whitepaper
+  title: How to scale the optical interconnect using Co-Packaged Optics (CPO)
+  authors: N. Margalit (Broadcom)
+  venue: Broadcom company article
+  year: 2024
+  doi: ''
+  url: https://www.broadcom.com/company/news/articles/ai-infrastructure/how-to-scale-the-optical-interconnect-using-co-packaged-optics-cpo
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ualink_200g_spec_v1_2025
+  type: standard
+  title: UALink_200 Rev 1.0 Specification (evaluation copy)
+  authors: Ultra Accelerator Link Consortium
+  venue: UALink Consortium specification
+  year: 2025
+  doi: ''
+  url: https://ualinkconsortium.org/wp-content/uploads/2025/04/UALink200_Specification_v1.0_Evaluation_Copy.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: vijayakumar_hotnets_2024
+  type: conference
+  title: A case for server-scale photonic connectivity
+  authors: A. Vijaya Kumar, A. Devraj, D. Bunandar, R. Singh
+  venue: ACM HotNets 2024
+  year: 2024
+  doi: ''
+  url: https://conferences.sigcomm.org/hotnets/2024/papers/hotnets24-12.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: lumorph_arxiv_2025
+  type: report
+  title: 'Lumorph: an optically reconfigurable rack-scale ML architecture (arXiv:2501.18169)'
+  authors: A. Vijaya Kumar, et al.
+  venue: arXiv:2501.18169
+  year: 2025
+  doi: ''
+  url: https://arxiv.org/abs/2501.18169
+  access: abstract_only
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: photonic_rails_arxiv_2025
+  type: report
+  title: Photonic Rails in ML Datacenters
+  authors: (authors as listed on arXiv:2507.08119)
+  venue: arXiv:2507.08119
+  year: 2025
+  doi: ''
+  url: https://arxiv.org/html/2507.08119
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: zuo_arxiv_2025_cloudmatrix
+  type: report
+  title: Serving Large Language Models on Huawei CloudMatrix384
+  authors: P. Zuo, H. Lin, J. Deng, et al. (Huawei)
+  venue: arXiv:2506.12708v2
+  year: 2025
+  doi: ''
+  url: https://arxiv.org/html/2506.12708v2
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: google_tpu7x_docs
+  type: datasheet
+  title: TPU7x (Ironwood) system architecture
+  authors: Google Cloud
+  venue: docs.cloud.google.com
+  year: 2026
+  doi: ''
+  url: https://docs.cloud.google.com/tpu/docs/tpu7x
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: google_ironwood_stack_blog_2025
+  type: whitepaper
+  title: Inside the Ironwood TPU codesigned AI stack
+  authors: Google Cloud
+  venue: Google Cloud Blog
+  year: 2025
+  doi: ''
+  url: https://cloud.google.com/blog/products/compute/inside-the-ironwood-tpu-codesigned-ai-stack/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nvidia_siph_blog_2025_03
+  type: whitepaper
+  title: A New Era in Data Center Networking with NVIDIA Silicon Photonics-based Network Switching
+  authors: B. Smith (NVIDIA)
+  venue: NVIDIA Technical Blog
+  year: 2025
+  doi: ''
+  url: https://developer.nvidia.com/blog/a-new-era-in-data-center-networking-with-nvidia-silicon-photonics-based-network-switching/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: optics_org_2025_03_gtc_cpo
+  type: press
+  title: Nvidia reveals plan to scale AI 'factories' with co-packaged optics
+  authors: optics.org
+  venue: optics.org news
+  year: 2025
+  doi: ''
+  url: https://optics.org/news/nvidia-reveals-plan-to-scale-ai-factories-with-co-packaged-optics
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: semianalysis_2024_03_nvl72
+  type: press
+  title: 'Nvidia''s Optical Boogeyman: NVL72, Infiniband Scale Out, 800G & 1.6T Ramp'
+  authors: D. Patel, D. Nishball (SemiAnalysis)
+  venue: SemiAnalysis newsletter
+  year: 2024
+  doi: ''
+  url: https://newsletter.semianalysis.com/p/nvidias-optical-boogeyman-nvl72-infiniband
+  access: paywalled
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: nvidia_press_2024_10_xai
+  type: press
+  title: NVIDIA Ethernet Networking Accelerates World's Largest AI Supercomputer, Built by xAI
+  authors: NVIDIA
+  venue: NVIDIA Newsroom press release
+  year: 2024
+  doi: ''
+  url: https://nvidianews.nvidia.com/news/spectrum-x-ethernet-networking-xai-colossus
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: msft_blog_2025_09_fairwater
+  type: press
+  title: Inside the world's most powerful AI datacenter
+  authors: S. Guthrie (Microsoft)
+  venue: The Official Microsoft Blog
+  year: 2025
+  doi: ''
+  url: https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: msft_blog_2025_11_fairwater_atlanta
+  type: press
+  title: 'Infinite scale: The architecture behind the Azure AI superfactory'
+  authors: S. Guthrie (Microsoft)
+  venue: The Official Microsoft Blog
+  year: 2025
+  doi: ''
+  url: https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: msft_onissues_2025_09_fairwater
+  type: press
+  title: 'Made in Wisconsin: The world''s most powerful AI datacenter'
+  authors: B. Smith (Microsoft)
+  venue: Microsoft On the Issues blog
+  year: 2025
+  doi: ''
+  url: https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02

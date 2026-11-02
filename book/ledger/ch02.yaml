@@ -1,0 +1,1661 @@
+records:
+# ---------------------------------------------------------------- 2.1
+- id: ch02.nyq.rc_bandwidth
+  section: '2.1'
+  claim: Occupied (two-sided) bandwidth of a raised-cosine shaped signal is 2(1+β)W with symbol interval T0 = 1/(2W), i.e. (1+β)/T0 = (1+ρ)R_s
+  value: "2(1+β)W, with T0 = 1/(2W)"
+  unit: Hz
+  kind: fact
+  conditions:
+    note: "β is the roll-off factor (book symbol ρ); W is the Nyquist one-sided bandwidth; so B = (1+ρ)R_s with R_s = 1/T0"
+  source_id: ishihara_access_2021
+  locator: Sect. II, text following Eqs. (18)-(19)
+  quote: "the bandwidth of an RC shaping filter is given by 2(1 + β)W , where β denotes a roll-off factor"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Wireless/general comms review, not optics-specific; the formula is generic. Equation record ch02.eq.rc_spectrum carries the spectrum.
+- id: ch02.nyq.rc_rolloff_zero_rect
+  section: '2.1'
+  claim: Raised-cosine filter with roll-off 0 reduces to the rectangular (sinc-pulse) Nyquist filter
+  value: 0
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "roll-off β = 0"
+  source_id: ishihara_access_2021
+  locator: Sect. II, after Eq. (19)
+  quote: "The RC shaping filter having a roll-off factor of β = 0 corresponds to the rectangular shaping filter."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.nyq.min_spacing_equals_rs
+  section: '2.1'
+  claim: Minimum Nyquist-WDM channel spacing with potentially no penalty versus ideal matched filtering equals the symbol rate
+  value: 1.0
+  unit: R_s
+  kind: fact
+  conditions:
+    note: "ideal rectangular/raised-cosine Nyquist spectrum"
+  source_id: bosco_ofc_2012
+  locator: Slide 'The Nyquist spectrum'
+  quote: "The minimum channel spacing with potentially no penalty with respect to the ideal matched filter case is equal to the symbol-rate Rs"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Tutorial slides accompanying OFC 2012 OM3H.1; same slides use square-root raised cosine with roll-off 0.05 at spacing 1.1 Rs for 14-GBd PM-16QAM.
+- id: ch02.sym.400zr_symbol_rate
+  section: '2.1'
+  claim: 400ZR DP-16QAM nominal symbol rate
+  value: 59.84375
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    interface: OIF 400ZR
+    modulation: DP-16QAM
+  source_id: oif_400zr_01_2020
+  locator: Sect. 12.5 'Frame Expansion Rate'
+  quote: "The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: OIF IAs are listed as tier A in SCHEMA.md ('OIF standard'), PIPELINE.md treats MSAs as B. The '478.750 Gbps per polarization' wording is as printed; 59.84375 GBd x 8 bit/symbol (dual-pol 16QAM) = 478.75 Gb/s total, so 'per polarization' appears to modify the symbol rate only.
+- id: ch02.sym.400zr_line_rate
+  section: '2.1'
+  claim: 400ZR total line bit rate including FEC, pilots and framing
+  value: 478.75
+  unit: Gb/s
+  kind: spec_typ
+  conditions:
+    interface: OIF 400ZR
+  source_id: oif_400zr_01_2020
+  locator: Sect. 12.5
+  quote: "The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Use as a check on R_b = N_pol R_s log2(M) (2 x 59.84375 x 4 = 478.75).
+- id: ch02.sym.400zr_bits_per_symbol
+  section: '2.1'
+  claim: Each 128-bit Hamming codeword maps to 16 DP-16QAM symbols (8 bits per dual-polarization symbol)
+  value: 8
+  unit: bit/symbol
+  kind: fact
+  conditions:
+    interface: OIF 400ZR
+  source_id: oif_400zr_03_2024
+  locator: Sect. 11, symbol mapping
+  quote: "Each 128-bit code word is mapped to 16 DP-16QAM symbols"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.sym.400zr_pilot_period
+  section: '2.1'
+  claim: 400ZR pilot symbol insertion period
+  value: 32
+  unit: symbols
+  kind: spec_typ
+  conditions:
+    interface: OIF 400ZR
+    note: "pilots are QPSK on the outer 4 points of 16QAM"
+  source_id: oif_400zr_03_2024
+  locator: Sect. 12, DSP framing
+  quote: "Pilot symbols are inserted every 32 symbols, starting with the first symbol of each DSP super-frame."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Pilot overhead 1/32 enters the R_s vs net-rate bookkeeping.
+- id: ch02.sym.400zr_superframe
+  section: '2.1'
+  claim: 400ZR DSP super-frame length per polarization (49 sub-frames of 3712 symbols)
+  value: 181888
+  unit: symbols
+  kind: spec_typ
+  conditions:
+    interface: OIF 400ZR
+  source_id: oif_400zr_01_2020
+  locator: Sect. 12, DSP framing
+  quote: "A DSP super-frame is defined as a set of 181888 symbols in each of the X/Y polarization. A DSP sub-frame consists of 3712 symbols."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.sym.p2pco_200g_qpsk_rate
+  section: '2.1'
+  claim: CableLabs P2PCO 200G DP-QPSK symbol rate (oFEC framing)
+  value: 63.139467923
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    interface: CableLabs P2PCO PHYv2.0, 200G DP-QPSK
+    tolerance: "+/- 20 ppm"
+  source_id: cablelabs_p2pco_phy2_2019
+  locator: Sect. 8.2.1 'Symbol Rate (200G QPSK)'
+  quote: "The transceiver MUST support a symbol rate of 63.139467923 Gbaud with the modulation format described in Section 8.2.2."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.sym.lambda_pam4_rate
+  section: '2.1'
+  claim: 100G-FR/100G-LR PAM4 signaling rate per lane
+  value: 53.125
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    interface: 100G Lambda MSA 100G-FR, 100G-LR
+    tolerance: "+/- 100 ppm"
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "PAM4 Signaling rate, (range) | | 53.125 ± 100 ppm | 53.125 ± 100 ppm | GBd"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.sym.binary_se_limit
+  section: '2.1'
+  claim: Spectral efficiency achievable with binary formats under practical DWDM filter constraints (per polarization)
+  value: 0.8
+  unit: bit/s/Hz
+  kind: fact
+  conditions:
+    note: "OOK/DPSK, one bit per symbol, circa 2007"
+  source_id: ip_oe_2008
+  locator: Sect. 1, p. 757
+  quote: "these are able to achieve spectral efficiencies of 0.8 bit/s/Hz per polarization."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.sym.kikuchi_40g_16ghz
+  section: '2.1'
+  claim: Early polarization-multiplexed QPSK coherent demonstration, 40 Gb/s in 16 GHz channel bandwidth (2.5 bit/s/Hz)
+  value: 2.5
+  unit: bit/s/Hz
+  kind: record
+  conditions:
+    bit_rate_Gbps: 40
+    channel_bw_GHz: 16
+    note: "offline DSP, reported by Ip et al. citing Kikuchi OFC 2006"
+  source_id: ip_oe_2008
+  locator: Sect. 1, p. 758
+  quote: "Kikuchi demonstrated polarization-multiplexed 4-ary quadrature-amplitude modulation (4-QAM) transmission at 40 Gbit/s with a channel bandwidth of 16 GHz (2.5 bit/s/Hz)"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Secondary report within a tier-A review; original is Kikuchi OFC 2006 OTuI4 (not read).
+# ---------------------------------------------------------------- 2.2
+- id: ch02.imdd.pam4_penalty_optical
+  section: '2.2'
+  claim: Ideal SNR modulation penalty of PAM-4 relative to NRZ, in optical dB, given by 10 log10(M-1)
+  value: 4.8
+  unit: dB
+  kind: model_param
+  conditions:
+    note: "equal OMA (peak-to-peak optical power); optical dB; electrical dB is twice this (9.5 dB)"
+  source_id: cole_ieee8023bs_2014
+  locator: Slide 'PAM, QAM SNR Modulation Penalty'
+  quote: "PAM-M modulation penalty = 10*log10(M-1) ● PAM-2 (NRZ) = 0 dB ● PAM-4 = 4.8 dB"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Task-force contribution, not the standard. Electrical-domain 9.5 dB form in ch02.imdd.pam4_penalty_electrical. 10log10(3) = 4.77 dB; 20log10(3) = 9.54 dB.
+- id: ch02.imdd.pam16_penalty_optical
+  section: '2.2'
+  claim: Ideal SNR modulation penalty of PAM-16 relative to NRZ (optical dB)
+  value: 11.8
+  unit: dB
+  kind: model_param
+  conditions:
+    note: "equal OMA; optical dB"
+  source_id: cole_ieee8023bs_2014
+  locator: Slide 'PAM, QAM SNR Modulation Penalty'
+  quote: "PAM-4 = 4.8 dB ● PAM-16 = 11.8 dB ■ QAM-M modulation penalty = 10*log10(√M -1)"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.qam16_penalty_optical
+  section: '2.2'
+  claim: Ideal SNR modulation penalty of 16-QAM relative to QAM-4, 10 log10(sqrt(M)-1), optical dB
+  value: 4.8
+  unit: dB
+  kind: model_param
+  conditions:
+    note: "same-peak-amplitude comparison; optical dB"
+  source_id: cole_ieee8023bs_2014
+  locator: Slide 'PAM, QAM SNR Modulation Penalty'
+  quote: "QAM-M modulation penalty = 10*log10(√M -1) ● QAM-4 = 0 dB ● QAM-16 = 4.8 dB"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.pam4_penalty_electrical
+  section: '2.2'
+  claim: SNR reduction of PAM-4 relative to NRZ in the electrical (voltage) domain for equal swing
+  value: 9.5
+  unit: dB
+  kind: model_param
+  conditions:
+    note: "equal peak-to-peak voltage swing; electrical SNR"
+  source_id: lu_islped_2018
+  locator: Sect. 1 (Introduction)
+  quote: "Compared to conventional non-return-to-zero (NRZ) signaling, PAM-4 suffers a 9.5-dB reduction in signal-to-noise-ratio (SNR) due to the splitting of signal levels"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Consistent with ch02.imdd.pam4_penalty_optical (4.8 dB optical = 9.5 dB electrical, square-law detection).
+- id: ch02.imdd.pamn_eye_height
+  section: '2.2'
+  claim: PAM-N eye height is reduced by a factor (N-1) relative to NRZ OOK at equal peak-to-peak amplitude
+  value: "N-1"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "IM/DD, equal peak-to-peak signal amplitude"
+  source_id: pang_jlt_2020
+  locator: Sect. on PAM (modulation formats)
+  quote: "its eye height is reduced by a factor of (N-1) compared to that of NRZ OOK, given the same signal amplitude peak-to-peak"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Basis for the derivation 20log10(N-1) electrical penalty.
+- id: ch02.imdd.tdecq_max_100g_fr
+  section: '2.2'
+  claim: Maximum TDECQ for 100G-FR and 100G-LR transmitters
+  value: 3.4
+  unit: dB
+  kind: spec_max
+  conditions:
+    interface: 100G Lambda MSA 100G-FR, 100G-LR (53.125 GBd PAM4)
+    note: "TDECQ - 10log10(Ceq) also <= 3.4 dB"
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "Transmitter and dispersion penalty eye closure for PAM4 (TDECQ), (max) | | 3.4 | 3.4 | dB"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: MSA spec references IEEE 802.3cd clause 140.7.5 for the method. IEEE 802.3bs/cd/ck text itself was not read (paywalled); the 802.3 400GBASE-DR4 TDECQ limit is a gap.
+- id: ch02.imdd.oma_min_100g_fr
+  section: '2.2'
+  claim: Minimum OMAouter of a 100G-FR transmitter
+  value: -0.2
+  unit: dBm
+  kind: spec_min
+  conditions:
+    interface: 100G-FR
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "Outer Optical Modulation Amplitude (OMAouter), | | b (min) -0.2 | 0.7 | dBm"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Table extraction places footnote letter b in the cell; 100G-LR value is 0.7 dBm.
+- id: ch02.imdd.oma_min_100g_lr
+  section: '2.2'
+  claim: Minimum OMAouter of a 100G-LR transmitter
+  value: 0.7
+  unit: dBm
+  kind: spec_min
+  conditions:
+    interface: 100G-LR
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "Outer Optical Modulation Amplitude (OMAouter), | | b (min) -0.2 | 0.7 | dBm"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.oma_minus_tdecq_100g_fr
+  section: '2.2'
+  claim: Minimum launch power in OMAouter minus TDECQ for 100G-FR (extinction ratio >= 4.5 dB)
+  value: -1.6
+  unit: dBm
+  kind: spec_min
+  conditions:
+    interface: 100G-FR
+    extinction_ratio: ">= 4.5 dB (value -1.5 dBm for ER < 4.5 dB)"
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "for extinction ratio ≥ 4.5 dB | -1.6 | -0.7 | dBm"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 100G-LR value is -0.7 dBm.
+- id: ch02.imdd.er_min_100g_fr
+  section: '2.2'
+  claim: Minimum extinction ratio for 100G-FR and 100G-LR
+  value: 3.5
+  unit: dB
+  kind: spec_min
+  conditions:
+    interface: 100G-FR, 100G-LR
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "Extinction ratio (min) | | 3.5 | 3.5 | dB"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.rin_oma_max_100g
+  section: '2.2'
+  claim: Maximum transmitter RIN referred to OMA (RIN17.1OMA for FR, RIN15.6OMA for LR)
+  value: -136
+  unit: dB/Hz
+  kind: spec_max
+  conditions:
+    interface: 100G-FR (ORL 17.1 dB), 100G-LR (ORL 15.6 dB)
+    measurement: "IEEE 802.3 clause 52.9.6 method, receiver bandwidth about 53.2 GHz"
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2 and Sect. 3.9
+  quote: "RIN17.1 | OMA (max) for LR OMA (max) for FR, RIN15.6 | -136 | -136 | dB/Hz"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Table cell text is scrambled in extraction; Sect. 3.9 clarifies RIN17.1OMA applies to FR and RIN15.6OMA to LR. IEEE 400GBASE-DR4 RIN21.4OMA value not read (gap).
+- id: ch02.imdd.orl_tolerance_100g_fr
+  section: '2.2'
+  claim: Optical return loss tolerance (max) for 100G-FR
+  value: 17.1
+  unit: dB
+  kind: spec_max
+  conditions:
+    interface: 100G-FR (100G-LR value 15.6 dB)
+  source_id: lambda_msa_100g_fr_lr_rev2
+  locator: Table 2-2
+  quote: "Optical return loss tolerance (max) | | 17.1 | 15.6 | dB"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.tdecq_qt
+  section: '2.2'
+  claim: Q-factor constant Qt in the TDECQ definition, consistent with the target SER for Gray-coded PAM4
+  value: 3.414
+  unit: '1'
+  kind: constant
+  conditions:
+    note: "TDECQ = 10 log10(OMAouter / (6 Qt R))"
+  source_id: king_ieee8023bs_2016
+  locator: Proposed text for 123.8.5.3 'TDECQ measurement method'
+  quote: "where Qt= 3.414 consistent with the BER and target symbol error ratio for Gray coded PAM4."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Proposed draft text; the formula glyphs were dropped in extraction (see ch02.eq.tdecq). Adopted in IEEE 802.3 Eq. (121-12) per Cole 3cu 2019; the published standard was not read.
+- id: ch02.imdd.tdecq_target_ser
+  section: '2.2'
+  claim: Target symbol error ratio used to find the maximum added Gaussian noise sigma_G in the TDECQ method
+  value: 4.8e-4
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    note: "BER 2.4e-4 with Gray coding; either left or right histogram"
+  source_id: king_ieee8023bs_2016
+  locator: Proposed text for 123.8.5.3
+  quote: "The smallest size of σG is found that makes the sum of the partial SERs equal to the target SER = 4.8 x 10-4"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.tdecq_ref_filter_bw
+  section: '2.2'
+  claim: Noise bandwidth (4th-order Bessel-Thomson) used to compute the equalizer noise enhancement Ceq in the 400GBASE draft TDECQ method
+  value: 19.34
+  unit: GHz
+  kind: spec_typ
+  conditions:
+    note: "draft 802.3bs text for 26.5625 GBd PAM4; Cole 3cu 2019 quotes 26.6 GHz for the 53.125 GBd case"
+  source_id: king_ieee8023bs_2016
+  locator: Proposed text for 123.8.5.3
+  quote: "white noise filtered by a fourth-order Bessel-Thomson response filter with a bandwidth of 19.34 GHz."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+- id: ch02.imdd.mpi_penalty_200g_dr4
+  section: '2.2'
+  claim: MPI penalty allocated in a proposed 200G-DR4 PAM4 link budget
+  value: 0.1
+  unit: dB
+  kind: model_param
+  conditions:
+    interface: 200G-DR4 proposal, 26.5625 GBd PAM4, 500 m
+    reflections: "max discrete reflectance -45 dB, max 4 reflections"
+  source_id: welch_ieee8023bs_2016
+  locator: '200G-DR4 : Link Parameters table'
+  quote: "Allocation for penalties, at max TDECQ (dB) ‡ 2.6 dB MPI Penalty 0.1 dB Power margin, at min TDECQ 9.1 dB"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.mpi_penalty_dr4_mazzini
+  section: '2.2'
+  claim: Proposed maximum deterministic MPI penalty for 400GBASE-DR4 (55 dB MPO APC return loss, 26 dB Tx/Rx reflectance)
+  value: 0.15
+  unit: dB
+  kind: model_param
+  conditions:
+    interface: 400GBASE-DR4 (proposal)
+    note: "400GBASE-FR8 proposal 0.5 dB with 35 dB LC return loss"
+  source_id: mazzini_ieee8023bs_2015
+  locator: Conclusions, item 4
+  quote: "Consider 55dB for MPO APC connector -> proposed max 0.15 dB for 400GBASE-DR4."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.mpi_penalty_fr8_mazzini
+  section: '2.2'
+  claim: Maximum deterministic MPI penalty for 400GBASE-FR8 with 35 dB LC return loss and 26 dB Tx/Rx reflectance
+  value: 0.5
+  unit: dB
+  kind: model_param
+  conditions:
+    interface: 400GBASE-FR8 (proposal)
+  source_id: mazzini_ieee8023bs_2015
+  locator: Conclusions, item 3
+  quote: "Considering 35dB RL for duplex LC connector’s return loss and 26dB TX/RX reflectance -> bring maximum deterministic MPI to be 0.5 dB for the 400GBASE-FR8"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.mpi_bound_casea_2conn
+  section: '2.2'
+  claim: Upper-bound MPI penalty, PAM4 ER 4.5 dB, Tx/Rx/connector reflectance 26 dB, 2 connectors
+  value: 1.43
+  unit: dB
+  kind: model_param
+  conditions:
+    modulation: PAM4
+    extinction_ratio_dB: 4.5
+    reflectances_dB: "Tx 26, Rx 26, connectors 26"
+    discount_factor: 1
+  source_id: bhatt_ieee8023bs_2016
+  locator: Table 1, Case A
+  quote: "Cases Tx Rx Conn Pmpi(2) Pmpi(4) Pmpi(6) Case A 26 26 26 1.43 5.24"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Same table, Case C (connectors 35 dB) gives 0.55/1.05/1.76 dB for 2/4/6 connectors. Bound is deliberately conservative (no discount, worst-case phase).
+- id: ch02.imdd.mpi_bound_casec_4conn
+  section: '2.2'
+  claim: Upper-bound MPI penalty, PAM4 ER 4.5 dB, Tx/Rx 26 dB, connectors 35 dB, 4 connectors
+  value: 1.05
+  unit: dB
+  kind: model_param
+  conditions:
+    modulation: PAM4
+    extinction_ratio_dB: 4.5
+    reflectances_dB: "Tx 26, Rx 26, connectors 35"
+  source_id: bhatt_ieee8023bs_2016
+  locator: Table 1, Case C
+  quote: "Case C 26 26 35 0.55 1.05 1.76"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.mpi_pam2_pam4_gap
+  section: '2.2'
+  claim: MPI tolerance gap between PAM2 and PAM4 at equal sensitivity penalty
+  value: 9.5
+  unit: dB
+  kind: model_param
+  conditions:
+    note: "ER 8 dB, BER floor 1e-15, 0.5 dB sensitivity penalty, Gaussian approximation"
+  source_id: zhang_ieee8023df_2022
+  locator: Slide 'MPI tolerance ... various FEC schemes'
+  quote: "As expected, MPI tolerance strongly depends on the modulation, for example, the well-know 9.5dB gap between PAM2 and PAM4."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.imdd.mpi_postfec_penalty_fei
+  section: '2.2'
+  claim: Post-FEC MPI penalty with multiple reflection paths when pre-FEC metrics indicate only 0.5 dB
+  value: 1.5
+  unit: dB
+  kind: measured
+  conditions:
+    note: "simulation, IM/DD PAM4, multiple reflection paths; value is a lower bound ('exceeding')"
+  source_id: fei_jlt_2025
+  locator: Abstract
+  quote: "while pre-FEC metrics indicate an MPI penalty of merely 0.5dB, cases involving multiple reflection paths show a penalty exceeding 1.5dB in terms of post-FEC performance."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Simulation result, not measurement; kind 'measured' used for a reported study outcome.
+# ---------------------------------------------------------------- 2.3
+- id: ch02.coh.balanced_sqrt_plo
+  section: '2.3'
+  claim: Balanced-detector output current is proportional to the square root of LO power, so high LO power lifts the signal above receiver thermal noise toward the quantum limit
+  value: "I ∝ sqrt(P_LO)"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "Eq. (13)"
+  source_id: kikuchi_jlt_2016
+  locator: Sect. II.A, text after Eq. (13)
+  quote: "the photocurrent given by Eq. (13) is proportional to √P . Therefore, as the LO power in creases, a gain for the photocurrent"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.balanced_removes_dc
+  section: '2.3'
+  claim: Balanced detection with a 3-dB coupler (180 degree relative phase between ports) suppresses the dc (direct-detection) terms and keeps only the signal-LO beat
+  value: "dc terms cancel"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "co-polarized signal and LO"
+  source_id: kikuchi_jlt_2016
+  locator: Sect. II.A, before Eq. (8) and after Eq. (13)
+  quote: "We find that only the beat between the signal and the LO is measured with balanced detection."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.lo_shot_noise_psd
+  section: '2.3'
+  claim: Two-sided PSD of LO shot noise at a balanced photodetector when P_LO >> P_s
+  value: "q R P_LO"
+  unit: A^2/Hz
+  kind: fact
+  conditions:
+    note: "R responsivity, q electron charge"
+  source_id: ip_oe_2008
+  locator: Sect. 3.3, text after Eq. (7)
+  quote: "Assuming PLO >> Ps , I ( )t sh,l has a two-sided psd of ( ) SIsh f = qRPLO A 2/Hz."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.ase_vs_shot_limited
+  section: '2.3'
+  claim: Long-haul amplified coherent systems are ASE-limited (LO-ASE beat dominates LO shot noise); unamplified systems are LO-shot-noise-limited
+  value: "ASE-limited (amplified) / LO shot-noise-limited (unamplified)"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "thermal noise neglected as always smaller than shot and ASE noise"
+  source_id: ip_oe_2008
+  locator: Sect. 3.3, after Eqs. (10)-(11)
+  quote: "In long-haul systems, the psd of LO-spontaneous beat noise is typically much larger than that of LO shot noise; such systems are thus ASE-limited."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.heterodyne_equals_homodyne
+  section: '2.3'
+  claim: Heterodyne and two-quadrature (phase-diversity) homodyne downconverters have the same performance, given image-band optical filtering for heterodyne
+  value: 0
+  unit: dB
+  kind: fact
+  conditions:
+    note: "difference between the two"
+  source_id: ip_oe_2008
+  locator: Sect. 3.3, after Eq. (11)
+  quote: "Hence, the heterodyne and the two-quadrature homodyne downconverters have the same performance [23]."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.single_quadrature_homodyne_gain
+  section: '2.3'
+  claim: Sensitivity improvement of single-quadrature homodyne (one-quadrature signal, LO-shot-noise-limited) over heterodyne or two-quadrature homodyne
+  value: 3
+  unit: dB
+  kind: fact
+  conditions:
+    note: "only for one-quadrature formats such as 2-PSK in shot-noise-limited systems"
+  source_id: ip_oe_2008
+  locator: Sect. 3.3
+  quote: "thus yielding a sensitivity improvement of 3 dB compared to heterodyne or two-quadrature homodyne downconversion."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.opll_bandwidth
+  section: '2.3'
+  claim: Historical OPLL bandwidth limit for homodyne receivers, due to loop delay
+  value: 1
+  unit: MHz
+  kind: fact
+  conditions:
+    note: "1980s-1990s OPLL homodyne receivers; upper limit ('below')"
+  source_id: kikuchi_jlt_2016
+  locator: Sect. I (History)
+  quote: "The OPLL bandwidth was usually limited below 1 MHz because of large loop delay"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.quantum_limit_with_lo
+  section: '2.3'
+  claim: Shot-noise-limited (quantum-noise-limited) receiver sensitivity is reached by injecting sufficiently high LO power to overcome receiver circuit noise
+  value: "shot-noise-limited"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "historical sensitivity analyses [18],[19] in Kikuchi"
+  source_id: kikuchi_jlt_2016
+  locator: Sect. I (History)
+  quote: "quantum-noise-limited receiver sensitivity (also called shot-noise-limited receiver sensitivity) could be achieved by injecting a sufficiently high LO power into the coherent receiver"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.coh.first_realtime_coherent
+  section: '2.3'
+  claim: First real-time coherent detection (2006), 800 Mb/s 4-QAM with 5-bit ADCs and an FPGA
+  value: 0.8
+  unit: Gb/s
+  kind: record
+  conditions:
+    year: 2006
+    adc_bits: 5
+  source_id: ip_oe_2008
+  locator: Sect. 1, p. 758
+  quote: "an 800 Mbit/s 4-QAM signal was coherently detected using a receiver with 5-bit analog-to-digital converters"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Secondary report of Pfau et al. PTL 2006 (not read).
+# ---------------------------------------------------------------- 2.4
+- id: ch02.dsp.cd_edc_6400km_penalty
+  section: '2.4'
+  claim: OSNR penalty for digital CD compensation of 6400 km SMF without inline DCF at 42.8 Gb/s
+  value: 1.2
+  unit: dB
+  kind: record
+  conditions:
+    bit_rate_Gbps: 42.8
+    distance_km: 6400
+    note: "PDM-QPSK, Savory et al. OFC 2007"
+  source_id: ip_oe_2008
+  locator: Sect. 1, p. 758
+  quote: "compensating the chromatic dispersion (CD) in 6,400 km of SMF without inline dispersion compensating fiber (DCF), with only 1.2 dB OSNR penalty"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Secondary report within review; primary Savory OFC 2007 OTuA1 not read.
+- id: ch02.dsp.savory_taps_per_ps_nm
+  section: '2.4'
+  claim: Simulated bound on CD-compensating FIR taps, 2.2 taps per 1000 ps/nm at 10.7 GBd
+  value: 2.2
+  unit: taps per 1000 ps/nm
+  kind: model_param
+  conditions:
+    symbol_rate_GBd: 10.7
+  source_id: savory_oe_2008
+  locator: Abstract
+  quote: "with simulation revealing an improved bound of 2.2 taps per 1000ps/nm for 10.7GBaud data."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Tap count scales with R_s^2 (see ch02.eq.cd_taps_ip).
+- id: ch02.dsp.savory_pol_tracking
+  section: '2.4'
+  claim: Polarization rotation rate trackable by DSP with clock below 500 MHz (simulation)
+  value: 100
+  unit: krad/s
+  kind: model_param
+  conditions:
+    clock_MHz: "< 500"
+  source_id: savory_oe_2008
+  locator: Abstract
+  quote: "it is demonstrated that 100krad/s polarization rotations could be tracked using DSP with a clock frequency of less than 500MHz."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch02.dsp.fse_oversampling_min
+  section: '2.4'
+  claim: Minimum oversampling ratio M/K for a fractionally spaced equalizer to compensate arbitrary CD and first-order PMD with less than 2 dB penalty
+  value: 1.5
+  unit: samples/symbol
+  kind: model_param
+  conditions:
+    anti_aliasing: "5th-order Butterworth, 3-dB bandwidth 0.4 (M/K) R_s"
+    penalty_dB: "< 2"
+  source_id: ip_oe_2008
+  locator: Sect. 5.1
+  quote: "CD and first-order PMD can be compensated with less than 2 dB power penalty provided the oversampling rate M K ≥ 3 2"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Fraction M/K >= 3/2 rendered as 'M K ≥ 3 2' in extraction. Primary analysis in Ip and Kahn JLT 2007.
+- id: ch02.dsp.td_fir_complexity
+  section: '2.4'
+  claim: Complexity of direct time-domain dual-polarization linear equalization, 4 N R_s complex multiplications per second
+  value: "4 N R_s"
+  unit: complex multiplications/s
+  kind: fact
+  conditions:
+    note: "N taps per filter, 2x2 butterfly"
+  source_id: ip_oe_2008
+  locator: Sect. 5.1, after Eq. (32)
+  quote: "The complexity of directly implementing Eq. (32) is NRs 4 complex multiplications per second."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: See ch02.eq.fde_complexity for the FFT block form; asymptotic complexity grows as R_s^2 log R_s per Ip.
+- id: ch02.dsp.bps_lw_4qam
+  section: '2.4'
+  claim: Tolerable linewidth-symbol duration product for blind phase search, 4-QAM, 1 dB penalty at BER 1e-3
+  value: 4.1e-4
+  unit: '1'
+  kind: model_param
+  conditions:
+    modulation: 4-QAM (QPSK)
+    penalty_dB: 1
+    BER: 1e-3
+  source_id: pfau_jlt_2009
+  locator: Abstract; Table I
+  quote: "linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM), 4.0 x 10-5(64-QAM) and 8.0 x 10-6(256-QAM) are tolerable."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.dsp.bps_lw_16qam
+  section: '2.4'
+  claim: Tolerable linewidth-symbol duration product for blind phase search, 16-QAM, 1 dB penalty at BER 1e-3
+  value: 1.4e-4
+  unit: '1'
+  kind: model_param
+  conditions:
+    modulation: 16-QAM
+    penalty_dB: 1
+    BER: 1e-3
+  source_id: pfau_jlt_2009
+  locator: Abstract; Table I
+  quote: "linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM), 4.0 x 10-5(64-QAM) and 8.0 x 10-6(256-QAM) are tolerable."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.dsp.bps_lw_64qam
+  section: '2.4'
+  claim: Tolerable linewidth-symbol duration product for blind phase search, 64-QAM, 1 dB penalty at BER 1e-3
+  value: 4.0e-5
+  unit: '1'
+  kind: model_param
+  conditions:
+    modulation: 64-QAM
+    penalty_dB: 1
+    BER: 1e-3
+  source_id: pfau_jlt_2009
+  locator: Abstract; Table I
+  quote: "linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM), 4.0 x 10-5(64-QAM) and 8.0 x 10-6(256-QAM) are tolerable."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.dsp.bps_lw_256qam
+  section: '2.4'
+  claim: Tolerable linewidth-symbol duration product for blind phase search, 256-QAM, 1 dB penalty at BER 1e-3
+  value: 8.0e-6
+  unit: '1'
+  kind: model_param
+  conditions:
+    modulation: 256-QAM
+    penalty_dB: 1
+    BER: 1e-3
+  source_id: pfau_jlt_2009
+  locator: Abstract; Table I
+  quote: "linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM), 4.0 x 10-5(64-QAM) and 8.0 x 10-6(256-QAM) are tolerable."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.dsp.bps_test_phases
+  section: '2.4'
+  claim: Range of the number of BPS test phases B, making BPS hardware roughly B times a QPSK carrier-recovery block
+  value: [16, 64]
+  unit: test phases
+  kind: model_param
+  conditions:
+    note: "symbol B dropped in extraction"
+  source_id: pfau_jlt_2009
+  locator: Sect. IV.D 'Overall Hardware Effort', p. 993
+  quote: "It may be viewed as a large increase since is in the range of 16 to 64."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: The variable name (B) was lost in PDF extraction; context is the number of test carrier phase angles.
+- id: ch02.dsp.bps_16qam_min_penalty
+  section: '2.4'
+  claim: Minimum sensitivity penalty of BPS for 16-QAM (including differential quadrant coding), versus 0.4 dB for an ideal receiver
+  value: 0.6
+  unit: dB
+  kind: model_param
+  conditions:
+    modulation: 16-QAM
+    note: "4-QAM: 0.7 dB (BPS) vs 0.5 dB (ideal)"
+  source_id: pfau_jlt_2009
+  locator: Sect. V.A, p. 994
+  quote: "For 16-QAM the minimum penalties decreases (0.4 dB for the ideal receiver, 0.6 dB for the proposed algorithm)"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.dsp.bps_estimator_efficiency
+  section: '2.4'
+  claim: Maximum BPS phase-estimator efficiency relative to the CRLB, 4-QAM (falls to about 30% for 256-QAM)
+  value: 0.85
+  unit: '1'
+  kind: model_param
+  conditions:
+    note: "16-QAM and 64-QAM about 60%; 256-QAM about 30%"
+  source_id: pfau_jlt_2009
+  locator: Sect. V.C, p. 995
+  quote: "the maximum achievable efficiency reduces from 85% for 4-QAM to 60% for 16-QAM and 64-QAM to finally around 30% for 256-QAM."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.dsp.gardner_two_samples
+  section: '2.4'
+  claim: Gardner timing-error detector requires only two samples per symbol, one of which is also used for the decision
+  value: 2
+  unit: samples/symbol
+  kind: fact
+  conditions:
+    modulation: BPSK/QPSK, band-limited
+  source_id: gardner_tcom_1986
+  locator: Abstract
+  quote: "The algorithm requires only two samples per symbol for its operation. One of the two samples is also used for the symbol decision."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; the detector equation itself was not read (gap).
+- id: ch02.dsp.crivelli_cd_range
+  section: '2.4'
+  claim: CD compensated by a 40 nm single-chip 50 Gb/s DP-QPSK frequency-domain equalizer (3500 km SSMF), with 0.5 dB OSNR penalty
+  value: 55
+  unit: ns/nm
+  kind: measured
+  conditions:
+    bit_rate_Gbps: 50
+    modulation: DP-QPSK/BPSK
+    distance_km: 3500
+    osnr_penalty_dB: 0.5
+  source_id: crivelli_tcasi_2014
+  locator: Abstract
+  quote: "OSNR penalty when compensating 55 ns/nm CD (corresponding to 3,500 km of standard single-mode fiber) is 0.5 dB."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Same chip compensates 200 ps DGD and 8000 ps^2 SOPMD at 0.1 dB penalty.
+- id: ch02.dsp.crivelli_dgd
+  section: '2.4'
+  claim: DGD compensated by the 4-D MIMO time-domain equalizer of the 50 Gb/s single-chip coherent transceiver
+  value: 200
+  unit: ps
+  kind: measured
+  conditions:
+    sopmd_ps2: 8000
+    osnr_penalty_dB: 0.1
+  source_id: crivelli_tcasi_2014
+  locator: Abstract
+  quote: "Measured optical signal-to-noise ratio (OSNR) penalty when compensating 200 ps DGD and 8000 ps2is 0.1 dB"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch02.dsp.crivelli_parallelism
+  section: '2.4'
+  claim: DSP parallelism of the 50 Gb/s single-chip coherent transceiver (16-way), with 4-channel 25 GS/s 6-bit ADCs
+  value: 16
+  unit: parallel lanes
+  kind: fact
+  conditions:
+    adc: "4 x 25 GS/s, 6 bit, 8-way interleaved flash"
+  source_id: crivelli_tcasi_2014
+  locator: Abstract
+  quote: "Each ADC channel is based on an 8-way interleaved flash architecture. The DSP uses a 16-way parallel processing architecture."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+# ---------------------------------------------------------------- 2.5
+- id: ch02.ir.shaping_gain_ultimate
+  section: '2.5'
+  claim: Ultimate shaping gain upper bound 10 log10(pi e / 6) of Gaussian over uniform inputs
+  value: 1.53
+  unit: dB
+  kind: constant
+  conditions:
+    note: "AWGN, high-SNR limit; cites Forney et al. 1984 [13, Sec. IV.B]"
+  source_id: bocherer_tcom_2015
+  locator: Sect. III-D 'Shaping Gap'
+  quote: "the shaping gain increases and approaches the upper bound of $10\\log_{10}\\frac{\\pi e}{6}\\approx 1.53$ dB [13, Sec. IV.B]."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Read from the arXiv version (ar5iv). Original Forney/Gallager/Lang/Longstaff/Qureshi IEEE JSAC 1984 not read.
+- id: ch02.ir.mb_gain_64ask_rate5
+  section: '2.5'
+  claim: MB shaping gain over uniform 64-ASK at 5 bit per channel use
+  value: 1.33
+  unit: dB
+  kind: model_param
+  conditions:
+    constellation: 64-ASK (one dimension of 4096-QAM)
+    rate_bits_per_1D: 5
+  source_id: bocherer_tcom_2015
+  locator: Sect. III-D; Table I
+  quote: "For 64-ASK and a rate of 5 bits per channel use, the shaping gain is $1.33\\text{\\,}\\mathrm{dB}$ ."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.mb_gain_8ask_rate2
+  section: '2.5'
+  claim: MB-shaped 8-ASK SNR advantage over uniform 8-ASK at 2 bit per real dimension (64-QAM-class at 4 bit per 2D symbol)
+  value: 0.7761
+  unit: dB
+  kind: model_param
+  conditions:
+    constellation: 8-ASK
+    rate_bits_per_1D: 2
+  source_id: bocherer_tcom_2015
+  locator: Table I, row 8ASK
+  quote: "| 8ASK | 2 | 11.8425 | 12.6187 | -0.7761 | 11.7609 | 0.0816 |"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Columns are constellation, rate, SNR of MB input, SNR of uniform ASK, gap to uniform, capacity SNR, gap to capacity.
+- id: ch02.ir.uniform_4ask_snr_rate1
+  section: '2.5'
+  claim: SNR required by uniform 4-ASK (16-QAM per dimension) to achieve 1 bit per real dimension (MI), versus 4.7712 dB for AWGN capacity
+  value: 5.1181
+  unit: dB
+  kind: model_param
+  conditions:
+    constellation: uniform 4-ASK
+    rate_bits_per_1D: 1
+    capacity_snr_dB: 4.7712
+  source_id: bocherer_tcom_2015
+  locator: Table I, row 4ASK
+  quote: "| 4ASK | 1 | 4.8180 | 5.1181 | -0.3001 | 4.7712 | 0.0468 |"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Gap of uniform 16-QAM to Shannon at 2 bit per 2D symbol = 5.1181 - 4.7712 = 0.35 dB (compute in calc).
+- id: ch02.ir.uniform_8ask_snr_rate2
+  section: '2.5'
+  claim: SNR required by uniform 8-ASK (64-QAM per dimension) to achieve 2 bit per real dimension, versus 11.7609 dB for AWGN capacity
+  value: 12.6187
+  unit: dB
+  kind: model_param
+  conditions:
+    constellation: uniform 8-ASK
+    rate_bits_per_1D: 2
+    capacity_snr_dB: 11.7609
+  source_id: bocherer_tcom_2015
+  locator: Table I, row 8ASK
+  quote: "| 8ASK | 2 | 11.8425 | 12.6187 | -0.7761 | 11.7609 | 0.0816 |"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Gap of uniform 64-QAM to Shannon at 4 bit per 2D symbol = 0.86 dB (compute in calc).
+- id: ch02.ir.uniform_16ask_snr_rate3
+  section: '2.5'
+  claim: SNR required by uniform 16-ASK (256-QAM per dimension) to achieve 3 bit per real dimension, versus 17.9934 dB for AWGN capacity
+  value: 19.1681
+  unit: dB
+  kind: model_param
+  conditions:
+    constellation: uniform 16-ASK
+    rate_bits_per_1D: 3
+    capacity_snr_dB: 17.9934
+  source_id: bocherer_tcom_2015
+  locator: Table I, row 16ASK
+  quote: "| 16ASK | 3 | 18.0910 | 19.1681 | -1.0772 | 17.9934 | 0.0975 |"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.pas_gap_published
+  section: '2.5'
+  claim: PAS with DVB-S2 LDPC codes operates within 1.1 dB of AWGN capacity at FER 1e-3 over 1 to 5 bit/s/Hz (published abstract)
+  value: 1.1
+  unit: dB
+  kind: model_param
+  conditions:
+    FER: 1e-3
+    spectral_efficiency: "1 to 5 bit/s/Hz per real dimension, 5 modes"
+  source_id: bocherer_tcom_2015
+  locator: Abstract (IEEE published version)
+  quote: "the new scheme operates within less than 1.1 dB of the AWGN capacity 1/2 log2(1 + SNR)"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: DISAGREEMENT with the arXiv abstract, which says 'within less than 1 dB'. Use the published 1.1 dB.
+- id: ch02.ir.pas_gap_arxiv
+  section: '2.5'
+  claim: PAS gap to AWGN capacity as stated in the arXiv version abstract
+  value: 1.0
+  unit: dB
+  kind: model_param
+  conditions:
+    FER: 1e-3
+  source_id: bocherer_tcom_2015
+  locator: Abstract (arXiv 1502.02733)
+  quote: "At a frame error rate of $10^{-3}$ , the new scheme operates within less than 1 dB of the AWGN capacity"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Preprint wording; differs from the published abstract (1.1 dB). Recorded per SCHEMA rule 3.
+- id: ch02.ir.pas_16ask_gap
+  section: '2.5'
+  claim: Gap to capacity of PAS with rate-5/6 LDPC and 16-ASK
+  value: [0.61, 0.69]
+  unit: dB
+  kind: model_param
+  conditions:
+    code_rate: 5/6
+    constellation: 16-ASK
+  source_id: bocherer_tcom_2015
+  locator: Sect. VI (numerical results)
+  quote: "The rate 5/6 code with 16-ASK has a gap of only 0.61 to 0.69 dB"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.pcs_fixed_rate_loss
+  section: '2.5'
+  claim: Maximum loss from using a single fixed FEC rate 0.8 with ideal PCS, versus fully optimized code rate, for square QAM up to 1024 points
+  value: 0.3
+  unit: dB
+  kind: model_param
+  conditions:
+    code_rate: 0.8
+    note: "equivalently 0.07 bit/symbol per 2D; AWGN"
+  source_id: cho_jlt_2019
+  locator: Sect. II (PAS architecture), discussion of Eq. (6)
+  quote: "the performance loss due to fixed-rate FEC with R c = 0.8 does not exceed 0.07 bits/symbol of IR per two dimensions or 0.3 dB"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.pcs_opt_code_rate_range
+  section: '2.5'
+  claim: Lower bound of the optimum code-rate range with PCS (0.74 < R_c <= 1), versus 0.18 < R_c <= 1 for uniform QAM
+  value: 0.74
+  unit: '1'
+  kind: model_param
+  conditions:
+    note: "Fig. 4 example of Cho & Winzer"
+  source_id: cho_jlt_2019
+  locator: Sect. II, Fig. 4 discussion
+  quote: "we have 0.74 < R * c ≤ 1 for PCS, instead of 0.18 < R * c ≤ 1 for uniform QAM."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.ldpc_gap_0p04
+  section: '2.5'
+  claim: Gap of a long irregular rate-1/2 LDPC code to the modulation-constrained AIR at BER 1e-6
+  value: 0.04
+  unit: dB
+  kind: record
+  conditions:
+    block_length: 1e7
+    iterations: "up to 2000"
+  source_id: cho_jlt_2019
+  locator: Sect. II, end of PAS discussion
+  quote: "may approach the (modulation-constrained) AIR to within 0.04 dB at BER = 10 -6 using belief-propagation decoding with up to 2000 decoding iterations"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Cited by Cho & Winzer as ref [64]; illustrates why closing the last tenths of a dB is easier with shaping than with FEC.
+- id: ch02.ir.mb_max_entropy
+  section: '2.5'
+  claim: The Maxwell-Boltzmann distribution is the maximum-entropy distribution on the PAM alphabet under an average-power constraint
+  value: "MB = max-entropy under power constraint"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "λ = 0 gives uniform, H = m bit per dimension"
+  source_id: cho_jlt_2019
+  locator: Sect. II, Eq. (4)
+  quote: "with λ ≥ 0, which is the maximum-entropy distribution for X under an average-power constraint."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.gmi_for_bmd
+  section: '2.5'
+  claim: For binary FEC with BICM (bit-metric decoding) the relevant AIR is the GMI; MI applies to nonbinary FEC or multilevel coding with multistage decoding
+  value: "GMI (BICM) / MI (NB-CM, MLC-MSD)"
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "uniform symbols assumed in the paper"
+  source_id: alvarado_jlt_2018
+  locator: Sect. I; Table II
+  quote: "For binary FEC (with BICM or with MLC-PDL), however, the relevant quantity is the GMI [7, 8, 9, 10]."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.gmi_not_proven_max
+  section: '2.5'
+  claim: GMI has not been proven to be the largest achievable rate of a bit-wise (BICM) receiver
+  value: "open problem"
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: alvarado_jlt_2018
+  locator: Sect. III-D
+  quote: "The GMI has not been proven to be the largest achievable rate for the BICM receiver."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.ir.hd_threshold_4p7e3
+  section: '2.5'
+  claim: HD-FEC decoding threshold BER of the outer staircase code used to tabulate GMI thresholds for concatenated LDPC + staircase codes
+  value: 4.7e-3
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    note: "inner DVB-S2 LDPC, outer staircase"
+  source_id: alvarado_jlt_2018
+  locator: Sect. II-A, Table I discussion
+  quote: "The GMI is estimated at the HD-FEC decoding threshold of $\\text{BER}=4.7\\times 10^{-3}$"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Compare Smith et al. staircase operating point p = 4.8e-3 (ch02.fec.staircase_p_operating).
+# ---------------------------------------------------------------- 2.6
+- id: ch02.fec.kp4_ber_limit
+  section: '2.6'
+  claim: Maximum BER at the PMD (processed by the PMA) for RS(544,514) 'KP4' FEC Ethernet PHYs, assuming random errors
+  value: 2.4e-4
+  unit: '1'
+  kind: spec_max
+  conditions:
+    fec: RS(544,514)
+    note: "frame loss ratio < 9.2e-13 (50G/100G) or 1.7e-12 (200G/400G) for 64-octet frames"
+  source_id: anslow_ieee8023cd_2016
+  locator: Proposed text for 139.1.1 and 140.1.1
+  quote: "The bit error ratio (BER) when processed by the PMA (Clause 135) shall be less than 2.4 × 10–4"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Task-force contribution proposing standard text; the published IEEE 802.3cd/bs clauses (138-140, 121-124) were not read directly (paywalled at time of retrieval). Ran 2023 states 2.4e-4 is the max BER in existing PHY types.
+- id: ch02.fec.kp4_flr_100g
+  section: '2.6'
+  claim: Frame loss ratio corresponding to BER 2.4e-4 with RS(544,514) for 50G and 100G (random errors)
+  value: 9.2e-13
+  unit: '1'
+  kind: model_param
+  conditions:
+    fec: RS(544,514)
+    frame: 64-octet, minimum IPG
+  source_id: anslow_ieee8023cd_2016
+  locator: Slide 'FLR corresponding to 2.4E-4 for random errors'
+  quote: "The FLR corresponding to a BER of 2.4E-4 for 50G and 100G using RS(544,514) FEC with random errors"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Same slide continues 'This results in a FLR of 9.2 x 10–13'; 200G/400G two-codeword handling changes it to 1.7e-12.
+- id: ch02.fec.kp4_flr_400g
+  section: '2.6'
+  claim: Frame loss ratio target for 200G/400G (and 1.6T/800G 3.4e-12) module-to-module links at BER 2.4e-4
+  value: 1.7e-12
+  unit: '1'
+  kind: spec_max
+  conditions:
+    fec: RS(544,514), 2-codeword interleave
+  source_id: ran_ieee8023dj_2023
+  locator: Slide 'Purpose'
+  quote: "this results in a frame loss ratio of less than 1.7e-12 (200G and 400G) or 3.4e-12 (800G and 1.6T)"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.fec.kp4_relax_penalty
+  section: '2.6'
+  claim: Optical penalty saved by relaxing the 400G PMD BER requirement from 2e-4 to 2.4e-4
+  value: 0.1
+  unit: dB
+  kind: model_param
+  conditions:
+    note: "with symbol interleaving from two RS codewords"
+  source_id: ieee8023bs_d1p0_comments_2015
+  locator: Comment on 121.1.1, 122.1.1, 123.1.1 (accepted)
+  quote: "the BER requirement for all four PMDs could be relaxed to 2.4E-4 (0.1 dB optical penalty)"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.fec.kp4_inner_fec_2cw
+  section: '2.6'
+  claim: Required module output BER with a 200G/lane inner FEC and only 2-codeword RS interleaving, to keep the same FLR
+  value: 2.1e-5
+  unit: '1'
+  kind: model_param
+  conditions:
+    note: "4-CW interleave: 8e-5; 12-CW convolutional interleave: 2.85e-4"
+  source_id: ran_ieee8023dj_2023
+  locator: Executive summary
+  quote: "With 2-CW interleaving (200G/400G links without additional interleaving), BER<2.1e-5 (1 order of magnitude lower)"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.fec.rs544_symbol_size
+  section: '2.6'
+  claim: RS(544,514) outer code uses 10-bit symbols (length 544, dimension 514)
+  value: 10
+  unit: bit/symbol
+  kind: fact
+  conditions:
+    note: "used as outer code of the OIF 800LR concatenated FEC"
+  source_id: nagarajan_jlt_2024
+  locator: Sect. III 'Low power FEC designs'
+  quote: "The outer hard-decision code based on a RS code of length 544 and dimension 514 10-bit symbols is good at correcting burst errors"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.fec.cfec_ber_in
+  section: '2.6'
+  claim: 400ZR CFEC input BER example giving output BER 1e-15
+  value: 1.25e-2
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    fec: CFEC (staircase (255,239) outer + (128,119) double-extended Hamming SD inner)
+    output_BER: 1e-15
+  source_id: oif_400zr_01_2020
+  locator: Sect. 10 '400ZR Forward Error Correction'
+  quote: "resulting in ~10.8dB of NCG with ~14.8% overhead (e.g. BER_in = 1.25E-2 results in BER_out = 1.0E-15)."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: DISAGREEMENT. A CableLabs blog (tier C, not recorded) quotes 1.22E-2 for the same CFEC; the IA (01.0, 02.0, 03.0) all print 1.25E-2. Use 1.25e-2.
+- id: ch02.fec.cfec_ncg
+  section: '2.6'
+  claim: Net coding gain of 400ZR CFEC at output BER 1e-15
+  value: 10.8
+  unit: dB
+  kind: spec_typ
+  conditions:
+    fec: CFEC
+  source_id: oif_400zr_01_2020
+  locator: Sect. 10
+  quote: "resulting in ~10.8dB of NCG with ~14.8% overhead (e.g. BER_in = 1.25E-2 results in BER_out = 1.0E-15)."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.fec.cfec_overhead
+  section: '2.6'
+  claim: Total overhead of 400ZR CFEC
+  value: 14.8
+  unit: '%'
+  kind: spec_typ
+  conditions:
+    fec: CFEC
+  source_id: oif_400zr_01_2020
+  locator: Sect. 10
+  quote: "resulting in ~10.8dB of NCG with ~14.8% overhead (e.g. BER_in = 1.25E-2 results in BER_out = 1.0E-15)."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.fec.cfec_hamming_gain
+  section: '2.6'
+  claim: Inner (128,119) Hamming SD code raises NCG of the staircase outer code from 9.4 dB to about 10.8 dB, adding about 7.56% overhead
+  value: 9.4
+  unit: dB
+  kind: spec_typ
+  conditions:
+    note: "9.4 dB is the NCG of the outer staircase (HD) code alone"
+  source_id: oif_400zr_01_2020
+  locator: Sect. 10.5 'Inner Hamming Code'
+  quote: "The inner FEC of C-FEC is a double-extended Hamming Code SD-FEC (128,119), increasing NCG from 9.4 dB to ~10.8 dB with ~7.56% added overhead."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.fec.ofec_ber_threshold
+  section: '2.6'
+  claim: oFEC pre-FEC BER threshold (correction to 1e-15 after 3 soft-decision iterations)
+  value: 2.0e-2
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    fec: oFEC (block-based encoder, iterative SD decoder, 3 iterations)
+  source_id: openroadm_msa6_wport_2023
+  locator: Abstract
+  quote: "11.6 dB @ 10 -15 (DP-16QAM), with pre-FEC BER threshold of 2.0×10 -2."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Same numbers in OpenZR+ white paper and CableLabs P2PCO PHYv2.0 Sect. 7.2.
+- id: ch02.fec.ofec_ncg_qpsk
+  section: '2.6'
+  claim: oFEC net coding gain at 1e-15 for DP-QPSK
+  value: 11.1
+  unit: dB
+  kind: spec_min
+  conditions:
+    modulation: DP-QPSK
+  source_id: openroadm_msa6_wport_2023
+  locator: Abstract
+  quote: "With 3 SD iterations the Net Coding Gain is 11.1 dB @ 10 -15 (DP-QPSK) and 11.6 dB @ 10 -15 (DP-16QAM)"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: CableLabs PHYv2.0 states the transceiver MUST support NCG of at least 11.1 dB (QPSK) and 11.6 dB (16-QAM). NCG differs by format because the uncoded reference BER-vs-SNR curve differs.
+- id: ch02.fec.ofec_ncg_16qam
+  section: '2.6'
+  claim: oFEC net coding gain at 1e-15 for DP-16QAM
+  value: 11.6
+  unit: dB
+  kind: spec_min
+  conditions:
+    modulation: DP-16QAM
+  source_id: openroadm_msa6_wport_2023
+  locator: Abstract
+  quote: "With 3 SD iterations the Net Coding Gain is 11.1 dB @ 10 -15 (DP-QPSK) and 11.6 dB @ 10 -15 (DP-16QAM)"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.fec.ofec_latency_openroadm
+  section: '2.6'
+  claim: Combined oFEC encoder plus decoder latency at 800G (OpenROADM 6.0)
+  value: 2
+  unit: µs
+  kind: spec_max
+  conditions:
+    rate: 800G
+  source_id: openroadm_msa6_wport_2023
+  locator: Abstract
+  quote: "The combined latency of the encoder and decoder is less than 2 µs at 800G."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: DISAGREEMENT (rate-dependent) with OpenZR+ and CableLabs, which state < 3 µs (at 400G/200G).
+- id: ch02.fec.ofec_latency_openzrplus
+  section: '2.6'
+  claim: Combined oFEC encoder plus decoder latency (OpenZR+, 400G)
+  value: 3
+  unit: µs
+  kind: spec_max
+  conditions:
+    rate: 400G
+  source_id: openzrplus_whitepaper_2020
+  locator: oFEC paragraph
+  quote: "The combined latency of the encoder and decoder is less than 3 µs."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.fec.ofec_overhead
+  section: '2.6'
+  claim: oFEC overhead
+  value: 15.32
+  unit: '%'
+  kind: spec_typ
+  conditions:
+    note: "OIF 800ZR context"
+  source_id: nagarajan_jlt_2024
+  locator: Sect. III
+  quote: "This code has an overhead of 15.32% and a threshold of 2e-2 as shown in Fig."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: CableLabs PHYv2.0 prints 'an oFEC overhead rate of 15. %' (digits lost in extraction).
+- id: ch02.fec.ofec_min_distance
+  section: '2.6'
+  claim: Minimum Hamming distance of the oFEC encoder (lower bound)
+  value: 42
+  unit: '1'
+  kind: fact
+  conditions:
+    note: "the '^ r' permutation eliminates weight-36 error events"
+  source_id: cablelabs_p2pco_phy2_2019
+  locator: Sect. 7.2
+  quote: "Consequently, the minimum Hamming distance of the oFEC encoder is at least 42."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch02.fec.800lr_threshold
+  section: '2.6'
+  claim: Pre-FEC BER threshold of the OIF 800LR concatenated FEC (inner BCH(126,110) Chase SD, outer RS(544,514))
+  value: 1.15e-2
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    overhead_pct: 21.23
+    application: "800LR coherent, up to 10 km, 16-QAM"
+  source_id: nagarajan_jlt_2024
+  locator: Sect. III
+  quote: "a total overhead of 21.23% and a bit error rate (BER) threshold of 1.15e-2 (see SFECL in Fig. 12)"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: OIF 800LR IA itself not read.
+- id: ch02.fec.staircase_ncg
+  section: '2.6'
+  claim: NCG of the G.709-compatible rate-239/255 staircase code at output BER 1e-15
+  value: 9.41
+  unit: dB
+  kind: measured
+  conditions:
+    code_rate: 239/255
+    output_BER: 1e-15
+    method: FPGA-based simulation
+  source_id: smith_jlt_2012
+  locator: Abstract; Sect. VI
+  quote: "a net coding gain (NCG) of 9.41 dB at an output error rate of 1E-15, an improvement of 0.42 dB"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Consistent with OIF 400ZR statement that the staircase outer code alone gives 9.4 dB.
+- id: ch02.fec.staircase_shannon_gap
+  section: '2.6'
+  claim: Gap of the rate-239/255 staircase code to the Shannon limit (HD channel) at 1e-15
+  value: 0.56
+  unit: dB
+  kind: model_param
+  conditions:
+    code_rate: 239/255
+  source_id: smith_jlt_2012
+  locator: Sect. I, p. 1
+  quote: "an improvement of 0.42 dB relative to the best code from the ITU-T G.975.1 recommendation, and only0.56 dB from the Shannon Limit."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: "'only0.56' is a PDF spacing artifact for 'only 0.56'."
+- id: ch02.fec.staircase_error_floor
+  section: '2.6'
+  claim: Estimated error floor of the rate-239/255 staircase code
+  value: 4.0e-21
+  unit: '1'
+  kind: model_param
+  conditions: {}
+  source_id: smith_jlt_2012
+  locator: Abstract
+  quote: "the proposed code is shown to have an error floor at 4.0E-21."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.fec.staircase_p_operating
+  section: '2.6'
+  claim: Channel BER at which the staircase error-floor analysis is evaluated (operating point near threshold)
+  value: 4.8e-3
+  unit: '1'
+  kind: model_param
+  conditions:
+    note: "zeta = 5.8e-4 when p = 4.8e-3"
+  source_id: smith_jlt_2012
+  locator: Sect. V.B, minimal stall analysis
+  quote: "where ζ = 5.8 × 10−4 when p = 4.8 × 10−3."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: The paper's explicit pre-FEC threshold statement was not located in the extracted text; 4.8e-3 is the operating point used for the floor estimate. Alvarado 2018 uses 4.7e-3 as the staircase HD threshold. Treat as approximately 4.7e-3 to 4.8e-3.
+- id: ch02.fec.rs255_ncg
+  section: '2.6'
+  claim: NCG of the G.975 RS(255,239) code at output 1e-15 (3.77 dB from capacity)
+  value: 6.2
+  unit: dB
+  kind: model_param
+  conditions:
+    code: RS(255,239), 8-bit symbols, t = 8
+  source_id: smith_jlt_2012
+  locator: Sect. II.A
+  quote: "For an output-error-rate of 10 −15, the NCG of the RS code is6.2 dB, which is3.77 dB from capacity."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.fec.staircase_dataflow
+  section: '2.6'
+  claim: Staircase decoder internal data-flow for n1 = n2 about 1000, t = 3, fc about 400 MHz, v = 4 iterations (two orders below LDPC)
+  value: 293
+  unit: Gb/s
+  kind: model_param
+  conditions:
+    clock_MHz: 400
+    iterations: 4
+  source_id: smith_jlt_2012
+  locator: Sect. III (decoder data-flow analysis)
+  quote: "For v = 4, we then have a dataflow of approximately 293 Gb/s."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Useful qualitative support for HD-FEC power advantage.
+- id: ch02.fec.fec_power_5nm
+  section: '2.6'
+  claim: Module FEC power for 800G at 5 nm CMOS (feasibility study)
+  value: 0.2
+  unit: W
+  kind: model_param
+  conditions:
+    cmos_node_nm: 5
+    rate: 800G
+    note: "cites oif2022.274.00"
+  source_id: yin_ieee8023df_2022
+  locator: Slide 'FEC Requirements - Power'
+  quote: "Example study showed module FEC power of ~0.2 W/800G @5nm CMOS node (oif2022.274.00) is feasible"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: IM/DD context (802.3df); concatenated inner FEC, not coherent oFEC.
+# ---------------------------------------------------------------- 2.7
+- id: ch02.pwr.puttegowda_7nm_pj_bit
+  section: '2.7'
+  claim: Module energy efficiency enabled by a 7 nm FinFET coherent ASIC for 400G DWDM pluggables
+  value: [40, 60]
+  unit: pJ/bit
+  kind: measured
+  conditions:
+    cmos_node_nm: 7
+    rate: 400G
+    note: "pluggable module level, various applications"
+  source_id: puttegowda_ofc_2022
+  locator: Abstract
+  quote: "The ASIC enables pluggable coherent modules with energy efficiency of 40-60pJ/bit for various 400G DWDM applications."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Module-level (not DSP-only) energy per bit; at 400 Gb/s this is 16-24 W.
+- id: ch02.pwr.fougstedt_22nm
+  section: '2.7'
+  claim: Power of key DSP and FEC units of a 400 Gb/s coherent DCI receiver, exploratory ASIC design in 22 nm CMOS
+  value: 5
+  unit: W
+  kind: model_param
+  conditions:
+    cmos_node_nm: 22
+    rate: 400G
+  source_id: fougstedt_ofc_2020
+  locator: Abstract
+  quote: "In 22-nm CMOS, the considered units together dissipate 5 W, suggesting implementation feasibility in power-constrained form factors."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; synthesis/place-and-route estimate, not silicon measurement; excludes ADC/DAC.
+- id: ch02.pwr.ntt_400zr_dsp_budget
+  section: '2.7'
+  claim: Power budget of a 7 nm DSP for 400ZR to fit a 15 W module
+  value: 10
+  unit: W
+  kind: spec_max
+  conditions:
+    cmos_node_nm: 7
+    module_W: 15
+  source_id: ntt_id_dsp_sipho_2021
+  locator: Article body
+  quote: "A 7nm DSP for 400ZR application needs to have less than 10W power dissipation in order to fit into a 15W transceiver module."
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+- id: ch02.pwr.ntt_mode_saving
+  section: '2.7'
+  claim: DSP power reduction from selecting FEC, CD-equalizer and Nyquist-filter options per application (100 km vs 4000 km)
+  value: [20, 25]
+  unit: '%'
+  kind: measured
+  conditions:
+    cmos_node_nm: 7
+  source_id: ntt_id_dsp_sipho_2021
+  locator: Article body, Fig. 1 discussion
+  quote: "suitably selecting the options of FEC elements, equalizers for the CD compensation and Nyquist filter to optimize the power dissipation by 20-25%"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+- id: ch02.pwr.dsp_share_of_module
+  section: '2.7'
+  claim: Nominal share of pluggable-module power consumed by the DSP (IM/DD and coherent)
+  value: 50
+  unit: '%'
+  kind: spec_typ
+  conditions:
+    note: "power-delivery overhead additionally 10-15% of total"
+  source_id: nagarajan_jlt_2024
+  locator: Sect. II, Fig. 2 discussion
+  quote: "The DSP power is nominally about 50% of the module."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.pwr.power_delivery_overhead
+  section: '2.7'
+  claim: Power-distribution and DC-DC conversion losses as a fraction of module power
+  value: [10, 15]
+  unit: '%'
+  kind: spec_typ
+  conditions:
+    note: "DSP at 0.6 V draws > 10 A"
+  source_id: nagarajan_jlt_2024
+  locator: Sect. II
+  quote: "These losses are between 10% and 15% of the total power consumption and are labeled “power overhead” in Fig. 2."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch02.pwr.adc_5nm_fom
+  section: '2.7'
+  claim: Walden figure of merit of a 200 GS/s 8-bit receiver ADC integrated in an 800G coherent DSP, 5 nm FinFET
+  value: 20
+  unit: fJ/conversion-step
+  kind: measured
+  conditions:
+    cmos_node_nm: 5
+    sample_rate_GSps: 200
+    resolution_bits: 8
+    afe_bw_GHz: "> 60"
+  source_id: nguyen_isscc_2024
+  locator: Abstract
+  quote: "we present an energy efficient 8b 200GS/s receiver fully integrated in an 800G coherent DSP with a 20fJ/c-s and 60GHz AFE bandwidth"
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract read via an aggregator page; DOI not captured.
+- id: ch02.pwr.adc_40nm_fom
+  section: '2.7'
+  claim: ADC figure of merit in a 40 nm single-chip 50 Gb/s coherent transceiver (4 x 25 GS/s, 6 bit)
+  value: 0.4
+  unit: pJ/conversion
+  kind: measured
+  conditions:
+    cmos_node_nm: 40
+    sample_rate_GSps: 25
+    resolution_bits: 6
+  source_id: crivelli_tcasi_2014
+  locator: Abstract
+  quote: "features a 4-channel 25 Gs/s 6-bit ADC with a figure of merit (FOM) of 0.4 pJ/conversion."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 0.4 pJ = 400 fJ per conversion vs 20 fJ/conversion-step at 5 nm (definitions of FOM may differ; check before comparing).
+- id: ch02.pwr.imdd_800g_module_7nm
+  section: '2.7'
+  claim: Power of a 100G-per-lane 800GbE IM/DD module at 7 nm CMOS, and target for 1.6TbE at 5 nm
+  value: 16
+  unit: W
+  kind: spec_typ
+  conditions:
+    cmos_node_nm: 7
+    rate: 800G
+    target_1p6T_5nm_W: "< 30"
+  source_id: yin_ieee8023df_2022
+  locator: Slide 'FEC Requirements - Power'
+  quote: "Current 100G per lane 800GbE module at ~16 W @7nm CMOS node ● Target at < 30 W for 200G-per-lane 1.6TbE module @5nm CMOS node"
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+- id: ch02.pwr.pillai_rx_dominates
+  section: '2.7'
+  claim: In long-haul coherent links with electronic CD compensation, receiver (DSP) energy dominates end-to-end energy; DP-16QAM is more efficient than DP-QPSK at short reach with HD-FEC, similar at long reach with SD-FEC
+  value: "receiver energy dominates"
+  unit: '1'
+  kind: fact
+  conditions:
+    rate: 100G
+  source_id: pillai_jlt_2014
+  locator: Abstract
+  quote: "We have found that receiver energy consumption dominates in transmission systems that use electronic dispersion compensation over long transmission distances."
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; the per-block pJ/bit numbers (CD, PMD, CR, timing, FEC at 40 nm) were not read in the primary (gap).

@@ -1,0 +1,722 @@
+# Chapter 6 sources. Ids are global; ch01 sources reused by reference (e.g. ferrari_jocn_2020, poggiolini_jlt_2012).
+sources:
+- id: itu_t_g694_1_2020
+  type: standard
+  title: 'Spectral grids for WDM applications: DWDM frequency grid'
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.694.1 (10/2020)
+  year: 2020
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.694.1-202010-I!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: oif_ofc2023_800zr_berger
+  type: report
+  title: From 400ZR to 800ZR and Beyond
+  authors: J. Berger (OIF)
+  venue: OIF presentation, OFC 2023
+  year: 2023
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OFC2023_OIF_800ZR_800LR_Josef-Berger.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: lyubomirsky_ieee8023ct_2019
+  type: report
+  title: Toward Baseline for 400GBASE-ZR Optical Specs
+  authors: I. Lyubomirsky, B. Zhang, R. Baca, M. Sluyski, M. Filer, G. Nicholl, M. Nowell, J. DeAndrea et al.
+  venue: IEEE P802.3ct Task Force contribution, Feb 2019
+  year: 2019
+  doi: ''
+  url: https://www.ieee802.org/3/ct/public/adhoc/19_0221/lyubomirsky_3ct_01_190221.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: finisar_wss_single_pb_2020
+  type: datasheet
+  title: Single Wavelength Selective Switch (WSS) product brief
+  authors: Finisar WSS (II-VI)
+  venue: Product brief
+  year: 2020
+  doi: ''
+  url: https://finisarwss.com/wp-content/uploads/2020/07/FinisarWSS_Single_Wavelength_Selective_Switch_ProductBrief_Jun2020.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: gerstel_commag_2012
+  type: journal
+  title: 'Elastic optical networking: a new dawn for the optical layer?'
+  authors: O. Gerstel, M. Jinno, A. Lord, S. J. B. Yoo
+  venue: IEEE Communications Magazine 50(2), S12-S20
+  year: 2012
+  doi: 10.1109/MCOM.2012.6146481
+  url: https://icg.isy.liu.se/phd-courses/optical_networking/EON.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: gringeri_commag_2010
+  type: journal
+  title: Flexible architectures for optical transport nodes and networks
+  authors: S. Gringeri, B. Basch, V. Shukla, R. Egorov, T. J. Xia
+  venue: IEEE Communications Magazine 48(7), 40-50
+  year: 2010
+  doi: 10.1109/MCOM.2010.5496877
+  url: https://icg.isy.liu.se/en/phd-courses/optical_networking/Flexible_Nodes.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: ma_jlt_2020_wss
+  type: journal
+  title: Recent Progress of Wavelength Selective Switch
+  authors: Y. Ma, L. Stewart, J. J. Armstrong, I. G. Clarke, G. W. Baxter
+  venue: Journal of Lightwave Technology 39(4), 896-903
+  year: 2021
+  doi: 10.1109/JLT.2020.3022375
+  url: https://doi.org/10.1109/jlt.2020.3022375
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: lumentum_twin_1x35_web
+  type: datasheet
+  title: TrueFlex Twin 1x35 Wavelength Selective Switch
+  authors: Lumentum
+  venue: Product page
+  year: 2025
+  doi: ''
+  url: https://www.lumentum.com/en/products/trueflex-twin-1x35-wavelength-selective-switch
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: lumentum_twin_wss_pb_2025
+  type: datasheet
+  title: TrueFlex Twin High Port Count Wavelength Selective Switch (Twin WSS) product brief
+  authors: Lumentum
+  venue: Product brief
+  year: 2025
+  doi: ''
+  url: https://www.lumentum.com/sites/default/files/2025-12/trueflexwss-pb-oc-ae.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: huang_jlt_2023_twin1x35
+  type: journal
+  title: Highly Compact Twin 1x35 Wavelength Selective Switch
+  authors: Z. Huang, S. Yang, Z. Zheng, X. Pan, H. Li, H. Yang
+  venue: Journal of Lightwave Technology 41(1), 233-
+  year: 2023
+  doi: 10.1109/JLT.2022.3213078
+  url: https://display.seu.edu.cn/_upload/article/files/91/29/972d645b4140abcd90b7231979b1/71b01fa6-472f-4a49-b2f0-26818b8d10a0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: pan_jphot_2017
+  type: journal
+  title: Real-Time ROADM Filtering Penalty Characterization and Generalized Precompensation for Flexible Grid Networks
+  authors: J. Pan, S. Tibuleac
+  venue: IEEE Photonics Journal 9(3)
+  year: 2017
+  doi: 10.1109/JPHOT.2017.2699642
+  url: https://doi.org/10.1109/jphot.2017.2699642
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: rahman_ptl_2014
+  type: journal
+  title: On the Mitigation of Optical Filtering Penalties Originating From ROADM Cascade
+  authors: T. Rahman, A. Napoli, D. Rafique, B. Spinnler, M. Kuschnerov, I. Lobato et al.
+  venue: IEEE Photonics Technology Letters 26(2)
+  year: 2014
+  doi: 10.1109/LPT.2013.2290745
+  url: https://doi.org/10.1109/lpt.2013.2290745
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: doggart_msc_thesis_2017
+  type: thesis
+  title: Cascaded ROADM Filter Replication and the Effects of Statistical Variations in the Response of Cascaded ROADMs on 100 Gb/s DP-QPSK System Performance
+  authors: C. Doggart
+  venue: MSc thesis, Queen's University
+  year: 2017
+  doi: ''
+  url: http://hdl.handle.net/1974/15912
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: polito_thesis_2018_scm_filtering
+  type: thesis
+  title: Optimization of Multi-Carrier Modulation Techniques for Spectral Efficient Transmission Under Strong Optical Filtering
+  authors: (Politecnico di Torino MSc candidate; author name not captured)
+  venue: MSc thesis, Politecnico di Torino (work at IT Aveiro)
+  year: 2018
+  doi: ''
+  url: https://webthesis.biblio.polito.it/8987/1/tesi.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: pulikkaseril_oe_2011
+  type: journal
+  title: Spectral modeling of channel band shapes in wavelength selective switches
+  authors: C. Pulikkaseril, L. A. Stewart, M. A. F. Roelens, G. W. Baxter, S. Poole, S. Frisken
+  venue: Optics Express 19(9), 8458-8470
+  year: 2011
+  doi: 10.1364/OE.19.008458
+  url: https://doi.org/10.1364/oe.19.008458
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: rizzelli_jlt_2025
+  type: journal
+  title: Filtering Effects Characterization in Metro-Access Networks and Future High-Speed Coherent Optical Communication Schemes
+  authors: G. Rizzelli, P. Torres-Ferrera, A. Napoli, R. Gaudino
+  venue: Journal of Lightwave Technology 43(3), 1114-1122
+  year: 2025
+  doi: 10.1109/JLT.2024.3477552
+  url: https://iris.polito.it/retrieve/handle/11583/2996905/fcb202da-bdf9-4ea0-8a3e-460100dd320d/2024_JLT_filtering_modelling_versione_pubblicata.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: kjaer_phd_dtu_2008
+  type: thesis
+  title: Raman amplification in optical communication systems
+  authors: R. Kjaer
+  venue: PhD thesis, Technical University of Denmark
+  year: 2008
+  doi: ''
+  url: https://backend.orbit.dtu.dk/ws/portalfiles/portal/4986172/Rasmus%20Kj_r.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: andre_optapp_2003
+  type: journal
+  title: Raman gain characterization in standard single mode optical fibres for optical simulation purposes
+  authors: P. S. Andre, M. R. Correia, L. M. Borghesi, A. Teixeira, R. N. Nogueira, M. Lima et al.
+  venue: Optica Applicata 33(4), 559-
+  year: 2003
+  doi: ''
+  url: https://www.dbc.wroc.pl/Content/40848/PDF/optappl_3304p559.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: semrau_jlt_2018_isrs
+  type: journal
+  title: The Gaussian Noise Model in the Presence of Inter-Channel Stimulated Raman Scattering
+  authors: D. Semrau, R. I. Killey, P. Bayvel
+  venue: Journal of Lightwave Technology 36(14), 3046-3055
+  year: 2018
+  doi: 10.1109/JLT.2018.2830973
+  url: https://discovery.ucl.ac.uk/id/eprint/10051143/1/08351897.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: semrau_jlt_2019_isrs_cf
+  type: journal
+  title: A Closed-Form Approximation of the Gaussian Noise Model in the Presence of Inter-Channel Stimulated Raman Scattering
+  authors: D. Semrau, R. I. Killey, P. Bayvel
+  venue: Journal of Lightwave Technology 37(9), 1924-1936
+  year: 2019
+  doi: 10.1109/JLT.2019.2895237
+  url: https://ar5iv.labs.arxiv.org/html/1808.07940
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: semrau_jocn_2020
+  type: journal
+  title: Modeling and mitigation of fiber nonlinearity in wideband optical signal transmission [Invited]
+  authors: D. Semrau, E. Sillekens, P. Bayvel, R. I. Killey
+  venue: Journal of Optical Communications and Networking 12(6), C68-C76
+  year: 2020
+  doi: 10.1364/JOCN.382267
+  url: https://doi.org/10.1364/jocn.382267
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: buglia_arxiv_2022_isrs_dra
+  type: conference
+  title: A Closed-form Expression for the ISRS GN Model Supporting Distributed Raman Amplification
+  authors: H. Buglia et al.
+  venue: arXiv:2210.09067
+  year: 2022
+  doi: 10.48550/arXiv.2210.09067
+  url: https://ar5iv.labs.arxiv.org/html/2210.09067
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: pelouch_jlt_2016
+  type: journal
+  title: 'Raman Amplification: An Enabling Technology for Long-Haul Coherent Transmission Systems'
+  authors: W. S. Pelouch
+  venue: Journal of Lightwave Technology 34(1), 6-19
+  year: 2016
+  doi: 10.1109/JLT.2015.2458771
+  url: https://www.xtera.com/wp-content/uploads/2018/03/JLT-Raman_Amplification.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: xtera_wp_raman_scaling_2015
+  type: whitepaper
+  title: Performance Scaling Rules for Raman Amplification in Coherent Transmission Systems
+  authors: Xtera (B. Clesca)
+  venue: Xtera white paper, September 2015
+  year: 2015
+  doi: ''
+  url: https://xtera.com/wp-content/uploads/2017/05/Performance-Scaling-Rules-for-Raman-Amplification-in-Coherent-Transmission-Systems-Xtera-September-2015.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: jiang_arxiv_2024_supercl
+  type: conference
+  title: Launch Power Optimization in super-(C+L) Systems
+  authors: Y. Jiang, D. Pilori, A. Nespola, A. Tanzi, S. Piciaccia, M. Ranjbar Zefreh et al.
+  venue: arXiv:2407.14401
+  year: 2024
+  doi: 10.48550/arXiv.2407.14401
+  url: https://doi.org/10.48550/arxiv.2407.14401
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: zuo_ofc_2025_cmcc_96t
+  type: conference
+  title: First Field Demonstration of Real-time Sub-100-Tb/s Transmission with Net 1.2-Tb/s Channels over 12-THz-wide Super C+L band along 305-km G.652.D fiber
+  authors: M. Zuo, D. Zhang, D. Wang, H. Zou, D. Liu, B. Yan, H. Shi, H. Li
+  venue: OFC 2025, Th3C.1
+  year: 2025
+  doi: ''
+  url: https://opg.optica.org/abstract.cfm?uri=OFC-2025-Th3C.1
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: puttnam_ofc_2024_402t
+  type: conference
+  title: 402 Tb/s GMI Data-Rate OESCLU-Band Transmission
+  authors: B. J. Puttnam, R. S. Luis, I. Phillips, M. Tan, A. Donodin et al.
+  venue: OFC 2024, Th4A.3 (postdeadline)
+  year: 2024
+  doi: 10.1364/OFC.2024.Th4A.3
+  url: https://opg.optica.org/abstract.cfm?uri=OFC-2024-Th4A.3
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: nict_press_2024_402t
+  type: press
+  title: World Record 402 Tb/s Transmission in a Standard Commercially Available Optical Fiber
+  authors: NICT, Aston Institute of Photonic Technologies, Nokia Bell Labs
+  venue: NICT press release
+  year: 2024
+  doi: ''
+  url: https://www.nict.go.jp/en/press/2024/06/26-1.html
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: wright_ecoc_2020_zr_cost
+  type: conference
+  title: Cost Model Comparison of ZR/ZR+ Modules Against Traditional WDM Transponders for 400G IP/WDM Core Networks
+  authors: P. Wright, R. P. Davey, A. Lord
+  venue: ECOC 2020
+  year: 2020
+  doi: 10.1109/ECOC48923.2020.9333420
+  url: https://doi.org/10.1109/ecoc48923.2020.9333420
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: davey_jocn_2023_zr
+  type: journal
+  title: ZR 400 Gbit/s and 800 Gbit/s use cases, trials, deployments, and future prospects [Invited]
+  authors: R. P. Davey, M. A. Iqbal, P. Wright
+  venue: Journal of Optical Communications and Networking 15(10)
+  year: 2023
+  doi: 10.1364/JOCN.499365
+  url: https://doi.org/10.1364/jocn.499365
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: gumaste_jocn_2022_zrplus
+  type: journal
+  title: Optimized IP-over-WDM core networks using ZR+ and flexible muxponders for 400 Gb/s and beyond
+  authors: A. Gumaste, M. Sosa, H. Bock, P. Kandappan
+  venue: Journal of Optical Communications and Networking 14(2)
+  year: 2022
+  doi: 10.1364/JOCN.444943
+  url: https://doi.org/10.1364/jocn.444943
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: acg_cisco_wp_400g_ip_transport
+  type: whitepaper
+  title: The Economic Benefits of IP Transport at 400G
+  authors: ACG Research (for Cisco)
+  venue: ACG Research white paper
+  year: 2020
+  doi: ''
+  url: https://www.cisco.com/c/dam/en/us/solutions/collateral/service-provider/routed-optical-networking/white-paper-sp-acg-400g-ip-transport.pdf
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: heavyreading_2024_ipodwdm
+  type: report
+  title: Making IPoDWDM a Reality
+  authors: Heavy Reading (sponsored by Juniper)
+  venue: Heavy Reading industry initiative report
+  year: 2024
+  doi: ''
+  url: https://www-aem.junipercloud.net/content/dam/www/assets/analyst-reports/us/en/2024/heavy-reading-industry-initiative-making-ipodwdm-a-reality.pdf
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: sone_nttreview_2025_openroadm
+  type: report
+  title: Latest Standardization in OpenROADM MSA
+  authors: Y. Sone, M. Yoshida, J. Kani, K. Takasugi
+  venue: NTT Technical Review, Aug 2025
+  year: 2025
+  doi: ''
+  url: https://ntt-review.jp/archive/ntttechnical.php?contents=ntr202508gls.html
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: openroadm_device_wp_r7
+  type: whitepaper
+  title: Open ROADM MSA Release 7 Device White Paper v1.2
+  authors: OpenROADM MSA (M. Birk et al.)
+  venue: OpenROADM MSA white paper
+  year: 2020
+  doi: ''
+  url: https://0201.nccdn.net/4_2/000/000/072/2aa/open-roadm-msa-release-7-device-white-paper-v1.2.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ciena_wl6e_motr_ds
+  type: datasheet
+  title: WaveLogic 6 Extreme 1.6T MOTR
+  authors: Ciena
+  venue: Data sheet
+  year: 2024
+  doi: ''
+  url: https://www.ciena.com/insights/data-sheets/1-6t-wavelogic-6-extreme-motr
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: nokia_pse6s_web
+  type: datasheet
+  title: 'PSE-6s: A new frontier in scale, performance and sustainability'
+  authors: Nokia
+  venue: Product page
+  year: 2023
+  doi: ''
+  url: https://www.nokia.com/optical-networks/pse-6s/
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: ocn_2023_ice7
+  type: press
+  title: 'OFC 2023: Infinera debuts ICE7, expands component portfolios'
+  authors: P. Dykes
+  venue: Optical Connections News
+  year: 2023
+  doi: ''
+  url: https://opticalconnectionsnews.com/2023/03/ofc-2023-infinera-debuts-ice7-expands-component-portfolios/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: zayo_press_2025_ice7
+  type: press
+  title: Zayo Achieves Record-Breaking 1 Tb/s Transmission on Live North American Network with Infinera's ICE7
+  authors: Zayo, Infinera
+  venue: Press release, 18 Feb 2025
+  year: 2025
+  doi: ''
+  url: https://www.zayo.com/newsroom/zayo-achieves-record-breaking-1-tb-s-transmission-on-live-north-american-network-with-infineras-ice7-coherent-optical-solution/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: att_press_2025_1p6t
+  type: press
+  title: AT&T Breaks Speed Barriers on Long-Distance Fiber Network
+  authors: AT&T
+  venue: AT&T newsroom, 12 Mar 2025
+  year: 2025
+  doi: ''
+  url: https://about.att.com/story/2025/data-transport.html
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: nokia_press_2023_globalconnect
+  type: press
+  title: Nokia and GlobalConnect demonstrate record 1.2Tb/s coherent transmission over a single wavelength in live network
+  authors: Nokia
+  venue: Nokia press release, 23 Feb 2023
+  year: 2023
+  doi: ''
+  url: https://www.nokia.com/newsroom/nokia-and-globalconnect-demonstrate-record-12tbs-coherent-transmission-over-a-single-wavelength-in-live-network/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: mardoyan_ecoc_2024_300gbd
+  type: conference
+  title: First Single-Carrier Transmission at Net Data Rates of 1.6 Tb/s over 9075 km and 2.4 Tb/s over 1210 km Using 300 GBd Dual-Polarization Signals and Probabilistic Constellation Shaping
+  authors: H. Mardoyan, D. Drayss, S. Almonacil, D. Fang, A. Sherifaj, A. Ghazisaeidi, M. Kelany, C. Castineiras Carrero, C. Koos, J. Renaudier
+  venue: ECOC 2024, Th2B.2 (arXiv:2409.00057)
+  year: 2024
+  doi: 10.48550/arXiv.2409.00057
+  url: https://arxiv.org/abs/2409.00057
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: cww_2025_05_zhangdechao
+  type: press
+  title: 中国移动张德朝：G.654.E光纤有望向城域网下沉，空芯光纤商用可期
+  authors: 通信世界网 (CWW)
+  venue: 通信世界网
+  year: 2025
+  doi: ''
+  url: https://www.cww.net.cn/article?id=600734
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: downie_spie_2018_g654e
+  type: conference
+  title: G.654.E optical fibers for high-data-rate terrestrial transmission systems with long reach
+  authors: J. D. Downie, S. Makovejs, J. E. Hurley, M. Mlejnek, H. de Pedro
+  venue: Proc. SPIE 10560 (Photonics West 2018)
+  year: 2018
+  doi: 10.1117/12.2297683
+  url: https://doi.org/10.1117/12.2297683
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: makovejs_corning_cn_g654e
+  type: whitepaper
+  title: G.654E 光纤长距离传输性能研究 (Study of long-haul transmission performance of G.654E fibre)
+  authors: S. Makovejs, J. Downie, 董浩, M. Mlejnek, 陈皓 (Corning)
+  venue: Corning article (Chinese); original venue not identified
+  year: 2018
+  doi: ''
+  url: https://www.corning.com/media/cn/coc/documents/articles/G.654E%20%e5%85%89%e7%ba%a4%e9%95%bf%e9%80%94%e4%bc%a0%e8%be%93%e6%80%a7%e8%83%bd%e7%a0%94%e7%a9%b60417.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: sasac_2021_ctel_g654e
+  type: report
+  title: 中国电信建成全球首条全G.654E陆地干线光缆 完成首次400Gb/s超长距现网传输试验
+  authors: 国务院国有资产监督管理委员会 (SASAC), republishing China Telecom
+  venue: sasac.gov.cn
+  year: 2021
+  doi: ''
+  url: http://www.sasac.gov.cn/n2588025/n2588124/c20856766/content.html
+  access: open
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: c114_2019_ctel_g654e_tender
+  type: press
+  title: G.654.E光缆首次成功集采：中国电信公布5家候选厂商
+  authors: 水易 (C114)
+  venue: C114通信网
+  year: 2019
+  doi: ''
+  url: https://m.c114.com.cn/w117-1102957.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: cww_2019_400g_g654e
+  type: press
+  title: 400G光网络传输时代加速来临 纤缆市场再释放积极信号
+  authors: 通信世界网 (CWW)
+  venue: 通信世界网
+  year: 2019
+  doi: ''
+  url: http://www.cww.net.cn/article?id=447488
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: cww_2023_cmcc_g654e_tender
+  type: press
+  title: 中国移动开启G.654.E光纤光缆采购，400G商用步入关键节点
+  authors: 通信世界网 (CWW)
+  venue: 通信世界网
+  year: 2023
+  doi: ''
+  url: https://www.cww.net.cn/article?id=582356
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: c114_2019_cunicom_g654e_practice
+  type: journal
+  title: G.654.E光纤光缆的工程实践 (Engineering practice of G.654.E fibre and cable)
+  authors: China Unicom authors (names not captured)
+  venue: 邮电设计技术 (Designing Techniques of Posts and Telecommunications) 2019(10), via C114
+  year: 2019
+  doi: ''
+  url: https://www.c114.com.cn/topic/5638/a1107064.html
+  access: abstract_only
+  language: zh
+  tier: B
+  retrieved: '2026-11-02'
+- id: cww_2025_05_wangguangquan
+  type: press
+  title: 中国联通王光全：G.654.E光纤是骨干网400G的首选 建议向城域网下沉
+  authors: 通信世界网 (CWW)
+  venue: 通信世界网
+  year: 2025
+  doi: ''
+  url: https://www.cww.net.cn/article?id=600673
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: cww_2025_06_cmcc_g654e_tender
+  type: press
+  title: 近314万芯公里！中国移动启动大规模G.654E光纤光缆产品集采
+  authors: 通信世界网 (CWW)
+  venue: 通信世界网
+  year: 2025
+  doi: ''
+  url: https://www.cww.net.cn/article?id=601640
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: chinacable_2025_07_cmcc_award
+  type: press
+  title: 中国移动G.654E光纤光缆集采：长飞、亨通、烽火三家中标
+  authors: 中国线缆网
+  venue: chinacable.com
+  year: 2025
+  doi: ''
+  url: https://www.chinacable.com/news/details/9894
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: cww_2025_05_g654e_report
+  type: press
+  title: 《G.654.E光纤技术应用报告》正式发布
+  authors: 甄清岚 (CWW)
+  venue: 通信世界网
+  year: 2025
+  doi: ''
+  url: https://www.cww.net.cn/article?id=600566
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: eefocus_2025_05_g654e
+  type: press
+  title: 智算时代光网络革命：G.654.E光纤的十年跨越与产业突围
+  authors: 通信世界网 (reposted by 与非网)
+  venue: 与非网 eefocus
+  year: 2025
+  doi: ''
+  url: https://www.eefocus.com/article/1845365.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: sina_2025_01_cmcc_post400g
+  type: press
+  title: 后400G时代，中国移动如何领航“算力之光”
+  authors: 新浪科技 (China Mobile article repost)
+  venue: 新浪科技
+  year: 2025
+  doi: ''
+  url: https://finance.sina.com.cn/tech/roll/2025-01-23/doc-inefwfmt6806757.shtml
+  access: open
+  language: zh
+  tier: C
+  retrieved: '2026-11-02'
+- id: hazarika_oe_2021_rin_g654e
+  type: journal
+  title: RIN induced penalties in G.654.E and G.652.D based distributed Raman amplifiers for coherent transmission systems
+  authors: P. Hazarika, M. Tan, M. A. Iqbal, L. Krzczanowicz, A. A. I. Ali, I. Phillips, P. Harper, W. Forysiak
+  venue: Optics Express 29(20), 32081-32088
+  year: 2021
+  doi: 10.1364/OE.439406
+  url: https://publications.aston.ac.uk/id/eprint/43169/1/oe_29_20_32081.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: pointurier_jocn_2017
+  type: journal
+  title: Design of Low-Margin Optical Networks
+  authors: Y. Pointurier
+  venue: Journal of Optical Communications and Networking 9(1), A9-A17
+  year: 2017
+  doi: 10.1364/JOCN.9.0000A9
+  url: https://eclass.uoa.gr/modules/document/file.php/DI469/papers/core%20and%20metro%20nets/design_of_low_margin.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: auge_ofc_2013
+  type: conference
+  title: Can we use Flexible Transponders to Reduce Margins?
+  authors: J.-L. Auge
+  venue: OFC 2013, OTu2A.1
+  year: 2013
+  doi: 10.1364/OFC.2013.OTu2A.1
+  url: https://doi.org/10.1364/ofc.2013.otu2a.1
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: filer_jlt_2018_gnpy
+  type: journal
+  title: Multi-Vendor Experimental Validation of an Open Source QoT Estimator for Optical Networks
+  authors: M. Filer, M. Cantono, A. Ferrari, G. Grammel, G. Galimberti, V. Curri
+  venue: Journal of Lightwave Technology 36(15), 3073-3082
+  year: 2018
+  doi: 10.1109/JLT.2018.2818406
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-36-15-3073
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'

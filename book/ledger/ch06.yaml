@@ -1,0 +1,1406 @@
+# Chapter 6 ledger: Metro, DCI, and long-haul (sections 6.1-6.6).
+# Retrieval agent output, 2026-11-02. Builds on ch01_b/ch01_c (GN model, ASE, G.654.E fibre specs); see notes for cross-references.
+records:
+- id: ch06.grid.flex_center_granularity
+  section: '6.1'
+  claim: Flexible DWDM grid nominal central frequencies are 193.1 + n x 0.00625 THz (6.25 GHz central-frequency granularity)
+  value: 6.25
+  unit: GHz
+  kind: spec_typ
+  conditions:
+    standard: ITU-T G.694.1 (10/2020), clause 8
+    anchor_THz: 193.1
+  source_id: itu_t_g694_1_2020
+  locator: Clause 8, Flexible DWDM grid definition
+  quote: 193.1 + n × 0.00625 where n is a positive or negative integer including 0 and 0.00625 is the nominal central frequency granularity in THz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same text in the 02/2012 edition (clause 7). Read via full-text search highlights of the ITU PDF.
+- id: ch06.grid.flex_slot_granularity
+  section: '6.1'
+  claim: Flexible DWDM grid slot width is 12.5 x m GHz (12.5 GHz slot-width granularity), m a positive integer
+  value: 12.5
+  unit: GHz
+  kind: spec_typ
+  conditions:
+    standard: ITU-T G.694.1 (10/2020), clause 8
+  source_id: itu_t_g694_1_2020
+  locator: Clause 8
+  quote: 12.5 × m where m is a positive integer and 12.5 is the slot width granularity in GHz.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Any combination of slots is allowed as long as no two slots overlap.
+- id: ch06.grid.anchor_193p1
+  section: '6.1'
+  claim: The G.694.1 DWDM frequency grid is anchored to 193.1 THz and supports fixed spacings from 12.5 GHz to 100 GHz and wider
+  value: 193.1
+  unit: THz
+  kind: spec_typ
+  conditions:
+    standard: ITU-T G.694.1 (10/2020) summary
+  source_id: itu_t_g694_1_2020
+  locator: Summary (ITU recommendation database page)
+  quote: The frequency grid, anchored to 193.1 THz, supports a variety of channel spacings ranging from 12.5 GHz to 100 GHz and wider.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch06.grid.why_6p25
+  section: '6.1'
+  claim: Rationale for 6.25 GHz centre granularity, so that even- and odd-multiple 12.5 GHz slots can abut without a gap
+  value: 6.25
+  unit: GHz
+  kind: fact
+  conditions:
+    standard: ITU-T G.694.1 (10/2020), Appendix I.1
+  source_id: itu_t_g694_1_2020
+  locator: Appendix I, Figure I.3 discussion
+  quote: an even multiple of 12.5 GHz next to one with a width that is an odd multiple of 12.5 GHz without a gap
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Appendix I.2 adds that applications may support only a subset (e.g. 12.5 GHz centre granularity and 25 GHz slot multiples).
+- id: ch06.grid.no_interface_recs_use_flexgrid
+  section: '6.1'
+  claim: As of G.694.1 (2020) no ITU-T DWDM optical interface Recommendation uses the flexible grid
+  value: no DWDM interface Recommendation uses the flexible grid (2020)
+  unit: '1'
+  kind: fact
+  conditions:
+    standard: ITU-T G.694.1 (10/2020), Appendix I
+  source_id: itu_t_g694_1_2020
+  locator: Appendix I.1
+  quote: there are currently no DWDM optical interface Recommendations that make use of this grid.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Contrast with OIF 400ZR, which defines an optional flexible grid (section 15.3).
+- id: ch06.zr.oif400zr_baud
+  section: '6.1'
+  claim: 400ZR is DP-16QAM at 59.84375 GBd per polarization (478.75 Gb/s line rate per polarization)
+  value: 59.84375
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    standard: OIF-400ZR-01.0 IA
+  source_id: oif_400zr_01_2020
+  locator: Section 12.5 Frame Expansion Rate
+  quote: The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 400ZR reach target 120 km or less, amplified, point-to-point (section 7.1).
+- id: ch06.zr.oif400zr_channel_plans
+  section: '6.1'
+  claim: 400ZR defines 48 x 100 GHz and 64 x 75 GHz DWDM application channel plans plus an optional flexible grid
+  value:
+  - 48
+  - 64
+  unit: channels
+  kind: spec_typ
+  conditions:
+    spacing_GHz:
+    - 100
+    - 75
+    standard: OIF-400ZR-03.0 IA
+  source_id: oif_400zr_03_2024
+  locator: Table of contents, sections 15.1-15.3
+  quote: 15.1 48 x 100 GHz DWDM Application Channels ... 15.2 64 x 75 GHz DWDM Application Channels ... 15.3 Optional Flexible DWDM Grid
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Read from the IA table of contents; channel tables (196.100 THz down to 191.400 / 191.375 THz) were seen only via a vendor datasheet that reproduces them.
+- id: ch06.zr.cband_191p3_196p1
+  section: '6.1'
+  claim: 400ZR transmitter channel frequency range 191.3 to 196.1 THz (4.8 THz, standard C-band)
+  value:
+  - 191.3
+  - 196.1
+  unit: THz
+  kind: spec_typ
+  conditions:
+    application: 400GBASE-ZR baseline proposal
+  source_id: lyubomirsky_ieee8023ct_2019
+  locator: Tx Optical Specs I table, slide 'Start/Stop Channel Frequency'
+  quote: Start Channel Frequency | 191.3 | THz | ... Stop Channel frequency | 196.1 | THz
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: IEEE 802.3ct task force contribution. Same table gives pre-FEC BER (CFEC threshold) 1.25e-2 and residual CD max 1600 ps/nm.
+- id: ch06.zr.cfec_threshold
+  section: '6.1'
+  claim: 400ZR black-link pre-FEC BER limit at the CFEC threshold
+  value: 0.0125
+  unit: '1'
+  kind: spec_max
+  conditions:
+    fec: CFEC (staircase + Hamming)
+  source_id: lyubomirsky_ieee8023ct_2019
+  locator: Black Link Channel Characteristics table
+  quote: Pre FEC BER (max) 1.25e-2 ... BER at the CFEC threshold.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: ''
+- id: ch06.wss.finisar_cband_4p8thz
+  section: '6.1'
+  claim: Default WSS frequency range 4.8 THz, extendable to 6 THz (Super C-band)
+  value:
+  - 4.8
+  - 6.0
+  unit: THz
+  kind: spec_typ
+  conditions:
+    device: Finisar (Coherent) single 1xN WSS, N<=20
+  source_id: finisar_wss_single_pb_2020
+  locator: Product brief, Features list
+  quote: 'Frequency range: 4.8 THz (default) - wider frequency range up to 6THz (Super C-band) can be supported'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Use with ch06.zr.cband_191p3_196p1 for C-band width; 4.8 THz / 50 GHz = 96 channels (computed, not sourced).
+- id: ch06.sc.gerstel_1t_qpsk_gain
+  section: '6.1'
+  claim: Elastic (flexgrid) spectrum gain over 50 GHz fixed grid for a 1 Tb/s DP-QPSK superchannel, 200 GHz vs 500 GHz (10 GHz guard band)
+  value: 150
+  unit: '%'
+  kind: model_param
+  conditions:
+    link: 300 km point-to-point
+    superchannel_bw_GHz: 190
+    guard_band_GHz: 10
+  source_id: gerstel_commag_2012
+  locator: Table 1
+  quote: 1000 | DP-QPSK | 190+10 | 10 100G in 10 50 GHz channels | 200 GHz vs. 500 = 150%
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same table, 400G DP-16QAM 85 GHz vs 100 GHz = 17%; 1 Tb/s DP-16QAM 200 vs 250 GHz = 25%. Network-level gains 'well over 50 percent in many cases'.
+- id: ch06.sc.gerstel_400g_16qam_gain
+  section: '6.1'
+  claim: Flexgrid spectrum gain for a 400 Gb/s DP-16QAM superchannel, 85 GHz vs two 50 GHz slots
+  value: 17
+  unit: '%'
+  kind: model_param
+  conditions:
+    superchannel_bw_GHz: 75
+    guard_band_GHz: 10
+  source_id: gerstel_commag_2012
+  locator: Table 1
+  quote: 400 | DP-16QAM | 75+10 | 2 200Gb/s in 2 50 GHz channels | 85 GHz vs. 100 = 17%
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch06.roadm.cdc_definitions
+  section: '6.2'
+  claim: Definitions of colorless, directionless and contentionless ROADM add/drop
+  value: colorless = wavelength set in software not by port; directionless = add/drop from any degree; contentionless = multiple copies of same wavelength on one add/drop structure
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: gringeri_commag_2010
+  locator: Section 'ROADM architectures', Fig. 2
+  quote: A contention less architecture allows multiple copies of the same wavelength on a single add/drop structure.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Also 'A service is defined as colorless if a wavelength can be set under software control and is not fixed by the physical add/drop port'.
+- id: ch06.roadm.contentionless_limit
+  section: '6.2'
+  claim: In a contentionless node, the number of channels of the same wavelength on one add/drop structure is limited by the node degree
+  value: same-wavelength copies <= node degree
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: gringeri_commag_2010
+  locator: Section 'Colorless, directionless, and contentionless ROADM implementation'
+  quote: as long as the num ber of channels with the same wavelength is not more than the number of degrees in the node.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: In 2010 MxN WSSs were 'not yet commercially available'.
+- id: ch06.wss.lcos_dominates
+  section: '6.2'
+  claim: LCoS technology dominates WSS installations and the WSS is in all commercial ROADM systems; first commercial quad WSS
+  value: LCoS dominant
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: ma_jlt_2020_wss
+  locator: Abstract
+  quote: Liquid crystal on silicon (LCoS) technology dominates current WSS installations as LCoS-based WSS can support Flexgrid technology
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only.
+- id: ch06.wss.lumentum_twin_1x35
+  section: '6.2'
+  claim: Commercial LCoS twin WSS port count 1x35 or universal MxN with M+N <= 36; in-service granularity 3.125 GHz
+  value: 35
+  unit: ports
+  kind: spec_typ
+  conditions:
+    device: Lumentum TrueFlex Twin 1x35 WSS
+  source_id: lumentum_twin_1x35_web
+  locator: Product page
+  quote: Various configuration options are available, including 1x35 and universal MxN (M + N ≤36).
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Same page: Channel spacing and granularity can be adjusted in-service, at increments of 3.125 GHz.'
+- id: ch06.wss.lumentum_twin_1x20_range
+  section: '6.2'
+  claim: Lumentum TrueFlex Twin 1x20 WSS wavelength range 191.15 to 196.25 THz, 21 ports plus test port
+  value:
+  - 191.15
+  - 196.25
+  unit: THz
+  kind: spec_typ
+  conditions:
+    device: Lumentum TrueFlex Twin high port count WSS (1x20, MxN M+N<=21)
+  source_id: lumentum_twin_wss_pb_2025
+  locator: Product brief, specifications table
+  quote: Wavelength range | 191.15 to 196.25 THz
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 5.1 THz range.
+- id: ch06.wss.huang_twin1x35_il
+  section: '6.2'
+  claim: Insertion loss of a research twin 1x35 LCoS WSS (typ 5.96 dB, range 4.65 to 7.2 dB)
+  value: 5.96
+  unit: dB
+  kind: measured
+  conditions:
+    range_dB:
+    - 4.65
+    - 7.2
+    spectrum_THz:
+    - 190.2
+    - 195.15
+  source_id: huang_jlt_2023_twin1x35
+  locator: Table I
+  quote: Insertion loss (dB) | 4.65 | 5.96 | 7.2
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Author manuscript PDF.
+- id: ch06.wss.huang_passband_50ghz
+  section: '6.2'
+  claim: -3 dB and -0.5 dB passband width of a 50 GHz LCoS WSS channel (typ 42.8 GHz and 33.0 GHz)
+  value: 42.8
+  unit: GHz
+  kind: measured
+  conditions:
+    minus_0p5dB_typ_GHz: 33.0
+    minus_1dB_typ_GHz: 36.0
+    channel: 50 GHz
+  source_id: huang_jlt_2023_twin1x35
+  locator: Table I
+  quote: -3.0 dB passband width for 50 GHz channel (GHz) | 42.1 | 42.8 | 43.2
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Shows the non-rectangular passband: 50 GHz slot gives about 43 GHz at -3 dB.'
+- id: ch06.wss.filter_cascade_pan2017
+  section: '6.2'
+  claim: Single digital pre-equalization filter doubles the number of cascaded WSSs supported by 100G QPSK CFP on 37.5 GHz grid from 3 to 6
+  value:
+  - 3
+  - 6
+  unit: WSS
+  kind: measured
+  conditions:
+    signal: 100G QPSK CFP, 37.5 GHz grid
+  source_id: pan_jphot_2017
+  locator: Abstract
+  quote: resulting in a doubling of the number of WSSs, which can be supported per link from three to six.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only.
+- id: ch06.wss.filter_cascade_rahman2014
+  section: '6.2'
+  claim: With one WaveShaper per ROADM, 28-32 GBd signals pass 32 (QPSK) or 14 (16QAM) WSS filters at average 33 GHz bandwidth each with OSNR penalty below 1 dB
+  value:
+  - 32
+  - 14
+  unit: WSS
+  kind: measured
+  conditions:
+    avg_wss_bw_GHz: 33
+    ber: 1e-3
+  source_id: rahman_ptl_2014
+  locator: Abstract
+  quote: With an average bandwidth of 33 GHz per WSS, an optical signal to noise ratio penalty below 1 dB at BER=1×10-3is observed.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; penalty with mitigation, not raw.
+- id: ch06.wss.cascade_bw_narrowing_24roadm
+  section: '6.2'
+  claim: After 24 cascaded 50 GHz ROADMs, the passband narrowed from 44-45 GHz to about 28-30 GHz, with ROSNR penalty about 1.6 dB (route-and-select) and 1 dB (broadcast-and-select)
+  value:
+  - 1.0
+  - 1.6
+  unit: dB
+  kind: measured
+  conditions:
+    roadms: 24
+    grid_GHz: 50
+    signal: 100 Gb/s DP-QPSK (real-time)
+  source_id: doggart_msc_thesis_2017
+  locator: Literature review (ch. 2), citing its ref. [17]
+  quote: after 24 ROADMs, with the R&S architecture having a penalty of 1.6 dB and the B&S architecture having a penalty of around 1 dB.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: low
+  notes: Secondary report inside a Queen's University MSc thesis; the primary paper (its ref. [17]) was not identified or read. Use only with the primary once found (see gaps). Roughly 0.04-0.07 dB per ROADM if spread uniformly (computed, not sourced).
+- id: ch06.wss.filter_model_bwotf
+  section: '6.2'
+  claim: LCoS WSS passband modelled as a rectangle of width B convolved with a Gaussian optical transfer function of 3 dB width BW_OTF; example B = 37.5 GHz with BW_OTF = 10.4 GHz
+  value: 10.4
+  unit: GHz
+  kind: model_param
+  conditions:
+    slot_GHz: 37.5
+  source_id: polito_thesis_2018_scm_filtering
+  locator: Section 2.1, Eq. (2.1) and Fig. 2.1
+  quote: They are obtained for B = 37.5 GHz and BOT F = 10.4 GHz.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Model originates in Pulikkaseril et al., Opt. Express 19(9) 8458 (2011), whose full text could not be fetched. Rizzelli et al. JLT 2025 (open access) map super-Gaussian orders 3, 6, 9 to BW_OTF 12.5, 6.8, 4.6 GHz at B_ref = 50 GHz.
+- id: ch06.wss.sg_order_bwotf_map
+  section: '6.2'
+  claim: Super-Gaussian filter orders 3, 6 and 9 correspond to BW_OTF of 12.5, 6.8 and 4.6 GHz for a 50 GHz reference bandwidth
+  value:
+  - 12.5
+  - 6.8
+  - 4.6
+  unit: GHz
+  kind: model_param
+  conditions:
+    sg_orders:
+    - 3
+    - 6
+    - 9
+    b_ref_GHz: 50
+  source_id: rizzelli_jlt_2025
+  locator: Section II
+  quote: we will consider super Gaussian filters of order 3, 6 and 9 corresponding to 12.5 GHz, 6.8 GHz and 4.6 GHz BWOT F , respectively.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same paper notes 3 ROADMs (6 WSS, SG order 6, +/-5% centre jitter) narrow a 75 GHz channel to about 63 GHz.
+- id: ch06.wss.rizzelli_6wss_63ghz
+  section: '6.2'
+  claim: Cascade of 6 WSS filters (3 ROADMs), super-Gaussian order 6 with random centre offset of +/-5%, narrows a nominal 75 GHz channel to about 63 GHz
+  value: 63
+  unit: GHz
+  kind: model_param
+  conditions:
+    nominal_GHz: 75
+    filters: 6
+  source_id: rizzelli_jlt_2025
+  locator: Section II, Fig. 1(b)
+  quote: After 6 filters, i.e. 3 ROADMs, we observe a significant bandwidth reduction down to about 63 GHz.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Analytical transfer function, not measurement.
+- id: ch06.raman.gain_eff_ssmf
+  section: '6.3'
+  claim: Peak Raman gain efficiency of SSMF 0.4 1/(W km); NZDSF up to 0.7; DCF 2.4-3.5; peak between 13.0 and 13.3 THz shift
+  value: 0.4
+  unit: 1/(W km)
+  kind: measured
+  conditions:
+    peak_shift_THz:
+    - 13.0
+    - 13.3
+    tw_rs: 0.7
+    dcf_for_ssmf: 2.4
+  source_id: kjaer_phd_dtu_2008
+  locator: Section 2.1, Fig. 2.2 discussion
+  quote: These fibers show moderate peak values of g from 0.4 W −1km −1 for SSMF up to 0.7 W −1km −1 for TW-RS.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: PhD thesis (DTU, 2008, OFS-sponsored). Gain efficiency g = g_R/A_eff.
+- id: ch06.raman.peak_gr_ssmf_andre
+  section: '6.3'
+  claim: Peak Raman gain coefficient of a standard SMF (polarization averaged, scaled to 1530 nm pump), 0.540e-13 m/W at 12.84 THz centre
+  value: 5.4e-14
+  unit: m/W
+  kind: measured
+  conditions:
+    centre_THz: 12.841
+    fwhm_THz: 5.521
+    aeff_um2: 91.61
+  source_id: andre_optapp_2003
+  locator: Section 5
+  quote: which results in a value of 0.540x10-13 mW-1.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: OCR text; 'mW-1' is m/W. Optica Applicata 33(4), p. 559 (2003). Measured on 20 km SMF reel, pump 1530 nm.
+- id: ch06.raman.cr_ssmf
+  section: '6.3'
+  claim: ISRS gain slope (linear regression of normalized Raman gain spectrum) for SSMF at 1550 nm
+  value: 0.028
+  unit: 1/(W km THz)
+  kind: model_param
+  conditions:
+    fiber: SSMF, D 17 ps/(nm km), gamma 1.2 1/(W km)
+  source_id: semrau_jocn_2020
+  locator: Section 4 system parameters
+  quote: ISRS gain slope C r = 0.028 1/W/km/THz at 1550 nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Used for the triangular approximation, valid to about 14-15 THz.
+- id: ch06.raman.isrs_negligible_cband
+  section: '6.3'
+  claim: ISRS is negligible for C-band (about 5 THz) but significant for C+L (about 10 THz) and beyond
+  value:
+  - 5
+  - 10
+  unit: THz
+  kind: fact
+  conditions: {}
+  source_id: semrau_jlt_2018_isrs
+  locator: Section I
+  quote: for systems that occupy the entire C + L band (ap proximately 10 THz) or beyond, ISRS becomes significant
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same paragraph says that for C band (approximately 5 THz) ISRS is not significant and its impact is negligible in most cases.
+- id: ch06.raman.isrs_gn_accuracy
+  section: '6.3'
+  claim: ISRS GN model deviation from split-step simulation at most 0.1 dB in NLI power; ISRS changes NLI by up to 2 dB at optimum power over 10 THz C+L
+  value: 0.1
+  unit: dB
+  kind: measured
+  conditions:
+    bandwidth_THz: 10
+    nli_change_dB: 2
+  source_id: semrau_jlt_2018_isrs
+  locator: Abstract
+  quote: A maximum deviation of only 0.1 dB in nonlinear interference power between simulations and the ISRS GN model is reported.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch06.raman.triangular_validity
+  section: '6.3'
+  claim: Linear (triangular) Raman gain approximation in the closed-form ISRS GN model holds for optical bandwidths up to 15 THz
+  value: 15
+  unit: THz
+  kind: model_param
+  conditions: {}
+  source_id: semrau_jlt_2019_isrs_cf
+  locator: Abstract
+  quote: The proposed result is applicable for dispersion unmanaged, ultra-wideband transmission systems that use optical bandwidths of up to 15 THz.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The 2018 integral paper says approximately 14 THz.
+- id: ch06.raman.pelouch_edfa_nf
+  section: '6.3'
+  claim: Typical EDFA noise figure in terrestrial lines 4.5 to 6 dB; EDFA-only span NF = span loss (dB) + EDFA NF (dB)
+  value:
+  - 4.5
+  - 6.0
+  unit: dB
+  kind: spec_typ
+  conditions: {}
+  source_id: pelouch_jlt_2016
+  locator: Section III.A, Eq. (10)
+  quote: the sum of the span loss in dB and the EDFA NF in dB (which is typically 4.5 to 6 dB).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Author copy hosted by Xtera.
+- id: ch06.raman.pelouch_bwd_osnr_gain
+  section: '6.3'
+  claim: Backward distributed Raman (three pumps, 650 mW total, SMF, C-band) improves OSNR by about 4.75 dB over EDFA-only, i.e. about 3x reach
+  value: 4.75
+  unit: dB
+  kind: model_param
+  conditions:
+    pump_mW: 650
+    pumps: 3
+    nf_edfa_dB: 4.5
+  source_id: pelouch_jlt_2016
+  locator: Section III.B, Fig. 7, Eq. (12)
+  quote: the OSNR ben efit from backward Raman is about 4.75 dB better than with an EDFA-only span
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Linear OSNR-reach scaling, ignoring nonlinearity. Same section reports total NF of -0.25 to -0.52 dB plus span loss.
+- id: ch06.raman.pelouch_fwd_bwd_15db
+  section: '6.3'
+  claim: Forward (10 dB) plus backward Raman gives about 15 dB OSNR improvement versus no Raman, before accounting for nonlinear launch limits
+  value: 15
+  unit: dB
+  kind: model_param
+  conditions:
+    forward_gain_dB: 10
+  source_id: pelouch_jlt_2016
+  locator: Section III.C, Eq. (13)
+  quote: The OSNR improvement for the case of 10 dB forward Raman gain and the backward Raman of case (c) is about 15 dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Authors say the comparison 'is not quite fair' since nonlinear limits on transmit power are ignored.
+- id: ch06.raman.pelouch_span_loss_thresholds
+  section: '6.3'
+  claim: Example design rule for a 30 dB per-span OSNR target, backward Raman above 27.5 dB span loss and forward plus backward above 32 dB
+  value:
+  - 27.5
+  - 32
+  unit: dB
+  kind: model_param
+  conditions:
+    osnr_threshold_dB: 30
+    raman_gain_dB: 12
+  source_id: pelouch_jlt_2016
+  locator: Section V, Fig. 18
+  quote: backward Raman at a span loss greater than 27.5 dB and forward + backward Raman at a span loss greater than 32 dB.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+- id: ch06.raman.xtera_reach_factor
+  section: '6.3'
+  claim: A 10 dB backward Raman module (NF ratio 3.5) gives (3.5)^(2/3) = 2.3x the maximum reach of an EDFA-only line in SMF
+  value: 2.3
+  unit: '1'
+  kind: model_param
+  conditions:
+    nf_ratio: 3.5
+  source_id: xtera_wp_raman_scaling_2015
+  locator: p. 2-3
+  quote: a 10-dB backward Raman amplifier has a maximum reach that is (3.5) 2/3 =2.3 X the distance of an EDFA-only line system
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Vendor white paper; the 2/3 exponent follows from optimum-power GN scaling (Ch. 1.6).
+- id: ch06.cl.semrau_cl_10thz
+  section: '6.3'
+  claim: Full C+L band occupies about 10 THz of optical bandwidth
+  value: 10
+  unit: THz
+  kind: fact
+  conditions: {}
+  source_id: semrau_jlt_2018_isrs
+  locator: Abstract
+  quote: The model is applied to a transmission system that occupies the entire C + L band (10 THz optical bandwidth).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Compare super-(C+L) 12 THz below.
+- id: ch06.cl.super_cl_12thz_bands
+  section: '6.3'
+  claim: Super-(C+L) bands about 6 THz each (super-L 184.50-190.32 THz, super-C 190.75-196.57 THz), 20-30% more than earlier C+L
+  value: 12
+  unit: THz
+  kind: spec_typ
+  conditions:
+    super_L_THz:
+    - 184.5
+    - 190.32
+    super_C_THz:
+    - 190.75
+    - 196.57
+  source_id: jiang_arxiv_2024_supercl
+  locator: Sections I-II
+  quote: amplification can be stretched (in separate units) to the super-L and super-C band, about 6 THz each
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: arXiv preprint (Politecnico di Torino with Cisco). Same paper finds backward Raman gives +60% throughput at 3000 km and the 3 dB rule is within 0.4% of optimum.
+- id: ch06.cl.supercl_raman_plus60
+  section: '6.3'
+  claim: Backward Raman (5-pump commercial unit) increases super-(C+L) throughput by 60% on a 3000 km SMF link
+  value: 60
+  unit: '%'
+  kind: model_param
+  conditions:
+    length_km: 3000
+    throughput_Tbps: 68.3
+  source_id: jiang_arxiv_2024_supercl
+  locator: Section II, Fig. 3
+  quote: The throughput increase vs the same link without Raman is a remarkable +60%.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Simulation with closed-form model; EDFA NF assumed 6 dB (L) and 5 dB (C).
+- id: ch06.cl.cmcc_c6t_l6t_2502km
+  section: '6.3'
+  claim: Field trial of 80 x 400 Gb/s 128 GBd DP-QPSK over 2502 km G.652.D using 6 THz C (1525-1572 nm) and 6 THz L (1576-1626 nm) EDFAs plus partial backward Raman
+  value: 2502
+  unit: km
+  kind: record
+  conditions:
+    capacity_Tbps: 32
+    grid_GHz: 150
+    spans: 42
+    route: Changsha-Guian loopback
+  source_id: zuo_ecoc_2023_2502km
+  locator: Abstract and Introduction
+  quote: We demonstrate a record of real-time 80-λ×400-Gb/s DP-QPSK field transmission over 2502- km terrestrial G.652.D fibre based on 6-THz C-band and 6-THz L-band EDFAs
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: China Mobile Research Institute and ZTE. Venue taken as ECOC 2023 from the copyright line; confirm. 11 WSS sets equalize ISRS power transfer.
+- id: ch06.cl.cmcc_96tb_305km
+  section: '6.3'
+  claim: Real-time 96 Tb/s (80 x 1.2 Tb/s DP-64QAM-PCS) over 12 THz super C+L along 305 km G.652.D, EDFA-only
+  value: 96
+  unit: Tb/s
+  kind: record
+  conditions:
+    channels: 80
+    rate_per_channel_Tbps: 1.2
+    distance_km: 305
+  source_id: zuo_ofc_2025_cmcc_96t
+  locator: Abstract
+  quote: We demonstrate a record of real-time 96-Tb/s (80×1.2-Tb/s) DP-64QAM-PCS field transmission covering 12-THz-wide super C+L band over 305-km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only.
+- id: ch06.uwb.puttnam_402tbps
+  section: '6.3'
+  claim: SMF data-rate record 402.2 Tb/s (GMI), 378.9 Tb/s decoded, 37.6 THz bandwidth over 50 km, O-E-S-C-L-U bands
+  value: 402.2
+  unit: Tb/s
+  kind: record
+  conditions:
+    bandwidth_THz: 37.6
+    distance_km: 50
+    decoded_Tbps: 378.9
+  source_id: puttnam_ofc_2024_402t
+  locator: Abstract (OFC 2024 Th4A.3, postdeadline)
+  quote: achieving an SMF record data-rate of 402.2 Tb/s (GMI)-378.9 Tb/s (Decoded) and 37.6 THz transmission bandwidth after 50 km.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Optica abstract says 6 doped-fiber amplifier variants; the Aston repository version says 5 (disagreement in abstract wording).
+- id: ch06.uwb.puttnam_1505ch
+  section: '6.3'
+  claim: The 402 Tb/s experiment used up to 1505 channels from 1281.2 nm to 1649.9 nm (275 nm), with P/B/TDFAs for O/E/S, EDFAs for C/L and discrete Raman for U-band
+  value: 1505
+  unit: channels
+  kind: record
+  conditions:
+    wavelength_nm:
+    - 1281.2
+    - 1649.9
+    s_band_amp: TDFA
+    u_band_amp: discrete Raman
+  source_id: nict_press_2024_402t
+  locator: Press release body
+  quote: A wideband DWDM signal comprising up to 1,505 channels covering 275 nm (37.6 THz), from 1,281.2 nm to 1,649.9 nm
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Press release; details for the record box only, the core claim is in ch06.uwb.puttnam_402tbps (tier A).
+- id: ch06.uwb.band_definitions_nict
+  section: '6.3'
+  claim: Band edges used by NICT, S 1460-1530 nm (TDFA), C 1530-1565 nm, L 1565-1625 nm, U 1625-1675 nm
+  value: S 1460-1530; C 1530-1565; L 1565-1625; U 1625-1675 nm
+  unit: nm
+  kind: fact
+  conditions: {}
+  source_id: nict_press_2024_402t
+  locator: Glossary section
+  quote: S-band (1,460 - 1,530 nm) transmission experiments have been enabled by development of Thulium (T-) doped fiber amplifiers
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Prefer the ITU-T G.Sup39 band table (see ch01.amp.cband_range_itu, ch01.amp.lband_range_itu) for prose.
+- id: ch06.zr.oif800zr_scope
+  section: '6.4'
+  claim: 800ZR IA targets single-span amplified 80-120 km point-to-point DWDM DCI links, 32 x 150 GHz channels
+  value:
+  - 80
+  - 120
+  unit: km
+  kind: spec_typ
+  conditions:
+    channels: 32
+    spacing_GHz: 150
+    fec: oFEC
+  source_id: oif_800zr_ia_2024
+  locator: Section 1 Introduction; Section 8.1
+  quote: single-span, amplified, 80-120km, point-to-point, DWDM noise limited links (e.g. data center interconnect applications).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Section 8.1 'Normative 32 x 150 GHz DWDM Application Channels'.
+- id: ch06.zr.400zr_vs_800zr_baud
+  section: '6.4'
+  claim: Nominal symbol rate 400ZR about 59.87 GBd vs 800ZR 118.2 GBd, both DP-16QAM; ROSNR 26 dB vs 27 dB; FEC overhead 14.8% CFEC vs 15.3% oFEC
+  value: 118.2
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    rosnr_400zr_dB: 26
+    rosnr_800zr_dB: 27
+    fec_oh_400zr_pct: 14.8
+    fec_oh_800zr_pct: 15.3
+  source_id: oif_ofc2023_800zr_berger
+  locator: Slide '400ZR -> 800ZR spec comparison'
+  quote: Nominal Symbol Rate 400ZR 59.87GBaud 800ZR 118.2GBaud Modulation DP-QAM16 DP-QAM16
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: OIF presentation before IA ratification; the 400ZR IA gives 59.84375 GBd (ch06.zr.oif400zr_baud), so 59.87 is rounded or includes a different expansion. Treat ROSNR values as draft.
+- id: ch06.zr.oif1600zr_exists
+  section: '6.4'
+  claim: OIF published a 1600ZR implementation agreement (OIF-1600ZR-01.0) in September 2026
+  value: OIF-1600ZR-01.0, September 2026
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: oif_ia_list_2026
+  locator: Implementation Agreements page, Coherent section
+  quote: OIF-1600ZR-01.0 – Implementation Agreement 1600ZR (September 2026)
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Contents (baud rate, reach) not read; see gaps.
+- id: ch06.ipodwdm.bt_ecoc2020
+  section: '6.4'
+  claim: BT cost model of national 400G IP/WDM core, ZR/ZR+ in routers vs transponders (ECOC 2020)
+  value: ZR/ZR+ can be integrated in routers cost-effectively without reducing port density
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: wright_ecoc_2020_zr_cost
+  locator: Abstract
+  quote: WDM optics can now be integrated into IP routers in a cost-effective manner without reducing IP router port density.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only.
+- id: ch06.ipodwdm.davey_express_cheaper
+  section: '6.4'
+  claim: BT model of core network growing from about 28 Tb/s to 220 Tb/s, optical-express (ROADM) architectures become lower cost than hop-by-hop as bandwidth grows
+  value:
+  - 28
+  - 220
+  unit: Tb/s
+  kind: model_param
+  conditions:
+    operator: BT (UK core)
+  source_id: davey_jocn_2023_zr
+  locator: Abstract
+  quote: The model shows that, as bandwidths increase, “optical express” architectures become lower cost compared to “hop-by-hop” architectures.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Includes a field trial of 400G ZR+ in routers over a ROADM network.
+- id: ch06.ipodwdm.gumaste_transceiver_count
+  section: '6.4'
+  claim: Flexponders need 75% fewer transceivers than ZR+ hop-by-hop and 51% fewer than ZR+ over ROADMs (US and pan-India core models)
+  value:
+  - 75
+  - 51
+  unit: '%'
+  kind: model_param
+  conditions:
+    networks: US core and pan-India core
+  source_id: gumaste_jocn_2022_zrplus
+  locator: Abstract
+  quote: Results show a 75% decrease in transceiver count for flexponders ... compared to ZR + pluggables in routers with hop-by-hop routing and a 51% decrease
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Counts transceivers, not cost; opposite direction to vendor TCO claims below.
+- id: ch06.ipodwdm.acg_tco_46pct
+  section: '6.4'
+  claim: Vendor-sponsored analysis claims 400G IP transport (routers with DCO pluggables) gives 46% TCO, 35% CapEx and 57% OpEx savings over router-bypass ROADM networks
+  value: 46
+  unit: '%'
+  kind: model_param
+  conditions:
+    capex_pct: 35
+    opex_pct: 57
+    nodes: 80
+    horizon_years: 5
+  source_id: acg_cisco_wp_400g_ip_transport
+  locator: TCO Results, Figure 5
+  quote: IP transport networks have 46% TCO savings, 57% OPEX savings, and 35% CAPEX savings over router bypass networks
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Commissioned by Cisco; for a contested box only. Contrast with Davey JOCN 2023 and Gumaste JOCN 2022.
+- id: ch06.ipodwdm.arelion_capex64
+  section: '6.4'
+  claim: Arelion reported 64% CapEx and 76% OpEx savings with IPoDWDM (as reported by Heavy Reading)
+  value:
+  - 64
+  - 76
+  unit: '%'
+  kind: model_param
+  conditions: {}
+  source_id: heavyreading_2024_ipodwdm
+  locator: p. 2-3
+  quote: Arelion has reported capex savings of 64% and opex savings of 76% with IPoDWDM
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Secondary analyst report sponsored by Juniper. Same report says OpenZR+ targets ~500 km at 400G with OIF demo of 1000 km.
+- id: ch06.openroadm.members_2025
+  section: '6.4'
+  claim: OpenROADM MSA, launched 2016, had 32 members (15 operators, 17 vendors) as of April 2025
+  value: 32
+  unit: members
+  kind: fact
+  conditions:
+    operators: 15
+    vendors: 17
+  source_id: sone_nttreview_2025_openroadm
+  locator: Section 1
+  quote: Since its launch in 2016, the MSA has 32 member organizations as of April 2025, including 15 operators and 17 optical-communication-equipment vendors.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: ''
+- id: ch06.openroadm.w_63p1gbd
+  section: '6.4'
+  claim: OpenROADM W-interface spec v5.1 (2022) uses oFEC at 30 GBd for 100/200G and 63.1 GBd for 200/300/400G
+  value: 63.1
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    rates_Gbps:
+    - 200
+    - 300
+    - 400
+  source_id: sone_nttreview_2025_openroadm
+  locator: Section 2, Table 1 discussion
+  quote: includes 30 Gbaud for 100- and 200-Gbit/s transmission and 63.1 Gbaud for 200-, 300-, and 400-Gbit/s transmission.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: OpenROADM use-case document v1.6 also lists '200-400G W oFEC 63.1Gbaud, 100-200G W oFEC 31.6Gbaud' (31.6 vs 30 GBd naming differs).
+- id: ch06.openroadm.ofec_threshold
+  section: '6.4'
+  claim: oFEC (3 soft-decision iterations) net coding gain 11.1 dB (DP-QPSK) and 11.6 dB (DP-16QAM) at 1e-15, pre-FEC BER threshold 2.0e-2
+  value: 0.02
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    ncg_qpsk_dB: 11.1
+    ncg_16qam_dB: 11.6
+  source_id: openroadm_msa6_wport_2023
+  locator: Abstract
+  quote: Net Coding Gain is 11.1 dB @ 10 -15 (DP-QPSK) and 11.6 dB @ 10 -15 (DP-16QAM), with pre-FEC BER threshold of 2.0×10 -2.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Compare 400ZR CFEC threshold 1.25e-2.
+- id: ch06.openroadm.pcs_first
+  section: '6.4'
+  claim: OpenROADM W-Port Digital Spec 6.0 was the first industry standardization of interoperable probabilistic constellation shaping (600G and 800G)
+  value: first interoperable PCS spec (600G/800G)
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: sone_nttreview_2025_openroadm
+  locator: Section 3
+  quote: the OpenROADM MSA became the first in the industry to standardize the interoperable probabilistic constellation shaping (PCS) scheme
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Claim of priority is by MSA participants (NTT).
+- id: ch06.openroadm.controller_equalization
+  section: '6.4'
+  claim: In OpenROADM, no control loops run between adjacent ROADMs except safety shutdown; optical equalization is done off-box by the controller
+  value: equalization by controller, not ROADM-to-ROADM
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: openroadm_device_wp_r7
+  locator: Section 2.2.2
+  quote: there is no ROADM to ROADM communication and optical equalization is handled off box by the controller.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Key difference from vendor-integrated line systems.
+- id: ch06.coh.wl6e_200gbd_1p6t
+  section: '6.4'
+  claim: Ciena WaveLogic 6 Extreme, 3 nm DSP, 200 GBd, up to 1.6 Tb/s on a single carrier
+  value: 200
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    max_rate_Tbps: 1.6
+    cmos_nm: 3
+  source_id: ciena_wl6e_motr_ds
+  locator: Data sheet introduction
+  quote: Powered by advanced 3 nm coherent DSP technology and leading-edge 200 GBaud electro optics
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Same page states 'up to an industry-leading 1.6 Tb/s of client payload on a single carrier wavelength'.
+- id: ch06.coh.pse6s_130gbd_1p2t
+  section: '6.4'
+  claim: Nokia PSE-6s, 5 nm DSP, 130 GBd and higher, up to 1.2 Tb/s per wavelength, 150 GHz channels
+  value: 130
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    max_rate_Tbps: 1.2
+    spacing_GHz: 150
+    cmos_nm: 5
+  source_id: nokia_pse6s_web
+  locator: Product page
+  quote: The PSE-6s operates at speeds of 130 GBaud and higher, optimized for use in 150GHz WDM channel spacings.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Not 200 GBd / 1.6T; PSE-6s is a 1.2T-class engine. 2.4 Tb/s refers to two bonded engines per line card.
+- id: ch06.coh.ice7_148gbd
+  section: '6.4'
+  claim: Infinera ICE7, 5 nm DSP, up to 148 GBd and 1.2 Tb/s per wavelength; 800G up to 3000 km
+  value: 148
+  unit: GBd
+  kind: spec_typ
+  conditions:
+    max_rate_Tbps: 1.2
+    reach_800g_km: 3000
+  source_id: ocn_2023_ice7
+  locator: Article body
+  quote: while supporting symbol rates of up to 148 Gbaud. With the ability to deliver 800G-based transmission up to 3,000 km
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Trade press; Infinera/Zayo 2025 press release says '140+ Gbaud' and 'up to 1.2 Tb/s'. No Infinera datasheet found. Infinera merged into Nokia (2025).
+- id: ch06.coh.zayo_ice7_1t_1391km
+  section: '6.4'
+  claim: Zayo/Infinera live trial, 1 Tb/s on a single 150 GHz wavelength over 1391 km (Sacramento to Salt Lake City); 32 Tb/s C-band capacity
+  value: 1391
+  unit: km
+  kind: record
+  conditions:
+    rate_Tbps: 1.0
+    spacing_GHz: 150
+  source_id: zayo_press_2025_ice7
+  locator: Press release, para 1
+  quote: deliver 1 Tb/s single 150GHz wavelength transmission over 1,391 kilometers (km)
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Press release. 32 Tb/s / 150 GHz implies 32 channels in 4.8 THz (computed).
+- id: ch06.coh.att_wl6e_1p6t_296km
+  section: '6.4'
+  claim: AT&T field test of a 1.6 Tb/s single-carrier wavelength (WL6e) carrying 2 x 800GbE over 296 km (Newark to Philadelphia)
+  value: 296
+  unit: km
+  kind: record
+  conditions:
+    rate_Tbps: 1.6
+  source_id: att_press_2025_1p6t
+  locator: Press release
+  quote: successfully completed testing a 1.6 terabit-per-second single-carrier wavelength across 296 kilometers of its commercial long-distance network
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Other operator trials with WL6e at 1.6T reported in press, Arelion 470 km (Aug 2024), Verizon 118 km with 9 ROADMs (Nov 2024).
+- id: ch06.coh.nokia_globalconnect_800g_2019km
+  section: '6.4'
+  claim: Nokia/GlobalConnect PSE-6s live trial, 1.2 Tb/s over 118 km metro (150 GHz) and 800 Gb/s over 2019 km
+  value:
+  - 118
+  - 2019
+  unit: km
+  kind: record
+  conditions:
+    rates_Tbps:
+    - 1.2
+    - 0.8
+  source_id: nokia_press_2023_globalconnect
+  locator: Press release
+  quote: to achieve 1.2 T b/s over metro distances (118km) and 800 G b/s over long haul distances (2,019 km), both using a single wavelength.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Press release.
+- id: ch06.coh.mardoyan_300gbd_1p6t_9075km
+  section: '6.4'
+  claim: Lab record, single-carrier 300 GBd PCS-16QAM, net 1.6 Tb/s over 9075 km (net SE 5.22 b/s/Hz) and 2.4 Tb/s over 1210 km (PCS-36QAM, 7.8 b/s/Hz)
+  value: 9075
+  unit: km
+  kind: record
+  conditions:
+    symbol_rate_GBd: 300
+    spacing_GHz: 306.25
+    fiber: EX3000, 55 km spans
+    net_se_bps_per_Hz: 5.22
+  source_id: mardoyan_ecoc_2024_300gbd
+  locator: Abstract and Transmission results
+  quote: We demonstrate net 1.6 Tb/s over 9075 km with PCS-16QAM and 2.4 Tb/s over 1210 km with PCS-36QAM.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: arXiv version of ECOC 2024 Th2B.2. Optical slicing (OAWG/OAWM), not a commercial DSP.
+- id: ch06.coh.cmcc_400g_130gbd_qpsk
+  section: '6.4'
+  claim: China Mobile 400G backbone uses 130 GBd QPSK with C6T+L6T; covers over 135 cities; mostly G.652.D fibre with some G.654.E
+  value: 130
+  unit: GBd
+  kind: fact
+  conditions:
+    band: C6T + L6T
+    cities: 135
+  source_id: cww_2025_05_zhangdechao
+  locator: Article body
+  quote: 率先在骨干网400G中提出并采用了130GBd光模块+QPSK+C6T/L6T技术路线。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'first proposed and adopted 130 GBd modules + QPSK + C6T/L6T for the 400G backbone'. Same article, '400G骨干网选择G.652.D比较多，G.654.E也有一部分' (400G backbone mostly G.652.D, some G.654.E). Speaker is China Mobile Research Institute deputy director Zhang Dechao.
+- id: ch06.g654e.downie_reach_55pct
+  section: '6.5'
+  claim: G.654.E vs SSMF recirculating-loop reach increase of at least 55% for 200 Gb/s PM-16QAM
+  value: 55
+  unit: '%'
+  kind: measured
+  conditions:
+    signal: 200G PM-16QAM
+  source_id: downie_spie_2018_g654e
+  locator: Abstract
+  quote: We demonstrate significant transmission reach increases for 200 Gb/s PM-16QAM channels of at least 55% compared to standard single-mode fiber
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; Corning authors (fiber vendor). Also shows Raman pumps and OSC below cable cutoff have negligible impact.
+- id: ch06.g654e.corning_fom_range
+  section: '6.5'
+  claim: G.654.E FOM advantage over conventional G.652.D 2.4-3.2 dB and over low-loss G.652.D 2.2-2.8 dB (spans 50-120 km); 400G reach +60%; 4500 km without margin or 2100 km with 3 dB Q margin
+  value:
+  - 2.2
+  - 3.2
+  unit: dB
+  kind: model_param
+  conditions:
+    fiber: Corning TXF
+    ref_fibers: SMF-28 Ultra (0.18 dB/km), SMF-28e+ (0.19 dB/km)
+  source_id: makovejs_corning_cn_g654e
+  locator: Section 2 and Conclusion
+  quote: G.654E 光纤相对于常规 G.652D 光纤 FOM 有 2.4 – 3.2 dB 的优势，相 对于低损耗 G.652D 光纤 FOM 有 2.2 – 2.8 dB 的优势。
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Gloss, 'G.654.E FOM is 2.4-3.2 dB better than conventional G.652.D and 2.2-2.8 dB better than low-loss G.652.D'. Corning-authored Chinese article (venue not identified). English Optical Connections (Corning) piece gives 'at least 2dB (and in some cases almost 3dB)', reach +60-100%.
+- id: ch06.g654e.ctel_osnr_3p5db
+  section: '6.5'
+  claim: China Telecom live comparison, G.654.E raised system OSNR by 3.5 dB relative to G.652.D cores on the Shanghai-Guangzhou route; PM-16QAM 400G about 1500 km unregenerated with standard OSNR margin
+  value: 3.5
+  unit: dB
+  kind: measured
+  conditions:
+    route: Shanghai-Guangzhou
+    length_km: 1970
+    pm16qam_400g_reach_km: 1500
+  source_id: sasac_2021_ctel_g654e
+  locator: Article body
+  quote: 现网对比测试结果表明，G.654E光缆的应用可以使得系统OSNR相较G.652D纤芯环境提升3.5dB
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Gloss, 'live-network comparison shows G.654.E raises system OSNR by 3.5 dB vs G.652.D'. SASAC (government) republication of China Telecom announcement; tested with Huawei, ZTE, FiberHome.
+- id: ch06.g654e.ctel_shanghai_guangzhou_1970km
+  section: '6.5'
+  claim: China Telecom built China's first all-G.654.E terrestrial trunk cable, Shanghai-Guangzhou, 1970 km (2021), with over 1900 km unregenerated 400G
+  value: 1970
+  unit: km
+  kind: fact
+  conditions:
+    year: 2021
+    unregenerated_km: 1900
+  source_id: sasac_2021_ctel_g654e
+  locator: Para 1
+  quote: 中国电信在上海-广州间建成国内首条全G.654E陆地干线光缆，全长1970公里。
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Gloss, 'China Telecom built the first all-G.654.E land trunk cable in China between Shanghai and Guangzhou, 1970 km long'. ch01.att.yofc_ct_shanghai_guangzhou gives its fiber loss.
+- id: ch06.g654e.ctel_tender_2029km
+  section: '6.5'
+  claim: China Telecom Shanghai-Jinhua-Heyuan-Guangzhou tender (2019), 2029 km of new cable with 293,000 fiber-km of G.654.E
+  value: 2029
+  unit: km
+  kind: fact
+  conditions:
+    fiber_km: 293000
+  source_id: c114_2019_ctel_g654e_tender
+  locator: Article body
+  quote: 本工程采用直埋硅芯管及租用高速公路管道方式新建光缆2029公里，使用G.654E光纤光缆共计29.3万纤芯公里。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, '2029 km of new cable, 293,000 fiber-km of G.654.E'. Tender figure (2029 km cable route) differs from the 1970 km completed-route figure (SASAC); cable vs route length.
+- id: ch06.g654e.cmcc_jingjinjining_1539km
+  section: '6.5'
+  claim: China Mobile Beijing-Tianjin-Jinan-Nanjing G.654.E trunk (mixed G.654.E + G.652.D cable), 1539.6 km; 400G 16QAM single-carrier over 600 km with standard margin
+  value: 1539.6
+  unit: km
+  kind: fact
+  conditions:
+    year: 2016-2018
+    reach_400g_16qam_km: 600
+    reach_200g_qpsk_km: 1500
+  source_id: cww_2019_400g_g654e
+  locator: Para 1
+  quote: 本次测试在中国移动京津济宁G.654.E干线进行，该干线全长1539.6km。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'the test was on China Mobile's Beijing-Tianjin-Jinan-Nanjing G.654.E trunk, total length 1539.6 km'. China Mobile also states total system build cost down about 20% (cww 2023).
+- id: ch06.g654e.cmcc_cost_minus20
+  section: '6.5'
+  claim: China Mobile 2016 trial, G.654.E reduced total system construction cost by about 20% through longer unregenerated reach and fewer repeater nodes
+  value: 20
+  unit: '%'
+  kind: model_param
+  conditions: {}
+  source_id: cww_2023_cmcc_g654e_tender
+  locator: Para 4
+  quote: G.654.E的引入使得无电中继传输距离增加和光中继节点减少，通信系统总体建设成本减少20％
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'G.654.E increased unregenerated reach and reduced optical repeater nodes, cutting total system construction cost by 20%'.
+- id: ch06.g654e.cunicom_first_terrestrial
+  section: '6.5'
+  claim: China Unicom Hami-Barkol and Jinan-Qingdao trial sections (2015-2017) were the world's first terrestrial G.654.E trunk deployments
+  value: 2015-2017
+  unit: '1'
+  kind: fact
+  conditions:
+    routes:
+    - Hami-Barkol
+    - Jinan-Qingdao
+  source_id: c114_2019_cunicom_g654e_practice
+  locator: Abstract
+  quote: 2个试验段是世界上第1次实际部署G.654.E陆地光缆干线
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Gloss, ''Unicom''s Hami-Barkol and Jinan-Qingdao sections are the world''s first real G.654.E land trunk deployments''. Paper in 邮电设计技术 2019(10) via C114. Peer-reviewed version: Shen et al., OFC 2017 M3G.4.'
+- id: ch06.g654e.cunicom_800g_1100km
+  section: '6.5'
+  claim: China Unicom lab 800G comparison, G.654.E reaches 1100 km vs 600 km on G.652.D; G.654.E raises total backbone build cost by 10-20%
+  value:
+  - 1100
+  - 600
+  unit: km
+  kind: measured
+  conditions:
+    rate_Gbps: 800
+    build_cost_increase_pct:
+    - 10
+    - 20
+  source_id: cww_2025_05_wangguangquan
+  locator: Article body
+  quote: G.654.E能力优势非常明显，能传到1100公里，G.652.D只能传到600公里
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'G.654.E reaches 1100 km, G.652.D only 600 km' (800G lab test). Speaker is China Unicom Research Institute chief engineer Wang Guangquan.
+- id: ch06.g654e.cmcc_tender_2025_2027
+  section: '6.5'
+  claim: China Mobile 2025-2027 G.654.E tender, about 22,900 cable-km (3.1386 million fiber-km), vs 2134 cable-km (2022) and 8463 cable-km (2023-2024)
+  value: 22900
+  unit: km
+  kind: fact
+  conditions:
+    fiber_km: 3138624
+    prior_2022_cable_km: 2134
+    prior_2023_cable_km: 8463
+  source_id: cww_2025_06_cmcc_g654e_tender
+  locator: Para 2
+  quote: 预估采购规模约2.29万皮长公里，折合313.86万芯公里。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'estimated procurement about 22,900 sheath-km, i.e. 3.1386 million fiber-km'. Tender quantity, not deployed length. Price per fiber-km fell from about 295.9 to 200.9 CNY (chinacable.com).
+- id: ch06.g654e.cunicom_2024_4365k_fiberkm
+  section: '6.5'
+  claim: China Unicom 2024 cable tender, trunk cables almost all G.654.E, 4.365 million fiber-km in total
+  value: 4365000
+  unit: fiber-km
+  kind: fact
+  conditions:
+    year: 2024
+  source_id: chinacable_2025_07_cmcc_award
+  locator: Last paragraph
+  quote: 2024年中国联通光缆集采，其中干线光缆绝大部分采用G.654.E光纤，总量达到了436.5万芯公里。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'in Unicom's 2024 cable tender, trunk cables mostly use G.654.E, total 4.365 million fiber-km'. Ambiguous whether 4.365M is total tender or G.654.E only.
+- id: ch06.g654e.sgcc_10000km_467km_span
+  section: '6.5'
+  claim: State Grid deployed over 10,000 cable-km of G.654.E in five years; 467 km unrepeated span on +/-800 kV UHV lines (2020)
+  value: 467
+  unit: km
+  kind: record
+  conditions:
+    sgcc_cable_km: 10000
+  source_id: cww_2025_05_g654e_report
+  locator: Article body
+  quote: 首创性地使用G.654.E光纤为特高压工程超长站距传输提供有效解决方案，实现了单跨距467km的无中继长距离传输的突破。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'G.654.E first used for very long station spacing on UHV projects, achieving 467 km single-span unrepeated transmission'. The eefocus repost says 460 km and '近五年累计部署G.654.E光纤超1万皮长公里' (over 10,000 sheath-km in five years); 460 vs 467 km disagreement.
+- id: ch06.g654e.operators_2024_58k
+  section: '6.5'
+  claim: The three Chinese operators built over 58,000 cable-km of (trunk) cable in 2024, up 43% on 2023
+  value: 58000
+  unit: km
+  kind: fact
+  conditions:
+    growth_pct: 43
+  source_id: eefocus_2025_05_g654e
+  locator: Article body
+  quote: 2024年度三大运营商共建设光缆超5.8万皮长公里，相比2023年总建设长度增长43%。
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'in 2024 the three operators built over 58,000 sheath-km of cable, 43% more than 2023'. Context is G.654.E, but sentence does not say all of it is G.654.E. Repost of CWW article.
+- id: ch06.g654e.cmcc_400g_records
+  section: '6.5'
+  claim: China Mobile cites 400G records of 5616 km (field limit), 7000 km (lab limit) and 1673 km (field deployment); 2024 400G all-optical backbone in operation
+  value:
+  - 5616
+  - 7000
+  - 1673
+  unit: km
+  kind: record
+  conditions: {}
+  source_id: sina_2025_01_cmcc_post400g
+  locator: Para 2
+  quote: 推动5616km现网极限、7000km实验室极限、1673km现网部署等三大400G传输世界纪录
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Gloss, 'drove three 400G world records, 5616 km field limit, 7000 km lab limit, 1673 km field deployment'. Same article says Tb/s-class QPSK at 1.6T would need >500 GBd and >24 THz spectrum.
+- id: ch06.g654e.aston_raman_rin
+  section: '6.5'
+  claim: With backward distributed Raman, 28 GBd PM-QPSK recirculating loop reached about 6000 km on G.654.E vs 4900 km on G.652.D (HD-FEC 8.5 dB Q)
+  value:
+  - 6000
+  - 4900
+  unit: km
+  kind: measured
+  conditions:
+    pumping: backward
+    bi_pumped_km:
+    - 3000
+    - 1800
+  source_id: hazarika_oe_2021_rin_g654e
+  locator: Section 5, Fig. 5(a)
+  quote: Using the BW pumping configuration a maximum transmission reach of ∼6000 km was obtained for G.654.E, whereas for G.652.D the maximum reach was ∼4900 km.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Opt. Express 29(20) 32081 (2021). Hazarika et al. (Aston, BT, DTU).
+- id: ch06.margin.pointurier_table
+  section: '6.6'
+  claim: Typical SNR margins, design <2 dB; nonlinearities 1.5-3 dB; amplifier NF aging 0.7 dB; filter aging 0.05 dB/filter; transponder aging 0.5 dB; fast variations 0.4 dB; fiber aging 1.6e-3 dB/km/year
+  value: 2
+  unit: dB
+  kind: spec_typ
+  conditions:
+    nonlinear_dB:
+    - 1.5
+    - 3
+    nf_aging_dB: 0.7
+    filter_aging_dB_per_filter: 0.05
+    trx_aging_dB: 0.5
+    fast_dB: 0.4
+    fiber_aging_dB_per_km_per_year: 0.0016
+  source_id: pointurier_jocn_2017
+  locator: Table I
+  quote: Design margin (D) <2 dB [1] Nonlinearities (S) 1.5–3 dB [2] Amplifier NF aging (S) 0.7 dB [3]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Fiber-aging basis, 4.3 cuts per 1000 miles per year at 0.3 dB per splice, 1.6 dB linear SNR over 10 years for 100 km spans.
+- id: ch06.margin.pointurier_example_bol
+  section: '6.6'
+  claim: Worked example 600 km 100G PDM-QPSK lightpath, S-margin 5.9 dB at BoL, U-margin 6.6 dB, D-margin 2 dB, total BoL margin 14.5 dB, EoL margin 9 dB
+  value: 14.5
+  unit: dB
+  kind: model_param
+  conditions:
+    length_km: 600
+    s_margin_dB: 5.9
+    u_margin_dB: 6.6
+    d_margin_dB: 2
+    eol_margin_dB: 9
+    max_reach_km: 7500
+  source_id: pointurier_jocn_2017
+  locator: Section II, Fig. 2
+  quote: Including a D-margin of 2 dB, the BoL SNR margin is 14.5 dB.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: U+S combined = 10 log10(7500/600) = 12.5 dB (linear reach scaling). Spans 100 km, 0.22 dB/km, NF 4.5 dB, route-and-select nodes every 300 km.
+- id: ch06.margin.linear_to_total_2over3
+  section: '6.6'
+  claim: At the BER-optimal launch power, a linear SNR penalty alpha translates into a total SNR penalty of 2 alpha/3
+  value: 0.667
+  unit: '1'
+  kind: model_param
+  conditions: {}
+  source_id: pointurier_jocn_2017
+  locator: Table I, footnote 1
+  quote: such that the SNR penalty corresponding to a linear SNR penalty α is 2α∕3.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Consistent with GN-model optimum (ch01.gn.ase_eq_2nli).
+- id: ch06.margin.auge_taxonomy
+  section: '6.6'
+  claim: Margin taxonomy of unallocated, system (including operator) and design margins (Auge, Orange, OFC 2013)
+  value: U, S, D margins
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: auge_ofc_2013
+  locator: Abstract
+  quote: The different network margins are discussed along with the related strategies to reduce them.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; taxonomy detail read via Pointurier JOCN 2017 Section I.
+- id: ch06.gnpy.filer_0p75db
+  section: '6.6'
+  claim: GN-model QoT estimator (TIP PSE / GNPy precursor) matched measurements within +/-0.75 dB on Microsoft mixed-fibre testbed, 8 transceiver vendors, up to 1945 km
+  value: 0.75
+  unit: dB
+  kind: measured
+  conditions:
+    max_distance_km: 1945
+    vendors: 8
+    band: C
+  source_id: filer_jlt_2018_gnpy
+  locator: Abstract
+  quote: The observed ±0.75 dB of accuracy in OLE predictions can be further reduced by including the stimulated Raman scattering in the GN model
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Ferrari JOCN 2020 accuracy (1 dB for >90% of samples, 0.5 dB for Popt) is in ch01.gnpy.gsnr_accuracy and ch01.gnpy.popt_accuracy; do not duplicate.
