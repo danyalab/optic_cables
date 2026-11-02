@@ -87,28 +87,43 @@
     ]
   },
   "p4_mod": {
-    "value": 42.85714285714286,
+    "value": 56.34469696969697,
     "unit": "%",
     "digits": 3,
     "inputs": [
-      "ch04.lpo.eoptolink_40pct"
+      "ch04.cpo.evans_switch_power"
     ]
   },
-  "p4_extra": {
-    "value": 1.0,
-    "unit": "W",
+  "p4_share": {
+    "value": 33.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p4_direct": {
+    "value": 18.59375,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p4_sw": {
+    "value": 22.140625000000004,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p4_other": {
+    "value": 3.5468750000000036,
+    "unit": "percentage points",
     "digits": 2,
     "inputs": [
-      "ch04.lpo.eoptolink_40pct"
-    ]
-  },
-  "p4_sys": {
-    "value": 21.42857142857143,
-    "unit": "%",
-    "digits": 3,
-    "inputs": [
-      "ch04.lpo.bechtolsheim_50pct",
-      "ch04.lpo.eoptolink_40pct"
+      "ch04.cpo.evans_switch_power"
     ]
   },
   "p5_plug": {
@@ -120,33 +135,33 @@
     ]
   },
   "p5_cpo": {
-    "value": 704.0,
+    "value": 512.0,
     "unit": "W",
     "digits": 3,
     "inputs": [
-      "ch04.cpo.bailly_5p5w"
+      "ch04.cpo.evans_switch_power"
     ]
   },
   "p5_save": {
-    "value": 896.0,
+    "value": 1088.0,
     "unit": "W",
     "digits": 3,
     "inputs": [
-      "ch04.cpo.bailly_5p5w",
+      "ch04.cpo.evans_switch_power",
       "ch04.pmd.1p6t_dr8_power"
     ]
   },
   "p5_save_pct": {
-    "value": 56.00000000000001,
+    "value": 68.0,
     "unit": "%",
     "digits": 3,
     "inputs": [
-      "ch04.cpo.bailly_5p5w",
+      "ch04.cpo.evans_switch_power",
       "ch04.pmd.1p6t_dr8_power"
     ]
   },
   "p5_frac_sw": {
-    "value": 14.0,
+    "value": 17.0,
     "unit": "%",
     "digits": 3,
     "inputs": [
@@ -187,50 +202,70 @@
       "ch04.cpo.meta_1m_hours"
     ]
   },
-  "p7_snr800": {
-    "value": 17.2429253646282,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch04.coh.800zr_osnr"
-    ]
-  },
   "p7_snr400": {
     "value": 19.198912130233207,
     "unit": "dB",
     "digits": 3,
     "inputs": [
+      "ch04.coh.400zr_baud",
       "ch04.coh.400zr_osnr_26"
     ]
   },
-  "p7_naive": {
-    "value": 28.95598676560501,
+  "p7_snrozr": {
+    "value": 17.177570835108483,
     "unit": "dB",
     "digits": 3,
     "inputs": [
-      "ch04.coh.400zr_osnr_26",
-      "ch04.coh.800zr_baud"
+      "ch04.coh.openzrplus_ofec",
+      "ch04.coh.openzrplus_osnr24"
     ]
   },
-  "p7_diff": {
-    "value": 1.9559867656050116,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch04.coh.400zr_osnr_26",
-      "ch04.coh.800zr_osnr"
-    ]
-  },
-  "p8_deficit": {
-    "value": 2.2069734592890176,
+  "p7_gap400": {
+    "value": 5.649594983321249,
     "unit": "dB",
     "digits": 2,
     "inputs": [
-      "ch04.coh.800zr_osnr"
+      "ch04.coh.400zr_cfec",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "p7_gapozr": {
+    "value": 4.466774879743156,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.openzrplus_ofec",
+      "ch04.coh.openzrplus_osnr24"
+    ]
+  },
+  "p7_th_diff": {
+    "value": 0.8385211915466311,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.400zr_cfec",
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "p7_osnr_diff": {
+    "value": 2.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.400zr_osnr_26",
+      "ch04.coh.openzrplus_osnr24"
+    ]
+  },
+  "p8_deficit": {
+    "value": 4.211197651360924,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.400zr_osnr_26"
     ]
   },
   "p8_nf_need": {
-    "value": 2.7930265407109824,
+    "value": 0.7888023486390763,
     "unit": "dB",
     "digits": 2,
     "inputs": [
@@ -246,11 +281,11 @@
     ]
   },
   "p8_lmax": {
-    "value": 111.70722976911047,
+    "value": 104.05635049532954,
     "unit": "km",
     "digits": 3,
     "inputs": [
-      "ch04.coh.800zr_osnr"
+      "ch04.coh.400zr_osnr_26"
     ]
   },
   "p9_rs": {

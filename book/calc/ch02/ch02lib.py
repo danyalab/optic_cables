@@ -209,3 +209,23 @@ def savefig(fig, name):
     FIGDIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGDIR / f"{name}.svg", format="svg", bbox_inches="tight",
                 transparent=True, metadata={"Date": None})
+
+
+# ---------- DSP complexity model (Section 2.4), shared with the power model ----------
+def n_cd_taps(beta2_abs, length_m, rs, nss):
+    """FIR length 2 pi |beta2| L R_s^2 nss^2 (Ip et al. 2008)."""
+    return 2 * math.pi * beta2_abs * length_m * rs ** 2 * nss ** 2
+
+
+def fde_cost_per_sample(n_taps, nfft):
+    b = nfft - n_taps + 1
+    if b <= 0:
+        return float("inf")
+    return nfft * (math.log2(nfft) + 1) / b
+
+
+def ops_per_symbol(beta2_abs, length_m, rs, nss=2.0, n_mimo=15, b_bps=32):
+    """Complex multiplications per dual-pol symbol: CD (FD or TD, cheaper), MIMO + update, BPS."""
+    n = int(math.ceil(n_cd_taps(beta2_abs, length_m, rs, nss)))
+    fd = min(fde_cost_per_sample(n, 2 ** k) for k in range(4, 20))
+    return 2 * nss * min(fd, n) + 4 * n_mimo + 4 * n_mimo + 2 * b_bps

@@ -1,0 +1,373 @@
+{
+  "oh_kp4": {
+    "value": 5.836575875486383,
+    "unit": "%",
+    "digits": 4,
+    "inputs": []
+  },
+  "oh_stair": {
+    "value": 6.694560669456062,
+    "unit": "%",
+    "digits": 4,
+    "inputs": []
+  },
+  "oh_hamming": {
+    "value": 7.563025210084029,
+    "unit": "%",
+    "digits": 4,
+    "inputs": []
+  },
+  "oh_cfec": {
+    "value": 14.763897190675412,
+    "unit": "%",
+    "digits": 4,
+    "inputs": []
+  },
+  "oh_ofec": {
+    "value": 15.32,
+    "unit": "%",
+    "digits": 4,
+    "inputs": []
+  },
+  "oh_lr800": {
+    "value": 21.23098691192078,
+    "unit": "%",
+    "digits": 4,
+    "inputs": []
+  },
+  "ncg_kp4": {
+    "value": 6.8908449102625475,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit"
+    ]
+  },
+  "ncg_stair48": {
+    "value": 9.450753035230244,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.staircase_p_operating"
+    ]
+  },
+  "ncg_cfec": {
+    "value": 10.389430831619627,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.cfec_ber_in"
+    ]
+  },
+  "ncg_ofec": {
+    "value": 11.12788837223339,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.ofec_ber_threshold",
+      "ch02.fec.ofec_overhead"
+    ]
+  },
+  "ncg_lr800": {
+    "value": 10.028095722734635,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.800lr_threshold"
+    ]
+  },
+  "q_out_db": {
+    "value": 17.99788163101009,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "d_cfec": {
+    "value": -0.4105691683803734,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.cfec_ncg"
+    ]
+  },
+  "d_ofec": {
+    "value": 0.027888372233389802,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.ofec_ncg_qpsk"
+    ]
+  },
+  "p_stair_implied": {
+    "value": 0.004632825789029924,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.staircase_ncg"
+    ]
+  },
+  "p_rs_implied": {
+    "value": 8.310722574703951e-05,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.rs255_ncg"
+    ]
+  },
+  "p_cap_239": {
+    "value": 0.007361766153084934,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "ncg_cap_239": {
+    "value": 9.971835174800496,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "stair_gap_calc": {
+    "value": 0.5618351748004962,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.staircase_ncg"
+    ]
+  },
+  "rs_gap_calc": {
+    "value": 3.771835174800496,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.rs255_ncg"
+    ]
+  },
+  "mc_snr_db": {
+    "value": 11.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "mc_ber": {
+    "value": 0.04213125,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "ex_ber": {
+    "value": 0.04221194719529213,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "ap_ber": {
+    "value": 0.042211463982406106,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "c1_snr_approx": {
+    "value": 12.090893532220575,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct"
+    ]
+  },
+  "c1_snr_exact": {
+    "value": 12.090894908584652,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct"
+    ]
+  },
+  "c1_ber": {
+    "value": 0.027,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch01.cap.soft_fec_threshold_20pct"
+    ]
+  },
+  "s16_out": {
+    "value": 24.948386226271722,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "ncg16_cfec": {
+    "value": 10.801016196290679,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.cfec_ber_in"
+    ]
+  },
+  "ncg16_ofec": {
+    "value": 11.618543769400112,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.ofec_ber_threshold",
+      "ch02.fec.ofec_overhead"
+    ]
+  },
+  "ncg16_lr800": {
+    "value": 10.42796203222475,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.800lr_threshold"
+    ]
+  },
+  "d_cfec16": {
+    "value": 0.00101619629067784,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.cfec_ncg"
+    ]
+  },
+  "d_ofec16": {
+    "value": 0.01854376940011271,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.ofec_ncg_16qam"
+    ]
+  },
+  "apx_err_cfec": {
+    "value": -5.657533108660573e-09,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "bref_ghz": {
+    "value": 12.47835413111342,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch01.osnr.gsup39_bref_typical"
+    ]
+  },
+  "osnr_conv": {
+    "value": 6.808614933973911,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.osnr.gsup39_bref_typical",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "snrreq_cfec": {
+    "value": 13.549317152569493,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.cfec_ber_in"
+    ]
+  },
+  "osnrreq_cfec": {
+    "value": 20.357932086543403,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.cfec_ber_in",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "snrreq_ofec": {
+    "value": 12.710796119709908,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.ofec_ber_threshold",
+      "ch02.fec.ofec_overhead"
+    ]
+  },
+  "osnrreq_ofec": {
+    "value": 19.519411053683818,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.ofec_ber_threshold",
+      "ch02.fec.ofec_overhead",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "snrreq_kp4": {
+    "value": 17.65514988095577,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit"
+    ]
+  },
+  "osnrreq_kp4": {
+    "value": 24.46376481492968,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "snrreq_lr800": {
+    "value": 13.684287787424552,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.800lr_threshold"
+    ]
+  },
+  "osnrreq_lr800": {
+    "value": 20.492902721398462,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.800lr_threshold",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "rosnr_zr": {
+    "value": 26.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud"
+    ]
+  },
+  "rosnr_margin": {
+    "value": 5.6420679134565965,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud"
+    ]
+  },
+  "cfec_vs_ofec_snr": {
+    "value": 0.8385210328595853,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "gmi_at_cfec": {
+    "value": 3.805995080108337,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "net_bits_cfec": {
+    "value": 3.4854166666666675,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "cap_at_cfec": {
+    "value": 4.5633340395668265,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  }
+}

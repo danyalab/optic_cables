@@ -324,11 +324,6 @@ L 175.637548 35.0315
 " clip-path="url(#pf959592597)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #8a8a8a; stroke-width: 1.4"/>
    </g>
    <g id="line2d_24">
-    <path d="M 81.255834 77.892676 
-L 175.637548 77.892676 
-" clip-path="url(#pf959592597)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #8a8a8a; stroke-width: 1.4"/>
-   </g>
-   <g id="line2d_25">
     <path d="M 228.727262 99.323265 
 L 323.108977 99.323265 
 " clip-path="url(#pf959592597)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #8a8a8a; stroke-width: 1.4"/>
@@ -345,15 +340,13 @@ L 467.630977 277.9115
    </g>
    <g id="text_13">
     <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #8a8a8a" transform="translate(178.586977 33.101812)">800G 2xDR4 datasheet max</text>
-    <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #8a8a8a" transform="translate(178.586977 42.7815)">(100G lanes)</text>
+    <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #8a8a8a" transform="translate(178.586977 42.7815)">(8 x 100G lanes)</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="178.586977" y="80.802833" transform="rotate(-0 178.586977 80.802833)">Broadcom pluggable reference</text>
+    <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #8a8a8a" transform="translate(326.058405 97.393577)">1.6T DR8 datasheet max</text>
+    <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #8a8a8a" transform="translate(326.058405 107.073265)">(one third-party part)</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="326.058405" y="102.233421" transform="rotate(-0 326.058405 102.233421)">1.6T DR8 datasheet max</text>
-   </g>
-   <g id="text_16">
     <text style="font-size: 10px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #8a8a8a" x="261.170977" y="16.8875" transform="rotate(-0 261.170977 16.8875)">Computed from component shares (Chang and Yu) and datasheet maxima</text>
    </g>
    <g id="legend_1">
@@ -365,7 +358,7 @@ L 72.524469 323.549235
 z
 " style="fill: #2f7fd8"/>
     </g>
-    <g id="text_17">
+    <g id="text_16">
      <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="96.324469" y="329.499235" transform="rotate(-0 96.324469 329.499235)">DSP</text>
     </g>
     <g id="patch_18">
@@ -376,7 +369,7 @@ L 130.341734 323.549235
 z
 " style="fill: #e2622c"/>
     </g>
-    <g id="text_18">
+    <g id="text_17">
      <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="154.141734" y="329.499235" transform="rotate(-0 154.141734 329.499235)">laser</text>
     </g>
     <g id="patch_19">
@@ -387,7 +380,7 @@ L 190.614703 323.549235
 z
 " style="fill: #b08600"/>
     </g>
-    <g id="text_19">
+    <g id="text_18">
      <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="214.414703" y="329.499235" transform="rotate(-0 214.414703 329.499235)">TEC</text>
     </g>
     <g id="patch_20">
@@ -398,7 +391,7 @@ L 248.219469 323.549235
 z
 " style="fill: #1a9f73"/>
     </g>
-    <g id="text_20">
+    <g id="text_19">
      <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="272.019469" y="329.499235" transform="rotate(-0 272.019469 329.499235)">TIA</text>
     </g>
     <g id="patch_21">
@@ -409,7 +402,7 @@ L 302.654 323.549235
 z
 " style="fill: #7a64dc"/>
     </g>
-    <g id="text_21">
+    <g id="text_20">
      <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="326.454" y="329.499235" transform="rotate(-0 326.454 329.499235)">MCU</text>
     </g>
     <g id="patch_22">
@@ -420,7 +413,7 @@ L 363.666734 323.549235
 z
 " style="fill: #5b8a99"/>
     </g>
-    <g id="text_22">
+    <g id="text_21">
      <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="387.466734" y="329.499235" transform="rotate(-0 387.466734 329.499235)">other</text>
     </g>
    </g>

@@ -78,7 +78,7 @@ r.emit("qt", Qt, "1", 4, ["ch02.imdd.tdecq_qt"])
 r.emit("ser_check", 1.5 * cl.qfunc(Qt), "1", 2, ["ch02.imdd.tdecq_qt"])
 r.emit("oma_req_uw", oma * 1e6, "µW", 3, inst)
 r.emit("oma_req_dbm", cl.w2dbm(oma), "dBm", 3, inst)
-gap = L("ch03.tia.patel_noise") * 0 + float(cl.cond("ch03.tia.patel_noise", "sensitivity_dBm_OMA")) - cl.w2dbm(oma)
+gap = float(cl.cond("ch03.tia.patel_noise", "sensitivity_dBm_OMA")) - cl.w2dbm(oma)
 assert 0 < gap < 4
 r.emit("patel_sens", float(cl.cond("ch03.tia.patel_noise", "sensitivity_dBm_OMA")), "dBm", 3, ["ch03.tia.patel_noise"])
 r.emit("gap_db", gap, "dB", 2, inst)

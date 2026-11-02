@@ -182,12 +182,13 @@ ax.axhline(B_tp * 8 / 1e9, color=cl.COLORS[1], label="tensor parallel (TP = 8) i
 ax.axhline(B_pp * 8 / 1e9, color=cl.COLORS[2], label="pipeline point-to-point (PP = 8)")
 for v, lab in ((400, "400G NIC"), (800, "800G NIC")):
     ax.axhline(v, color=cl.GRAY, ls="--", lw=1)
-    ax.text(Ds[0], v * 1.1, lab, fontsize=8.5)
+    ax.text(Ds[-1], v * 1.1, lab, fontsize=8.5, ha="right")
 ax.plot([D], [B_dp * 8 / 1e9], "*", ms=13, color=cl.COLORS[3], label=f"worked example, D = {D}")
 ax.set_xscale("log", base=2); ax.set_yscale("log")
 ax.set_xlabel("Data-parallel degree $D$ (global batch fixed)")
 ax.set_ylabel("Required per-GPU bandwidth (Gb/s)")
-ax.legend(fontsize=8, loc="lower right")
+ax.legend(fontsize=8, loc="upper left", bbox_to_anchor=(0.0, 0.93))
+ax.set_ylim(1, 2e4)
 ax.set_title("Computed from the stated assumptions (175B dense model, MFU from MegaScale)", fontsize=10)
 cl.savefig(fig, "bandwidth_budget")
 

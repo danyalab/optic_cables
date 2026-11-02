@@ -1,0 +1,351 @@
+{
+  "p1_hhi": {
+    "value": 3000.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "p1_neq": {
+    "value": 3.3333333333333335,
+    "unit": "firms",
+    "digits": 3,
+    "inputs": []
+  },
+  "p1_dmerge": {
+    "value": 400.0,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_significant_change"
+    ]
+  },
+  "p1_after": {
+    "value": 3400.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": []
+  },
+  "p2_cr4": {
+    "value": 80.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "p2_hhi_min": {
+    "value": 1600.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "p2_cr4_needed": {
+    "value": 84.8528137423857,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "p3_dom25": {
+    "value": 3.6034167079300023,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "p3_dom24": {
+    "value": 3.1464452419100017,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "p3_dom_growth_pct": {
+    "value": 14.523420269109888,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "p3_os_growth_pct": {
+    "value": 67.19926941447692,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share"
+    ]
+  },
+  "p3_os_frac_incr_pct": {
+    "value": 96.821682779229,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "p4_inno_gap": {
+    "value": 2.6700000000000017,
+    "unit": "million units",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "p4_inno_gap_pct": {
+    "value": 12.660028449502143,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "p4_eop_gap": {
+    "value": 0.3099999999999987,
+    "unit": "million units",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "p4_eop_gap_pct": {
+    "value": 1.9338739862757248,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "p5_g_units_pct": {
+    "value": 675.7,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "p5_asp25": {
+    "value": 22.193002257336342,
+    "unit": "CNY/chip",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue",
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "p5_asp24": {
+    "value": 21.01813279981418,
+    "unit": "CNY/chip",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue",
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "p5_asp_change_pct": {
+    "value": 5.589789867216699,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue",
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "p5_dc24": {
+    "value": 48.01357653895929,
+    "unit": "CNY million",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue"
+    ]
+  },
+  "p6_A_tpp": {
+    "value": 8000.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.ctl.3a090a_tpp_4800"
+    ]
+  },
+  "p6_A_pd": {
+    "value": 10.0,
+    "unit": "1/mm²",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "p6_B_tpp": {
+    "value": 1760.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.ctl.3a090a_tpp_4800"
+    ]
+  },
+  "p6_B_pd": {
+    "value": 6.285714285714286,
+    "unit": "1/mm²",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "p6_C_tpp": {
+    "value": 1760.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.ctl.3a090a_tpp_4800"
+    ]
+  },
+  "p6_C_pd": {
+    "value": 5.5,
+    "unit": "1/mm²",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "p6_C_area_max": {
+    "value": 297.2972972972973,
+    "unit": "mm²",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "p7_m72_len": {
+    "value": 383.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.mofcom2025_72_suspend46"
+    ]
+  },
+  "p7_aid_gap": {
+    "value": 2.0,
+    "unit": "days",
+    "digits": 1,
+    "inputs": [
+      "ch10.ctl.ai_diffusion_compliance",
+      "ch10.ctl.ai_diffusion_rescission"
+    ]
+  },
+  "p7_m46_active": {
+    "value": 341.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.mofcom2024_46_us_ban"
+    ]
+  },
+  "p8_tx": {
+    "value": 75.0,
+    "unit": "USD",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.s301_transceiver_7p5pct"
+    ]
+  },
+  "p8_pd": {
+    "value": 500.0,
+    "unit": "USD",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.s301_semis_50pct"
+    ]
+  },
+  "p8_diff": {
+    "value": 425.0,
+    "unit": "USD",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.s301_semis_50pct",
+      "ch10.ctl.s301_transceiver_7p5pct"
+    ]
+  },
+  "p9_X": {
+    "value": 63.3,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "p9_dm": {
+    "value": 33.333333333333336,
+    "unit": "pp",
+    "digits": 3,
+    "inputs": []
+  },
+  "p9_m_new": {
+    "value": 46.666666666666664,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "p10_f_pct": {
+    "value": 33.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p10_N": {
+    "value": 4.125,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p10_nsw_opt": {
+    "value": 1.3333333333333333,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p10_f2_pct": {
+    "value": 39.40625,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p10_nsw_opt_ser": {
+    "value": 1.4343343792021515,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p10_nsw_rep": {
+    "value": 1.5636452479843634,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p10_resid_w": {
+    "value": 369.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  }
+}

@@ -162,14 +162,6 @@
       "ch04.cpo.evans_switch_power"
     ]
   },
-  "eo_ar_eb": {
-    "value": 13.75,
-    "unit": "pJ/bit",
-    "digits": 3,
-    "inputs": [
-      "ch04.lpo.eoptolink_lpo_lt11w"
-    ]
-  },
   "mm_saving_pct": {
     "value": 69.23076923076923,
     "unit": "%",

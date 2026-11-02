@@ -1,0 +1,233 @@
+{
+  "ec_mismatch": {
+    "value": 2.1807694036542276,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.ec_sion"
+    ]
+  },
+  "ec_pred_9um": {
+    "value": 2.6807694036542276,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.ec_sion"
+    ]
+  },
+  "ec_meas_9um": {
+    "value": 2.5,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.cpl.ec_sion"
+    ]
+  },
+  "ssc_loss_at_tol": {
+    "value": 1.0857362047581296,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.large_ssc_tol"
+    ]
+  },
+  "ssc_tol_exact": {
+    "value": 2.399262956094041,
+    "unit": "µm",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.large_ssc_tol"
+    ]
+  },
+  "taper_w": {
+    "value": 1.2011224087864498,
+    "unit": "µm",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.ec_misalign"
+    ]
+  },
+  "taper_mfd": {
+    "value": 2.4022448175728996,
+    "unit": "µm",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.ec_misalign"
+    ]
+  },
+  "tol_ratio": {
+    "value": 2.5,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.ec_misalign",
+      "ch03.cpl.large_ssc_tol"
+    ]
+  },
+  "gc_rec_pct": {
+    "value": 86.69618757582165,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.gc_record"
+    ]
+  },
+  "gc_de_pct": {
+    "value": 78.52356346100717,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.gc_double_etch"
+    ]
+  },
+  "chi60": {
+    "value": 0.916290731874155,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_lab"
+    ]
+  },
+  "fit_ub_calc": {
+    "value": 190.8939024737823,
+    "unit": "FIT",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_lab"
+    ]
+  },
+  "hours_1fit": {
+    "value": 916290731.8741549,
+    "unit": "device-hours",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_lab"
+    ]
+  },
+  "hours_10fit": {
+    "value": 91629073.1874155,
+    "unit": "device-hours",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_lab"
+    ]
+  },
+  "hours_ratio": {
+    "value": 190.89390247378228,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_lab"
+    ]
+  },
+  "chi90": {
+    "value": 2.3025850929940455,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "af_105_40": {
+    "value": 9.29447841789465,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_105c"
+    ]
+  },
+  "fit40_from_105": {
+    "value": 0.7531353224214181,
+    "unit": "FIT",
+    "digits": 2,
+    "inputs": [
+      "ch03.rel.vcsel_fit_105c"
+    ]
+  },
+  "hoser_chi": {
+    "value": 2.1,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_105c"
+    ]
+  },
+  "hoser_cl": {
+    "value": 87.75435717470181,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch03.rel.vcsel_fit_105c"
+    ]
+  },
+  "field_vs_lab": {
+    "value": 189.0,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_field",
+      "ch03.rel.vcsel_fit_lab"
+    ]
+  },
+  "t_stress": {
+    "value": 95.0,
+    "unit": "°C",
+    "digits": 3,
+    "inputs": []
+  },
+  "j_ratio": {
+    "value": 1.5,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "af_wear": {
+    "value": 16053.613599384376,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_wearout_ea"
+    ]
+  },
+  "af_lit": {
+    "value": 72.13977094334575,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_wearout_ea"
+    ]
+  },
+  "af_rand": {
+    "value": 12.740270194251297,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.gr468_default_ea"
+    ]
+  },
+  "aging_equiv_wear_y": {
+    "value": 3662.699885782427,
+    "unit": "years",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.accel_aging",
+      "ch03.rel.vcsel_wearout_ea"
+    ]
+  },
+  "aging_equiv_rand_y": {
+    "value": 2.906746564967213,
+    "unit": "years",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.accel_aging",
+      "ch03.rel.gr468_default_ea"
+    ]
+  },
+  "aging_equiv_lit_y": {
+    "value": 16.458994055064053,
+    "unit": "years",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.accel_aging",
+      "ch03.rel.vcsel_wearout_ea"
+    ]
+  }
+}

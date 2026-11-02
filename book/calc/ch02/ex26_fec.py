@@ -133,7 +133,7 @@ r.emit("d_ofec16", ncg16_ofec - L("ch02.fec.ofec_ncg_16qam"), "dB", 2, ["ch02.fe
 # QPSK reference NCG equals the binary formula (QPSK = two BPSK)
 assert abs((snrq(BER_OUT) - snrq(cases["ofec"][0]) + 10 * math.log10(1 / (1 + oh["ofec"]))) - ncg["ofec"]) < 1e-6
 # approximation error of 3/8 erfc at the CFEC threshold
-r.emit("apx_err_cfec", snr16(cases["cfec"][0], False) - snr16(cases["cfec"][0]), "dB", 2)
+r.emit("apx_err_cfec", abs(snr16(cases["cfec"][0], False) - snr16(cases["cfec"][0])), "dB", 1)
 
 # ---------------- required SNR / OSNR, 400ZR-class DP-16QAM ----------------
 c = L("ch01.const.speed_of_light_c")

@@ -120,93 +120,110 @@ gamma = ex14["gamma_g652"]["value"] * 1e-3                  # 1/(W m), from n2 a
 D = L("ch01.cd.g652_link_typ_d1550")
 NF = L("ch01.amp.accelink_mw_nf_max")
 F = cl.db2lin(NF)
-RS = rs800 * 1e9
-DF = DF_GHZ * 1e9
 BREF = bref * 1e9
-OSNR_REQ = cl.db2lin(osnr800)
 ba_max = float(re.search(r"([0-9.]+) \(BA", cl.cond("ch01.amp.accelink_mw_nf_max", "output_power_dBm")).group(1))
 GN_IN = ["ch01.cd.g652_link_typ_d1550", "ch01.kerr.n2_pure_silica_gsup47", "ch01.kerr.aeff_g652d_typ",
-         "ch01.amp.accelink_mw_nf_max", "ch01.const.planck_h", "ch01.const.speed_of_light_c",
-         "ch04.coh.800zr_baud", "ch04.coh.800zr_reach", "ch04.coh.800zr_osnr"]
+         "ch01.amp.accelink_mw_nf_max", "ch01.const.planck_h", "ch01.const.speed_of_light_c"]
 r.emit("nf", NF, "dB", 2, ["ch01.amp.accelink_mw_nf_max"])
 r.emit("gamma", gamma * 1e3, "1/(W·km)", 3, ["ch01.kerr.n2_pure_silica_gsup47", "ch01.kerr.aeff_g652d_typ"])
 r.emit("ba_max", ba_max, "dBm", 2, ["ch01.amp.accelink_mw_nf_max"])
-r.emit("ba_per_ch", ba_max - cl.lin2db(NCH), "dBm", 3, ["ch01.amp.accelink_mw_nf_max", "ch04.coh.800zr_reach"])
+
+# Two systems filling the same optical bandwidth.
+# 800ZR: grid from the IA (32 x 150 GHz). 400ZR: ASSUMPTION, 64 channels on a 75 GHz grid filling the
+# same band (the 400ZR channel grid is not in the ledger).
+DF400_GHZ = 75.0
+N400 = NCH * DF_GHZ / DF400_GHZ
+r.emit("zr4_df", DF400_GHZ, "GHz", 2)
+r.emit("zr4_nch", N400, "", 2, ["ch04.coh.800zr_reach"])
+SYS = {
+    "zr4": dict(RS=rs400 * 1e9, DF=DF400_GHZ * 1e9, N=N400, OSNR=osnr400,
+                ins=["ch04.coh.400zr_baud", "ch04.coh.400zr_osnr_26"]),
+    "zr8": dict(RS=rs800 * 1e9, DF=DF_GHZ * 1e9, N=NCH, OSNR=osnr800,
+                ins=["ch04.coh.800zr_baud", "ch04.coh.800zr_reach", "ch04.coh.800zr_osnr"]),
+}
 
 
-def span(alpha_db_km, Lkm, p_cap_dbm=None):
-    """Return (P_opt [W], OSNR_max [lin], eta [1/W^2], P_ASE in B_ref [W]) for one span."""
-    mu, b2 = cl.mu_coeff(gamma, alpha_db_km, D, Lkm * 1e3, RS, DF, NCH, lam, c)
-    eta = mu / RS ** 2                                     # P_NLI = eta P^3 in B_N = R_s
+def span(sysk, alpha_db_km, Lkm, p_cap_dbm=None):
+    """Return (P_launch [W], OSNR in B_ref [lin], eta [1/W^2], P_ASE in B_ref [W]) for one span."""
+    S = SYS[sysk]
+    mu, b2 = cl.mu_coeff(gamma, alpha_db_km, D, Lkm * 1e3, S["RS"], S["DF"], S["N"], lam, c)
+    eta = mu / S["RS"] ** 2                                # P_NLI = eta P^3 in B_N = R_s
     G = cl.db2lin(alpha_db_km * Lkm)
-    pase_rs = (F * G - 1) * h * nu * RS                    # both polarizations, B_N = R_s
+    pase_rs = (F * G - 1) * h * nu * S["RS"]               # both polarizations, B_N = R_s
     popt = (pase_rs / (2 * eta)) ** (1 / 3)
     if p_cap_dbm is not None:
         popt = min(popt, cl.dbm2w(p_cap_dbm))
     snr = popt / (pase_rs + eta * popt ** 3)
-    return popt, snr * RS / BREF, eta, pase_rs * BREF / RS
+    return popt, snr * S["RS"] / BREF, eta, pase_rs * BREF / S["RS"]
 
 
-# ASSUMPTION: cases for the fibre loss coefficient: uncabled datasheet maximum (optimistic) and
+# ASSUMPTION: two cases for the fibre loss coefficient: uncabled datasheet maximum (optimistic) and
 # the ITU typical cabled link value, which already includes cabling effects. No extra connector loss.
 FIB = {"dsfib": L("ch01.att.smf28ultra_max_1550"), "itulink": L("ch01.att.g652_link_typ_cband")}
 FIB_IN = {"dsfib": ["ch01.att.smf28ultra_max_1550"], "itulink": ["ch01.att.g652_link_typ_cband"]}
 L_lo, L_hi = L("ch04.coh.800zr_reach", "lo"), L("ch04.coh.800zr_reach", "hi")
-for tag, a in FIB.items():
-    ins = GN_IN + FIB_IN[tag]
-    r.emit(f"alpha_{tag}", a, "dB/km", 3, FIB_IN[tag])
-    for Lk in (L_lo, L_hi):
-        po, osnr, eta, pase = span(a, Lk)
-        k = int(Lk)
-        r.emit(f"popt_{tag}_{k}", cl.w2dbm(po), "dBm", 3, ins)
-        r.emit(f"ptot_{tag}_{k}", cl.w2dbm(po * NCH), "dBm", 3, ins)
-        r.emit(f"osnr_{tag}_{k}", cl.lin2db(osnr), "dB", 3, ins)
-        r.emit(f"margin_{tag}_{k}", cl.lin2db(osnr / OSNR_REQ), "dB", 2, ins)
-        r.emit(f"lspan_{tag}_{k}", a * Lk, "dB", 3, FIB_IN[tag])
-        # with booster output capped at the datasheet value
-        po_c, osnr_c, *_ = span(a, Lk, ba_max - cl.lin2db(NCH))
-        r.emit(f"osnrcap_{tag}_{k}", cl.lin2db(osnr_c), "dB", 3, ins + ["ch01.amp.accelink_mw_nf_max"])
-        r.emit(f"margincap_{tag}_{k}", cl.lin2db(osnr_c / OSNR_REQ), "dB", 2, ins + ["ch01.amp.accelink_mw_nf_max"])
-        if k == int(L_hi):
-            r.emit(f"eta_{tag}_db", cl.lin2db(eta), "dB(1/W²)", 4, ins)
-            r.emit(f"pase_ref_{tag}_dbm", cl.w2dbm(pase), "dBm", 4, ins)
-    # maximum span length meeting the OSNR requirement (GN optimum and capped launch)
-    Lmax = brentq(lambda Lk: cl.lin2db(span(a, Lk)[1] / OSNR_REQ), 20, 400)
-    Lmax_c = brentq(lambda Lk: cl.lin2db(span(a, Lk, ba_max - cl.lin2db(NCH))[1] / OSNR_REQ), 20, 400)
-    r.emit(f"lmax_{tag}", Lmax, "km", 3, ins)
-    r.emit(f"lmaxcap_{tag}", Lmax_c, "km", 3, ins + ["ch01.amp.accelink_mw_nf_max"])
-    r.emit(f"lmax_loss_{tag}", a * Lmax, "dB", 3, ins)
-    r.emit(f"lmaxcap_loss_{tag}", a * Lmax_c, "dB", 3, ins)
-    # 26 dB (module EOL spec) instead of 27 dB
-    Lmax26 = brentq(lambda Lk: cl.lin2db(span(a, Lk, ba_max - cl.lin2db(NCH))[1]) - osnr400, 20, 400)
-    r.emit(f"lmaxcap26_{tag}", Lmax26, "km", 3, ins)
+assert L_hi == L("ch04.coh.400zr_reach")
+for sysk, S in SYS.items():
+    cap = ba_max - cl.lin2db(S["N"])
+    req = cl.db2lin(S["OSNR"])
+    r.emit(f"{sysk}_pcap", cap, "dBm", 3, ["ch01.amp.accelink_mw_nf_max"])
+    for tag, a in FIB.items():
+        ins = GN_IN + FIB_IN[tag] + S["ins"]
+        r.emit(f"alpha_{tag}", a, "dB/km", 3, FIB_IN[tag])
+        for Lk in (L_lo, L_hi):
+            k = int(Lk)
+            po, osnr, eta, pase = span(sysk, a, Lk)
+            r.emit(f"{sysk}_popt_{tag}_{k}", cl.w2dbm(po), "dBm", 3, ins)
+            r.emit(f"{sysk}_ptot_{tag}_{k}", cl.w2dbm(po * S["N"]), "dBm", 3, ins)
+            r.emit(f"{sysk}_osnr_{tag}_{k}", cl.lin2db(osnr), "dB", 3, ins)
+            r.emit(f"{sysk}_margin_{tag}_{k}", cl.lin2db(osnr / req), "dB", 2, ins)
+            r.emit(f"lspan_{tag}_{k}", a * Lk, "dB", 3, FIB_IN[tag])
+            po_c, osnr_c, *_ = span(sysk, a, Lk, cap)
+            r.emit(f"{sysk}_osnrcap_{tag}_{k}", cl.lin2db(osnr_c), "dB", 3, ins)
+            r.emit(f"{sysk}_margincap_{tag}_{k}", cl.lin2db(osnr_c / req), "dB", 2, ins)
+            if k == int(L_hi):
+                r.emit(f"{sysk}_eta_{tag}_db", cl.lin2db(eta), "dB(1/W²)", 4, ins)
+                r.emit(f"{sysk}_pase_ref_{tag}_dbm", cl.w2dbm(pase), "dBm", 4, ins)
+        Lmax = brentq(lambda Lk: cl.lin2db(span(sysk, a, Lk)[1] / req), 20, 400)
+        Lmax_c = brentq(lambda Lk: cl.lin2db(span(sysk, a, Lk, cap)[1] / req), 20, 400)
+        r.emit(f"{sysk}_lmax_{tag}", Lmax, "km", 3, ins)
+        r.emit(f"{sysk}_lmaxcap_{tag}", Lmax_c, "km", 3, ins)
+        r.emit(f"{sysk}_lmaxcap_loss_{tag}", a * Lmax_c, "dB", 3, ins)
+        r.emit(f"{sysk}_lmax_loss_{tag}", a * Lmax, "dB", 3, ins)
 
-# Consistency with the 58 dB rule (ASE only, at the capped launch, ITU link fibre, 120 km)
-p_ch = ba_max - cl.lin2db(NCH)
+# OSNR penalty of 800ZR relative to 400ZR at equal launch power per channel spectral density
+r.emit("osnr_zr8_minus_zr4_itulink_120",
+       cl.lin2db(span("zr8", FIB["itulink"], L_hi, SYS["zr8"] and ba_max - cl.lin2db(NCH))[1])
+       - cl.lin2db(span("zr4", FIB["itulink"], L_hi, ba_max - cl.lin2db(N400))[1]), "dB", 3, GN_IN)
+
+# Consistency with the 58 dB rule (ASE only, booster-limited 400ZR launch, ITU link fibre, 120 km)
+p_ch = ba_max - cl.lin2db(N400)
 osnr58 = L("ch01.osnr.gsup39_58db_constant") + p_ch - NF - FIB["itulink"] * L_hi
-r.emit("osnr58_itulink_120", osnr58, "dB", 3, ["ch01.osnr.gsup39_58db_constant", "ch01.att.g652_link_typ_cband"])
-_, osnr_chk, eta_chk, _ = span(FIB["itulink"], L_hi, p_ch)
+r.emit("osnr58_zr4_itulink_120", osnr58, "dB", 3, ["ch01.osnr.gsup39_58db_constant", "ch01.att.g652_link_typ_cband"])
+_, osnr_chk, *_ = span("zr4", FIB["itulink"], L_hi, p_ch)
+r.emit("osnr58_minus_gn", osnr58 - cl.lin2db(osnr_chk), "dB", 2, GN_IN)
 assert abs(osnr58 - cl.lin2db(osnr_chk)) < 1.0     # NLI small at the capped launch -> close to the rule
 
-# ---------------- figure: OSNR_max vs span length
+# ---------------- figure: OSNR vs span length (tier-B requirement line only)
 plt = cl.setup_mpl()
 fig, ax = plt.subplots(figsize=(7.2, 4.4))
 Ls = np.linspace(40, 200, 161)
-for j, (tag, a) in enumerate(FIB.items()):
-    lab = "datasheet fibre" if tag == "dsfib" else "ITU typical cabled link"
-    ax.plot(Ls, [cl.lin2db(span(a, Lk)[1]) for Lk in Ls], color=cl.COLORS[j * 2], lw=2.2,
-            label=f"{lab}, {a} dB/km, GN optimum")
-    ax.plot(Ls, [cl.lin2db(span(a, Lk, p_ch)[1]) for Lk in Ls], color=cl.COLORS[j * 2], lw=1.4, ls="--",
-            label=f"{lab}, booster-limited launch")
-ax.axhline(osnr800, color=cl.COLORS[1], lw=1.2, ls=":")
-ax.text(42, osnr800 - 1.6, "800ZR OSNR requirement", ha="left", fontsize=8.5, color=cl.COLORS[1])
+for j, (sysk, name) in enumerate((("zr4", "400ZR, 64 x 75 GHz"), ("zr8", "800ZR, 32 x 150 GHz"))):
+    S = SYS[sysk]
+    cap = ba_max - cl.lin2db(S["N"])
+    for tag, ls in (("dsfib", "-"), ("itulink", "--")):
+        a = FIB[tag]
+        ax.plot(Ls, [cl.lin2db(span(sysk, a, Lk, cap)[1]) for Lk in Ls], color=cl.COLORS[j * 2], lw=2.0, ls=ls,
+                label=f"{name}, {a} dB/km")
+ax.axhline(osnr400, color=cl.COLORS[1], lw=1.2, ls=":")
+ax.text(42, osnr400 - 1.6, "400ZR OSNR requirement (module spec)", ha="left", fontsize=8.5, color=cl.COLORS[1])
 ax.axvspan(L_lo, L_hi, color=cl.GRAY, alpha=0.12, lw=0)
-ax.text(0.5 * (L_lo + L_hi), 15.5, "800ZR target\nspan range", ha="center", fontsize=8.5)
+ax.text(0.5 * (L_lo + L_hi), 15.5, "ZR target\nspan range", ha="center", fontsize=8.5)
 ax.set_xlabel("Span length (km)")
 ax.set_ylabel("OSNR in 0.1 nm (dB)")
 ax.set_ylim(14, 46)
 ax.legend(fontsize=8, loc="upper right")
-ax.set_title(f"Computed (GN model): {int(NCH)} x {rs800} GBd DP-16QAM on {int(DF_GHZ)} GHz, NF {NF:g} dB", fontsize=10)
-cl.savefig(fig, "zr800_osnr")
+ax.set_title(f"Computed (GN model), booster-limited launch, NF {NF:g} dB", fontsize=10)
+cl.savefig(fig, "zr_osnr")
 
 r.save()

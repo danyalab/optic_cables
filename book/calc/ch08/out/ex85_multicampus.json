@@ -1,0 +1,295 @@
+{
+  "P": {
+    "value": 405.0,
+    "unit": "billion parameters",
+    "digits": 3,
+    "inputs": []
+  },
+  "s_item": {
+    "value": 2.0,
+    "unit": "bytes",
+    "digits": 1,
+    "inputs": []
+  },
+  "T_step": {
+    "value": 10.0,
+    "unit": "s",
+    "digits": 2,
+    "inputs": []
+  },
+  "f": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "d_km": {
+    "value": 1500.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": []
+  },
+  "gpu_campus": {
+    "value": 8000.0,
+    "unit": "GPUs",
+    "digits": 2,
+    "inputs": []
+  },
+  "grad_tb": {
+    "value": 6.48,
+    "unit": "Tb",
+    "digits": 3,
+    "inputs": []
+  },
+  "grad_gb": {
+    "value": 810.0,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  },
+  "alpha_ms": {
+    "value": 7.3460820685489026,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "rtt_ms": {
+    "value": 14.692164137097805,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "D_S2": {
+    "value": 6.48,
+    "unit": "Tb",
+    "digits": 3,
+    "inputs": []
+  },
+  "bw_S2": {
+    "value": 1.299819432088968,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "lat_S2_ms": {
+    "value": 14.692164137097805,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "D_S4": {
+    "value": 9.72,
+    "unit": "Tb",
+    "digits": 3,
+    "inputs": []
+  },
+  "bw_S4": {
+    "value": 1.9612893510394884,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "lat_S4_ms": {
+    "value": 44.076492411293415,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "D_S8": {
+    "value": 11.34,
+    "unit": "Tb",
+    "digits": 3,
+    "inputs": []
+  },
+  "bw_S8": {
+    "value": 2.315630267968965,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "lat_S8_ms": {
+    "value": 102.84514895968464,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "lat_share_pct": {
+    "value": 0.2938432827419561,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "bdp_gb": {
+    "value": 2.3871450556050466,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "n_half_mb": {
+    "value": 1193.5725278025234,
+    "unit": "MB",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "campus_scaleout_pbps": {
+    "value": 3.2,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.llama3_gpu_link"
+    ]
+  },
+  "wan_over_campus": {
+    "value": 2461.8804127718035,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.llama3_gpu_link"
+    ]
+  },
+  "wl_150": {
+    "value": 9.0,
+    "unit": "wavelengths",
+    "digits": 2,
+    "inputs": [
+      "ch08.radwan.reach_8qam"
+    ]
+  },
+  "fp_frac": {
+    "value": 10.8318286007414,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.google_optical.fiber_pair_capacity"
+    ]
+  },
+  "bw_diloco_gbps": {
+    "value": 2.599638864177936,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.diloco_comm_reduction"
+    ]
+  },
+  "bw_sdiloco_gbps": {
+    "value": 12.99819432088968,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.streaming_diloco_bw"
+    ]
+  },
+  "bw_given": {
+    "value": 800.0,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "tsync_given": {
+    "value": 8.114692164137097,
+    "unit": "s",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "stretch_pct": {
+    "value": 81.14692164137097,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "meta_gpus": {
+    "value": 129.0,
+    "unit": "thousand GPUs",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.meta_129k_h100"
+    ]
+  },
+  "meta_bldgs": {
+    "value": 5.0,
+    "unit": "buildings",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.meta_129k_h100"
+    ]
+  },
+  "meta_xbldg_lat": {
+    "value": 30.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.meta_latency_hierarchy"
+    ]
+  },
+  "llama_pods": {
+    "value": 7.8125,
+    "unit": "pods",
+    "digits": 2,
+    "inputs": [
+      "ch08.ai.llama3_cluster"
+    ]
+  },
+  "fw_prior_max": {
+    "value": 480.0,
+    "unit": "thousand mi",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.fairwater_fiber_source",
+      "ch08.ai.fairwater_new_fiber_guthrie"
+    ]
+  },
+  "fw_total_max": {
+    "value": 600.0,
+    "unit": "thousand mi",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.fairwater_fiber_source",
+      "ch08.ai.fairwater_new_fiber_guthrie"
+    ]
+  },
+  "fw_route_equiv": {
+    "value": 136.36363636363637,
+    "unit": "route-mi",
+    "digits": 2,
+    "inputs": [
+      "ch08.ai.fairwater_new_fiber_guthrie",
+      "ch08.carrier.lumen_2025_new_fiber_vs_route_miles"
+    ]
+  },
+  "fw_fiber_km": {
+    "value": 193.12128,
+    "unit": "thousand fiber-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.ai.fairwater_new_fiber_guthrie"
+    ]
+  }
+}

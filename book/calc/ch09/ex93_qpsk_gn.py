@@ -329,14 +329,14 @@ labels = {"q": "DP-QPSK, %d GBd / %d GHz" % (rs_q / 1e9, df_q / 1e9),
 reqs = {"q": snr_req_q, "p": snr_req_p_2024, "m": snr_req_m_gap}
 for i, k in enumerate(("q", "p", "m")):
     F = FORMATS[k]
-    ns = list(range(1, 81))
+    ns = list(range(1, 91))
     ax.plot([n * SPAN / 1e3 for n in ns], [cl.lin2db(F["snr1"] / n) for n in ns], color=cl.COLORS[i], label=labels[k])
     ax.axhline(reqs[k], color=cl.COLORS[i], ls="--", lw=1.2)
     n = nmax(F["snr1"], reqs[k])
     ax.plot([n * SPAN / 1e3], [cl.lin2db(F["snr1"] / n)], "o", color=cl.COLORS[i], ms=6)
 ax.set_xlabel("distance (km), 80 km spans")
 ax.set_ylabel("GSNR at optimum launch power (dB)")
-ax.set_xlim(0, 6400)
+ax.set_xlim(0, 7200)
 ax.set_ylim(2, 22)
 ax.legend(loc="upper right", fontsize=9)
 cl.savefig(fig, "gsnr_formats")
@@ -356,7 +356,7 @@ b100 = n_100 * df_100 / 1e12
 for j in range(n_100):
     x0 = cen - b100 / 2 + j * df_100 / 1e12
     ax.add_patch(plt.Rectangle((x0 + 0.004, 0.1), df_100 / 1e12 - 0.008, 0.8, color=cl.COLORS[2], alpha=0.75, lw=0))
-ax.text(cen, 0.5, "100G era: 80 × 50 GHz (C4T, position illustrative)", ha="center", va="center", fontsize=8.5, color="#ffffff")
+ax.text(cen, 0.5, "80 × 50 GHz (C4T)", ha="center", va="center", fontsize=8.5, color="#ffffff")
 ax.text(0.5 * (f(c6[0]) + f(c6[1])), 1.5, "C6T: 40 × 150 GHz", ha="center", va="center", fontsize=8.5, color="#ffffff")
 ax.text(0.5 * (f(l6[0]) + f(l6[1])), 1.5, "L6T: 40 × 150 GHz", ha="center", va="center", fontsize=8.5, color="#ffffff")
 ax.set_xlim(f(l6[1]) - 0.3, f(c6[0]) + 0.3)

@@ -377,13 +377,26 @@
       "ch01.amp.accelink_mw_nf_max"
     ]
   },
-  "ba_per_ch": {
-    "value": 4.948500216800939,
+  "zr4_df": {
+    "value": 75.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": []
+  },
+  "zr4_nch": {
+    "value": 64.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "zr4_pcap": {
+    "value": 1.9382002601611283,
     "unit": "dBm",
     "digits": 3,
     "inputs": [
-      "ch01.amp.accelink_mw_nf_max",
-      "ch04.coh.800zr_reach"
+      "ch01.amp.accelink_mw_nf_max"
     ]
   },
   "alpha_dsfib": {
@@ -394,7 +407,631 @@
       "ch01.att.smf28ultra_max_1550"
     ]
   },
-  "popt_dsfib_80": {
+  "zr4_popt_dsfib_80": {
+    "value": -0.46362397723031695,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_ptot_dsfib_80": {
+    "value": 17.598175762608555,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_osnr_dsfib_80": {
+    "value": 36.379065104410714,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margin_dsfib_80": {
+    "value": 10.379065104410717,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "lspan_dsfib_80": {
+    "value": 14.399999999999999,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "zr4_osnrcap_dsfib_80": {
+    "value": 36.379065104410714,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margincap_dsfib_80": {
+    "value": 10.379065104410717,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_popt_dsfib_120": {
+    "value": 1.8629452696181068,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_ptot_dsfib_120": {
+    "value": 19.924745009456977,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_osnr_dsfib_120": {
+    "value": 31.46499394359299,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margin_dsfib_120": {
+    "value": 5.4649939435929875,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "lspan_dsfib_120": {
+    "value": 21.599999999999998,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "zr4_osnrcap_dsfib_120": {
+    "value": 31.46499394359299,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margincap_dsfib_120": {
+    "value": 5.4649939435929875,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_eta_dsfib_db": {
+    "value": 26.83899083974097,
+    "unit": "dB(1/W²)",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_pase_ref_dsfib_dbm": {
+    "value": -31.362961264531695,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmax_dsfib": {
+    "value": 165.35481836079737,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmaxcap_dsfib": {
+    "value": 158.00125972270973,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmaxcap_loss_dsfib": {
+    "value": 28.44022675008775,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmax_loss_dsfib": {
+    "value": 29.763867304943524,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "alpha_itulink": {
+    "value": 0.275,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "zr4_popt_itulink_80": {
+    "value": 2.6740018327674324,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_ptot_itulink_80": {
+    "value": 20.735801572606306,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_osnr_itulink_80": {
+    "value": 31.875212740665333,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margin_itulink_80": {
+    "value": 5.875212740665332,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "lspan_itulink_80": {
+    "value": 22.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "zr4_osnrcap_itulink_80": {
+    "value": 31.75833015991115,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margincap_itulink_80": {
+    "value": 5.75833015991115,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_popt_itulink_120": {
+    "value": 6.326455855668776,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_ptot_itulink_120": {
+    "value": 24.388255595507648,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_osnr_itulink_120": {
+    "value": 24.519681158048172,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margin_itulink_120": {
+    "value": -1.4803188419518298,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "lspan_itulink_120": {
+    "value": 33.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "zr4_osnrcap_itulink_120": {
+    "value": 21.788802348639077,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_margincap_itulink_120": {
+    "value": -4.211197651360924,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_eta_itulink_db": {
+    "value": 24.857282453184446,
+    "unit": "dB(1/W²)",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_pase_ref_itulink_dbm": {
+    "value": -19.95413789293621,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmax_itulink": {
+    "value": 111.93248309561186,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmaxcap_itulink": {
+    "value": 104.05635049532954,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmaxcap_loss_itulink": {
+    "value": 28.615496386215625,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr4_lmax_loss_itulink": {
+    "value": 30.781432851293264,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "zr8_pcap": {
+    "value": 4.948500216800939,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "zr8_popt_dsfib_80": {
     "value": 2.4643917656649035,
     "unit": "dBm",
     "digits": 3,
@@ -411,7 +1048,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "ptot_dsfib_80": {
+  "zr8_ptot_dsfib_80": {
     "value": 17.515891548863962,
     "unit": "dBm",
     "digits": 3,
@@ -428,7 +1065,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "osnr_dsfib_80": {
+  "zr8_osnr_dsfib_80": {
     "value": 39.30708084730594,
     "unit": "dB",
     "digits": 3,
@@ -445,7 +1082,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margin_dsfib_80": {
+  "zr8_margin_dsfib_80": {
     "value": 12.307080847305937,
     "unit": "dB",
     "digits": 2,
@@ -462,21 +1099,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lspan_dsfib_80": {
-    "value": 14.399999999999999,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch01.att.smf28ultra_max_1550"
-    ]
-  },
-  "osnrcap_dsfib_80": {
+  "zr8_osnrcap_dsfib_80": {
     "value": 39.30708084730594,
     "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.smf28ultra_max_1550",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -488,13 +1116,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margincap_dsfib_80": {
+  "zr8_margincap_dsfib_80": {
     "value": 12.307080847305937,
     "unit": "dB",
     "digits": 2,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.smf28ultra_max_1550",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -506,7 +1133,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "popt_dsfib_120": {
+  "zr8_popt_dsfib_120": {
     "value": 4.7909610125133275,
     "unit": "dBm",
     "digits": 3,
@@ -523,7 +1150,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "ptot_dsfib_120": {
+  "zr8_ptot_dsfib_120": {
     "value": 19.842460795712388,
     "unit": "dBm",
     "digits": 3,
@@ -540,7 +1167,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "osnr_dsfib_120": {
+  "zr8_osnr_dsfib_120": {
     "value": 34.39300968648821,
     "unit": "dB",
     "digits": 3,
@@ -557,7 +1184,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margin_dsfib_120": {
+  "zr8_margin_dsfib_120": {
     "value": 7.393009686488207,
     "unit": "dB",
     "digits": 2,
@@ -574,21 +1201,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lspan_dsfib_120": {
-    "value": 21.599999999999998,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch01.att.smf28ultra_max_1550"
-    ]
-  },
-  "osnrcap_dsfib_120": {
+  "zr8_osnrcap_dsfib_120": {
     "value": 34.39300968648821,
     "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.smf28ultra_max_1550",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -600,13 +1218,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margincap_dsfib_120": {
+  "zr8_margincap_dsfib_120": {
     "value": 7.393009686488207,
     "unit": "dB",
     "digits": 2,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.smf28ultra_max_1550",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -618,7 +1235,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "eta_dsfib_db": {
+  "zr8_eta_dsfib_db": {
     "value": 21.01093037666032,
     "unit": "dB(1/W²)",
     "digits": 4,
@@ -635,7 +1252,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "pase_ref_dsfib_dbm": {
+  "zr8_pase_ref_dsfib_dbm": {
     "value": -31.362961264531695,
     "unit": "dBm",
     "digits": 4,
@@ -652,7 +1269,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmax_dsfib": {
+  "zr8_lmax_dsfib": {
     "value": 181.40531397827522,
     "unit": "km",
     "digits": 3,
@@ -669,13 +1286,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmaxcap_dsfib": {
+  "zr8_lmaxcap_dsfib": {
     "value": 170.03353332368627,
     "unit": "km",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.smf28ultra_max_1550",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -687,24 +1303,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmax_loss_dsfib": {
-    "value": 32.65295651608954,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch01.amp.accelink_mw_nf_max",
-      "ch01.att.smf28ultra_max_1550",
-      "ch01.cd.g652_link_typ_d1550",
-      "ch01.const.planck_h",
-      "ch01.const.speed_of_light_c",
-      "ch01.kerr.aeff_g652d_typ",
-      "ch01.kerr.n2_pure_silica_gsup47",
-      "ch04.coh.800zr_baud",
-      "ch04.coh.800zr_osnr",
-      "ch04.coh.800zr_reach"
-    ]
-  },
-  "lmaxcap_loss_dsfib": {
+  "zr8_lmaxcap_loss_dsfib": {
     "value": 30.60603599826353,
     "unit": "dB",
     "digits": 3,
@@ -721,9 +1320,9 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmaxcap26_dsfib": {
-    "value": 175.93597313879303,
-    "unit": "km",
+  "zr8_lmax_loss_dsfib": {
+    "value": 32.65295651608954,
+    "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
@@ -738,15 +1337,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "alpha_itulink": {
-    "value": 0.275,
-    "unit": "dB/km",
-    "digits": 3,
-    "inputs": [
-      "ch01.att.g652_link_typ_cband"
-    ]
-  },
-  "popt_itulink_80": {
+  "zr8_popt_itulink_80": {
     "value": 5.600732246410058,
     "unit": "dBm",
     "digits": 3,
@@ -763,7 +1354,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "ptot_itulink_80": {
+  "zr8_ptot_itulink_80": {
     "value": 20.652232029609117,
     "unit": "dBm",
     "digits": 3,
@@ -780,7 +1371,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "osnr_itulink_80": {
+  "zr8_osnr_itulink_80": {
     "value": 34.801943154307956,
     "unit": "dB",
     "digits": 3,
@@ -797,7 +1388,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margin_itulink_80": {
+  "zr8_margin_itulink_80": {
     "value": 7.801943154307956,
     "unit": "dB",
     "digits": 2,
@@ -814,21 +1405,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lspan_itulink_80": {
-    "value": 22.0,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch01.att.g652_link_typ_cband"
-    ]
-  },
-  "osnrcap_itulink_80": {
+  "zr8_osnrcap_itulink_80": {
     "value": 34.70936101245848,
     "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.g652_link_typ_cband",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -840,13 +1422,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margincap_itulink_80": {
+  "zr8_margincap_itulink_80": {
     "value": 7.709361012458482,
     "unit": "dB",
     "digits": 2,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.g652_link_typ_cband",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -858,7 +1439,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "popt_itulink_120": {
+  "zr8_popt_itulink_120": {
     "value": 9.253186269311401,
     "unit": "dBm",
     "digits": 3,
@@ -875,7 +1456,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "ptot_itulink_120": {
+  "zr8_ptot_itulink_120": {
     "value": 24.304686052510462,
     "unit": "dBm",
     "digits": 3,
@@ -892,7 +1473,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "osnr_itulink_120": {
+  "zr8_osnr_itulink_120": {
     "value": 27.446411571690795,
     "unit": "dB",
     "digits": 3,
@@ -909,7 +1490,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margin_itulink_120": {
+  "zr8_margin_itulink_120": {
     "value": 0.4464115716907932,
     "unit": "dB",
     "digits": 2,
@@ -926,21 +1507,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lspan_itulink_120": {
-    "value": 33.0,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch01.att.g652_link_typ_cband"
-    ]
-  },
-  "osnrcap_itulink_120": {
+  "zr8_osnrcap_itulink_120": {
     "value": 24.793026540710983,
     "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.g652_link_typ_cband",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -952,13 +1524,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "margincap_itulink_120": {
+  "zr8_margincap_itulink_120": {
     "value": -2.2069734592890176,
     "unit": "dB",
     "digits": 2,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.g652_link_typ_cband",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -970,7 +1541,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "eta_itulink_db": {
+  "zr8_eta_itulink_db": {
     "value": 19.03307797786158,
     "unit": "dB(1/W²)",
     "digits": 4,
@@ -987,7 +1558,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "pase_ref_itulink_dbm": {
+  "zr8_pase_ref_itulink_dbm": {
     "value": -19.95413789293621,
     "unit": "dBm",
     "digits": 4,
@@ -1004,7 +1575,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmax_itulink": {
+  "zr8_lmax_itulink": {
     "value": 122.43348388464332,
     "unit": "km",
     "digits": 3,
@@ -1021,13 +1592,12 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmaxcap_itulink": {
+  "zr8_lmaxcap_itulink": {
     "value": 111.70722976911047,
     "unit": "km",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
-      "ch01.amp.accelink_mw_nf_max",
       "ch01.att.g652_link_typ_cband",
       "ch01.cd.g652_link_typ_d1550",
       "ch01.const.planck_h",
@@ -1039,24 +1609,7 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmax_loss_itulink": {
-    "value": 33.669208068276916,
-    "unit": "dB",
-    "digits": 3,
-    "inputs": [
-      "ch01.amp.accelink_mw_nf_max",
-      "ch01.att.g652_link_typ_cband",
-      "ch01.cd.g652_link_typ_d1550",
-      "ch01.const.planck_h",
-      "ch01.const.speed_of_light_c",
-      "ch01.kerr.aeff_g652d_typ",
-      "ch01.kerr.n2_pure_silica_gsup47",
-      "ch04.coh.800zr_baud",
-      "ch04.coh.800zr_osnr",
-      "ch04.coh.800zr_reach"
-    ]
-  },
-  "lmaxcap_loss_itulink": {
+  "zr8_lmaxcap_loss_itulink": {
     "value": 30.71948818650538,
     "unit": "dB",
     "digits": 3,
@@ -1073,9 +1626,9 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "lmaxcap26_itulink": {
-    "value": 115.48215810935284,
-    "unit": "km",
+  "zr8_lmax_loss_itulink": {
+    "value": 33.669208068276916,
+    "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.amp.accelink_mw_nf_max",
@@ -1090,13 +1643,39 @@
       "ch04.coh.800zr_reach"
     ]
   },
-  "osnr58_itulink_120": {
-    "value": 24.948500216800937,
+  "osnr_zr8_minus_zr4_itulink_120": {
+    "value": 3.0042241920719057,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "osnr58_zr4_itulink_120": {
+    "value": 21.938200260161125,
     "unit": "dB",
     "digits": 3,
     "inputs": [
       "ch01.att.g652_link_typ_cband",
       "ch01.osnr.gsup39_58db_constant"
+    ]
+  },
+  "osnr58_minus_gn": {
+    "value": 0.14939791152204762,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
     ]
   }
 }

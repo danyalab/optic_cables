@@ -1,0 +1,336 @@
+{
+  "lam_direct": {
+    "value": 1549.8024804150032,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch03.ge.direct_gap"
+    ]
+  },
+  "lam_indirect": {
+    "value": 1867.2319041144617,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch03.ge.direct_gap"
+    ]
+  },
+  "r_ideal_1550": {
+    "value": 1.250159310289128,
+    "unit": "A/W",
+    "digits": 3,
+    "inputs": []
+  },
+  "eta_imec": {
+    "value": 0.5919245602617302,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.imec_responsivity_1550"
+    ]
+  },
+  "eta_imec_o": {
+    "value": 0.8801931644494371,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.imec_responsivity_1550"
+    ]
+  },
+  "eta_240": {
+    "value": 0.3599541244834846,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.lischke_responsivity"
+    ]
+  },
+  "bep_calc": {
+    "value": 86.3889898760363,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.lischke_responsivity"
+    ]
+  },
+  "eta_265": {
+    "value": 0.23996941632232308,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.lischke_265g"
+    ]
+  },
+  "bep_265": {
+    "value": 63.591895325415614,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.lischke_265g"
+    ]
+  },
+  "bep_imec": {
+    "value": 29.596228013086513,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.imec_bw",
+      "ch03.pd.imec_responsivity_1550"
+    ]
+  },
+  "gc_loss": {
+    "value": 3.5218251811136247,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.pd.lischke_responsivity"
+    ]
+  },
+  "rload": {
+    "value": 50.0,
+    "unit": "Ω",
+    "digits": 2,
+    "inputs": []
+  },
+  "frc_lis": {
+    "value": 489.7075172058318,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.lischke_265g"
+    ]
+  },
+  "ftr_lis": {
+    "value": 315.1261953662967,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.lischke_265g"
+    ]
+  },
+  "frc_imec": {
+    "value": 468.10277379969216,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.imec_bw"
+    ]
+  },
+  "sigma_th": {
+    "value": 3.023163905579715,
+    "unit": "µA",
+    "digits": 3,
+    "inputs": [
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "qt": {
+    "value": 3.414,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch02.imdd.tdecq_qt"
+    ]
+  },
+  "ser_check": {
+    "value": 0.00048012431827573494,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.tdecq_qt"
+    ]
+  },
+  "oma_req_uw": {
+    "value": 83.68444519174986,
+    "unit": "µW",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "oma_req_dbm": {
+    "value": -10.773552587949913,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "patel_sens": {
+    "value": -8.2,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "gap_db": {
+    "value": 2.573552587949914,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "sigma_shot": {
+    "value": 0.5634669095077771,
+    "unit": "µA",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "shot_var_frac": {
+    "value": 3.473869066540098,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "dark_frac": {
+    "value": 0.6459271365209821,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.pd.lischke_dark",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "tia_bw_ratio": {
+    "value": 0.6023529411764705,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.sym.lambda_pam4_rate",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "sigma_declercq": {
+    "value": 4.756065600893241,
+    "unit": "µA",
+    "digits": 3,
+    "inputs": [
+      "ch03.tia.declercq_noise"
+    ]
+  },
+  "oma_declercq_dbm": {
+    "value": -8.805691163129943,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.declercq_noise"
+    ]
+  },
+  "fa10": {
+    "value": 2.6289999999999996,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_keff"
+    ]
+  },
+  "fa10_db": {
+    "value": 4.197905861063626,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_keff"
+    ]
+  },
+  "apd_mopt": {
+    "value": 16.420187700366753,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.apd.kang_gbp",
+      "ch03.apd.kang_keff",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "apd_mcap": {
+    "value": 10.625,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_gbp",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "apd_oma_m1_dbm": {
+    "value": -10.698122272120063,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.apd.kang_gbp",
+      "ch03.apd.kang_keff",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "apd_gain_opt_db": {
+    "value": 8.63691848038253,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.apd.kang_gbp",
+      "ch03.apd.kang_keff",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "apd_muse": {
+    "value": 10.625,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.apd.kang_gbp",
+      "ch03.apd.kang_keff",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "apd_gain_use_db": {
+    "value": 8.262258265504826,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.apd.kang_gbp",
+      "ch03.apd.kang_keff",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  },
+  "apd_oma_use_dbm": {
+    "value": -18.960380537624893,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_qt",
+      "ch03.apd.kang_gbp",
+      "ch03.apd.kang_keff",
+      "ch03.pd.imec_responsivity_1550",
+      "ch03.tia.patel_noise"
+    ]
+  }
+}

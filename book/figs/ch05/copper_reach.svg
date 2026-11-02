@@ -115,35 +115,11 @@ L 0 2
        <use xlink:href="#m055d3cbdee" x="66.133888" y="277.9115" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.6"/>
       </g>
      </g>
-     <g id="text_5">
-      <!-- $\mathdefault{4\times10^{0}}$ -->
-      <g style="fill: #8a8a8a" transform="translate(48.423888 293.96775)">
-       <text>
-        <tspan x="0" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">4</tspan>
-        <tspan x="9.249023" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">×</tspan>
-        <tspan x="18.669922" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-        <tspan x="23.144043" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-        <tspan x="30.18877" y="-5.323438" style="font-size: 7.7px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-       </text>
-      </g>
-     </g>
     </g>
     <g id="xtick_6">
      <g id="line2d_10">
       <g>
        <use xlink:href="#m055d3cbdee" x="117.874003" y="277.9115" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.6"/>
-      </g>
-     </g>
-     <g id="text_6">
-      <!-- $\mathdefault{6\times10^{0}}$ -->
-      <g style="fill: #8a8a8a" transform="translate(100.329003 293.96775)">
-       <text>
-        <tspan x="0" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">6</tspan>
-        <tspan x="8.964355" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">×</tspan>
-        <tspan x="18.385254" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-        <tspan x="22.859375" y="-0.780438" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-        <tspan x="29.904102" y="-5.323438" style="font-size: 7.7px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-       </text>
       </g>
      </g>
     </g>
@@ -174,18 +150,6 @@ L 0 2
        <use xlink:href="#m055d3cbdee" x="323.249263" y="277.9115" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.6"/>
       </g>
      </g>
-     <g id="text_7">
-      <!-- $\mathdefault{3\times10^{1}}$ -->
-      <g style="fill: #8a8a8a" transform="translate(306.584263 293.96775)">
-       <text>
-        <tspan x="0" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">3</tspan>
-        <tspan x="8.9375" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">×</tspan>
-        <tspan x="18.358398" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-        <tspan x="22.83252" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-        <tspan x="29.877246" y="-5.4" style="font-size: 7.7px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-       </text>
-      </g>
-     </g>
     </g>
     <g id="xtick_11">
      <g id="line2d_15">
@@ -193,35 +157,11 @@ L 0 2
        <use xlink:href="#m055d3cbdee" x="359.959459" y="277.9115" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.6"/>
       </g>
      </g>
-     <g id="text_8">
-      <!-- $\mathdefault{4\times10^{1}}$ -->
-      <g style="fill: #8a8a8a" transform="translate(343.129459 293.96775)">
-       <text>
-        <tspan x="0" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">4</tspan>
-        <tspan x="9.249023" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">×</tspan>
-        <tspan x="18.669922" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-        <tspan x="23.144043" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-        <tspan x="30.18877" y="-5.4" style="font-size: 7.7px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-       </text>
-      </g>
-     </g>
     </g>
     <g id="xtick_12">
      <g id="line2d_16">
       <g>
        <use xlink:href="#m055d3cbdee" x="411.699573" y="277.9115" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.6"/>
-      </g>
-     </g>
-     <g id="text_9">
-      <!-- $\mathdefault{6\times10^{1}}$ -->
-      <g style="fill: #8a8a8a" transform="translate(394.979573 293.96775)">
-       <text>
-        <tspan x="0" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">6</tspan>
-        <tspan x="8.964355" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">×</tspan>
-        <tspan x="18.385254" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-        <tspan x="22.859375" y="-0.857" style="font-size: 11px; font-family: 'Inter'; fill: #8a8a8a">0</tspan>
-        <tspan x="29.904102" y="-5.4" style="font-size: 7.7px; font-family: 'Inter'; fill: #8a8a8a">1</tspan>
-       </text>
       </g>
      </g>
     </g>
@@ -239,7 +179,7 @@ L 0 2
       </g>
      </g>
     </g>
-    <g id="text_10">
+    <g id="text_5">
      <!-- Nyquist frequency of the lane, $f_N$ (GHz) -->
      <g style="fill: #8a8a8a" transform="translate(146.67207 312.87732)">
       <text>
@@ -303,7 +243,7 @@ L -3.5 0
        <use xlink:href="#md8cf2b4a91" x="47.87207" y="261.180051" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_11">
+     <g id="text_6">
       <text style="font-size: 11px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #8a8a8a" x="40.87207" y="266.508176" transform="rotate(-0 40.87207 266.508176)">0.5</text>
      </g>
     </g>
@@ -318,7 +258,7 @@ L 449.63207 209.207423
        <use xlink:href="#md8cf2b4a91" x="47.87207" y="209.207423" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_12">
+     <g id="text_7">
       <text style="font-size: 11px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #8a8a8a" x="40.87207" y="214.535548" transform="rotate(-0 40.87207 214.535548)">1</text>
      </g>
     </g>
@@ -333,7 +273,7 @@ L 449.63207 157.234795
        <use xlink:href="#md8cf2b4a91" x="47.87207" y="157.234795" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_13">
+     <g id="text_8">
       <text style="font-size: 11px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #8a8a8a" x="40.87207" y="162.56292" transform="rotate(-0 40.87207 162.56292)">2</text>
      </g>
     </g>
@@ -348,7 +288,7 @@ L 449.63207 88.530717
        <use xlink:href="#md8cf2b4a91" x="47.87207" y="88.530717" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_14">
+     <g id="text_9">
       <text style="font-size: 11px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #8a8a8a" x="40.87207" y="93.858842" transform="rotate(-0 40.87207 93.858842)">5</text>
      </g>
     </g>
@@ -363,7 +303,7 @@ L 449.63207 36.558089
        <use xlink:href="#md8cf2b4a91" x="47.87207" y="36.558089" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.8"/>
       </g>
      </g>
-     <g id="text_15">
+     <g id="text_10">
       <text style="font-size: 11px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #8a8a8a" x="40.87207" y="41.886214" transform="rotate(-0 40.87207 41.886214)">10</text>
      </g>
     </g>
@@ -449,7 +389,7 @@ L -2 0
       </g>
      </g>
     </g>
-    <g id="text_16">
+    <g id="text_11">
      <text style="font-size: 11px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #8a8a8a" x="17.85625" y="150.3995" transform="rotate(-90 17.85625 150.3995)">Cable reach (m)</text>
     </g>
    </g>
@@ -736,22 +676,22 @@ L 47.87207 22.8875
 L 449.63207 277.9115 
 " style="fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_17">
+   <g id="text_12">
     <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="104.535202" y="59.301809" transform="rotate(-0 104.535202 59.301809)">10G NRZ</text>
    </g>
-   <g id="text_18">
+   <g id="text_13">
     <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="221.460152" y="84.530717" transform="rotate(-0 221.460152 84.530717)">25G NRZ</text>
    </g>
-   <g id="text_19">
+   <g id="text_14">
     <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="225.269594" y="122.832756" transform="rotate(-0 225.269594 122.832756)">50G PAM4</text>
    </g>
-   <g id="text_20">
+   <g id="text_15">
     <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="313.719904" y="153.234795" transform="rotate(-0 313.719904 153.234795)">100G PAM4</text>
    </g>
-   <g id="text_21">
+   <g id="text_16">
     <text style="font-size: 8.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="402.170214" y="205.207423" transform="rotate(-0 402.170214 205.207423)">200G PAM4</text>
    </g>
-   <g id="text_22">
+   <g id="text_17">
     <text style="font-size: 10px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #8a8a8a" x="248.75207" y="16.8875" transform="rotate(-0 248.75207 16.8875)">Ledger values with constant-budget guide lines through the 100G point</text>
    </g>
    <g id="legend_1">
@@ -764,7 +704,7 @@ L 71.07207 209.352437
       <use xlink:href="#m7f6f73611e" x="63.07207" y="209.352437" style="fill: #2f7fd8; stroke: #2f7fd8"/>
      </g>
     </g>
-    <g id="text_23">
+    <g id="text_18">
      <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="77.47207" y="212.152437" transform="rotate(-0 77.47207 212.152437)">IEEE passive-twinax reach objectives</text>
     </g>
     <g id="line2d_47">
@@ -773,7 +713,7 @@ L 63.07207 223.522125
 L 71.07207 223.522125 
 " style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #8a8a8a; stroke-width: 1.2"/>
     </g>
-    <g id="text_24">
+    <g id="text_19">
      <!-- $L\propto f_N^{-1/2}$ (skin effect only) -->
      <g style="fill: #8a8a8a" transform="translate(77.47207 226.322125)">
       <text>
@@ -813,7 +753,7 @@ L 63.07207 237.912125
 L 71.07207 237.912125 
 " style="fill: none; stroke-dasharray: 1.4,2.31; stroke-dashoffset: 0; stroke: #8a8a8a; stroke-width: 1.4"/>
     </g>
-    <g id="text_25">
+    <g id="text_20">
      <!-- $L\propto f_N^{-1}$ (dielectric only) -->
      <g style="fill: #8a8a8a" transform="translate(77.47207 240.712125)">
       <text>
@@ -849,7 +789,7 @@ L 71.07207 237.912125
       <use xlink:href="#m315d3cc922" x="63.07207" y="252.302125" style="fill: #e2622c; stroke: #e2622c; stroke-linejoin: miter"/>
      </g>
     </g>
-    <g id="text_26">
+    <g id="text_21">
      <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="77.47207" y="255.102125" transform="rotate(-0 77.47207 255.102125)">NVIDIA: usable passive DAC at 200G/lane</text>
     </g>
     <g id="line2d_50">
@@ -857,7 +797,7 @@ L 71.07207 237.912125
       <use xlink:href="#mb9014c673e" x="63.07207" y="265.981812" style="fill: #1a9f73; stroke: #1a9f73; stroke-linejoin: miter"/>
      </g>
     </g>
-    <g id="text_27">
+    <g id="text_22">
      <text style="font-size: 8px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="77.47207" y="268.781813" transform="rotate(-0 77.47207 268.781813)">Active copper (ACC, AEC), vendor</text>
     </g>
    </g>

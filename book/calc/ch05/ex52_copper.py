@@ -127,7 +127,9 @@ ax.plot([fn[3]], [L("ch05.cu.credo_aec_800g_7m")], "s", color=cl.COLORS[2], ms=7
 ax.set_xscale("log"); ax.set_yscale("log")
 ax.set_xlabel("Nyquist frequency of the lane, $f_N$ (GHz)")
 ax.set_ylabel("Cable reach (m)")
+from matplotlib.ticker import NullFormatter
 ax.set_xticks([5, 10, 20, 50]); ax.set_xticklabels(["5", "10", "20", "50"])
+ax.xaxis.set_minor_formatter(NullFormatter()); ax.yaxis.set_minor_formatter(NullFormatter())
 ax.set_yticks([0.5, 1, 2, 5, 10]); ax.set_yticklabels(["0.5", "1", "2", "5", "10"])
 ax.set_ylim(0.4, 12)
 ax.legend(fontsize=8, loc="lower left")

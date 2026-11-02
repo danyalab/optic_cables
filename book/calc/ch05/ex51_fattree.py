@@ -150,7 +150,7 @@ for i, l in enumerate((2, 3, 4)):
 ax.plot(ks, [cl.fattree_hosts(k, 3, SIG_EX) for k in ks], color=cl.COLORS[1], ls="--", lw=1.4,
         label="3 tiers, leaf oversubscribed 3:1")
 ax.axhline(L(META), color=cl.GRAY, lw=1, ls=":")
-ax.text(18, L(META) * 1.25, "Meta 129k-GPU cluster (ledger)", fontsize=8.5)
+ax.text(150, L(META) * 0.55, "Meta 129k-GPU cluster (ledger)", fontsize=8.5)
 for k, lab, l in ((48, "Al-Fares k=48", 3), (64, "51.2T as 64x800G", 3), (128, "51.2T as 128x400G", 3)):
     ax.plot([k], [cl.fattree_hosts(k, l)], "o", color=cl.COLORS[3], ms=6)
     ax.annotate(lab, (k, cl.fattree_hosts(k, l)), xytext=(4, -12), textcoords="offset points", fontsize=8.5)
