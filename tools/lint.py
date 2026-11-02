@@ -93,6 +93,8 @@ def check_ledger(errors, order):
     for fname, r in load_all("ledger", "ch*[!s].yaml", "records"):
         rid = r.get("id", "?")
         for k in LEDGER_REQUIRED:
+            if k == "unit" and r.get("kind") == "fact":
+                continue
             if r.get(k) in (None, ""):
                 errors.append(f"{fname}: {rid} missing {k}")
         if not ID_RE.match(str(rid)):
