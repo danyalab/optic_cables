@@ -1,0 +1,776 @@
+# Chapter 9 sources (China network architecture). Retrieved 2026-11-02.
+# No ch01 source was directly reusable: ch01_c China Mobile / YOFC records concern hollow-core fiber and cable
+# procurement, not backbone architecture. Checked sources/*.yaml for duplicate URLs/DOIs before creating these.
+sources:
+# ---------------- Government statistics, statutes, notices (tier A) ----------------
+- id: miit_txy_tjgb_2025
+  type: report
+  title: 2025年通信业统计公报
+  authors: 工业和信息化部 (MIIT)
+  venue: MIIT statistical bulletin, released 2026-01 (reposted by 天津市通信管理局 2026-03-04)
+  year: 2026
+  doi: ''
+  url: https://tjca.miit.gov.cn/xwdt/xydt/art/2026/art_aaa1452a82bc404f917e26007991fb05.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_txy_tjgb_2024
+  type: report
+  title: 2024年通信业统计公报
+  authors: 工业和信息化部 (MIIT)
+  venue: MIIT statistical bulletin, reposted on gov.cn 2025-01-27
+  year: 2025
+  doi: ''
+  url: https://www.gov.cn/lianbo/bumen/202501/content_7003010.htm
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_txy_tjgb_2024_jiedu
+  type: report
+  title: 2024年通信业统计公报解读：通信业高质量发展再上新台阶
+  authors: 工业和信息化部 运行监测协调局
+  venue: miit.gov.cn, 2025-01-26
+  year: 2025
+  doi: ''
+  url: https://www.miit.gov.cn/gxsj/tjfx/txy/art/2025/art_8ebb624c805b4b43b9297ab3e11d268e.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_2024q4_capacity_table
+  type: report
+  title: 2024年第四季度通信业主要通信能力
+  authors: 工业和信息化部 运行监测协调局
+  venue: miit.gov.cn statistics table, 2025-01-26
+  year: 2025
+  doi: ''
+  url: https://wap.miit.gov.cn/gxsj/tjfx/txy/art/2025/art_c839974b2cd541dab9d77cf3ab94d74a.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: ndrc_2021_709_hub_plan
+  type: standard
+  title: 全国一体化大数据中心协同创新体系算力枢纽实施方案 (发改高技〔2021〕709号)
+  authors: 国家发展改革委, 中央网信办, 工业和信息化部, 国家能源局
+  venue: NDRC notice, 2021-05-24
+  year: 2021
+  doi: ''
+  url: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202105/P020210526354055584648.pdf
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: ndrc_2022_212_jjj_reply
+  type: standard
+  title: 关于同意京津冀地区启动建设全国一体化算力网络国家枢纽节点的复函 (发改高技〔2022〕212号)
+  authors: 国家发展改革委, 中央网信办, 工业和信息化部, 国家能源局
+  venue: NDRC reply letter, 2022-02-07
+  year: 2022
+  doi: ''
+  url: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202202/t20220216_1315621.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: ndrc_2022_dsxs_qa
+  type: report
+  title: 国家发展改革委高技术司负责同志就实施“东数西算”工程答记者问
+  authors: 国家发展改革委 高技术司
+  venue: ndrc.gov.cn, 2022-02-17
+  year: 2022
+  doi: ''
+  url: https://www.ndrc.gov.cn/xxgk/jd/jd/202202/t20220217_1315795.html
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: ndrc_2022_dsxs_interview
+  type: report
+  title: 国家发展改革委高技术司负责同志接受中国战略新兴产业杂志专访：“东数西算”全面启动 八枢纽激发数据新活力
+  authors: 国家发展改革委 高技术司
+  venue: ndrc.gov.cn, 2022-03-21
+  year: 2022
+  doi: ''
+  url: https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202203/t20220321_1319862.html
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: ndrc_2023_1779_opinions
+  type: standard
+  title: 关于深入实施“东数西算”工程加快构建全国一体化算力网的实施意见 (发改数据〔2023〕1779号)
+  authors: 国家发展改革委, 国家数据局, 中央网信办, 工业和信息化部, 国家能源局
+  venue: NDRC notice, 2023-12-29
+  year: 2023
+  doi: ''
+  url: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202312/t20231229_1363000.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_2023_180_compute_plan
+  type: standard
+  title: 算力基础设施高质量发展行动计划 (工信部联通信〔2023〕180号)
+  authors: 工业和信息化部 等六部门
+  venue: MIIT notice, 2023-10-08 (gov.cn 政策库)
+  year: 2023
+  doi: ''
+  url: https://www.gov.cn/zhengce/zhengceku/202310/content_6907900.htm
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_2025_119_interconnect_plan
+  type: standard
+  title: 算力互联互通行动计划 (工信部信管〔2025〕119号)
+  authors: 工业和信息化部
+  venue: MIIT notice, 2025-05-21 (gov.cn PDF attachment)
+  year: 2025
+  doi: ''
+  url: https://www.gov.cn/zhengce/zhengceku/202505/P020250531125060951193.pdf
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_2021_dual_gigabit_plan
+  type: standard
+  title: “双千兆”网络协同发展行动计划（2021-2023年）
+  authors: 工业和信息化部
+  venue: MIIT notice, 2021-03-24
+  year: 2021
+  doi: ''
+  url: https://www.miit.gov.cn/jgsj/txs/wjfb/art/2021/art_5b964eb54af841c8a248855047c06799.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_gigabit_city_criteria
+  type: standard
+  title: 千兆城市评价指标 (附件1)
+  authors: 工业和信息化部
+  venue: Attachment to MIIT 千兆城市建设情况总结评估 notice (2022 edition PDF)
+  year: 2022
+  doi: ''
+  url: https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20224/a2ba935a926646e5a41514039b403e71.pdf
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: miit_2002_gateway_rules
+  type: standard
+  title: 国际通信出入口局管理办法 (信息产业部令第22号)
+  authors: 信息产业部 (now MIIT)
+  venue: Ministerial regulation, 2002-06-26, in force 2002-10-01 (gov.cn)
+  year: 2002
+  doi: ''
+  url: https://www.gov.cn/zhengce/2022-08/23/content_5722724.htm
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: nrta_2025_tjgb
+  type: report
+  title: 2025年全国广播电视行业统计公报
+  authors: 国家广播电视总局 规划财务司
+  venue: nrta.gov.cn, 2026-05-13
+  year: 2026
+  doi: ''
+  url: https://www.nrta.gov.cn/art/2026/5/13/art_113_73265.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: ntia_bead_2025_notice
+  type: standard
+  title: 'BEAD Program: BEAD Restructuring Policy Notice'
+  authors: National Telecommunications and Information Administration (NTIA)
+  venue: NTIA policy notice, 2025-06-06
+  year: 2025
+  doi: ''
+  url: https://www.ntia.gov/sites/default/files/2025-06/bead-restructuring-policy-notice.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+# ---------------- Standards and peer-reviewed papers (tier A) ----------------
+- id: etsi_gr_f5g_001
+  type: standard
+  title: Fifth Generation Fixed Network (F5G); F5G Generation Definition Release #1
+  authors: ETSI ISG F5G
+  venue: ETSI GR F5G 001 V1.1.1 (2020-12)
+  year: 2020
+  doi: ''
+  url: https://www.etsi.org/deliver/etsi_gr/F5G/001_099/001/01.01.01_60/gr_F5G001v010101p.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: zuo_ecoc_2023_2502km
+  type: conference
+  title: Field Trial of Real-time 80-λ×400-Gb/s Single-carrier 128-GBd DP-QPSK Transmission Covering 12-THz C+L Band over 2502-km Terrestrial G.652.D Fibre
+  authors: M. Zuo, D. Zhang, H. Zou, D. Ge, D. Wang, D. Liu, J. Wang, J. Zheng, W. Zheng, X. Chen, T. Wang, Y. Li, L. Han, H. Li, X. Duan (China Mobile Research Institute, China Mobile, ZTE)
+  venue: ECOC 2023 (IET)
+  year: 2023
+  doi: 10.1049/icp.2023.2353
+  url: http://oxford-abstracts.s3.amazonaws.com/85c03aa1-0831-4958-bcd3-aba5f080f7d5.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: zuo_ofc_2023_3075km
+  type: conference
+  title: 32-λ×400 Gb/s Single-carrier 120-GBaud QPSK Coherent Transmission over 3075-km G.652.D Fiber Link Using OE-MCM Prototype under Field-deployed Configuration
+  authors: M. Zuo, B. Yan, D. Ge, D. Wang, J. Wang, X. Chen, et al.
+  venue: OFC 2023, paper W2B.16
+  year: 2023
+  doi: 10.1364/OFC.2023.W2B.16
+  url: https://doi.org/10.1364/ofc.2023.w2b.16
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ge_acp_2023_7000km
+  type: conference
+  title: Fully-Loaded 80×400Gb/s DP-QPSK Transmission with Commercial 12-THz C6T+L6T EDFAs Over Record Distance of 7000km
+  authors: D. Ge, M. Zuo, H. Liu, L. Gan, D. Wang, Y. Chen, et al.
+  venue: Asia Communications and Photonics Conference (ACP/POEM) 2023
+  year: 2023
+  doi: 10.1109/ACP/POEM59049.2023.10369499
+  url: https://doi.org/10.1109/acp/poem59049.2023.10369499
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: li_natreveng_2026_400g
+  type: journal
+  title: Making long-haul large-capacity 400G optical network a reality
+  authors: H. Li, D. Wang, M. Zuo, X. Duan, D. Zhang, S. Cao, Y. Zhang, J. Li, J. Sun, D. Ge, et al. (China Mobile Research Institute)
+  venue: Nature Reviews Electrical Engineering (Review), published 2026-04-01
+  year: 2026
+  doi: 10.1038/s44287-026-00278-7
+  url: https://www.nature.com/articles/s44287-026-00278-7
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: wang_oe_2024_c6tl6t_power
+  type: journal
+  title: Channel power management of 400 G transmission system based on C6T + L6T spectrum and QPSK modulation format
+  authors: C. Wang, Y. Hu, S. Shen, Z. Wang, H. Zhang, X. Tang, M. Zhang (BUPT, China Unicom)
+  venue: Optics Express 32, 20279-20290 (2024)
+  year: 2024
+  doi: 10.1364/OE.523644
+  url: https://doi.org/10.1364/oe.523644
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: wang_icicn_2024_cu_400g
+  type: conference
+  title: Experimental Demonstration of a 400G Optical Transmission System Based on C+L Spectrum Using G.652.D Fiber and G.654.E Fiber
+  authors: C. Wang, S. Shen, Y. Hu, Z. Wang, H. Zhang, X. Tang, et al. (BUPT, China Unicom)
+  venue: IEEE ICICN 2024
+  year: 2024
+  doi: 10.1109/ICICN62625.2024.10761718
+  url: https://doi.org/10.1109/icicn62625.2024.10761718
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: xu_gdtx_2005_cn2
+  type: journal
+  title: 中国电信下一代IP骨干网——CN2漫谈
+  authors: 徐建锋, 夏可为 (中国电信广州研究院)
+  venue: 广东通信技术 2005年第2期
+  year: 2005
+  doi: ''
+  url: https://web.archive.org/web/20190517142207/http:/www.cnki.com.cn/Article/CJFDTotal-GUDO200502000.htm
+  access: abstract_only
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: durairajan_sigcomm_2015
+  type: conference
+  title: 'InterTubes: A Study of the US Long-haul Fiber-optic Infrastructure'
+  authors: R. Durairajan, P. Barford, J. Sommers, W. Willinger
+  venue: ACM SIGCOMM 2015
+  year: 2015
+  doi: 10.1145/2785956.2787499
+  url: https://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p565.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+# ---------------- Operator / CAICT / CNNIC / vendor documents (tier B) ----------------
+- id: cnnic_52_2023
+  type: report
+  title: 第52次中国互联网络发展状况统计报告 (The 52nd Statistical Report on China's Internet Development)
+  authors: 中国互联网络信息中心 (CNNIC)
+  venue: CNNIC, 2023-08 (English edition 2023-11)
+  year: 2023
+  doi: ''
+  url: https://www.cnnic.com.cn/IDR/ReportDownloads/202311/P020231121355042476714.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cnnic_57_2026
+  type: report
+  title: 第57次中国互联网络发展状况统计报告
+  authors: 中国互联网络信息中心 (CNNIC)
+  venue: CNNIC, 2026-02-05 (PDF mirror at dfcfw.com)
+  year: 2026
+  doi: ''
+  url: https://pdf.dfcfw.com/pdf/H3_AP202603101820433901_1.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: caict_compute_bluebook_2025
+  type: whitepaper
+  title: 先进计算暨算力发展指数蓝皮书 (2025)
+  authors: 中国信息通信研究院 (CAICT)
+  venue: CAICT blue book (PDF mirror on cdut.edu.cn), 2025
+  year: 2025
+  doi: ''
+  url: https://www.cdut.edu.cn/__local/3/01/FD/7E29964AEB6DD1ABFC85417AFF3_13A62CC6_35E28D.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: cmcc_ar_2024_en
+  type: report
+  title: China Mobile Limited Annual Report 2024
+  authors: China Mobile Limited
+  venue: Annual report (HKEX 0941), 2025
+  year: 2025
+  doi: ''
+  url: https://www.chinamobileltd.com/en/ir/reports/ar2024.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cmcc_ar_2025_a
+  type: report
+  title: 中国移动有限公司2025年年度报告
+  authors: 中国移动有限公司
+  venue: A-share annual report (SSE 600941), 2026-03-27
+  year: 2026
+  doi: ''
+  url: http://static.cninfo.com.cn/finalpage/2026-03-27/1225036280.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: ct_ar_2025_a
+  type: report
+  title: 中国电信股份有限公司2025年年度报告
+  authors: 中国电信股份有限公司
+  venue: A-share annual report (SSE 601728), 2026-03-25
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-03-25/1225027302.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: cu_ar_2025_a
+  type: report
+  title: 中国联合网络通信股份有限公司2025年年度报告
+  authors: 中国联合网络通信股份有限公司
+  venue: A-share annual report (SSE 600050), 2026-03
+  year: 2026
+  doi: ''
+  url: https://pdf.dfcfw.com/pdf/H2_AN202603191820652914_1.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: cu_esg_2025
+  type: report
+  title: 中国联通2025年可持续发展/ESG报告 (title inferred; companion document filed with 600050 annual report 2026-03-20)
+  authors: 中国联合网络通信股份有限公司
+  venue: Sustainability report, 2026-03-20 (xueqiu mirror)
+  year: 2026
+  doi: ''
+  url: https://stockmc.xueqiu.com/202603/600050_20260320_ZX5Y.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: cmcc_jiuzhou_wp
+  type: whitepaper
+  title: “九州”算力光网目标网架构白皮书
+  authors: 中国移动 (China Mobile)
+  venue: China Mobile white paper, 2023-06 (PDF mirror)
+  year: 2023
+  doi: ''
+  url: https://gdtx.oss-cn-shanghai.aliyuncs.com/gehongkai/PDF/%E2%80%9C%E4%B9%9D%E5%B7%9E%E2%80%9D%E7%AE%97%E5%8A%9B%E5%85%89%E7%BD%91%E7%9B%AE%E6%A0%87%E7%BD%91%E6%9E%B6%E6%9E%84%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: cmri_2023_03_400g_trial_summary
+  type: whitepaper
+  title: 中国移动算力网络400G全光网技术试验阶段总结
+  authors: 中国移动研究院 (China Mobile Research Institute)
+  venue: Slide deck, 宁波, 2023-03-02 (hosted by 通信世界网)
+  year: 2023
+  doi: ''
+  url: https://www.cww.net.cn/article?id=575175
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: li_cww_2024_04_cmcc_400g
+  type: whitepaper
+  title: 全球首条400G骨干网链路贯通 400G商用元年正式开启
+  authors: 李晗, 张德朝, 韩柳燕, 王东, 左铭青 (中国移动研究院); 邹洪强, 刘达 (计划建设部); 刘卓 (网络事业部)
+  venue: 通信世界 (CWW), 2024-04-16
+  year: 2024
+  doi: ''
+  url: https://www.cww.net.cn/article?id=589155
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: lv_cww_2023_ct_400g
+  type: whitepaper
+  title: 400G“锐见”| 中国电信谈全光骨干网的未来：400G的机遇与挑战并存
+  authors: 吕凯, 盛夏, 王曦朔, 刘宇旸, 李俊杰 (中国电信研究院)
+  venue: 通信世界 (CWW), 2023-10-30
+  year: 2023
+  doi: ''
+  url: https://www.cww.net.cn/article?id=584067
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: ieee8023_2013_china_sp_400gbe
+  type: report
+  title: 400GbE perspective from China service provider
+  authors: Xinyuan Wang, Xin Chang, Lu Huang
+  venue: IEEE 802.3 400GbE Study Group contribution chang_400_01a_1113, 2013-11
+  year: 2013
+  doi: ''
+  url: https://www.ieee802.org/3/400GSG/public/13_11/chang_400_01a_1113.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ctamericas_cn2_page
+  type: datasheet
+  title: CN2 (AS 4809) | China Telecom Americas Premium Global Network
+  authors: China Telecom Americas
+  venue: Company web page (snapshot dated 2023-01)
+  year: 2023
+  doi: ''
+  url: https://www.ctamericas.com/company/global-network/cn2/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cteurope_ip_transit_page
+  type: datasheet
+  title: Global IP Transit - China Telecom (Europe) Ltd.
+  authors: China Telecom (Europe) Ltd.
+  venue: Company web page (undated)
+  year: 2025
+  doi: ''
+  url: https://www.chinatelecomeurope.com/product/global-ip-transit/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ctap_gia_page
+  type: datasheet
+  title: Global Internet Access | China Telecom Asia Pacific
+  authors: China Telecom Global
+  venue: Company web page (snapshot dated 2019-12)
+  year: 2019
+  doi: ''
+  url: https://www.chinatelecomasiapacific.com/global-internet-access
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cuglobal_dia_page
+  type: datasheet
+  title: DIA | China Unicom Global (Korea)
+  authors: China Unicom Global
+  venue: Company web page (undated)
+  year: 2025
+  doi: ''
+  url: https://kr.chinaunicomglobal.com/products-dia
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nrta_2024_08_cmcc_cbn_cooperation
+  type: report
+  title: 中国移动与中国广电合作推进5G共建共享共赢高质量发展
+  authors: 国家广播电视总局
+  venue: nrta.gov.cn 总局要闻, 2024-08-23
+  year: 2024
+  doi: ''
+  url: https://www.nrta.gov.cn/art/2024/8/23/art_112_68581.html
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: gdca_2024_07_new_gateways
+  type: report
+  title: 30年来首次！我国新设6个国际通信业务出入口局
+  authors: 广东省通信管理局 (MIIT provincial bureau)
+  venue: gdca.miit.gov.cn, 2024-07-12
+  year: 2024
+  doi: ''
+  url: https://gdca.miit.gov.cn/xwdt/xydt/art/2024/art_c4528a21187742b2864ef3dfcc52fc56.html
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: caict_2024_07_gateway_interpretation
+  type: report
+  title: 专家解读新设国际通信业务出入口局：优化我国国际通信整体布局
+  authors: 中国信息通信研究院 专家 (via 数字中国建设峰会 portal)
+  venue: digitalchina.gov.cn, 2024-07-15
+  year: 2024
+  doi: ''
+  url: https://www.digitalchina.gov.cn/2024/xwzx/qwfb/202407/t20240715_4859378.htm
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: itu_wsis_2015_china_interconnection
+  type: report
+  title: Introduction of Chinese Telecommunication Interconnection Projects
+  authors: 刘恒阳 (presenter, Chinese delegation)
+  venue: ITU WSIS Forum 2015
+  year: 2015
+  doi: ''
+  url: https://www.itu.int/net4/wsis/forum/2015/Uploads/S/192/Introduction_of_Chinese_Telecommunication_Interconnection_Projects_(for%20WSIS).pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: caict_escap_intl_cable
+  type: report
+  title: Chinese International Optical Cable Interconnection
+  authors: Li Yanting (CAICT)
+  venue: UN ESCAP presentation (undated, approx. 2018)
+  year: 2018
+  doi: ''
+  url: https://www.unescap.org/sites/default/files/Chinese%20International%20Optical%20Cable%20Interconnection%2C%20CAICT.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: fba_cartesian_cost_2025
+  type: whitepaper
+  title: Fiber Deployment Cost Annual Report 2025
+  authors: Fiber Broadband Association and Cartesian
+  venue: FBA report, published 2026-01
+  year: 2026
+  doi: ''
+  url: https://fiberbroadband.org/wp-content/uploads/2026/01/FBA_Cartesian_Fiber-Deployment-Cost-Annual-Report_2025.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: lumen_10k_2025
+  type: report
+  title: Lumen Technologies, Inc. Form 10-K for fiscal year ended December 31, 2025
+  authors: Lumen Technologies, Inc.
+  venue: SEC EDGAR, filed 2026-02-20
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/18926/000001892626000014/lumn-20251231.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: verizon_latency_page
+  type: datasheet
+  title: Monthly IP Latency Data | Verizon
+  authors: Verizon Business
+  venue: Verizon web page (data Oct 2025 to Sep 2026)
+  year: 2026
+  doi: ''
+  url: https://www.verizon.com/business/terms/latency/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: oecd_2025_10_broadband_release
+  type: report
+  title: Fibre and 5G drive OECD digital transformation as broadband markets mature
+  authors: OECD
+  venue: OECD statistical release, 2025-10-30
+  year: 2025
+  doi: ''
+  url: https://www.oecd.org/en/data/insights/statistical-releases/2025/10/fibre-and-5g-drive-oecd-digital-transformation-as-broadband-markets-mature.html
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+# ---------------- Press / news (tier C; recorded only for contested or provenance boxes) ----------------
+- id: xinhua_2024_03_cmcc_400g
+  type: press
+  title: 中国移动首条400G全光省际骨干网正式商用 技术突破助力国家“东数西算”工程建设
+  authors: 新华网 (China Mobile press release content)
+  venue: xinhuanet.com, 2024-03-08
+  year: 2024
+  doi: ''
+  url: http://www.xinhuanet.com/info/20240308/d9fd2a3679a344b7a7c31d93ff315cdc/c.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: scjc_2024_11_jiuzhou
+  type: press
+  title: 走近大国工程丨东数西算新动脉 探访全球首个规模最大、覆盖最广的400G全光省际骨干网
+  authors: 四川省纪委监委网站 (repost of 中央纪委国家监委网站 feature)
+  venue: scjc.gov.cn, 2024-11-11
+  year: 2024
+  doi: ''
+  url: https://www.scjc.gov.cn/scjc/rdzx/2024/11/11/f280c6db514f410f98738afabf8fc484.shtml
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: c114_2024_11_cmcc_400g_award
+  type: press
+  title: 中国移动“九州”算力光网400G省际骨干工程获第三届“光华杯”全光运力专题赛特等奖
+  authors: C114通信网
+  venue: C114, 2024-11-04
+  year: 2024
+  doi: ''
+  url: https://www.c114.com.cn/topic/6414/a1277035.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: cww_2023_11_cmcc_400g_tender
+  type: press
+  title: 400G OTN规模商用“第一标”落地 加快高速光网建设
+  authors: 通信世界网 (CWW)
+  venue: CWW, 2023-11-30
+  year: 2023
+  doi: ''
+  url: https://www.cww.net.cn/article?id=585140
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: ct_2025_05_400g800g_roadm
+  type: press
+  title: 中国电信完成全球首次400G/800G融合速率ROADM网络现网试点
+  authors: 中国电信 (翼研 / 人民邮电报)
+  venue: chinatelecom.com.cn, 2025-05-21
+  year: 2025
+  doi: ''
+  url: https://www.chinatelecom.com.cn/ct/news/xydxxtx/154490.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: c114_2024_05_ct_800g400g_mixed
+  type: press
+  title: 中国电信霍晓莉：引领光网络创新，分步推进800G/400G多速率混合传输建设
+  authors: C114通信网 (水易)
+  venue: C114, 2024-05-31
+  year: 2024
+  doi: ''
+  url: https://www.c114.com.cn/news/117/a1264298.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: cfol_2024_10_ct_cl_module
+  type: press
+  title: 中国电信首次完成扩展CL一体光模块验证，加速400G ROADM全光网发展
+  authors: 光纤在线 (source 中国电信研究院)
+  venue: c-fol.net, 2024-10-29
+  year: 2024
+  doi: ''
+  url: https://www.c-fol.net/news/3_202410/20241029183629.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: cisco_2004_cn2_press
+  type: press
+  title: 中国电信CN2启动 思科独家承建全国精品业务网及骨干网核心华东地区
+  authors: Cisco China
+  venue: Cisco press release, 2004-11-10
+  year: 2004
+  doi: ''
+  url: https://www.cisco.com/web/CN/aboutcisco/news_info/china_news/2004/11_12.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: people_2022_06_cbn_5g_launch
+  type: press
+  title: 中国广电5G网络服务启动 黄坤明出席启动仪式
+  authors: 新华社 (via 人民网)
+  venue: people.com.cn, 2022-06-27
+  year: 2022
+  doi: ''
+  url: http://politics.people.com.cn/n1/2022/0627/c1001-32457643.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: news_cn_2025_08_compute_conf
+  type: press
+  title: 聚算力势能 赋百行“智”变——2025中国算力大会全景扫描
+  authors: 新华网
+  venue: news.cn, 2025-08-25
+  year: 2025
+  doi: ''
+  url: http://www.news.cn/info/20250825/4b42fad22aa240c4b60879005d8e5ce8/c.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: digitalchina_2025_12_compute
+  type: press
+  title: 算力基础设施高质量发展迈大步
+  authors: 数字中国建设峰会 portal (权威发布)
+  venue: digitalchina.gov.cn, 2025-12-24
+  year: 2025
+  doi: ''
+  url: https://www.digitalchina.gov.cn/2025/xwzx/qwfb/202512/t20251224_5261132.htm
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: ncsti_2025_09_compute
+  type: press
+  title: 算力热度持续攀升，如何“扩容”？
+  authors: 国家科技传播中心 (ncsti.gov.cn), news repost
+  venue: ncsti.gov.cn, 2025-09-05
+  year: 2025
+  doi: ''
+  url: https://www.ncsti.gov.cn/kjdt/kjrd/rgzn_kjrd/202509/t20250905_218202.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: fba_2025_12_press
+  type: press
+  title: Fiber Broadband Association Reports Historic Fiber Deployment Highs
+  authors: Fiber Broadband Association
+  venue: FBA press release, 2025-12-16
+  year: 2025
+  doi: ''
+  url: https://fiberbroadband.org/2025/12/16/fiber-broadband-association-reports-historic-fiber-deployment-highs/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02

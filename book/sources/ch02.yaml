@@ -1,0 +1,493 @@
+sources:
+- id: kikuchi_jlt_2016
+  type: journal
+  title: Fundamentals of Coherent Optical Fiber Communications
+  authors: Kazuro Kikuchi
+  venue: Journal of Lightwave Technology 34(1), 157-179
+  year: 2016
+  doi: 10.1109/JLT.2015.2463719
+  url: https://www.tacs.eu/Competences/OC/fundemantals-of-coherent-optical-fiber=communications-jlt-34-1-157.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ip_oe_2008
+  type: journal
+  title: Coherent detection in optical fiber systems
+  authors: Ezra Ip, Alan Pak Tao Lau, Daniel J. F. Barros, Joseph M. Kahn
+  venue: Optics Express 16(2), 753-791
+  year: 2008
+  doi: 10.1364/OE.16.000753
+  url: https://ee.stanford.edu/~jmk/pubs/coherent.review.optics.express.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: savory_oe_2008
+  type: journal
+  title: Digital filters for coherent optical receivers
+  authors: Seb J. Savory
+  venue: Optics Express 16(2), 804-817
+  year: 2008
+  doi: 10.1364/OE.16.000804
+  url: https://doi.org/10.1364/oe.16.000804
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: savory_jstqe_2010
+  type: journal
+  title: 'Digital Coherent Optical Receivers: Algorithms and Subsystems'
+  authors: Seb J. Savory
+  venue: IEEE Journal of Selected Topics in Quantum Electronics 16(5), 1164-1179
+  year: 2010
+  doi: 10.1109/JSTQE.2010.2044751
+  url: https://ieeexplore.ieee.org/document/5464309
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: pfau_jlt_2009
+  type: journal
+  title: Hardware-Efficient Coherent Digital Receiver Concept With Feedforward Carrier Recovery for M-QAM Constellations
+  authors: Timo Pfau, Sebastian Hoffmann, Reinhold Noé
+  venue: Journal of Lightwave Technology 27(8), 989-999
+  year: 2009
+  doi: 10.1109/JLT.2008.2010511
+  url: https://ei.uni-paderborn.de/fileadmin/elektrotechnik/fg/ont/docs/auto/publication/HardwareEfficient_Coherent_Digital_Receiver_Concept_With_Feedforward_Carrier_Recovery_for_MQAM_Constellations.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: gardner_tcom_1986
+  type: journal
+  title: A BPSK/QPSK Timing-Error Detector for Sampled Receivers
+  authors: Floyd M. Gardner
+  venue: IEEE Transactions on Communications 34(5), 423-429
+  year: 1986
+  doi: 10.1109/TCOM.1986.1096561
+  url: https://doi.org/10.1109/tcom.1986.1096561
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: crivelli_tcasi_2014
+  type: journal
+  title: Architecture of a Single-Chip 50 Gb/s DP-QPSK/BPSK Transceiver With Electronic Dispersion Compensation for Coherent Optical Channels
+  authors: Diego E. Crivelli, Mario R. Hueda, Hugo S. Carrer, Martin del Barco, Ramiro Lopez, Pablo Gianni, et al.
+  venue: IEEE Transactions on Circuits and Systems I 61(4)
+  year: 2014
+  doi: 10.1109/TCSI.2013.2283673
+  url: https://doi.org/10.1109/tcsi.2013.2283673
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ishihara_access_2021
+  type: journal
+  title: The Evolution of Faster-Than-Nyquist Signaling
+  authors: Takumi Ishihara, Shinya Sugiura, Lajos Hanzo
+  venue: IEEE Access 9
+  year: 2021
+  doi: 10.1109/ACCESS.2021.3088997
+  url: https://doi.org/10.1109/access.2021.3088997
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bosco_ofc_2012
+  type: conference
+  title: 'Nyquist-WDM: optimization of pulse and filter shape (OFC 2012 tutorial slides, paper OM3H.1)'
+  authors: Gabriella Bosco (Politecnico di Torino, Optical Communications Group)
+  venue: Optical Fiber Communication Conference 2012, OM3H.1 (presentation slides)
+  year: 2012
+  doi: ''
+  url: https://optcom.polito.it/sites/default/files/2012_ofc_OM3H1_bosco.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: oif_400zr_01_2020
+  type: standard
+  title: Implementation Agreement 400ZR (OIF-400ZR-01.0)
+  authors: Optical Internetworking Forum
+  venue: OIF Implementation Agreement OIF-400ZR-01.0
+  year: 2020
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-400ZR-01.0_reduced2.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: oif_400zr_03_2024
+  type: standard
+  title: Implementation Agreement 400ZR (OIF-400ZR-03.0)
+  authors: Optical Internetworking Forum
+  venue: OIF Implementation Agreement OIF-400ZR-03.0
+  year: 2024
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/OIF-400ZR-03.0.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: openroadm_msa6_wport_2023
+  type: standard
+  title: Open ROADM MSA 6.0 W-Port Digital Specification (400G-800G), Rev 1.0.1
+  authors: Open ROADM MSA
+  venue: Open ROADM MSA specification
+  year: 2023
+  doi: ''
+  url: https://raw.githubusercontent.com/wiki/OpenROADM/OpenROADM_MSA_Public/files/OpenROADM_MSA%206.0%20W-Port%20Digital%20Specification_Rev_1.0.1.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: openzrplus_whitepaper_2020
+  type: whitepaper
+  title: OpenZR+ - 400G Digital Coherent Optics for Multi-Haul
+  authors: OpenZR+ MSA
+  venue: OpenZR+ MSA white paper (29 Sept 2020)
+  year: 2020
+  doi: ''
+  url: https://openzrplus.org/wp-content/uploads/2024/04/openzrplus_whitepaper_-_sept_29_2020_final.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cablelabs_p2pco_phy2_2019
+  type: standard
+  title: Point-to-Point Coherent Optics Physical Layer 2.0 Specification
+  authors: CableLabs
+  venue: CableLabs P2PCO PHYv2.0 specification
+  year: 2019
+  doi: ''
+  url: https://account.cablelabs.com/server/alfresco/5d2a9fd0-6f54-4dc3-9be5-d15b881c39a4
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: smith_jlt_2012
+  type: journal
+  title: 'Staircase Codes: FEC for 100 Gb/s OTN'
+  authors: Benjamin P. Smith, Arash Farhood, Andrew Hunt, Frank R. Kschischang, John Lodge
+  venue: Journal of Lightwave Technology 30(1), 110-117
+  year: 2012
+  doi: 10.1109/JLT.2011.2175479
+  url: https://arxiv.org/pdf/1201.4106
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: anslow_ieee8023cd_2016
+  type: report
+  title: PMD BER requirements (IEEE P802.3cd ad hoc contribution anslow_102616_3cd_adhoc)
+  authors: Pete Anslow
+  venue: IEEE P802.3cd Task Force ad hoc, 26 Oct 2016
+  year: 2016
+  doi: ''
+  url: https://www.ieee802.org/3/cd/public/adhoc/archive/anslow_102616_3cd_adhoc.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ieee8023bs_d1p0_comments_2015
+  type: report
+  title: IEEE P802.3bs D1.0 400 Gb/s Ethernet 1st Task Force review comments
+  authors: IEEE P802.3bs Task Force
+  venue: IEEE P802.3bs comment database (D1.0)
+  year: 2015
+  doi: ''
+  url: https://www.ieee802.org/3/bs/comments/P802d3bs_D1p0_comments_final_Cl.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ran_ieee8023dj_2023
+  type: report
+  title: Module output BER requirements with inner FEC (ran_3dj_logic_01_230629)
+  authors: Adee Ran
+  venue: IEEE P802.3dj Task Force, logic ad hoc, 29 June 2023
+  year: 2023
+  doi: ''
+  url: https://www.ieee802.org/3/dj/public/adhoc/optics/0623_OPTX/ran_3dj_logic_01_230629.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cole_ieee8023bs_2014
+  type: report
+  title: Ideal SNR Penalties (cole_3bs_01_0914)
+  authors: Chris Cole
+  venue: IEEE P802.3bs Task Force, September 2014 interim
+  year: 2014
+  doi: ''
+  url: https://grouper.ieee.org/groups/802/3/bs/public/14_09/cole_3bs_01_0914.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: pang_jlt_2020
+  type: journal
+  title: 200 Gbps/Lane IM/DD Technologies for Short Reach Optical Interconnects
+  authors: Xiaodan Pang, Oskars Ozolins, Rui Lin, Lu Zhang, Aleksejs Udalcovs, Lei Xue, et al.
+  venue: Journal of Lightwave Technology 38(2)
+  year: 2020
+  doi: 10.1109/JLT.2019.2962322
+  url: https://doi.org/10.1109/jlt.2019.2962322
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: lu_islped_2018
+  type: conference
+  title: An Energy-Efficient High-Swing PAM-4 Voltage-Mode Transmitter
+  authors: Lejie Lu, Yong Wang, Hui Wu
+  venue: Proc. ACM/IEEE International Symposium on Low Power Electronics and Design (ISLPED) 2018
+  year: 2018
+  doi: 10.1145/3218603.3218651
+  url: https://doi.org/10.1145/3218603.3218651
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: lambda_msa_100g_fr_lr_rev2
+  type: standard
+  title: 100G-FR and 100G-LR Technical Specifications Rev 2.0
+  authors: 100G Lambda MSA
+  venue: 100G Lambda MSA specification
+  year: 2018
+  doi: ''
+  url: https://100glambda.com/specifications/send/2-specifications/9-100g-fr-and-100g-lr-technical-specs-rev2-0
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: king_ieee8023bs_2016
+  type: report
+  title: TDEC for PAM4 ('TDECQ') (king_3bs_01a_0516)
+  authors: Jonathan King
+  venue: IEEE P802.3bs Task Force, May 2016 interim
+  year: 2016
+  doi: ''
+  url: https://www.ieee802.org/3/bs/public/16_05/king_3bs_01a_0516.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: cole_ieee8023cu_2019
+  type: report
+  title: 802.3cu D1.1 PMD Spec Comments (cole_3cu_adhoc_121119)
+  authors: Chris Cole
+  venue: IEEE P802.3cu Task Force ad hoc, 11 Dec 2019
+  year: 2019
+  doi: ''
+  url: https://www.ieee802.org/3/cu/public/cu_adhoc/cu_archive/cole_3cu_adhoc_121119.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: dawe_ieee8023cd_2018
+  type: report
+  title: Completing the family of TDECQ-related specifications (dawe_3cd_01b_0718)
+  authors: Piers Dawe
+  venue: IEEE P802.3cd Task Force, July 2018 plenary
+  year: 2018
+  doi: ''
+  url: https://www.ieee802.org/3/cd/public/July18/dawe_3cd_01b_0718.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: welch_ieee8023bs_2016
+  type: report
+  title: '400G-PSM4: A Proposal for the 500m Objective using 100 Gbps per Lane Signaling (welch_3bs_01a_0516)'
+  authors: Brian Welch
+  venue: IEEE P802.3bs Task Force, May 2016 interim
+  year: 2016
+  doi: ''
+  url: https://www.ieee802.org/3/bs/public/16_05/welch_3bs_01a_0516.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: bhatt_ieee8023bs_2016
+  type: report
+  title: Estimating MPI Penalty (bhatt_3bs_01a_0116)
+  authors: Vipul Bhatt, Jonathan King, Ben Smith
+  venue: IEEE P802.3bs Task Force, January 2016 interim
+  year: 2016
+  doi: ''
+  url: https://www.ieee802.org/3/bs/public/16_01/bhatt_3bs_01a_0116.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: mazzini_ieee8023bs_2015
+  type: report
+  title: '802.3bs: Proposal for PAM4 PMDs link budgets harmonization (mazzini_01a_1215_smf)'
+  authors: Marco Mazzini
+  venue: IEEE P802.3bs SMF ad hoc, 15 Dec 2015
+  year: 2015
+  doi: ''
+  url: https://www.ieee802.org/3/bs/public/adhoc/smf/15_12_15/mazzini_01a_1215_smf.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: zhang_ieee8023df_2022
+  type: report
+  title: Modeling MPI penalty and its implication for next generation PAMx systems (zhang_3df_01_220524)
+  authors: Huijian Zhang
+  venue: IEEE P802.3df Task Force, 24 May 2022
+  year: 2022
+  doi: ''
+  url: https://www.ieee802.org/3/df/public/22_05/22_0524/zhang_3df_01_220524.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: fei_jlt_2025
+  type: journal
+  title: 'Nonuniform Error Distributions Induced by Multipath Interference in Optical IM/DD PAM4 Systems: Implications for FEC Performance'
+  authors: Leyan Fei, Yicheng Xu, Yu Guo, Weisheng Hu, Qunbi Zhuge
+  venue: Journal of Lightwave Technology (early access 2025)
+  year: 2025
+  doi: 10.1109/JLT.2025.3618678
+  url: https://doi.org/10.1109/jlt.2025.3618678
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bocherer_tcom_2015
+  type: journal
+  title: Bandwidth Efficient and Rate-Matched Low-Density Parity-Check Coded Modulation
+  authors: Georg Böcherer, Fabian Steiner, Patrick Schulte
+  venue: IEEE Transactions on Communications 63(12), 4651-4665
+  year: 2015
+  doi: 10.1109/TCOMM.2015.2494016
+  url: https://ar5iv.labs.arxiv.org/html/1502.02733
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: cho_jlt_2019
+  type: journal
+  title: Probabilistic Constellation Shaping for Optical Fiber Communications
+  authors: Junho Cho, Peter J. Winzer
+  venue: Journal of Lightwave Technology 37(6), 1590-1607
+  year: 2019
+  doi: 10.1109/JLT.2019.2898855
+  url: https://doi.org/10.1109/jlt.2019.2898855
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: alvarado_jlt_2018
+  type: journal
+  title: 'Achievable Information Rates for Fiber Optics: Applications and Computations'
+  authors: Alex Alvarado, Tobias Fehenberger, Bin Chen, Frans M. J. Willems
+  venue: Journal of Lightwave Technology 36(2), 424-439
+  year: 2018
+  doi: 10.1109/JLT.2017.2786351
+  url: https://ar5iv.labs.arxiv.org/html/1709.10393
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: zhang_thesis_utoronto_2017
+  type: thesis
+  title: Analysis and Design of Staircase Codes for High Bit-Rate Fibre-Optic Communication
+  authors: Lei Zhang
+  venue: PhD thesis, University of Toronto
+  year: 2017
+  doi: ''
+  url: http://hdl.handle.net/1807/79549
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: nagarajan_jlt_2024
+  type: journal
+  title: Recent Advances in Low-Power Digital Signal Processing Technologies for Data Center Applications
+  authors: Radhakrishnan Nagarajan, Agustin Martino, Damián A. Morero, Lenin Patra, Christian Lutkemeyer, Mario A. Castrillón
+  venue: Journal of Lightwave Technology (2024)
+  year: 2024
+  doi: 10.1109/JLT.2024.3399032
+  url: https://doi.org/10.1109/jlt.2024.3399032
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: yin_ieee8023df_2022
+  type: report
+  title: FEC Requirements for 800GbE/1.6TbE Optics (yin_3df_01b_2207)
+  authors: Shuang Yin, Xiang Zhou, Cedric Lam
+  venue: IEEE P802.3df Task Force, July 2022 plenary
+  year: 2022
+  doi: ''
+  url: https://www.ieee802.org/3/df/public/22_07/yin_3df_01b_2207.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: puttegowda_ofc_2022
+  type: conference
+  title: Development of Low-power Coherent ASIC
+  authors: Kiran Puttegowda, Christian Lutkemeyer, Elvio Serrano, Damián A. Morero, Kishore Kota
+  venue: Optical Fiber Communication Conference 2022, paper M1D.3
+  year: 2022
+  doi: 10.1364/OFC.2022.M1D.3
+  url: https://doi.org/10.1364/ofc.2022.m1d.3
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: fougstedt_ofc_2020
+  type: conference
+  title: ASIC Design Exploration for DSP and FEC of 400-Gbit/s Coherent Data-Center Interconnect Receivers
+  authors: Christoffer Fougstedt, Oscar Gustafsson, Cheolyong Bae, Erik Börjeson, Per Larsson-Edefors
+  venue: Optical Fiber Communication Conference 2020, paper Th2A.38
+  year: 2020
+  doi: 10.1364/OFC.2020.Th2A.38
+  url: https://doi.org/10.1364/ofc.2020.th2a.38
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: pillai_jlt_2014
+  type: journal
+  title: End-to-End Energy Modeling and Analysis of Long-Haul Coherent Transmission Systems
+  authors: Bipin Sankar Gopalakrishna Pillai, Behnam Sedighi, Kyle Guan, N. Prasanth Anthapadmanabhan, William Shieh, Kerry J. Hinton, Rodney S. Tucker
+  venue: Journal of Lightwave Technology 32(18), 3093-3111
+  year: 2014
+  doi: 10.1109/JLT.2014.2331086
+  url: https://doi.org/10.1109/jlt.2014.2331086
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: nguyen_isscc_2024
+  type: conference
+  title: A 200GS/s 8b 20fJ/c-s Receiver with >60GHz AFE Bandwidth for 800Gb/s Optical Coherent Communications in 5nm FinFET
+  authors: R. L. Nguyen, A. Mellati, A. Fernández, A. K. Iyer, A. Fan, et al.
+  venue: IEEE International Solid-State Circuits Conference (ISSCC) 2024, paper 18.4
+  year: 2024
+  doi: ''
+  url: https://synapsesocial.com/papers/68e78b83b6db6435876fd576
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ntt_id_dsp_sipho_2021
+  type: whitepaper
+  title: DSP and Silicon Photonics in Coherent Systems
+  authors: NTT Innovative Devices
+  venue: NTT Innovative Devices Tech Info article
+  year: 2021
+  doi: ''
+  url: https://www.ntt-innovative-devices.com/en/tech-info/article/2021/3/dsp-and-silicon-photonics-in-coherent-systems.html
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
