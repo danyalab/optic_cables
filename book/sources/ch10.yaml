@@ -1,0 +1,656 @@
+# Chapter 10 sources. Reused, defined elsewhere: yofc_ar_2025 (ch01_c); innolight_ar_2025, eoptolink_ar_2025, accelink_ar_2025, hgtech_ar_2025, nvidia_photonics_press_2025, nvidia_cpo_blog_2025 (ch04); bis_entity_list_2021_12_17 (ch07).
+sources:
+- id: bis_fr_2022_21658
+  type: standard
+  title: 'Implementation of Additional Export Controls: Certain Advanced Computing and Semiconductor Manufacturing Items;
+    Supercomputer and Semiconductor End Use; Entity List Modification'
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 87 FR 62186 (FR Doc. 2022-21658), interim final rule, 13 Oct 2022
+  year: 2022
+  doi: ''
+  url: https://www.federalregister.gov/documents/2022/10/13/2022-21658/implementation-of-additional-export-controls-certain-advanced-computing-and-semiconductor-manufacturing-items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2023_23055
+  type: standard
+  title: 'Implementation of Additional Export Controls: Certain Advanced Computing Items; Supercomputer and Semiconductor
+    End Use; Updates and Corrections'
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 88 FR 73458 (FR Doc. 2023-23055), interim final rule, 25 Oct 2023
+  year: 2023
+  doi: ''
+  url: https://www.federalregister.gov/documents/2023/10/25/2023-23055/implementation-of-additional-export-controls-certain-advanced-computing-items-supercomputer-and
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2024_28270
+  type: standard
+  title: Foreign-Produced Direct Product Rule Additions, and Refinements to Controls for Advanced Computing and Semiconductor
+    Manufacturing Items
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 89 FR 96790 (FR Doc. 2024-28270), interim final rule, 5 Dec 2024
+  year: 2024
+  doi: ''
+  url: https://www.federalregister.gov/documents/2024/12/05/2024-28270/foreign-produced-direct-product-rule-additions-and-refinements-to-controls-for-advanced-computing
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2024_28267
+  type: standard
+  title: Additions and Modifications to the Entity List; Removals From the Validated End-User (VEU) Program
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 89 FR 96830 (FR Doc. 2024-28267), final rule, 5 Dec 2024
+  year: 2024
+  doi: ''
+  url: https://www.federalregister.gov/documents/2024/12/05/2024-28267/additions-and-modifications-to-the-entity-list-removals-from-the-validated-end-user-veu-program
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2025_00636
+  type: standard
+  title: Framework for Artificial Intelligence Diffusion
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 90 FR 4544 (FR Doc. 2025-00636), interim final rule, 15 Jan 2025
+  year: 2025
+  doi: ''
+  url: https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2025_02655
+  type: standard
+  title: Correction to ECCN 3A090 license requirements following the January 16, 2025 due-diligence IFR (full text restates
+    ECCN 3A090)
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register FR Doc. 2025-02655, published 14 Feb 2025, effective 11 Feb 2025 (FR page citation not captured)
+  year: 2025
+  doi: ''
+  url: https://www.federalregister.gov/documents/full_text/html/2025/02/14/2025-02655.html
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2025_19001
+  type: standard
+  title: Expansion of End-User Controls To Cover Affiliates of Certain Listed Entities
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 90 FR 47201 (FR Doc. 2025-19001), interim final rule, 30 Sep 2025
+  year: 2025
+  doi: ''
+  url: https://www.federalregister.gov/documents/2025/09/30/2025-19001/expansion-of-end-user-controls-to-cover-affiliates-of-certain-listed-entities
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2025_19846
+  type: standard
+  title: One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 90 FR 50857 (FR Doc. 2025-19846), final rule; stay, 12 Nov 2025
+  year: 2025
+  doi: ''
+  url: https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_fr_2020_10868
+  type: standard
+  title: Addition of Certain Entities to the Entity List; Revision of Existing Entries on the Entity List
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: Federal Register 85 FR 34503 (FR Doc. 2020-10868), final rule, 5 Jun 2020
+  year: 2020
+  doi: ''
+  url: https://www.federalregister.gov/documents/2020/06/05/2020-10868/addition-of-certain-entities-to-the-entity-list-revision-of-existing-entries-on-the-entity-list
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_press_2025_05_13_aidiffusion
+  type: press
+  title: Department of Commerce Announces Rescission of Biden-Era Artificial Intelligence Diffusion Rule, Strengthens Chip-Related
+    Export Controls
+  authors: U.S. Department of Commerce, Bureau of Industry and Security
+  venue: BIS press release, 13 May 2025
+  year: 2025
+  doi: ''
+  url: https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: dod_fr_2026_11571
+  type: standard
+  title: Notice of Availability of Designation of Chinese Military Companies (Section 1260H list)
+  authors: U.S. Department of Defense, Office of the Secretary
+  venue: Federal Register 91 FR 35189-35194 (FR Doc. 2026-11571), notice, 10 Jun 2026
+  year: 2026
+  doi: ''
+  url: https://www.federalregister.gov/documents/full_text/text/2026/06/10/2026-11571.txt
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: us_s5548_2026
+  type: standard
+  title: S. 5548, Securing National Security Systems from Chinese Optical Transceivers Act of 2026 (Introduced in Senate)
+  authors: U.S. Senate (Sen. McCormick, with Sens. Gallego, Cornyn, Fetterman)
+  venue: 119th Congress, 2d Session, introduced 24 Sep 2026
+  year: 2026
+  doi: ''
+  url: https://www.govinfo.gov/content/pkg/BILLS-119s5548is/xhtml/BILLS-119s5548is.html
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ustr_fr_2024_21217
+  type: standard
+  title: 'Notice of Modification: China''s Acts, Policies and Practices Related to Technology Transfer, Intellectual Property
+    and Innovation'
+  authors: Office of the United States Trade Representative
+  venue: Federal Register 89 FR 76581 (FR Doc. 2024-21217), notice, 18 Sep 2024
+  year: 2024
+  doi: ''
+  url: https://www.federalregister.gov/documents/2024/09/18/2024-21217/notice-of-modification-chinas-acts-policies-and-practices-related-to-technology-transfer
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: cbp_ny_n336394
+  type: standard
+  title: 'NY N336394: The tariff classification of an optical transceiver from China'
+  authors: U.S. Customs and Border Protection, National Commodity Specialist Division
+  venue: CBP New York ruling letter (read via CustomsMobile mirror of CBP CROSS)
+  year: 2023
+  doi: ''
+  url: https://www.customsmobile.com/rulings/docview?doc_id=NY+N336394
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: doj_ftc_merger_guidelines_2023
+  type: report
+  title: Merger Guidelines
+  authors: U.S. Department of Justice and Federal Trade Commission
+  venue: DOJ/FTC Merger Guidelines, 18 Dec 2023
+  year: 2023
+  doi: ''
+  url: https://www.justice.gov/d9/2023-12/2023%20Merger%20Guidelines.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: mofcom_gac_2023_23
+  type: standard
+  title: 商务部 海关总署公告2023年第23号 关于对镓、锗相关物项实施出口管制的公告
+  authors: 商务部、海关总署 (MOFCOM and GAC)
+  venue: MOFCOM/GAC Announcement 2023 No. 23, 3 Jul 2023
+  year: 2023
+  doi: ''
+  url: https://aqygzj.mofcom.gov.cn/qdml/art/2023/art_c2ae3d2061e14e97ba608de1ed565f78.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: mofcom_2024_46
+  type: standard
+  title: 商务部公告2024年第46号 关于加强相关两用物项对美国出口管制的公告
+  authors: 商务部 (MOFCOM)
+  venue: MOFCOM Announcement 2024 No. 46, 3 Dec 2024
+  year: 2024
+  doi: ''
+  url: https://www.mofcom.gov.cn/zfxxgk/gkml/art/2024/art_99f5d51bbe6a412ca309d5818c4dee52.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: mofcom_gac_2025_10
+  type: standard
+  title: 商务部 海关总署公告2025年第10号 公布对钨、碲、铋、钼、铟相关物项实施出口管制的决定
+  authors: 商务部、海关总署 (MOFCOM and GAC)
+  venue: MOFCOM/GAC Announcement 2025 No. 10, 4 Feb 2025
+  year: 2025
+  doi: ''
+  url: https://aqygzj.mofcom.gov.cn/qdml/art/2025/art_a7ac614d3a784deb8f88700cdadd471c.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: mofcom_gac_2025_18
+  type: standard
+  title: 商务部 海关总署公告2025年第18号 公布对部分中重稀土相关物项实施出口管制的决定
+  authors: 商务部、海关总署 (MOFCOM and GAC)
+  venue: MOFCOM/GAC Announcement 2025 No. 18, 4 Apr 2025
+  year: 2025
+  doi: ''
+  url: https://www.mofcom.gov.cn/zcfb/blgg/art/2025/art_a6c9fc3558e443d69950a6d814af8c21.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: mofcom_gac_2025_70
+  type: standard
+  title: 商务部、海关总署公告2025年第70号 公布暂停实施商务部、海关总署公告2025年第55号、56号、57号、58号及商务部公告2025年第61号、62号的决定
+  authors: 商务部、海关总署 (MOFCOM and GAC)
+  venue: MOFCOM/GAC Announcement 2025 No. 70, 7 Nov 2025
+  year: 2025
+  doi: ''
+  url: https://www.mofcom.gov.cn/zcfb/blgg/art/2025/art_2ec8b9f2c6404a56b311abc82d87f486.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: mofcom_2025_72
+  type: standard
+  title: 商务部公告2025年第72号 公布调整实施商务部公告2024年第46号的决定
+  authors: 商务部 (MOFCOM)
+  venue: MOFCOM Announcement 2025 No. 72, 9 Nov 2025
+  year: 2025
+  doi: ''
+  url: https://www.mofcom.gov.cn/zcfb/blgg/art/2025/art_501de456a4c5444190006ca21cd20437.html
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: coherent_10k_fy2025
+  type: report
+  title: Coherent Corp. Annual Report on Form 10-K for the fiscal year ended June 30, 2025
+  authors: Coherent Corp.
+  venue: SEC Form 10-K, accession 0000820318-25-000014, filed 15 Aug 2025
+  year: 2025
+  doi: ''
+  url: https://www.coherent.com/content/dam/coherent/site/en/documents/investors/annual-filings/2025/coherent-annual-report-2025.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: lumentum_10k_fy2025
+  type: report
+  title: Lumentum Holdings Inc. Annual Report on Form 10-K for the fiscal year ended June 28, 2025
+  authors: Lumentum Holdings Inc.
+  venue: SEC Form 10-K, accession 0001628280-25-040830, filed 19 Aug 2025
+  year: 2025
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1633978/000162828025040830/lite-20250628.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: lumentum_ars_fy2025
+  type: report
+  title: Lumentum Holdings Inc. 2025 Annual Report to Stockholders (letter to stockholders)
+  authors: Lumentum Holdings Inc.
+  venue: SEC ARS filing, 2025
+  year: 2025
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1633978/000130817925000617/lite014752-ars.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: lumentum_results_fy2025q4
+  type: report
+  title: Lumentum Announces Fourth Quarter and Full Fiscal Year 2025 Results
+  authors: Lumentum Holdings Inc.
+  venue: Earnings release furnished on Form 8-K, 12 Aug 2025
+  year: 2025
+  doi: ''
+  url: https://investor.lumentum.com/financial-news-releases/news-details/2025/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2025-Results/default.aspx
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: marvell_10k_fy2026
+  type: report
+  title: Marvell Technology, Inc. Annual Report on Form 10-K for the fiscal year ended January 31, 2026
+  authors: Marvell Technology, Inc.
+  venue: SEC Form 10-K, accession 0001835632-26-000011, filed 11 Mar 2026
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: marvell_ars_fy2026
+  type: report
+  title: Marvell Technology, Inc. Fiscal 2026 Annual Report to Shareholders (CEO letter)
+  authors: Marvell Technology, Inc.
+  venue: SEC ARS filing, 2026
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1835632/000110465926060265/tm261486d6_ars.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: broadcom_10k_fy2025
+  type: report
+  title: Broadcom Inc. Annual Report on Form 10-K for the fiscal year ended November 2, 2025
+  authors: Broadcom Inc.
+  venue: SEC Form 10-K, accession 0001730168-25-000121, filed 18 Dec 2025
+  year: 2025
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: maxlinear_ars_2025
+  type: report
+  title: MaxLinear, Inc. 2025 Annual Report to Shareholders (CEO letter) with Form 10-K
+  authors: MaxLinear, Inc.
+  venue: SEC ARS filing, 2026
+  year: 2026
+  doi: ''
+  url: https://investors.maxlinear.com/annual-reports/content/0001104659-26-039215/0001104659-26-039215.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: axt_10k_2025
+  type: report
+  title: AXT, Inc. Annual Report on Form 10-K for the fiscal year ended December 31, 2025
+  authors: AXT, Inc.
+  venue: SEC Form 10-K, accession 0001437749-26-008612
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1051627/000143774926008612/axti20251231_10k.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ciena_10k_fy2025
+  type: report
+  title: Ciena Corporation Annual Report on Form 10-K for the fiscal year ended November 1, 2025 (Revenue note, XBRL R10)
+  authors: Ciena Corporation
+  venue: SEC Form 10-K, accession 0001628280-25-056698
+  year: 2025
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/936395/000162828025056698/R10.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nokia_ar_2025
+  type: report
+  title: Nokia in 2025 (Annual Report; also filed as Form 20-F nok-20251231)
+  authors: Nokia Corporation
+  venue: Nokia Annual Report 2025, published 6 Mar 2026
+  year: 2026
+  doi: ''
+  url: https://www.nokia.com/system/files/2026-03/nokia-annual-report-2025.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: nokia_q4_2025_report
+  type: report
+  title: Nokia Corporation Financial Report for Q4 and full year 2025
+  authors: Nokia Corporation
+  venue: Nokia interim report, 29 Jan 2026
+  year: 2026
+  doi: ''
+  url: https://www.nokia.com/system/files/2026-01/nokia_results_2025_q4.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: huawei_ar_2025
+  type: report
+  title: Huawei Investment & Holding Co., Ltd. 2025 Annual Report
+  authors: Huawei Investment & Holding Co., Ltd.
+  venue: Huawei Annual Report 2025, published Mar 2026
+  year: 2026
+  doi: ''
+  url: https://www-file.huawei.com/dam/asset/view/dec782afd1544f558c32fc76e3141334.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: zte_ar_2025
+  type: report
+  title: 中兴通讯股份有限公司二〇二五年年度报告
+  authors: 中兴通讯股份有限公司 (ZTE Corporation)
+  venue: ZTE 2025 Annual Report (SZSE 000063), published 7 Mar 2026
+  year: 2026
+  doi: ''
+  url: http://static.cninfo.com.cn/finalpage/2026-03-07/1225000301.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: fiberhome_ar_2025
+  type: report
+  title: 烽火通信科技股份有限公司2025年年度报告
+  authors: 烽火通信科技股份有限公司 (FiberHome Telecommunication Technologies)
+  venue: FiberHome 2025 Annual Report (SSE 600498), published 25 Apr 2026
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-04-25/1225178004.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: accelink_placement_2025
+  type: report
+  title: 武汉光迅科技股份有限公司2025年度向特定对象发行股票募集说明书
+  authors: 武汉光迅科技股份有限公司 (Accelink Technologies)
+  venue: Accelink private placement offering document, SZSE, 25 Dec 2025
+  year: 2025
+  doi: ''
+  url: https://disc.static.szse.cn/disc/disk03/finalpage/2025-12-25/bf83a1ab-b15e-4c15-8fc2-2fcd4597e651.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: yuanjie_ar_2025
+  type: report
+  title: 陕西源杰半导体科技股份有限公司2025年年度报告
+  authors: 陕西源杰半导体科技股份有限公司 (Yuanjie Semiconductor)
+  venue: Yuanjie 2025 Annual Report (SSE STAR 688498), published 25 Mar 2026
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-03-25/1225028582.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: yuanjie_hk_prospectus_2026
+  type: report
+  title: 陕西源杰半导体科技股份有限公司 H股上市文件（業務章節，里程碑表）
+  authors: 陕西源杰半导体科技股份有限公司 (Yuanjie Semiconductor)
+  venue: HKEX listing document, Mar 2026
+  year: 2026
+  doi: ''
+  url: https://www1.hkexnews.hk/app/sehk/2026/108326/a131068/sehk26032500760_c.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: hgtech_ir_2026_03_26
+  type: report
+  title: 华工科技：2026年3月26日投资者关系活动记录表
+  authors: 华工科技产业股份有限公司 (HGTECH)
+  venue: Investor relations activity record filed with SZSE, 26 Mar 2026 (read via Sina mirror)
+  year: 2026
+  doi: ''
+  url: http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12023955&stockid=000988
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: youxun_prospectus_2025
+  type: report
+  title: 厦门优迅芯片股份有限公司首次公开发行股票并在科创板上市招股说明书
+  authors: 厦门优迅芯片股份有限公司 (Xiamen UX, 优迅股份)
+  venue: STAR Market IPO prospectus, SSE, Oct-Dec 2025
+  year: 2025
+  doi: ''
+  url: http://static.sse.com.cn/stock/disclosure/announcement/c/202510/002088_20251015_93GU.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: youxun_inquiry_reply_2025
+  type: report
+  title: 厦门优迅芯片股份有限公司 首次公开发行股票并在科创板上市申请文件的第二轮审核问询函的回复
+  authors: 厦门优迅芯片股份有限公司 and sponsor
+  venue: SSE review inquiry reply, 9 Sep 2025
+  year: 2025
+  doi: ''
+  url: http://static.sse.com.cn/stock/disclosure/announcement/c/202509/002088_20250909_QAVQ.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: mitsubishi_semis_briefing_2025
+  type: report
+  title: Semiconductor & Device Business (business strategy briefing)
+  authors: Mitsubishi Electric Corporation
+  venue: IR presentation, 28 May 2025
+  year: 2025
+  doi: ''
+  url: https://www.mitsubishielectric.com/en/pr/2025/pdf/0528-5.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: mitsubishi_web_semiconductor
+  type: report
+  title: 'Semiconductor & Device (social challenges page: 200Gbps EML chip)'
+  authors: Mitsubishi Electric Corporation
+  venue: Corporate web page, accessed 2026-11-02
+  year: 2026
+  doi: ''
+  url: https://www.mitsubishielectric.com/en/sustainability/social-challenges/semiconductor/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: sumitomo_qa_fy2025_interim
+  type: report
+  title: Summary of Q&A from FY2025 Interim Financial Result Briefing
+  authors: Sumitomo Electric Industries, Ltd.
+  venue: IR document, Dec 2025
+  year: 2025
+  doi: ''
+  url: https://sumitomoelectric.com/sites/default/files/2025-12/download_documents/QA_Summary.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: broadcom_press_2025_10_th6_davisson
+  type: press
+  title: Broadcom Announces Tomahawk 6 - Davisson, the Industry's First 102.4-Tbps Ethernet Switch with Co-Packaged Optics
+  authors: Broadcom Inc.
+  venue: Press release, 8 Oct 2025
+  year: 2025
+  doi: ''
+  url: https://www.broadcom.com/company/news/product-releases/63626
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: delloro_2026_02_optical_transport
+  type: press
+  title: Optical Transport Market Grew to $16 Billion in 2025, According to Dell'Oro Group
+  authors: Dell'Oro Group
+  venue: Market research press release, 18 Feb 2026
+  year: 2026
+  doi: ''
+  url: https://www.delloro.com/news/optical-transport-market-grew-to-16-billion-in-2025/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: icc_2025_01_eic_market
+  type: press
+  title: 光通信电芯片市场快速增长预计2029年全球将达97亿美元
+  authors: ICC讯石咨询 (ICC Infocomm)
+  venue: Market research news release, 10 Jan 2025
+  year: 2025
+  doi: ''
+  url: http://www.iccsz.com/4g/news.Asp?ID=0035d890e594406c9509b21dd416ea9e
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: kaiyuan_2025_09_yuanjie
+  type: report
+  title: AI 光提速时代的国产光芯片领军企业 (源杰科技首次覆盖报告)
+  authors: 开源证券研究所 (Kaiyuan Securities)
+  venue: Broker research report, 18 Sep 2025 (cites 中商产业研究院)
+  year: 2025
+  doi: ''
+  url: https://pdf.dfcfw.com/pdf/H3_AP202509191746531098_1.pdf
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: eetchina_2026_07_optical_chips
+  type: press
+  title: 国产高功率光芯片实现超越，高端25G突破还远？
+  authors: 飙叔科技洞察 (EET-China columnist)
+  venue: EET-China blog column, 6 Jul 2026
+  year: 2026
+  doi: ''
+  url: https://www.eet-china.com/mp/a507786.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: stcn_2025_07_sse_salon
+  type: press
+  title: 聚焦光芯片产业国产化进程中的关键问题 上交所举办科创板新质生产力行业沙龙
+  authors: 证券时报 (STCN)
+  venue: News report, 7 Jul 2025
+  year: 2025
+  doi: ''
+  url: https://www.stcn.com/article/detail/2419945.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: cls_2025_07_chengkewei
+  type: press
+  title: 前博通首席科学家创业 橙科微王珲：400G/800G DSP芯片计划年内量产
+  authors: 科创板日报 (郭辉)
+  venue: News report, 9 Jul 2025
+  year: 2025
+  doi: ''
+  url: https://api3.cls.cn/share/article/2079814?app=stib&os=ios&sv=815
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
+- id: sangyo_times_2025_09_optical
+  type: press
+  title: AI投資が光デバイスの増産を呼ぶ
+  authors: 電子デバイス産業新聞
+  venue: Trade press, 19 Sep 2025
+  year: 2025
+  doi: ''
+  url: https://www.sangyo-times.jp/article.aspx?ID=13878
+  access: open
+  language: ja
+  tier: C
+  retrieved: 2026-11-02
+- id: cetc_2025_02_photodetector
+  type: press
+  title: 产业基础研究院自主创新光芯片年供货超千万只
+  authors: 中国电子科技集团有限公司 (CETC) news center
+  venue: Corporate news item, 17 Feb 2025
+  year: 2025
+  doi: ''
+  url: https://zlzx.cetc.com.cn/zgdk/1592960/1592965/1824469/index.html
+  access: open
+  language: zh
+  tier: C
+  retrieved: 2026-11-02
