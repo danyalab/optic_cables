@@ -6,7 +6,7 @@ terms:
   - {en: "attenuation", zh: "衰减", section: "1.1"}
   - {en: "Rayleigh scattering", zh: "瑞利散射", section: "1.1"}
   - {en: "pure-silica-core fiber", zh: "纯二氧化硅纤芯光纤", section: "1.1"}
-  - {en: "ultra-low-loss fiber", zh: "超低损耗光纤", section: "1.1"}
+  - {en: "ultra-low-loss fiber", zh: "超低损耗光纤", zh_alias: "超低衰减光纤", section: "1.1"}
   - {en: "large effective area fiber", zh: "大有效面积光纤", section: "1.1"}
   - {en: "bend-insensitive fiber", zh: "弯曲不敏感光纤", section: "1.1"}
   - {en: "chromatic dispersion", zh: "色散", section: "1.2"}
@@ -22,7 +22,7 @@ terms:
   - {en: "four-wave mixing (FWM)", zh: "四波混频", section: "1.4"}
   - {en: "erbium-doped fiber amplifier (EDFA)", zh: "掺铒光纤放大器", section: "1.5"}
   - {en: "amplified spontaneous emission (ASE)", zh: "放大自发辐射", section: "1.5"}
-  - {en: "noise figure", zh: "噪声系数", section: "1.5"}
+  - {en: "noise figure", zh: "噪声系数", zh_alias: "噪声指数", section: "1.5"}
   - {en: "optical signal-to-noise ratio (OSNR)", zh: "光信噪比", section: "1.5"}
   - {en: "nonlinear interference (NLI)", zh: "非线性干扰", section: "1.6"}
   - {en: "generalized SNR (GSNR)", zh: "广义信噪比", section: "1.6"}
@@ -32,3 +32,7 @@ terms:
   - {en: "space-division multiplexing (SDM)", zh: "空分复用", section: "1.7"}
   - {en: "multicore fiber", zh: "多芯光纤", section: "1.7"}
   - {en: "few-mode fiber", zh: "少模光纤", section: "1.7"}
+  - {en: "antiresonant hollow-core fiber", zh: "反谐振空芯光纤", section: "1.7"}
+  - {en: "double nested antiresonant nodeless fiber (DNANF)", zh: "双层嵌套反谐振无节点光纤", section: "1.7"}
+  - {en: "weakly coupled multicore fiber", zh: "弱耦合多芯光纤", section: "1.7"}
+  - {en: "spontaneous emission factor", zh: "自发辐射因子", section: "1.5"}

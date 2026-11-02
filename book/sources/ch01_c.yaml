@@ -1,0 +1,654 @@
+# Sources for ch01 sections 1.5 (amplification, ASE) and 1.7 (frontier fibers).
+# Retrieval agent ch01_c. All retrieved 2026-11-02 via Exa search/fetch.
+sources:
+  # ---------- constants and standards ----------
+  - id: codata_2022_nist_h
+    type: report
+    title: "CODATA Value: Planck constant"
+    authors: "P. J. Mohr, E. Tiesinga, D. B. Newell, B. N. Taylor (NIST)"
+    venue: "NIST Reference on Constants, Units, and Uncertainty (2022 CODATA recommended values)"
+    year: 2024
+    doi: ""
+    url: "https://physics.nist.gov/cgi-bin/cuu/Value?h"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: codata_2022_nist_c
+    type: report
+    title: "CODATA Value: speed of light in vacuum"
+    authors: "P. J. Mohr, E. Tiesinga, D. B. Newell, B. N. Taylor (NIST)"
+    venue: "NIST Reference on Constants, Units, and Uncertainty (2022 CODATA recommended values)"
+    year: 2024
+    doi: ""
+    url: "https://physics.nist.gov/cuu/Constants/Value/c.html"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: itu_t_gsup39_2006
+    type: standard
+    title: "Optical system design and engineering considerations"
+    authors: "ITU-T Study Group 15"
+    venue: "ITU-T G-series Supplement 39 (02/2006)"
+    year: 2006
+    doi: ""
+    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.Sup39-200602-S%21%21PDF-E&lang=e&type=items"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: itu_t_gsup39_2025_10
+    type: standard
+    title: "Optical system design and engineering considerations"
+    authors: "ITU-T Study Group 15"
+    venue: "ITU-T G-series Supplement 39 (10/2025), in force"
+    year: 2025
+    doi: ""
+    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.Sup39-202510-I%21%21PDF-E&lang=e&type=items"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: itu_t_g697_2009
+    type: standard
+    title: "Optical monitoring for dense wavelength division multiplexing systems"
+    authors: "ITU-T Study Group 15"
+    venue: "ITU-T Recommendation G.697 (11/2009)"
+    year: 2009
+    doi: ""
+    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.697-200911-S%21%21PDF-E&lang=s&type=items"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: iec_tr_61282_12_2016
+    type: standard
+    title: "Fibre optic communication system design guides - Part 12: In-band optical signal-to-noise ratio (OSNR)"
+    authors: "IEC SC86C"
+    venue: "IEC TR 61282-12:2016 (preview pages via iTeh Standards)"
+    year: 2016
+    doi: ""
+    url: "https://cdn.standards.iteh.ai/samples/21263/72953f903a6b48088deed9d6389083d2/IEC-TR-61282-12-2016.pdf"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: itu_t_gsup87_2025
+    type: standard
+    title: "Framework for standardization of space division multiplexing optical fibres and cables"
+    authors: "ITU-T Study Group 15"
+    venue: "ITU-T G-series Supplement 87 (03/2025)"
+    year: 2025
+    doi: ""
+    url: "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.Sup87-202503-I%21%21PDF-E&lang=e&type=items"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: itu_t_sg15_execsum_2025_10
+    type: report
+    title: "Executive Summary, SG15, October 2025"
+    authors: "ITU-T Study Group 15"
+    venue: "ITU-T SG15 meeting executive summary (Geneva, October 2025)"
+    year: 2025
+    doi: ""
+    url: "https://www.itu.int/en/ITU-T/studygroups/2025-2028/15/Pages/exec_sum_2025-10.aspx"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: itu_t_q5_15_workprog_2025
+    type: report
+    title: "ITU-T Work Programme 2025-2028, SG15 Q5/15: Characteristics and test methods of optical fibres and cables"
+    authors: "ITU-T Study Group 15"
+    venue: "ITU-T work programme database"
+    year: 2025
+    doi: ""
+    url: "https://www.itu.int/ITU-T/workprog/wp_search.aspx?Q=5%2F15"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+
+  # ---------- amplifier noise theory ----------
+  - id: caves_prd_1982
+    type: journal
+    title: "Quantum limits on noise in linear amplifiers"
+    authors: "C. M. Caves"
+    venue: "Physical Review D 26(8), 1817"
+    year: 1982
+    doi: "10.1103/PhysRevD.26.1817"
+    url: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.26.1817"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: baney_gallion_tucker_oft_2000
+    type: journal
+    title: "Theory and measurement techniques for the noise figure of optical amplifiers"
+    authors: "D. M. Baney, P. Gallion, R. S. Tucker"
+    venue: "Optical Fiber Technology 6, 122-154 (invited paper)"
+    year: 2000
+    doi: "10.1006/ofte.2000.0327"
+    url: "https://perso.telecom-paristech.fr/gallion/documents/free_downloads_pdf/PG_revues/PG_R66.pdf"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: carney_oe_2013
+    type: journal
+    title: "Method to improve the noise figure and saturation power in multi-contact semiconductor optical amplifiers: simulation and experiment"
+    authors: "K. Carney, R. Lennox, R. Maldonado-Basilio, S. Philippe, F. Surre, A. L. Bradley, P. Landais"
+    venue: "Optics Express 21(6), 7180 (accepted manuscript read via DCU repository)"
+    year: 2013
+    doi: "10.1364/OE.21.007180"
+    url: "https://doras.dcu.ie/17972/2/OpEx_submission.pdf"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: desurvire_scholarpedia_optamp
+    type: book
+    title: "Optical amplification"
+    authors: "E. Desurvire (curator)"
+    venue: "Scholarpedia (peer-reviewed open encyclopedia)"
+    year: 2011
+    doi: ""
+    url: "http://www.scholarpedia.org/article/Optical_amplification"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: essiambre_tkach_procieee_2012
+    type: journal
+    title: "Capacity trends and limits of optical communication networks"
+    authors: "R.-J. Essiambre, R. W. Tkach"
+    venue: "Proceedings of the IEEE 100(5), 1035-1055"
+    year: 2012
+    doi: "10.1109/JPROC.2012.2182970"
+    url: "https://icg.isy.liu.se/en/phd-courses/optical_networking/Capacity_Trends.pdf"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: sackinger_tia_book_2017
+    type: book
+    title: "Analysis and Design of Transimpedance Amplifiers for Optical Receivers (Appendix: Answers to the Problems)"
+    authors: "E. Säckinger"
+    venue: "Wiley, 2017"
+    year: 2017
+    doi: "10.1002/9781119264422.app9"
+    url: "https://doi.org/10.1002/9781119264422.app9"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+
+  # ---------- amplifier datasheets ----------
+  - id: accelink_edfa_mw_mc_ds
+    type: datasheet
+    title: "EDFA Multi-Channel Gain Module Series (EDFA-MW/MC)"
+    authors: "Accelink Technologies (光迅科技)"
+    venue: "Accelink product datasheet"
+    year: 2017
+    doi: ""
+    url: "https://www.accelink.com/upload/file/content/2017/04/58e7488e81588.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: accelink_edfa_vga_card_ds
+    type: datasheet
+    title: "EDFA-VGA Card product specification"
+    authors: "Accelink Technologies (光迅科技)"
+    venue: "Accelink product specification (distributor copy, High-Tech Japan)"
+    year: 2020
+    doi: ""
+    url: "https://www.high-tech.co.jp/common/sys/document/Accelink/product/24/24-9.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: accelink_edfa_lband_ds
+    type: datasheet
+    title: "EDFA L-band Gain Block/Module Series"
+    authors: "Accelink Technologies (光迅科技)"
+    venue: "Accelink product datasheet (distributor copy, Hikari Trading)"
+    year: 2015
+    doi: ""
+    url: "http://www.hikari-trading.com/accelink/file/10-lband.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: coherent_pols_60p040001_ds
+    type: datasheet
+    title: "Pluggable Optical Line System (Dual QSFP EDFA Module) 60P040001"
+    authors: "Coherent Corp."
+    venue: "Coherent product datasheet"
+    year: 2024
+    doi: ""
+    url: "https://www.coherent.com/resources/datasheet/networking/pluggable-optical-line-system-60p040001.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: viavi_medfa_c1_ds
+    type: datasheet
+    title: "MAP Series Erbium Doped Fiber Amplifier (mEDFA-C1) data sheet"
+    authors: "VIAVI Solutions"
+    venue: "VIAVI product datasheet"
+    year: 2023
+    doi: ""
+    url: "https://www.viavisolutions.com/en-us/literature/erbium-doped-fiber-amplifier-medfa-c1-data-sheet-en.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+  - id: corning_smf28ultra_pi1424
+    type: datasheet
+    title: "Corning SMF-28 Ultra Optical Fiber Product Information (PI1424, issued July 2025)"
+    authors: "Corning Incorporated"
+    venue: "Corning product information sheet"
+    year: 2025
+    doi: ""
+    url: "https://www.corning.com/media/worldwide/coc/documents/Fiber/product-information-sheets/PI-1424-AEN.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
+
+  # ---------- hollow-core fiber, peer reviewed ----------
+  - id: poletti_oe_2014
+    type: journal
+    title: "Nested antiresonant nodeless hollow core fiber"
+    authors: "F. Poletti"
+    venue: "Optics Express 22(20), 23807-23828"
+    year: 2014
+    doi: "10.1364/OE.22.023807"
+    url: "https://doi.org/10.1364/oe.22.023807"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: poletti_natphoton_2013
+    type: journal
+    title: "Towards high-capacity fibre-optic communications at the speed of light in vacuum"
+    authors: "F. Poletti, N. V. Wheeler, M. N. Petrovich, N. Baddela, E. Numkam Fokoua, J. R. Hayes, D. R. Gray, Z. Li, R. Slavík, D. J. Richardson"
+    venue: "Nature Photonics 7, 279-284"
+    year: 2013
+    doi: "10.1038/nphoton.2013.45"
+    url: "https://www.nature.com/articles/nphoton.2013.45"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: jasion_ofc_2020
+    type: conference
+    title: "Hollow Core NANF with 0.28 dB/km Attenuation in the C and L Bands"
+    authors: "G. T. Jasion, T. D. Bradley, K. Harrington, H. Sakr, Y. Chen, E. Numkam Fokoua, et al."
+    venue: "OFC 2020, postdeadline paper Th4B.4"
+    year: 2020
+    doi: "10.1364/OFC.2020.Th4B.4"
+    url: "https://eprints.soton.ac.uk/440969/1/Jasion_OFC2020_NANF.pdf"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: jasion_ofc_2022
+    type: conference
+    title: "0.174 dB/km Hollow Core Double Nested Antiresonant Nodeless Fiber (DNANF)"
+    authors: "G. T. Jasion, H. Sakr, J. R. Hayes, S. R. Sandoghchi, L. Hooper, E. Numkam Fokoua, et al., F. Poletti"
+    venue: "OFC 2022, postdeadline paper Th4C.7"
+    year: 2022
+    doi: "10.1364/OFC.2022.Th4C.7"
+    url: "https://eprints.soton.ac.uk/470034/1/OFC2022_PD_Jasion_submitted.pdf"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: chen_ofc_2024_dnanf
+    type: conference
+    title: "Hollow Core DNANF Optical Fiber with <0.11 dB/km Loss"
+    authors: "Y. Chen, M. N. Petrovich, E. Numkam Fokoua, A. I. Adamu, M. R. A. Hassan, H. Sakr, et al., F. Poletti"
+    venue: "OFC 2024, postdeadline paper Th4A.8"
+    year: 2024
+    doi: "10.1364/OFC.2024.Th4A.8"
+    url: "https://opg.optica.org/abstract.cfm?URI=OFC-2024-Th4A.8"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: poggiolini_poletti_jlt_2022
+    type: journal
+    title: "Opportunities and Challenges for Long-Distance Transmission in Hollow-Core Fibres"
+    authors: "P. Poggiolini, F. Poletti"
+    venue: "Journal of Lightwave Technology 40(6), 1605-1616"
+    year: 2022
+    doi: "10.1109/JLT.2021.3140114"
+    url: "https://eprints.soton.ac.uk/456588/1/JLT_28652_2021_invited_Poggiolini_Poletti_FINAL.pdf"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: antesberger_arxiv_2023
+    type: journal
+    title: "Distribution of Telecom Entangled Photons through a 7.7 km Antiresonant Hollow-Core Fiber"
+    authors: "M. Antesberger, C. M. D. Richter, F. Poletti, R. Slavík, P. Petropoulos, H. Hübel, et al."
+    venue: "arXiv:2308.01337 (published venue not verified; see gaps)"
+    year: 2023
+    doi: "10.48550/arXiv.2308.01337"
+    url: "https://doi.org/10.48550/arxiv.2308.01337"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: gao_arxiv_2024_4tdnanf
+    type: journal
+    title: "Four-fold truncated double-nested anti-resonant hollow-core fibers with ultralow loss and ultrahigh mode purity"
+    authors: "S. Gao, H. Chen, Y. Sun, Y. Xiong, Z. Yang, R. Zhao, W. Ding, Y. Wang (Jinan University; Linfiber Technology)"
+    venue: "arXiv:2409.13332 (published venue not verified; see gaps)"
+    year: 2024
+    doi: "10.48550/arXiv.2409.13332"
+    url: "https://arxiv.org/abs/2409.13332"
+    access: open
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: gao_ecoc_2025_itt_dnanf
+    type: conference
+    title: "40 km, 0.052 dB/km and 83 km, 0.076 dB/km in Interstitial-Tube-Assisted Hollow-Core Fibre"
+    authors: "S. Gao, H. Chen, Y. Xiong, Y. Sun, W. Ding, Y. Wang (Linfiber Technology; Jinan University)"
+    venue: "ECOC 2025, Copenhagen"
+    year: 2025
+    doi: "10.1109/ECOC66593.2025.11263318"
+    url: "https://doi.org/10.1109/ecoc66593.2025.11263318"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: ding_ecoc_2025_yofc_sthcf
+    type: conference
+    title: "Support Tube Hollow-Core Fiber with 0.05 dB/km Attenuation"
+    authors: "Y. Ding, P. Li, G. Chen, J. Chu, A. Jia, L. Zhang, J. Luo (YOFC)"
+    venue: "ECOC 2025, Copenhagen, pp. 1185 ff."
+    year: 2025
+    doi: "10.1109/ECOC66593.2025.11263260"
+    url: "https://doi.org/10.1109/ecoc66593.2025.11263260"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: ge_jlt_2026_arhcf_field
+    type: journal
+    title: "Tb/s-Class Optical Transmission Over AR-HCFs: Field Deployment, Characterization, and Performance"
+    authors: "D. Ge, D. Zhang, X. Duan, D. Wang, M. Zuo, Y. Wang, J. Luo, H. Li, Z. Chen (China Mobile Research Institute; Linfiber/Jinan Univ.; YOFC; Peking Univ.)"
+    venue: "Journal of Lightwave Technology 44(3), 1094 (early access Nov 2025)"
+    year: 2026
+    doi: "10.1109/JLT.2025.3638159"
+    url: "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-44-3-1094"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+
+  # ---------- ultra-low-loss silica ----------
+  - id: sato_jlt_2025_ull
+    type: journal
+    title: "Silica-Core Single-Mode Fiber With Lowest Loss of 0.1397 dB/km"
+    authors: "S. Sato, Y. Kawaguchi, H. Sakuma, T. Haruna, T. Hasegawa (Sumitomo Electric)"
+    venue: "Journal of Lightwave Technology 43(4), 1837 (extended from OFC 2024 Tu2E.1)"
+    year: 2025
+    doi: "10.1109/JLT.2025.3527933"
+    url: "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-43-4-1837"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: tamura_jlt_2018_ull
+    type: journal
+    title: "The First 0.14-dB/km Loss Optical Fiber and its Impact on Submarine Transmission"
+    authors: "Y. Tamura, H. Sakuma, K. Morita, M. Suzuki, Y. Yamamoto, K. Shimada, et al., T. Hasegawa"
+    venue: "Journal of Lightwave Technology 36(1), 44-49"
+    year: 2018
+    doi: "10.1109/JLT.2018.2796647"
+    url: "https://doi.org/10.1109/jlt.2018.2796647"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+
+  # ---------- SDM ----------
+  - id: puttnam_optica_2021
+    type: journal
+    title: "Space-division multiplexing for optical fiber communications"
+    authors: "B. J. Puttnam, G. Rademacher, R. S. Luís"
+    venue: "Optica 8(9), 1186"
+    year: 2021
+    doi: "10.1364/OPTICA.427631"
+    url: "https://doi.org/10.1364/optica.427631"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: luis_ofc_2025_19core
+    type: conference
+    title: "1.02 Petabit/s Transmission Over 1,808.1 km in a 19-Core Randomly-Coupled Multicore Fiber"
+    authors: "R. S. Luís, M. v. d. Hout, S. Gaiani, B. Kalla, D. Orsuti, et al."
+    venue: "OFC 2025, postdeadline paper Th4A.1"
+    year: 2025
+    doi: ""
+    url: "https://opg.optica.org/abstract.cfm?uri=OFC-2025-Th4A.1"
+    access: abstract_only
+    language: en
+    tier: A
+    retrieved: 2026-11-02
+  - id: nict_press_2023_22p9pbps
+    type: press
+    title: "World Record Optical Fiber Transmission Capacity Doubles to 22.9 Petabits per Second"
+    authors: "NICT"
+    venue: "NICT press release (EN 2023-11-30; JA 2023-10-05)"
+    year: 2023
+    doi: ""
+    url: "https://www.nict.go.jp/en/press/2023/11/30-1.html"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+  - id: google_cloud_blog_2023_mcf
+    type: press
+    title: "Delivering Multi-Core Fiber Technology in Subsea Cables"
+    authors: "Google Cloud"
+    venue: "Google Cloud blog, 2023-09-12"
+    year: 2023
+    doi: ""
+    url: "https://cloud.google.com/blog/products/infrastructure/delivering-multi-core-fiber-technology-in-subsea-cables"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+  - id: sumitomo_press_2023_2c_zplus
+    type: press
+    title: "Sumitomo Electric Launches World's First Mass-produced Ultra-low Loss, Multi-core Fiber"
+    authors: "Sumitomo Electric Industries"
+    venue: "Sumitomo Electric press release, 2023-09-22"
+    year: 2023
+    doi: ""
+    url: "https://sumitomoelectric.com/press/2023/09/prs049"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+  - id: sumitomo_press_2026_petal
+    type: press
+    title: "Meta, NEC and Sumitomo Electric to Collaborate on Petal, the World's First Petabit Transoceanic Submarine Cable System"
+    authors: "Meta Platforms, NEC, Sumitomo Electric"
+    venue: "Sumitomo Electric press release, 2026-09-22"
+    year: 2026
+    doi: ""
+    url: "https://sumitomoelectric.com/press/2026/09/prs040"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+
+  # ---------- hollow-core deployment statements (tier B/C) ----------
+  - id: msft_azure_blog_2025_09_hcf
+    type: press
+    title: "Microsoft Azure scales Hollow Core Fiber (HCF) production through outsourced manufacturing"
+    authors: "Microsoft Azure Networking"
+    venue: "Microsoft Tech Community blog, 2025-09-23"
+    year: 2025
+    doi: ""
+    url: "https://techcommunity.microsoft.com/blog/azurenetworkingblog/microsoft-azure-scales-hollow-core-fiber-hcf-production-through-outsourced-manuf/4455953"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+  - id: networkworld_2025_09_msft_hcf
+    type: press
+    title: "Microsoft's hollow core fiber delivers the lowest signal loss ever"
+    authors: "G. Swain"
+    venue: "Network World, 2025-09-02"
+    year: 2025
+    doi: ""
+    url: "https://www.networkworld.com/article/4049666/microsofts-hollow-core-fiber-delivers-the-lowest-signal-loss-ever.html"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+  - id: dcd_2025_07_ofc_hcf_lord
+    type: press
+    title: "OFC 2025: Hollow core fiber hype stands out amid the AI overload"
+    authors: "P. Lipscombe"
+    venue: "DatacenterDynamics, 2025-07-29"
+    year: 2025
+    doi: ""
+    url: "https://www.datacenterdynamics.com/en/analysis/ofc-2025-hollow-core-fiber-hype-stands-out-amid-the-ai-overload/"
+    access: open
+    language: en
+    tier: C
+    retrieved: 2026-11-02
+  - id: c114_2025_06_weileping_hcf
+    type: press
+    title: "中国电信韦乐平：空芯光纤面临性价比与必要性挑战，很难成为大网普适光纤"
+    authors: "C114通信网"
+    venue: "C114通信网, 2025-06-05"
+    year: 2025
+    doi: ""
+    url: "https://www.c114.com.cn/news/117/a1290609.html"
+    access: open
+    language: zh
+    tier: C
+    retrieved: 2026-11-02
+  - id: c114_2025_05_yofc_newfiber_forum
+    type: press
+    title: "智算时代的战略基石：解读长飞的新型光纤布局"
+    authors: "C114通信网"
+    venue: "C114通信网, 2025-05-20"
+    year: 2025
+    doi: ""
+    url: "https://www.c114.com.cn/news/42/a1289618.html"
+    access: open
+    language: zh
+    tier: C
+    retrieved: 2026-11-02
+  - id: sasac_2024_06_cmcc_800g_hcf
+    type: press
+    title: "中国移动开通全球首个800G空芯光纤传输技术试验网"
+    authors: "国务院国有资产监督管理委员会 (SASAC)"
+    venue: "SASAC news, 2024-06"
+    year: 2024
+    doi: ""
+    url: "http://www.sasac.gov.cn/n2588025/n2588124/c30943455/content.html"
+    access: open
+    language: zh
+    tier: C
+    retrieved: 2026-11-02
+  - id: jnu_press_2024_sub0p1_hcf
+    type: press
+    title: "成功研制突破0.1dB/km的超低损空芯光纤"
+    authors: "暨南大学 光子技术研究院 微结构光纤课题组"
+    venue: "Jinan University group news page (2024)"
+    year: 2024
+    doi: ""
+    url: "https://ipt.jnu.edu.cn/mofgroup/2025/0329/c29003a832802/page.htm"
+    access: open
+    language: zh
+    tier: C
+    retrieved: 2026-11-02
+  - id: cww_2025_11_yofc_three_operators_hcf
+    type: press
+    title: "长飞助力三大运营商首条空芯光纤商用线路开通"
+    authors: "通信世界网 (CWW)"
+    venue: "通信世界网, 2025-11-05"
+    year: 2025
+    doi: ""
+    url: "https://www.cww.net.cn/article?id=605085"
+    access: open
+    language: zh
+    tier: C
+    retrieved: 2026-11-02
+  - id: hengtong_press_2026_03_g654d
+    type: press
+    title: "MWC重磅发布！亨通光电G.654.D超低损光纤获新突破"
+    authors: "亨通光电 (Hengtong Optic-Electric)"
+    venue: "Hengtong company news, 2026-03-05"
+    year: 2026
+    doi: ""
+    url: "https://www.htgd.com.cn/xq/article/5799.html"
+    access: open
+    language: zh
+    tier: C
+    retrieved: 2026-11-02
+
+  # ---------- YOFC corporate reports (tier B) ----------
+  - id: yofc_ar_2025
+    type: report
+    title: "长飞光纤光缆股份有限公司2025年年度报告"
+    authors: "长飞光纤光缆股份有限公司 (YOFC)"
+    venue: "YOFC 2025 Annual Report (SSE 601869), published 2026-03-27"
+    year: 2026
+    doi: ""
+    url: "https://static.cninfo.com.cn/finalpage/2026-03-28/1225048080.PDF"
+    access: open
+    language: zh
+    tier: B
+    retrieved: 2026-11-02
+  - id: yofc_ar_2024
+    type: report
+    title: "长飞光纤光缆股份有限公司2024年年度报告"
+    authors: "长飞光纤光缆股份有限公司 (YOFC)"
+    venue: "YOFC 2024 Annual Report (SSE 601869), published 2025-03-28"
+    year: 2025
+    doi: ""
+    url: "https://yofc-oss.oss-cn-beijing.aliyuncs.com/cn/upload/20250329/%E9%95%BF%E9%A3%9E%E5%85%89%E7%BA%A4%E5%85%89%E7%BC%86%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B82024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf"
+    access: open
+    language: zh
+    tier: B
+    retrieved: 2026-11-02
+  - id: yofc_ar_2023
+    type: report
+    title: "长飞光纤光缆股份有限公司2023年年度报告"
+    authors: "长飞光纤光缆股份有限公司 (YOFC)"
+    venue: "YOFC 2023 Annual Report (SSE 601869), published 2024-03-29"
+    year: 2024
+    doi: ""
+    url: "http://static.cninfo.com.cn/finalpage/2024-03-29/1219444663.PDF"
+    access: open
+    language: zh
+    tier: B
+    retrieved: 2026-11-02
+  - id: yofc_esg_2024_en
+    type: report
+    title: "YOFC 2024 Environmental, Social and Governance Report (English version)"
+    authors: "Yangtze Optical Fibre and Cable Joint Stock Limited Company"
+    venue: "YOFC ESG report 2024"
+    year: 2025
+    doi: ""
+    url: "https://yofc-oss.oss-cn-beijing.aliyuncs.com/en/upload/20250507/%E9%95%BF%E9%A3%9E%E5%85%89%E7%BA%A42024%E5%B9%B4ESG%E6%8A%A5%E5%91%8A%E8%8B%B1%E6%96%87%E7%89%88.pdf"
+    access: open
+    language: en
+    tier: B
+    retrieved: 2026-11-02
