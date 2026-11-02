@@ -1425,6 +1425,25 @@ records:
   notes: '(3π/8)^1/2 ≈ 1.085. NOTE 3: point sources of elevated birefringence give a non-central chi distribution with RMS
     larger than eq. (3-3) implies. zh: 微分群时延 (DGD); 麦克斯韦分布.'
   verified: match
+- id: ch01.pmd.dgd_maxwellian_foschini_poole
+  section: '1.3'
+  claim: For long fibers with random birefringence the DGD |Omega(L)| is approximately Maxwellian distributed
+  value: Maxwellian (magnitude of a vector with i.i.d. zero-mean Gaussian components)
+  unit: '1'
+  kind: fact
+  conditions:
+    note: large L (long-length regime of Poole's dynamical equation); first-order PMD; the pdf is printed only in the Fig.
+      3 inset, p. 1444
+  source_id: foschini_poole_jlt_1991
+  locator: Sect. V, p. 1445 (left column); Fig. 3 and caption, p. 1444
+  quote: Thus the length of the vector Ω(L) has, approximately, a Maxwellian density.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Original tier-A source of the Maxwellian DGD law. RMS DGD grows as the square root of length, Eq. (18) and Eq. (64)
+    t = sqrt(2L) Delta'/sigma. See ch01.eq.maxwellian_dgd_pdf.
+  verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.pmd.dgd_sqrt_length
   section: '1.3'
   claim: Mean DGD grows roughly as the square root of fibre length (random walk); typical mean DGD 1-50 ps for 500 km depending

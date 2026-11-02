@@ -373,6 +373,19 @@ sources:
   language: en
   tier: A
   retrieved: 2026-11-02
+- id: foschini_poole_jlt_1991
+  type: journal
+  title: Statistical Theory of Polarization Dispersion in Single Mode Fibers
+  authors: G. J. Foschini, C. D. Poole
+  venue: Journal of Lightwave Technology, vol. 9, no. 11, pp. 1439-1456
+  year: 1991
+  doi: 10.1109/50.97630
+  url: https://doi.org/10.1109/50.97630
+  access: paywalled
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Full text read from the published PDF supplied by the user (pp. 1439-1450 checked for the pdf).
 - id: reimer_msc_thesis_2007
   type: thesis
   title: Modeling and Simulation of Polarization Mode Dispersion and Polarization Dependent Loss

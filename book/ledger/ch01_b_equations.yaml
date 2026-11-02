@@ -20,16 +20,18 @@ equations:
   - c
   - A_{\mathrm{eff}}
   source_id: agrawal_josab_2011
-  locator: Eq. (8), Sect. 2.B
-  notes: omega_0 is the carrier angular frequency and F(x,y) the modal field distribution. Book symbol omega carries subscript
-    0 for the carrier. The glyph-level layout was garbled in extraction, but the text 'γ ... ω0n2 ... cAeff' and the Aeff
+  locator: Eq. (8), Sect. 2.B, p. A2
+  notes: 'omega_0 is the carrier angular frequency and F(x,y) the modal field distribution. Book symbol omega carries subscript
+    0 for the carrier. The glyph-level layout was garbled in extraction, but the text ''γ ... ω0n2 ... cAeff'' and the Aeff
     ratio of the |F|^2 and |F|^4 integrals are clear. Equivalent form gamma = 2 pi n2/(lambda Aeff). A_eff in µm² must be
-    converted to m² before use.
+    converted to m² before use. Re-read from the typeset PDF (user-supplied): printed as gamma = omega_0 n_2(omega_0)/(c A_eff),
+    A_eff = [iint |F(x,y,omega_0)|^2 dx dy]^2 / iint |F(x,y,omega_0)|^4 dx dy. Glyphs confirmed.'
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.nlse_general
   section: '1.4'
-  latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A - \sum_{m\ge 2}\frac{i^{m+1}\beta_m}{m!}\frac{\partial^m A}{\partial
-    t^m} = i\gamma\left(1 + \frac{i}{\omega_0}\frac{\partial}{\partial t}\right)\left(A(z,t)\int_0^\infty R(t^\prime)\,|A(z,t-t^\prime)|^2\,dt^\prime\right)
+  latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A = i\sum_{m=1}^{\infty}\frac{i^m\beta_m}{m!}\frac{\partial^m A}{\partial
+    t^m} + i\gamma\left(1 + \frac{i}{\omega_0}\frac{\partial}{\partial t}\right)\left(A(z,t)\int_0^\infty R(t^\prime)\,|A(z,t-t^\prime)|^2\,dt^\prime\right)
   symbols:
   - A
   - \alpha
@@ -37,13 +39,15 @@ equations:
   - \gamma
   - \omega
   source_id: agrawal_josab_2011
-  locator: Eq. (7), Sect. 2.B
-  notes: 'General scalar propagation equation with all dispersion orders, self-steepening and Raman response R(t) = (1 - f_R)
-    delta(t) + f_R h_R(t) (Eq. 9, f_R about 0.18). The extraction showed fragments ''i mβm m!'', ''α 2 A'', ''iγ 1 i ∂ ω0
-    ∂t'', ''R t0 |A z; t − t0|^2 dt0''. The sign arrangement is transcribed from Agrawal''s standard form and should be checked
-    against the PDF. alpha here is the POWER loss coefficient (book convention). Verifier: signs not glyph-verified; consistent
-    with Eqs. (10)-(11).'
+  locator: Eq. (7), Sect. 2.B, p. A2
+  notes: 'CORRECTED from the typeset PDF (user-supplied). As printed, the dispersion sum is on the RIGHT side, starts at m
+    = 1 and carries the prefactor i * i^m beta_m/m!; t is the laboratory-frame time (no retarded frame). The earlier transcription
+    started the sum at m = 2 (dropping the beta_1 group-delay term, inconsistent with Eq. 10) and moved it to the left side.
+    Term by term: m = 1 gives +beta_1 dA/dt, m = 2 gives +(i beta_2/2) d2A/dt2, m = 3 gives -(beta_3/6) d3A/dt3 when moved
+    to the left side, consistent with Eq. (10). R(t) = (1 - f_R) delta(t) + f_R h_R(t) (Eq. 9, f_R about 0.18). Field convention
+    exp[i(beta_0 z - omega_0 t)] (Eq. 6). alpha is the POWER loss coefficient (Eq. 2 uses I0 exp(-alpha z)), as in the book.'
   verified: partial_fixed
+  verified_by: user_supplied_pdf
 - id: ch01.eq.nlse_beta3
   section: '1.4'
   latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A + \frac{i\beta_2}{2}\frac{\partial^2 A}{\partial T^2} - \frac{\beta_3}{6}\frac{\partial^3
@@ -54,13 +58,15 @@ equations:
   - \beta
   - \gamma
   source_id: agrawal_josab_2011
-  locator: Specialization of Eq. (7) (m <= 3, R(t) = delta(t), no self-steepening, retarded time T = t - beta1 z); not printed
-    in this form in the source
-  notes: 'DERIVED, NOT PRINTED. The m = 2 term of Eq. (7) gives +(i beta2/2) d2A/dT2 and the m = 3 term gives -(beta3/6) d3A/dT3.
-    The book must either cite Eq. (7) and show this reduction, or find a source that prints this exact form (e.g. Agrawal,
-    Nonlinear Fiber Optics, Eq. 2.3.43 or similar; not verified). Listed in the gaps file. Verifier: derivation checked; present
-    in prose as a derivation, not a citation.'
-  verified: partial_fixed
+  locator: Dimensional form of Eq. (23), Sect. 4.A, p. A5 (printed there in soliton units), with R(t) = delta(t) and s = 0;
+    equivalently the m <= 3 truncation of Eq. (7) in the retarded frame T = t - beta_1 z
+  notes: 'Agrawal 2011 does print a third-order dispersion term, but only in normalized form: Eq. (23), i dU/dxi - (delta_2/2)
+    d2U/dtau2 + N^2|U|^2 U = i delta_3 d3U/dtau3 + iN^2(1 + is d/dtau)(U int R |U|^2), with delta_3 = beta_3/(6|beta_2| T_0)
+    (text after Eq. 23). Undoing the scaling U = A/sqrt(P_0), xi = z/L_D, tau = T/T_0 (Eq. 12) and setting R = delta, s =
+    0 and alpha = 0 gives exactly -(beta_3/6) d3A/dT3 on the left side of the form above; the loss term is added from Eq.
+    (10). The dimensional equation itself is not printed in the paper. Signs confirmed against the typeset PDF (user-supplied).'
+  verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.nlse_lab_frame
   section: '1.4'
   latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A + \beta_1\frac{\partial A}{\partial t} + \frac{i\beta_2}{2}\frac{\partial^2
@@ -71,10 +77,11 @@ equations:
   - \beta
   - \gamma
   source_id: agrawal_josab_2011
-  locator: Eq. (10), Sect. 2.C
+  locator: Eq. (10), Sect. 2.C, p. A3
   notes: 'Valid for pulses wider than about 5 ps: R(t) is replaced by a delta function and dispersion beyond second order
-    is dropped.'
+    is dropped. Signs and form confirmed against the typeset PDF (user-supplied).'
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.nlse_retarded
   section: '1.4'
   latex: i\frac{\partial A}{\partial z} + \frac{i\alpha}{2}A - \frac{\beta_2}{2}\frac{\partial^2 A}{\partial T^2} + \gamma
@@ -85,10 +92,12 @@ equations:
   - \beta
   - \gamma
   source_id: agrawal_josab_2011
-  locator: Eq. (11), Sect. 2.C
+  locator: Eq. (11), Sect. 2.C, p. A3
   notes: 'With alpha = 0 this is the NLS equation. Sign convention: field ~ exp[i(beta0 z - omega0 t)] (Eq. 6). Communications
-    papers using exp(+j omega t), e.g. the GN literature, flip the sign of the beta2 term.'
+    papers using exp(+j omega t), e.g. the GN literature, flip the sign of the beta2 term. Signs and form confirmed against
+    the typeset PDF (user-supplied).'
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.leff
   section: '1.4'
   latex: L_{\mathrm{eff}} = \frac{1 - e^{-\alpha L}}{\alpha}
@@ -97,11 +106,12 @@ equations:
   - \alpha
   - L
   source_id: agrawal_josab_2011
-  locator: Text after Eq. (16), Sect. 3.A
+  locator: Text after Eq. (16), Sect. 3.A, top of p. A4
   notes: Also printed in ITU-T G.Sup47 clause 7.2 (p. 5) with the same symbols, and the asymptote 1/alpha is stated there.
     Poggiolini et al. write L_eff = [1 - exp(-2 alpha Ls)]/(2 alpha) with alpha the FIELD coefficient, which is identical
-    once alpha_book = 2 alpha_Pogg.
+    once alpha_book = 2 alpha_Pogg. Signs and form confirmed against the typeset PDF (user-supplied).
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.lnl_and_N
   section: '1.4'
   latex: L_{\mathrm{NL}} = (\gamma P_0)^{-1}, \qquad N^2 = \frac{L_D}{L_{\mathrm{NL}}} = \frac{\gamma P_0 T_0^2}{|\beta_2|}
@@ -112,9 +122,11 @@ equations:
   - L_D
   - \beta
   source_id: agrawal_josab_2011
-  locator: Eq. (14) and text following it, Sect. 2.C
-  notes: P_0 is the peak power and T_0 the pulse width. Book uses P (per-channel power) and L_D = T_0^2/|beta_2|.
+  locator: Eq. (14) and the sentence after it, Sect. 2.C, p. A3
+  notes: P_0 is the peak power and T_0 the pulse width. Book uses P (per-channel power) and L_D = T_0^2/|beta_2|. Signs and
+    form confirmed against the typeset PDF (user-supplied).
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.spm_phase
   section: '1.4'
   latex: \phi(L,T) = \phi(0,T) + \gamma P(0,T) L_{\mathrm{eff}}, \qquad \phi_{\mathrm{NL}}(L,T) = f_p(T)\,\frac{L_{\mathrm{eff}}}{L_{\mathrm{NL}}}
@@ -124,10 +136,11 @@ equations:
   - L_{\mathrm{eff}}
   - L_{\mathrm{NL}}
   source_id: agrawal_josab_2011
-  locator: Eqs. (16) and (17), Sect. 3.A
+  locator: Eq. (16), p. A3, and Eq. (17), p. A4, Sect. 3.A
   notes: For CW light (f_p = 1) the peak SPM phase is phi_NL = gamma P L_eff. Valid when dispersion is negligible over L (beta2
-    = 0 in Eq. 11). P(0,T) = P_0 f_p(T).
+    = 0 in Eq. 11). P(0,T) = P_0 f_p(T). Signs and form confirmed against the typeset PDF (user-supplied).
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.fwm_efficiency_gn
   section: '1.4'
   latex: \rho(f_1,f_2,f) = \left|\frac{1 - e^{-\alpha L_s}\, e^{j\Delta\beta L_s}}{\alpha - j\Delta\beta}\right|^2 L_{\mathrm{eff}}^{-2},
@@ -166,20 +179,27 @@ equations:
   verified: partial_fixed
 - id: ch01.eq.manakov
   section: '1.4'
-  latex: i\frac{\partial \mathbf{u}}{\partial z} + \frac{\beta_2}{2}\frac{\partial^2 \mathbf{u}}{\partial t^2} \cdots + \frac{8}{9}\gamma\,|\mathbf{u}|^2\mathbf{u}
-    = (\text{linear PMD term}) + (\text{nonlinear PMD term})
+  latex: i\frac{\partial\bar{\boldsymbol{\Psi}}}{\partial z} - \frac{1}{2}\beta''\frac{\partial^2\bar{\boldsymbol{\Psi}}}{\partial
+    t^2} + \frac{8}{9}n_2k_0|\bar{\boldsymbol{\Psi}}|^2\bar{\boldsymbol{\Psi}} = -ib'\bar{\sigma}\frac{\partial\bar{\boldsymbol{\Psi}}}{\partial
+    t} - \frac{1}{3}n_2k_0\left(\hat{\mathbf{N}} - \langle\hat{\mathbf{N}}\rangle\right)
   symbols:
-  - \gamma
+  - \mathbf{A}
   - \beta
+  - \gamma
+  - \Delta\tau
   source_id: marcuse_jlt_1997
   locator: Eq. (12), Sect. II, p. 1737
-  notes: 'STRUCTURE ONLY; the equation glyphs could not be extracted. The source text confirms that the left side of (12)
-    holds the dispersion term and the Kerr term ''averaged over the Poincaré sphere with the well-known 8/9 factor'', and
-    that the right side holds the linear-PMD term and the new nonlinear-PMD term. Setting the right side to zero gives the
-    Manakov equation. The exact signs, loss term and form of the right side MUST be transcribed from the PDF (photonics.umbc.edu
-    PAJ108.pdf) before use. u is the two-component (Jones) field vector, |u|^2 = |u_x|^2 + |u_y|^2. Verifier: 8/9 factor and
-    structure confirmed; exact glyphs unverified.'
-  verified: partial_fixed
+  notes: 'Transcribed from the typeset PDF (user-supplied). Source symbols -> book: Psi-bar = T^-1 R^-1 A is the two-component
+    field in a frame that follows the rapid random birefringence (Eqs. 5, 9-11), |Psi-bar|^2 = |A|^2 (p. 1738), so it maps
+    to the Jones vector \mathbf{A}; beta'''' -> beta_2 (beta_1'''' ~ beta_2'''' = beta''''); n_2 k_0 -> gamma (k_0 = 2 pi/lambda;
+    the paper''s Kerr coefficient with the field in power units); t is retarded time, so it maps to the book''s T; b'' = (beta_1''
+    - beta_2'')/2 is half the DGD per unit length (Delta-tau/L = 2b'' for fixed axes); sigma-bar = T^dagger sigma_3 T (Eq.
+    16) is a rapidly varying Hermitian matrix; N-hat and <N-hat> are given in Eqs. (17)-(18). Sign convention: same as Agrawal
+    2011 Eq. (11) (i d/dz, -beta_2/2 d2/dT2, +gamma|A|^2 A). No loss term appears in Eq. (12); the book adds +i(alpha/2)A.
+    Setting the right side to zero gives the Manakov equation (text after Eq. 12); the first right-side term is linear PMD
+    and the second the nonlinear PMD. The 8/9 factor multiplies n_2 k_0 on the left side.'
+  verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.eq.gnrf
   section: '1.6'
   latex: G_{\mathrm{NLI}}(f) = \frac{16}{27}\gamma^2 L_{\mathrm{eff}}^2 \int_{-\infty}^{\infty}\!\int_{-\infty}^{\infty} G_{\mathrm{WDM}}(f_1)G_{\mathrm{WDM}}(f_2)G_{\mathrm{WDM}}(f_1+f_2-f)\,\rho(f_1,f_2,f)\,\chi(f_1,f_2,f)\,df_2\,df_1

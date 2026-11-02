@@ -260,14 +260,15 @@ records:
   conditions:
     note: general statement covering all silica fiber types
   source_id: agrawal_josab_2011
-  locator: Sect. 2.C, text after Eq. (11), p. A3
-  quote: The nonlinear param eter γ is positive and has a value in the range of 1–10 W −1=km for most silica fibers
+  locator: Sect. 2.C, right column after Eq. (11), p. A3
+  quote: The nonlinear parameter γ is positive and has a value in the range of 1–10 W−1/km for most silica fibers
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: 'Large-Aeff pure-silica fibers fall below this range: Poggiolini uses gamma = 0.8 for PSCF. The page number is inferred
-    from the A1-A10 pagination and should be verified.'
+  notes: 'Large-Aeff pure-silica fibers fall below this range: Poggiolini uses gamma = 0.8 for PSCF. Page A3 and the quote
+    (earlier copy had extraction artefacts) confirmed in the typeset PDF.'
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.kerr.gamma_smf_gn2012
   section: '1.4'
   claim: Nonlinear coefficient gamma of SMF used in the GN-model reference systems
@@ -418,12 +419,14 @@ records:
     alpha_dB_per_km: 0.2
     note: order of magnitude; ~1e7 in the visible at 10 dB/km
   source_id: agrawal_josab_2011
-  locator: Sect. 2.A, text after Eq. (3)
-  quote: In the wavelength region near 1:55 μm (α 0:2 dB=km), the enhancement factor can ap proach 10 9.
+  locator: Sect. 2.A, text after Eq. (3), p. A2
+  quote: In the wavelength region near 1.55 μm (α = 0.2 dB/km), the enhancement factor can approach 10^9.
   retrieved: 2026-11-02
   tier: A
   confidence: high
   verified: match
+  notes: Quote re-transcribed from the typeset PDF (10^9 printed as a superscript).
+  verified_by: user_supplied_pdf
 - id: ch01.fwm.g655_scope_1996
   section: '1.4'
   claim: 'G.655 rationale: nonzero dispersion suppresses FWM growth, which is deleterious in dense WDM'
@@ -580,6 +583,8 @@ records:
   tier: A
   confidence: high
   verified: match
+  notes: The factor multiplies n_2 k_0 |Psi|^2 Psi in Eq. (12); see ch01.eq.manakov.
+  verified_by: user_supplied_pdf
 - id: ch01.manakov.nonlinear_pmd_negligible
   section: '1.4'
   claim: Nonlinear PMD terms of the Manakov-PMD equation are negligible for practical communication parameters
@@ -593,9 +598,10 @@ records:
   quote: We also examined the nonlinear PMD terms and showed that they are negligible even under fairly extreme circumstances.
   retrieved: 2026-11-02
   tier: A
-  confidence: med
-  notes: The conclusion page number is inferred and not confirmed.
+  confidence: high
+  notes: Page 1745 confirmed in the typeset PDF.
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.manakov.length_scales
   section: '1.4'
   claim: Beat length vs birefringence-orientation correlation scale vs dispersive/nonlinear scale lengths in communication
@@ -606,12 +612,13 @@ records:
   conditions:
     note: In Sect. II the same paper gives 0.3-100 m for the variation scale (internal inconsistency).
   source_id: marcuse_jlt_1997
-  locator: Sect. I 'Introduction', p. 1735
+  locator: 'Sect. I ''Introduction'', p. 1735 (0.3-100 m variant: Sect. II, p. 1737)'
   quote: the beat lengths are typically 10–100 m, while the dispersive and nonlinear scale lengths are hundreds of kilometers
   retrieved: 2026-11-02
   tier: A
   confidence: high
   verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.gn.validity_envelope_2012
   section: '1.6'
   claim: GN-model reliability envelope suggested by accumulated evidence (2012)
@@ -1204,14 +1211,232 @@ records:
   unit: ''
   kind: fact
   conditions:
-    note: abstract only; headline SE numbers not read
+    note: full text read; numerical results are in ch01.cap.essiambre_* records
   source_id: essiambre_jlt_2010
-  locator: Abstract
+  locator: Abstract, p. 662; method in Sect. XI, pp. 683-687
   quote: We proceed to evaluate a capacity limit estimate for this fiber channel using ring constellations.
   retrieved: 2026-11-02
   tier: A
-  confidence: med
+  confidence: high
   verified: match
+  notes: Full text read from the published PDF (user-supplied).
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_se_500km
+  section: '1.6'
+  claim: 'Capacity-limit estimate: spectral efficiency per polarization achievable over 500 km of SSMF'
+  value: 9
+  unit: bit/s/Hz
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 500
+    note: per polarization; 'about 9'; Fig. 35 peak reads about 8.8 at SNR about 31 dB
+  source_id: essiambre_jlt_2010
+  locator: Sect. XIII 'Conclusion', p. 688; Fig. 35, p. 686
+  quote: we showed that a spectral efficiency per polarization of about 9 bits/s/Hz is achievable over 500 km of standard
+    single-mode fibers.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: A computed estimate under idealized assumptions (ideal Raman, back-propagation), not a measurement.
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_se_1000km
+  section: '1.6'
+  claim: Capacity-limit estimate (peak spectral efficiency per polarization) after 1000 km of SSMF
+  value: 7.9
+  unit: bit/s/Hz
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 1000
+    note: peak of the Fig. 35 curve, at SNR about 28 dB; per polarization
+  source_id: essiambre_jlt_2010
+  locator: Fig. 35 (1000 km curve), Sect. XI-D, p. 686
+  quote: Spectral efficiency after transmission for various distance. All links are without dispersion compensation.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Digitized from the figure (readout uncertainty about +/-0.2 bit/s/Hz); the text gives no number. Text: statistical
+    variation near the peak is about 0.2 bits/s/Hz (Sect. XI-A, p. 685).'
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_se_2000km
+  section: '1.6'
+  claim: Capacity-limit estimate (peak spectral efficiency per polarization) after 2000 km of SSMF
+  value: 7.0
+  unit: bit/s/Hz
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 2000
+    note: peak of the Fig. 35 curve, at SNR about 25 dB; per polarization
+  source_id: essiambre_jlt_2010
+  locator: Fig. 35 (2000 km curve), Sect. XI-D, p. 686
+  quote: Spectral efficiency after transmission for various distance. All links are without dispersion compensation.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Digitized from the figure (readout uncertainty about +/-0.2 bit/s/Hz); the text gives no number. Text: statistical
+    variation near the peak is about 0.2 bits/s/Hz (Sect. XI-A, p. 685).'
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_se_4000km
+  section: '1.6'
+  claim: Capacity-limit estimate (peak spectral efficiency per polarization) after 4000 km of SSMF
+  value: 6.2
+  unit: bit/s/Hz
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 4000
+    note: peak of the Fig. 35 curve, at SNR about 22 dB; per polarization
+  source_id: essiambre_jlt_2010
+  locator: Fig. 35 (4000 km curve), Sect. XI-D, p. 686
+  quote: Spectral efficiency after transmission for various distance. All links are without dispersion compensation.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Digitized from the figure (readout uncertainty about +/-0.2 bit/s/Hz); the text gives no number. Text: statistical
+    variation near the peak is about 0.2 bits/s/Hz (Sect. XI-A, p. 685).'
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_se_8000km
+  section: '1.6'
+  claim: Capacity-limit estimate (peak spectral efficiency per polarization) after 8000 km of SSMF
+  value: 5.5
+  unit: bit/s/Hz
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 8000
+    note: peak of the Fig. 35 curve, at SNR about 19.5 dB; per polarization
+  source_id: essiambre_jlt_2010
+  locator: Fig. 35 (8000 km curve), Sect. XI-D, p. 686
+  quote: Spectral efficiency after transmission for various distance. All links are without dispersion compensation.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Digitized from the figure (readout uncertainty about +/-0.2 bit/s/Hz); the text gives no number. Text: statistical
+    variation near the peak is about 0.2 bits/s/Hz (Sect. XI-A, p. 685).'
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_snr_peak_per_doubling
+  section: '1.6'
+  claim: The SNR at which the capacity-limit estimate peaks falls by 3 dB per doubling of distance
+  value: 3
+  unit: dB
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km:
+    - 500
+    - 8000
+    note: optimum launch power is therefore nearly independent of distance
+  source_id: essiambre_jlt_2010
+  locator: Sect. XI-D 'Effect of Distance', p. 686
+  quote: One observes that the SNR at which the capacity peaks decreases by 3 dB for every doubling in distance.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_record_gap
+  section: '1.6'
+  claim: Gap between recent record experiments and the 500 km capacity-limit estimate, as a ratio of spectral efficiency
+  value: 3
+  unit: '1'
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 500
+    note: record experiments over more than 300 km at 50 Gb/s and above, refs [200]-[204]; compared at equal SNR in Fig. 38
+  source_id: essiambre_jlt_2010
+  locator: Sect. XI-F, pp. 686-687; Fig. 38 caption, p. 687
+  quote: There is about a factor three between the capacity limit estimate and the record capacities.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The paper states the gap as a FACTOR in spectral efficiency, not in dB; no dB gap to the nonlinear limit is stated.
+    The text adds that record experiments mostly used fibers with Aeff above 80 um^2 and loss below 0.2 dB/km, i.e. better
+    than the fiber of the estimate.
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_limit_origin
+  section: '1.6'
+  claim: 'Origin of the capacity limitation in the WDM estimate: signal-signal interchannel nonlinearity'
+  value: signal-signal interchannel nonlinearities limit capacity; single-channel case peaks about 10 dB higher in SNR
+  unit: ''
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    distance_km: 2000
+    note: Fig. 36 scenarios (WDM/single channel, with/without ASE, filters)
+  source_id: essiambre_jlt_2010
+  locator: Sect. XI-E 'Origin of Capacity Limitations', p. 686; Fig. 36
+  quote: signal–signal interchannel nonlinearities are responsible for limiting capacity in the WDM systems considered
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same paragraph: single-channel transmission can operate at around 10 dB higher SNR than the WDM cases.'
+  verified: match
+  verified_by: user_supplied_pdf
+- id: ch01.cap.essiambre_optimum_power
+  section: '1.6'
+  claim: Optimum launch power per channel for the capacity-limit estimate
+  value:
+  - -6
+  - -3
+  unit: dBm
+  kind: fact
+  conditions:
+    fiber: SSMF, D = 17 ps/(nm km), alpha_dB = 0.2 dB/km, Aeff = 80 um^2, gamma = 1.27 /(W km) (Table I)
+    amplification: ideal distributed Raman, n_sp = 1, 100 km spans (Table II)
+    signal: 5 WDM channels, 100 GBd sinc pulses, 102 GHz rectangular ROADM filters every 100 km, single polarization, 16-ring
+      constellations (Tables III-IV)
+    dsp: intrachannel nonlinearity compensated by back-propagation; no in-line dispersion compensation
+    note: per channel; text states the optimum is virtually independent of distance
+  source_id: essiambre_jlt_2010
+  locator: Fig. 37 caption, p. 687
+  quote: The optimum power for our capacity estimate is between ∼−6 and ∼−3 dB · m.
+  notes: Caption prints 'dB · m', a typesetting slip for dBm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+  verified_by: user_supplied_pdf
 - id: ch01.cap.soft_fec_gap
   section: '1.6'
   claim: Coding-gain penalty of state-of-the-art soft FEC vs ideal maximum gain (2013-2014)

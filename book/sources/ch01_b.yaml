@@ -77,10 +77,12 @@ sources:
   year: 2010
   doi: 10.1109/JLT.2009.2039464
   url: https://ieeexplore.ieee.org/document/5420239
-  access: abstract_only
+  access: paywalled
   language: en
   tier: A
   retrieved: 2026-11-02
+  notes: Full text (pp. 662-701) read from the published PDF supplied by the user; publisher copy on IEEE Xplore. Previously
+    abstract-only.
 - id: agrawal_josab_2011
   type: journal
   title: 'Nonlinear fiber optics: its history and recent progress [Invited]'
@@ -93,9 +95,8 @@ sources:
   language: en
   tier: A
   retrieved: 2026-11-02
-  notes: Author-hosted copy of the published paper, read in full for sections 1 to 3. The PDF text extraction garbled the
-    equation glyphs, but the equation numbers and surrounding text were clear. The DOI was not shown in the PDF text and should
-    be checked against the journal.
+  notes: Author-hosted copy of the published paper. Equations (7)-(17) and (23) re-read glyph by glyph from the typeset PDF
+    supplied by the user. DOI not printed on the PDF pages; it should be checked against the journal.
 - id: itu_t_gsup47_2025
   type: standard
   title: General aspects of optical fibres and cables
@@ -227,8 +228,8 @@ sources:
   language: en
   tier: A
   retrieved: 2026-11-02
-  notes: Published PDF hosted by the UMBC group. The text of pp. 1735-1739 was read, but the equation glyphs were not extractable,
-    so the symbol-level form of Eq. (12) is not verified.
+  notes: Published PDF hosted by the UMBC group. Full text (pp. 1735-1746) including the glyphs of Eq. (12) read from the
+    typeset PDF supplied by the user.
 - id: sumitomo_wp_g654e_2024
   type: whitepaper
   title: ITU-T G.654.E Fiber, PureAdvance (TR-23076A) and Transition of Fiber Type for Terrestrial Long-Haul Networks, From

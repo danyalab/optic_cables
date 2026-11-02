@@ -170,15 +170,26 @@ equations:
   verified: match
 - id: ch01.eq.maxwellian_dgd_pdf
   section: '1.3'
-  latex: p(\Delta\tau) = \frac{32\,\Delta\tau^{2}}{\pi^{2}\langle\Delta\tau\rangle^{3}}\exp\!\left(-\frac{4\,\Delta\tau^{2}}{\pi\langle\Delta\tau\rangle^{2}}\right)
+  latex: p(\Delta\tau) = \sqrt{\frac{2}{\pi}}\,\frac{\Delta\tau^{2}}{\sigma^{3}}\,e^{-\Delta\tau^{2}/2\sigma^{2}} = \frac{32\,\Delta\tau^{2}}{\pi^{2}\langle\Delta\tau\rangle^{3}}\exp\!\left(-\frac{4\,\Delta\tau^{2}}{\pi\langle\Delta\tau\rangle^{2}}\right),
+    \qquad \langle\Delta\tau\rangle = 2\sigma\sqrt{2/\pi}
   symbols:
   - \Delta\tau
-  source_id: reimer_msc_thesis_2007
-  locator: Eq. (1.19), Section 1.1
-  notes: Source writes τ for DGD and τ_avg for mean DGD (map to Δτ, ⟨Δτ⟩). Thesis (tier B); tier-A original (Foschini & Poole,
-    JLT 1991) not retrieved, see gaps. Consistent with G.959.1 Table 8-3 tail probabilities (3.0 → 4.2e-5) and G.650.2 Eq.
-    (3-3).
+  source_id: foschini_poole_jlt_1991
+  locator: Fig. 3 (inset formula and caption), p. 1444; Sect. V text, pp. 1444-1445. No numbered equation for the pdf; RMS
+    DGD from Eqs. (18) and (64)
+  notes: 'Foschini & Poole 1991 (read in full, user-supplied PDF) state the result in words, ''the length of the vector Omega(L)
+    has, approximately, a Maxwellian density'' (Sect. V, p. 1445), derived from i.i.d. Gaussian components (Sect. V, p. 1444),
+    and print the pdf only as the Fig. 3 inset, sqrt(2/pi) x^2/alpha^3 exp(-x^2/(2 alpha^2)), where x is the DGD tau = |Omega|
+    (Eq. 12) and alpha is the per-component standard deviation (the Fig. 2 Gaussian; alpha = 13.1 ps there). F&P''s own sigma
+    (birefringence noise strength) is a DIFFERENT quantity from the book''s per-component sigma used above. Mean/RMS: F&P
+    give the mean-square DGD, E tau^2 = 2(Delta''/sigma^2)^2 (sigma^2 l + e^{-sigma^2 l} - 1) (Eq. 18), so for long fibers
+    the RMS grows as sqrt(L): t = sqrt(2L) Delta''/sigma (Eq. 64). They do not print the mean or the ratio RMS/mean = (3 pi/8)^1/2;
+    the mean form on the right (<Delta tau> = 2 sigma sqrt(2/pi)) is a reparametrisation, printed as Eq. (1.19), Sect. 1.1
+    of the Reimer M.Sc. thesis (reimer_msc_thesis_2007, tier B), and the ratio is ITU-T G.650.2 Eq. (3-3). Fig. 3 caption
+    values are consistent: alpha = 13.1 ps gives a mean of 20.9 ps (inset label E tau = 21 ps). Map tau -> Delta tau, E tau
+    -> <Delta tau>.'
   verified: partial_fixed
+  verified_by: user_supplied_pdf
 - id: ch01.eq.mean_dgd_sqrt_l
   section: '1.3'
   latex: \langle \Delta\tau \rangle = D_{\mathrm{PMD}}\sqrt{L}
