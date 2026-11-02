@@ -1,0 +1,31 @@
+# Chapter 9 equations. These are bookkeeping relations stated (in words or numbers) by the cited sources.
+# The sources do not print LaTeX; the latex below is our transcription, and each note says how the source states it.
+equations:
+  - id: ch09.eq.wdm_band_occupancy
+    section: "9.3"
+    latex: "B_{\\mathrm{opt}} = N_{\\mathrm{ch}}\\,\\Delta f_{\\mathrm{grid}}"
+    symbols: ["B_{\\mathrm{opt}}", "N_{\\mathrm{ch}}", "\\Delta f_{\\mathrm{grid}}"]
+    source_id: li_cww_2024_04_cmcc_400g
+    locator: "Section 中国产业力量主导400G骨干网技术路线, paragraph 2 (stated numerically: 80 waves x 50 GHz in C4T for 100G; 80 waves x 150 GHz needs 12 THz C6T+L6T for 400G QPSK)"
+    notes: "Stated in words, not as a formula. Also in zuo_ecoc_2023_2502km Introduction ('a grid of 150-GHz ... a total of 12-THz bandwidth over C+L band'). New symbols proposed (not in notation.yaml): B_opt total occupied optical bandwidth, N_ch channel count, Delta f_grid channel spacing. 80 x 150 GHz = 12 THz exactly; the CMCC article separately gives 12.5 THz as the outermost-channel frequency difference."
+  - id: ch09.eq.fiber_capacity
+    section: "9.3"
+    latex: "C_{\\mathrm{fiber}} = N_{\\mathrm{ch}}\\,R_{\\mathrm{ch}}"
+    symbols: ["C_{\\mathrm{fiber}}", "N_{\\mathrm{ch}}", "R_{\\mathrm{ch}}"]
+    source_id: cmcc_jiuzhou_wp
+    locator: "Section 3, C6T+L6T 光系统 (80 waves of 400G QPSK achieving 32 Tbit/s per fibre)"
+    notes: "Stated numerically: 80 x 400 Gb/s = 32 Tb/s. Same relation in zuo_ecoc_2023_2502km Conclusions ('total capacity of 32 Tb/s with 80x128-GBd DP-QPSK channels'). R_ch is net client rate per wavelength (400 Gb/s), not the line rate 2 log2(M) x 2 pol x R_s = 512 Gb/s at 128 GBd; the difference is FEC and framing overhead (not quantified in the sources read)."
+  - id: ch09.eq.latency_stretch_bound
+    section: "9.2"
+    latex: "\\tau_{\\mathrm{link}} \\le 1.5\\,\\tau_{\\mathrm{theory}}"
+    symbols: ["\\tau_{\\mathrm{link}}", "\\tau_{\\mathrm{theory}}"]
+    source_id: miit_2023_180_compute_plan
+    locator: "一(三) 主要目标, 运载力 ('不高于理论时延 1.5倍的直连网络传输')"
+    notes: "Policy constraint, stated in words. '理论时延' (theoretical latency) is not defined in the plan. A natural modelling choice is tau_theory = n_g L_geo / c with L_geo the great-circle distance between cluster pairs; the writer must state this as an ASSUMPTION. n_g and c are in notation.yaml; tau_link and tau_theory are proposed new symbols."
+  - id: ch09.eq.group_delay_per_km
+    section: "9.3"
+    latex: "\\tau = \\frac{n_g L}{c}"
+    symbols: ["n", "L", "c"]
+    source_id: cmri_2023_03_400g_trial_summary
+    locator: "Slide '现网试点测试结果' gives measured 27.415 ms over 5616 km; the relation itself is standard and not printed in the source"
+    notes: "The source supplies only the data pair (L = 5616 km, tau = 27.415 ms) from which calc can infer an effective group index (includes DCM-free coherent path, equipment and patch delays). The equation itself should be cited to a Chapter 1 tier-A source in prose; recorded here so the worked example has an anchor. Uses n_g (notation: n with subscript g)."

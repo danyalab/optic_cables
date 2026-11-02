@@ -1,0 +1,52 @@
+# Chapter 9 glossary proposals. Same format as glossary.yaml; zh_source names the ch09 source in which the zh term was read.
+terms:
+  - {en: "East Data, West Computing (national project)", zh: "东数西算", section: "9.2", zh_source: ndrc_2022_dsxs_qa}
+  - {en: "national computing hub node", zh: "国家枢纽节点", zh_alias: "国家算力枢纽节点", section: "9.2", zh_source: ndrc_2021_709_hub_plan}
+  - {en: "data center cluster", zh: "数据中心集群", section: "9.2", zh_source: ndrc_2021_709_hub_plan}
+  - {en: "integrated national computing network", zh: "全国一体化算力网", zh_alias: "全国一体化算力网络", section: "9.2", zh_source: ndrc_2023_1779_opinions}
+  - {en: "compute internet", zh: "算力互联网", section: "9.2", zh_source: miit_2025_119_interconnect_plan}
+  - {en: "compute interconnection", zh: "算力互联互通", section: "9.2", zh_source: miit_2025_119_interconnect_plan}
+  - {en: "intelligent computing capacity (AI compute)", zh: "智能算力", zh_alias: "智算", section: "9.2", zh_source: miit_2023_180_compute_plan}
+  - {en: "transport capacity (network carrying capacity for compute)", zh: "运载力", section: "9.2", zh_source: miit_2023_180_compute_plan}
+  - {en: "theoretical latency", zh: "理论时延", section: "9.2", zh_source: miit_2023_180_compute_plan}
+  - {en: "one-way end-to-end network latency", zh: "端到端单向网络时延", section: "9.2", zh_source: ndrc_2021_709_hub_plan}
+  - {en: "three-tier compute latency circle (1/5/20 ms)", zh: "三级算力时延圈", section: "9.2", zh_source: cmcc_ar_2025_a}
+  - {en: "rack utilisation rate", zh: "上架率", section: "9.2", zh_source: ndrc_2022_212_jjj_reply}
+  - {en: "power usage effectiveness (PUE)", zh: "电能利用效率", section: "9.2", zh_source: ndrc_2022_212_jjj_reply}
+  - {en: "standard rack (2.5 kW equivalent)", zh: "标准机架", section: "9.2", zh_source: cmcc_ar_2025_a}
+  - {en: "ChinaNet next carrying network (CN2)", zh: "中国电信下一代承载网", section: "9.1", zh_source: cisco_2004_cn2_press}
+  - {en: "basic telecom operator", zh: "基础电信企业", section: "9.1", zh_source: miit_txy_tjgb_2025}
+  - {en: "inter-provincial backbone network", zh: "省际骨干网", zh_alias: "省际骨干传送网", section: "9.1", zh_source: cmcc_ar_2025_a}
+  - {en: "co-construction and sharing (network sharing)", zh: "共建共享", section: "9.1", zh_source: nrta_2024_08_cmcc_cbn_cooperation}
+  - {en: "one province, one network (cable TV consolidation)", zh: "一省一网", section: "9.1", zh_source: nrta_2025_tjgb}
+  - {en: "all-optical network 2.0 (ROADM-based)", zh: "全光网2.0", section: "9.1", zh_source: lv_cww_2023_ct_400g}
+  - {en: "reconfigurable optical add-drop multiplexer (ROADM)", zh: "可重构光分插复用器", zh_alias: "光分插复用设备", section: "9.3", zh_source: lv_cww_2023_ct_400g}
+  - {en: "optical cross-connect (OXC)", zh: "光交叉连接", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "optical transport network (OTN)", zh: "光传送网", section: "9.3", zh_source: miit_2023_180_compute_plan}
+  - {en: "wavelength selective switch (WSS)", zh: "波长选择开关", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "quadrature phase-shift keying (QPSK)", zh: "正交相移键控", zh_alias: "四相相移键控", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "probabilistic constellation shaping (PCS)", zh: "概率星座整形", section: "9.3", zh_source: cmri_2023_03_400g_trial_summary}
+  - {en: "symbol rate (baud rate)", zh: "波特率", zh_alias: "符号率", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "stimulated Raman scattering (SRS)", zh: "受激拉曼散射", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "extended C+L band (C6T+L6T, 12 THz)", zh: "扩展C+L波段", section: "9.3", zh_source: cfol_2024_10_ct_cl_module}
+  - {en: "without electrical regeneration (unregenerated)", zh: "无电中继", section: "9.3", zh_source: c114_2024_05_ct_800g400g_mixed}
+  - {en: "optical amplifier site (OA site)", zh: "光放大站", zh_alias: "OA站", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "fiber maintenance margin", zh: "光纤维护余量", section: "9.3", zh_source: li_cww_2024_04_cmcc_400g}
+  - {en: "optical cable line length (route length)", zh: "光缆线路长度", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "long-haul optical cable", zh: "长途光缆线路", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "local-network trunk optical cable", zh: "本地网中继光缆线路", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "access-network optical cable", zh: "接入网光缆线路", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "sheath kilometre (cable route km)", zh: "皮长公里", section: "9.4", zh_source: cmcc_ar_2025_a}
+  - {en: "fiber to the home/office (FTTH/O)", zh: "光纤接入", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "fiber to the room (FTTR)", zh: "光纤到房间", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "10G passive optical network (10G-PON)", zh: "万兆无源光网络", section: "9.4", zh_source: miit_2021_dual_gigabit_plan}
+  - {en: "gigabit optical network", zh: "千兆光网", section: "9.4", zh_source: miit_txy_tjgb_2025}
+  - {en: "dual gigabit (gigabit fiber plus 5G)", zh: "双千兆", section: "9.4", zh_source: miit_2021_dual_gigabit_plan}
+  - {en: "gigabit city", zh: "千兆城市", section: "9.4", zh_source: miit_gigabit_city_criteria}
+  - {en: "10-gigabit optical network (pilot)", zh: "万兆光网", section: "9.4", zh_source: cnnic_57_2026}
+  - {en: "fifth generation fixed network (F5G)", zh: "第五代固定网络", section: "9.4", zh_source: ""}
+  - {en: "international Internet exit bandwidth", zh: "国际出口带宽", section: "9.5", zh_source: cnnic_52_2023}
+  - {en: "international communication service gateway", zh: "国际通信业务出入口局", section: "9.5", zh_source: gdca_2024_07_new_gateways}
+  - {en: "international channel gateway (cable landing / entry station)", zh: "国际通信信道出入口", section: "9.5", zh_source: miit_2002_gateway_rules}
+  - {en: "border-area international gateway", zh: "边境地区国际通信出入口", section: "9.5", zh_source: miit_2002_gateway_rules}
+  - {en: "cross-border terrestrial cable", zh: "跨境陆缆", zh_alias: "跨境光缆", section: "9.5", zh_source: ""}
