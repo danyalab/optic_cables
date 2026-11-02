@@ -166,10 +166,11 @@ pp = np.logspace(-5, math.log10(4e-2), 300)
 for i, o in enumerate((oh["kp4"], oh["cfec"], oh["lr800"])):
     ax.semilogx(pp, [ncg_hd(p, 1 / (1 + o)) for p in pp], color=cl.COLORS[i], label=f"overhead {100 * o:.1f} %")
 pts = [("KP4", "kp4"), ("staircase", "stair48"), ("CFEC", "cfec"), ("oFEC", "ofec"), ("800LR", "lr800")]
+offs = {"kp4": (-10, 8), "stair48": (-60, 4), "cfec": (-42, 10), "ofec": (8, -12), "lr800": (6, -14)}
 for lab, k in pts:
     p, o, _ = cases[k]
     ax.plot(p, ncg[k], "o", color=cl.GRAY, ms=5)
-    ax.annotate(lab, (p, ncg[k]), textcoords="offset points", xytext=(-8, 7), fontsize=9)
+    ax.annotate(lab, (p, ncg[k]), textcoords="offset points", xytext=offs[k], fontsize=9)
 ax.plot(L("ch02.fec.staircase_p_operating"), L("ch02.fec.staircase_ncg"), "s", mfc="none", color=cl.COLORS[3], ms=7,
         label="stated NCG (staircase, CFEC, oFEC)")
 ax.plot(L("ch02.fec.cfec_ber_in"), L("ch02.fec.cfec_ncg"), "s", mfc="none", color=cl.COLORS[3], ms=7)

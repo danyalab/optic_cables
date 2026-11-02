@@ -1,0 +1,278 @@
+{
+  "p1_p": {
+    "value": 4.0,
+    "unit": "mW",
+    "digits": 2,
+    "inputs": []
+  },
+  "p1_dnu": {
+    "value": 28.5,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_linewidth_1mw"
+    ]
+  },
+  "p1_st": {
+    "value": 0.9449602122015914,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_alpha_fit",
+      "ch03.las.henry_linewidth_1mw"
+    ]
+  },
+  "p1_ratio_a2": {
+    "value": 6.032000000000001,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_alpha_fit"
+    ]
+  },
+  "p2_f": {
+    "value": 100.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": []
+  },
+  "p2_k": {
+    "value": 88.85765876316732,
+    "unit": "ps",
+    "digits": 3,
+    "inputs": []
+  },
+  "p2_ratio": {
+    "value": 1.6880930927945739,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "p3_rs": {
+    "value": 26.5625,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch03.mmf.sr8_reach_om3"
+    ]
+  },
+  "p3_l": {
+    "value": 150.58823529411765,
+    "unit": "m",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om3_emb",
+      "ch03.mmf.sr8_reach_om3"
+    ]
+  },
+  "p3_bm70": {
+    "value": 28.57142857142857,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om3_emb",
+      "ch03.mmf.sr8_reach_om3"
+    ]
+  },
+  "p4_nh": {
+    "value": 3.874595260199035e+17,
+    "unit": "cm⁻³",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "p4_ne": {
+    "value": 1.1363636363636364e+18,
+    "unit": "cm⁻³",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550"
+    ]
+  },
+  "p4_ah_db": {
+    "value": 10.096292046677611,
+    "unit": "dB/cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "p4_ae_db": {
+    "value": 41.94889882020047,
+    "unit": "dB/cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550"
+    ]
+  },
+  "p5_lam": {
+    "value": 1310.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": []
+  },
+  "p5_bw": {
+    "value": 50.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": []
+  },
+  "p5_q": {
+    "value": 4576.9840916030535,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "p5_tau": {
+    "value": 3.1830988618379066,
+    "unit": "ps",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_rs": {
+    "value": 130.0,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_dnu": {
+    "value": 5.2,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "p6_itla_sum": {
+    "value": 10.0,
+    "unit": "MHz",
+    "digits": 2,
+    "inputs": [
+      "ch03.itla.oif_linewidth_app1"
+    ]
+  },
+  "p7_f5": {
+    "value": 2.088,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_keff"
+    ]
+  },
+  "p7_f10": {
+    "value": 2.6289999999999996,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_keff"
+    ]
+  },
+  "p7_f20": {
+    "value": 3.5744999999999996,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_keff"
+    ]
+  },
+  "p7_f10_k05": {
+    "value": 5.95,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "p7_bw": {
+    "value": 25.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": []
+  },
+  "p7_mcap": {
+    "value": 13.6,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.apd.kang_gbp"
+    ]
+  },
+  "p8_fit": {
+    "value": 10.0,
+    "unit": "FIT",
+    "digits": 2,
+    "inputs": []
+  },
+  "p8_h60": {
+    "value": 91629073.1874155,
+    "unit": "device-hours",
+    "digits": 3,
+    "inputs": []
+  },
+  "p8_h90": {
+    "value": 230258509.2994046,
+    "unit": "device-hours",
+    "digits": 3,
+    "inputs": []
+  },
+  "p8_af": {
+    "value": 9.29447841789465,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.vcsel_fit_105c"
+    ]
+  },
+  "p8_devices": {
+    "value": 12386.844045820153,
+    "unit": "devices",
+    "digits": 3,
+    "inputs": [
+      "ch03.rel.accel_aging",
+      "ch03.rel.vcsel_fit_105c"
+    ]
+  },
+  "p9_mfd": {
+    "value": 10.4,
+    "unit": "µm",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.gc_double_etch"
+    ]
+  },
+  "p9_spot": {
+    "value": 3.0,
+    "unit": "µm",
+    "digits": 2,
+    "inputs": []
+  },
+  "p9_loss": {
+    "value": 5.471895466542742,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.cpl.gc_double_etch"
+    ]
+  },
+  "p10_f": {
+    "value": 100.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": []
+  },
+  "p10_c": {
+    "value": 31.830988618379063,
+    "unit": "fF",
+    "digits": 3,
+    "inputs": []
+  },
+  "p10_ratio": {
+    "value": 4.681027737996921,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.pd.imec_bw"
+    ]
+  }
+}

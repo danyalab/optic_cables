@@ -47,6 +47,20 @@
     "digits": 3,
     "inputs": []
   },
+  "alpha_s": {
+    "value": 0.18,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "span2_km": {
+    "value": 80.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": []
+  },
   "ap_db": {
     "value": 0.25,
     "unit": "dB/km",

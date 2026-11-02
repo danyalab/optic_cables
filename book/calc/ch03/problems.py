@@ -46,6 +46,8 @@ r.emit("p4_ae_db", 10 * math.log10(math.e) * ae * Ne, "dB/cm", 3, ["ch03.si.sore
 
 # P5: largest loaded Q whose optical linewidth is at least 50 GHz at 1310 nm
 LAM5 = 1310e-9
+r.emit("p5_lam", 1310, "nm", 4)
+r.emit("p5_bw", 50, "GHz", 2)
 r.emit("p5_q", cl.C0 / (LAM5 * 50e9), "1", 3)
 r.emit("p5_tau", cl.C0 / (LAM5 * 50e9) * LAM5 / (2 * math.pi * cl.C0) * 1e12, "ps", 3)
 
@@ -61,9 +63,11 @@ FA = lambda M, kk: kk * M + (1 - kk) * (2 - 1 / M)
 for M in (5, 10, 20):
     r.emit(f"p7_f{M}", FA(M, k), "1", 3, ["ch03.apd.kang_keff"])
 r.emit("p7_f10_k05", FA(10, 0.5), "1", 3)
+r.emit("p7_bw", 25, "GHz", 2)
 r.emit("p7_mcap", L("ch03.apd.kang_gbp") / 25.0, "1", 3, ["ch03.apd.kang_gbp"])
 
 # P8: device-hours for a 10 FIT claim at 60 % and 90 % confidence, zero failures
+r.emit("p8_fit", 10, "FIT", 2)
 for cl_, tag in ((0.6, "60"), (0.9, "90")):
     r.emit(f"p8_h{tag}", -math.log(1 - cl_) / 10e-9, "device-hours", 3)
 af = ex37["af_105_40"]["value"]
@@ -76,9 +80,11 @@ mfd_f = float(cl.cond("ch03.cpl.gc_double_etch", "fiber_mfd_um"))
 w1, w2 = mfd_f / 2, 3.0 / 2
 eta = 4 * w1 ** 2 * w2 ** 2 / (w1 ** 2 + w2 ** 2) ** 2
 r.emit("p9_mfd", mfd_f, "µm", 3, ["ch03.cpl.gc_double_etch"])
+r.emit("p9_spot", 3.0, "µm", 2)
 r.emit("p9_loss", -cl.lin2db(eta), "dB", 3, ["ch03.cpl.gc_double_etch"])
 
 # P10: largest capacitance for a 100 GHz RC limit into 50 ohm
+r.emit("p10_f", 100, "GHz", 3)
 r.emit("p10_c", 1 / (2 * math.pi * 50 * 100e9) * 1e15, "fF", 3)
 r.emit("p10_ratio", 1 / (2 * math.pi * 50 * 100e9) * 1e15 / float(cl.cond("ch03.pd.imec_bw", "capacitance_fF")), "1", 3,
        ["ch03.pd.imec_bw"])

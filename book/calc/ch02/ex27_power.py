@@ -134,8 +134,15 @@ ax.plot(node_F, P_F / 400e9 * 1e12, "s", color=cl.GRAY, ms=7, label="calibration
 ax.plot(7, budget / 400e9 * 1e12, "v", color=cl.COLORS[4], ms=8, label="7 nm 400ZR DSP budget (upper bound)")
 ax.set_xlabel("CMOS node (nm)")
 ax.set_ylabel("DSP energy (pJ/bit)")
-ax.set_xticks(nodes)
-ax.set_xticklabels([str(n) for n in nodes])
+from matplotlib.ticker import NullFormatter, FixedLocator, FixedFormatter
+ax.xaxis.set_major_locator(FixedLocator(nodes))
+ax.xaxis.set_major_formatter(FixedFormatter([str(n) for n in nodes]))
+ax.xaxis.set_minor_formatter(NullFormatter())
+yt = [1, 2, 5, 10, 20, 50]
+ax.yaxis.set_major_locator(FixedLocator(yt))
+ax.yaxis.set_major_formatter(FixedFormatter([str(v) for v in yt]))
+ax.yaxis.set_minor_formatter(NullFormatter())
+ax.set_ylim(1, 50)
 ax.legend(fontsize=8, loc="upper left")
 cl.savefig(fig, "dsp_power")
 

@@ -49,6 +49,8 @@ a_s = A_S / c6.LN10_10
 a_p = A_P / c6.LN10_10
 A_span = math.exp(a_s * SPAN_KM)
 r.emit("span_km", SPAN_KM, "km", 3)
+r.emit("alpha_s", A_S, "dB/km", 2, ["ch01.att.smf28ultra_max_1550"])
+r.emit("span2_km", 80.0, "km", 2)
 r.emit("ap_db", A_P, "dB/km", 2)
 r.emit("span_loss_db", A_S * SPAN_KM, "dB", 3, ["ch01.att.smf28ultra_max_1550"])
 leff_p = (1 - math.exp(-a_p * SPAN_KM)) / a_p

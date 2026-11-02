@@ -49,6 +49,9 @@ eta1 = c6.mu_coeff(gam, ALPHA, D, SPAN, RS, DF, NCH, LAM, c) / RS ** 2
 Lspan_bol = ALPHA * SPAN / 1e3 + OVH
 ins1 = ["ch06.openroadm.w_63p1gbd", "ch01.att.smf28ultra_max_1550", "ch01.cd.g652_link_typ_d1550",
         "ch01.kerr.n2_kato1995_smf", "ch01.kerr.aeff_g652d_typ", "ch01.amp.accelink_mw_nf_max"]
+r.emit("nf", NF, "dB", 2, ["ch01.amp.accelink_mw_nf_max"])
+r.emit("alpha", ALPHA, "dB/km", 2, ["ch01.att.smf28ultra_max_1550"])
+r.emit("span_km", SPAN / 1e3, "km", 2)
 r.emit("rs", RS / 1e9, "GBd", 3, ["ch06.openroadm.w_63p1gbd"])
 r.emit("lspan_bol", Lspan_bol, "dB", 3, ["ch01.att.smf28ultra_max_1550"])
 r.emit("eta1_db", 10 * math.log10(eta1), "dB(1/W²)", 4, ins1)

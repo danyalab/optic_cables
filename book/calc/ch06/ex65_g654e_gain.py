@@ -76,6 +76,14 @@ cases = {
             ["ch01.att.g652d_max_1530_1565", "ch01.att.g654e_max_1550"]),
 }
 assert c6.cond("ch01.att.zte_g654e_vs_g652d_80km", "span_km") == 80
+r.emit("nf", NF, "dB", 2, ["ch01.amp.accelink_mw_nf_max"])
+r.emit("ovh", OVH, "dB", 3)
+r.emit("span_km", SPAN / 1e3, "km", 2)
+r.emit("rs", RS / 1e9, "GBd", 2)
+for tag, (a1_, a2_, ins_) in cases.items():
+    r.emit(f"{tag}_a652", a1_, "dB/km", 3, ins_)
+    r.emit(f"{tag}_a654", a2_, "dB/km", 3, ins_)
+r.emit("zte_spec", L("ch01.att.zte_g654e_vs_g652d_80km"), "dB", 2, ["ch01.att.zte_g654e_vs_g652d_80km"])
 base = ["ch01.amp.accelink_mw_nf_max"] + fib_ins
 for tag, (a1, a2, ins) in cases.items():
     gain, d_eta, d_ase, dpopt = compare(a1, a2)
