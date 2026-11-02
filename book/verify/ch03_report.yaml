@@ -69,7 +69,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 3, Fig. 15 discussion
-  evidence: the threshold current varies between 300 and 500 µA, while the laser current required for 1 mW output power ranges be tween 1.5 and 1.85 mA.
+  evidence: the threshold current varies between 300 and 500 µA, while the laser current required for 1 mW output power ranges
   action: none
 - id: ch03.mat.gaas_eg_0k
   status: MATCH
@@ -117,7 +117,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), Abstract
-  evidence: A record-high modulation bandwidth of 30 GHz is reached for a 3.5 µm oxide aperture VCSEL, with 25 GHz bandwidth already at a bias current of 1.8 mA.
+  evidence: with 25 GHz bandwidth already at a bias current of 1.8 mA.
   action: none
 - id: ch03.vcsel.chalmers_dfactor
   status: MATCH
@@ -153,13 +153,13 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Parsons et al., JLT (2019) doi 10.1109/JLT.2018.2878666, Sect. I
-  evidence: OM3 and OM4 fibers only specify EMB at 850 nm with values of ≥2000 MHz * km for OM3 fiber and ≥4700 MHz * km for OM4 fiber.
+  evidence: OM3 and OM4 fibers only specify EMB at 850 nm with values of ≥2000 MHz * km for OM3 fiber and ≥4700 MHz * km
   action: Source access is effectively open (intro read), not abstract_only. Note TIA-492AAAF (adopting IEC 60793-2-10:2019) replaces 492AAAC/D/E; same EMB values.
 - id: ch03.mmf.om4_emb
   status: MATCH
   found_value: ''
   found_locator: Parsons et al., JLT (2019) doi 10.1109/JLT.2018.2878666, Sect. I
-  evidence: OM3 and OM4 fibers only specify EMB at 850 nm with values of ≥2000 MHz * km for OM3 fiber and ≥4700 MHz * km for OM4 fiber.
+  evidence: OM3 and OM4 fibers only specify EMB at 850 nm with values of ≥2000 MHz * km for OM3 fiber and ≥4700 MHz * km
   action: 'none (also IEEE Cl. 95 draft Table 95-13: 2000/4700 MHz.km)'
 - id: ch03.mmf.om5_emb_953
   status: MATCH
@@ -237,7 +237,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: TIA FOTC 400GBASE-SR4.2 page (2023), channel characteristics table
-  evidence: 'Modal bandwidth at 953 nm (min): | not specified | | 2,470 ... Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150'
+  evidence: 'Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150 | m'
   action: same note as sr4p2_reach_om3
 - id: ch03.mmf.fotc_sr4_conflict_om3
   status: MATCH
@@ -364,7 +364,7 @@ results:
   status: MISMATCH
   found_value: tier should be C
   found_locator: Inoue et al., OFC 2023 M4C.4, Abstract only
-  evidence: exhibits a power conversion efficiency of more than 25% with output power of 350 mW up to 45°C. This device also shows an averaged RIN of below -155 dB/Hz.
+  evidence: exhibits a power conversion efficiency of more than 25% with output power of 350 mW up to 45°C.
   action: Value matches; tier should be C (abstract-only conference). Add paper number M4C.4.
 - id: ch03.cw.lam_100mw_75c
   status: MATCH
@@ -441,7 +441,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, text after Eq. (4)
-  evidence: a change in the carrier density of the order of 5×10 17 cm -3 results in a change in refractive index, Δn, of -1.66×10 -3, at a wavelength of 1.55 µm
+  evidence: results in a change in refractive index, Δn, of -1.66×10 -3, at a wavelength of 1.55 µm
   action: none (assumes equal electron and hole change; state that)
 - id: ch03.si.soref_abstract_1300
   status: MATCH
@@ -483,7 +483,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint (Nature version), Performance metrics
-  evidence: one of the most compact MZI modulators reported so far has an energy requirement of 5 pJ bit –1 at 10 Gbit s –1 for a ~200-μm-long device
+  evidence: has an energy requirement of 5 pJ bit –1 at 10 Gbit s –1 for a ~200-μm-long device
   action: none
 - id: ch03.si.reed_ring_heater_budget
   status: PARTIAL
@@ -531,7 +531,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Timurdogan et al., Nat. Commun. 5, 4008 (2014), Abstract
-  evidence: obtained in a vertical p– n junction device that at 250 pm V −1 (30 GHz V −1) is up to 10 times larger than prior demonstrations.
+  evidence: obtained in a vertical p– n junction device that at 250 pm V −1 (30 GHz V −1)
   action: none
 - id: ch03.ring.timurdogan_athermal
   status: MATCH
@@ -711,7 +711,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Sect. 4.C
-  evidence: made it possible to ex perimentally demonstrate a CE of 87% (−0.62 dB), which, to the best of our knowledge, constitutes the current record value for SOI 1D-GCs [63].
+  evidence: a CE of 87% (−0.62 dB), which, to the best of our knowledge, constitutes the current record value for SOI 1D-GCs [63].
   action: 'Value correct; ''record'' is as of 2019: say so, and check post-2019 literature before calling it current.'
 - id: ch03.cpl.gc_double_etch
   status: PARTIAL
@@ -813,7 +813,7 @@ results:
   status: MATCH
   found_value: ''
   found_locator: Ahmed & El-Lafi, Pramana 71(1) 99 (2008), Eq. (2) with Eqs. (3)-(4)
-  evidence: dN dt = 1 e I(t) − AS − N τe ... G = A − BS (3) ... A = aξ V (N − Ng), (4)
+  evidence: dN dt = 1 e I(t) − AS − N τe ... A = aξ V (N − Ng), (4)
   action: none
 - id: ch03.eq.threshold_gain
   status: PARTIAL
