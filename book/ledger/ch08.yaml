@@ -1,0 +1,2014 @@
+records:
+- id: ch08.carrier.lumen_route_miles_2025
+  section: '8.1'
+  claim: Lumen global fiber route miles, mostly long-haul intercity, at 31 Dec 2025
+  value: 340000
+  unit: route-mi
+  kind: fact
+  conditions:
+    date: '2025-12-31'
+    scope: global (North America and Asia Pacific)
+    bound: lower ('over')
+  source_id: lumen_10k_2025
+  locator: Part I, Item 1 Business, 'Our Network - Connectivity and Coverage'
+  quote: our network included over 340,000 route miles of fiber optic plant, most of which consists of "long-haul" fiber connections
+    between major metropolitan areas
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: 10-K warns metrics use internal methodologies that may differ from other carriers. Route miles count path length,
+    not fiber strands.
+- id: ch08.carrier.lumen_onnet_buildings_2025
+  section: '8.1'
+  claim: Lumen fiber on-net buildings in its domestic network
+  value: 163000
+  unit: buildings
+  kind: fact
+  conditions:
+    date: '2025-12-31'
+    metro_markets: 226
+  source_id: lumen_10k_2025
+  locator: Part I, Item 1, 'Connectivity and Coverage', first bullet
+  quote: connected to approximately 163,000 buildings, which we refer to as "fiber on-net" buildings, located in 226 metropolitan
+    markets
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.carrier.lumen_att_sale_proceeds
+  section: '8.1'
+  claim: Gross cash proceeds of Lumen's sale of its Mass Markets fiber-to-the-home business in 11 states to AT&T (closed 2
+    Feb 2026)
+  value: 5.75
+  unit: billion USD
+  kind: fact
+  conditions:
+    closing_date: '2026-02-02'
+    states: 11
+    signing_date: '2025-05-21'
+  source_id: lumen_10k_2025
+  locator: Part I, Item 1 Business, overview of divestitures
+  quote: On February 2, 2026, we completed the Mass Markets Fiber-to-the-Home divestiture in exchange for pre-tax cash proceeds
+    of $5.75 billion
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: AT&T 10-K note R16 gives $5,750 million cash, subject to purchase price adjustments. Consistent.
+- id: ch08.carrier.lumen_att_sale_enablements
+  section: '8.1'
+  claim: Fiber enablements (passings) included in the Lumen consumer fiber sale to AT&T, as of 31 Mar 2025
+  value: 4000000.0
+  unit: locations
+  kind: fact
+  conditions: {}
+  source_id: lumen_8k_att_sale_2025
+  locator: Exhibit 99.1, paragraph 3
+  quote: AT&T's acquisition includes approximately 95% of Quantum Fiber, approximately four million enablements, and nearly
+    one million subscribers as of March 31, 2025.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Press release filed as 8-K exhibit; corroborated by AT&T 10-K R16 (tier B, ch08.carrier.att_lumen_fiber_locations).
+- id: ch08.carrier.att_lumen_fiber_locations
+  section: '8.1'
+  claim: Fiber locations reached by the Lumen Mass Markets fiber assets acquired by AT&T (at signing)
+  value: 4000000.0
+  unit: locations
+  kind: fact
+  conditions:
+    bound: lower ('more than')
+    customers: 1000000.0
+  source_id: att_10k_2025
+  locator: Notes to financial statements, Acquisitions (XBRL R16), 'Fiber'
+  quote: the pending acquisition covered approximately one million fiber customers, and also included fiber network assets
+    that reached more than four million fiber locations.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.carrier.lumen_retained_backbone
+  section: '8.1'
+  claim: Lumen retains its intercity and metro backbone after the AT&T consumer fiber sale
+  value: Lumen retains all national, regional, state and metro fiber backbone, central offices and enterprise/wholesale fiber
+    customers
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: lumen_8k_att_sale_2025
+  locator: Exhibit 99.1, paragraph 4
+  quote: including all national, regional, state, and metro level fiber backbone network infrastructure, central offices and
+    associated real estate.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'Key distinction for 8.1: the sale is last-mile FTTH, not long-haul.'
+- id: ch08.carrier.lumen_pcf_contracts_8p5b
+  section: '8.1'
+  claim: Value of Lumen's AI-driven networking (Private Connectivity Fabric) contracts with hyperscalers
+  value: 8.5
+  unit: billion USD
+  kind: fact
+  conditions: {}
+  source_id: lumen_8k_att_sale_2025
+  locator: Exhibit 99.1, paragraph 6
+  quote: Following the $8.5 billion in AI-driven networking contracts with hyperscalers, Lumen plans to expand its vast nationwide
+    footprint
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Company claim; contested-box use only. FY2025 10-K discusses PCF advance payments and risks but gives no aggregate
+    dollar figure in the fetched text.
+- id: ch08.carrier.lumen_pcf_contracts_q2_2025
+  section: '8.1'
+  claim: Lumen PCF contract book stated on the Q2 2025 earnings call
+  value: 9
+  unit: billion USD
+  kind: fact
+  conditions:
+    bound: upper ('just under')
+  source_id: lightwave_lumen_pcf_2025
+  locator: Article body, quote of CEO Kate Johnson
+  quote: We now have just under $9 billion in PCF business, adding nearly $500 million in new contracts since our last update.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Secondary report of an earnings call.
+- id: ch08.carrier.lumen_pcf_annual_revenue
+  section: '8.1'
+  claim: Expected annual revenue from completed PCF construction and overpull work over 20-year contracts
+  value: 400
+  unit: million USD/yr
+  kind: fact
+  conditions: {}
+  source_id: lightwave_lumen_pcf_2025
+  locator: Article body, quote of CEO Kate Johnson
+  quote: generating over $400 million of annual revenue for Lumen for the remaining duration of the 20-year contracts
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'Same article: demand mixes ''overpulls on existing conduit'' (higher margin) with new route construction.'
+- id: ch08.carrier.lumen_intercity_fiber_miles_2028
+  section: '8.1'
+  claim: Lumen target intercity fiber miles by end of 2028
+  value: 47000000.0
+  unit: fiber-mi
+  kind: fact
+  conditions:
+    new_fiber_miles: 34000000.0
+  source_id: lumen_pr_ai_build_2025
+  locator: Paragraph 1
+  quote: plans to add 34 million new intercity fiber miles by the end of 2028, for a total of 47 million intercity fiber miles
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Fiber miles = route miles x fiber count. Target, not achieved.
+- id: ch08.carrier.lumen_intercity_fiber_miles_2025
+  section: '8.1'
+  claim: Lumen projected intercity fiber miles at end of 2025
+  value: 16600000.0
+  unit: fiber-mi
+  kind: fact
+  conditions: {}
+  source_id: lumen_pr_ai_build_2025
+  locator: Bullet 'Deployed New Fiber'
+  quote: projected to reach 16.6 million total intercity fiber miles by year end.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Projection made Sept 2025.
+- id: ch08.carrier.lumen_2025_new_fiber_vs_route_miles
+  section: '8.1'
+  claim: 'Lumen 2025 (to Sept) new intercity build: fiber miles and route miles'
+  value:
+  - 2200000.0
+  - 2500
+  unit: fiber-mi; route-mi
+  kind: fact
+  conditions: {}
+  source_id: lumen_pr_ai_build_2025
+  locator: Bullet 'Deployed New Fiber'
+  quote: Added more than 2.2 million new intercity fiber miles(2,500+ route miles)
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'Ratio 2.2e6/2500 = 880 fibers per new route (both lower bounds). Same bullet: Corning cable ''to fit two times more
+    fiber into existing conduit''.'
+- id: ch08.carrier.lumen_ila_sites
+  section: '8.1'
+  claim: In-line amplifier (ILA) sites under construction on Lumen's intercity network (Sept 2025)
+  value: 176
+  unit: sites
+  kind: fact
+  conditions: {}
+  source_id: lumen_pr_ai_build_2025
+  locator: Bullet 'Constructed Signal Boosters'
+  quote: Construction efforts underway at 176 In-Line Amplifier (ILA) sites.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Lightwave (Aug 2025) reports 119 ILA sites being built at Q2 2025; difference is timing.
+- id: ch08.carrier.lumen_capacity_added_2025
+  section: '8.1'
+  claim: Total capacity added to Lumen network in 2025 (to Sept)
+  value: 5.9
+  unit: Pb/s
+  kind: fact
+  conditions: {}
+  source_id: lumen_pr_ai_build_2025
+  locator: Bullet 'Increased Network Capacity'
+  quote: Added 5.9+ Pbps of total capacity to the Lumen network so far this year
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.carrier.lumen_400g_route_miles
+  section: '8.1'
+  claim: Route miles of Lumen network enabled for 400G
+  value: 100000
+  unit: route-mi
+  kind: fact
+  conditions: {}
+  source_id: lumen_pr_ai_build_2025
+  locator: Bullet 'Extended Faster Speeds'
+  quote: The Lumen 400G-enabled network now spans more than 100,000 route miles.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.carrier.lumen_pcf_loss_claim
+  section: '8.1'
+  claim: 'Lumen marketing claim: PCF fiber has 25% less optical loss than competitors and 60% more capacity than traditional
+    designs'
+  value:
+  - 25
+  - 60
+  unit: '%'
+  kind: fact
+  conditions: {}
+  source_id: lumen_pr_ai_build_2025
+  locator: Paragraph on Private Connectivity Fabric
+  quote: By using fiber with 25% less optical loss than competitors 2 and 60% more capacity than traditional designs
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Unverified marketing claim (footnote 2 not retrieved). Contested-box only; compare ULL fibre specs in Ch. 1.
+- id: ch08.carrier.zayo_new_route_miles_plan
+  section: '8.1'
+  claim: Zayo planned new long-haul fiber route miles (5 new routes + 7 overbuilds over five years)
+  value: 5000
+  unit: route-mi
+  kind: fact
+  conditions:
+    announced: '2025-01-21'
+  source_id: zayo_pr_5000_route_miles_2025
+  locator: Paragraph 1
+  quote: today announced it intends to build more than 5,000 long-haul fiber route miles to meet the growing demands of AI
+    workloads.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Zayo is private (since 2020), so no 10-K; press releases are the only primary source.
+- id: ch08.carrier.zayo_completed_longhaul_5y
+  section: '8.1'
+  claim: Zayo long-haul routes completed in the five years to 2025, total route miles
+  value: 5000
+  unit: route-mi
+  kind: fact
+  conditions:
+    routes: 15
+    new_route_miles: 2700
+    overbuild_route_miles: 2600
+  source_id: zayo_pr_5000_route_miles_2025
+  locator: Section listing completed routes
+  quote: Over the last five years, Zayo has completed 15 new long-haul routes totaling over 5,000 fiber route miles
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.carrier.zayo_fiber_miles_na_2024
+  section: '8.1'
+  claim: Zayo North America network fiber miles (zayo.com version of Jan 2025 release)
+  value: 16600000.0
+  unit: fiber-mi
+  kind: fact
+  conditions: {}
+  source_id: zayo_pr_5000_route_miles_2025
+  locator: Section 'Zayo's Additional North American Network Investments'
+  quote: Zayo's North America network spans 16.6 million fiber miles with 820,000 fiber miles and 14 new 400G-enabled wavelength
+    routes added in 2024.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'DISAGREEMENT: Business Wire version says 16.5 million and 700,000 added (ch08.carrier.zayo_fiber_miles_na_2024_bw).'
+- id: ch08.carrier.zayo_fiber_miles_na_2024_bw
+  section: '8.1'
+  claim: Zayo North America network fiber miles (Business Wire version of Jan 2025 release)
+  value: 16500000.0
+  unit: fiber-mi
+  kind: fact
+  conditions: {}
+  source_id: zayo_bw_5000_route_miles_2025
+  locator: Section 'Zayo's Additional North American Network Investments'
+  quote: Zayo's North America network spans 16.5 million fiber miles with 700,000 fiber miles and 14 new 400G-enabled wavelength
+    routes added in 2024.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Disagrees with zayo.com copy (16.6 M; 820,000 added). Web copy probably edited later; no revision date shown.
+- id: ch08.carrier.zayo_petabit_waves
+  section: '8.1'
+  claim: Zayo active wavelength (Waves) services reached one petabit in 2024
+  value: 1
+  unit: Pb/s
+  kind: fact
+  conditions: {}
+  source_id: zayo_pr_5000_route_miles_2025
+  locator: Section 'Zayo's Additional North American Network Investments'
+  quote: Zayo also reached a petabit of active Waves services in 2024
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.carrier.zayo_chi_col_route
+  section: '8.1'
+  claim: Length of Zayo's new Chicago-Columbus long-haul route
+  value: 385
+  unit: mi
+  kind: fact
+  conditions: {}
+  source_id: zayo_pr_400g_routes_2025
+  locator: Bullet 'Chicago to Columbus'
+  quote: Zayo is advancing construction on a 385-mile, low-latency fiber route between Chicago and Columbus
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.carrier.zayo_chi_msp_route_pr
+  section: '8.1'
+  claim: Length of Zayo's new Chicago-Minneapolis dark fiber route (press release)
+  value: 521
+  unit: mi
+  kind: fact
+  conditions: {}
+  source_id: zayo_pr_400g_routes_2025
+  locator: Bullet 'Chicago to Minneapolis'
+  quote: Zayo is constructing a brand-new 521-mile dark fiber route linking key AI data center hubs of Chicago and Minneapolis.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'DISAGREEMENT: Zayo blog of the same date gives 505 miles (ch08.carrier.zayo_chi_msp_route_blog).'
+- id: ch08.carrier.zayo_chi_msp_route_blog
+  section: '8.1'
+  claim: Length of Zayo's new Chicago-Minneapolis route (company blog)
+  value: 505
+  unit: mi
+  kind: fact
+  conditions: {}
+  source_id: zayo_blog_400g_routes_2025
+  locator: Section 'Chicago to Minneapolis'
+  quote: 505 miles long and built with ultra-high fiber counts, this route offers direct connections to Chicago, Columbus,
+    and our Spread network route.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Disagrees with press release (521 mi).
+- id: ch08.carrier.zayo_400g_core
+  section: '8.1'
+  claim: Zayo North American core wavelength network fully 400G-enabled (Q2 2025)
+  value: 100% 400G-enabled core network, Q2 2025
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: zayo_pr_400g_routes_2025
+  locator: Section 'Enabling the 400G Era'
+  quote: In Q2, Zayo completed the full 400G upgrade of its North American core network
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.carrier.att_fiber_customers_2025
+  section: '8.1'
+  claim: AT&T consumer fiber broadband customers at 31 Dec 2025
+  value: 10400000.0
+  unit: customers
+  kind: fact
+  conditions: {}
+  source_id: att_10k_2025
+  locator: Part I, Item 1, 'Broadband Technology'
+  quote: At December 31, 2025, we had 10.4 million fiber consumer wireline broadband customers, adding 1.1 million during
+    the year.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: AT&T's 10-K gives no long-haul route-mile figure; its fiber metrics are access (FTTH) metrics.
+- id: ch08.carrier.att_fiber_locations_2025
+  section: '8.1'
+  claim: AT&T fiber customer locations at end 2025 and end-2026 target
+  value:
+  - 32000000.0
+  - 40000000.0
+  unit: locations
+  kind: fact
+  conditions:
+    '2025': 32000000.0
+    2026_target: 40000000.0
+    2030_target: more than 60 million
+  source_id: att_ar_2025
+  locator: Shareholder letter, fiber bullet
+  quote: By the end of 2026, we expect to reach over 40 million fiber customer locations, up from 32 million locations at
+    the end of 2025.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.carrier.verizon_frontier_close
+  section: '8.1'
+  claim: Verizon completed acquisition of Frontier Communications (fiber footprint to 31 states plus DC)
+  value: completed 2026-01-20
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: verizon_10k_2025
+  locator: Part I, Item 1, 'Broadband'
+  quote: On January 20, 2026, we completed the acquisition of Frontier Communications Parent, Inc. (Frontier)
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: Verizon 10-K describes 'one of the largest global fiber-optic networks' without a route-mile figure.
+- id: ch08.carrier.verizon_fiber_passings_2026
+  section: '8.1'
+  claim: Verizon fiber footprint after Frontier close
+  value: 30000000.0
+  unit: homes and businesses
+  kind: fact
+  conditions:
+    bound: lower ('over')
+  source_id: verizon_8k_q4_2025
+  locator: Earnings release bullets
+  quote: Frontier acquisition expands fiber access to over 30 million homes and businesses
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.intertubes.map_size
+  section: '8.1'
+  claim: Size of the InterTubes US long-haul fiber map
+  value:
+  - 273
+  - 2411
+  - 542
+  unit: nodes; links; conduits
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 2.5 The US Long-haul Fiber-optic Map
+  quote: contains 273 nodes/cities, 2411 links, and 542 conduits (with multiple tenants).
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Built from 20 ISPs' published maps plus public records; snapshot circa 2014-2015.
+- id: ch08.intertubes.longhaul_definition
+  section: '8.1'
+  claim: InterTubes definition of a long-haul link (minimum span)
+  value: 30
+  unit: mi
+  kind: fact
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 1 Introduction
+  quote: We define a long-haul link as one that spans at least 30 miles, or that connects population cen ters of at least
+    100,000 people
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Third criterion: or shared by at least 2 providers. Crawler hyphenation ''cen ters'' kept.'
+- id: ch08.intertubes.isp_count
+  section: '8.1'
+  claim: Conduits shared by more than 17 of the 20 ISPs considered
+  value: 12
+  unit: conduits
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 5.1 Increasing Network Robustness
+  quote: 12 out of 542 conduits that are shared by more than 17 out of the 20 ISPs we considered in our study.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Same result stated in Sec. 4.2 (ch08.intertubes.conduits_gt17); establishes the 20-ISP study scope.
+- id: ch08.intertubes.share_ge2
+  section: '8.1'
+  claim: Fraction of US long-haul conduits shared by at least two major ISPs
+  value: 89.67
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 4.2 Risk Metric (connectivity-only), conduit-sharing histogram
+  quote: we observe that 89.67%, 63.28% and 53.50% of the conduits are shared by at least two, three and four major ISPs,
+    respectively.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.intertubes.share_ge3
+  section: '8.1'
+  claim: Fraction of US long-haul conduits shared by at least three major ISPs
+  value: 63.28
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 4.2 Risk Metric (connectivity-only), conduit-sharing histogram
+  quote: we observe that 89.67%, 63.28% and 53.50% of the conduits are shared by at least two, three and four major ISPs,
+    respectively.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.intertubes.share_ge4
+  section: '8.1'
+  claim: Fraction of US long-haul conduits shared by at least four major ISPs
+  value: 53.5
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 4.2 Risk Metric (connectivity-only), conduit-sharing histogram
+  quote: we observe that 89.67%, 63.28% and 53.50% of the conduits are shared by at least two, three and four major ISPs,
+    respectively.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.intertubes.shared_by_ge2_count
+  section: '8.1'
+  claim: Number of the 542 conduits shared by at least two ISPs
+  value: 486
+  unit: conduits
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 4.2, conduit-sharing histogram discussion
+  quote: thus the bar at x=1 is 542, and 486 conduits are shared by at least 2 ISPs
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 486/542 = 89.67%, consistent with ch08.intertubes.share_ge2.
+- id: ch08.intertubes.conduits_gt17
+  section: '8.1'
+  claim: Conduits shared by more than 17 ISPs (of 542)
+  value: 12
+  unit: conduits
+  kind: measured
+  conditions: {}
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 4.2
+  quote: In some of the more extreme cases, we observe that 12 out of 542 conduits are shared by more than 17 ISPs.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Examples shared by 19 ISPs: Phoenix-Tucson, Salt Lake City-Denver, and a Philadelphia route (text truncated in extraction).'
+- id: ch08.intertubes.los_vs_row_latency_median
+  section: '8.1'
+  claim: Median latency gap between line-of-sight and best right-of-way path between city pairs
+  value: 100
+  unit: us
+  kind: measured
+  conditions:
+    quantile: 0.5
+    bound: upper
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 5 Mitigating Risks, latency comparison near Figure 12
+  quote: For 50% of the paths, the difference is under 100 microseconds (i.e., approximately 20 km)
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Implies ~5 us/km one-way in fiber.
+- id: ch08.intertubes.los_vs_row_latency_p75
+  section: '8.1'
+  claim: Latency gap between line-of-sight and best right-of-way path exceeded by 25% of city pairs
+  value: 500
+  unit: us
+  kind: measured
+  conditions:
+    quantile: 0.75
+    bound: lower
+  source_id: durairajan_sigcomm_2015
+  locator: Sec. 5 Mitigating Risks, latency comparison near Figure 12
+  quote: for 25% of the paths the dif ference is more than 500 microseconds (i.e., more than 100 km)
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Some gaps exceed 2 ms (400 km).
+- id: ch08.ixp.ager_members
+  section: '8.2'
+  claim: Member ASes at the large European IXP studied by Ager et al. (2011)
+  value: 396
+  unit: ASes
+  kind: measured
+  conditions:
+    year: 2011
+  source_id: ager_sigcomm_2012
+  locator: Sec. 3.1 Peering fabric seen from within
+  quote: that the 396 IXP member ASes could potentially establish at the IXP in that time period, more than 50,000 P-P links
+    were actually established
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: IXP anonymized in the paper; its identity is not stated in the text.
+- id: ch08.ixp.ager_peering_links
+  section: '8.2'
+  claim: Peer-peer links established at the studied IXP and fraction of possible peerings
+  value:
+  - 50000
+  - 67
+  unit: links; %
+  kind: measured
+  conditions: {}
+  source_id: ager_sigcomm_2012
+  locator: Sec. 1 Introduction
+  quote: this IXP has close to 400 members which have established some 67 % (or more than 50,000) of all possible such peerings
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Exceeds total P-P AS links known for the whole Internet as of 2010 (abstract).
+- id: ch08.ixp.ager_daily_volume
+  section: '8.2'
+  claim: Daily IP traffic volume over the studied IXP's public switching fabric (2011)
+  value: 10
+  unit: PB/day
+  kind: measured
+  conditions: {}
+  source_id: ager_sigcomm_2012
+  locator: Sec. 1 Introduction
+  quote: use them for exchanging some 10 PB of IP traffic daily
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Weekly table in Sec. 2 shows daily averages 9.0-10.7 PB and average bandwidth 838-992 Gbps (column labels not recovered).
+- id: ch08.ixp.ager_sflow_sampling
+  section: '8.2'
+  claim: sFlow packet sampling rate used to measure IXP traffic (method)
+  value: 16384
+  unit: packets per sample
+  kind: fact
+  conditions: {}
+  source_id: ager_sigcomm_2012
+  locator: Sec. 2.2 IXP infrastructure and data
+  quote: collected in 2011 at the IXP's infrastructure using a random sampling of 1 out of 16k packets.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Paper writes '16k'; recorded as 2^14 = 16384 (interpretation). Records capture first 128 bytes of each sampled packet.
+- id: ch08.ixp.decix_ny_peak_2024
+  section: '8.2'
+  claim: DE-CIX New York peak traffic, 2024
+  value: 1.77
+  unit: Tb/s
+  kind: record
+  conditions:
+    year: 2024
+  source_id: decix_highlights_2024
+  locator: Section 'Traffic peaks across the globe'
+  quote: DE-CIX New York saw an impressive new peak of 1.77 Tbps.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: DE-CIX Annual Report 2025 lists 2025 peaks of 1.93 and 1.75 Tbit/s for US exchanges but the extracted table did not
+    map values to cities unambiguously; not recorded.
+- id: ch08.ixp.decix_ny_peak_oct2024
+  section: '8.2'
+  claim: DE-CIX New York peak traffic as of Oct 2024
+  value: 1.68
+  unit: Tb/s
+  kind: record
+  conditions: {}
+  source_id: decix_peak_report_2024
+  locator: Paragraph on New York
+  quote: The DE-CIX New York exchange saw an impressive new peak of 1.68 Tbps.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.ixp.decix_ny_annual_2025
+  section: '8.2'
+  claim: DE-CIX New York total traffic in 2025
+  value: 5
+  unit: EB/yr
+  kind: measured
+  conditions:
+    year: 2025
+    growth_pct: 16
+  source_id: decix_pr_79eb_2026
+  locator: Section 'From North America to Asia'
+  quote: While New York experienced 16% growth, rising to 5 EB over the year, Dallas grew by 35% to 3.5 EB
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 5 EB/yr = 13.7 PB/day = 1.27 Tb/s average; compare Ager's 10 PB/day for a large European IXP in 2011.
+- id: ch08.ixp.decix_na_annual_2025
+  section: '8.2'
+  claim: DE-CIX North America platform total traffic 2024 and 2025
+  value:
+  - 7.5
+  - 11
+  unit: EB/yr
+  kind: measured
+  conditions: {}
+  source_id: decix_pr_79eb_2026
+  locator: Section 'From North America to Asia'
+  quote: At DE-CIX North America, data traffic across the platform reached 11 Exabytes in 2025, up from 7.5 EB in 2024 (growth
+    of 46%).
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.ixp.decix_global_annual_2025
+  section: '8.2'
+  claim: DE-CIX worldwide traffic in 2025
+  value: 79
+  unit: EB/yr
+  kind: measured
+  conditions: {}
+  source_id: decix_pr_79eb_2026
+  locator: Title
+  quote: 'DE-CIX: Global Data Traffic Volume Hits Record-Breaking 79 Exabytes at Internet Exchanges in 2025'
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.ixp.decix_global_peak_2025
+  section: '8.2'
+  claim: DE-CIX worldwide aggregate peak traffic, 8 April 2025
+  value: 25
+  unit: Tb/s
+  kind: record
+  conditions: {}
+  source_id: decix_pr_25tbps_2025
+  locator: Paragraph 1
+  quote: a grand total of 25 terabits per second (Tbit/s) of peering traffic was pumped through DE-CIX's IXs worldwide.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.ixp.decix_ny_footprint
+  section: '8.2'
+  claim: DE-CIX New York connected networks and data centers served (early 2025)
+  value:
+  - 265
+  - 40
+  unit: networks; data centers
+  kind: fact
+  conditions: {}
+  source_id: nokia_decix_ny_pr_2025
+  locator: Quote of Ed d'Agostino
+  quote: It connects over 265 networks from across the city, with an infrastructure that spans over 40 data centers served.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: A distributed IXP is itself a metro optical network.
+- id: ch08.ixp.decix_ny_backbone
+  section: '8.2'
+  claim: 'DE-CIX New York backbone: 400GE ROADM ring interconnecting its 10 host data center facilities'
+  value: 10
+  unit: facilities
+  kind: fact
+  conditions: {}
+  source_id: nokia_decix_ny_pr_2025
+  locator: Paragraph 2
+  quote: redesigned in a ring topology, redundantly interconnecting the 10 data center facilities where DE-CIX infrastructure
+    is housed
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'Same paragraph: upgraded to 400 GE using Nokia optical technology with ROADMs, 800GE-ready.'
+- id: ch08.ixp.equinix_interconnections_10k
+  section: '8.2'
+  claim: Equinix total interconnections (10-K)
+  value: 500000
+  unit: interconnections
+  kind: fact
+  conditions:
+    date: '2025'
+    bound: lower
+  source_id: equinix_10k_2025
+  locator: Part I, Item 1, 'The interconnection imperative'
+  quote: Over our 27-year history, we have curated a diverse, industry-leading ecosystem of more than 500,000 interconnections.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: Annual report gives 507,000+ as of Q4 2025. Interconnections are mostly private cross-connects, not public IXP ports.
+- id: ch08.ixp.equinix_interconnections_ar
+  section: '8.2'
+  claim: Equinix interconnections as of Q4 2025 (annual report)
+  value: 507000
+  unit: interconnections
+  kind: fact
+  conditions:
+    date: Q4 2025
+    data_centers: 280
+    markets: 77
+  source_id: equinix_ar_2025
+  locator: Cover/highlights page
+  quote: 507,000+ Interconnections
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.ixp.equinix_customers
+  section: '8.2'
+  claim: Equinix customers and network service providers
+  value:
+  - 10500
+  - 2000
+  unit: customers; NSPs
+  kind: fact
+  conditions: {}
+  source_id: equinix_10k_2025
+  locator: Part I, Item 1, 'The requirement of hybrid architectures'
+  quote: With over 10,500 customers, including 2,000+ network service providers and a leading market share of cloud-on ramps
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.hotel.one_wilshire_networks_coresite
+  section: '8.2'
+  claim: Networks hosted at One Wilshire (624 S. Grand Ave, Los Angeles), per CoreSite 2025
+  value: 300
+  unit: networks
+  kind: fact
+  conditions: {}
+  source_id: coresite_pr_one_wilshire_2025
+  locator: Paragraph 1
+  quote: The iconic One Wilshire is one of the most interconnected buildings in the world, hosting more than 300 networks
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'DISAGREEMENT: building owner page says ''over 250 network service providers'' (undated). CoreSite operates the meet-me
+    room.'
+- id: ch08.hotel.one_wilshire_networks_owner
+  section: '8.2'
+  claim: Network service providers in One Wilshire per building owner page (undated)
+  value: 250
+  unit: networks
+  kind: fact
+  conditions: {}
+  source_id: onewilshire_mmr_page
+  locator: Meet Me Room page, paragraph 1
+  quote: The building is home to over 250 network service providers.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Undated; likely older than CoreSite's 2025 figure.
+- id: ch08.hotel.one_wilshire_transpacific
+  section: '8.2'
+  claim: Claim that as much as one third of trans-Pacific traffic passes through One Wilshire
+  value: 33
+  unit: '%'
+  kind: fact
+  conditions: {}
+  source_id: coresite_pr_one_wilshire_2025
+  locator: Paragraph 1
+  quote: with estimates of as much as a third of all trans-Pacific traffic passing through the building
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Unsourced 'estimates'; contested box only. Value is 1/3 expressed as 33%.
+- id: ch08.hotel.sixty_hudson_hudsonix
+  section: '8.2'
+  claim: Carriers and exchanges reachable from the Hudson IX suite at 60 Hudson Street, New York
+  value: 300
+  unit: carriers and exchanges
+  kind: fact
+  conditions: {}
+  source_id: hudsonix_datacenters_page
+  locator: Section 'Seamless Connectivity'
+  quote: our data center facility provides access to 300+ global carriers and exchanges with easy conduit access to seamlessly
+    connect throughout building.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Tenant marketing; counts providers reachable building-wide via the floor-12 meet-me areas of DRT and DataBank.
+- id: ch08.hotel.sixty_hudson_owner
+  section: '8.2'
+  claim: Telecom companies interconnecting in the 60 Hudson meet-me room per building owner
+  value: 100
+  unit: companies
+  kind: fact
+  conditions: {}
+  source_id: sixty_hudson_owner_page
+  locator: Paragraph on history
+  quote: where more than 100 domestic and global telecommunications companies each have a presence and interconnect via the
+    colocation facility's secure-environment meet-me-room.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: DISAGREEMENT in magnitude vs Hudson IX '300+'; same page says the building houses 'several hundred telecommunications
+    and data service providers' in >1,000,000 RSF.
+- id: ch08.peering.transit_price_1998
+  section: '8.2'
+  claim: US Internet transit price, 1998 (Norton survey)
+  value: 1200
+  unit: USD/(Mb/s·month)
+  kind: measured
+  conditions: {}
+  source_id: norton_peering_playbook_2014
+  locator: Ch. 2, Table 2-2
+  quote: 1998 | $1,200.00 per Mbps
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+  notes: Anecdotal survey of 30-50 people per year; Norton calls the numbers 'very rough indications'. 95th-percentile billing,
+    minimum commit.
+- id: ch08.peering.transit_price_2010
+  section: '8.2'
+  claim: US Internet transit price, 2010 (Norton survey)
+  value: 5.0
+  unit: USD/(Mb/s·month)
+  kind: measured
+  conditions: {}
+  source_id: norton_peering_playbook_2014
+  locator: Ch. 2, Table 2-2
+  quote: 2010 | $5.00 per Mbps | 44%
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+- id: ch08.peering.transit_price_2015
+  section: '8.2'
+  claim: US Internet transit price, 2015 (end of Norton series, projected)
+  value: 0.63
+  unit: USD/(Mb/s·month)
+  kind: model_param
+  conditions: {}
+  source_id: norton_peering_playbook_2014
+  locator: Ch. 2, Table 2-2
+  quote: 2015 | $0.63 per Mbps | 33%
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+  notes: 'Table is ''Historical and Projected''. Minor disagreement: 2010 white paper lists 2001 decline as 40%, book as 41%.'
+- id: ch08.peering.cost_assumption
+  section: '8.2'
+  claim: Assumed monthly cost of public peering (10G IXP port plus colo, power, transport, equipment)
+  value: 10000
+  unit: USD/month
+  kind: model_param
+  conditions: {}
+  source_id: norton_drpeering_transit_2010
+  locator: Section on peering break-even
+  quote: If you assume the cost of public peering is $10,000/month ($2500 for a 10G public peering port and $7500 for colo,
+    power, transport, equipment, etc.)
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+- id: ch08.peering.breakeven_2010
+  section: '8.2'
+  claim: Peering break-even traffic in 2010 at $5/Mbps transit and $10,000/month peering cost
+  value: 2000
+  unit: Mb/s
+  kind: model_param
+  conditions: {}
+  source_id: norton_drpeering_transit_2010
+  locator: Section on peering break-even
+  quote: in 2010, peering makes sense financially if you can peer away at least 2Gbps (2000Mbps) for free to your peers.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+  notes: = 10,000/5 (see ch08.eq.peering_breakeven).
+- id: ch08.peering.effective_10g_bw
+  section: '8.2'
+  claim: Effective usable peering bandwidth on a 10G port (Norton assumption)
+  value: 7600
+  unit: Mb/s
+  kind: model_param
+  conditions: {}
+  source_id: norton_drpeering_transit_2010
+  locator: Section on peering break-even
+  quote: up to 7.6Gbps (7600Mbps), which is approximately the amount of traffic one can reasonably sustain over a 10G peering
+    port.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+- id: ch08.b4.typical_wan_util
+  section: '8.3'
+  claim: Typical average utilization at which conventional WAN links are provisioned
+  value:
+  - 30
+  - 40
+  unit: '%'
+  kind: fact
+  conditions: {}
+  source_id: jain_sigcomm_2013
+  locator: Sec. 1 Introduction
+  quote: Given these considerations, WAN links are typically provisioned to 30-40% average utilization.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4.overprovisioning
+  section: '8.3'
+  claim: Bandwidth over-provisioning factor implied by conventional WAN practice
+  value:
+  - 2
+  - 3
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: jain_sigcomm_2013
+  locator: Sec. 1 Introduction
+  quote: Such overprovisioning delivers admirable reliability at the very real costs of 2-3x bandwidth over-provisioning and
+    high-end routing gear.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4.avg_util
+  section: '8.3'
+  claim: Long-term average utilization of B4 links (many links near 100%)
+  value: 70
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: jain_sigcomm_2013
+  locator: Sec. 1 Introduction
+  quote: allow many B4 links to run at near 100% utilization and all links to average 70% utilization over long time periods
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Same sentence continues: ''2-3x e ciency improvements relative to standard practice''. Crawler text drops ''fi''/''ff''/''ffi''/''Th''
+    ligatures (e.g. ''e ciency'', ''tra c'', ''ese''); quote kept as extracted.'
+- id: ch08.b4.traffic_vs_public_wan
+  section: '8.3'
+  claim: B4 (2013) carries more traffic than Google's public-facing WAN and grows faster
+  value: B4 traffic > Google public-facing WAN traffic (2013)
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: jain_sigcomm_2013
+  locator: Sec. 1 Introduction
+  quote: B4 has been in deployment for three years, now carries more trafc than Google's public facing WAN, and has a higher
+    growth rate.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Crawler text drops 'fi'/'ff'/'ffi'/'Th' ligatures (e.g. 'e ciency', 'tra c', 'ese'); quote kept as extracted.
+- id: ch08.b4.capacity_saving_te
+  section: '8.3'
+  claim: Reduction in required deployed WAN capacity from TE use of alternate paths (B4)
+  value: 2
+  unit: 1 (factor)
+  kind: measured
+  conditions: {}
+  source_id: jain_sigcomm_2013
+  locator: Sec. 6.4 TE Algorithm Evaluation
+  quote: only improves average utilization by 5% over the week. However, this reduces our WAN's required deployed capacity
+    by a factor of 2.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: med
+  notes: Start of the sentence (which traffic is shifted) not captured in extraction.
+- id: ch08.b4.gscale_size
+  section: '8.3'
+  claim: Google inter-DC WAN (G-Scale, i.e. B4 circa 2013) size as used in the SWAN evaluation
+  value:
+  - 12
+  - 19
+  unit: DCs; inter-DC links
+  kind: fact
+  conditions: {}
+  source_id: hong_swan_sigcomm_2013
+  locator: Sec. 6.1 Datasets and methodology
+  quote: 'G-Scale: Google''s inter-DC WAN with 12 DCs and 19 inter-DC links [15].'
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: '[15] is the B4 paper, whose Fig. 1 is titled ''B4 worldwide deployment (2011)''.'
+- id: ch08.b4after.sites_2018
+  section: '8.3'
+  claim: Number of B4 sites, January 2018
+  value: 33
+  unit: sites
+  kind: fact
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Figure 1 caption
+  quote: B4 consists of 33 sites as of Jan uary, 2018.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4after.traffic_growth_5y
+  section: '8.3'
+  claim: B4 bandwidth requirement growth over five years (2013-2018)
+  value: 100
+  unit: 1 (factor)
+  kind: measured
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: our bandwidth requirements have grown by 100x over a five year period.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 100x in 60 months implies doubling every ~9.0 months (log2 100 = 6.64 doublings).
+- id: ch08.b4after.doubling_time
+  section: '8.3'
+  claim: Doubling time of B4 bandwidth demand
+  value: 9
+  unit: months
+  kind: measured
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: this dou bling of bandwidth demand every nine months is faster than all of
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4after.availability
+  section: '8.3'
+  claim: B4 availability improvement from 2013 to 2018
+  value:
+  - 99
+  - 99.99
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: our design changes have improved availability by two orders of magnitude, from 99% to 99.99%
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'SLO: connectivity and promised bandwidth available X% of minutes in a trailing 30-day window.'
+- id: ch08.b4after.stargate_capacity
+  section: '8.3'
+  claim: Site-external capacity of a Stargate (Jumpgate generation) B4 site
+  value: 81.92
+  unit: Tb/s
+  kind: spec_max
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Sec. 3.2 Jumpgate, Figure 4
+  quote: Stargate is deployed in datacenters and can provide up to 81.92 Tbps site-external capacity that can be split among
+    WAN, cluster and sidelinks.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4after.saturn_capacity
+  section: '8.3'
+  claim: Saturn (first-generation B4 site) WAN-facing capacity with two or four upper-stage chassis
+  value:
+  - 3.2
+  - 6.4
+  unit: Tb/s
+  kind: spec_max
+  conditions:
+    cluster_facing_Tbps: 5.12
+  source_id: hong_sigcomm_2018
+  locator: Sec. 3.1 Saturn
+  quote: offering a total of 3.2 Tbps and 6.4 Tbps respectively toward the rest of B4.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4after.asymmetry_loss
+  section: '8.3'
+  claim: Fraction of asymmetric site-level links with 100% site-level abstraction capacity loss
+  value: 17
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Sec. 2.2
+  quote: In about 17% of the asymmetric site-level links, we have 100% site level abstraction capacity loss
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.b4after.sidelink_gain
+  section: '8.3'
+  claim: Admissible traffic increase from sidelinks in the paper's example
+  value: 3
+  unit: 1 (factor)
+  kind: fact
+  conditions: {}
+  source_id: hong_sigcomm_2018
+  locator: Sec. 2.2, Figure 3
+  quote: Figure 3b shows how the use of sidelinks increases admissible traffic volume by 3x in this example.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.swan.busy_link_util
+  section: '8.3'
+  claim: Average utilization of the busier links in inter-DC WANs before SWAN
+  value:
+  - 40
+  - 60
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: hong_swan_sigcomm_2013
+  locator: Sec. 1 Introduction
+  quote: Inter-DC WANs have extremely poor ef ficiency; the average utilization of even the busier links is 40-60%.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.swan.idn_link_util
+  section: '8.3'
+  claim: 'Microsoft IDN: average utilization bound for half / three-quarters of links'
+  value:
+  - 30
+  - 50
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: hong_swan_sigcomm_2013
+  locator: Sec. 2.2 Problems of MPLS TE
+  quote: the average utilization of half the links is under 30% and of three in four links is under 50%.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.swan.gain_vs_mpls
+  section: '8.3'
+  claim: Extra traffic carried by SWAN versus MPLS TE
+  value: 60
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: hong_swan_sigcomm_2013
+  locator: Abstract
+  quote: data-driven simu lations of two production networks show that SWAN carries 60% more traffic than the current practice.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Sec. 1: within 2% of optimal; without demand control, 16-25% more than MPLS TE.'
+- id: ch08.swan.idn_size
+  section: '8.3'
+  claim: Microsoft production inter-DC WAN (IDN) size
+  value: 40
+  unit: DCs
+  kind: fact
+  conditions:
+    bound: lower
+  source_id: hong_swan_sigcomm_2013
+  locator: Sec. 6.1 Datasets and methodology
+  quote: 'IDN: A large, well-connected inter-DC WAN with more than 40 DCs.'
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Next sentence: each DC connected to 2-16 other DCs; inter-DC capacities from tens of Gbps to Tbps.'
+- id: ch08.swan.wan_cost
+  section: '8.3'
+  claim: Amortized annual cost of an inter-DC WAN (order of magnitude)
+  value: 100s of millions of USD per year
+  unit: USD/yr
+  kind: fact
+  conditions: {}
+  source_id: hong_swan_sigcomm_2013
+  locator: Sec. 1 Introduction
+  quote: with amor tized annual cost of 100s of millions of dollars, as it provides 100s of Gbps to Tbps of capacity over
+    long distances.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.blastshield.loss_reduction
+  section: '8.3'
+  claim: Reduction in traffic loss from TE controller failures, BLASTSHIELD vs SWAN
+  value: 60
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: krishnaswamy_nsdi_2022
+  locator: Abstract
+  quote: achieves similar network throughput as the previous generation centralized controller and reduces traffic loss from
+    controller failures by 60%.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.blastshield.slo
+  section: '8.3'
+  claim: Microsoft WAN SLOs by traffic tier (tier-0 vs tier-1/2)
+  value:
+  - 99.999
+  - 99.9
+  unit: '%'
+  kind: spec_min
+  conditions: {}
+  source_id: krishnaswamy_nsdi_2022
+  locator: Sec. 2.2 Blast Radius, Ripple and Shielding
+  quote: Customer or tier-0 traffic has the highest SLO of 99.999%. Discretionary traffic tiers, tier-1 and tier-2, have a
+    lower SLO of 99.9%.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.blastshield.deployed
+  section: '8.3'
+  claim: BLASTSHIELD in production in Microsoft's backbone since 2020, replacing SWAN
+  value: 2020
+  unit: year
+  kind: fact
+  conditions: {}
+  source_id: krishnaswamy_nsdi_2022
+  locator: Sec. 1 Introduction
+  quote: We have been operating Microsoft's backbone with BLAST SHIELD since 2020.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.ebb.planes
+  section: '8.3'
+  claim: Number of parallel planes in Meta's Express Backbone (EBB)
+  value: 8
+  unit: planes
+  kind: fact
+  conditions: {}
+  source_id: denis_sigcomm_2023
+  locator: Sec. 1 Introduction
+  quote: Currently, our network boasts eight parallel planes, efficiently handling traffic across more than 20 regions.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: EBB began with 4 planes, later extended to 8.
+- id: ch08.ebb.traffic_growth
+  section: '8.3'
+  claim: Growth of Meta inter-DC traffic demand on EBB since 2015
+  value: 100
+  unit: 1 (factor)
+  kind: measured
+  conditions:
+    bound: lower
+    period: 2015-2023
+  source_id: denis_sigcomm_2023
+  locator: Sec. 'EBB Network Topology'
+  quote: Indeed, the inter-DC traffic demand has grown by more than 100 times
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.ebb.dc_traffic_share
+  section: '8.3'
+  claim: Share of Meta DC-to-DC traffic carried by EBB
+  value: 100
+  unit: '%'
+  kind: fact
+  conditions: {}
+  source_id: denis_sigcomm_2023
+  locator: Abstract
+  quote: Initiated in 2015, EBB now carries 100% of DC-DC traffic, witnessing remarkable growth over the years.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.ebb.sites_2017
+  section: '8.3'
+  claim: EBB sites in March 2017
+  value: 7
+  unit: sites
+  kind: fact
+  conditions: {}
+  source_id: denis_sigcomm_2023
+  locator: 'Sec. ''Deployment Experience: Continuous Adaption of TE algorithms'''
+  quote: Since March 2017 when EBB had only 7 sites, we have been using CSPF for ICP and gold traffic class
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.ebb.controller_cycle
+  section: '8.3'
+  claim: EBB centralized TE controller cycle period
+  value:
+  - 50
+  - 60
+  unit: s
+  kind: measured
+  conditions: {}
+  source_id: denis_sigcomm_2023
+  locator: Sec. 'Centralized TE Controller - Overview'
+  quote: The controller is stateless and operates in periodic, independent cycles, each lasting 50-60 seconds.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.google_optical.fiber_pair_capacity
+  section: '8.3'
+  claim: Capacity per fiber pair of coherent 100G PM-QPSK DWDM (Google inter-DC network, 2013)
+  value: 12
+  unit: Tb/s
+  kind: spec_typ
+  conditions: {}
+  source_id: zhao_commag_2013
+  locator: Introduction
+  quote: can likely provide 12 Tb/s per fiber pair.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: med
+  notes: 'Read from a university-hosted copy of the published article; page numbers not recovered. Context: coherent 100G
+    PM-QPSK with more DWDM channels via reduced channel bandwidth and guard bands.'
+- id: ch08.google_optical.traffic_growth
+  section: '8.3'
+  claim: Internet traffic growth rate cited by Google optical team (2013)
+  value:
+  - 50
+  - 60
+  unit: '%/yr'
+  kind: fact
+  conditions: {}
+  source_id: zhao_commag_2013
+  locator: Introduction
+  quote: As Internet traffic continues to grow at 50-60 percent year after year [1], solutions for capacity scaling beyond
+    12 Tb/s are needed.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: med
+  notes: 'Cites [1] (external); not a Google-internal measurement. Compare B4: 2x per 9 months (~152%/yr).'
+- id: ch08.google_optical.cl_band
+  section: '8.3'
+  claim: C+L-band transmission more than doubles fiber capacity (Google 2013 view)
+  value: 2
+  unit: 1 (factor)
+  kind: fact
+  conditions: {}
+  source_id: zhao_commag_2013
+  locator: Section on C+L-band transmission
+  quote: With the addi tional available fiber bandwidth in L-band, the fiber capacity can be more than doubled.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: med
+- id: ch08.radwan.links_analyzed
+  section: '8.4'
+  claim: Optical links (channels) in Microsoft backbone whose SNR was analyzed in RADWAN (Feb 2015-Dec 2017)
+  value: 8000
+  unit: links
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Abstract
+  quote: We investigate this idea by analyzing the SNR of over 8,000 links in an optical backbone for a period of three years.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'DISAGREEMENT: pre-publication version says ''over 2,000 links'' (ch08.radwan.links_analyzed_preprint). Use the published
+    8,000.'
+- id: ch08.radwan.links_analyzed_preprint
+  section: '8.4'
+  claim: Optical links analyzed (pre-publication RADWAN version)
+  value: 2000
+  unit: links
+  kind: measured
+  conditions: {}
+  source_id: singh_radwan_preprint_2018
+  locator: Abstract
+  quote: analyzing the SNR of over 2,000 links in an optical backbone for a period of 3 years.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: med
+  notes: Superseded by the published paper (8,000). Preprint also mentions planned first capacity-variable link between Canada
+    and Europe.
+- id: ch08.radwan.upgradable_fraction
+  section: '8.4'
+  claim: Fraction of 100 Gb/s IP links whose capacity could be raised by at least 75 Gb/s
+  value: 64
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Abstract
+  quote: We show that the capacity of 64% of 100 Gbps IP links can be augmented by at least 75 Gbps
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.capacity_gain
+  section: '8.4'
+  claim: Total capacity gain available from SNR-adaptive rates in the studied backbone
+  value: 134
+  unit: Tb/s
+  kind: measured
+  conditions:
+    bound: lower
+  source_id: singh_sigcomm_2018
+  locator: Abstract
+  quote: leading to an overall capacity gain of over 134 Tbps.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.failures_avoidable
+  section: '8.4'
+  claim: Fraction of link failures avoidable by lowering rate (100 to 50 Gb/s) instead of declaring link down
+  value: 25
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 2, Figure 4(c)
+  quote: in 25% of the failures, the lowest SNR is above 3 dB, enough to drive a link at 50 Gbps capacity.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Next sentence: ''Therefore, 25% of the link failures could have been avoided''.'
+- id: ch08.radwan.cost_per_gbps
+  section: '8.4'
+  claim: Reduction in cost per Gb/s from rate-adaptive links (RADWAN estimate)
+  value: 32
+  unit: '%'
+  kind: model_param
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 7.2 Cost and Distance
+  quote: we estimate that RADWAN provides an overall cost saving of at least 32%
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.throughput_gain
+  section: '8.4'
+  claim: Network throughput gain of RADWAN TE vs state-of-the-art TE (simulation)
+  value: 40
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Abstract
+  quote: Our data-driven simulations show that RADWAN improves the overall network throughput by 40% while also improving
+    the average link availability.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.snr_req_100g
+  section: '8.4'
+  claim: Required SNR for 100 Gb/s (QPSK) operation in the studied backbone
+  value: 6.5
+  unit: dB
+  kind: spec_min
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 2, Figure 1 discussion
+  quote: the SNR of optical chan nels is much higher than the required SNR for a 100 Gbps bit rate (6.5 dB).
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Thresholds for 150/175/200 Gb/s are dashed lines in Fig. 1 (not digitized). Acacia AC400 BVTs with 15% soft-decision
+    FEC.
+- id: ch08.radwan.snr_req_50g
+  section: '8.4'
+  claim: SNR sufficient to run a link at 50 Gb/s
+  value: 3
+  unit: dB
+  kind: spec_min
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 2, Figure 4(c)
+  quote: in 25% of the failures, the lowest SNR is above 3 dB, enough to drive a link at 50 Gbps capacity.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.snr_150g_example
+  section: '8.4'
+  claim: Example SNR that supports a 150 Gb/s rate
+  value: 10.2
+  unit: dB
+  kind: fact
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 4.2 Computing flow allocations
+  quote: if it has an SNR of 10.2 dB, it has a potential capacity increase of 50 Gbps
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: med
+  notes: 'Illustrative: same sentence says capacity ''can be augmented to 150 Gbps''. Not necessarily the 150G threshold.'
+- id: ch08.radwan.above_100g_threshold
+  section: '8.4'
+  claim: Fraction of channels with average SNR above the 100 Gb/s threshold
+  value: 95
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 2, Figure 1
+  quote: The figure shows that 95% of the channels have an average SNR above the required threshold for 100 Gbps.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Same paragraph: 64% of channels have SNR supporting 175 Gb/s.'
+- id: ch08.radwan.snr_weekly_variation
+  section: '8.4'
+  claim: Fraction of links experiencing 2 dB SNR change within a week
+  value: 10
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 2, Figure 3
+  quote: 10% of all links undergo 2 dB of change in SNR within a week (Figure 3).
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: About 5% of links vary by more than 1 dB within 10 h.
+- id: ch08.radwan.reach_qpsk
+  section: '8.4'
+  claim: Reach of 100 Gb/s QPSK in traditional WAN settings (RADWAN)
+  value: 3000
+  unit: km
+  kind: spec_typ
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: the QPSK modulation format supports data rates of 100 Gbps for distances up to 3,000 km
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.reach_8qam
+  section: '8.4'
+  claim: Reach of 150 Gb/s 8QAM (RADWAN)
+  value: 2100
+  unit: km
+  kind: spec_typ
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: 8QAM allows 150 Gbps for distances up to 2,100 km, and 16QAM allows 200 Gbps for distances up to 800 km
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.reach_16qam
+  section: '8.4'
+  claim: Reach of 200 Gb/s 16QAM (RADWAN)
+  value: 800
+  unit: km
+  kind: spec_typ
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: 8QAM allows 150 Gbps for distances up to 2,100 km, and 16QAM allows 200 Gbps for distances up to 800 km
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.reconfig_latency
+  section: '8.4'
+  claim: Average latency of a modulation-format change on commodity BVT hardware (link down)
+  value: 68
+  unit: s
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 1 Introduction
+  quote: reconfiguring modulation formats on commodity hardware incurs a latency of 68 seconds, on average.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Testbed Fig. 6 shows ~70 s per change.
+- id: ch08.radwan.reconfig_fast
+  section: '8.4'
+  claim: Modulation change latency without turning off the laser (prototype)
+  value: 35
+  unit: ms
+  kind: measured
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 7.1 Hitless Capacity Change
+  quote: we demonstrate ways to change the modulation efficiently, so that it takes only 35 milliseconds.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.radwan.testbed
+  section: '8.4'
+  claim: RADWAN testbed fiber length and amplifier count
+  value:
+  - 1540
+  - 16
+  unit: km; amplifiers
+  kind: fact
+  conditions: {}
+  source_id: singh_sigcomm_2018
+  locator: Abstract
+  quote: We evaluate RADWAN using a testbed consisting of 1,540 km fiber with 16 amplifiers and attenuators.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Sec. 5.1: EDFAs approximately every 65-120 km.'
+- id: ch08.filer.scale
+  section: '8.4'
+  claim: Scale of Microsoft optical network telemetry reported by Filer et al. (2019)
+  value: thousands of line systems and tens of thousands of transceivers
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: filer_jocn_2019
+  locator: Abstract
+  quote: present volumes of real-time polled metrics from the thousands of lines systems and tens of thousands of transceivers
+    deployed today.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: med
+  notes: Abstract only; margin values inside the paper not read. 'lines systems' sic.
+- id: ch08.iris.max_dc_distance
+  section: '8.4'
+  claim: Maximum DC-to-DC fiber distance within an Azure region (latency SLA)
+  value: 120
+  unit: km
+  kind: spec_max
+  conditions: {}
+  source_id: dukic_sigcomm_2020
+  locator: Sec. 2.2
+  quote: Azure limits fiber-distance to 120 km for any DC pair [20].
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Hub-and-spoke implies at most 60 km DC-hub.
+- id: ch08.iris.rtt_example
+  section: '8.4'
+  claim: Example max DC-DC RTT via hubs with 53-60 km DC-hub fiber
+  value: 1.2
+  unit: ms
+  kind: fact
+  conditions: {}
+  source_id: dukic_sigcomm_2020
+  locator: Sec. 2.1
+  quote: The DC-hub connections are 53-60 km in terms of fiber distance, resulting in a maximum DC-DC roundtrip latency of
+    1.2 ms.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Next sentence: a direct 19 km DC-DC link achieves 0.2 ms, a 6x reduction. 120 km x 2 x ~5 us/km = 1.2 ms.'
+- id: ch08.iris.unamplified_reach
+  section: '8.4'
+  claim: Max point-to-point DCI distance whose loss the receive amplifier compensates without in-line amplification (400ZR
+    design)
+  value: 80
+  unit: km
+  kind: spec_max
+  conditions:
+    fiber_loss_dB_per_km: 0.25
+  source_id: dukic_sigcomm_2020
+  locator: Sec. 3.2 Technology, constraint TC1
+  quote: the receiving amplifier (Fig. 8) can compensate loss for a maximum DC-DC link distance of 80 km, absent in-line amplification.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.iris.osnr_penalty_tolerance
+  section: '8.4'
+  claim: OSNR penalty tolerable between sites with 400ZR
+  value: 11
+  unit: dB
+  kind: spec_max
+  conditions: {}
+  source_id: dukic_sigcomm_2020
+  locator: Sec. 3.2 Technology, constraint TC2
+  quote: With 400ZR, between sites, we can tolerate up to 11 dB OSNR penalty (Fig. 8).
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.iris.cost_ratio
+  section: '8.4'
+  claim: Iris cost relative to hub-and-spoke, and packet-switched distributed relative to Iris
+  value:
+  - 1.1
+  - 7
+  unit: 1 (factor)
+  kind: measured
+  conditions: {}
+  source_id: dukic_sigcomm_2020
+  locator: Abstract
+  quote: can be implemented at a cost within 1.1x of the simple hub-and-spoke topology, and 7x cheaper than a natural packet-switched
+    network.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: Abstract uses the multiplication sign; transcribed as x.
+- id: ch08.iris.dc_capacity_example
+  section: '8.4'
+  claim: Example per-DC DCI capacity and resulting fiber pairs (40 x 400G wavelengths per pair)
+  value:
+  - 160
+  - 10
+  unit: Tb/s; fiber pairs
+  kind: fact
+  conditions: {}
+  source_id: dukic_sigcomm_2020
+  locator: Sec. 4 Iris network planning (running example)
+  quote: Each of the 4 DCs has a capacity of 160 Tbps. With 400 Gbps for each of 40 wavelengths, this translates to = 10 fiber-pairs.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: A symbol before '= 10' was lost in extraction.
+- id: ch08.chisel.unused_spectrum
+  section: '8.4'
+  claim: 'Unused optical spectrum on a commercial cloud WAN: 75% of spans have >75% of spectrum free'
+  value: 75
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: kumar_nsdi_2024
+  locator: Abstract
+  quote: 75% of optical spectrum on 75% of fiber spans is unused.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+  notes: 'Sec. 3.2: C-band 191,100-195,900 GHz discretized into 128 pixels of 37.5 GHz; cause: router port capacity << fiber
+    capacity.'
+- id: ch08.chisel.port_saving
+  section: '8.4'
+  claim: Router ports saved by optical slices vs IP TE tunnels of equal capacity
+  value: 3.3
+  unit: 1 (factor)
+  kind: measured
+  conditions: {}
+  source_id: kumar_nsdi_2024
+  locator: Abstract
+  quote: Compared to IP tunnels of equivalent capacity, CHISEL consumes 3.3X fewer router ports.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.chisel.austin_nyc_reach
+  section: '8.4'
+  claim: Optical reach needed for an Austin-New York wavelength
+  value: 2800
+  unit: km
+  kind: fact
+  conditions: {}
+  source_id: kumar_nsdi_2024
+  locator: Sec. 3.1 Spectrum translates to network capacity
+  quote: the provisioned wavelength should have an optical reach roughly equivalent to the distance between the two cities
+    ≈ 2,800 km.
+  retrieved: '2026-11-02'
+  tier: A
+  confidence: high
+- id: ch08.ai.gemini_multi_dc
+  section: '8.5'
+  claim: Gemini Ultra trained on TPUv4 across multiple datacenters
+  value: 'Gemini Ultra: TPUv4 fleet across multiple datacenters; data parallelism across superpods'
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: gemini_team_arxiv_2023
+  locator: Sec. 3 Training Infrastructure
+  quote: Training Gemini Ultra used a large fleet of TPUv4 accelerators owned by Google across multiple datacenters.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: 'Sec. 3: SuperPods in multiple datacenters combined via Google''s intra- and inter-cluster network; model parallelism
+    within superpods, data parallelism across. No bandwidth or distance disclosed.'
+- id: ch08.ai.gemini_superpod
+  section: '8.5'
+  claim: TPUv4 SuperPod size
+  value: 4096
+  unit: chips
+  kind: fact
+  conditions: {}
+  source_id: gemini_team_arxiv_2023
+  locator: Sec. 3 Training Infrastructure
+  quote: TPUv4 accelerators are deployed in “SuperPods” of 4096 chips, each connected to a dedicated optical switch
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: OCS reconfigures 4x4x4 cubes into 3D tori in around 10 s.
+- id: ch08.ai.gemini_goodput
+  section: '8.5'
+  claim: Goodput of the largest Gemini training job (vs PaLM-era)
+  value:
+  - 85
+  - 97
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: gemini_team_arxiv_2023
+  locator: Sec. 3 Training Infrastructure
+  quote: the overall goodput for the largest-scale training job increased from 85% to 97%.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.ai.llama3_gpus
+  section: '8.5'
+  claim: H100 GPUs used to train Llama 3 405B
+  value: 16000
+  unit: GPUs
+  kind: fact
+  conditions: {}
+  source_id: llama3_arxiv_2024
+  locator: Sec. 3.3.1 Training Infrastructure
+  quote: Llama 3 405B is trained on up to 16K H100 GPUs, each running at 700W TDP with 80GB HBM3
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: '''16K'' recorded as 16000 (approximate).'
+- id: ch08.ai.llama3_cluster
+  section: '8.5'
+  claim: Llama 3 RoCE cluster size and pod size; all pods in one datacenter building
+  value:
+  - 24000
+  - 3072
+  unit: GPUs
+  kind: fact
+  conditions:
+    oversubscription_aggregation: '1:7'
+    gpus_per_rack: 16
+    racks_per_pod: 192
+  source_id: llama3_arxiv_2024
+  locator: Sec. 3.3.1, 'Network topology'
+  quote: eight such pods within the same datacenter building are connected via
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: 'Single-building design contrasts with Gemini multi-DC. Same bullet: ''Our RoCE-based AI cluster comprises 24K GPUs
+    connected by a three-layer Clos network''.'
+- id: ch08.ai.llama3_gpu_link
+  section: '8.5'
+  claim: Per-GPU interconnect rate in Llama 3 RoCE and InfiniBand clusters
+  value: 400
+  unit: Gb/s
+  kind: spec_typ
+  conditions: {}
+  source_id: llama3_arxiv_2024
+  locator: Sec. 3.3.1, 'Network'
+  quote: Both RoCE and Infiniband clusters leverage 400 Gbps interconnects between GPUs.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.ai.llama3_interruptions
+  section: '8.5'
+  claim: Unexpected interruptions during a 54-day period of Llama 3 405B pre-training
+  value: 419
+  unit: interruptions
+  kind: measured
+  conditions: {}
+  source_id: llama3_arxiv_2024
+  locator: Sec. 3.3.4 Reliability and Operational Challenges, Table 5
+  quote: The remaining 419 were unexpected interruptions, which are classified in Table 5.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: Of 466 total; ~78% attributed to confirmed or suspected hardware issues.
+- id: ch08.ai.diloco_comm_reduction
+  section: '8.5'
+  claim: DiLoCo communication reduction vs fully synchronous training at equal quality (8 workers, C4)
+  value: 500
+  unit: 1 (factor)
+  kind: measured
+  conditions: {}
+  source_id: douillard_diloco_arxiv_2023
+  locator: Abstract
+  quote: we show that DiLoCo on 8 workers performs as well as fully synchronous optimization while communicating 500 times
+    less.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+- id: ch08.ai.streaming_diloco_bw
+  section: '8.5'
+  claim: Peak inter-worker bandwidth reduction with Streaming DiLoCo
+  value: 100
+  unit: 1 (factor)
+  kind: measured
+  conditions: {}
+  source_id: douillard_streaming_diloco_arxiv_2025
+  locator: Abstract
+  quote: reach similar quality as before, but reducing required bandwidth by two orders of magnitude.
+  retrieved: '2026-11-02'
+  tier: B
+  confidence: high
+  notes: '''two orders of magnitude'' recorded as 100.'
+- id: ch08.ai.fairwater_new_fiber_guthrie
+  section: '8.5'
+  claim: New fiber miles Microsoft delivered across the US in the prior year for its AI network (Guthrie blog)
+  value: 120000
+  unit: fiber-mi
+  kind: fact
+  conditions: {}
+  source_id: msft_blog_2025_11_fairwater_atlanta
+  locator: Section 'Planet scale'
+  quote: we delivered over 120,000 new fiber miles across the US last year
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'DISAGREEMENT in framing: Microsoft Source says ''deployed 120,000 miles of dedicated fiber ... increasing its overall
+    mileage by more than 25% in one year''; SDxCentral reads it as a total of ~120,000.'
+- id: ch08.ai.fairwater_fiber_source
+  section: '8.5'
+  claim: Microsoft AI WAN dedicated fiber deployed and growth of total mileage (Microsoft Source)
+  value:
+  - 120000
+  - 25
+  unit: mi; %
+  kind: fact
+  conditions: {}
+  source_id: microsoft_source_fairwater_2025
+  locator: Section 'Connecting sites to work as an AI superfactory'
+  quote: The company has deployed 120,000 miles of dedicated fiber for the network, increasing its overall mileage by more
+    than 25% in one year.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Route vs fiber miles not specified here. If 120,000 is the one-year increment at >25% growth, the prior total was
+    below 480,000 (not stated by Microsoft).
+- id: ch08.ai.fairwater_total_misread
+  section: '8.5'
+  claim: 'Press reading: Microsoft total fiber network about 120,000 miles'
+  value: 120000
+  unit: mi
+  kind: fact
+  conditions: {}
+  source_id: sdxcentral_ai_wan_2025
+  locator: Article body
+  quote: increased its overall fiber network mileage by more than 25% to support the project in just a year, bringing its
+    total miles to around 120,000.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: Inconsistent with Microsoft's own wording ('new fiber miles'); recorded for the contested box.
+- id: ch08.ai.fairwater_gpu_bw
+  section: '8.5'
+  claim: GPU-to-GPU scale-out bandwidth in Fairwater two-tier Ethernet backend
+  value: 800
+  unit: Gb/s
+  kind: spec_typ
+  conditions: {}
+  source_id: msft_blog_2025_11_fairwater_atlanta
+  locator: Section on scale-out networking
+  quote: a two-tier, ethernet-based backend network that supports massive cluster sizes with 800 Gbps GPU-to-GPU connectivity.
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+- id: ch08.ai.fairwater_multisite
+  section: '8.5'
+  claim: Fairwater Atlanta site connected to Wisconsin site via dedicated AI WAN
+  value: Atlanta Fairwater (operational Oct 2025) linked to Wisconsin Fairwater via AI WAN
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: msft_blog_2025_11_fairwater_atlanta
+  locator: Paragraph 1
+  quote: This purpose-built datacenter is connected to our first Fairwater site in Wisconsin, prior generations of AI supercomputers
+    and the broader Azure global datacenter footprint
+  retrieved: '2026-11-02'
+  tier: C
+  confidence: low
+  notes: 'No inter-site bandwidth or latency disclosed (SDxCentral: ''no exact capacity details were shared'').'

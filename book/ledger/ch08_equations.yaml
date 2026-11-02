@@ -1,0 +1,75 @@
+equations:
+- id: ch08.eq.peering_breakeven
+  section: '8.2'
+  latex: T_{\mathrm{be}} = \frac{C_{\mathrm{peer}}}{p_{\mathrm{tr}}}
+  symbols:
+  - T_{\mathrm{be}}
+  - C_{\mathrm{peer}}
+  - p_{\mathrm{tr}}
+  source_id: norton_drpeering_transit_2010
+  locator: 'Definition ''Peering Break Even Point'' and break-even table (e.g. 2010: $10,000 / $5 per Mbps = 2000 Mbps)'
+  notes: 'Source states it in words: the point where the unit cost of peering equals the unit cost of transit. T_be: break-even
+    peered traffic (Mb/s); C_peer: monthly peering cost (USD/month); p_tr: transit price (USD per Mb/s per month, 95th percentile).
+    New symbols, not in notation.yaml. Valid only below the effective port bandwidth (7600 Mb/s for 10G).'
+- id: ch08.eq.b4_capacity_asymmetry
+  section: '8.3'
+  latex: a = \frac{\overline{C_i} - \min_i C_i}{\overline{C_i}}
+  symbols:
+  - a
+  - C_i
+  source_id: hong_sigcomm_2018
+  locator: Sec. 2.2, definition of capacity asymmetry of a site-level link (Figure 2)
+  notes: 'Source: ''(avg_i(C_i) - min_i(C_i))/avg_i(C_i), where C_i is the total active capacity of each supernode i toward
+    next site''. Symbol C_i clashes with notation.yaml C (Shannon capacity); rename in prose (e.g. B_i). a is new.'
+- id: ch08.eq.swan_mcf
+  section: '8.3'
+  latex: \max \sum_{i,j} w_j\, b_{i,j}\ \text{s.t.}\ b_{\mathrm{low}} \le b_i \le \min(d_i, b_{\mathrm{high}}),\ \sum_{(i,j)\ni
+    l} b_{i,j} \le c_l^{\mathrm{rem}}\ \forall l,\ b_{i,j}\ge 0
+  symbols:
+  - b_{i,j}
+  - b_i
+  - w_j
+  - d_i
+  - c_l
+  source_id: hong_swan_sigcomm_2013
+  locator: Sec. 4.2, Figure 6 'Computing allocations over a set of tunnels' (function MCF)
+  notes: 'b_i = sum_j b_{i,j}: rate of flow i, b_{i,j} on tunnel j; w_j tunnel weight (prefers shorter paths); d_i demand;
+    c_l^rem remaining capacity of link l after higher-priority classes; flows in set F frozen at f_i. Extraction of the figure
+    was partly garbled; link constraint reconstructed from the figure structure and text, so verify against the PDF before
+    use. SWAN approximates max-min fairness by solving this LP for successive [b_low, b_high] bands.'
+- id: ch08.eq.radwan_churn
+  section: '8.4'
+  latex: \mathrm{churn}(l) = f_l, \qquad \mathcal{C} = \sum_{l} \mathrm{churn}(l)
+  symbols:
+  - f_l
+  - \mathcal{C}
+  source_id: singh_sigcomm_2018
+  locator: Sec. 4.1 Quantifying network churn, Eqs. (1) and (2)
+  notes: 'f_l: rate of traffic on link l whose capacity is changed (traffic disrupted for ~1 min while the BVT reconfigures).
+    Source writes the total as C; renamed calligraphic C to avoid clash with Shannon capacity C.'
+- id: ch08.eq.radwan_objective
+  section: '8.4'
+  latex: \max \sum_i b_i - \lambda \sum_l \mathrm{churn}(l)\ \text{s.t.}\ 0\le b_i\le d_i,\ b_{i,j}\ge 0,\ \sum_{i,j} I(j,l)\,
+    b_{i,j} \le c_l + p_l\ \forall l,\ \sum_{j\in T_i} b_{i,j} \ge b_i
+  symbols:
+  - b_i
+  - b_{i,j}
+  - d_i
+  - c_l
+  - p_l
+  - \lambda
+  - I(j,l)
+  - T_i
+  source_id: singh_sigcomm_2018
+  locator: Sec. 4.2, Algorithm 1 (lines 11-16)
+  notes: 'p_l: potential capacity increase of link l from its SNR (e.g. +50 Gb/s at 10.2 dB); I(j,l)=1 if tunnel j uses link
+    l; T_i tunnels of flow i. The churn weight''s Greek letter was lost in extraction (''Importance of .''); written here
+    as lambda. lambda clashes with wavelength in notation.yaml; rename in prose (e.g. kappa).'
+- id: ch08.eq.blast_radius
+  section: '8.3'
+  latex: \mathrm{BR} = \frac{\text{tier-0 traffic at risk from a controller failure}}{\text{total tier-0 traffic}}
+  symbols:
+  - \mathrm{BR}
+  source_id: krishnaswamy_nsdi_2022
+  locator: Sec. 2.2, Definition 1 (Blast Radius)
+  notes: 'Source definition in words: ''the fraction of customer or tier-0 traffic at risk by a TE controller failure''.'

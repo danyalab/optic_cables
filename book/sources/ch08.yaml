@@ -1,0 +1,501 @@
+sources:
+- id: lumen_8k_att_sale_2025
+  type: press
+  title: Lumen Technologies Advances Enterprise Market Focus with Sale of Consumer Fiber-to-the-Home Business to AT&T (Exhibit
+    99.1)
+  authors: Lumen Technologies, Inc.
+  venue: SEC Form 8-K Exhibit 99.1 (press release), 2025-05-21
+  year: 2025
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/18926/000119312525124002/d913721dex991.htm
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: lumen_pr_ai_build_2025
+  type: press
+  title: Lumen Accelerates Multi-Billion-Dollar Network Expansion to Meet Soaring AI Demand
+  authors: Lumen Technologies, Inc.
+  venue: Business Wire press release, 2025-09-22
+  year: 2025
+  doi: ''
+  url: https://ir.lumen.com/news/news-details/2025/Lumen-Accelerates-Multi-Billion-Dollar-Network-Expansion-to-Meet-Soaring-AI-Demand/default.aspx
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: lightwave_lumen_pcf_2025
+  type: press
+  title: Lumen says Trump's AI action plan bolsters its fiber network plans
+  authors: S. Buckley
+  venue: Lightwave Online, 2025-08-18
+  year: 2025
+  doi: ''
+  url: https://www.lightwaveonline.com/home/article/55310425/lumen-says-trumps-ai-action-plan-bolsters-its-fiber-network-plans
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: att_10k_2025
+  type: report
+  title: AT&T Inc. Annual Report on Form 10-K for the fiscal year ended December 31, 2025
+  authors: AT&T Inc.
+  venue: SEC Form 10-K (incl. XBRL note R16, Acquisitions)
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: att_ar_2025
+  type: report
+  title: AT&T 2025 Annual Report (complete)
+  authors: AT&T Inc.
+  venue: Annual report to shareholders
+  year: 2026
+  doi: ''
+  url: https://investors.att.com/~/media/Files/A/ATT-IR-V2/financial-reports/annual-reports/2025/2025-annual-report-complete.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: verizon_10k_2025
+  type: report
+  title: Verizon Communications Inc. Annual Report on Form 10-K for the fiscal year ended December 31, 2025
+  authors: Verizon Communications Inc.
+  venue: SEC Form 10-K
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: verizon_8k_q4_2025
+  type: press
+  title: Verizon fourth-quarter 2025 earnings release (Exhibit 99)
+  authors: Verizon Communications Inc.
+  venue: SEC Form 8-K Exhibit 99, 2026-01-30
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/732712/000073271226000003/a2025q4exhibit99.htm
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: zayo_pr_5000_route_miles_2025
+  type: press
+  title: Zayo Announces Construction of 5,000+ New Fiber Route Miles as AI Demand is Forecasted to Grow 2-6X by 2030
+  authors: Zayo Group
+  venue: zayo.com newsroom, 2025-01-21
+  year: 2025
+  doi: ''
+  url: https://www.zayo.com/newsroom/zayo-announces-construction-of-5000-new-fiber-route-miles-as-ai-demand-is-forecasted-to-grow-2-6x-by-2030/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: zayo_bw_5000_route_miles_2025
+  type: press
+  title: Zayo Announces Construction of 5,000+ New Fiber Route Miles as AI Demand is Forecasted to Grow 2-6X by 2030 (Business
+    Wire version)
+  authors: Zayo Group
+  venue: Business Wire, 2025-01-21
+  year: 2025
+  doi: ''
+  url: https://www.businesswire.com/news/home/20250121450632/en/Zayo-Announces-Construction-of-5000-New-Fiber-Route-Miles-as-AI-Demand-is-Forecasted-to-Grow-2-6X-by-2030
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: zayo_pr_400g_routes_2025
+  type: press
+  title: Zayo Levels Up Its AI-Ready Infrastructure with New Routes and 100% 400G Enablement
+  authors: Zayo Group
+  venue: zayo.com newsroom / Business Wire, 2025-07-15
+  year: 2025
+  doi: ''
+  url: https://www.zayo.com/newsroom/zayo-levels-up-its-ai-ready-infrastructure-with-new-routes-and-100-400g-enablement/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: zayo_blog_400g_routes_2025
+  type: press
+  title: 'Building the Foundation for the Future: Zayo''s 100% 400G-enabled Network, Purpose-Built AI Routes, and IP Expansion'
+  authors: Zayo Group
+  venue: zayo.com resources blog, 2025-07-15
+  year: 2025
+  doi: ''
+  url: https://www.zayo.com/resources/building-the-foundation-for-the-future-zayos-100-400g-enabled-network-purpose-built-ai-routes-and-ip-expansion/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: ager_sigcomm_2012
+  type: conference
+  title: Anatomy of a Large European IXP
+  authors: B. Ager, N. Chatzis, A. Feldmann, N. Sarrar, S. Uhlig, W. Willinger
+  venue: Proc. ACM SIGCOMM 2012, Helsinki
+  year: 2012
+  doi: 10.1145/2342356.2342393
+  url: https://conferences.sigcomm.org/sigcomm/2012/paper/sigcomm/p163.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: decix_highlights_2024
+  type: press
+  title: 2024 highlights from DE-CIX
+  authors: DE-CIX
+  venue: de-cix.net news, 2024-12-19
+  year: 2024
+  doi: ''
+  url: https://www.de-cix.net/en/about-de-cix/news/2024-highlights-from-de-cix
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: decix_peak_report_2024
+  type: press
+  title: 'Traffic peak report: New records across the globe'
+  authors: DE-CIX
+  venue: de-cix.net news, 2024-10-24
+  year: 2024
+  doi: ''
+  url: https://www.de-cix.net/en/about-de-cix/news/traffic-peak-report-new-records-across-the-globe
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: decix_pr_79eb_2026
+  type: press
+  title: 'DE-CIX: Global Data Traffic Volume Hits Record-Breaking 79 Exabytes at Internet Exchanges in 2025'
+  authors: DE-CIX
+  venue: de-cix.net press release, 2026-01-20
+  year: 2026
+  doi: ''
+  url: https://www.de-cix.net/en/about-de-cix/media/press-releases/de-cix-global-data-traffic-volume-hits-record-breaking-79-exabytes-at-internet-exchanges-in-2025
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: decix_pr_25tbps_2025
+  type: press
+  title: DE-CIX hits new global peak traffic record with 25 terabits per second data throughput
+  authors: DE-CIX
+  venue: de-cix.net press release, 2025-04-09
+  year: 2025
+  doi: ''
+  url: https://www.de-cix.net/en/about-de-cix/media/press-releases/de-cix-hits-new-global-peak-traffic-record-with-25-terabits-per-second-data-throughput
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: nokia_decix_ny_pr_2025
+  type: press
+  title: Nokia selected by DE-CIX to upgrade New York's largest Internet Exchange backbone
+  authors: Nokia Oyj / DE-CIX
+  venue: GlobeNewswire press release, 2025-02-03
+  year: 2025
+  doi: ''
+  url: https://rss.globenewswire.com/news-release/2025/02/03/3019325/0/en/nokia-selected-by-de-cix-to-upgrade-new-york-s-largest-internet-exchange-backbone.html
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: equinix_10k_2025
+  type: report
+  title: Equinix, Inc. Annual Report on Form 10-K for the fiscal year ended December 31, 2025
+  authors: Equinix, Inc.
+  venue: SEC Form 10-K (filed 2026-02-11)
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: equinix_ar_2025
+  type: report
+  title: Equinix Annual Report 2025
+  authors: Equinix, Inc.
+  venue: Annual report to shareholders
+  year: 2026
+  doi: ''
+  url: https://www.sec.gov/Archives/edgar/data/1101239/000110123926000075/EQIXAnnualRpt2025PRINT.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: coresite_pr_one_wilshire_2025
+  type: press
+  title: CoreSite Completes Critical Upgrade of One Wilshire Building Infrastructure
+  authors: CoreSite (American Tower)
+  venue: coresite.com news, 2025-08-14
+  year: 2025
+  doi: ''
+  url: https://www.coresite.com/news/coresite-completes-critical-upgrade-of-one-wilshire-building-infrastructure
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: onewilshire_mmr_page
+  type: press
+  title: Meet Me Room - One Wilshire
+  authors: One Wilshire (building owner website)
+  venue: onewilshire.com, undated web page (year = retrieval year)
+  year: 2026
+  doi: ''
+  url: https://onewilshire.com/connectivity/meet-me-room/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: hudsonix_datacenters_page
+  type: press
+  title: Hudson Interxchange Data Centers (60 Hudson Street)
+  authors: Hudson Interxchange
+  venue: hudsonix.com, undated web page (year = retrieval year)
+  year: 2026
+  doi: ''
+  url: https://hudsonix.com/data-centers/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: sixty_hudson_owner_page
+  type: press
+  title: '60 Hudson: Availability'
+  authors: 60 Hudson Street (building owner website)
+  venue: 60hudsonstreet.com, undated web page (year = retrieval year)
+  year: 2026
+  doi: ''
+  url: https://60hudsonstreet.com/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: norton_drpeering_transit_2010
+  type: whitepaper
+  title: Internet Transit Prices - Historical and Projected
+  authors: W. B. Norton
+  venue: DrPeering International white paper (last updated August 2010)
+  year: 2010
+  doi: ''
+  url: https://www.drpeering.net/white-papers/Internet-Transit-Pricing-Historical-And-Projected.php
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: norton_peering_playbook_2014
+  type: book
+  title: 'The Internet Peering Playbook: Connecting to the Core of the Internet, ch. 2 ''Internet Transit Prices'''
+  authors: W. B. Norton
+  venue: DrPeering Press (HTML edition)
+  year: 2014
+  doi: ''
+  url: https://drpeering.net/HTML_IPP/chapters/ch02-Internet-Transit/ch02.1-Internet-Transit-Prices
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: jain_sigcomm_2013
+  type: conference
+  title: 'B4: Experience with a Globally-Deployed Software Defined WAN'
+  authors: S. Jain, A. Kumar, S. Mandal, J. Ong, L. Poutievski, A. Singh, S. Venkata, J. Wanderer, J. Zhou, M. Zhu, J. Zolla,
+    U. Hölzle, S. Stuart, A. Vahdat
+  venue: Proc. ACM SIGCOMM 2013, Hong Kong
+  year: 2013
+  doi: 10.1145/2486001.2486019
+  url: https://cseweb.ucsd.edu/~vahdat/papers/b4-sigcomm13.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: hong_sigcomm_2018
+  type: conference
+  title: 'B4 and After: Managing Hierarchy, Partitioning, and Asymmetry for Availability and Scale in Google''s Software-Defined
+    WAN'
+  authors: C.-Y. Hong, S. Mandal, M. Al-Fares, M. Zhu, R. Alimi, K. Naidu B., C. Bhagat, S. Jain, J. Kaimal, S. Liang, K.
+    Mendelev, S. Padgett, F. Rabe, S. Ray, M. Tewari, M. Tierney, M. Zahn, J. Zolla, J. Ong, A. Vahdat
+  venue: Proc. ACM SIGCOMM 2018, Budapest
+  year: 2018
+  doi: 10.1145/3230543.3230545
+  url: https://courses.cs.duke.edu/compsci514/cps214/current/readings/b4after-sigcomm18.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: hong_swan_sigcomm_2013
+  type: conference
+  title: Achieving High Utilization with Software-Driven WAN
+  authors: C.-Y. Hong, S. Kandula, R. Mahajan, M. Zhang, V. Gill, M. Nanduri, R. Wattenhofer
+  venue: Proc. ACM SIGCOMM 2013, Hong Kong
+  year: 2013
+  doi: 10.1145/2486001.2486012
+  url: https://conferences.sigcomm.org/sigcomm/2013/papers/sigcomm/p15.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: krishnaswamy_nsdi_2022
+  type: conference
+  title: Decentralized cloud wide-area network traffic engineering with BLASTSHIELD
+  authors: U. Krishnaswamy, R. Singh, N. Bjørner, H. Raj
+  venue: Proc. 19th USENIX NSDI 2022, Renton WA
+  year: 2022
+  doi: ''
+  url: https://www.usenix.org/system/files/nsdi22-paper-krishnaswamy.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: denis_sigcomm_2023
+  type: conference
+  title: 'EBB: Reliable and Evolvable Express Backbone Network in Meta'
+  authors: M. Denis, Y. Yao, A. Hatch, Q. Zhang, C. L. Lim, S. Zhang, K. Sugrue, H. Kwok, M. Jimenez Fernandez, P. Lapukhov,
+    S. Hebbani, G. Nagarajan, O. Baldonado, L. Gao, Y. Zhang
+  venue: Proc. ACM SIGCOMM 2023 (Experience track), New York
+  year: 2023
+  doi: 10.1145/3603269.3604860
+  url: https://dl.acm.org/doi/pdf/10.1145/3603269.3604860
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: zhao_commag_2013
+  type: journal
+  title: The prospect of inter-data-center optical networks
+  authors: X. Zhao, V. Vusirikala, B. Koley, V. Kamalov, T. Hofmeister
+  venue: IEEE Communications Magazine 51(9), 32-38
+  year: 2013
+  doi: 10.1109/MCOM.2013.6588647
+  url: https://cpham.perso.univ-pau.fr/ENSEIGNEMENT/PAU-UPPA/RHD/PAPER/OpticalDataCenter.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: singh_sigcomm_2018
+  type: conference
+  title: 'RADWAN: Rate Adaptive Wide Area Network'
+  authors: R. Singh, M. Ghobadi, K.-T. Foerster, M. Filer, P. Gill
+  venue: Proc. ACM SIGCOMM 2018, Budapest
+  year: 2018
+  doi: 10.1145/3230543.3230570
+  url: https://www.racheesingh.com/papers/18-sigcomm-radwan.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: singh_radwan_preprint_2018
+  type: report
+  title: 'RADWAN: Rate Adaptive Wide Area Network (pre-publication version)'
+  authors: R. Singh, M. Ghobadi, K.-T. Foerster, M. Filer, P. Gill
+  venue: Microsoft Research upload, 2018-03
+  year: 2018
+  doi: ''
+  url: https://www.microsoft.com/en-us/research/wp-content/uploads/2018/03/Rate_Adaptive_WAN.pdf
+  access: abstract_only
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: filer_jocn_2019
+  type: journal
+  title: Low-margin optical networking at cloud scale [Invited]
+  authors: M. Filer, J. Gaudette, Y. Yin, D. Billor, Z. Bakhtiari, J. L. Cox
+  venue: J. Opt. Commun. Netw. 11(10), C94-C108
+  year: 2019
+  doi: 10.1364/JOCN.11.000C94
+  url: https://doi.org/10.1364/JOCN.11.000C94
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: dukic_sigcomm_2020
+  type: conference
+  title: 'Beyond the mega-data center: networking multi-data center regions'
+  authors: V. Dukic, G. Khanna, C. Gkantsidis, T. Karagiannis, F. Parmigiani, A. Singla, M. Filer, J. L. Cox, A. Ptasznik,
+    N. Harland, W. Saunders, C. Belady
+  venue: Proc. ACM SIGCOMM 2020 (virtual)
+  year: 2020
+  doi: 10.1145/3387514.3406220
+  url: https://www.microsoft.com/en-us/research/wp-content/uploads/2020/08/Iris_SIGCOMM2020.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: kumar_nsdi_2024
+  type: conference
+  title: 'CHISEL: An optical slice of the wide-area network'
+  authors: A. Vijaya Kumar, B. Owens, N. Bjørner, B. Guan, Y. Yin, P. Bahl, R. Singh
+  venue: Proc. 21st USENIX NSDI 2024, Santa Clara
+  year: 2024
+  doi: ''
+  url: https://www.usenix.org/system/files/nsdi24-kumar.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: '2026-11-02'
+- id: gemini_team_arxiv_2023
+  type: report
+  title: 'Gemini: A Family of Highly Capable Multimodal Models'
+  authors: Gemini Team, Google
+  venue: arXiv:2312.11805 (technical report)
+  year: 2023
+  doi: 10.48550/arXiv.2312.11805
+  url: https://arxiv.org/abs/2312.11805
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: douillard_diloco_arxiv_2023
+  type: report
+  title: 'DiLoCo: Distributed Low-Communication Training of Language Models'
+  authors: A. Douillard, Q. Feng, A. A. Rusu, R. Chhaparia, Y. Donchev, A. Kuncoro, M. Ranzato, A. Szlam, J. Shen
+  venue: arXiv:2311.08105 (preprint)
+  year: 2023
+  doi: 10.48550/arXiv.2311.08105
+  url: https://arxiv.org/abs/2311.08105
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: douillard_streaming_diloco_arxiv_2025
+  type: report
+  title: 'Streaming DiLoCo with overlapping communication: Towards a Distributed Free Lunch'
+  authors: A. Douillard, Y. Donchev, K. Rush, S. Kale, Z. Charles, Z. Garrett, G. Teston, D. Lacey, R. McIlroy, J. Shen, A.
+    Ramé, A. Szlam, M. Ranzato, P. Barham
+  venue: arXiv:2501.18512 (preprint)
+  year: 2025
+  doi: 10.48550/arXiv.2501.18512
+  url: https://arxiv.org/abs/2501.18512
+  access: open
+  language: en
+  tier: B
+  retrieved: '2026-11-02'
+- id: microsoft_source_fairwater_2025
+  type: press
+  title: 'From Wisconsin to Atlanta: Microsoft connects datacenters to build its first AI superfactory'
+  authors: C. Bolgar (Microsoft Source)
+  venue: Microsoft Source feature, 2025-11-12
+  year: 2025
+  doi: ''
+  url: https://news.microsoft.com/source/features/ai/from-wisconsin-to-atlanta-microsoft-connects-datacenters-to-build-its-first-ai-superfactory/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
+- id: sdxcentral_ai_wan_2025
+  type: press
+  title: Microsoft details 'AI WAN' connecting distributed Fairwater AI superfactory
+  authors: B. Wodecki
+  venue: SDxCentral, 2025-11-13
+  year: 2025
+  doi: ''
+  url: https://www.sdxcentral.com/news/microsoft-details-ai-wan-connecting-distributed-fairwater-ai-superfactory/
+  access: open
+  language: en
+  tier: C
+  retrieved: '2026-11-02'
