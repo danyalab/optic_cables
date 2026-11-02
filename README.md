@@ -13,6 +13,10 @@ A source-verified technical book on optical interconnect and networks, from fibe
 
 Shared conventions live in `book/notation.yaml`. Run `make check` before committing.
 
+## Reading the chapters
+
+`book/chapters/chNN.md` is source: numbers appear as `{{L:...}}` (sourced) and `{{C:...}}` (computed) references that the build fills in. To read a chapter on GitHub, open `book/rendered/chNN.md`, which is generated with values, citations, section numbers and math resolved. The typeset version is `dist/chNN.html` (published as an artifact).
+
 ## Status
 
 Gate G0 approved. Chapter 1 (pilot) drafted, ledger blind-verified (see `book/verify/`), awaiting review. Build with `make build CH=01`; output in `dist/`.
