@@ -51,5 +51,5 @@ symbols:
   - {symbol: "\\mathrm{GSNR}", meaning: "generalized SNR including ASE and NLI", unit: "1 (dB in text)", first_defined: "1.6"}
   - {symbol: "\\Delta f", meaning: "WDM channel spacing", unit: "Hz", first_defined: "1.6"}
   - {symbol: "B_{\\mathrm{ch}}", meaning: "channel (signal) bandwidth", unit: "Hz", first_defined: "1.6"}
-  - {symbol: "\\varepsilon", meaning: "EGN coherent-accumulation exponent correction", unit: "1", first_defined: "1.6"}
+  - {symbol: "\\varepsilon", meaning: "coherent NLI accumulation exponent, P_NLI ∝ N_s^{1+ε} (GN model); distinct from the EGN format correction", unit: "1", first_defined: "1.6"}
   - {symbol: "C", meaning: "Shannon capacity", unit: "bit/s or bit/symbol", first_defined: "1.6"}
