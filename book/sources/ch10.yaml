@@ -1,4 +1,3 @@
-# Chapter 10 sources. Reused, defined elsewhere: yofc_ar_2025 (ch01_c); innolight_ar_2025, eoptolink_ar_2025, accelink_ar_2025, hgtech_ar_2025, nvidia_photonics_press_2025, nvidia_cpo_blog_2025 (ch04); bis_entity_list_2021_12_17 (ch07).
 sources:
 - id: bis_fr_2022_21658
   type: standard
@@ -464,7 +463,7 @@ sources:
   retrieved: 2026-11-02
 - id: yuanjie_hk_prospectus_2026
   type: report
-  title: 陕西源杰半导体科技股份有限公司 H股上市文件（業務章節，里程碑表）
+  title: 陕西源杰半导体科技股份有限公司 H股上市文件（業務章節，里程碑表） (H-share Application Proof, draft, 草擬本)
   authors: 陕西源杰半导体科技股份有限公司 (Yuanjie Semiconductor)
   venue: HKEX listing document, Mar 2026
   year: 2026
@@ -594,6 +593,7 @@ sources:
   language: zh
   tier: C
   retrieved: 2026-11-02
+  notes: ' Verifier: title mislabeled 首次覆盖.'
 - id: eetchina_2026_07_optical_chips
   type: press
   title: 国产高功率光芯片实现超越，高端25G突破还远？

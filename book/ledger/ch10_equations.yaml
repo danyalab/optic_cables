@@ -1,4 +1,3 @@
-# Chapter 10 equations (concentration metrics, BIS 3A090 performance metrics).
 equations:
 - id: ch10.eq.hhi
   section: '10.1'
@@ -11,7 +10,10 @@ equations:
   locator: Guideline 1, section 2.1, p. 5
   notes: 'Source states it in words: ''The HHI is defined as the sum of the squares of the market shares''. Shares s_i in
     percent (0-100), so HHI ranges 0-10,000. Symbols HHI, s_i, N not in notation.yaml; propose first_defined 10.1 (s_i: market
-    share of firm i, percent; N: number of firms in a tier). N is already used elsewhere? Check notation.yaml before merging.'
+    share of firm i, percent; N: number of firms in a tier). N is already used elsewhere? Check notation.yaml before merging.
+    Verifier (PARTIAL): Correct; shares in percent gives 0-10,000. Tier caveat as for HHI records. Shares in percent give
+    0 to 10,000.'
+  verified: partial
 - id: ch10.eq.hhi_equal_firms
   section: '10.1'
   latex: \mathrm{HHI}_{\mathrm{equal}} = N \left(\frac{100}{N}\right)^{2} = \frac{10^{4}}{N}
@@ -23,6 +25,7 @@ equations:
   notes: 'Source gives worked instances only: ''the HHI for a market of five equal firms is 2,000 (5 x 20^2 = 2,000) and for
     six equal firms is 1,667''. The closed form is the direct generalization; the writer should present it as derived. 1/HHI
     (in fractional shares) is the ''numbers-equivalent'' count of equal firms.'
+  verified: match
 - id: ch10.eq.tpp
   section: '10.6'
   latex: \mathrm{TPP} = 2 \times \mathrm{MacTOPS} \times b_{\mathrm{op}}
@@ -35,6 +38,7 @@ equations:
   notes: 'Source: ''Total processing performance (TPP) is 2 x MacTOPS x bit length of the operation, aggregated over all processing
     units on the integrated circuit.'' MacTOPS = theoretical peak tera multiply-accumulates per second; b_op = largest input
     bit length of the multiply. Dense (non-sparse) rate. Same text introduced by 88 FR 73458 (Oct 2023).'
+  verified: match
 - id: ch10.eq.tpp_aggregate
   section: '10.6'
   latex: \mathrm{TPP} = \sum_{k=1}^{n} \mathrm{TPP}_k
@@ -44,6 +48,7 @@ equations:
   source_id: bis_fr_2025_02655
   locator: ECCN 3A090, Technical Note 2, item 1.d
   notes: 'Source: ''TPP = TPP1 + TPP2 + . . . . + TPPn (where n is the number or processing units on the integrated circuit)''.'
+  verified: match
 - id: ch10.eq.performance_density
   section: '10.6'
   latex: \mathrm{PD} = \frac{\mathrm{TPP}}{A_{\mathrm{die}}}
@@ -55,3 +60,4 @@ equations:
   locator: ECCN 3A090, Technical Note 2, item 4
   notes: 'Source: ''Performance density is TPP divided by applicable die area'', die area in mm^2 including all logic dies
     made on a non-planar-transistor node. A_die is new; do not confuse with A_eff (1.1).'
+  verified: match

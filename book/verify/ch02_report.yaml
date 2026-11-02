@@ -789,7 +789,7 @@ results:
   status: PARTIAL
   found_value: Rs (N+B-1)(2log2(N+B-1)+4)/B
   found_locator: Ip 2008, Sect. 5.1.4
-  evidence: An FFT-based implementation has a complexity of Rs ( ) ( ) N + B −1 ( ) 2log2 N + B −1 + 4 B
+  evidence: complexity of Rs ( ) ( ) N + B −1 ( ) 2log2 N + B −1 + 4 B
   action: Glyph order consistent with division by B (only dimensionally valid reading); still confirm against typeset PDF. Fix locator to 5.1.4.
 - id: ch02.eq.lms_mmse
   status: PARTIAL

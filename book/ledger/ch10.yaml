@@ -1,5 +1,3 @@
-# Chapter 10 ledger: supply chain and geopolitics. Retrieval agent output, 2026-11-02.
-# Tier C records are for contested boxes only. Reused sources: yofc_ar_2025 (ch01_c); innolight/eoptolink/accelink/hgtech _ar_2025, nvidia_photonics_press_2025, nvidia_cpo_blog_2025 (ch04); bis_entity_list_2021_12_17 (ch07).
 records:
 - id: ch10.chain.hhi_highly_concentrated
   section: '10.1'
@@ -14,9 +12,13 @@ records:
   quote: Markets with an HHI greater than 1,800 are highly concentrated, and a change of more than 100 points is a significant
     increase.
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
-  notes: Regulatory convention, not a physical law; useful as a yardstick for per-tier concentration in 10.1.
+  notes: 'Regulatory convention, not a physical law; useful as a yardstick for per-tier concentration in 10.1. Verifier (PARTIAL):
+    Value and quote verified. Tier: the Merger Guidelines are an agency policy statement, not a statute or regulation; PIPELINE
+    tier A list does not cover them. Either record tier B (government report) or have the orchestrator rule that agency guidelines
+    count as A. Agency policy statement (Merger Guidelines), not a regulation: tier B.'
+  verified: partial_fixed
 - id: ch10.chain.hhi_monopoly
   section: '10.1'
   claim: Maximum HHI (single-firm market) with shares in percent
@@ -28,9 +30,13 @@ records:
   locator: Guideline 1, section 2.1, p. 5
   quote: grows larger as the market becomes more concentrated, reaching 10,000 in a market with a single firm.
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
-  notes: ''
+  notes: 'Verifier (PARTIAL): Value and quote verified. Tier: the Merger Guidelines are an agency policy statement, not a
+    statute or regulation; PIPELINE tier A list does not cover them. Either record tier B (government report) or have the
+    orchestrator rule that agency guidelines count as A. Agency policy statement (Merger Guidelines), not a regulation: tier
+    B.'
+  verified: partial_fixed
 - id: ch10.chain.hhi_significant_change
   section: '10.1'
   claim: HHI increase regarded as significant
@@ -43,9 +49,13 @@ records:
   quote: Markets with an HHI greater than 1,800 are highly concentrated, and a change of more than 100 points is a significant
     increase.
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
-  notes: ''
+  notes: 'Verifier (PARTIAL): Value and quote verified. Tier: the Merger Guidelines are an agency policy statement, not a
+    statute or regulation; PIPELINE tier A list does not cover them. Either record tier B (government report) or have the
+    orchestrator rule that agency guidelines count as A. Agency policy statement (Merger Guidelines), not a regulation: tier
+    B.'
+  verified: partial_fixed
 - id: ch10.chain.coherent_fy25_revenue
   section: '10.1'
   claim: Coherent Corp. total revenue, fiscal year ended 30 Jun 2025
@@ -61,6 +71,7 @@ records:
   tier: B
   confidence: high
   notes: Columns are FY2025, FY2024, FY2023 in USD thousands.
+  verified: match
 - id: ch10.chain.coherent_fy25_networking
   section: '10.1'
   claim: Coherent Networking segment revenue, FY2025
@@ -79,6 +90,7 @@ records:
   notes: Read via a verbatim mirror of the 10-K MD&A (moneycontroller.co.uk) cross-checked against the investor-presentation
     quarterly Networking sums (945+897+816+763=3,421). Segments realigned to Datacenter & Communications / Industrial from
     FY2026.
+  verified: match
 - id: ch10.chain.coherent_fy24_networking
   section: '10.1'
   claim: Coherent Networking segment revenue, FY2024
@@ -95,6 +107,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.lumentum_fy25_revenue
   section: '10.1'
   claim: Lumentum total net revenue, fiscal year ended 28 Jun 2025
@@ -111,6 +124,7 @@ records:
   confidence: high
   notes: Earnings release furnished on Form 8-K and reproduced in 10-K filing bundles; the ARS CEO letter independently states
     'Full year revenue grew 21 percent to $1.65 billion'.
+  verified: match
 - id: ch10.chain.lumentum_fy25_cloud_networking
   section: '10.1'
   claim: Lumentum Cloud & Networking segment net revenue, FY2025
@@ -126,6 +140,7 @@ records:
   tier: B
   confidence: high
   notes: Consistent with ARS letter 'Segment revenue grew 30 percent year over year'. Industrial Tech was 234.2 MUSD.
+  verified: match
 - id: ch10.chain.marvell_fy26_datacenter
   section: '10.1'
   claim: Marvell data center end-market revenue, fiscal year ended 31 Jan 2026
@@ -142,6 +157,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.marvell_optical_share_of_dc
   section: '10.1'
   claim: Optical interconnect share of Marvell data center revenue, FY2026 (approximate)
@@ -159,6 +175,7 @@ records:
   confidence: med
   notes: '''Roughly half'' is a management characterization, not an audited segment figure; implies on the order of 3 BUSD
     of optical interconnect silicon (DSPs, drivers, TIAs) in FY2026.'
+  verified: match
 - id: ch10.chain.innolight_2025_revenue
   section: '10.1'
   claim: Innolight (中际旭创) total operating revenue, 2025
@@ -174,6 +191,7 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: operating revenue CNY 38,239,935,640.67 in 2025 vs 23,862,159,738.37 in 2024, +60.25%.'
+  verified: match
 - id: ch10.chain.innolight_2025_module_revenue
   section: '10.1'
   claim: Innolight optical transceiver module revenue, 2025
@@ -189,6 +207,7 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: optical transceiver modules CNY 37.46 bn, 97.95% of revenue.'
+  verified: match
 - id: ch10.chain.innolight_2025_overseas_share
   section: '10.4'
   claim: Share of Innolight 2025 revenue from outside mainland China
@@ -204,6 +223,7 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: overseas revenue CNY 34.64 bn, 90.58% of total (86.81% in 2024).'
+  verified: match
 - id: ch10.chain.innolight_2025_units_sold
   section: '10.4'
   claim: Innolight optical module units sold, 2025
@@ -222,6 +242,7 @@ records:
   confidence: high
   notes: 'Gloss: capacity 28.06 M, output 23.76 M, sales 21.09 M units, gross margin 42.61%. Units mix all rates (10G to 1.6T);
     average revenue per unit is therefore not a price for any single product.'
+  verified: match
 - id: ch10.chain.innolight_2025_module_gm
   section: '10.4'
   claim: Innolight optical module gross margin, 2025
@@ -237,6 +258,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.eoptolink_2025_revenue
   section: '10.1'
   claim: Eoptolink (新易盛) total operating revenue, 2025
@@ -252,6 +274,7 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: revenue CNY 24.84 bn (+187.29%), net profit CNY 9.53 bn.'
+  verified: match
 - id: ch10.chain.eoptolink_2025_overseas_share
   section: '10.4'
   claim: Share of Eoptolink 2025 revenue from outside mainland China
@@ -267,6 +290,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.eoptolink_2025_units_sold
   section: '10.4'
   claim: Eoptolink optical interconnect product units sold, 2025
@@ -286,6 +310,7 @@ records:
   confidence: high
   notes: Table text is column-split in the PDF; Sina mirror renders the same row as '1,747万只 | 1,634万只 | 1,603万只 | 24,771,155,676.88
     | 47.81%'.
+  verified: match
 - id: ch10.chain.eoptolink_thailand_sub_revenue
   section: '10.4'
   claim: Revenue of Eoptolink's Thailand subsidiary (泰国新易盛), 2025
@@ -302,6 +327,7 @@ records:
   confidence: med
   notes: 'Column order: registered capital, total assets, net assets, revenue (元). Subsidiary revenue may include intra-group
     sales, so the ratio to consolidated revenue (about 0.88) is an upper bound on Thai-made share, not an audited figure.'
+  verified: match
 - id: ch10.chain.eoptolink_thailand_phase2
   section: '10.4'
   claim: Eoptolink Thailand plant phase 2 entered operation in early 2025
@@ -316,6 +342,7 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: phase 2 of the Thailand factory formally began operating in early 2025; capacity is still ramping.'
+  verified: match
 - id: ch10.chain.accelink_2025_revenue
   section: '10.1'
   claim: Accelink (光迅科技) total operating revenue, 2025
@@ -331,6 +358,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.accelink_2025_datacom_access
   section: '10.1'
   claim: Accelink 数据与接入 (data and access) product revenue, 2025
@@ -346,6 +374,7 @@ records:
   tier: B
   confidence: high
   notes: Transmission (传输) products were CNY 3,411,650,005.55 (28.60%).
+  verified: match
 - id: ch10.chain.accelink_2025_overseas_share
   section: '10.4'
   claim: Share of Accelink 2025 revenue from outside mainland China
@@ -361,6 +390,7 @@ records:
   tier: B
   confidence: high
   notes: 'Contrast with Innolight (90.58%) and Eoptolink (96.16%): Accelink is domestically oriented.'
+  verified: match
 - id: ch10.chain.yofc_2025_revenue
   section: '10.1'
   claim: YOFC (长飞) group revenue, 2025
@@ -377,6 +407,7 @@ records:
   confidence: high
   notes: Source id reused from ch01_c. Optical transmission products (preform, fiber, cable) CNY 8.346 bn; optical interconnect
     components CNY 3.144 bn.
+  verified: match
 - id: ch10.chain.yofc_2025_interconnect
   section: '10.1'
   claim: YOFC optical interconnect components segment (modules, AOCs, devices) revenue, 2025
@@ -392,6 +423,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.yofc_2025_overseas_share
   section: '10.4'
   claim: Share of YOFC 2025 revenue from overseas customers
@@ -407,6 +439,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.chain.hgtech_2025_connect_revenue
   section: '10.1'
   claim: HGTECH (华工科技) connectivity (optical module) business revenue, 2025
@@ -422,6 +455,7 @@ records:
   tier: B
   confidence: high
   notes: 华工正源 is the optical-module subsidiary; its own revenue in the subsidiary table is CNY 3,813,238,018.06.
+  verified: match
 - id: ch10.chain.lightcounting_top10_china7
   section: '10.1'
   claim: Number of Chinese firms in LightCounting's 2024 global top-10 optical module vendor ranking
@@ -438,6 +472,7 @@ records:
   confidence: low
   notes: Market-research claim relayed in a prospectus (tier B document, tier C datum). Use only inside a contested/uncertain
     box.
+  verified: match
 - id: ch10.inp.coherent_inp_fabs
   section: '10.2'
   claim: Coherent in-house InP laser (DML, EML, CW) capability and InP fab footprint
@@ -452,6 +487,7 @@ records:
   tier: B
   confidence: high
   notes: 'Same paragraph: in-house laser design and manufacturing for GaAs VCSELs and InP DMLs, EMLs and CW lasers.'
+  verified: match
 - id: ch10.inp.lumentum_inp_expansion
   section: '10.2'
   claim: Lumentum expanded InP fab capacity in Japan, US and UK in FY2025 and scaled Thai assembly/test
@@ -467,6 +503,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.inp.lumentum_mfg_locations
   section: '10.4'
   claim: Lumentum significant manufacturing countries and contract-manufacturer locations
@@ -483,6 +520,7 @@ records:
   confidence: high
   notes: 'Next sentence of the 10-K: ''Our significant contract manufacturing partners are located primarily in Thailand,
     Taiwan, Malaysia and the Philippines.'''
+  verified: match
 - id: ch10.inp.broadcom_inp_sole_source
   section: '10.2'
   claim: Broadcom's Breinigsville, PA facility is the sole source of InP wafers for its fiber-optic products
@@ -499,6 +537,7 @@ records:
   confidence: high
   notes: 'Sentence continues: ''and for the InP-based wafers used in our fibre optics products, respectively'' (Breinigsville
     = InP). Item 1 adds: ''The majority of our internal III-V semiconductor wafer fabrication is done in the U.S. and Singapore.'''
+  verified: match
 - id: ch10.inp.mitsubishi_200g_eml_mp
   section: '10.2'
   claim: Mitsubishi Electric began mass production of a 200 Gb/s EML chip
@@ -513,6 +552,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.inp.mitsubishi_eml_capacity_x3_fy2030
   section: '10.2'
   claim: Mitsubishi Electric planned EML chip capacity multiple, FY2030 vs FY2026
@@ -529,6 +569,7 @@ records:
   confidence: med
   notes: 'DISAGREEMENT: trade press (ch10.inp.mitsubishi_eml_capacity_x3_fy2028_press) reports 3x by FY2028 vs FY2024 (1.5x
     by FY2026 then 2x by FY2028). Baselines differ; the company page is primary.'
+  verified: match
 - id: ch10.inp.mitsubishi_eml_capacity_x3_fy2028_press
   section: '10.2'
   claim: 'Reported Mitsubishi EML capacity plan: 3x in FY2028 vs FY2024 (trade press)'
@@ -544,6 +585,7 @@ records:
   confidence: low
   notes: 'Gloss: Mitsubishi drew up an investment plan to triple EML capacity in FY2028 versus FY2024 (about JPY 10 bn). Disagrees
     in baseline with the company web page; record for contested use only.'
+  verified: match
 - id: ch10.inp.mitsubishi_eml_share_claim
   section: '10.2'
   claim: 'Mitsubishi Electric self-estimate: No. 1 global share of EML for data centers (FY2023)'
@@ -559,6 +601,7 @@ records:
   tier: C
   confidence: low
   notes: Self-estimated market share inside a tier-B IR deck; treat as a contested claim.
+  verified: match
 - id: ch10.inp.sumitomo_6inch_inp_ready
   section: '10.2'
   claim: Sumitomo Electric states 6-inch InP substrates are ready for mass production
@@ -574,6 +617,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.inp.axt_substrate_share_of_revenue
   section: '10.2'
   claim: Share of AXT 2025 revenue from substrates (InP, GaAs, Ge)
@@ -590,6 +634,7 @@ records:
   tier: B
   confidence: high
   notes: AXT manufactures in China through subsidiary Beijing Tongmei Xtal Technology.
+  verified: match
 - id: ch10.inp.axt_inp_permit_first
   section: '10.6'
   claim: Date AXT's subsidiary Tongmei received its first MOFCOM export permits for InP substrates after the Feb 2025 control
@@ -605,6 +650,7 @@ records:
   tier: B
   confidence: high
   notes: Initial permits covered certain customers in Europe and Japan; the 10-K says permit timing remains uncertain.
+  verified: match
 - id: ch10.inp.axt_na_revenue_share_2025
   section: '10.6'
   claim: Share of AXT revenue from North American customers, 2025 (vs 8% in 2024)
@@ -621,6 +667,7 @@ records:
   tier: B
   confidence: high
   notes: Company attributes the drop to US tariffs plus China's InP export controls.
+  verified: match
 - id: ch10.inp.yuanjie_2025_revenue
   section: '10.2'
   claim: Yuanjie Semiconductor (源杰科技) total operating revenue, 2025
@@ -636,6 +683,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.inp.yuanjie_2025_dc_revenue
   section: '10.2'
   claim: Yuanjie data center product revenue, 2025
@@ -651,6 +699,7 @@ records:
   tier: B
   confidence: high
   notes: Main data center product is the 70 mW CW DFB for silicon-photonics modules, not EML.
+  verified: match
 - id: ch10.inp.yuanjie_2025_dc_gm
   section: '10.2'
   claim: Yuanjie data center product gross margin, 2025
@@ -666,6 +715,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.inp.yuanjie_2025_dc_units
   section: '10.2'
   claim: Yuanjie data center laser chip units sold, 2025
@@ -682,6 +732,7 @@ records:
   tier: B
   confidence: high
   notes: Implied average price about CNY 22 per chip (computed, not stated).
+  verified: match
 - id: ch10.inp.yuanjie_2025_export_share
   section: '10.2'
   claim: Yuanjie overseas main-business revenue, 2025
@@ -697,6 +748,7 @@ records:
   tier: B
   confidence: high
   notes: 'About 0.3% of revenue: Yuanjie sells almost entirely to domestic module makers.'
+  verified: match
 - id: ch10.inp.yuanjie_cw70_mass
   section: '10.2'
   claim: Yuanjie 70 mW CW laser chip in large-volume delivery in 2025; 100 mW in batch delivery
@@ -712,6 +764,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.inp.yuanjie_hk_cw_2024_volume
   section: '10.2'
   claim: 'Yuanjie milestone: 70 mW CW laser mass production with sales over 1 million chips in 2024'
@@ -726,7 +779,10 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: ''
+  notes: 'Verifier (PARTIAL): The HKEX file is an Application Proof (草擬本: ''其所載資料並不完整及可作更改''), not a final listing document.
+    Relabel source title/venue as ''H-share Application Proof (draft), filed 25 Mar 2026''; or cite the same fact from Yuanjie
+    2024 AR (cninfo 1223315235): ''报告期内该产品实现百万颗以上出货''.'
+  verified: partial_fixed
 - id: ch10.inp.accelink_chip_platforms
   section: '10.2'
   claim: Accelink in-house laser and detector chip platforms
@@ -740,8 +796,10 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Capability statement; the annual report does not disclose EML volumes or the in-house share of laser chips in its
-    800G/1.6T modules.
+  notes: 'Capability statement; the annual report does not disclose EML volumes or the in-house share of laser chips in its
+    800G/1.6T modules. Verifier (PARTIAL): Re-open the AR at 核心竞争力分析 to confirm the quoted wording, or switch source to accelink_placement_2025
+    with the sentence above. Placement doc also states 马来西亚槟城的生产基地已投产 (relevant to gap 15).'
+  verified: partial
 - id: ch10.inp.cetc_800g_pd_volume
   section: '10.2'
   claim: CETC research institute claims annual supply of over 10 million 800G-class photodetector chips
@@ -756,6 +814,7 @@ records:
   tier: C
   confidence: low
   notes: Corporate news; detectors (not lasers). Contested-box use only.
+  verified: match
 - id: ch10.eic.coherent_buys_dsps
   section: '10.3'
   claim: Coherent sources ICs and DSPs from third-party suppliers
@@ -771,6 +830,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.eic.marvell_interconnect_portfolio
   section: '10.3'
   claim: Marvell interconnect portfolio scope
@@ -786,6 +846,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.eic.maxlinear_keystone_ramp
   section: '10.3'
   claim: MaxLinear Keystone 800G PAM4 DSP ramped at multiple hyperscale customers in 2025
@@ -800,6 +861,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.eic.maxlinear_rushmore_timing
   section: '10.3'
   claim: MaxLinear Rushmore 1.6T DSP expected production timing
@@ -815,6 +877,7 @@ records:
   tier: B
   confidence: med
   notes: Forward-looking management statement.
+  verified: match
 - id: ch10.eic.maxlinear_infra_share
   section: '10.3'
   claim: Infrastructure share of MaxLinear 2025 revenue
@@ -830,6 +893,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.eic.youxun_product_mix
   section: '10.3'
   claim: 优迅股份 (Xiamen UX) product mix is mainly 10 Gb/s and below; 25 Gb/s+ still ramping
@@ -844,6 +908,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.eic.youxun_25g_plus_sales_h1_2025
   section: '10.3'
   claim: 优迅股份 sales of 25 Gb/s-and-above electrical chips, H1 2025
@@ -859,7 +924,10 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: H1 2025 sales of these products totaled CNY 1.6708 million, which the issuer says leads domestic independent
-    chip vendors. Compare with its H1 2025 main revenue of CNY 238.41 million.'
+    chip vendors. Compare with its H1 2025 main revenue of CNY 238.41 million. Verifier (PARTIAL): Value confirmed (table:
+    25G 50.30 + >25G 116.78 = 167.08 万元). The ledger quote wording was not found; confirm it in the 9 Sep reply or replace
+    with the 31 Aug wording and URL above.'
+  verified: partial
 - id: ch10.eic.youxun_total_rev_h1_2025
   section: '10.3'
   claim: 优迅股份 main-business revenue, H1 2025
@@ -876,6 +944,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.eic.icc_china_share_25g_plus
   section: '10.3'
   claim: China's share of global 25 Gb/s-and-above optical-communication electrical chip revenue (ICC forecast for 2025)
@@ -892,6 +961,7 @@ records:
   confidence: low
   notes: Market research (ICC讯石). Same 7% quoted in the 优迅 prospectus as 'ICC数据'. ICC elsewhere gives about 8% for ≥25G TIAs
     and <5% overall high-speed share in 2023; scopes differ.
+  verified: match
 - id: ch10.eic.icc_china_share_tia_25g
   section: '10.3'
   claim: China vendor share of ≥25G TIA market (ICC estimate)
@@ -906,6 +976,7 @@ records:
   tier: C
   confidence: low
   notes: Market research; contested-box use only.
+  verified: match
 - id: ch10.eic.chengkewei_dsp_localization
   section: '10.3'
   claim: Claimed domestic localization rate of optical-module DSP chips in China (<1%), per Chengkewei founder
@@ -921,6 +992,7 @@ records:
   confidence: low
   notes: Interview claim by a vendor with a commercial interest. The same article reports a plan to mass-produce 400G/800G
     PAM4 DSPs within 2025; no confirmation of mass production was found (see gaps).
+  verified: match
 - id: ch10.eic.chengkewei_pam4_plan
   section: '10.3'
   claim: Chengkewei (橙科微) planned mass production of 400G/800G PAM4 DSPs within 2025
@@ -935,6 +1007,7 @@ records:
   tier: C
   confidence: low
   notes: Company plan reported by press; unverified.
+  verified: match
 - id: ch10.eic.hgtech_dsp_supply_tight
   section: '10.3'
   claim: HGTECH reports DSP supply tightness from AI demand and advanced-node capacity limits (Mar 2026)
@@ -950,6 +1023,7 @@ records:
   confidence: med
   notes: 'Gloss: DSP supply is tight because global AI demand doubled and upstream advanced-node capacity is short; supply
     basically meets demand.'
+  verified: match
 - id: ch10.mod.innolight_raw_material_risk
   section: '10.4'
   claim: Innolight states part of its key raw materials are purchased overseas and trade-policy changes could hamper procurement
@@ -964,6 +1038,7 @@ records:
   tier: B
   confidence: high
   notes: 'Gloss: products mainly sold to North America and Europe; some key raw materials also purchased overseas.'
+  verified: match
 - id: ch10.mod.hgtech_overseas_800g_capacity
   section: '10.4'
   claim: HGTECH overseas 800G module monthly capacity (Mar 2026 IR statement)
@@ -979,6 +1054,7 @@ records:
   tier: B
   confidence: med
   notes: Investor-relations statement; overseas sites named in the AR are Thailand and Vietnam.
+  verified: match
 - id: ch10.mod.hgtech_thailand_base
   section: '10.4'
   claim: HGTECH Thailand high-speed optical module base completed and in production (2025)
@@ -993,6 +1069,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.mod.eoptolink_1p6t_400g_lane
   section: '10.7'
   claim: Eoptolink released a 1.6T DR4 module based on 400G-per-lane IMDD (March 2026)
@@ -1007,6 +1084,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.sys.huawei_2025_revenue
   section: '10.5'
   claim: Huawei total revenue, 2025
@@ -1022,6 +1100,7 @@ records:
   tier: B
   confidence: high
   notes: Huawei does not break out optical transport revenue.
+  verified: match
 - id: ch10.sys.huawei_2025_ict_infra
   section: '10.5'
   claim: Huawei ICT Infrastructure segment revenue, 2025
@@ -1037,6 +1116,7 @@ records:
   tier: B
   confidence: high
   notes: Segment includes wireless, core network, datacom, optical, computing, storage, services.
+  verified: match
 - id: ch10.sys.huawei_2025_china_revenue
   section: '10.5'
   claim: Huawei revenue from China, 2025
@@ -1052,6 +1132,7 @@ records:
   tier: B
   confidence: high
   notes: China = about 70% of revenue; Americas CNY 37,184 million.
+  verified: match
 - id: ch10.sys.zte_2025_revenue
   section: '10.5'
   claim: ZTE total operating revenue, 2025
@@ -1067,6 +1148,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.sys.zte_2025_operator
   section: '10.5'
   claim: ZTE operator network (运营商网络) revenue, 2025
@@ -1082,6 +1164,7 @@ records:
   tier: B
   confidence: high
   notes: Optical transport is inside this segment and not broken out.
+  verified: match
 - id: ch10.sys.zte_omdia_dco_claim
   section: '10.5'
   claim: 'ZTE claim, citing Omdia: global No. 1 in OTN 800G pluggable DCO port shipments for six consecutive quarters'
@@ -1096,6 +1179,7 @@ records:
   tier: C
   confidence: low
   notes: Market-research ranking relayed in an annual report; contested-box use only.
+  verified: match
 - id: ch10.sys.fiberhome_2025_revenue
   section: '10.5'
   claim: FiberHome total operating revenue, 2025
@@ -1111,6 +1195,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.sys.fiberhome_2025_systems
   section: '10.5'
   claim: FiberHome communication system equipment revenue, 2025
@@ -1126,6 +1211,7 @@ records:
   tier: B
   confidence: high
   notes: 'Fiber and cable: CNY 4,654,097,601.94; data network products: CNY 1,419,618,980.01.'
+  verified: match
 - id: ch10.sys.fiberhome_2025_overseas
   section: '10.5'
   claim: FiberHome overseas main-business revenue, 2025
@@ -1141,6 +1227,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.sys.ciena_fy25_revenue
   section: '10.5'
   claim: Ciena total revenue, fiscal year ended 1 Nov 2025
@@ -1156,6 +1243,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.sys.ciena_fy25_optical
   section: '10.5'
   claim: Ciena Optical Networking product-line revenue, FY2025
@@ -1171,6 +1259,7 @@ records:
   tier: B
   confidence: high
   notes: 'FY2024: 2,642,563; FY2023: 2,987,245 (USD thousands).'
+  verified: match
 - id: ch10.sys.ciena_fy25_cloud_customer
   section: '10.5'
   claim: Ciena revenue from one cloud provider customer, FY2025
@@ -1187,6 +1276,7 @@ records:
   tier: B
   confidence: high
   notes: 'AT&T: 500.7 MUSD. US revenue 3.4 BUSD of 4.77 BUSD.'
+  verified: match
 - id: ch10.sys.ciena_fy25_apac
   section: '10.5'
   claim: Ciena revenue from APAC (Asia Pacific, Japan, India), FY2025
@@ -1202,6 +1292,7 @@ records:
   tier: B
   confidence: high
   notes: No China revenue line is disclosed.
+  verified: match
 - id: ch10.sys.nokia_2025_optical
   section: '10.5'
   claim: Nokia Optical Networks net sales, 2025 (includes Infinera from 28 Feb 2025)
@@ -1218,6 +1309,7 @@ records:
   confidence: high
   notes: 'Columns: Q4''25, Q4''24, YoY, constant-currency-and-portfolio YoY, FY25, FY24, YoY, cc&p YoY. Network Infrastructure
     total 7,986 MEUR.'
+  verified: match
 - id: ch10.sys.nokia_infinera_close
   section: '10.5'
   claim: Nokia completed the Infinera acquisition (purchase consideration EUR 2.5 bn)
@@ -1234,6 +1326,7 @@ records:
   tier: B
   confidence: high
   notes: Annual report states the deal fixed Nokia's 'notable weakness' in North America. Infinera brought an InP PIC fab.
+  verified: match
 - id: ch10.sys.delloro_2025_market
   section: '10.5'
   claim: Global optical transport equipment market size, 2025 (Dell'Oro)
@@ -1249,6 +1342,7 @@ records:
   tier: C
   confidence: low
   notes: Headline gives $16 billion. Market research; contested-box use only.
+  verified: match
 - id: ch10.sys.delloro_2025_top5
   section: '10.5'
   claim: Dell'Oro 2025 optical transport vendor ranking by revenue share
@@ -1263,6 +1357,7 @@ records:
   tier: C
   confidence: low
   notes: Shares (percent) not published in the free release. For DCI the top three were Ciena, Nokia, Cisco.
+  verified: match
 - id: ch10.ctl.oct2022_ifr_effective
   section: '10.6'
   claim: Effective date of the first BIS advanced computing / SME interim final rule (87 FR 62186)
@@ -1278,6 +1373,7 @@ records:
   tier: A
   confidence: high
   notes: Further instructions effective 12 and 21 Oct 2022. Published in FR on 13 Oct 2022.
+  verified: match
 - id: ch10.ctl.oct2022_fdp_28_entities
   section: '10.6'
   claim: Number of existing China-located Entity List entities whose foreign-direct-product scope was expanded by the Oct
@@ -1294,6 +1390,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.ctl.oct2023_acs_effective
   section: '10.6'
   claim: Effective date of the Oct 2023 advanced computing update (AC/S IFR, 88 FR 73458)
@@ -1309,6 +1406,7 @@ records:
   tier: A
   confidence: high
   notes: Released 17 Oct 2023, published 25 Oct 2023; companion SME IFR is 88 FR 73424.
+  verified: match
 - id: ch10.ctl.3a090a_tpp_4800
   section: '10.6'
   claim: ECCN 3A090.a total processing performance (TPP) threshold
@@ -1325,6 +1423,7 @@ records:
   confidence: high
   notes: Text as revised Oct 2023 (88 FR 73458) and restated in the Feb 2025 correction. Optical transceivers are not themselves
     3A090 items; relevance is indirect (AI cluster demand, destination controls).
+  verified: match
 - id: ch10.ctl.3a090a2_tpp_1600_pd_5p92
   section: '10.6'
   claim: 'ECCN 3A090.a.2 thresholds: TPP and performance density'
@@ -1342,6 +1441,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.ctl.3a090_example_fp16
   section: '10.6'
   claim: 'Example given in the rule: TPP 4800 corresponds to 300 dense TFLOPS at 16 bits'
@@ -1358,6 +1458,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.ctl.dec2024_hbm_ifr_effective
   section: '10.6'
   claim: Effective date of the Dec 2024 FDP/HBM/SME rule (89 FR 96790)
@@ -1372,6 +1473,7 @@ records:
   tier: A
   confidence: high
   notes: Adds HBM controls (3A090.c), new FDP rules for advanced-node production; many compliance dates 31 Dec 2024.
+  verified: match
 - id: ch10.ctl.dec2024_140_entities
   section: '10.6'
   claim: Entities added to the Entity List by the 2 Dec 2024 rule (89 FR 96830)
@@ -1388,6 +1490,7 @@ records:
   confidence: high
   notes: Destinations China, Japan, South Korea, Singapore; focus on advanced-node IC and SME. No optical-module maker identified
     in the excerpts read; full list not checked line by line (see gaps).
+  verified: match
 - id: ch10.ctl.ai_diffusion_compliance
   section: '10.6'
   claim: 'AI Diffusion rule (90 FR 4544): effective 13 Jan 2025, compliance date 15 May 2025'
@@ -1403,6 +1506,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.ctl.ai_diffusion_rescission
   section: '10.6'
   claim: BIS announced rescission and non-enforcement of the AI Diffusion Rule
@@ -1414,10 +1518,15 @@ records:
   locator: Press release body
   quote: Today, the Department of Commerce (DOC) announced a rescission of the Biden Administration's AI Diffusion Rule
   retrieved: 2026-11-02
-  tier: B
-  confidence: med
-  notes: Agency announcement, not itself a rule; release says BIS 'plans to publish a regulation formalizing the rescission'.
-    Formal FR rescission notice not located (gap).
+  tier: C
+  confidence: low
+  notes: 'Agency announcement, not itself a rule; release says BIS ''plans to publish a regulation formalizing the rescission''.
+    Formal FR rescission notice not located (gap). Verifier (PARTIAL): Tier: a press release is tier C under PIPELINE, not
+    B. Supersession: GAO decision B-337935 (12 May 2026) holds the press release is a ''rule'' under the CRA and records Commerce''s
+    position that the AI Diffusion Rule ''remains in the Code of Federal Regulations'' pending rulemaking; Unified Agenda
+    RIN 0694-AJ90 targeted final rescission 07/2026. No FR rescission found. Reword claim to ''announced non-enforcement and
+    initiated rescission''. Tier C press release; GAO decision B-337935 (2026-05-12) holds it is a rule.'
+  verified: partial_fixed
 - id: ch10.ctl.affiliates_rule_50pct
   section: '10.6'
   claim: Ownership threshold at which affiliates of listed entities automatically inherit Entity List restrictions (Affiliates
@@ -1435,6 +1544,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch10.ctl.affiliates_rule_stayed
   section: '10.6'
   claim: Affiliates rule stayed until 9 Nov 2026, reimposed from 10 Nov 2026 absent extension (90 FR 50857)
@@ -1449,6 +1559,7 @@ records:
   tier: A
   confidence: high
   notes: As of retrieval date (2026-11-02) the stay is about to lapse; check for an extension before writing.
+  verified: match
 - id: ch10.ctl.el_2021_hengtong_ztt_hmn
   section: '10.6'
   claim: Dec 2021 Entity List additions of Chinese optical/submarine cable firms (86 FR 71557)
@@ -1467,6 +1578,7 @@ records:
   notes: 'Quote is the stated reason for adding HMN International, Jiangsu Hengtong Marine Cable Systems, Jiangsu Hengtong
     Optic-Electric, Shanghai Aoshi Control Technology and Zhongtian Technology Submarine Cable. License review policy: presumption
     of denial.'
+  verified: match
 - id: ch10.ctl.el_2021_hmn_alias
   section: '10.6'
   claim: HMN Technologies aliases added under Huawei Marine Networks (a Huawei affiliate listed since May 2019)
@@ -1483,6 +1595,7 @@ records:
   confidence: high
   notes: Same rule cites Huawei's original listing at 84 FR 22963 (May 2019). So HMN Tech is covered both via the Huawei affiliate
     entry and HMN International (Hong Kong).
+  verified: match
 - id: ch10.ctl.el_2020_fiberhome
   section: '10.6'
   claim: FiberHome Technologies Group (aliases include FiberHome Telecommunication Technologies Co., Ltd.) added to the Entity
@@ -1500,6 +1613,7 @@ records:
   confidence: high
   notes: 'Basis: Xinjiang human-rights (foreign policy), not military end use. Accelink (光迅) is not named among the aliases
     read; whether Accelink is captured via the Sep 2025 Affiliates rule depends on ownership and the rule is stayed. Not verified.'
+  verified: match
 - id: ch10.ctl.dod1260h_innolight
   section: '10.6'
   claim: Zhongji Innolight designated a 'Chinese military company' on the DoD Section 1260H list (91 FR 35189, 10 Jun 2026)
@@ -1516,6 +1630,7 @@ records:
   confidence: high
   notes: 1260H designation is a procurement/reputational list, not an export control. No designation of Eoptolink found in
     the excerpts read.
+  verified: match
 - id: ch10.ctl.s5548_introduced
   section: '10.6'
   claim: S. 5548 (Securing National Security Systems from Chinese Optical Transceivers Act of 2026) introduced, naming InnoLight
@@ -1528,10 +1643,14 @@ records:
   locator: Bill header and Sec. 2 definition of covered optical transceiver
   quote: (i) Zhongji Innolight Co., Ltd. (InnoLight); (ii) Eoptolink Technology Inc., Ltd. (Eoptolink);
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
   notes: 'Introduced bill only (referred to Senate HSGAC); not law. Scope: federal procurement for critical/national security
-    systems.'
+    systems. Verifier (PARTIAL): Text and status verified: still only ''read twice and referred to HSGAC'' (congress.gov update
+    14 Oct 2026); no House companion found. Tier: an introduced bill is not a statute; record as tier B (official legislative
+    text) or have orchestrator rule. Locator: Sec. 2(8)(B), amending NDAA FY2023 sec. 5949(j). A pending bill (referred to
+    HSGAC as of 2026-10-14), not law.'
+  verified: partial_fixed
 - id: ch10.ctl.s5548_transition
   section: '10.6'
   claim: Transition period before S. 5548's optical transceiver prohibition would take effect
@@ -1543,9 +1662,12 @@ records:
   locator: Sec. 2, effective date provision (B)
   quote: shall take effect five years after the date of the enactment of the Securing
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
-  notes: Applies only if enacted.
+  notes: 'Applies only if enacted. Verifier (PARTIAL): Same tier caveat as s5548_introduced. Note also: FAR Council must update
+    regulations within 3 years; prohibition applies to ''critical systems'' only (new 5949(a)(2)(A)(v)). A pending bill (referred
+    to HSGAC as of 2026-10-14), not law.'
+  verified: partial_fixed
 - id: ch10.ctl.s301_semis_50pct
   section: '10.6'
   claim: Section 301 tariff rate on Chinese semiconductors (HTS 8541/8542, incl. 8541.49.10 photosensitive diodes) from 1
@@ -1564,6 +1686,7 @@ records:
   confidence: high
   notes: Photodiodes (8541.49.10) are covered; laser diodes (8541.41) are not in the list read. Note also 8112.92.30 unwrought
     indium at 25% from 2024.
+  verified: match
 - id: ch10.ctl.s301_transceiver_7p5pct
   section: '10.6'
   claim: Additional Section 301 duty on optical transceivers of Chinese origin classified in HTS 8517.62.0090 (List 4A)
@@ -1582,6 +1705,7 @@ records:
   confidence: med
   notes: Ruling dated after Nov 2023 request; read from a third-party mirror. Excludes IEEPA and other 2025 tariff layers
     (see ch10.ctl.axt_tariff_70pct).
+  verified: match
 - id: ch10.ctl.axt_tariff_70pct
   section: '10.6'
   claim: US tariff on AXT's China-made wafer substrates as described by AXT, March 2025
@@ -1599,6 +1723,7 @@ records:
   confidence: med
   notes: Company characterization of stacked Section 301 + IEEPA tariffs. The same 10-K says the Supreme Court invalidated
     IEEPA tariffs on 20 Feb 2026 and CBP terminated them effective 24 Feb 2026; primary court and CBP documents not retrieved.
+  verified: match
 - id: ch10.ctl.mofcom2023_23_effective
   section: '10.6'
   claim: China export licensing for gallium and germanium items effective date (MOFCOM/GAC 2023 No. 23)
@@ -1614,6 +1739,7 @@ records:
   confidence: high
   notes: 'Gloss: this announcement takes effect 1 Aug 2023. Items include metallic Ga, GaN, Ga2O3, GaP, GaAs, InGaAs (铟镓砷),
     GaSe, GaSb; metallic Ge, zone-refined Ge ingot, ZnGeP2, Ge epitaxial substrates, GeO2, GeCl4.'
+  verified: match
 - id: ch10.ctl.mofcom2023_23_ingaas
   section: '10.6'
   claim: InGaAs (photodetector absorber material) is among the gallium items requiring an export licence under 2023 No. 23
@@ -1628,6 +1754,7 @@ records:
   tier: A
   confidence: high
   notes: 'Gloss: item 6, indium gallium arsenide (reference HS codes). Also item 5: GaAs including wafers and epitaxial wafers.'
+  verified: match
 - id: ch10.ctl.mofcom2024_46_us_ban
   section: '10.6'
   claim: China in principle denies export licences to the US for gallium, germanium, antimony and superhard-material dual-use
@@ -1644,6 +1771,7 @@ records:
   confidence: high
   notes: 'Gloss: in principle, no licences for exports to the US of Ga, Ge, Sb and superhard-material dual-use items. Effective
     on publication, 3 Dec 2024. Article 1 bans dual-use exports to US military users/uses.'
+  verified: match
 - id: ch10.ctl.mofcom2025_10_inp
   section: '10.6'
   claim: China added indium phosphide, trimethylindium and triethylindium (and production technology) to export control (2025
@@ -1660,6 +1788,7 @@ records:
   confidence: high
   notes: 'Gloss: 3C004.a indium phosphide. Also 3C004.b trimethylindium, 3C004.c triethylindium (MOCVD precursors), 3E004
     production technology. Effective on publication 4 Feb 2025; also controls W, Te (incl. CdTe/CdZnTe/HgCdTe), Bi, Mo items.'
+  verified: match
 - id: ch10.ctl.mofcom2025_18_rare_earths
   section: '10.6'
   claim: Number of medium/heavy rare earth elements placed under export control by 2025 No. 18 (Sm, Gd, Tb, Dy, Lu, Sc, Y)
@@ -1676,6 +1805,7 @@ records:
   confidence: high
   notes: Seven element headings (钐, 钆, 铽, 镝, 镥, 钪, 钇) read in the text. Erbium is not listed, so EDFA dopant supply is not
     directly controlled by this announcement. Yttrium (YAG, YIG isolators) is.
+  verified: match
 - id: ch10.ctl.mofcom2025_70_suspension
   section: '10.6'
   claim: China suspended its Oct 2025 control announcements (Nos. 55-58, 61, 62) until 10 Nov 2026 (2025 No. 70)
@@ -1691,6 +1821,7 @@ records:
   confidence: high
   notes: 'Gloss: suspended from 7 Nov 2025 to 10 Nov 2026. Contents of Nos. 55-58, 61, 62 (rare-earth extraterritorial and
     technology rules) were not read; see gaps.'
+  verified: match
 - id: ch10.ctl.mofcom2025_72_suspend46
   section: '10.6'
   claim: China suspended Article 2 of 2024 No. 46 (Ga/Ge/Sb/superhard US licensing denial) until 27 Nov 2026 (2025 No. 72)
@@ -1706,6 +1837,7 @@ records:
   confidence: high
   notes: 'Gloss: Article 2 suspended from 9 Nov 2025 to 27 Nov 2026. Article 1 (military end users) and 2023 No. 23 / 2025
     No. 10 licensing remain in force.'
+  verified: match
 - id: ch10.open.kaiyuan_25g_localization_4pct
   section: '10.7'
   claim: 'Claimed China localization rate of ≥25G optical (laser) chips: about 4% (中商产业研究院 via Kaiyuan Securities)'
@@ -1720,6 +1852,7 @@ records:
   tier: C
   confidence: low
   notes: No year or method stated. DISAGREES with ch10.open.eetchina_25g_localization_41pct (41% in 2025). Neither is primary.
+  verified: match
 - id: ch10.open.eetchina_25g_localization_41pct
   section: '10.7'
   claim: 'Claimed overall China localization rate of ≥25G high-speed optical chips in 2025: 41% (blog, source not given)'
@@ -1736,6 +1869,7 @@ records:
   confidence: low
   notes: Same article repeats the 4% figure as historical and says overall optical chip localization <20%. Unsourced; contested-box
     use only.
+  verified: match
 - id: ch10.open.kaiyuan_10g_localization
   section: '10.7'
   claim: Claimed China localization of 10G optical chips (~60%) and ≤10G (~90%) per 中商产业研究院
@@ -1750,6 +1884,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch10.open.yuanjie_dc_overseas_dominant
   section: '10.7'
   claim: Yuanjie (domestic supplier) states the data center laser chip market is still dominated by overseas suppliers
@@ -1764,6 +1899,7 @@ records:
   tier: B
   confidence: high
   notes: Primary counterweight to optimistic localization claims.
+  verified: match
 - id: ch10.open.yuanjie_eml_status
   section: '10.7'
   claim: 'Yuanjie EML status end-2025: 100G PAM4 EML customer-validated; 200G PAM4 EML entering customer validation'
@@ -1779,6 +1915,7 @@ records:
   confidence: high
   notes: R&D table lists '100G/200G EML 激光器开发' at '客户验证阶段' (customer validation), budget CNY 74.90 M. So no Yuanjie 200G EML
     in mass production as of the 2025 report.
+  verified: match
 - id: ch10.open.everbright_100g_eml_claim
   section: '10.7'
   claim: Claim that Everbright Photonics (长光华芯) 100G EML is in mass-production shipment and 200G EML is sampling (Jul 2025)
@@ -1793,6 +1930,7 @@ records:
   tier: C
   confidence: low
   notes: Executive statement at an SSE salon reported by press. Not cross-checked against 长光华芯 annual report (gap).
+  verified: match
 - id: ch10.open.hgtech_chip_self_production
   section: '10.7'
   claim: HGTECH claims InP/GaAs/SiP platforms and that its high-end optical chips reach in-house scale production in 2026
@@ -1807,6 +1945,7 @@ records:
   tier: B
   confidence: low
   notes: Forward-looking IR claim ('this year' = 2026); 'only domestic firm' is a self-assessment.
+  verified: match
 - id: ch10.open.accelink_localization_view
   section: '10.7'
   claim: 'Accelink offering document: high-power and some high-speed (10G, 25G) laser chips are in accelerated localization'
@@ -1821,6 +1960,7 @@ records:
   tier: B
   confidence: high
   notes: Notably frames 10G/25G, not 100G/200G EML, as the localization frontier.
+  verified: match
 - id: ch10.open.nvidia_cpo_efficiency
   section: '10.7'
   claim: 'NVIDIA claim: CPO photonics switches give 3.5x power efficiency with 4x fewer lasers vs pluggable optics'
@@ -1838,6 +1978,7 @@ records:
   notes: 'Vendor marketing; baseline undefined. NVIDIA web page later claims 5x. Supply chain partners named: TSMC, Coherent,
     Corning, Foxconn, Lumentum, SENKO, Fabrinet, Browave, SPIL, Sumitomo Electric, TFC; no Chinese module maker other than
     TFC (天孚, component supplier).'
+  verified: match
 - id: ch10.open.nvidia_cpo_availability
   section: '10.7'
   claim: 'NVIDIA stated availability: Quantum-X Photonics early 2026; Spectrum-X Photonics Ethernet second half 2026'
@@ -1852,8 +1993,11 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Earlier press release (Mar 2025) said Quantum-X 'later this year' (2025); timeline slipped. Shipment status at 2026-11
-    not verified.
+  notes: 'Earlier press release (Mar 2025) said Quantum-X ''later this year'' (2025); timeline slipped. Shipment status at
+    2026-11 not verified. Verifier (PARTIAL): Quote comes from an AI-generated summary flagged ''may summarize information
+    incompletely''. Re-source from the authored blog body or an NVIDIA press release; also check actual shipment status as
+    of 2026-11 (superseded timeline).'
+  verified: partial
 - id: ch10.open.nvidia_cpo_loss
   section: '10.7'
   claim: 'NVIDIA claim: CPO reduces electrical signal loss from about 22 dB to about 4 dB'
@@ -1870,7 +2014,9 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: ''
+  notes: 'Verifier (PARTIAL): Same issue: the quoted sentence is machine-generated summary text. Find the authored sentence/figure
+    in the blog body and quote that.'
+  verified: partial
 - id: ch10.open.broadcom_th6_davisson
   section: '10.7'
   claim: 'Broadcom TH6-Davisson: 102.4 Tb/s CPO switch, claimed 70% optical interconnect power reduction'
@@ -1889,6 +2035,7 @@ records:
   notes: 'Internal inconsistency: release says ''now shipping'' but Availability section says ''currently sampling... to its
     early access customers''. Uses field-replaceable ELSFP laser modules, so external lasers remain a separable (and Chinese-addressable)
     part.'
+  verified: match
 - id: ch10.open.sumitomo_cpo_cw_power
   section: '10.7'
   claim: 'Sumitomo Electric: CW lasers for CPO need over four times current output power'
@@ -1903,6 +2050,7 @@ records:
   tier: B
   confidence: med
   notes: ''
+  verified: match
 - id: ch10.open.yuanjie_cpo_barriers
   section: '10.7'
   claim: 'Yuanjie view: CPO/NPO still face cost, low decoupling and immature industry'
@@ -1918,6 +2066,7 @@ records:
   confidence: high
   notes: 'Same report: Yuanjie is developing 300 mW-class CW sources for CPO. CPO shifts value from module assemblers (strong
     in China) toward switch-ASIC vendors and foundry packaging (TSMC COUPE) while keeping external lasers as a separable module.'
+  verified: match
 - id: ch10.open.yuanjie_cw300_dev
   section: '10.7'
   claim: Yuanjie developing 300 mW-class CW sources for CPO/NPO
@@ -1932,3 +2081,4 @@ records:
   tier: B
   confidence: med
   notes: ''
+  verified: match
