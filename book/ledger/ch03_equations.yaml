@@ -1,0 +1,329 @@
+equations:
+- id: ch03.eq.rate_photon
+  section: '3.1'
+  latex: \frac{dS}{dt} = (G - G_{\mathrm{th}})S + \frac{C}{\tau_r}N
+  symbols:
+  - S
+  - N
+  - G
+  - G_{\mathrm{th}}
+  - \tau_r
+  source_id: ahmed_pramana_2008
+  locator: Eq. (1)
+  notes: 'Photon-number rate equation. S: photon number; N: electron number; G: modal gain rate (1/s), G = A - BS with gain
+    suppression B (Eq. 3); C: spontaneous-emission factor; tau_r: radiative lifetime. NOTE: source G is a gain RATE, not amplifier
+    gain G of notation.yaml (1.5); rename g_m or Gamma v_g g in prose. Coldren/Corzine/Mashanovitch textbook form not read
+    (see gaps).'
+- id: ch03.eq.rate_carrier
+  section: '3.1'
+  latex: \frac{dN}{dt} = \frac{I(t)}{e} - A S - \frac{N}{\tau_e}
+  symbols:
+  - N
+  - S
+  - I
+  - e
+  - \tau_e
+  source_id: ahmed_pramana_2008
+  locator: Eq. (2)
+  notes: 'Carrier rate equation. A = (a xi / V)(N - N_g): linear gain term (a: tangential/differential gain, xi: confinement,
+    V: active volume, N_g: transparency number). tau_e: electron lifetime, 1/tau_e = 1/tau_r + 1/tau_nr (Eq. 33). Source A
+    is NOT effective area A_eff; rename.'
+- id: ch03.eq.threshold_gain
+  section: '3.1'
+  latex: G_{\mathrm{th}} = \kappa + \frac{1}{2L}\ln\!\left(\frac{1}{R_f R_b}\right) \approx \frac{a\xi}{V}(N_{\mathrm{th}}
+    - N_g)
+  symbols:
+  - G_{\mathrm{th}}
+  - L
+  - R_f
+  - R_b
+  source_id: ahmed_pramana_2008
+  locator: Eq. (7)
+  notes: 'Threshold condition: gain = internal loss kappa + mirror loss. L here is the cavity length (NOT fibre length L of
+    notation.yaml; use L_c). Source writes the loss in 1/length while G is a rate; the source is dimensionally loose (implicit
+    v_g factor). State the textbook form Gamma g_th = alpha_i + (1/2L_c) ln(1/R1R2) and flag that this source omits v_g.'
+- id: ch03.eq.bias_photon_number
+  section: '3.1'
+  latex: S_b \approx \frac{I_b - I_{\mathrm{th}}}{e\,G_{\mathrm{th}}}
+  symbols:
+  - S_b
+  - I_b
+  - I_{\mathrm{th}}
+  source_id: ahmed_pramana_2008
+  locator: Eq. (20)
+  notes: Above-threshold photon number grows linearly with current; basis of the L-I curve and of f_r proportional to sqrt(I
+    - I_th).
+- id: ch03.eq.im_response_ulm
+  section: '3.1'
+  latex: M(\nu) = \frac{1}{1 + i2\pi\nu\tau_s}\,\frac{A}{4\pi^2(\nu_r^2 - \nu^2) + i2\pi\gamma\nu}
+  symbols:
+  - \nu_r
+  - \gamma
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (48)
+  notes: 'Small-signal current-to-photon-density transfer function with carrier-transport pole (tau_s). A: amplitude factor
+    Eq. (49). nu here is the MODULATION frequency, not optical frequency nu of notation.yaml (1.5): use f (baseband frequency,
+    notation 1.2) in prose. gamma is the damping rate (1/s), NOT the nonlinear coefficient gamma of notation (1.4): rename
+    Gamma_d or gamma_d.'
+- id: ch03.eq.resonance_freq
+  section: '3.1'
+  latex: \nu_r = \frac{1}{2\pi}\sqrt{\frac{A}{V_p\,\tau_p}\left(1 + \frac{\varepsilon}{\tau_{sp,w} v_{gr}\Gamma_r \bar a}\right)}
+    \approx \frac{1}{2\pi}\sqrt{\frac{A}{V_p\,\tau_p}}
+  symbols:
+  - \nu_r
+  - \tau_p
+  - \varepsilon
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (51)
+  notes: 'Relaxation-oscillation (resonance) frequency; A from Eq. (49) is proportional to differential gain times photon
+    density, so nu_r^2 ~ v_g a S / tau_p. epsilon here is gain compression (cm^3), NOT the GN-model exponent epsilon of notation.yaml
+    (1.6): rename epsilon_c. Extraction of the square-root bracket should be checked against the PDF.'
+- id: ch03.eq.damping_kfactor
+  section: '3.1'
+  latex: \gamma = K\nu_r^2 + \frac{1}{\chi\tau_{sp,w}}
+  symbols:
+  - \gamma
+  - K
+  - \nu_r
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (53)
+  notes: Damping rate rises with nu_r^2; offset gamma_0 = 1/(chi tau_sp,w). chi = 1 + tau_s/tau_e is the transport factor
+    (Eq. 52).
+- id: ch03.eq.kfactor
+  section: '3.1'
+  latex: K = 4\pi^2\left(\tau_p + \frac{\varepsilon}{v_{gr}\Gamma_r\bar a/\chi}\right)
+  symbols:
+  - K
+  - \tau_p
+  - \varepsilon
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (54)
+  notes: 'K-factor: photon lifetime plus gain-compression term. Extracted layout of the fraction (epsilon over v_gr Gamma_r
+    a-bar / chi) needs PDF check; the Photonica glossary (tier C, not recorded) writes 4 pi^2 (tau_p + epsilon/(v_g a)).'
+- id: ch03.eq.max_bandwidth_k
+  section: '3.1'
+  latex: \nu_{\max} = \frac{2\sqrt{2}\,\pi}{K}
+  symbols:
+  - K
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (55)
+  notes: Damping-limited maximum 3-dB modulation bandwidth. Extracted text reads 'nu_max = sqrt2 2 pi / K'; 2 sqrt2 pi = 8.89,
+    consistent with K = 0.3 ns -> 30 GHz. Verify in PDF.
+- id: ch03.eq.fr_current
+  section: '3.2'
+  latex: \nu_r = \frac{1}{2\pi}\sqrt{\frac{\eta_I v_{gr}\Gamma_r \bar a}{q V_p}}\sqrt{I - I_{\mathrm{th}}} = M_r\sqrt{I -
+    I_{\mathrm{th}}}
+  symbols:
+  - \nu_r
+  - I
+  - I_{\mathrm{th}}
+  - M_r
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (57)
+  notes: D-factor form (M_r = D). MCEF = nu_3dB / sqrt(I - I_th) (Eq. 58), ideally about 1.55 M_r; Haglund EL 2015 measured
+    MCEF/D = 20.6/17.5 = 1.18, consistent with the source's remark that 1.55 is 'usually not observed in practice'.
+- id: ch03.eq.rin_quantum_limit
+  section: '3.1'
+  latex: \mathrm{RIN}_Q = \frac{2q}{\langle I_{PD}\rangle} = \frac{2\hbar\omega}{\eta_{PD}\langle P\rangle}
+  symbols:
+  - \mathrm{RIN}
+  - q
+  - P
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (65)
+  notes: Shot-noise floor of RIN; -155 dB/Hz at 1 mA (record ch03.las.rin_shot_limit_1ma).
+- id: ch03.eq.rin_spectrum
+  section: '3.1'
+  latex: \mathrm{RIN}(\nu) = \frac{4\bar\beta_{sp}\Gamma n_{w0}}{\tau_{sp,w}\langle N\rangle}\,\frac{4\pi^2\nu^2 + \gamma^{*2}}{16\pi^4(\nu_r^2-\nu^2)^2
+    + 4\pi^2\gamma^2\nu^2}
+  symbols:
+  - \mathrm{RIN}
+  - \nu_r
+  - \gamma
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (61)
+  notes: 'Intrinsic RIN spectrum peaking at nu_r; gamma* from Eq. (62). Scaling: RIN ~ P^-3 at low power, P^-1 far above threshold
+    (Eqs. 63-64). Prefactor layout reconstructed from extracted text; verify.'
+- id: ch03.eq.linewidth_henry
+  section: '3.1'
+  latex: \Delta\nu_L = \frac{\bar\beta_{sp}\Gamma\langle n_w\rangle}{4\pi\tau_{sp,w}\langle N\rangle}\,(1 + \alpha_H^2)
+  symbols:
+  - \alpha_H
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (68)
+  notes: 'Schawlow-Townes-Henry linewidth: inversely proportional to photon number (power) and enhanced by (1+alpha_H^2).
+    Henry (IEEE JQE 1982) abstract states the enhancement ''1 + alpha^2, where alpha = Delta n''/Delta n'''''' (henry_jqe_1982,
+    Abstract). alpha_H is a NEW symbol (notation.yaml alpha is fibre attenuation); propose alpha_H in chapter notation proposals.'
+- id: ch03.eq.henry_alpha_def
+  section: '3.1'
+  latex: \alpha_H = \frac{\Delta n'}{\Delta n''}
+  symbols:
+  - \alpha_H
+  - n
+  source_id: henry_jqe_1982
+  locator: Abstract
+  notes: Ratio of carrier-induced changes of real and imaginary refractive index. Abstract only. Sign conventions differ between
+    authors (Michalzik quotes negative values).
+- id: ch03.eq.varshni
+  section: '3.1'
+  latex: E_g(T) = E_g(0) - \frac{\alpha_V T^2}{T + \beta_V}
+  symbols:
+  - E_g
+  - T
+  source_id: vurgaftman_jap_2001
+  locator: Eq. (2.13) (cited in Sect. III.A)
+  notes: Varshni form. The crawled text cites Eq. (2.13) with parameters a, b but the equation itself was not displayed; the
+    standard Varshni form is written here and must be confirmed in the PDF. Rename the source alpha, beta to alpha_V, beta_V
+    (clash with attenuation and propagation constant).
+- id: ch03.eq.hdr
+  section: '3.2'
+  latex: \mathrm{HDR} = \frac{P_{\mathrm{el}} - P_{\mathrm{opt}}}{\mathrm{BR}}
+  symbols:
+  - P
+  source_id: haglund_el_2015
+  locator: Introduction (unnumbered)
+  notes: 'Heat-to-data ratio: dissipated VCSEL energy per bit. BR: bit rate.'
+- id: ch03.eq.mzm_field
+  section: '3.4'
+  latex: E_{\mathrm{out}} = E_{\mathrm{in}}\, e^{i\frac{\phi_2+\phi_1}{2}} \cos\!\left(\frac{\phi_2-\phi_1}{2}\right)
+  symbols:
+  - E
+  - \phi
+  source_id: witzens_procieee_2018
+  locator: Eq. (4)
+  notes: Lossless MZM field transfer; push-pull phi_2 = -phi_1 removes the common phase (chirp-free).
+- id: ch03.eq.mzm_power
+  section: '3.4'
+  latex: P_{\mathrm{out}} = P_{\mathrm{in}}\,\frac{1 + \cos(\phi_2 - \phi_1)}{2}
+  symbols:
+  - P
+  - \phi
+  source_id: witzens_procieee_2018
+  locator: Eq. (5)
+  notes: With phi_2 - phi_1 = pi V/V_pi this gives P_in cos^2(pi V / 2 V_pi). Quadrature bias at pi/2.
+- id: ch03.eq.iq_field
+  section: '3.4'
+  latex: E_{\mathrm{out}} = \frac{E_{\mathrm{in}}}{2}\left[\cos(\phi_I) + i\cos(\phi_Q)\right]
+  symbols:
+  - E
+  source_id: witzens_procieee_2018
+  locator: Eq. (6)
+  notes: Nested IQ modulator, each child MZM biased at null.
+- id: ch03.eq.soref_dn_1550
+  section: '3.4'
+  latex: \Delta n = -\left[8.8\times10^{-22}\,\Delta N_e + 8.5\times10^{-18}\,(\Delta N_h)^{0.8}\right]
+  symbols:
+  - n
+  source_id: reed_natphoton_2010
+  locator: Eq. (1)
+  notes: 'Free-carrier plasma dispersion in Si at 1.55 um; Delta N in cm^-3. Original fit: Soref & Bennett, IEEE JQE 1987
+    (soref_bennett_jqe_1987), paywalled. 1.3 um version: Eq. (3) of Reed (6.2e-22, 6.0e-18).'
+- id: ch03.eq.soref_dalpha_1550
+  section: '3.4'
+  latex: \Delta\alpha = 8.5\times10^{-18}\,\Delta N_e + 6.0\times10^{-18}\,\Delta N_h
+  symbols:
+  - \alpha
+  source_id: reed_natphoton_2010
+  locator: Eq. (2)
+  notes: Free-carrier absorption in cm^-1 at 1.55 um. Delta alpha is an absorption coefficient in 1/cm (consistent with notation
+    alpha, 1/length, but on-chip in cm^-1).
+- id: ch03.eq.ring_allpass
+  section: '3.4'
+  latex: T_n = \frac{a^2 - 2ra\cos\phi + r^2}{1 - 2ar\cos\phi + (ra)^2}
+  symbols:
+  - \phi
+  source_id: bogaerts_lpr_2012
+  locator: Eq. (2)
+  notes: 'All-pass ring intensity transmission; phi = beta L_r round-trip phase, a single-pass amplitude transmission (a^2
+    = exp(-alpha L_r)), r self-coupling. Critical coupling r = a gives zero transmission on resonance. Source L is ring round-trip
+    length: rename L_r.'
+- id: ch03.eq.ring_resonance
+  section: '3.4'
+  latex: \lambda_{\mathrm{res}} = \frac{n_{\mathrm{eff}} L_r}{m},\quad m = 1,2,3,\ldots
+  symbols:
+  - \lambda
+  - n
+  source_id: bogaerts_lpr_2012
+  locator: Eq. (3)
+  notes: Resonance condition.
+- id: ch03.eq.ring_fsr
+  section: '3.4'
+  latex: \mathrm{FSR} = \frac{\lambda^2}{n_g L_r}
+  symbols:
+  - \lambda
+  - n
+  source_id: bogaerts_lpr_2012
+  locator: Eq. (9)
+  notes: Free spectral range with group index n_g.
+- id: ch03.eq.ring_q
+  section: '3.4'
+  latex: Q = \frac{\lambda_{\mathrm{res}}}{\mathrm{FWHM}} = \frac{\pi n_g L_r\sqrt{ra}}{\lambda_{\mathrm{res}}(1 - ra)}
+  symbols:
+  - \lambda
+  - n
+  source_id: bogaerts_lpr_2012
+  locator: Eq. (20)
+  notes: Loaded Q of an all-pass ring. Layout reconstructed from extracted text; verify square-root placement.
+- id: ch03.eq.ring_shift
+  section: '3.4'
+  latex: \Delta\lambda_{\mathrm{res}} = \frac{\Delta n_{\mathrm{eff}} L_r}{m}
+  symbols:
+  - \lambda
+  - n
+  source_id: bogaerts_lpr_2012
+  locator: Eq. (24)
+  notes: Resonance shift from any effective-index perturbation (thermal, carrier, fabrication). Group-index correction (Delta
+    lambda = lambda Delta n_eff / n_g) is discussed in the source text after Eq. (24); not separately recorded.
+- id: ch03.eq.ring_energy_bit
+  section: '3.4'
+  latex: E_{\mathrm{bit}} = \frac{C V^2}{4}
+  symbols:
+  - E_{\mathrm{bit}}
+  - C
+  - V
+  source_id: timurdogan_natcommun_2014
+  locator: Results, switching-energy paragraph
+  notes: 'NRZ PRBS energy per bit of a capacitive (depletion) modulator, assuming equiprobable transitions. C here is capacitance,
+    NOT Shannon capacity C of notation.yaml: use C_j.'
+- id: ch03.eq.mcintyre_noise
+  section: '3.6'
+  latex: S_i = 2 e I_{\mathrm{in}} M^3\left[1 - (1-k)\left(\frac{M-1}{M}\right)^2\right] = 2 e I_{\mathrm{in}} M^2 F(M),\;
+    F(M) = kM + (1-k)\left(2 - \frac{1}{M}\right)
+  symbols:
+  - M
+  - k
+  - F
+  source_id: mcintyre_ted_1966
+  locator: Abstract (electron-injection case)
+  notes: 'Abstract gives the bracketed M^3 form for pure electron injection with beta = k alpha. The F(M) closed form is algebraically
+    identical (expand); the closed form itself is not printed in the abstract. F here is the APD excess noise factor, NOT
+    amplifier noise factor F of notation.yaml (1.5): use F_A.'
+- id: ch03.eq.gc_bragg
+  section: '3.7'
+  latex: n_{\mathrm{eff}} - n_1\sin\theta_1 = \frac{\lambda}{\Lambda}
+  symbols:
+  - n
+  - \lambda
+  source_id: marchetti_prj_2019
+  locator: Eq. (9)
+  notes: 'First-order grating-coupler phase matching (detuned configuration): Lambda grating period, theta_1 diffraction angle
+    in cladding of index n_1. Explains narrow optical bandwidth of grating couplers.'
+- id: ch03.eq.gaussian_coupling
+  section: '3.7'
+  latex: \eta_{fc} = \frac{4 w_l^2 w_f^2}{(w_l^2 + w_f^2)^2}
+  symbols:
+  - w
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Eq. (70)
+  notes: Butt-coupling efficiency between two aligned Gaussian modes of spot radii w_l, w_f (no Fresnel loss). Useful for
+    mode-mismatch loss of edge couplers.
+- id: ch03.eq.vcsel_aging_af
+  section: '3.7'
+  latex: AF = \left(\frac{J_{\mathrm{stress}}}{J_{\mathrm{use}}}\right)^N \exp\!\left[\frac{E_a}{k_B}\left(\frac{1}{T_{\mathrm{use}}}
+    - \frac{1}{T_{\mathrm{stress}}}\right)\right]
+  symbols:
+  - T
+  source_id: visystems_v25_850_reliability
+  locator: Eq. (2)
+  notes: 'Accelerated-aging factor (Arrhenius times current-density power law). Tier B source; GR-468 default for random failures:
+    N = 2, Ea = 0.35 eV (record ch03.rel.gr468_default_ea).'

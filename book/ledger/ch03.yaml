@@ -1,0 +1,2121 @@
+records:
+- id: ch03.las.henry_alpha_fit
+  section: '3.1'
+  claim: Linewidth enhancement factor alpha needed to explain the AlGaAs laser linewidth measured by Fleming and Mooradian
+  value: 5.4
+  unit: '1'
+  kind: measured
+  conditions:
+    material: AlGaAs (GaAs-based) single-mode laser
+    note: value inferred by fitting theory to linewidth data
+  source_id: henry_jqe_1982
+  locator: Abstract
+  quote: A value of alpha approx 5.4, needed to explain the observed linewidth, is close to the experimental values of a of
+    4.6 and 6.2.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Quote transcribed from abstract; symbol rendered as text. Abstract only.
+- id: ch03.las.henry_alpha_measured
+  section: '3.1'
+  claim: Independently measured alpha factor values cited by Henry for AlGaAs lasers
+  value:
+  - 4.6
+  - 6.2
+  unit: '1'
+  kind: measured
+  conditions:
+    material: AlGaAs
+  source_id: henry_jqe_1982
+  locator: Abstract
+  quote: is close to the experimental values of a of 4.6 and 6.2.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; the two experimental sources are not named in the abstract.
+- id: ch03.las.henry_linewidth_1mw
+  section: '3.1'
+  claim: Measured linewidth of an AlGaAs single-mode laser at 1 mW per facet (Fleming and Mooradian data analysed by Henry)
+  value: 114
+  unit: MHz
+  kind: measured
+  conditions:
+    power_per_facet_mW: 1
+    material: AlGaAs
+    note: linewidth inversely proportional to power
+  source_id: henry_jqe_1982
+  locator: Abstract
+  quote: They found the linewidth to be inversely proportional to power and to have a value of 114 MHz at 1 mW per facet.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.las.henry_excess_ratio
+  section: '3.1'
+  claim: Ratio of measured linewidth to the prediction of pre-1982 (Schawlow-Townes-type) theories
+  value: 30
+  unit: '1'
+  kind: measured
+  conditions:
+    material: AlGaAs
+  source_id: henry_jqe_1982
+  locator: Abstract
+  quote: This value is 30 times greater than can be explained by existing theories.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Motivates the (1+alpha^2) factor; 1+5.4^2 = 30.2, consistent with the factor of 30.
+- id: ch03.las.vcsel_alpha_range
+  section: '3.1'
+  claim: Typical range of the linewidth enhancement factor alpha_H reported for VCSELs (sign convention of the chapter)
+  value:
+  - -7
+  - -2
+  unit: '1'
+  kind: spec_typ
+  conditions:
+    device: oxide-confined VCSEL, 850-980 nm
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 4.4, text after Eq. (68)
+  quote: where alpha_H is the linewidth enhancement factor that has also been determined for VCSELs [64] and typically takes
+    values between -2 and -7.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Negative sign follows the chapter's convention; Henry defines alpha = dn'/dn'' and quotes positive values. Use |alpha_H|
+    = 2 to 7 in prose and state the convention.
+- id: ch03.las.vcsel_residual_linewidth
+  section: '3.1'
+  claim: Residual (power-independent) linewidth of a single-mode oxide VCSEL extrapolated to infinite power
+  value: 11
+  unit: MHz
+  kind: measured
+  conditions:
+    device: single-mode oxide-confined VCSEL, about 4 um diameter
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 4.4, Fig. 22 discussion
+  quote: However, a residual linewidth of Delta nu_0 = 11 MHz is observed for the extrapolation P to infinity
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Attributed to side-mode competition or 1/f noise.
+- id: ch03.las.rin_shot_limit_1ma
+  section: '3.1'
+  claim: Quantum (shot-noise) limit of RIN for 1 mA mean photocurrent
+  value: -155
+  unit: dB/Hz
+  kind: constant
+  conditions:
+    photocurrent_mA: 1
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 4.3, text after Eq. (65)
+  quote: For a mean photocurrent <I_PD> = 1 mA, the quantum noise limit is found at -155 dB/Hz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Computable as 10log10(2q/I) = -154.9 dB/Hz; derive in calc script rather than quoting.
+- id: ch03.las.vcsel_min_kfactor
+  section: '3.1'
+  claim: Smallest K-factors observed for VCSELs at the time of the review
+  value:
+  - 0.15
+  - 0.2
+  unit: ns
+  kind: record
+  conditions:
+    device: high-speed VCSEL
+    year_context: about 2003
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 4.2, text after Fig. 19
+  quote: Smallest K-factors observed for VCSELs so far are in the 0.15 to 0.2 ns range [58], [59]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: With Eq. (55) these give damping-limited maxima of 44-59 GHz.
+- id: ch03.las.vcsel_mcef_2003
+  section: '3.1'
+  claim: Modulation current efficiency factor (MCEF) reported for VCSELs, early 2000s
+  value: 14
+  unit: GHz/sqrt(mA)
+  kind: record
+  conditions:
+    note: lower bound, 'exceeding'
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 4.2, after Eq. (58)
+  quote: MCEFs exceeding 14 GHz/sqrt(mA) have already been reported [58]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.las.vcsel_thermal_shift
+  section: '3.2'
+  claim: Temperature tuning coefficient of the emission wavelength of short-wavelength (850-980 nm) VCSELs
+  value: 0.07
+  unit: nm/K
+  kind: spec_typ
+  conditions:
+    wavelength_nm:
+    - 850
+    - 980
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 3, discussion of thermal resistance, Eq. (36)
+  quote: As mentioned before, C2 approx 0.07 nm/K for short-wavelength VCSELs.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.las.vcsel_ith_temp
+  section: '3.2'
+  claim: Threshold current range of an oxidized VCSEL between -40 and +80 C
+  value:
+  - 0.3
+  - 0.5
+  unit: mA
+  kind: measured
+  conditions:
+    temperature_C:
+    - -40
+    - 80
+  source_id: michalzik_ebeling_vcsel_chapter_2003
+  locator: Sect. 3, discussion of Fig. 15
+  quote: the threshold current varies between 300 and 500 uA, while the laser current required for 1 mW output power ranges
+    between 1.5 and 1.85 mA.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.mat.gaas_eg_0k
+  section: '3.1'
+  claim: Direct (Gamma) band gap of GaAs at 0 K, recommended value
+  value: 1.519
+  unit: eV
+  kind: constant
+  conditions:
+    temperature_K: 0
+  source_id: vurgaftman_jap_2001
+  locator: Sect. III.A and Table I
+  quote: This is especially true of the fundamental energy gap with a value of 1.519 eV at 0 K.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.mat.gaas_eg_300k_range
+  section: '3.1'
+  claim: Range of reported GaAs Gamma band gap at 300 K
+  value:
+  - 1.42
+  - 1.435
+  unit: eV
+  kind: constant
+  conditions:
+    temperature_K: 300
+  source_id: vurgaftman_jap_2001
+  locator: Table I, row Eg Gamma, Range column
+  quote: Eg G (eV) 1.519 1.420-1.435 (300 K)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Varshni with Table I parameters gives 1.519 - 0.5405e-3*300^2/(300+204) = 1.422 eV; compute in calc script.
+- id: ch03.mat.gaas_varshni_alpha
+  section: '3.1'
+  claim: Varshni alpha parameter of the GaAs Gamma gap
+  value: 0.5405
+  unit: meV/K
+  kind: model_param
+  conditions:
+    varshni_beta_K: 204
+  source_id: vurgaftman_jap_2001
+  locator: Table I, rows a(G) and b(G)
+  quote: The analysis by Thurmond 88 indicated a=0.5405 meV/K and b=204 K [in Eq. (2.13)].
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.mat.inp_eg_0k
+  section: '3.1'
+  claim: Direct band gap of InP at 0 K, recommended value
+  value: 1.4236
+  unit: eV
+  kind: constant
+  conditions:
+    temperature_K: 0
+  source_id: vurgaftman_jap_2001
+  locator: Table VI, row Eg Gamma
+  quote: Eg G (eV) 1.4236 1.420-1.432
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.mat.inp_varshni_alpha
+  section: '3.1'
+  claim: Varshni alpha parameter of the InP Gamma gap
+  value: 0.363
+  unit: meV/K
+  kind: model_param
+  conditions:
+    varshni_beta_K: 162
+  source_id: vurgaftman_jap_2001
+  locator: Table VI, rows a(G) and b(G)
+  quote: a(G) (meV/K) 0.363 0.51-1.06 b(G) (K) 162
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Gives Eg(300 K) = 1.4236 - 0.363e-3*90000/462 = 1.353 eV; compute in calc script. The Range column for a, b in Table
+    VI looks copied from Table I in the crawl; check the PDF.
+- id: ch03.mat.inp_substrate_role
+  section: '3.1'
+  claim: InP is the substrate for most optoelectronic devices at the 1.55 um communications wavelength
+  value: InP substrate underlies most 1.55 um optoelectronic devices
+  unit: ''
+  kind: fact
+  conditions: {}
+  source_id: vurgaftman_jap_2001
+  locator: Sect. III.F (InP)
+  quote: since it serves as the substrate for most optoelectronic devices operating at the communications wavelength of 1.55
+    um.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.vcsel.chalmers_bw_record
+  section: '3.2'
+  claim: Record modulation bandwidth of a conventional 850 nm oxide-confined VCSEL (Chalmers/IQE)
+  value: 30
+  unit: GHz
+  kind: record
+  conditions:
+    wavelength_nm: 850
+    oxide_aperture_um: 3.5
+    bias_mA: 4.1
+    temperature: room
+  source_id: haglund_el_2015
+  locator: Abstract and Fig. 2
+  quote: A record-high modulation bandwidth of 30 GHz is reached for a 3.5 um oxide aperture VCSEL
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.vcsel.chalmers_bw_low_bias
+  section: '3.2'
+  claim: Bandwidth of the same VCSEL at only 1.8 mA bias
+  value: 25
+  unit: GHz
+  kind: measured
+  conditions:
+    bias_mA: 1.8
+    oxide_aperture_um: 3.5
+  source_id: haglund_el_2015
+  locator: Abstract
+  quote: with 25 GHz bandwidth already at a bias current of 1.8 mA.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.vcsel.chalmers_dfactor
+  section: '3.2'
+  claim: D-factor (resonance-frequency growth rate) of the 3.5 um aperture VCSEL
+  value: 17.5
+  unit: GHz/sqrt(mA)
+  kind: measured
+  conditions:
+    oxide_aperture_um: 3.5
+  source_id: haglund_el_2015
+  locator: Text discussing Fig. 2
+  quote: the resonance frequency increases rapidly with bias current at a rate of 17.5 GHz/mA^1/2 (the D-factor), reaching
+    a maximum value of 27 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.vcsel.chalmers_mcef
+  section: '3.2'
+  claim: Modulation current efficiency factor of the 3.5 um aperture VCSEL
+  value: 20.6
+  unit: GHz/sqrt(mA)
+  kind: measured
+  conditions:
+    oxide_aperture_um: 3.5
+  source_id: haglund_el_2015
+  locator: Text discussing Fig. 2
+  quote: the modulation bandwidth increases rapidly with current at a rate of 20.6 GHz/mA^1/2 (the modulation current efficiency
+    factor, MCEF)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Ratio MCEF/D = 1.18, below the 1.55 damping-free theory of Michalzik Eq. (58); see equation ch03.eq.vcsel_fr_current.
+- id: ch03.vcsel.chalmers_hdr_40g
+  section: '3.2'
+  claim: Heat-to-data ratio (dissipated energy per bit) at 40 Gb/s error-free
+  value: 73
+  unit: fJ/bit
+  kind: record
+  conditions:
+    bit_rate_Gbps: 40
+    bias_mA: 1.7
+  source_id: haglund_el_2015
+  locator: Text and Fig. 3
+  quote: the bias current had to be increased to 1.7 mA (17.7 kA/cm 2) to enable error-free transmission, resulting in a HDR
+    of 73 fJ/bit.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.vcsel.chalmers_hdr_50g
+  section: '3.2'
+  claim: Heat-to-data ratio at 50 Gb/s error-free
+  value: 95
+  unit: fJ/bit
+  kind: measured
+  conditions:
+    bit_rate_Gbps: 50
+    bias_mA: 2.5
+  source_id: haglund_el_2015
+  locator: Text and Fig. 3
+  quote: the bias current had to be further increased to 2.5 mA (26.0 kA/cm 2) for sufficient VCSEL bandwidth, giving a HDR
+    of 95 fJ/bit.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.vcsel.photon_lifetime_opt
+  section: '3.2'
+  claim: Optimum photon lifetime for a Chalmers 850 nm high-speed VCSEL design and resulting bandwidth
+  value: 23
+  unit: GHz
+  kind: measured
+  conditions:
+    optimum_photon_lifetime_ps: 3
+    wavelength_nm: 850
+  source_id: westbergh_jstqe_2011
+  locator: Abstract
+  quote: leading to an optimum photon lifetime close to 3 ps for this particular VCSEL design that enables a modulation bandwidth
+    of 23 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Illustrates the K-factor trade-off between resonance frequency and damping.
+- id: ch03.mmf.om3_emb
+  section: '3.2'
+  claim: Minimum effective modal bandwidth of OM3 fiber at 850 nm
+  value: 2000
+  unit: MHz*km
+  kind: spec_min
+  conditions:
+    wavelength_nm: 850
+    fiber: OM3 (TIA-492AAAC, IEC 60793-2-10 A1a.2)
+  source_id: parsons_jlt_2019
+  locator: Sect. I (Introduction)
+  quote: OM3 and OM4 fibers only specify EMB at 850 nm with values of >=2000 MHz * km for OM3 fiber and >=4700 MHz * km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Primary TIA-492AAAx/IEC 60793-2-10 not read (paywalled). Same values in IEEE 802.3 Clause 95 Table 95-13 (ch03.mmf.ieee_cl95_emb_om4).
+- id: ch03.mmf.om4_emb
+  section: '3.2'
+  claim: Minimum effective modal bandwidth of OM4 fiber at 850 nm
+  value: 4700
+  unit: MHz*km
+  kind: spec_min
+  conditions:
+    wavelength_nm: 850
+    fiber: OM4 (TIA-492AAAD, IEC A1a.3)
+  source_id: parsons_jlt_2019
+  locator: Sect. I (Introduction)
+  quote: OM3 and OM4 fibers only specify EMB at 850 nm with values of >=2000 MHz * km for OM3 fiber and >=4700 MHz * km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.mmf.om5_emb_953
+  section: '3.2'
+  claim: Minimum effective modal bandwidth of OM5 (wideband MMF) at 953 nm
+  value: 2470
+  unit: MHz*km
+  kind: spec_min
+  conditions:
+    wavelength_nm: 953
+    fiber: OM5 (TIA-492AAAE, IEC A1a.4)
+    also: 4700 MHz*km at 850 nm
+  source_id: parsons_jlt_2019
+  locator: Sect. I (Introduction)
+  quote: With OM5 fibers, EMB values of >=4700 MHz * km at 850 nm and >=2470 MHz * km at 953 nm are required.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.mmf.om5_atten_953
+  section: '3.2'
+  claim: Maximum cabled attenuation of OM5 at 953 nm (TIA-568.3-D)
+  value: 2.3
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 953
+    fiber: OM5
+  source_id: kolesar_ieee8023cd_2016
+  locator: Slide 6, 'Key Performance Spec Comparison' table
+  quote: Cabled attenuation at 953 nm per 568.3-D, max (dB/km) | Not spec'd | 2.3
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.om5_cd_953
+  section: '3.2'
+  claim: 'Maximum chromatic dispersion magnitude of OM5 at 953 nm (OM4: 65)'
+  value: 61.7
+  unit: ps/(nm*km)
+  kind: spec_max
+  conditions:
+    wavelength_nm: 953
+    fiber: OM5
+    om4_value: 65
+  source_id: kolesar_ieee8023cd_2016
+  locator: Slide 6 table
+  quote: Chromatic dispersion at 953 nm, max (|ps/nm*km|) | 65 | 61.7
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.sr4_reach_om3
+  section: '3.2'
+  claim: 100GBASE-SR4 required operating range on OM3
+  value: 70
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 100GBASE-SR4
+    fiber: OM3
+    lane_rate: 4 x 25.78125 GBd NRZ, RS-FEC mandatory
+  source_id: ieee8023bm_cl95_draft_2014
+  locator: Table 95-5
+  quote: 100GBASE-SR4 | 0.5 m to 70 m for OM3 0.5 m to 100 m for OM4
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Task-force draft text; final IEEE Std 802.3bm-2015 not read. Matches Wikipedia/Legrand secondary summaries. Disagrees
+    with TIA FOTC table (ch03.mmf.fotc_sr4_conflict).
+- id: ch03.mmf.sr4_reach_om4
+  section: '3.2'
+  claim: 100GBASE-SR4 required operating range on OM4
+  value: 100
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 100GBASE-SR4
+    fiber: OM4
+  source_id: ieee8023bm_cl95_draft_2014
+  locator: Table 95-5
+  quote: 100GBASE-SR4 | 0.5 m to 70 m for OM3 0.5 m to 100 m for OM4
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.sr4_channel_il_om4
+  section: '3.2'
+  claim: 100GBASE-SR4 maximum channel insertion loss on OM4 (includes 1.5 dB connection allocation)
+  value: 1.9
+  unit: dB
+  kind: spec_max
+  conditions:
+    fiber: OM4
+    connection_loss_allocation_dB: 1.5
+  source_id: ieee8023bm_cl95_draft_2014
+  locator: Table 95-12
+  quote: Channel insertion lossb (max) | 1.8 | 1.9 | dB
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: OM3 value 1.8 dB.
+- id: ch03.mmf.sr4_cable_atten
+  section: '3.2'
+  claim: Cabled MMF attenuation assumed in 100GBASE-SR4 budget at 850 nm
+  value: 3.5
+  unit: dB/km
+  kind: spec_max
+  conditions:
+    wavelength_nm: 850
+  source_id: ieee8023bm_cl95_draft_2014
+  locator: Table 95-13
+  quote: Cabled optical fiber attenuation (max) | | 3.5 | dB/km
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.ieee8023cm_reach
+  section: '3.2'
+  claim: IEEE 802.3cm (400GBASE-SR8 and SR4.2) target reach
+  value: 100
+  unit: m
+  kind: spec_min
+  conditions:
+    pmds: 400GBASE-SR8 (8 pairs), 400GBASE-SR4.2 (4 pairs)
+  source_id: ieee8023cm_2020_abstract
+  locator: Abstract (front matter)
+  quote: for 400 Gb/s operation on four pairs (400GBASE-SR4.2) and eight pairs (400GBASE-SR8) of multimode fiber, over reaches
+    of at least 100 m.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; per-fiber reaches from TIA FOTC records.
+- id: ch03.mmf.sr8_reach_om3
+  section: '3.2'
+  claim: 400GBASE-SR8 operating range on OM3 / OM4 (OM3)
+  value: 70
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 400GBASE-SR8
+    lane: 8 x 53.125 Gb/s (26.5625 GBd PAM4)
+    fiber: OM3 / OM4
+    item: OM3
+  source_id: tiafotc_400gbase_sr8_2023
+  locator: Channel characteristics table
+  quote: 'Operating range: | 0.5 to 70 | 0.5 to 100'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: IEEE Clause 138 itself not read.
+- id: ch03.mmf.sr8_reach_om4
+  section: '3.2'
+  claim: 400GBASE-SR8 operating range on OM3 / OM4 (OM4)
+  value: 100
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 400GBASE-SR8
+    lane: 8 x 53.125 Gb/s (26.5625 GBd PAM4)
+    fiber: OM3 / OM4
+    item: OM4
+  source_id: tiafotc_400gbase_sr8_2023
+  locator: Channel characteristics table
+  quote: 'Operating range: | 0.5 to 70 | 0.5 to 100'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: IEEE Clause 138 itself not read.
+- id: ch03.mmf.sr4p2_reach_om3
+  section: '3.2'
+  claim: 400GBASE-SR4.2 (850/910 nm BiDi) operating range on OM3 / OM4 / OM5 (OM3)
+  value: 70
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 400GBASE-SR4.2
+    wavelengths_nm:
+    - 850
+    - 910
+    item: OM3
+  source_id: tiafotc_400gbase_sr4p2_2023
+  locator: Channel characteristics table
+  quote: 'Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150 | m'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: First IEEE MMF PMD to exploit OM5's 953 nm EMB.
+- id: ch03.mmf.sr4p2_reach_om4
+  section: '3.2'
+  claim: 400GBASE-SR4.2 (850/910 nm BiDi) operating range on OM3 / OM4 / OM5 (OM4)
+  value: 100
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 400GBASE-SR4.2
+    wavelengths_nm:
+    - 850
+    - 910
+    item: OM4
+  source_id: tiafotc_400gbase_sr4p2_2023
+  locator: Channel characteristics table
+  quote: 'Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150 | m'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: First IEEE MMF PMD to exploit OM5's 953 nm EMB.
+- id: ch03.mmf.sr4p2_reach_om5
+  section: '3.2'
+  claim: 400GBASE-SR4.2 (850/910 nm BiDi) operating range on OM3 / OM4 / OM5 (OM5)
+  value: 150
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 400GBASE-SR4.2
+    wavelengths_nm:
+    - 850
+    - 910
+    item: OM5
+  source_id: tiafotc_400gbase_sr4p2_2023
+  locator: Channel characteristics table
+  quote: 'Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150 | m'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: First IEEE MMF PMD to exploit OM5's 953 nm EMB.
+- id: ch03.mmf.fotc_sr4_conflict_om3
+  section: '3.2'
+  claim: TIA FOTC summary table lists 100GBASE-SR4 reach as 100 m OM3 / 150 m OM4 (OM3)
+  value: 100
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 100GBASE-SR4
+    item: OM3
+  source_id: tiafotc_mmf_apps_2023
+  locator: '''All fiber count'' application table, row 100GBASE-SR4'
+  quote: 100GBASE-SR4 | 8 | OM3 OM4/OM5 | 0.5 m to 100 m 0.5 m to 150 m | IEEE Std 802.3, Clause 95
+  retrieved: 2026-11-02
+  tier: B
+  confidence: low
+  notes: DISAGREES with IEEE Clause 95 Table 95-5 (70 m / 100 m). Almost certainly a copy error from the 40GBASE-SR4 row.
+    Do not use for prose; recorded only to document the conflict.
+- id: ch03.mmf.fotc_sr4_conflict_om4
+  section: '3.2'
+  claim: TIA FOTC summary table lists 100GBASE-SR4 reach as 100 m OM3 / 150 m OM4 (OM4)
+  value: 150
+  unit: m
+  kind: spec_min
+  conditions:
+    pmd: 100GBASE-SR4
+    item: OM4
+  source_id: tiafotc_mmf_apps_2023
+  locator: '''All fiber count'' application table, row 100GBASE-SR4'
+  quote: 100GBASE-SR4 | 8 | OM3 OM4/OM5 | 0.5 m to 100 m 0.5 m to 150 m | IEEE Std 802.3, Clause 95
+  retrieved: 2026-11-02
+  tier: B
+  confidence: low
+  notes: DISAGREES with IEEE Clause 95 Table 95-5 (70 m / 100 m). Almost certainly a copy error from the 40GBASE-SR4 row.
+    Do not use for prose; recorded only to document the conflict.
+- id: ch03.mmf.swdm4_wavelengths_l0
+  section: '3.2'
+  claim: SWDM4 lane centre wavelengths (30 nm spacing) (L0)
+  value: 850
+  unit: nm
+  kind: spec_typ
+  conditions:
+    lane_ranges_nm: 844-858, 874-888, 904-918, 934-948
+    item: L0
+  source_id: swdm_msa_100g_swdm4
+  locator: Sect. 2.1, Table 2-1
+  quote: The wavelength range for each lane of the SWDM PMD is defined in Table 2-1. The center wavelengths are spaced at
+    30 nm.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_wavelengths_l1
+  section: '3.2'
+  claim: SWDM4 lane centre wavelengths (30 nm spacing) (L1)
+  value: 880
+  unit: nm
+  kind: spec_typ
+  conditions:
+    lane_ranges_nm: 844-858, 874-888, 904-918, 934-948
+    item: L1
+  source_id: swdm_msa_100g_swdm4
+  locator: Sect. 2.1, Table 2-1
+  quote: The wavelength range for each lane of the SWDM PMD is defined in Table 2-1. The center wavelengths are spaced at
+    30 nm.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_wavelengths_l2
+  section: '3.2'
+  claim: SWDM4 lane centre wavelengths (30 nm spacing) (L2)
+  value: 910
+  unit: nm
+  kind: spec_typ
+  conditions:
+    lane_ranges_nm: 844-858, 874-888, 904-918, 934-948
+    item: L2
+  source_id: swdm_msa_100g_swdm4
+  locator: Sect. 2.1, Table 2-1
+  quote: The wavelength range for each lane of the SWDM PMD is defined in Table 2-1. The center wavelengths are spaced at
+    30 nm.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_wavelengths_l3
+  section: '3.2'
+  claim: SWDM4 lane centre wavelengths (30 nm spacing) (L3)
+  value: 940
+  unit: nm
+  kind: spec_typ
+  conditions:
+    lane_ranges_nm: 844-858, 874-888, 904-918, 934-948
+    item: L3
+  source_id: swdm_msa_100g_swdm4
+  locator: Sect. 2.1, Table 2-1
+  quote: The wavelength range for each lane of the SWDM PMD is defined in Table 2-1. The center wavelengths are spaced at
+    30 nm.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_reach_om3
+  section: '3.2'
+  claim: 100G-SWDM4 required operating range on OM3 / OM4 / OM5 (OM3)
+  value: 75
+  unit: m
+  kind: spec_min
+  conditions:
+    lane_rate_GBd: 25.78125
+    item: OM3
+  source_id: swdm_msa_100g_swdm4
+  locator: Table 2-2
+  quote: OM3 | 2 to 75 m | OM4 | 2 to 100 m | OM5 | 2 to 150 m
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_reach_om4
+  section: '3.2'
+  claim: 100G-SWDM4 required operating range on OM3 / OM4 / OM5 (OM4)
+  value: 100
+  unit: m
+  kind: spec_min
+  conditions:
+    lane_rate_GBd: 25.78125
+    item: OM4
+  source_id: swdm_msa_100g_swdm4
+  locator: Table 2-2
+  quote: OM3 | 2 to 75 m | OM4 | 2 to 100 m | OM5 | 2 to 150 m
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_reach_om5
+  section: '3.2'
+  claim: 100G-SWDM4 required operating range on OM3 / OM4 / OM5 (OM5)
+  value: 150
+  unit: m
+  kind: spec_min
+  conditions:
+    lane_rate_GBd: 25.78125
+    item: OM5
+  source_id: swdm_msa_100g_swdm4
+  locator: Table 2-2
+  quote: OM3 | 2 to 75 m | OM4 | 2 to 100 m | OM5 | 2 to 150 m
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.mmf.swdm4_rms_width
+  section: '3.2'
+  claim: Maximum RMS spectral width of an SWDM4 transmitter lane
+  value: 0.59
+  unit: nm
+  kind: spec_max
+  conditions: {}
+  source_id: swdm_msa_100g_swdm4
+  locator: Table 2-3
+  quote: RMS spectral width (max) [1] | | 0.59 | nm
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.dml.ntt_membrane_bw
+  section: '3.3'
+  claim: 3-dB bandwidth of NTT directly modulated membrane DR laser on SiC using photon-photon resonance
+  value: 108
+  unit: GHz
+  kind: record
+  conditions:
+    active_length_um: 50
+    ppr_GHz: 95
+    wavelength: O-band
+  source_id: yamaoka_natphoton_2021
+  locator: Abstract
+  quote: By employing the photon-photon resonance at 95 GHz due to optical feedback from an integrated output waveguide, we
+    achieve an f3dB of 108 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract read; supplementary Table S1 also read.
+- id: ch03.dml.ntt_membrane_fr
+  section: '3.3'
+  claim: Relaxation oscillation frequency of the 50-um membrane laser
+  value: 42
+  unit: GHz
+  kind: record
+  conditions:
+    active_length_um: 50
+  source_id: yamaoka_natphoton_2021
+  locator: Abstract
+  quote: We achieve a 42 GHz relaxation oscillation frequency by using a laser with a 50-um-long active region.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.dml.ntt_membrane_intrinsic
+  section: '3.3'
+  claim: Intrinsic (damping-limited, without PPR) 3-dB bandwidth of the membrane laser
+  value: 60
+  unit: GHz
+  kind: measured
+  conditions: {}
+  source_id: yamaoka_natphoton_2021
+  locator: Abstract
+  quote: suppresses the damping effect while keeping the threshold carrier density low, resulting in a 60 GHz intrinsic 3
+    dB bandwidth
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.dml.ntt_membrane_pam4
+  section: '3.3'
+  claim: PAM4 bit rate and DC electrical energy cost demonstrated with the membrane DML
+  value: 256
+  unit: Gb/s
+  kind: record
+  conditions:
+    energy_fJ_per_bit: 475
+    format: PAM4
+  source_id: yamaoka_natphoton_2021
+  locator: Abstract
+  quote: demonstrate 256 Gbit s-1 four-level pulse-amplitude modulations with a 475 fJ bit-1 energy cost of the direct-current
+    electrical input.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.eml.mitsubishi_225g_bw
+  section: '3.3'
+  claim: 3-dB bandwidth of hybrid-waveguide EML (BH-DFB + high-mesa EAM) on CWDM4 grid
+  value: 65
+  unit: GHz
+  kind: measured
+  conditions:
+    bit_rate: 225 Gb/s PAM4
+    grid: CWDM4 1270.9-1331.1 nm
+    output_power: '>7 dBm modulated at 50 C'
+    ER: '>3.5 dB'
+  source_id: uchiyama_jlt_2024
+  locator: Abstract
+  quote: Fabricated EMLs demonstrated a 3-dB down frequency bandwidth of 65 GHz, which is sufficient for 225 Gb/s PAM4 operation.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.eml.broadcom_uncooled_bw
+  section: '3.3'
+  claim: Bandwidth of uncooled (20-70 C) O-band CWDM EML for 200G/lane
+  value: 60
+  unit: GHz
+  kind: measured
+  conditions:
+    symbol_rate_GBd: 112.5
+    temperature_C:
+    - 20
+    - 70
+    swing_Vpp: 1.1
+    ER_dB: 4
+    power: '>7 dBm'
+  source_id: bhasker_ofc_2023
+  locator: Abstract
+  quote: We report uncooled (20-70C) hybrid CMBH-Ridge O-band CWDM EMLs with 60 GHz bandwidth (BW).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.eml.hhi_array_bw
+  section: '3.3'
+  claim: Bandwidth of each EML in a 4 x 200 Gb/s LAN-WDM array with a single MQW stack
+  value: 42
+  unit: GHz
+  kind: measured
+  conditions:
+    note: lower bound '>42 GHz'
+    temperature_C: 45
+    symbol_rate_GBd: 100
+    ER_dB: up to 15
+  source_id: theurer_ofc_2023
+  locator: Sect. 3, Fig. 2(c)
+  quote: An identical response with a 3dB bandwidth >42 GHz is achieved for all four EML in the array.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.eml.mitsubishi_400g_lane
+  section: '3.3'
+  claim: EML PAM4 bit rate with TDECQ below 3.3 dB (155 GBd) toward 400G/lane
+  value: 310
+  unit: Gb/s
+  kind: record
+  conditions:
+    symbol_rate_GBd: 155
+    tdecq_dB: <3.3
+    also: 400 Gb/s PAM6 eye
+  source_id: uchiyama_ofc_2024
+  locator: Abstract
+  quote: TDECQ less than 3.3 dB at 310 Gbps (155 Gbaud PAM4) and clear eye diagram at 400 Gbps (155 Gbaud PAM6) were achieved.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.eam.qcse_field
+  section: '3.3'
+  claim: QCSE exciton resonances remain resolved at fields exceeding 50 times the classical ionization field
+  value: Exciton peaks survive fields >50x classical ionization field in GaAs/AlGaAs QWs
+  unit: ''
+  kind: fact
+  conditions:
+    material: GaAs-AlGaAs quantum wells, field perpendicular to layers
+  source_id: miller_prl_1984
+  locator: Abstract
+  quote: the exciton resonances remain resolved even for shifts much larger than the zero-field binding energy and fields
+    > 50 times the classical ionization field.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Franz-Keldysh effect (bulk) not separately sourced; see gaps.
+- id: ch03.cw.gokhale_100mw_pce
+  section: '3.3'
+  claim: Power conversion efficiency of 1.31 um CW-DFB at 100 mW and 75 C (1 mm cavity)
+  value: 25
+  unit: '%'
+  kind: record
+  conditions:
+    power_mW: 100
+    temperature_C: 75
+    cavity_mm: 1
+    also: 20% at 200 mW, 2 mm cavity
+  source_id: gokhale_ofc_2023
+  locator: Abstract
+  quote: We demonstrate record high 75C power conversion efficiencies of 25% at 100mW (1mm cavity) and 20% at 200mW (2mm cavity)
+    for CW-DFB lasers
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract via Semantic Scholar; DOI not captured.
+- id: ch03.cw.inoue_350mw
+  section: '3.3'
+  claim: Output power of 1.3 um SOA-integrated DFB for CPO up to 45 C, with PCE >25%
+  value: 350
+  unit: mW
+  kind: record
+  conditions:
+    temperature_C: up to 45
+    pce_percent: '>25'
+    rin_dB_per_Hz: < -155 average
+  source_id: inoue_ofc_2023
+  locator: Abstract
+  quote: exhibits a power conversion efficiency of more than 25% with output power of 350 mW up to 45°C.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: RIN below -155 dB/Hz (average) is stated in the next sentence of the abstract.
+- id: ch03.cw.lam_100mw_75c
+  section: '3.3'
+  claim: Output power of BH SSC-integrated 1310 nm DFB at 75 C and 400 mA with 20% efficiency
+  value: 100
+  unit: mW
+  kind: measured
+  conditions:
+    temperature_C: 75
+    current_mA: 400
+    pce_percent: 20
+    lensed_fiber_coupling_loss_dB: 0.9
+  source_id: lam_opteng_2023
+  locator: Abstract
+  quote: with record power efficiency of 20% at optical power of more than 100 mW at 75C and current of 400 mA.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.itla.oif_power_20mw
+  section: '3.3'
+  claim: OIF ITLA fibre output power, 20 mW class, over life (Application 1 ULH)
+  value:
+  - 12.5
+  - 14.5
+  unit: dBm
+  kind: spec_typ
+  conditions:
+    application: 1 (Ultra Long Haul)
+    typ_dBm: 13.5
+  source_id: oif_itla_msa_01p3_2015
+  locator: Sect. 11.1.2, Table 11.1.2-1, item 11.1.2.2
+  quote: Fiber Output Power | 20mW | P | 12.5 | 13.5 14.5
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: OIF IA (tier A per SCHEMA). 10 mW class 9.5-11.5 dBm.
+- id: ch03.itla.oif_linewidth_app1
+  section: '3.3'
+  claim: OIF ITLA maximum spectral linewidth, Application 1 (ULH)
+  value: 5
+  unit: MHz
+  kind: spec_max
+  conditions:
+    application: '1'
+  source_id: oif_itla_msa_01p3_2015
+  locator: Table 11.1.2-1, item 11.1.2.8
+  quote: 11.1.2.8 | Spectral Linewidth | | f | | 5 | MHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Legacy (2004-2015) spec written for direct-detection DWDM; coherent nano-ITLAs achieve <100-300 kHz (ch03.itla.furukawa_linewidth,
+    ch03.itla.sedi_linewidth). Application 2: 10 MHz.'
+- id: ch03.itla.oif_rin_app1
+  section: '3.3'
+  claim: OIF ITLA maximum RIN, Application 1
+  value: -145
+  unit: dB/Hz
+  kind: spec_max
+  conditions:
+    application: '1'
+    app2_value: -135
+  source_id: oif_itla_msa_01p3_2015
+  locator: Table 11.1.2-1, item 11.1.2.7
+  quote: 11.1.2.7 | Relative Intensity Noise | | RIN | | -145 | dB/Hz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.itla.oif_freq_error
+  section: '3.3'
+  claim: OIF ITLA frequency error to ITU grid, 50 GHz spacing
+  value: 2.5
+  unit: GHz
+  kind: spec_max
+  conditions:
+    channel_spacing_GHz: 50
+    note: +/-; 1.25 GHz for 25 GHz spacing
+  source_id: oif_itla_msa_01p3_2015
+  locator: Table 11.1.2-1, items 11.1.2.4-5
+  quote: Frequency error to ITU Grid | 50 GHz channel spacing 25 GHz channel spacing | F F | -2.5 -1.25 | +2.5 +1.25 | GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.itla.oif_smsr_app1
+  section: '3.3'
+  claim: OIF ITLA minimum side-mode suppression ratio, Application 1
+  value: 43
+  unit: dB
+  kind: spec_min
+  conditions:
+    application: '1'
+    app2_value: 40
+  source_id: oif_itla_msa_01p3_2015
+  locator: Table 11.1.2-1, item 11.1.2.6
+  quote: 11.1.2.6 | Side Mode Suppression Ratio | | SMSR | 43 | | dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.itla.furukawa_linewidth
+  section: '3.3'
+  claim: Spectral linewidth of Furukawa DBR/ring Nano-ITLA over the C-band
+  value: 100
+  unit: kHz
+  kind: measured
+  conditions:
+    note: upper bound '<100 kHz', white-noise (Lorentzian) component
+    output_dBm: '>17'
+    tuning_nm: 41
+  source_id: terada_ieice_2023
+  locator: Abstract and Sect. 5, Fig. 8
+  quote: レーザモジュール出力 > 17 dBm，フル C バンド動作，スペクトル線幅 < 100 kHz，波長精度 ±4 pm を得た
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Japanese source. Gloss: ''module output >17 dBm, full C-band operation, spectral linewidth <100 kHz, wavelength
+    accuracy +/-4 pm were obtained.'' Language field set to en in source file because schema allows only en|zh.'
+- id: ch03.itla.furukawa_freq_accuracy
+  section: '3.3'
+  claim: Frequency accuracy of the Furukawa Nano-ITLA with PLC wavelength locker over case temperature -5 to 80 C
+  value: 0.5
+  unit: GHz
+  kind: measured
+  conditions:
+    note: +/-0.5 GHz = +/-4 pm
+    case_temperature_C:
+    - -5
+    - 80
+    size_mm: 25.1 x 15.6 x 6.4
+  source_id: terada_ieice_2023
+  locator: Sect. 5, Fig. 9
+  quote: ケース温度 −5～80◦C の範囲で ±0.5 GHz 以内の周波数精度を得た
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Gloss: ''frequency accuracy within +/-0.5 GHz over case temperature -5 to 80 C''.'
+- id: ch03.itla.sedi_linewidth
+  section: '3.3'
+  claim: Maximum linewidth of a commercial Nano-ITLA (SEDI STY6BUC)
+  value: 300
+  unit: kHz
+  kind: spec_max
+  conditions:
+    output_dBm: 16.5
+    power_W: 3
+    tuning_THz:
+    - 191.3
+    - 196.1
+  source_id: sedi_nano_itla_list
+  locator: Nano-ITLA table, row STY6BUC
+  quote: STY6BUC | 191.30 to 196.10 | 0.1 | 16.5 (≥17dBm optional) | 3 | 300 | OIF-ITLA-MSA-01.2
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Columns: tuning range THz, grid GHz, output dBm, power W, linewidth max kHz, command set.'
+- id: ch03.si.soref_dn_electron_1550
+  section: '3.4'
+  claim: Soref-Bennett electron coefficient for refractive index change at 1.55 um
+  value: 8.8e-22
+  unit: cm^3
+  kind: model_param
+  conditions:
+    wavelength_um: 1.55
+    form: Delta n_e = -8.8e-22 Delta N_e
+  source_id: reed_natphoton_2010
+  locator: Eq. (1)
+  quote: 'At lambda0=1.55um: Delta n = Delta ne+Delta nh= -[8.8x10-22 . Delta Ne+ 8.5x10-18 . (Delta Nh)0.8] (1)'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Secondary statement in Reed review of the Soref & Bennett (IEEE JQE 1987) fit; primary paper paywalled. Equation
+    in ch03.eq.soref_dn_1550.
+- id: ch03.si.soref_dn_hole_1550
+  section: '3.4'
+  claim: Soref-Bennett hole coefficient for index change at 1.55 um (multiplies Delta N_h^0.8)
+  value: 8.5e-18
+  unit: cm^2.4
+  kind: model_param
+  conditions:
+    wavelength_um: 1.55
+    exponent: 0.8
+  source_id: reed_natphoton_2010
+  locator: Eq. (1)
+  quote: 'At lambda0=1.55um: Delta n = Delta ne+Delta nh= -[8.8x10-22 . Delta Ne+ 8.5x10-18 . (Delta Nh)0.8] (1)'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.si.soref_worked_dn
+  section: '3.4'
+  claim: Index change for a 5e17 cm^-3 carrier density change at 1.55 um (Reed worked example)
+  value: -0.00166
+  unit: '1'
+  kind: model_param
+  conditions:
+    delta_N_cm3: 5.0e+17
+    wavelength_um: 1.55
+  source_id: reed_natphoton_2010
+  locator: Text after Eq. (4)
+  quote: results in a change in refractive index, Delta n, of -1.66x10 -3, at a wavelength of 1.55 um, for example.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Check: 8.8e-22*5e17 + 8.5e-18*(5e17)^0.8 = 4.4e-4 + 1.22e-3 = 1.66e-3. Reproduce in calc script.'
+- id: ch03.si.soref_abstract_1300
+  section: '3.4'
+  claim: Index change from injection/depletion of 1e18 cm^-3 carriers at 1.3 um (Soref and Bennett abstract)
+  value: 0.0015
+  unit: '1'
+  kind: model_param
+  conditions:
+    delta_N_cm3: 1.0e+18
+    wavelength_um: 1.3
+    sign: +/-
+  source_id: soref_bennett_jqe_1987
+  locator: Abstract
+  quote: a depletion or injection of 1018carriers/cm3produces an index change of +/-1.5 x 10^-3 at lambda = 1.3 um.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only.
+- id: ch03.si.feng_vpil
+  section: '3.4'
+  claim: VpiL of Kotura carrier-depletion Si MZM with offset lateral PN junction on 0.25 um SOI
+  value: 1.4
+  unit: V*cm
+  kind: record
+  conditions:
+    length_mm: 1
+    bias_V: 6
+    doping: p 5e17, n 1e18 cm^-3
+  source_id: feng_oe_2010
+  locator: Abstract
+  quote: We demonstrate a very efficient high speed silicon modulator with an ultralow pi-phase-shift voltage-length product
+    V(pi)L = 1.4V-cm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Reed review ref. [71] cites the same value. Conference version: 1.3 V*cm for a 5 mm device at 2.6 V.'
+- id: ch03.si.feng_bw_1mm
+  section: '3.4'
+  claim: 3-dB bandwidth of the 1 mm Kotura depletion MZM
+  value: 12
+  unit: GHz
+  kind: measured
+  conditions:
+    length_mm: 1
+    note: '''more than 12 GHz'''
+  source_id: feng_oe_2010
+  locator: Abstract
+  quote: The 3dB bandwidth of a typical 1mm long device was measured to be more than 12GHz.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.si.feng_doping_loss
+  section: '3.4'
+  claim: Free-carrier absorption loss of the doped phase shifter
+  value: 19
+  unit: dB/cm
+  kind: measured
+  conditions:
+    excess_loss_1mm_dB: 1.9
+    total_excess_dB: 2.5
+  source_id: feng_iprsn_2010
+  locator: Sect. 2-3
+  quote: This includes ~1.9dB excess loss due to the doping (a 1mm long phase shifter at about 19dB/cm absorption loss)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.si.witzens_depletion_bw
+  section: '3.4'
+  claim: E/O cutoff frequencies reached by carrier-depletion Si modulators (review, 2018)
+  value: 50
+  unit: GHz
+  kind: record
+  conditions:
+    note: '''in excess of 50 GHz'''
+  source_id: witzens_procieee_2018
+  locator: Sect. I (Introduction)
+  quote: electro-optic (E/O) cutoff frequencies in excess of 50 GHz have been reached with the more common carrier depletion
+    modulators [2]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.si.witzens_soh_vpil
+  section: '3.4'
+  claim: Phase-shifter efficiency demonstrated with silicon-organic hybrid (SOH) integration
+  value: 0.5
+  unit: V*mm
+  kind: record
+  conditions:
+    note: '''better than 0.5 V*mm'' (= 0.05 V*cm)'
+  source_id: witzens_procieee_2018
+  locator: Sect. I
+  quote: phase shifting efficiencies Vpil better than 0.5 V * mm [4] have been demonstrated with semiconductor organic hybrid
+    (SOH) polymer integration.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.si.reed_mzi_energy
+  section: '3.4'
+  claim: Energy per bit of a compact (~200 um) Si MZI modulator at 10 Gb/s, circa 2010
+  value: 5
+  unit: pJ/bit
+  kind: measured
+  conditions:
+    bit_rate_Gbps: 10
+    length_um: 200
+  source_id: reed_natphoton_2010
+  locator: Sect. 'Performance metrics'
+  quote: most compact MZI modulators reported so far has an energy requirement of 5 pJ/bit at 10 Gb/s for a ~200 um long device
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.si.reed_ring_heater_budget
+  section: '3.4'
+  claim: Heater energy-per-bit penalty if a ring needs 1 mW stabilisation at 10 Gb/s
+  value: 100
+  unit: fJ/bit
+  kind: model_param
+  conditions:
+    heater_mW: 1
+    bit_rate_Gbps: 10
+  source_id: reed_natphoton_2010
+  locator: Sect. on resonant modulators
+  quote: If 1 mW is required for the ring temperature stabilisation at 10 Gb/s, this would represent an additional 100 fJ/bit.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ring.sun_q
+  section: '3.4'
+  claim: Loaded Q of the 10 um spoked-ring modulator in 45 nm SOI CMOS ('zero-change')
+  value: 10000
+  unit: '1'
+  kind: measured
+  conditions:
+    diameter_um: 10
+    wavelength_nm: 1180
+    process: 45 nm SOI CMOS
+  source_id: sun_nature_2015
+  locator: Main text, modulator description
+  quote: The modula tor has a loaded quality factor of approximately 10,000, and a voltage swing of only 1Vpp
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ring.sun_er_il
+  section: '3.4'
+  claim: On:off ratio of the spoked-ring modulator at 1 Vpp (insertion loss 3 dB)
+  value: 6
+  unit: dB
+  kind: measured
+  conditions:
+    drive_Vpp: 1
+    insertion_loss_dB: 3
+    capacitance_fF: 15
+  source_id: sun_nature_2015
+  locator: Main text
+  quote: a voltage swing of only 1Vpp ... across the modulator achieves on:off ratios of 6dB at an insertion loss of 3dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Quote elides '(where Vpp is the peak-to-peak voltage)'.
+- id: ch03.ring.sun_heater_eff
+  section: '3.4'
+  claim: Ring heater tuning efficiency (integrated 400-ohm microheater, substrate removed)
+  value: 1.25
+  unit: nm/mW
+  kind: measured
+  conditions:
+    tuning_range_nm: 3.0
+  source_id: sun_nature_2015
+  locator: Table 1 (performance summary)
+  quote: Ring Tuning Range Ring Heater Tuning ... 3.0 nm approx 1.25 nm/mW
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Table text garbled by extraction; column alignment should be checked in the PDF.
+- id: ch03.ring.sun_lock_range
+  section: '3.4'
+  claim: Temperature swing compensated by the ring wavelength-locking controller
+  value: 60
+  unit: K
+  kind: measured
+  conditions:
+    tuning_nm: 3
+    initial_lock_ms: 7
+    tracking_time_constant_us: 13
+  source_id: sun_nature_2015
+  locator: Main text
+  quote: This system provides up to 3nm of change in lambda0 and can compensate temperature swings of 60K (ref. 20)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ring.sun_lock_time
+  section: '3.4'
+  claim: Initial lock time and tracking time constant of the digital ring-locking loop (drop-port PD feedback)
+  value: 7
+  unit: ms
+  kind: measured
+  conditions:
+    tracking_time_constant_us: 13
+  source_id: sun_nature_2015
+  locator: Main text
+  quote: The controller achieves initial lock (lambda0=lambdaL) within 7ms and has a tracking time constant of 13us after
+    lock-on.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ring.timurdogan_energy
+  section: '3.4'
+  claim: Modulation energy of MIT vertical-junction microdisk at 25 Gb/s, 0.5 Vpp
+  value: 0.9
+  unit: fJ/bit
+  kind: record
+  conditions:
+    bit_rate_Gbps: 25
+    drive_Vpp: 0.5
+    diameter_um: 4.8
+  source_id: timurdogan_natcommun_2014
+  locator: Abstract
+  quote: the first modulator to achieve simultaneous high-speed (25 Gb s-1), low-voltage (0.5 V PP) and efficient 0.9 fJ per
+    bit error-free operation.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ring.timurdogan_eo_shift
+  section: '3.4'
+  claim: Electro-optic resonance shift of the vertical-junction microdisk
+  value: 250
+  unit: pm/V
+  kind: record
+  conditions:
+    equivalent_GHz_per_V: 30
+  source_id: timurdogan_natcommun_2014
+  locator: Abstract
+  quote: a record electro-optic response, obtained in a vertical p-n junction device that at 250 pm V-1 (30 GHz V-1)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ring.timurdogan_athermal
+  section: '3.4'
+  claim: Temperature range compensated by bias tuning (no heater) with 1.03 fJ/bit total energy
+  value: 7.5
+  unit: K
+  kind: measured
+  conditions:
+    total_energy_fJ_per_bit: 1.03
+    tuning_energy_fJ_per_bit: 0.24
+  source_id: timurdogan_natcommun_2014
+  locator: Abstract
+  quote: this record electro-optic response is used to compensate for thermal drift over a 7.5 C temperature range with little
+    additional energy consumption
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Abstract on nature.com prints 'below 1.03 J per bit' (typo for fJ); conclusion gives 1.03 fJ per bit.
+- id: ch03.ring.bogaerts_ng
+  section: '3.4'
+  claim: Measured group index of 450 x 220 nm Si wire from ring FSR
+  value: 4.3
+  unit: '1'
+  kind: measured
+  conditions:
+    waveguide_nm: 450 x 220
+  source_id: bogaerts_lpr_2012
+  locator: Sect. 3.3.2, Fig. 13
+  quote: The group index ng is de termined by fitting formula (9) to the measured values of the FSR (measured ng 430).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Extraction dropped the decimal point: ''ng 430'' read as ng = 4.30; verify against PDF.'
+- id: ch03.tfln.wang_vpi_20mm
+  section: '3.5'
+  claim: Half-wave voltage of 20 mm TFLN MZM (Harvard/Nokia Bell Labs)
+  value: 1.4
+  unit: V
+  kind: record
+  conditions:
+    length_mm: 20
+    VpiL_Vcm: 2.8
+    ER_dB: 30
+  source_id: wang_nature_2018
+  locator: Extended Data Fig. 1 caption (Nature); Fig. 1D (preprint)
+  quote: showing half-wave voltages of 1.4 V, 2.3 V and 4.4 V, respectively.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'VpiL = 1.4 V x 2 cm = 2.8 V*cm; 10 mm: 2.3 V (2.3 V*cm); 5 mm: 4.4 V (2.2 V*cm). Compute in calc.'
+- id: ch03.tfln.wang_bw_5mm
+  section: '3.5'
+  claim: '3-dB EO bandwidth of 5 mm TFLN MZM (Vpi 4.4 V); 10 mm: 80 GHz; 20 mm: >45 GHz'
+  value: 100
+  unit: GHz
+  kind: record
+  conditions:
+    length_mm: 5
+    Vpi_V: 4.4
+  source_id: wang_nature_2018
+  locator: Author preprint (15 Apr 2018), text before Fig. 4
+  quote: By reducing the device lengths to 10 mm and 5 mm, we further expand the 3dB electro-optic bandwidths to 80 GHz and
+    100 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Read from author preprint, not the Nature version of record; confirm bandwidths in published Fig. 2/4.
+- id: ch03.tfln.wang_loss
+  section: '3.5'
+  claim: On-chip optical loss of the TFLN modulator
+  value: 0.5
+  unit: dB
+  kind: spec_max
+  conditions:
+    note: '''less than 0.5 dB'''
+  source_id: wang_nature_2018
+  locator: Abstract (Nature)
+  quote: support data rates up to 210 gigabits per second and show an on-chip optical loss of less than 0.5 decibels.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.tfln.wang_rate
+  section: '3.5'
+  claim: Maximum data rate demonstrated (8-ASK at 70 GBd)
+  value: 210
+  unit: Gb/s
+  kind: record
+  conditions:
+    format: 8-ASK at 70 GBd
+    BER: 0.015
+  source_id: wang_nature_2018
+  locator: Abstract (Nature)
+  quote: support data rates up to 210 gigabits per second
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.tfln.legacy_ln
+  section: '3.5'
+  claim: Typical voltage-bandwidth of conventional bulk LN modulators (per Wang et al.)
+  value: 35
+  unit: GHz
+  kind: spec_typ
+  conditions:
+    Vpi_V: 3.5
+  source_id: wang_nature_2018
+  locator: Author preprint, text before Fig. 2
+  quote: the voltage-bandwidth performance of these modulators is typically limited to ~ 3.5 V and 35 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.tfln.valdez_110g
+  section: '3.5'
+  claim: 3-dB bandwidth of hybrid Si/TFLN MZM handling 110 mW optical power
+  value: 110
+  unit: GHz
+  kind: record
+  conditions:
+    VpiL_Vcm: 3.1
+    on_chip_IL_dB: 1.8
+    optical_power_mW: 110
+    length_cm: 0.5
+  source_id: valdez_scirep_2022
+  locator: Abstract
+  quote: which can handle high optical power of 110 mW, while having 3-dB bandwidth greater than 110 GHz at 1550 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.tfln.valdez_vpil
+  section: '3.5'
+  claim: VpiL of the hybrid Si/TFLN MZM
+  value: 3.1
+  unit: V*cm
+  kind: measured
+  conditions: {}
+  source_id: valdez_scirep_2022
+  locator: Abstract
+  quote: The MZM has a VpiL product of 3.1 V.cm and an on-chip optical insertion loss of 1.8 dB.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.tfln.yang_110g
+  section: '3.5'
+  claim: 3-dB bandwidth of monolithic TFLN MZM made by photolithography and wet etching
+  value: 110
+  unit: GHz
+  kind: record
+  conditions:
+    VpiL_Vcm: 2.37
+    propagation_loss_dB_per_cm: 0.2
+    ER_dB: '>23'
+  source_id: yang_col_2022
+  locator: Abstract
+  quote: we experimentally demonstrate a thin film LN Mach-Zehnder modulator with a 3 dB bandwidth exceeding 110 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.tfln.yang_vpil
+  section: '3.5'
+  claim: VpiL of the wet-etched TFLN MZM
+  value: 2.37
+  unit: V*cm
+  kind: measured
+  conditions: {}
+  source_id: yang_col_2022
+  locator: Abstract
+  quote: The fabricated modulator also exhibits a comparable low half-wave voltage-length product of ~2.37 V cm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.tfln.weigel_106g
+  section: '3.5'
+  claim: 3-dB electrical bandwidth of bonded TFLN on Si photonics MZM (no LN etching)
+  value: 106
+  unit: GHz
+  kind: record
+  conditions:
+    note: '''beyond 106 GHz'''
+  source_id: weigel_oe_2018
+  locator: Abstract
+  quote: This hybrid Si-LN MZM achieves beyond 106 GHz 3-dB electrical modulation bandwidth
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.inp.ogiso_67g
+  section: '3.5'
+  claim: EO bandwidth of NTT InP n-i-p-n IQ modulator with Vpi < 1.5 V
+  value: 67
+  unit: GHz
+  kind: measured
+  conditions:
+    Vpi_V: <1.5
+    ER_dB: '>24'
+    max_baud_GBd: 120
+    on_chip_loss_dB: about 2
+  source_id: ogiso_jlt_2017
+  locator: Abstract
+  quote: The modulator also exhibits a static extinction ratio of over 24 dB with a Vpi of less than 1.5 V for the entire
+    C-band.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Bandwidth 'over 67 GHz' stated earlier in the same abstract; on-chip loss ~2 dB from NTT Technical Review (tier B).
+- id: ch03.inp.ogiso_80g
+  section: '3.5'
+  claim: EO bandwidth of NTT InP IQ modulator with 1.5 V Vpi (2020)
+  value: 80
+  unit: GHz
+  kind: record
+  conditions:
+    Vpi_V: 1.5
+    max_baud_GBd: 128
+  source_id: ogiso_jlt_2020
+  locator: Abstract
+  quote: The 3-dB EO bandwidth of the 1.5-V V pi modulator reaches 80 GHz.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.inp.fiber_to_fiber_loss
+  section: '3.5'
+  claim: Fiber-to-fiber insertion loss of InP IQ modulator at peak (includes ~3.5 dB/facet lensed-fiber coupling)
+  value: 9
+  unit: dB
+  kind: measured
+  conditions:
+    on_chip_loss_dB: 2
+    coupling_dB_per_facet: 3.5
+  source_id: ozaki_nttreview_2018
+  locator: Sect. 3.1
+  quote: The fiber-to-fiber optical insertion loss at peak transmission was less than 9 dB, which includes the coupling loss
+    of lensed fibers (~3.5 dB/facet).
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.bto.abel_r42
+  section: '3.5'
+  claim: Pockels coefficient r42 of epitaxial BaTiO3 integrated on Si
+  value: 923
+  unit: pm/V
+  kind: measured
+  conditions:
+    note: verified as Pockels via anisotropy, high-frequency response, hysteresis
+    data_rate_Gbps: 50
+  source_id: abel_natmater_2019
+  locator: Abstract
+  quote: We verify the Pockels effect to be the physical origin of the response, with r 42 = 923 pm V -1
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. LN r33 (about 30 pm/V) not sourced in this ledger; see gaps.
+- id: ch03.pd.lischke_265g
+  section: '3.6'
+  claim: 3-dB bandwidth of IHP waveguide Ge fin photodiode (Ge100_10) at 1 mA, -2 V
+  value: 265
+  unit: GHz
+  kind: record
+  conditions:
+    photocurrent_mA: 1
+    bias_V: -2
+    internal_responsivity_A_W: 0.3
+    capacitance_fF: 6.5
+  source_id: lischke_natphoton_2021
+  locator: Abstract and Table 1
+  quote: Here we demonstrate waveguide-coupled germanium photodiodes with optoelectrical 3-dB bandwidths of 265 GHz and 240
+    GHz at a photocurrent of 1 mA.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.pd.lischke_responsivity
+  section: '3.6'
+  claim: Internal responsivity at 1550 nm of the 240 GHz Ge photodiode (Ge150_10); 0.3 A/W for the 265 GHz device
+  value: 0.45
+  unit: A/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    external_A_W: 0.2
+  source_id: lischke_natphoton_2021
+  locator: Abstract and Table 1
+  quote: Our photodetectors show internal responsivities of 0.3 A W-1 (265 GHz) and 0.45 A W-1 (240 GHz) at a wavelength of
+    1,550 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: External responsivity only 0.12/0.2 A/W because of ~3.9 dB grating-coupler loss.
+- id: ch03.pd.lischke_bep
+  section: '3.6'
+  claim: Internal bandwidth-efficiency product of the 240 GHz Ge photodiode
+  value: 86
+  unit: GHz
+  kind: record
+  conditions: {}
+  source_id: lischke_natphoton_2021
+  locator: Abstract
+  quote: The internal bandwidth-efficiency product of the latter device is 86 GHz.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.pd.lischke_dark
+  section: '3.6'
+  claim: Dark current of the ultra-fast Ge photodiodes at room temperature, -2 V
+  value:
+  - 100
+  - 200
+  unit: nA
+  kind: measured
+  conditions:
+    bias_V: -2
+    temperature_C: 25
+  source_id: lischke_natphoton_2021
+  locator: Abstract
+  quote: Low dark currents of 100-200 nA are obtained from these ultra-fast photodetectors.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.pd.imec_responsivity_1550
+  section: '3.6'
+  claim: Wafer-mean responsivity of imec Si-contacted Ge waveguide PD at 1550 nm, -1 V
+  value: 0.74
+  unit: A/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    bias_V: -1
+    o_band_value_A_W: 0.93
+    dark_nA: <4
+    bw_GHz: '>50'
+  source_id: chen_ofc_2016_imec_gepd
+  locator: Abstract and Sect. 3
+  quote: The dark current is below 4 nA and the responsivity is 0.74 A/W at 1550 nm and 0.93 A/W at 1310 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Foundry-platform (production-like) value; contrasts with record-speed devices.
+- id: ch03.pd.imec_bw
+  section: '3.6'
+  claim: 3-dB O/E bandwidth of imec Ge WPD at -1 V, 1550 nm
+  value: 50
+  unit: GHz
+  kind: measured
+  conditions:
+    note: '''over 50 GHz'', VNA-limited'
+    bias_V: -1
+    capacitance_fF: 6.8
+  source_id: chen_ofc_2016_imec_gepd
+  locator: Sect. 1
+  quote: the opto-electrical 3-dB bandwidth at -1 V is enhanced to over 50 GHz and 44 GHz at 1550 nm and 1310 nm, respectively.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.apd.kang_gbp
+  section: '3.6'
+  claim: Gain-bandwidth product of Intel monolithic Ge/Si SACM APD
+  value: 340
+  unit: GHz
+  kind: record
+  conditions:
+    keff: 0.09
+    wavelength_nm: 1300
+  source_id: kang_natphoton_2009
+  locator: Abstract
+  quote: we report a monolithically grown germanium/silicon avalanche photodetector with a gain-bandwidth product of 340 GHz,
+    a k eff of 0.09
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.apd.kang_keff
+  section: '3.6'
+  claim: Effective ionization coefficient ratio of the Si multiplication layer
+  value: 0.09
+  unit: '1'
+  kind: measured
+  conditions: {}
+  source_id: kang_natphoton_2009
+  locator: Abstract
+  quote: a gain-bandwidth product of 340 GHz, a k eff of 0.09 and a sensitivity of -28 dB m at 10 Gb s-1.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.apd.kang_sensitivity
+  section: '3.6'
+  claim: Receiver sensitivity of the Ge/Si APD at 10 Gb/s
+  value: -28
+  unit: dBm
+  kind: measured
+  conditions:
+    bit_rate_Gbps: 10
+  source_id: kang_natphoton_2009
+  locator: Abstract
+  quote: a k eff of 0.09 and a sensitivity of -28 dB m at 10 Gb s-1.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.ge.direct_gap
+  section: '3.6'
+  claim: Direct (Gamma) band gap of Ge, corresponding to 1550 nm
+  value: 0.8
+  unit: eV
+  kind: constant
+  conditions:
+    indirect_gap_eV: 0.664
+    difference_meV: 136
+  source_id: liu_ipc_2010_ge
+  locator: Sect. 2 and Fig. 1
+  quote: The direct gap of 0.8 eV corresponds to a wavelength of 1550 nm, the most technically important wavelength in optical
+    communications.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.ge.tensile_strain
+  section: '3.6'
+  claim: Thermally induced tensile strain in Ge-on-Si that extends absorption into the L-band
+  value:
+  - 0.2
+  - 0.3
+  unit: '%'
+  kind: measured
+  conditions: {}
+  source_id: liu_ipc_2010_ge
+  locator: Sect. 2
+  quote: A thermally induced tensile strain of 0.2-0.3% can be incorporated into epitaxial Ge-on-Si
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.tia.patel_noise
+  section: '3.6'
+  claim: Average input-referred noise current density of 16-nm CMOS linear TIA for 112 Gb/s PAM4
+  value: 16.9
+  unit: pA/sqrt(Hz)
+  kind: measured
+  conditions:
+    bandwidth_GHz: 32
+    gain_dBohm: 63
+    power_mW: 47
+    sensitivity_dBm_OMA: -8.2
+  source_id: patel_jssc_2023
+  locator: Abstract
+  quote: It achieves 63-dB gain, 32-GHz BW, and an average input-referred current noise density of 16.9 pA/sqrt(Hz) while
+    operating at 0.9-V supply
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Derived from 3.0 uA rms integrated noise / sqrt(32 GHz).
+- id: ch03.tia.declercq_noise
+  section: '3.6'
+  claim: Input-referred noise of 55-nm SiGe BiCMOS traveling-wave TIA receiver for 112-128 GBd
+  value: 18.8
+  unit: pA/sqrt(Hz)
+  kind: measured
+  conditions:
+    bandwidth_with_GePD_GHz: 64
+    gain_dBohm: 77
+    energy_pJ_per_bit: 2.2
+  source_id: declercq_jlt_2025
+  locator: Abstract
+  quote: The input-referred noise is measured at 18.8 pA/sqrt(Hz).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+- id: ch03.cpl.gc_record
+  section: '3.7'
+  claim: Record coupling efficiency of a 1D SOI grating coupler (Al back-reflector)
+  value: -0.62
+  unit: dB
+  kind: record
+  conditions:
+    efficiency_percent: 87
+    si_nm: 250
+    box_um: 3
+  source_id: marchetti_prj_2019
+  locator: Sect. 4.C
+  quote: demonstrate a CE of 87% (-0.62 dB), which, to the best of our knowledge, constitutes the current record value for
+    SOI 1D-GCs [63].
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.cpl.gc_double_etch
+  section: '3.7'
+  claim: Coupling efficiency of a double-etch 1D grating coupler on 220 nm SOI, with 30 nm 1-dB bandwidth
+  value: -1.05
+  unit: dB
+  kind: measured
+  conditions:
+    bw_1dB_nm: 30
+    si_nm: 220
+    fiber_mfd_um: 10.4
+  source_id: marchetti_prj_2019
+  locator: Table 1, row 1D-GC double-etch [78]
+  quote: 1D-GC, double-etch depth (S 220 nm) [78] 4.C.3 -1.05 // 30 // 10.4 S-TE
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Table row reconstructed from extracted text; columns CE[dB], PDL, BW[nm], TOL, MFD. Verify.
+- id: ch03.cpl.ec_sion
+  section: '3.7'
+  claim: Coupling loss of SiON spot-size-converter edge coupler (4.3 um MFD fiber), bandwidth >100 nm
+  value: -0.5
+  unit: dB
+  kind: measured
+  conditions:
+    bw_nm: '>100'
+    fiber_mfd_um: 4.3
+    with_9um_MFD_dB: -2.5
+  source_id: marchetti_prj_2019
+  locator: Table 1, row EC SiON SSC [27]
+  quote: 'EC: 3 um x 3 um SiON SSC, 80 nm, 300 um [27] 3.A -0.5 // >100 // 4.3 E-TE'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Reconstructed table row. Review conclusion: edge couplers give higher CE, almost flat bandwidth and no PDL compared
+    with GCs.'
+- id: ch03.cpl.ec_misalign
+  section: '3.7'
+  claim: Lateral misalignment producing 3 dB efficiency drop for a high-efficiency inverse-taper edge coupler with lensed
+    fiber
+  value: 1
+  unit: um
+  kind: measured
+  conditions: {}
+  source_id: marchetti_prj_2019
+  locator: Sect. 3.A
+  quote: recording a 3 dB efficiency drop for a 1 um displacement from the optimal position, thus proving how critical the
+    fiber alignment is
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.cpl.large_ssc_tol
+  section: '3.7'
+  claim: 1-dB alignment tolerance of large SSC edge couplers matched to 10 um MFD fiber
+  value: 2.5
+  unit: um
+  kind: spec_typ
+  conditions: {}
+  source_id: marchetti_prj_2019
+  locator: Sect. 7 (Conclusions)
+  quote: so as to match the 10 um MFD of common fibers. This approach offers a 1 dB tolerance of 2.5 um
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+- id: ch03.het.komljenovic_claim
+  section: '3.7'
+  claim: Heterogeneous III-V/Si photonics has demonstrated performance exceeding native III-V components (narrow-linewidth
+    lasers, high-power PDs)
+  value: Heterogeneous Si photonics outperforms native III-V in narrow-linewidth lasers and high-power, high-speed photodiodes
+  unit: ''
+  kind: fact
+  conditions: {}
+  source_id: komljenovic_jlt_2016
+  locator: Abstract and Sect. VII
+  quote: Heterogeneous silicon photonics has recently demonstrated performance that significantly outperforms native III/V
+    components.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: No numeric heterogeneous-laser values extracted; see gaps.
+- id: ch03.rel.gr468_issue
+  section: '3.7'
+  claim: GR-468-CORE current issue (Issue 2, September 2004) scope covers lasers, LEDs, photodetectors and modulators
+  value: Issue 2, Sep 2004; replaces TR-NWT-000468 Issue 1
+  unit: ''
+  kind: fact
+  conditions: {}
+  source_id: telcordia_gr468_issue2_catalog
+  locator: Catalog abstract
+  quote: Document Number GR-468 Issue Number 02 Issue Date Sep 2004 Replaces TR-NWT-000468 Issue01
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Full GR text paywalled; test conditions taken from supplier qualification reports (tier B).
+- id: ch03.rel.damp_heat
+  section: '3.7'
+  claim: 'GR-468 damp-heat qualification condition: 85 C / 85% RH duration'
+  value: 1000
+  unit: h
+  kind: spec_min
+  conditions:
+    temperature_C: 85
+    rh_percent: 85
+  source_id: ozoptics_tre0006_2014
+  locator: Table 2, test 6
+  quote: 6. Damp Heat Operation | 85 °C / 85% RH, 1000 hours | GR-468-CORE, 3.3.2.3 [2]
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Same condition in Agiltron 2021 report. Clause numbers in the OZ table refer to an older GR-468 numbering.
+- id: ch03.rel.temp_cycling
+  section: '3.7'
+  claim: 'GR-468 temperature cycling for uncontrolled environment: -40 to 85 C, cycles for pass/fail'
+  value: 500
+  unit: cycles
+  kind: spec_min
+  conditions:
+    temperature_C:
+    - -40
+    - 85
+    central_office: -40 to 70 C, 100 cycles pass/fail
+    information: 1000 cycles
+  source_id: agiltron_gr468_qual_2021
+  locator: Endurance test table
+  quote: 'For un-control Environment: -40°C to 85°C 500 cycles for pass/fail, 1,000 cycles for information'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.rel.accel_aging
+  section: '3.7'
+  claim: GR-468 accelerated aging (life test) minimum duration for laser modules; 5000 h for information
+  value: 2000
+  unit: h
+  kind: spec_min
+  conditions:
+    case_temperature_C: 70 (central office) or 85 (uncontrolled)
+    information_h: 5000
+  source_id: agiltron_gr468_qual_2021
+  locator: Endurance test table
+  quote: 'For un-control Environment: Ts/Tp=25°C/85°C, rated power, 2000hours min., 5000'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.rel.mech_shock
+  section: '3.7'
+  claim: 'GR-468 mechanical shock for laser module without TEC (with TEC: 500 g, 1.0 ms)'
+  value: 1500
+  unit: g
+  kind: spec_min
+  conditions:
+    pulse_ms: 0.5
+    repetitions: 5 per axis
+  source_id: agiltron_gr468_qual_2021
+  locator: Mechanical integrity table
+  quote: 5 times/axis with TEC 500g, 1.0ms; w/o TEC1,500g, 0.5ms
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+- id: ch03.rel.gr468_default_ea
+  section: '3.7'
+  claim: Conservative default activation energy for random-failure acceleration recommended by GR-468 (with current exponent
+    2)
+  value: 0.35
+  unit: eV
+  kind: model_param
+  conditions:
+    current_exponent_N: 2
+  source_id: visystems_v25_850_reliability
+  locator: Random failures section
+  quote: 'the recommended conservative default values according to Telcordia GR-468-Core have been used: AF = (Jstress/Juse)
+    2 exp[(0.35eV)/kB*(1/Tuse - 1/Tstress)]'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Murty (IEEE 802.3dh) also quotes 'GR-468 Ea = 0.35 eV'.
+- id: ch03.rel.vcsel_wearout_ea
+  section: '3.7'
+  claim: Wear-out activation energy measured for VI Systems 25G 850 nm VCSELs (current exponent N = 8)
+  value: 1.3
+  unit: eV
+  kind: measured
+  conditions:
+    current_exponent_N: 8
+    literature_low_J: Ea about 0.7 eV, N = 2 below 10 kA/cm2
+  source_id: visystems_v25_850_reliability
+  locator: Useful lifetime and wear-out section
+  quote: for the power number of current acceleration N=8 and for the thermal activation energy EA=1.3eV.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+- id: ch03.rel.vcsel_fit_lab
+  section: '3.7'
+  claim: Upper limit of random failure rate of 25G 850 nm VCSELs from 4.8 million device-hours, 60% confidence
+  value: 189
+  unit: FIT
+  kind: spec_max
+  conditions:
+    confidence_percent: 60
+    reference_condition: 45 C, 5 mA
+    device_hours: 4800000.0
+  source_id: visystems_v25_850_reliability
+  locator: Random failures section
+  quote: Given a confidence level of 60%, we can derive an upper limit of the random FIT rate of 189.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+- id: ch03.rel.vcsel_fit_field
+  section: '3.7'
+  claim: Field random failure rate of >100 million deployed 850 nm 25 GBd VCSEL channels
+  value: 1
+  unit: FIT
+  kind: spec_max
+  conditions:
+    note: '''< 1 FIT (channel)'''
+    channels: '>100M'
+  source_id: murty_ieee8023dh_2022
+  locator: Slide 'Failure Rate'
+  quote: 'Field experience: Over 100M 850nm 25GBd VCSEL channels deployed for Data Centers Field experience < 1 DPPM (channel)
+    < 1 FIT (channel)'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Lab tests (ch03.rel.vcsel_fit_lab) give upper limits ~190 FIT because demonstrating <10 FIT needs massive device-hours;
+    field data is much lower. Not a contradiction but a statistics limit.
+- id: ch03.rel.vcsel_fit_105c
+  section: '3.7'
+  claim: Internal-test random failure rate upper limit of 850 nm VCSELs at 105 C substrate temperature (<1 FIT at 40 C)
+  value: 7
+  unit: FIT
+  kind: spec_max
+  conditions:
+    substrate_temperature_C: 105
+    device_hours: about 0.3e9
+    Ea_eV: 0.35
+  source_id: hoser_ieee8023dh_2022
+  locator: Slide '850nm VCSEL - Internal Random Failure Rate Tests'
+  quote: < 1 FIT at 40°C and <7 FIT at 105°C substrate T
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med

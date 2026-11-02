@@ -1,0 +1,691 @@
+sources:
+- id: henry_jqe_1982
+  type: journal
+  title: Theory of the linewidth of semiconductor lasers
+  authors: C. H. Henry
+  venue: IEEE Journal of Quantum Electronics 18(2), 259-264
+  year: 1982
+  doi: 10.1109/JQE.1982.1071522
+  url: https://doi.org/10.1109/jqe.1982.1071522
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: michalzik_ebeling_vcsel_chapter_2003
+  type: book
+  title: Operating Principles of VCSELs
+  authors: R. Michalzik, K. J. Ebeling
+  venue: Chapter in H. Li, K. Iga (eds.), Vertical-Cavity Surface-Emitting Laser Devices, Springer Series in Photonics vol.
+    6 (author copy, Univ. Ulm)
+  year: 2003
+  doi: ''
+  url: https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.140/Diverse/vcsel-chapter-ram_kje-d.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ahmed_pramana_2008
+  type: journal
+  title: Small-signal intensity modulation of semiconductor lasers (analytical model with gain suppression)
+  authors: M. Ahmed, A. El-Lafi
+  venue: Pramana - Journal of Physics 71(1), 99-115
+  year: 2008
+  doi: ''
+  url: https://www.ias.ac.in/article/fulltext/pram/071/01/0099-0115
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: vurgaftman_jap_2001
+  type: journal
+  title: Band parameters for III-V compound semiconductors and their alloys
+  authors: I. Vurgaftman, J. R. Meyer, L. R. Ram-Mohan
+  venue: Journal of Applied Physics 89(11), 5815-5875
+  year: 2001
+  doi: 10.1063/1.1368156
+  url: https://www.physik.uni-wuerzburg.de/fileadmin/11000000/03_Studium/03_Master/F-Praktikum/_imported/fileadmin/11999999/OS/Vurgaftman_-_Band_Parameters.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: haglund_el_2015
+  type: journal
+  title: 30 GHz bandwidth 850 nm VCSEL with sub-100 fJ/bit energy dissipation at 25-50 Gbit/s
+  authors: E. Haglund, P. Westbergh, J. S. Gustavsson, E. P. Haglund, A. Larsson, M. Geen, A. Joel
+  venue: Electronics Letters 51(14), 1096-1098
+  year: 2015
+  doi: 10.1049/el.2015.0785
+  url: https://digital-library.theiet.org/doi/pdf/10.1049/el.2015.0785?download=true
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: westbergh_jstqe_2011
+  type: journal
+  title: Impact of Photon Lifetime on High-Speed VCSEL Performance
+  authors: P. Westbergh, J. S. Gustavsson, B. Kogel, A. Haglund, A. Larsson
+  venue: IEEE Journal of Selected Topics in Quantum Electronics 17(6), 1603-1613
+  year: 2011
+  doi: 10.1109/JSTQE.2011.2114642
+  url: https://doi.org/10.1109/jstqe.2011.2114642
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: parsons_jlt_2019
+  type: journal
+  title: The Impact of Effective Modal Bandwidth on 100G SWDM Transmission Over 250 m OM5 and Left-Tilt OM4 Multimode Fibers
+  authors: E. Parsons, R. Patterson, J. Young, P. F. Kolesar
+  venue: Journal of Lightwave Technology
+  year: 2019
+  doi: 10.1109/JLT.2018.2878666
+  url: https://doi.org/10.1109/jlt.2018.2878666
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: kolesar_ieee8023cd_2016
+  type: report
+  title: Wideband Multimode Fiber (WBMMF) Standardization Update
+  authors: P. Kolesar
+  venue: IEEE 802.3cd Task Force, July 2016 plenary (kolesar_3cd_01_0716)
+  year: 2016
+  doi: ''
+  url: https://www.ieee802.org/3/cd/public/July16/kolesar_3cd_01_0716.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ieee8023bm_cl95_draft_2014
+  type: standard
+  title: 95. Physical Medium Dependent (PMD) sublayer and medium, type 100GBASE-SR4 (task-force draft text)
+  authors: IEEE P802.3bm Task Force
+  venue: IEEE P802.3bm draft Clause 95 (MMF ad hoc posting, Aug 2014); published as IEEE Std 802.3bm-2015
+  year: 2014
+  doi: ''
+  url: https://www.ieee802.org/3/bm/public/mmfadhoc/meetings/aug28_14/8023-95-SRS-revh-post.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ieee8023cm_2020_abstract
+  type: standard
+  title: 'IEEE Standard for Ethernet - Amendment 7: Physical Layer and Management Parameters for 400 Gb/s over Multimode Fiber'
+  authors: IEEE 802.3 Working Group
+  venue: IEEE Std 802.3cm-2020 (front matter preview)
+  year: 2020
+  doi: ''
+  url: https://webstore.ansi.org/preview-pages/IEEE/preview_802.3cm-2020.pdf
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: tiafotc_400gbase_sr8_2023
+  type: whitepaper
+  title: 400GBASE-SR8 Application Overview
+  authors: V. Maguire (TIA Fiber Optics Tech Consortium)
+  venue: TIA FOTC web publication
+  year: 2023
+  doi: ''
+  url: https://www.tiafotc.org/ieee-802-3-ethernet-standards-update/multimode-standards-update/400gbase-sr8/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: tiafotc_400gbase_sr4p2_2023
+  type: whitepaper
+  title: 400GBASE-SR4.2 Application Overview
+  authors: V. Maguire (TIA Fiber Optics Tech Consortium)
+  venue: TIA FOTC web publication
+  year: 2023
+  doi: ''
+  url: https://www.tiafotc.org/ieee-802-3-ethernet-standards-update/multimode-standards-update/400gbase-sr4-2/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: tiafotc_mmf_apps_2023
+  type: whitepaper
+  title: IEEE 802.3 Multimode Optical Fiber Ethernet Standards
+  authors: V. Maguire (TIA Fiber Optics Tech Consortium)
+  venue: TIA FOTC web publication
+  year: 2023
+  doi: ''
+  url: https://www.tiafotc.org/ieee-802-3-ethernet-standards-update/multimode-standards-update/
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: swdm_msa_100g_swdm4
+  type: standard
+  title: 100G SWDM4 MSA Technical Specifications
+  authors: SWDM MSA
+  venue: SWDM MSA specification (copy hosted by Ascent Optics)
+  year: 2017
+  doi: ''
+  url: https://ascentoptics.com/storage/uploads/files/10000/20230217/66773907cb9f8457f7d18ec975f3fe58.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: yamaoka_natphoton_2021
+  type: journal
+  title: Directly modulated membrane lasers with 108 GHz bandwidth on a high-thermal-conductivity silicon carbide substrate
+  authors: S. Yamaoka, N.-P. Diamantopoulos, H. Nishi, R. Nakao, T. Fujii, K. Takeda, et al., S. Matsuo
+  venue: Nature Photonics 15, 28-35
+  year: 2021
+  doi: 10.1038/s41566-020-00700-y
+  url: https://www.nature.com/articles/s41566-020-00700-y
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: uchiyama_jlt_2024
+  type: journal
+  title: 225 Gb/s PAM4 2 km and 10 km Transmission of Electro-Absorption Modulator Integrated Laser With Hybrid Waveguide
+    Structure for 800 Gb/s and 1.6 Tb/s Transceivers
+  authors: A. Uchiyama, S. Okuda, Y. Hokama, M. Shirao, K. Abe, et al.
+  venue: Journal of Lightwave Technology 42(4), 1225-
+  year: 2024
+  doi: ''
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-42-4-1225
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bhasker_ofc_2023
+  type: conference
+  title: 200G per Lane Uncooled CWDM Hybrid CMBH-Ridge Electroabsorption Modulated Lasers for 2-km Transmission
+  authors: P. Bhasker, S. Arora, A. Robertson, T. McCaully, A. Ni, J. E. Johnson
+  venue: OFC 2023, paper M2D.3
+  year: 2023
+  doi: 10.1364/OFC.2023.M2D.3
+  url: https://opg.optica.org/abstract.cfm?uri=OFC-2023-M2D.3
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: theurer_ofc_2023
+  type: conference
+  title: 4 x 200 Gb/s EML-Array with a Single MQW Layer Stack
+  authors: M. Theurer, C. Kottke, R. Freund, F. Ganzer, P. Runge, M. Moehrle, U. Troppenz, A. Sigmund, M. Schell
+  venue: OFC 2023, paper M2D.5
+  year: 2023
+  doi: 10.1364/OFC.2023.M2D.5
+  url: https://ict-poetics.eu/wp-content/uploads/2024/01/M.-Theurer-et.al-OFC-2023.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: uchiyama_ofc_2024
+  type: conference
+  title: Demonstration of 155 Gbaud PAM4 and PAM6 EML with Narrow High-Mesa EA Modulator for 400 Gbps per Lane Transmission
+  authors: A. Uchiyama, S. Okuda, T. Tsuji, Y. Hokama, M. Shirao, et al.
+  venue: OFC 2024, paper Tu2D.1
+  year: 2024
+  doi: 10.1364/OFC.2024.Tu2D.1
+  url: https://opg.optica.org/abstract.cfm?uri=ofc-2024-Tu2D.1
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: miller_prl_1984
+  type: journal
+  title: 'Band-Edge Electroabsorption in Quantum Well Structures: The Quantum-Confined Stark Effect'
+  authors: D. A. B. Miller, D. S. Chemla, T. C. Damen, A. C. Gossard, W. Wiegmann, T. H. Wood, C. A. Burrus
+  venue: Physical Review Letters 53(22), 2173-2176
+  year: 1984
+  doi: 10.1103/PhysRevLett.53.2173
+  url: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.53.2173
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: gokhale_ofc_2023
+  type: conference
+  title: Record high efficiency high-power uncooled 1.31 um CW-DFB lasers
+  authors: M. Gokhale, M. Emanuel, B. Li
+  venue: OFC 2023
+  year: 2023
+  doi: ''
+  url: https://www.semanticscholar.org/paper/a536491c4e4463a2d5213e49a910926af92c3337
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: inoue_ofc_2023
+  type: conference
+  title: A high-power, power-efficient 1.3-um SOA-integrated DFB laser for CPO applications
+  authors: D. Inoue, K. Aoyama, N. Fujiwara, D. Shoji, H. Kamisugi, et al.
+  venue: OFC 2023
+  year: 2023
+  doi: 10.23919/OFC49934.2023.10116784
+  url: https://doi.org/10.23919/ofc49934.2023.10116784
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: lam_opteng_2023
+  type: journal
+  title: 100-mW power efficient 1.3-um SSC/SOA-integrated CW-DFB laser for Si-photonics in Co-Package Optics applications
+  authors: Y.-L. Lam, A. Sim, L. Huang, S. Huang, P.-C. Sung, L.-C. Koh, T.-H. Loh
+  venue: Optical Engineering 62(4), 046102
+  year: 2023
+  doi: 10.1117/1.OE.62.4.046102
+  url: https://ui.adsabs.harvard.edu/abs/2023OptEn..62d6102L/abstract
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: oif_itla_msa_01p3_2015
+  type: standard
+  title: Integrable Tunable Laser Assembly Multi Source Agreement (OIF-ITLA-MSA-01.3)
+  authors: Optical Internetworking Forum
+  venue: OIF Implementation Agreement OIF-ITLA-MSA-01.3, 13 July 2015
+  year: 2015
+  doi: ''
+  url: https://www.oiforum.com/wp-content/uploads/2019/01/OIF-ITLA-MSA-01.3.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: terada_ieice_2023
+  type: journal
+  title: InP 基板上にモノリシック集積された DBR/Ring レーザ (Monolithically integrated DBR/Ring laser on InP, Nano-ITLA)
+  authors: Y. Terada, M. Nishita, H. Abe, Y. Isobe, T. Sakai, T. Suzuki, H. Ishii, T. Kurobe (Furukawa Electric)
+  venue: IEICE Transactions C (Japanese edition) J106-C(11), 382-389
+  year: 2023
+  doi: 10.14923/transelej.2023JCI0001
+  url: https://search.ieice.org/bin/pdf_link.php?category=C&fname=j106-c_11_382&lang=EN&year=2023
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: sedi_nano_itla_list
+  type: datasheet
+  title: 'Optical Device Product Information: Tunable laser list (Nano-ITLA STY6BUC)'
+  authors: Sumitomo Electric Device Innovations
+  venue: SEDI product web page
+  year: 2026
+  doi: ''
+  url: https://sei-device.com/sedi/optical_devices/Tunablelaser_List.html
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: reed_natphoton_2010
+  type: journal
+  title: Silicon optical modulators
+  authors: G. T. Reed, G. Mashanovich, F. Y. Gardes, D. J. Thomson
+  venue: Nature Photonics 4, 518-526
+  year: 2010
+  doi: 10.1038/nphoton.2010.179
+  url: https://eprints.soton.ac.uk/356340/1/5967.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: soref_bennett_jqe_1987
+  type: journal
+  title: Electrooptical effects in silicon
+  authors: R. A. Soref, B. R. Bennett
+  venue: IEEE Journal of Quantum Electronics 23(1), 123-129
+  year: 1987
+  doi: 10.1109/JQE.1987.1073206
+  url: https://doi.org/10.1109/jqe.1987.1073206
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: feng_oe_2010
+  type: journal
+  title: High speed carrier-depletion modulators with 1.4V-cm VpiL integrated on 0.25um silicon-on-insulator waveguides
+  authors: N.-N. Feng, S. Liao, D. Feng, P. Dong, D. Zheng, H. Liang, R. Shafiiha, G. Li, J. E. Cunningham, A. V. Krishnamoorthy,
+    M. Asghari
+  venue: Optics Express 18(8), 7994-7999
+  year: 2010
+  doi: 10.1364/OE.18.007994
+  url: https://doi.org/10.1364/oe.18.007994
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: feng_iprsn_2010
+  type: conference
+  title: High Speed Silicon Carrier-Depletion Mach-Zehnder Modulator with 1.4V-cm VpiL
+  authors: N.-N. Feng et al.
+  venue: Integrated Photonics Research, Silicon and Nanophotonics (IPR) 2010, paper IMB3
+  year: 2010
+  doi: 10.1364/IPRSN.2010.IMB3
+  url: https://www.researchgate.net/publication/263827122
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: witzens_procieee_2018
+  type: journal
+  title: High-Speed Silicon Photonics Modulators
+  authors: J. Witzens
+  venue: Proceedings of the IEEE 106(12), 2158-2182
+  year: 2018
+  doi: 10.1109/JPROC.2018.2877636
+  url: https://doi.org/10.1109/jproc.2018.2877636
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: sun_nature_2015
+  type: journal
+  title: Single-chip microprocessor that communicates directly using light
+  authors: C. Sun, M. T. Wade, Y. Lee, J. S. Orcutt, L. Alloatti, et al., V. M. Stojanovic
+  venue: Nature 528, 534-538
+  year: 2015
+  doi: 10.1038/nature16454
+  url: https://people.eecs.berkeley.edu/~krste/papers/nature16454.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: timurdogan_natcommun_2014
+  type: journal
+  title: An ultralow power athermal silicon modulator
+  authors: E. Timurdogan, C. M. Sorace-Agaskar, J. Sun, E. Shah Hosseini, A. Biberman, M. R. Watts
+  venue: Nature Communications 5, 4008
+  year: 2014
+  doi: 10.1038/ncomms5008
+  url: https://www.nature.com/articles/ncomms5008
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bogaerts_lpr_2012
+  type: journal
+  title: Silicon microring resonators
+  authors: W. Bogaerts, P. De Heyn, T. Van Vaerenbergh, et al., R. Baets
+  venue: Laser & Photonics Reviews 6(1), 47-73
+  year: 2012
+  doi: 10.1002/lpor.201100017
+  url: https://www.photonics.intec.ugent.be/download/pub_3105.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: wang_nature_2018
+  type: journal
+  title: Integrated lithium niobate electro-optic modulators operating at CMOS-compatible voltages
+  authors: C. Wang, M. Zhang, X. Chen, M. Bertrand, A. Shams-Ansari, S. Chandrasekhar, P. Winzer, M. Loncar
+  venue: Nature 562, 101-104
+  year: 2018
+  doi: 10.1038/s41586-018-0551-y
+  url: https://www.ee.cityu.edu.hk/~cwang/document/LNMOD2018_2_100Gmod_.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: valdez_scirep_2022
+  type: journal
+  title: 110 GHz, 110 mW hybrid silicon-lithium niobate Mach-Zehnder modulator
+  authors: F. Valdez, V. Mere, X. Wang, N. Boynton, T. A. Friedmann, et al., S. Mookherjea
+  venue: Scientific Reports 12
+  year: 2022
+  doi: 10.1038/s41598-022-23403-6
+  url: https://www.nature.com/articles/s41598-022-23403-6
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: yang_col_2022
+  type: journal
+  title: Monolithic thin film lithium niobate electro-optic modulator with over 110 GHz bandwidth
+  authors: F. Yang, X. Fang, X. Chen, L. Zhu, F. Zhang, et al.
+  venue: Chinese Optics Letters 20(2), 022502
+  year: 2022
+  doi: ''
+  url: https://opg.optica.org/col/abstract.cfm?uri=col-20-2-022502
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: weigel_oe_2018
+  type: journal
+  title: Bonded thin film lithium niobate modulator on a silicon photonics platform exceeding 100 GHz 3-dB electrical modulation
+    bandwidth
+  authors: P. O. Weigel, J. Zhao, K. Fang, et al., S. Mookherjea
+  venue: Optics Express 26(18), 23728
+  year: 2018
+  doi: ''
+  url: https://pubmed.ncbi.nlm.nih.gov/30184869/
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ogiso_jlt_2017
+  type: journal
+  title: Over 67 GHz Bandwidth and 1.5 V Vpi InP-Based Optical IQ Modulator With n-i-p-n Heterostructure
+  authors: Y. Ogiso, J. Ozaki, Y. Ueda, N. Kashio, N. Kikuchi, E. Yamada, et al.
+  venue: Journal of Lightwave Technology
+  year: 2017
+  doi: 10.1109/JLT.2016.2639542
+  url: https://doi.org/10.1109/jlt.2016.2639542
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ogiso_jlt_2020
+  type: journal
+  title: 80-GHz Bandwidth and 1.5-V Vpi InP-Based IQ Modulator
+  authors: Y. Ogiso, J. Ozaki, Y. Ueda, H. Wakita, M. Nagatani, et al.
+  venue: Journal of Lightwave Technology 38(2), 249-255
+  year: 2020
+  doi: ''
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-38-2-249
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: ozaki_nttreview_2018
+  type: report
+  title: High-speed Modulator for Next-generation Large-capacity Coherent Optical Networks
+  authors: J. Ozaki, Y. Ogiso, S. Nakano
+  venue: NTT Technical Review 16(4)
+  year: 2018
+  doi: 10.53829/ntr201804ra2
+  url: https://doi.org/10.53829/ntr201804ra2
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: abel_natmater_2019
+  type: journal
+  title: Large Pockels effect in micro- and nanostructured barium titanate integrated on silicon
+  authors: S. Abel, F. Eltes, J. E. Ortmann, A. Messner, et al., J. Fompeyrine
+  venue: Nature Materials 18
+  year: 2019
+  doi: 10.1038/s41563-018-0208-0
+  url: https://www.nature.com/articles/s41563-018-0208-0
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: lischke_natphoton_2021
+  type: journal
+  title: Ultra-fast germanium photodiode with 3-dB bandwidth of 265 GHz
+  authors: S. Lischke, A. Peczek, J. S. Morgan, K. Sun, D. Steckler, et al., L. Zimmermann
+  venue: Nature Photonics 15
+  year: 2021
+  doi: 10.1038/s41566-021-00893-w
+  url: https://www.nature.com/articles/s41566-021-00893-w
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: kang_natphoton_2009
+  type: journal
+  title: Monolithic germanium/silicon avalanche photodiodes with 340 GHz gain-bandwidth product
+  authors: Y. Kang, H.-D. Liu, M. Morse, M. J. Paniccia, et al., J. C. Campbell
+  venue: Nature Photonics 3, 59-63
+  year: 2009
+  doi: 10.1038/nphoton.2008.247
+  url: https://www.nature.com/articles/nphoton.2008.247
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: chen_ofc_2016_imec_gepd
+  type: conference
+  title: -1 V Bias 56 Gbps Germanium Waveguide p-i-n Photodetector with Silicon Contacts
+  authors: H. T. Chen, P. Verheyen, P. De Heyn, G. Lepage, J. De Coster, P. Absil, et al.
+  venue: OFC 2016, paper Tu2D.6
+  year: 2016
+  doi: 10.1364/OFC.2016.Tu2D.6
+  url: https://doi.org/10.1364/ofc.2016.tu2d.6
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: liu_ipc_2010_ge
+  type: conference
+  title: 'Ge-on-Si Integrated Photonics: New Tricks from an Old Semiconductor'
+  authors: J. Liu, J. Michel, L. C. Kimerling
+  venue: IEEE Photonics Society Annual Meeting 2010, pp. 325-326
+  year: 2010
+  doi: 10.1109/PHOTONICS.2010.5698891
+  url: https://dspace.mit.edu/bitstream/handle/1721.1/79809/Kimerling_Ge-on-si%20integrated.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: mcintyre_ted_1966
+  type: journal
+  title: Multiplication noise in uniform avalanche diodes
+  authors: R. J. McIntyre
+  venue: IEEE Transactions on Electron Devices ED-13(1), 164-168
+  year: 1966
+  doi: 10.1109/T-ED.1966.15651
+  url: https://doi.org/10.1109/t-ed.1966.15651
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: patel_jssc_2023
+  type: journal
+  title: A 112-Gb/s -8.2-dBm Sensitivity 4-PAM Linear TIA in 16-nm CMOS With Co-Packaged Photodiodes
+  authors: D. Patel, A. Sharif-Bakhtiar, A. Chan Carusone
+  venue: IEEE Journal of Solid-State Circuits
+  year: 2023
+  doi: 10.1109/JSSC.2022.3218558
+  url: https://doi.org/10.1109/jssc.2022.3218558
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: declercq_jlt_2025
+  type: journal
+  title: A 64-GHz Optical Receiver for 128-GBd Links Using a 55-nm SiGe BiCMOS Traveling-Wave Linear Transimpedance Amplifier
+  authors: J. Declercq, B. Moeneclaey, J. Lambrecht, C. Bruynsteen, N. Singh, S. Niu, et al.
+  venue: Journal of Lightwave Technology
+  year: 2025
+  doi: 10.1109/JLT.2025.3533200
+  url: https://doi.org/10.1109/jlt.2025.3533200
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: marchetti_prj_2019
+  type: journal
+  title: Coupling strategies for silicon photonics integrated chips [Invited]
+  authors: R. Marchetti, C. Lacava, L. Carroll, K. Gradkowski, P. Minzioni
+  venue: Photonics Research 7(2), 201-239
+  year: 2019
+  doi: 10.1364/PRJ.7.000201
+  url: https://eprints.soton.ac.uk/428213/1/prj_7_2_201.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: komljenovic_jlt_2016
+  type: journal
+  title: Heterogeneous Silicon Photonic Integrated Circuits
+  authors: T. Komljenovic, M. Davenport, J. Hulme, A. Y. Liu, C. T. Santis, A. Spott, S. Srinivasan, E. J. Stanton, C. Zhang,
+    J. E. Bowers
+  venue: Journal of Lightwave Technology 34(1), 20-35
+  year: 2016
+  doi: 10.1109/JLT.2015.2465382
+  url: https://optoelectronics.ece.ucsb.edu/sites/default/files/2017-06/Komljenovic15jlt.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: telcordia_gr468_issue2_catalog
+  type: standard
+  title: 'GR-468-CORE: Generic Reliability Assurance Requirements for Optoelectronic Devices Used in Telecommunications Equipment
+    (catalog abstract)'
+  authors: Telcordia Technologies
+  venue: Telcordia GR-468-CORE Issue 2, Sep 2004 (catalog page)
+  year: 2004
+  doi: ''
+  url: https://telecom-info.njdepot.ericsson.net/site-cgi/ido/docs.cgi?DOCUMENT=GR-468&ID=SEARCH
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: agiltron_gr468_qual_2021
+  type: datasheet
+  title: 'Qualification report: SWLD laser, Telcordia GR-468'
+  authors: Agiltron (L. Wang)
+  venue: Agiltron qualification report, 2021-03-16
+  year: 2021
+  doi: ''
+  url: https://cdn-agl.agiltron.com/dlc/certificates/SWLDlaserGR468-qualificationreport2021-03-16__Agiltron.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: ozoptics_tre0006_2014
+  type: datasheet
+  title: TRE0006 - OPM Telcordia GR-468 Qualification
+  authors: OZ Optics (L. Fernandes)
+  venue: OZ Optics qualification report, 20 Nov 2014
+  year: 2014
+  doi: ''
+  url: https://www.ozoptics.com/ALLNEW_PDF/TRE0006.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: visystems_v25_850_reliability
+  type: datasheet
+  title: Reliability Report V25-850 VCSEL (short version)
+  authors: VI Systems GmbH
+  venue: VI Systems reliability report
+  year: 2016
+  doi: ''
+  url: https://v-i-systems.com/_data/Reliability_Report_V25-850_VCSEL_short_version.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: murty_ieee8023dh_2022
+  type: report
+  title: 850 nm VCSEL for GI POF Links
+  authors: R. Murty (Broadcom)
+  venue: IEEE 802.3dh Task Force contribution murty_3dh_01a_220713, July 2022
+  year: 2022
+  doi: ''
+  url: https://www.ieee802.org/3/dh/public/July_2022/murty_3dh_01a_220713.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: hoser_ieee8023dh_2022
+  type: report
+  title: 850 and 910nm VCSELs for POF Automotive Links
+  authors: M. Hoser (TRUMPF Photonic Components)
+  venue: IEEE 802.3dh ad hoc contribution, 24 Aug 2022
+  year: 2022
+  doi: ''
+  url: https://www.ieee802.org/3/dh/public/Ad%20Hoc%20Aug%2024%202022/Hoser_3dh_220824.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
