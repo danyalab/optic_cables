@@ -256,17 +256,17 @@ ax.plot(pd, 10 * np.log10(1 / (N * eta1 * Pw ** 2)), color=cl.COLORS[1], ls="--"
         label=r"NLI only, $P/P_{\mathrm{NLI}}$")
 ax.plot(pd, 10 * np.log10(gsnr(Pw, N)), color=cl.COLORS[2], lw=2.4, label="GSNR (GN model)")
 ax.axhline(snr_req, color=cl.GRAY, lw=1, ls=":")
-ax.text(-7.8, snr_req + 0.3, "required SNR (DP-16QAM, 20 % FEC, with penalty)", fontsize=8.5)
+ax.text(-7.8, snr_req + 0.3, "required SNR", fontsize=8.5)
 yo = cl.lin2db(gsnr(popt, N))
 ax.plot([cl.w2dbm(popt)], [yo], "o", ms=8, color=cl.COLORS[3])
 ax.annotate(r"$P_{\mathrm{opt}}$: NLI = 1/3, ASE = 2/3 of noise", (cl.w2dbm(popt), yo),
-            xytext=(cl.w2dbm(popt) + 0.6, yo + 3.0), fontsize=9,
+            xytext=(-7.6, yo + 6.0), fontsize=9,
             arrowprops=dict(arrowstyle="-", color=cl.GRAY, lw=0.8))
 ax.set_xlabel("Launch power per channel (dBm)")
 ax.set_ylabel("SNR in $B_N = R_s$ (dB)")
 ax.set_ylim(yo - 8, yo + 8)
 ax.set_xlim(-8, 8)
-ax.legend(fontsize=9, loc="lower center")
+ax.legend(fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=3)
 ax.set_title(f"Computed: 64 GBd, {NCH} ch at 75 GHz, {N} x 80 km G.652.D, NF 5 dB", fontsize=10)
 cl.savefig(fig, "gsnr_vs_power")
 

@@ -208,5 +208,78 @@
       "ch01.cd.fr4_channel_cd_min",
       "ch01.cd.g652_link_typ_d1550"
     ]
+  },
+  "lam1550": {
+    "value": 1550.0000000000002,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "lam1310": {
+    "value": 1310.0000000000002,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1310"
+    ]
+  },
+  "lam1264": {
+    "value": 1264.5,
+    "unit": "nm",
+    "digits": 5,
+    "inputs": [
+      "ch01.cd.g652_oband_link_dmin_m1"
+    ]
+  },
+  "n_1550": {
+    "value": 1.4440236217032607,
+    "unit": "1",
+    "digits": 6,
+    "inputs": [
+      "ch01.cd.malitson_n_1529nm"
+    ]
+  },
+  "ng_bulk_1550": {
+    "value": 1.4625964839191095,
+    "unit": "1",
+    "digits": 5,
+    "inputs": [
+      "ch01.cd.malitson_n_1529nm"
+    ]
+  },
+  "dm_1550": {
+    "value": 21.9117877863568,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.malitson_n_1529nm"
+    ]
+  },
+  "dm_1310": {
+    "value": 3.581791315737515,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.malitson_n_1529nm"
+    ]
+  },
+  "lam_zd_material": {
+    "value": 1272.754244823438,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.cd.malitson_n_1529nm"
+    ]
+  },
+  "dw_1550": {
+    "value": -4.9117877863568005,
+    "unit": "ps/(nm·km)",
+    "digits": 2,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.malitson_n_1529nm"
+    ]
   }
 }

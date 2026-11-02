@@ -101,6 +101,53 @@ assert fn_fr4 > fn and fn_lr4 > fn, "MSA CD limits must keep the first null abov
 r.emit("l1550_equiv_fr4", abs(cd_fr4) / D1550, "km", 3,
        ["ch01.cd.fr4_channel_cd_min", "ch01.cd.g652_link_typ_d1550"])
 
+# ---------------------------------------------------------------- wavelength labels
+r.emit("lam1550", lam1550 * 1e9, "nm", 4, ["ch01.cd.g652_link_typ_d1550"])
+r.emit("lam1310", lam1310 * 1e9, "nm", 4, ["ch01.att.smf28ultra_max_1310"])
+r.emit("lam1264", lam_edge, "nm", 5, ["ch01.cd.g652_oband_link_dmin_m1"])
+
+# ---------------------------------------------------------------- material dispersion
+# Malitson (1965) Sellmeier coefficients, parsed from the notes of equation record
+# ch01.eq.malitson_sellmeier (ledger file ch01_a_equations.yaml).
+import re as _re
+import yaml as _yaml
+_eqs = _yaml.safe_load((pathlib.Path(__file__).resolve().parents[2] / "ledger" / "ch01_a_equations.yaml").read_text())
+_note = next(e for e in _eqs["equations"] if e["id"] == "ch01.eq.malitson_sellmeier")["notes"]
+_B = [float(x) for x in _re.findall(r"B\d=([0-9.]+)", _note)]
+_L = [float(x) for x in _re.findall(r"λ\d=([0-9.]+) µm", _note)]
+assert len(_B) == 3 and len(_L) == 3
+
+
+def n_silica(lu):
+    return math.sqrt(1 + sum(b * lu ** 2 / (lu ** 2 - l ** 2) for b, l in zip(_B, _L)))
+
+
+lam_m_rec = float(cl.cond("ch01.cd.malitson_n_1529nm", "wavelength_nm")) / 1e3
+assert abs(n_silica(lam_m_rec) - L("ch01.cd.malitson_n_1529nm")) < 2e-6, "Sellmeier must reproduce Malitson's table"
+
+
+def dm_ps_nm_km(lu, hstep=1e-3):
+    d2 = (n_silica(lu + hstep) - 2 * n_silica(lu) + n_silica(lu - hstep)) / hstep ** 2   # 1/µm^2
+    d2_si = d2 * 1e12                                                                   # 1/m^2
+    dm = -(lu * 1e-6) / c * d2_si                                                       # s/m^2
+    return dm / 1e-6                                                                    # ps/(nm km)
+
+
+def ng_silica(lu, hstep=1e-4):
+    dn = (n_silica(lu + hstep) - n_silica(lu - hstep)) / (2 * hstep)
+    return n_silica(lu) - lu * dn
+
+
+mal = ["ch01.cd.malitson_n_1529nm"]
+r.emit("n_1550", n_silica(1.55), "1", 6, mal)
+r.emit("ng_bulk_1550", ng_silica(1.55), "1", 5, mal)
+r.emit("dm_1550", dm_ps_nm_km(1.55), "ps/(nm·km)", 3, mal)
+r.emit("dm_1310", dm_ps_nm_km(1.31), "ps/(nm·km)", 3, mal)
+from scipy.optimize import brentq as _brentq
+lzd = _brentq(dm_ps_nm_km, 1.1, 1.5)
+r.emit("lam_zd_material", lzd * 1e3, "nm", 4, mal)
+r.emit("dw_1550", D1550 - dm_ps_nm_km(1.55), "ps/(nm·km)", 2, mal + ["ch01.cd.g652_link_typ_d1550"])
+
 # ---------------------------------------------------------------- figure
 plt = cl.setup_mpl()
 f = np.linspace(0.01e9, 60e9, 1200)
@@ -123,7 +170,7 @@ ax.set_xlabel("Baseband frequency f (GHz)")
 ax.set_ylabel(r"$20\log_{10}|H(f)|$ (dB)")
 ax.set_ylim(-30, 2)
 ax.set_xlim(0, 60)
-ax.legend(fontsize=9, loc="lower left")
+ax.legend(fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
 cl.savefig(fig, "power_fading")
 
 r.save()

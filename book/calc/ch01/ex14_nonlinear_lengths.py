@@ -23,6 +23,7 @@ SPAN_KM = 80.0
 P_DBM = 0.0
 P = cl.dbm2w(P_DBM)
 r.emit("p_dbm", P_DBM, "dBm", 2)
+r.emit("p_mw", P * 1e3, "mW", 2)
 
 n2_sup47 = L("ch01.kerr.n2_pure_silica_gsup47")
 n2_kato = L("ch01.kerr.n2_kato1995_smf")
@@ -93,6 +94,9 @@ Lsup = float(cl.cond("ch01.fwm.vanish_100ghz_d1", "L_km")) * 1e3
 asup = cl.alpha_np_per_m(float(cl.cond("ch01.fwm.vanish_100ghz_d1", "alpha_dB_per_km")))
 Dsup = float(cl.cond("ch01.fwm.vanish_100ghz_d1", "D_ps_nm_km"))
 df_sup = L("ch01.fwm.vanish_100ghz_d1") * 1e9
+r.emit("fwm_L_km", Lsup / 1e3, "km", 2, ["ch01.fwm.vanish_100ghz_d1"])
+r.emit("fwm_alpha_db", float(cl.cond("ch01.fwm.vanish_100ghz_d1", "alpha_dB_per_km")), "dB/km", 2, ["ch01.fwm.vanish_100ghz_d1"])
+r.emit("fwm_D", Dsup, "ps/(nm·km)", 1, ["ch01.fwm.vanish_100ghz_d1"])
 e100 = eta_fwm(Dsup, df_sup, asup, Lsup)
 e50 = eta_fwm(Dsup, df_sup / 2, asup, Lsup)
 r.emit("eta_d1_100", cl.lin2db(e100), "dB", 3, ["ch01.fwm.vanish_100ghz_d1"])
@@ -125,7 +129,7 @@ ax.set_xlabel(r"Channel spacing $\Delta f$ (GHz)")
 ax.set_ylabel(r"FWM efficiency $\eta_{\mathrm{FWM}}$ (dB)")
 ax.set_ylim(-50, 3)
 ax.set_xlim(0, 200)
-ax.legend(fontsize=8.5, loc="lower left")
+ax.legend(fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=1)
 ax.set_title("Computed: L = 50 km, 0.25 dB/km, degenerate FWM", fontsize=10)
 cl.savefig(fig, "fwm_efficiency")
 

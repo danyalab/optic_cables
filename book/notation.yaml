@@ -53,3 +53,22 @@ symbols:
   - {symbol: "B_{\\mathrm{ch}}", meaning: "channel (signal) bandwidth", unit: "Hz", first_defined: "1.6"}
   - {symbol: "\\varepsilon", meaning: "coherent NLI accumulation exponent, P_NLI ∝ N_s^{1+ε} (GN model); distinct from the EGN format correction", unit: "1", first_defined: "1.6"}
   - {symbol: "C", meaning: "Shannon capacity", unit: "bit/s or bit/symbol", first_defined: "1.6"}
+
+  # additions by the Chapter 1 writer (symbols introduced in ch01.md)
+  - {symbol: "A_R", meaning: "Rayleigh scattering coefficient, α_R = A_R/λ⁴ (λ in µm)", unit: "dB/(km·µm⁴)", first_defined: "1.1"}
+  - {symbol: "L_{\\mathrm{span}}", meaning: "span loss in decibels (distinct from the length L)", unit: "dB", first_defined: "1.1"}
+  - {symbol: "T_0", meaning: "pulse or symbol time scale used in L_D", unit: "ps", first_defined: "1.2"}
+  - {symbol: "f", meaning: "baseband (RF) frequency of the detected signal", unit: "Hz", first_defined: "1.2"}
+  - {symbol: "H(f)", meaning: "small-signal IM/DD fiber transfer function", unit: "1", first_defined: "1.2"}
+  - {symbol: "\\tau_{\\mathrm{tol}}", meaning: "DGD tolerance of a receiver", unit: "ps", first_defined: "1.3"}
+  - {symbol: "\\Delta\\beta", meaning: "FWM phase mismatch", unit: "1/m", first_defined: "1.4"}
+  - {symbol: "\\eta_{\\mathrm{FWM}}", meaning: "normalized FWM efficiency (dimensionless; distinct from the NLI efficiency η)", unit: "1", first_defined: "1.4"}
+  - {symbol: "L_{\\mathrm{eff,a}}", meaning: "asymptotic effective length 1/α", unit: "km", first_defined: "1.4"}
+  - {symbol: "\\mathbf{A}", meaning: "Jones vector of the field envelope (A_x, A_y)", unit: "√W", first_defined: "1.4"}
+  - {symbol: "S_{\\mathrm{ASE}}", meaning: "ASE power spectral density per polarization", unit: "W/Hz", first_defined: "1.5"}
+  - {symbol: "\\mathcal{G}_{\\mathrm{WDM}}", meaning: "unilateral PSD of the WDM signal (GN model)", unit: "W/Hz", first_defined: "1.6"}
+  - {symbol: "\\mathcal{G}_{\\mathrm{NLI}}", meaning: "unilateral PSD of NLI (GN model)", unit: "W/Hz", first_defined: "1.6"}
+  - {symbol: "N_{\\mathrm{ch}}", meaning: "number of WDM channels", unit: "1", first_defined: "1.6"}
+  - {symbol: "\\Phi_a", meaning: "EGN fourth-moment format coefficient", unit: "1", first_defined: "1.6"}
+  - {symbol: "\\Psi_a", meaning: "EGN sixth-moment format coefficient", unit: "1", first_defined: "1.6"}
+  - {symbol: "\\mathrm{SNR}_{\\mathrm{req}}", meaning: "required SNR at the FEC threshold, including implementation penalty", unit: "1 (dB in text)", first_defined: "1.6"}

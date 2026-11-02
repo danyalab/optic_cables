@@ -1,1443 +1,1535 @@
-# Ledger records for ch01 sections 1.5 and 1.7 (retrieval agent ch01_c).
-# Sources in book/sources/ch01_c.yaml. Equations in ch01_c_equations.yaml.
 records:
-  # =====================================================================
-  # 1.5  Constants and reference bandwidth
-  # =====================================================================
-  - id: ch01.const.planck_h
-    section: "1.5"
-    claim: "Planck constant h (exact by SI definition since 2019)"
-    value: 6.62607015e-34
-    unit: "J/Hz"
-    kind: constant
-    conditions:
-      note: "CODATA 2022 value; identical to CODATA 2018 because h is fixed exactly by the 2019 SI"
-    source_id: codata_2022_nist_h
-    locator: "NIST CUU 'Value?h' page, Numerical value row"
-    quote: '6.626 070 15 x 10 -34 J Hz -1'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Task requested CODATA 2018; the NIST page now serves 2022 values. h and c are exact and unchanged between 2018 and 2022."
-
-  - id: ch01.const.speed_of_light_c
-    section: "1.5"
-    claim: "Speed of light in vacuum c (exact)"
-    value: 299792458
-    unit: "m/s"
-    kind: constant
-    conditions:
-      note: "CODATA 2022, exact"
-    source_id: codata_2022_nist_c
-    locator: "NIST CUU constant page for c, Numerical value row"
-    quote: '299 792 458 m s -1'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same exact value in CODATA 2018."
-
-  - id: ch01.osnr.bref_0p1nm_equals_12p5ghz
-    section: "1.5"
-    claim: "OSNR reference bandwidth B_ref of 0.1 nm corresponds to 12.5 GHz at 1550 nm"
-    value: 12.5
-    unit: "GHz"
-    kind: fact
-    conditions:
-      wavelength_nm: 1550
-      note: "0.1 nm reference bandwidth expressed in frequency"
-    source_id: essiambre_tkach_procieee_2012
-    locator: "Sec. IV-B 'Relations between SNR and OSNR', text after Eq. (10), p. 1040"
-    quote: 'Bref is a reference bandwidth, commonly taken to be 0.1 nm, which corresponds to 12.5 GHz at 1550 nm.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Exact conversion c*0.1nm/(1550nm)^2 = 12.48 GHz; book/calc can recompute from ch01.const.speed_of_light_c."
-
-  - id: ch01.osnr.bref_g697_0p1nm
-    section: "1.5"
-    claim: "ITU-T G.697 reports monitored OSNR in dB referred to a 0.1 nm noise bandwidth"
-    value: 0.1
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      standard: "ITU-T G.697 (11/2009)"
-      note: "parameter ID 5 in the monitoring parameter encoding"
-    source_id: itu_t_g697_2009
-    locator: "Appendix V, Table V.3 'Parameter ID encoding', row 5 (OSNR); also Tables III.x 'OSNR ... (in 0.1 nm optical bandwidth)'"
-    quote: 'OSNR | dB (0.1 nm) | Referred to a 0.1 nm noise | bandwidth'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Table cells shown with '|' separators as extracted. G.697 has a newer 08/2026 edition (prepublished) not read."
-
-  - id: ch01.osnr.bref_iec_tr61282_12
-    section: "1.5"
-    claim: "IEC in-band OSNR definitions normalize ASE PSD to a reference bandwidth B_r, usually 0.1 nm"
-    value: 0.1
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      standard: "IEC TR 61282-12:2016, consistent with IEC 61280-2-9:2009 clause 3.1"
-    source_id: iec_tr_61282_12_2016
-    locator: "Clause 3.2, definition of OSNR_int, Eq. (1) where-list"
-    quote: 'Br is the reference bandwidth expressed in nm (usually 0,1 nm if not otherwise stated)'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Read from the iTeh public preview pages only."
-
-  - id: ch01.osnr.gsup39_bref_typical
-    section: "1.5"
-    claim: "OSNR is usually expressed in a 0.1 nm resolution (reference) bandwidth"
-    value: 0.1
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      standard: "ITU-T G.Sup39 (02/2006)"
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5.1 'OSNR measurement', text before Eq. (9-22)"
-    quote: 'OSNR is usually expressed in a resolution bandwidth of 0.1 nm and determined by Equation 9-22'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.osnr.gsup39_58db_constant
-    section: "1.5"
-    claim: "The constant -10 log10(h nu nu_r) equals +58 dB (in dBm-consistent units) for 0.1 nm reference bandwidth at 1550 nm"
-    value: 58
-    unit: "dB"
-    kind: model_param
-    conditions:
-      wavelength_nm: 1550
-      reference_bandwidth_nm: 0.1
-      note: "h expressed in mJ*s so powers are in dBm; nu_r is B_ref in Hz"
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5.2, text between Eq. (9-23) and Eq. (9-24)"
-    quote: 'applying: Preceived = Pout – L and −10log(hν νr) = +58 dB at 0.1-nm resolution bandwidth and at wavelength of 1550 mn'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "'mn' is a typo for nm in the source. This is the derivation source of the '58 dB rule'; the same text appears in G.Sup39 (10/2003). Calc check: h*nu*B_ref = 6.626e-34*1.934e14*1.248e10 W = 1.60e-9 mW -> -58.0 dBm."
-
-  # =====================================================================
-  # 1.5  Noise figure and quantum limit
-  # =====================================================================
-  - id: ch01.amp.caves_half_quantum_limit
-    section: "1.5"
-    claim: "A high-gain phase-insensitive linear amplifier must add input-referred noise at least equal to the half-quantum of zero-point fluctuations (origin of the 3 dB NF limit)"
-    value: "added noise >= half-quantum (hbar*omega/2) referred to input, high-gain limit"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "phase-insensitive amplifier, single-mode and multimode analyses"
-    source_id: caves_prd_1982
-    locator: "Abstract"
-    quote: 'in the limit of high gain, to add noise which, referred to the input, is at least as large as the half-quantum of zero-point fluctuations'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only (APS paywall). Translation into F >= 2 (3 dB) for the optical NF definition comes from Desurvire/Carney records below."
-
-  - id: ch01.amp.nf_min_3db_desurvire
-    section: "1.5"
-    claim: "Minimum optical amplifier noise factor in ideal conditions is 2, i.e. a 3 dB penalty"
-    value: 3
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "ideal, high-gain phase-insensitive amplifier; F >= 2"
-    source_id: desurvire_scholarpedia_optamp
-    locator: "Section 'Noise figure'"
-    quote: 'the minimal NF, in ideal conditions is “two”, representing in engineering terms, a 3 dB tax penalty.'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Read via search highlight of the Scholarpedia page (Noise figure section not in the fetched portion). Tier set B: curated encyclopedia, though authored by Desurvire."
-
-  - id: ch01.amp.nf_high_gain_2nsp
-    section: "1.5"
-    claim: "For G >> 1 the signal-spontaneous noise factor reduces to F = 2 n_sp"
-    value: "F -> 2 n_sp for G >> 1"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "derived from F = 2 n_sp (G-1)/G + 1/G, Eq. (13) of source"
-    source_id: carney_oe_2013
-    locator: "Sec. 3.2, text after Eq. (13)"
-    quote: 'For the situation where G >> 1, this expression reduces to nf = 2nsp'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Source context is SOAs but the expression is the generic amplifier result; see ch01.eq.nf_nsp."
-
-  - id: ch01.amp.nf_quantum_limit_3db_carney
-    section: "1.5"
-    claim: "With full inversion (n_sp = 1) the high-gain noise figure quantum limit is 3 dB"
-    value: 3
-    unit: "dB"
-    kind: model_param
-    conditions:
-      n_sp: 1
-      note: "G >> 1"
-    source_id: carney_oe_2013
-    locator: "Sec. 3.2, text after Eq. (13), citing ref. [19]"
-    quote: '(nsp = 1), leads to a quantum limit of the NF of 3dB'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.amp.nsp_unity_full_inversion
-    section: "1.5"
-    claim: "Spontaneous emission factor n_sp = N2/(N2-N1) tends to 1 at full inversion (N1 -> 0)"
-    value: 1
-    unit: "1"
-    kind: model_param
-    conditions:
-      note: "two-level model; n_sp > 1 for incomplete inversion (three-level erbium)"
-    source_id: desurvire_scholarpedia_optamp
-    locator: "Section 'Amplified spontaneous emission', text after Eq. (12)"
-    quote: 'It asymptotically converges to unity as the inversion increases'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: ""
-
-  - id: ch01.amp.nf_definition_iec
-    section: "1.5"
-    claim: "Optical amplifier noise factor is defined (IEC 61291-1) as SNR_in/SNR_out of the detected photocurrent with a shot-noise-limited input; NF = 10 log10 F"
-    value: "F = SNR_in / SNR_out; NF = 10 log10 F"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "SNR is electrical (photocurrent) so NF is in electrical dB; definition adopted by ITU-T"
-    source_id: baney_gallion_tucker_oft_2000
-    locator: "Sec. III 'Noise figure definition', Eqs. (3)-(4), p. 128"
-    quote: 'Using the nomenclature of the IEC, IEC 61291-1 , the noise factor F is defined by'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.osnr.both_polarizations_noise
-    section: "1.5"
-    claim: "OSNR counts ASE noise in both polarization states regardless of whether the signal is polarization multiplexed"
-    value: "noise in both polarizations, OSNR = P/(2 N_ASE B_ref)"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "N_ASE is ASE PSD per polarization"
-    source_id: essiambre_tkach_procieee_2012
-    locator: "Sec. IV-B, text after Eq. (10), p. 1040"
-    quote: 'The OSNR also considers the noise in both polarization states independent of whether PDM of the signal is used or not.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Matches notation.yaml OSNR definition ('both polarizations of noise')."
-
-  - id: ch01.osnr.sackinger_58db_preamp
-    section: "1.5"
-    claim: "Textbook form of the 58 dB rule for a single optical preamplifier at 1.55 um and 0.1 nm: OSNR[dB] ~ 58 + P_in[dBm] - F[dB]"
-    value: 58
-    unit: "dB"
-    kind: model_param
-    conditions:
-      wavelength_nm: 1550
-      reference_bandwidth_nm: 0.1
-    source_id: sackinger_tia_book_2017
-    locator: "Appendix 'Answers to the Problems', Eq. (I.21)"
-    quote: 'OSNR req [dB] ≈ 58 dB + P sens,OA [dBm] -F [dB]'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Read from a search highlight of the book appendix; agrees with G.Sup39 Eq. (9-24)."
-
-  # =====================================================================
-  # 1.5  Bands and vendor EDFA specs
-  # =====================================================================
-  - id: ch01.amp.cband_range_itu
-    section: "1.5"
-    claim: "ITU-T C-band (Conventional) wavelength range, named after the original EDFA gain band"
-    value: [1530, 1565]
-    unit: "nm"
-    kind: fact
-    conditions:
-      standard: "ITU-T G.Sup39 (10/2025) Table 5-1"
-      note: "bands are for discussion, not specification (Table 5-1 note 1)"
-    source_id: itu_t_gsup39_2025_10
-    locator: "Clause 5.2 and Table 5-1 'Single-mode spectral bands'"
-    quote: '“Conventional” C-band, 1530 nm to 1565 nm.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same text: EDFAs 'had useful gain bands beginning at about 1530 nm and ending at about 1565 nm'."
-
-  - id: ch01.amp.lband_range_itu
-    section: "1.5"
-    claim: "ITU-T L-band (Long wavelength) range"
-    value: [1565, 1625]
-    unit: "nm"
-    kind: fact
-    conditions:
-      standard: "ITU-T G.Sup39 (10/2025) Table 5-1"
-    source_id: itu_t_gsup39_2025_10
-    locator: "Clause 5.2 and Table 5-1"
-    quote: '“Long wavelength” L-band, 1565 nm to 1625 nm.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.amp.accelink_mw_nf_max
-    section: "1.5"
-    claim: "Accelink EDFA-MW/MC multichannel gain module noise figure (booster, line and pre-amp variants)"
-    value: 5
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      band: "C"
-      wavelength_nm: [1528, 1562]
-      output_power_dBm: "20 (BA, LA), 13 (PA)"
-      gain_dB: 25
-    source_id: accelink_edfa_mw_mc_ds
-    locator: "Specifications table, row 'Noise Figure', BA/LA/PA columns"
-    quote: 'BA Typ. Max. 1562 20 25 0.6 1.5 5'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Table text extraction scrambles columns; 5 dB appears in the Max position for all three variants. Verify against PDF layout before using as max vs typical."
-
-  - id: ch01.amp.accelink_mw_wavelength
-    section: "1.5"
-    claim: "Accelink EDFA-MW/MC operating wavelength (standard 40-channel option)"
-    value: [1528, 1562]
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      band: "C"
-    source_id: accelink_edfa_mw_mc_ds
-    locator: "Ordering Information, Operating Wavelength code 40"
-    quote: 'Operating Wavelength：40:1528~1562nm、customer specify'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: ""
-
-  - id: ch01.amp.accelink_vga_nf
-    section: "1.5"
-    claim: "Accelink EDFA-VGA card (two-stage, mid-stage DCM) noise figure versus set gain"
-    value: 6
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      gain_dB: 28
-      wavelength_nm: [1529, 1564]
-      note: "<=6.5 dB at 25 dB gain; <=7 dB at 22 dB gain"
-    source_id: accelink_edfa_vga_card_ds
-    locator: "Product Specification table, row 'Noise figure'"
-    quote: 'Noise figure | ≤6dB@gain=28dB ≤6.5dB@gain=25dB ≤7dB@gain=22dB'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Illustrates NF degradation at reduced gain in variable-gain EDFAs."
-
-  - id: ch01.amp.accelink_lband_wavelength
-    section: "1.5"
-    claim: "Accelink L-band EDFA operating wavelength"
-    value: [1569, 1604]
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      band: "L"
-    source_id: accelink_edfa_lband_ds
-    locator: "Specifications table, row 'Operation wavelength', BA/LA/PA"
-    quote: 'Min. 1569 | BA Typ. 17 23 0.6 | Max. 1604 1.5'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Narrower than the ITU L-band (1565-1625 nm). Table extraction scrambled; NF value (5.5 dB typ?) could not be assigned to a column reliably, so not recorded."
-
-  - id: ch01.amp.coherent_pols_tx_nf
-    section: "1.5"
-    claim: "Coherent QSFP pluggable optical line system, Tx booster EDFA noise figure"
-    value: 6.7
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      gain_dB: 17
-      wavelength_nm: [1528.77, 1567.13]
-      note: "32 ch 800G ZR at 150 GHz; Max column"
-    source_id: coherent_pols_60p040001_ds
-    locator: "Section 4.2 'TX (BA) Optical Amplifier Absolute Parameter', row 'Noise Figure'"
-    quote: 'Noise Figure | | 6.7 | dB | @Gain 17dB'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Column placement (typ vs max) ambiguous in extraction; interpreted as max. Pluggable, low-gain amplifier, not a long-haul ILA."
-
-  - id: ch01.amp.coherent_pols_rx_nf
-    section: "1.5"
-    claim: "Coherent QSFP pluggable optical line system, Rx pre-amp EDFA noise figure"
-    value: 6.5
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      gain_dB: 18
-      wavelength_nm: [1528.48, 1567.34]
-    source_id: coherent_pols_60p040001_ds
-    locator: "Rx Amplifier table, row 'Noise Figure'"
-    quote: 'Noise Figure | | 6.5 | dB | @Gain 18'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Same column ambiguity as Tx record."
-
-  - id: ch01.amp.viavi_lownoise_nf
-    section: "1.5"
-    claim: "VIAVI mEDFA-C1 low-noise single-channel EDFA noise figure at small input"
-    value: 3.7
-    unit: "dB"
-    kind: spec_max
-    conditions:
-      wavelength_nm: 1550
-      input_power_dBm: -30
-      gain_dB: ">= 37"
-      note: "test-and-measurement preamp, not a WDM line amplifier"
-    source_id: viavi_medfa_c1_ds
-    locator: "Single Channel Input Optical Specifications table, mEDFA-C11CA column, Noise Figure at Pin = -30 dBm; also overview text"
-    quote: 'including a low noise version with <3.7dB noise figure'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Shows practical EDFA NF within ~0.7 dB of the 3 dB limit at high gain/low input. DWDM booster variant: <=5.2-5.5 dB."
-
-  - id: ch01.amp.viavi_cband_wavelength
-    section: "1.5"
-    claim: "VIAVI mEDFA-C1 C-band operating wavelength range"
-    value: [1528, 1569]
-    unit: "nm"
-    kind: spec_typ
-    conditions:
-      band: "C (extended)"
-      note: "L-band variant 1565-1610 nm"
-    source_id: viavi_medfa_c1_ds
-    locator: "Single Channel Input Optical Specifications table, row 'Operating Wavelength Range'"
-    quote: 'Operating Wavelength Range | | | 1528 nm – 1569 nm | 1565 nm – 1610 nm'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Vendor C-band ranges (1528-1562/1564/1569) exceed ITU 1530-1565 discussion band."
-
-  # =====================================================================
-  # 1.7  Hollow-core: peer-reviewed loss history
-  # =====================================================================
-  - id: ch01.hcf.poletti2014_nanf_proposal
-    section: "1.7"
-    claim: "NANF proposal: simulations show total loss (leakage, surface scattering, bend) can in principle fall below conventional solid fibers"
-    value: "predicted total loss < solid-core fiber loss (simulation)"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "nested, non-touching antiresonant tubes; also effectively single-mode via resonant HOM out-coupling"
-    source_id: poletti_oe_2014
-    locator: "Abstract"
-    quote: 'including leakage, surface scattering and bend contributions - that is lower than that of conventional solid fibers'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only; numeric predicted loss values are in the full text (not read)."
-
-  - id: ch01.hcf.jasion2020_nanf_028
-    section: "1.7"
-    claim: "Record NANF loss (2020)"
-    value: 0.28
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: [1510, 1600]
-      fiber: "NANF, 1.7 km, 500 m cutback"
-      uncertainty_dB_per_km: 0.04
-    source_id: jasion_ofc_2020
-    locator: "Abstract; Sec. 2 and Fig. 3(c)"
-    quote: 'record-low 0.28dB/km loss from 1510 to 1600nm'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Internal inconsistency: abstract says 1.7 km fiber, conclusion says 'length of 2.8 km (measured: 1.2km)'. A short (24 m) cutback on the same fiber gave 0.60 dB/km, showing HOM bias in short cutbacks."
-
-  - id: ch01.hcf.jasion2022_dnanf_cband
-    section: "1.7"
-    claim: "First DNANF; C-band loss comparable to commercial solid-core fiber"
-    value: 0.174
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: [1500, 1560]
-      fiber: "DNANF, 5 sets of 3 nested tubes, core 28 um, 3.37 km, cutback to 273 m"
-      uncertainty_dB_per_km: 0.031
-    source_id: jasion_ofc_2022
-    locator: "Sec. 2, Fig. 2b-c"
-    quote: 'In the S/C band the loss is 0.174 ± 0.031 dB/km from 1500 to 1560 nm'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Independent 1550 nm laser insertion-loss measurement gave 0.147 +/- 0.024 dB/km (ch01.hcf.jasion2022_dnanf_il1550)."
-
-  - id: ch01.hcf.jasion2022_dnanf_il1550
-    section: "1.7"
-    claim: "DNANF (2022) 1550 nm insertion-loss measurement with laser diode"
-    value: 0.147
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      uncertainty_dB_per_km: 0.024
-    source_id: jasion_ofc_2022
-    locator: "Sec. 2, Fig. 2c (black square)"
-    quote: 'The measured loss of 0.147 ± 0.024 dB/km overlaps with the uncertainty of the white light measurement'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Two methods on the same fiber differ by 0.027 dB/km (within stated uncertainty); relevant to reproducibility box."
-
-  - id: ch01.hcf.jasion2022_dnanf_oband
-    section: "1.7"
-    claim: "DNANF O-band loss (2022), lowest then measured in any fiber in the O-band"
-    value: 0.22
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: [1300, 1340]
-    source_id: jasion_ofc_2022
-    locator: "Sec. 2 and Sec. 3"
-    quote: 'In the O band it presents the lowest loss ever measured in an optical fiber, 0.22 dB/km from 1300 to 1340 nm.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Paper compares with 0.35 dB/km Ge-doped SMF and 0.27 dB/km PSCF in O-band."
-
-  - id: ch01.hcf.chen2024_dnanf_008
-    section: "1.7"
-    claim: "DNANF loss at 1550 nm averaged over three independent measurements (OFC 2024 postdeadline)"
-    value: 0.08
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-      uncertainty_dB_per_km: 0.03
-      note: "title claims <0.11 dB/km"
-    source_id: chen_ofc_2024_dnanf
-    locator: "Abstract"
-    quote: 'Three independent loss measurements average 0.08±0.03 dB/km at 1550 nm, the lowest attenuation ever achieved in an optical fiber.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only. Petrovich 2025 (ref. 29 there) describes this short HCF1 as giving 0.055-0.11 dB/km depending on method."
-
-  - id: ch01.hcf.petrovich2025_loss_1550
-    section: "1.7"
-    claim: "DNANF (HCF2) measured attenuation at 1550 nm, lowest loss reported in a peer-reviewed journal for any optical waveguide at time of publication"
-    value: 0.091
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-      fiber: "DNANF HCF2, 15 km, core 29.1-29.6 um, membranes ~500 nm"
-      method: "mean of four cutbacks (two methods), 95% CL band; OTDR agrees"
-    source_id: petrovich_natphoton_2025
-    locator: "Abstract; main text on HCF2 and Fig. 2c-d"
-    quote: 'a measured loss of 0.091 dB km −1 at 1,550 nm that remains below 0.2 dB km −1 over a window of 66 THz'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Title: 'Broadband optical fibre with an attenuation lower than 0.1 decibel per kilometre', Nat. Photon. 19, 1203-1208 (2025). Later lower values exist only in conference abstracts/company reports (see contested records)."
-
-  - id: ch01.hcf.petrovich2025_otdr_1550
-    section: "1.7"
-    claim: "DNANF HCF2 OTDR loss slope at 1550 nm (cross-check of cutback)"
-    value: 0.095
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      note: "1310 nm OTDR slope 0.123 dB/km"
-    source_id: petrovich_natphoton_2025
-    locator: "Main text, Fig. 2b"
-    quote: 'indicating a uniform loss with a slope of 0.123 dB km −1 and 0.095 dB km −1, respectively'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.hcf.petrovich2025_loss_1310
-    section: "1.7"
-    claim: "DNANF HCF2 cutback loss at 1310 nm"
-    value: 0.128
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      wavelength_nm: 1310
-    source_id: petrovich_natphoton_2025
-    locator: "Main text, Fig. 2d"
-    quote: 'the average loss is 0.128 dB km −1 and 0.091 dB km −1 at 1,310 nm and 1,550 nm, respectively'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Below the 0.14 dB/km solid-core record in the O-band between 1292 and 1347 nm per the same paper."
-
-  - id: ch01.hcf.petrovich2025_bw_below_0p1
-    section: "1.7"
-    claim: "Bandwidth over which DNANF HCF2 loss is below 0.1 dB/km"
-    value: 18
-    unit: "THz"
-    kind: record
-    conditions:
-      wavelength_nm: [1481, 1625]
-    source_id: petrovich_natphoton_2025
-    locator: "Conclusion paragraph"
-    quote: '<0.1 dB km −1 from 1,481 nm to 1,625 nm (18 THz)'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.hcf.petrovich2025_bw_below_0p2
-    section: "1.7"
-    claim: "Bandwidth over which DNANF HCF2 loss is below 0.2 dB/km, neglecting non-fundamental gas absorption"
-    value: 66
-    unit: "THz"
-    kind: record
-    conditions:
-      wavelength_nm: [1250, 1730]
-      note: "gas absorption lines (H2O, CO2) omitted; compared with ~25-26 THz for current telecom fibers"
-    source_id: petrovich_natphoton_2025
-    locator: "Conclusion paragraph; Abstract"
-    quote: 'the fibre guides light with <0.2 dB km −1 from 1,250 nm to 1,730 nm (66 THz)'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Abstract compares with 26 THz below 0.2 dB/km for silica; conclusion says 25 THz. Minor internal inconsistency."
-
-  - id: ch01.hcf.petrovich2025_silica_state_of_art
-    section: "1.7"
-    claim: "State-of-the-art silica fiber benchmarks used by Petrovich et al.: 0.14 dB/km minimum loss and 26 THz below 0.2 dB/km"
-    value: 0.14
-    unit: "dB/km"
-    kind: fact
-    conditions:
-      note: "26 THz bandwidth below 0.2 dB/km"
-    source_id: petrovich_natphoton_2025
-    locator: "Abstract"
-    quote: 'state-of-the-art fibres offering values of 0.14 dB km −1 and 26 THz below 0.2 dB km −1, respectively'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Cross-check with section 1.1 teammate (Sato 2025: 0.1397 dB/km)."
-
-  - id: ch01.hcf.gao2024_4tdnanf_loss
-    section: "1.7"
-    claim: "Four-fold truncated DNANF (Jinan Univ./Linfiber) C-band loss from three methods"
-    value: 0.1
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-      uncertainty_dB_per_km: 0.02
-      fiber: "4T-DNANF fiber #1, 4.2 km, 32 cm drum"
-      note: "cutback 0.09+/-0.01; laser 0.1+/-0.01; OTDR 0.108 dB/km"
-    source_id: gao_arxiv_2024_4tdnanf
-    locator: "Sec. 3, Fig. 2(f)-(h)"
-    quote: 'Based on these three sets of measurements, we conclude that fiber #1 achieved a loss of 0.1 ± 0.02 dB/km in the C band.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Petrovich 2025 refers to a team reporting 0.1-0.13 dB/km in a four-tube DNANF of 2.3-4.2 km; this is very likely that work (their ref. 32, not verified). Authors note >10 km lengths are needed for accurate loss."
-
-  - id: ch01.hcf.gao2025_ecoc_40km_0052
-    section: "1.7"
-    claim: "Interstitial-tube-assisted DNANF (Linfiber/Jinan): loss in a 40 km span"
-    value: 0.052
-    unit: "dB/km"
-    kind: record
-    conditions:
-      fiber: "interstitial-tube-assisted DNANF, 40 km"
-      wavelength_nm: "not stated in abstract"
-    source_id: gao_ecoc_2025_itt_dnanf
-    locator: "Abstract"
-    quote: 'a record low loss of 0.052 dB/km in a 40-km span'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only (rendered with LaTeX in index). Conference abstract claims lower loss than the Nature Photonics record; no journal-length verification found."
-
-  - id: ch01.hcf.gao2025_ecoc_83km_0076
-    section: "1.7"
-    claim: "Interstitial-tube-assisted DNANF single-draw length and loss"
-    value: 0.076
-    unit: "dB/km"
-    kind: record
-    conditions:
-      fiber_length_km: 83
-    source_id: gao_ecoc_2025_itt_dnanf
-    locator: "Abstract"
-    quote: 'We demonstrate a record single-draw span length of 83 km with loss of 0.076 dB/km'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only."
-
-  - id: ch01.hcf.jnu2024_sub0p1_press
-    section: "1.7"
-    claim: "China Mobile Research Institute, Linfiber and Jinan Univ. report sub-0.1 dB/km 4-unit truncated double-nested AR-HCF and 26,000x HOM suppression"
-    value: 0.1
-    unit: "dB/km"
-    kind: record
-    conditions:
-      note: "upper bound ('低于0.1dB/km'); presented at OPTICA Advanced Photonics Congress 2024"
-    source_id: jnu_press_2024_sub0p1_hcf
-    locator: "News text, first paragraph"
-    quote: '实现了低于 0.1dB/km的超低传输损耗和 2.6万倍的高阶模式抑制比纪录'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'achieved ultra-low transmission loss below 0.1 dB/km and a record 26,000x higher-order-mode suppression ratio'. arXiv 2409.13332 gives HOMER 50,000 for a different fiber; numbers differ by fiber."
-
-  - id: ch01.hcf.ding2025_yofc_sthcf_005
-    section: "1.7"
-    claim: "YOFC support-tube hollow-core fiber (ST-HCF) attenuation at 1550 nm"
-    value: 0.05
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-      fiber_length_km: 9.1
-      uncertainty_dB_per_km: 0.01
-    source_id: ding_ecoc_2025_yofc_sthcf
-    locator: "Abstract"
-    quote: 'The 9.1 km ST-HCF achieved 0.05 ± 0.01 dB/km attenuation at 1550 nm.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only (LaTeX normalized). YOFC presented the same 0.05 dB/km at OFC 2025 (company news); fiber >20 km per that news. Single-sample value, see batch average."
-
-  - id: ch01.hcf.ding2025_yofc_batch_avg
-    section: "1.7"
-    claim: "YOFC ST-HCF batch-average attenuation over 733.3 km of production fiber"
-    value: 0.147
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      total_length_km: 733.3
-    source_id: ding_ecoc_2025_yofc_sthcf
-    locator: "Abstract"
-    quote: 'Batch tests on 733.3 km ST-HCF yielded an average attenuation of 0.147 dB/km.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Hero sample (0.05) vs batch mean (0.147) differ by ~3x; key data point for the 'record vs reproducible' contested box. Disagrees with CWW-reported 0.12 dB/km scale-production average (ch01.hcf.yofc_scale_avg_cww)."
-
-  - id: ch01.hcf.ge2026_field_min_span
-    section: "1.7"
-    claim: "Lowest post-deployment span loss of field-installed AR-HCF cable (China Mobile network)"
-    value: 0.065
-    unit: "dB/km"
-    kind: record
-    conditions:
-      note: "four structurally distinct AR-HCF cables, 10-42.7 km, deployed fiber cable"
-    source_id: ge_jlt_2026_arhcf_field
-    locator: "Abstract"
-    quote: 'with the lowest recorded span loss reaching 0.065 dB/km, scoring the world’s first fiber cable deployment to break the 0.1 dB/km'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only. Authors: China Mobile Research Institute, Linfiber/Jinan Univ., YOFC, Peking Univ. Cabled, deployed value: strongest evidence against 'lab-only' criticism."
-
-  - id: ch01.hcf.ge2026_field_avg_link
-    section: "1.7"
-    claim: "Average deployed AR-HCF link loss improvement across successive field deployments"
-    value: [0.599, 0.113]
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      note: "from earliest to latest deployment (range = before/after improvement, not min/max)"
-    source_id: ge_jlt_2026_arhcf_field
-    locator: "Abstract"
-    quote: 'an average link loss reduction from 0.599 dB/km to 0.113 dB/km'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Also: 114.9 Tb/s over 137.36 km S+C+L real-time field demo (same abstract)."
-
-  # =====================================================================
-  # 1.7  Latency / group index
-  # =====================================================================
-  - id: ch01.hcf.ng_nanf_vs_smf28
-    section: "1.7"
-    claim: "Group index at 1550 nm: NANF approximately 1, SMF-28 approximately 1.47"
-    value: [1.0, 1.47]
-    unit: "1"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      note: "first value NANF, second SMF-28 (pair, not range)"
-    source_id: antesberger_arxiv_2023
-    locator: "Sec. 'Latency measurements', Fig. 2c"
-    quote: 'At 1550 nm NANF has a group refractive index of approximately nHCF ≈ 1, while in SMF28 fiber nSMF28 ≈ 1.47'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "arXiv preprint; published venue not verified (see gaps)."
-
-  - id: ch01.hcf.latency_reduction_antesberger
-    section: "1.7"
-    claim: "Measured latency reduction of 7.7 km NANF vs 7.8 km SMF-28 (photons arrive 13.11 us earlier)"
-    value: 34
-    unit: "%"
-    kind: measured
-    conditions:
-      note: "single-photon arrival-time histogram"
-    source_id: antesberger_arxiv_2023
-    locator: "Sec. 'Latency measurements', Fig. 2a"
-    quote: 'resulting in an approximately 34 % lower latency in NANF compared to SMF28'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Slightly above 1 - 1/1.4682 = 31.9% because fiber lengths differ (7.7 vs 7.8 km). Disagreement in quoted latency figures across sources: 30%, 31%, 33%, 34%; speed-up 45%, 47%, 50%."
-
-  - id: ch01.hcf.poletti2013_speed_997pct
-    section: "1.7"
-    claim: "HC-PBGF WDM transmission at 99.7% of vacuum light speed, 1.54 us/km faster than conventional fiber"
-    value: 1.54
-    unit: "us/km"
-    kind: measured
-    conditions:
-      fiber: "hollow-core photonic bandgap fiber, 3.5 dB/km, 160 nm bandwidth"
-      note: "37 x 40 Gb/s WDM"
-    source_id: poletti_natphoton_2013
-    locator: "Abstract"
-    quote: 'transmit 37 × 40 Gbit s −1 channels at a 1.54 µs km −1 faster speed than in a conventional fibre'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only. Same abstract: 'light propagates 31% slower in a silica glass fibre than in vacuum'."
-
-  - id: ch01.hcf.poggiolini2022_speed_50pct
-    section: "1.7"
-    claim: "NANF propagation speed relative to SMF"
-    value: 50
-    unit: "%"
-    kind: fact
-    conditions:
-      note: "body text of same paper: NANFs present 30% lower latency than glass-guiding fibers"
-    source_id: poggiolini_poletti_jlt_2022
-    locator: "Abstract (accepted manuscript); Sec. II for 30% latency"
-    quote: 'Propagation speed is 50% faster, a key feature in certain contexts.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Rounded figure; 1.4682 -> 46.8% speed-up, 31.9% latency reduction."
-
-  - id: ch01.hcf.petrovich2025_speed_45pct
-    section: "1.7"
-    claim: "DNANF speed increase vs standard fiber (abstract figure)"
-    value: 45
-    unit: "%"
-    kind: fact
-    conditions:
-      note: "abstract"
-    source_id: petrovich_natphoton_2025
-    locator: "Abstract"
-    quote: 'it also increases transmission speeds by 45%'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Conclusion of the same paper states 'a 30% reduced latency'. Microsoft blog says 47% / 33%. Record each figure; book/calc should derive from group indices."
-
-  - id: ch01.hcf.petrovich2025_latency_30pct
-    section: "1.7"
-    claim: "DNANF latency reduction vs standard telecom fibre (conclusion figure)"
-    value: 30
-    unit: "%"
-    kind: fact
-    conditions:
-      note: "also six times lower chromatic dispersion"
-    source_id: petrovich_natphoton_2025
-    locator: "Conclusion paragraph"
-    quote: 'a 30% reduced latency and a six times reduction in chromatic dispersion compared with standard telecom fibres'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  # =====================================================================
-  # 1.7  Hollow-core: Chinese industry and deployment claims (tier B/C)
-  # =====================================================================
-  - id: ch01.hcf.yofc_ar2025_loss_claim_004
-    section: "1.7"
-    claim: "YOFC annual report claims world-lowest hollow-core fiber attenuation"
-    value: 0.04
-    unit: "dB/km"
-    kind: record
-    conditions:
-      note: "no wavelength, length, or method stated"
-    source_id: yofc_ar_2025
-    locator: "Section 'Management discussion' (经营情况讨论与分析), hollow-core paragraph"
-    quote: '空芯光纤技术持续提升，已实现全球最低衰减 0.04dB/公里'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: low
-    notes: "Gloss: 'hollow-core technology continues to improve, having achieved the world's lowest attenuation of 0.04 dB/km'. Company claim without peer-reviewed support found (lowest peer-reviewed abstract from YOFC: 0.05 dB/km, ECOC 2025). Contested."
-
-  - id: ch01.hcf.yofc_ar2025_draw_length
-    section: "1.7"
-    claim: "YOFC single hollow-core preform draw length"
-    value: 91.2
-    unit: "km"
-    kind: fact
-    conditions: {}
-    source_id: yofc_ar_2025
-    locator: "Same hollow-core paragraph"
-    quote: '单根空芯光纤预制棒拉丝长度达 91.2 公里'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Gloss: 'single hollow-core preform drawn to 91.2 km'. Compare Linfiber 83 km single draw (ECOC 2025)."
-
-  - id: ch01.hcf.yofc_ar2025_latency_31pct
-    section: "1.7"
-    claim: "YOFC-stated hollow-core latency reduction vs solid-core fiber (speed +47%)"
-    value: 31
-    unit: "%"
-    kind: fact
-    conditions: {}
-    source_id: yofc_ar_2025
-    locator: "Same hollow-core paragraph"
-    quote: '相较传统实芯光纤时延降低 31%、传输速度提升47%'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Gloss: 'compared with conventional solid-core fiber, latency reduced 31%, transmission speed up 47%'. Consistent with n_g 1.468 vs ~1.0."
-
-  - id: ch01.hcf.yofc_ar2025_commercial_year
-    section: "1.7"
-    claim: "YOFC asserts 2025 was the first year of hollow-core commercial deployment, incl. 100 km Guangdong-Hong Kong link and >10 projects"
-    value: "2025 declared 'first year of commercial HCF'; >10 commercial/pilot projects; 100 km Guangdong-Hong Kong"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: yofc_ar_2025
-    locator: "Same hollow-core paragraph"
-    quote: '二零二五年已成为空芯光纤商用元年'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: low
-    notes: "Gloss: '2025 has become the first year of hollow-core fiber commercialization'. Pro side of contested item (a). Company also targets >50 projects."
-
-  - id: ch01.hcf.yofc_scale_avg_cww
-    section: "1.7"
-    claim: "YOFC support-tube HCF scale-production average loss as reported by trade press"
-    value: 0.12
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      note: "minimum 0.05 dB/km in the same sentence"
-    source_id: cww_2025_11_yofc_three_operators_hcf
-    locator: "Article text, paragraph on 支撑管结构 HCF"
-    quote: '在规模制备中，最新的平均损耗为0.12dB/km，最低损耗为0.05dB/km'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'in scale production, latest average loss 0.12 dB/km, minimum 0.05 dB/km'. Differs from ECOC 2025 batch average 0.147 dB/km (different time/batch)."
-
-  - id: ch01.hcf.ctel_hk_link_latency
-    section: "1.7"
-    claim: "China Telecom Dongguan-Hong Kong commercial HCF cable: 110 km total (100 km hollow-core), round-trip latency 0.93 ms"
-    value: 0.93
-    unit: "ms"
-    kind: measured
-    conditions:
-      cable_length_km: 110
-      hollow_core_length_km: 100
-    source_id: cww_2025_11_yofc_three_operators_hcf
-    locator: "Article text, China Telecom paragraph (October 2025)"
-    quote: '实现了两地间双向时延低至0.93毫秒的业界最低时延'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'achieved bidirectional latency between the two sites as low as 0.93 ms, industry lowest'. Plausibility: 2 x 100 km x 3.34 us/km + 2 x 10 km x 4.9 us/km = 0.77 ms + equipment."
-
-  - id: ch01.hcf.cmcc2024_800g_cable_loss
-    section: "1.7"
-    claim: "China Mobile 800G HCF test network (Shenzhen-Dongguan, 20 km): installed cable loss including splices/connections"
-    value: 0.6
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      link_length_km: 20
-      note: "HCF-HCF splice 0.05 dB; HCF-SMF connection <0.3 dB; 128 Tb/s bidirectional"
-    source_id: sasac_2024_06_cmcc_800g_hcf
-    locator: "News text, first paragraph"
-    quote: '铺设后光缆损耗每公里0.6分贝等多项核心技术指标'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'post-installation cable loss 0.6 dB per km, among other key indicators'. Fiber supplied by Linfiber/Jinan Univ. (JNU news) and also claimed by YOFC (YOFC news); both reported. Latency improved >30% on the route."
-
-  - id: ch01.hcf.msft_deploy_since_2023
-    section: "1.7"
-    claim: "Microsoft states HCF has been deployed in multiple Azure regions since 2023 with production links meeting targets"
-    value: "deployed in multiple Azure regions since 2023"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: msft_azure_blog_2025_09_hcf
-    locator: "Blog text, section on Azure HCF journey"
-    quote: 'Since 2023, Microsoft has deployed HCF across multiple Azure regions, with production links meeting performance and reliability targets.'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Pro side of contested item (a). Same blog: manufacturing partnerships with Corning and Heraeus (Sept 2025); '47% faster ... approximately 33% lower latency'."
-
-  - id: ch01.hcf.msft_latency_33pct
-    section: "1.7"
-    claim: "Microsoft-stated DNANF performance vs SMF: up to 47% faster, ~33% lower latency"
-    value: 33
-    unit: "%"
-    kind: fact
-    conditions: {}
-    source_id: msft_azure_blog_2025_09_hcf
-    locator: "Blog text, second paragraph"
-    quote: 'delivers up to 47% faster data transmission and approximately 33% lower latency compared to conventional Single Mode Fiber (SMF)'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "33% is inconsistent with 47% speed-up (1 - 1/1.47 = 32%); rounding. Contrast Petrovich 2025 (30%/45%)."
-
-  - id: ch01.hcf.msft_1200km_live
-    section: "1.7"
-    claim: "Microsoft pilot HCF deployment carrying live traffic (per F. Poletti to Network World)"
-    value: 1200
-    unit: "km"
-    kind: fact
-    conditions:
-      note: "'over 1,200 km of fibre'; fibre-km vs route-km not specified"
-    source_id: networkworld_2025_09_msft_hcf
-    locator: "Article, quote attributed to Francesco Poletti"
-    quote: 'it involved over 1,200 km of fibre, now installed underground and actively carrying live traffic'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Secondary report of a researcher statement."
-
-  - id: ch01.hcf.msft_15000km_plan
-    section: "1.7"
-    claim: "Microsoft announced (Ignite 2024) plan to deploy 15,000 km of HCF across Azure"
-    value: 15000
-    unit: "km"
-    kind: fact
-    conditions:
-      note: "timeframe reported as 'coming months' (Network World) or '24 months' (other press); primary keynote transcript not read"
-    source_id: networkworld_2025_09_msft_hcf
-    locator: "Article, paragraph after Poletti quote"
-    quote: 'Microsoft CEO Satya Nadella announced at the company’s 2024 Ignite conference that 15,000 km of hollow core fiber would be deployed'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Timing disagreement between press accounts; contested item (a). Primary source (Ignite 2024 keynote) is a gap."
-
-  - id: ch01.hcf.weileping_cost_2500x
-    section: "1.7"
-    claim: "Former China Telecom S&T committee head Wei Leping: HCF unit price ~2500x G.652.D per core-km in an operator tender; doubts it becomes general network fiber"
-    value: 2500
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "152 core-km tender, ceiling 7.6 M CNY, ~50,000 CNY per core-km"
-    source_id: c114_2025_06_weileping_hcf
-    locator: "Article text, paragraphs 2-3"
-    quote: '单价接近5万元/芯公里，是实芯光纤（G.652D）的2500倍'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'unit price close to 50,000 CNY per core-km, 2,500 times solid-core fiber (G.652D)'. Also: '目前还看不到成为大网普适光纤的可能性' ('no prospect yet of becoming general-purpose network fiber'). Skeptic side of contested item (a)."
-
-  - id: ch01.hcf.bt_lord_niche
-    section: "1.7"
-    claim: "BT optics research lead A. Lord: HCF is a niche, not a wholesale replacement of existing fiber"
-    value: "niche use cases; no wholesale swap-out of SMF"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: dcd_2025_07_ofc_hcf_lord
-    locator: "Article, OFC 2025 keynote quotes"
-    quote: 'a complete wholesale swap out of existing fiber for a new hollow core fiber? I don''t think so'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Skeptic side of contested item (a)."
-
-  - id: ch01.hcf.ctel_loss_race_over
-    section: "1.7"
-    claim: "China Telecom Research Institute deputy head Fu Zhiren: the low-loss 'arms race' for HCF is basically over; CAICT chief engineer Ao Li: next 3-5 years is the key window"
-    value: "loss race 'basically over'; 3-5 year window (CAICT)"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: c114_2025_05_yofc_newfiber_forum
-    locator: "Article text, paragraphs quoting 敖立 and 傅志仁"
-    quote: '当前基本结束低损耗的“军备竞赛”'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'the low-loss arms race has now basically ended'. CAICT: '未来3-5年为技术突破重要窗口期' (the next 3-5 years are the important window for breakthroughs), citing standardization of geometry and process stability as open issues."
-
-  - id: ch01.hcf.petrovich2025_hcf1_method_spread
-    section: "1.7"
-    claim: "Short DNANF (HCF1, OFC 2024 fibre) 1550 nm loss varied with measurement method: cutbacks 0.055 and 0.065, insertion loss 0.09, OTDR 0.11 dB/km"
-    value: [0.055, 0.11]
-    unit: "dB/km"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      note: "range across four methods on the same short fibre"
-    source_id: petrovich_natphoton_2025
-    locator: "Main text, paragraph on HCF1 (citing ref. 29)"
-    quote: 'two independent cutbacks averaged a loss of 0.055 dB km −1 and 0.065 dB km −1'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Same paragraph: 'This clearly indicates that considerably longer fibres are needed for accurate measurements.' Core evidence for contested item (b): sub-0.1 dB/km values from few-km fibres carry method-dependent spread of ~2x."
-
-  # =====================================================================
-  # 1.7  Ultra-low-loss silica (contested box; cross-check with 1.1)
-  # =====================================================================
-  - id: ch01.ull.sato2025_record_1566
-    section: "1.7"
-    claim: "Record-low loss silica-core single-mode fiber (Sumitomo)"
-    value: 0.1397
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1566
-      fiber: "Ge-free silica-core, reduced fictive temperature"
-    source_id: sato_jlt_2025_ull
-    locator: "Abstract"
-    quote: 'We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm on a silica-core single-mode fiber.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only. Also presented at OFC 2024 Tu2E.1. Corning reported 0.1400 dB/km in a quasi-single-mode fiber (Khrapko et al., IEEE PTL 36(8) 2024) - title seen only in a reference list; not recorded (gap)."
-
-  - id: ch01.ull.sato2025_record_1550
-    section: "1.7"
-    claim: "Record-low silica-core SMF loss at 1550 nm (Sumitomo)"
-    value: 0.1406
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1550
-    source_id: sato_jlt_2025_ull
-    locator: "Abstract"
-    quote: 'We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "2 mdB/km below the 2017 record."
-
-  - id: ch01.ull.tamura2018_0p1419
-    section: "1.7"
-    claim: "Previous silica-core loss record (Sumitomo, 2017/2018)"
-    value: 0.1419
-    unit: "dB/km"
-    kind: record
-    conditions:
-      wavelength_nm: 1560
-      note: "0.1424 dB/km at 1550 nm; Aeff 147 um^2"
-    source_id: tamura_jlt_2018_ull
-    locator: "Abstract"
-    quote: 'We achieved the lowest-ever transmission losses of 0.1419 dB/km at 1560 nm wavelength and 0.1424 dB/km at 1550 nm'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only."
-
-  - id: ch01.ull.hengtong_g654d_0144
-    section: "1.7"
-    claim: "Hengtong claims batch G.654.D fiber attenuation of 0.144 dB/km, a Chinese record for this fiber class"
-    value: 0.144
-    unit: "dB/km"
-    kind: record
-    conditions:
-      fiber: "G.654.D (submarine-class), batch"
-      wavelength_nm: "not stated (presumably 1550)"
-    source_id: hengtong_press_2026_03_g654d
-    locator: "Company news text, paragraph 1 and 3 (MWC 2026)"
-    quote: 'G.654.D光纤衰减系数成功降至0.144dB/km，创造了中国同类产品性能的新纪录'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Gloss: 'G.654.D fiber attenuation successfully reduced to 0.144 dB/km, setting a new Chinese record for this product class'. No peer-reviewed paper found. 0.0047 dB/km above Sumitomo record."
-
-  # =====================================================================
-  # 1.7  SDM
-  # =====================================================================
-  - id: ch01.sdm.puttnam2021_classification
-    section: "1.7"
-    claim: "SDM fiber classes reviewed: uncoupled multicore, multimode/few-mode, few-mode MCF, coupled-core MCF"
-    value: "MCF, MMF/FMF, FM-MCF, coupled-core MCF"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: puttnam_optica_2021
-    locator: "Abstract"
-    quote: 'We first outline the main classifications and features of novel SDM fibers such as multicore fibers (MCFs), multimode fibers, few-mode MCFs, and coupled-core MCFs.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only; Optica is OA but full text not fetched. Record values inside the review not extracted (gap)."
-
-  - id: ch01.sdm.luis2025_19core_1p02pbps
-    section: "1.7"
-    claim: "Long-haul SDM record: 1.02 Pb/s C+L over 1808.1 km in a 19-core randomly-coupled MCF (standard 125 um cladding)"
-    value: 1.02
-    unit: "Pb/s"
-    kind: record
-    conditions:
-      distance_km: 1808.1
-      fiber: "19-core randomly coupled MCF, 125 um cladding, 86.1 km recirculating loop"
-      bands: "C+L, 180 wavelengths, 16QAM, MIMO DSP"
-    source_id: luis_ofc_2025_19core
-    locator: "Abstract (OFC 2025 Th4A.1)"
-    quote: 'We achieve record recirculating transmission of a 1.02 Pb/s, C+L band, signal over 1808.1 km of a novel 19-core, randomly-coupled multicore fiber'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Loop details from NICT press release 2025-05-29."
-
-  - id: ch01.sdm.luis2025_capacity_distance
-    section: "1.7"
-    claim: "Capacity-distance product record in any fiber transmission"
-    value: 1.86
-    unit: "Eb/s*km"
-    kind: record
-    conditions:
-      note: "1.02 Pb/s x 1808.1 km"
-    source_id: luis_ofc_2025_19core
-    locator: "Abstract"
-    quote: 'as the highest reported capacity-distance-product in any fiber transmission of 1.86 Exabit/s.km'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: ""
-
-  - id: ch01.sdm.nict2023_22p9pbps
-    section: "1.7"
-    claim: "Single-fiber capacity record: 22.9 Pb/s over 13 km of 38-core 3-mode fiber, S+C+L (18.8 THz), PDM-256QAM"
-    value: 22.9
-    unit: "Pb/s"
-    kind: record
-    conditions:
-      distance_km: 13
-      fiber: "38-core, 3-mode (Sumitomo); 114 spatial channels"
-      bandwidth_THz: 18.8
-    source_id: nict_press_2023_22p9pbps
-    locator: "Press release highlights and main text"
-    quote: 'A record-breaking transmission capacity of 22.9 petabits per second in a single optical fiber was demonstrated.'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Press release only; peer-reviewed paper (likely ECOC 2023 postdeadline) not located (gap). Up to 24.7 Pb/s with better FEC per release."
-
-  - id: ch01.sdm.gsup87_wcmcf_first_priority
-    section: "1.7"
-    claim: "ITU-T G.Sup87 prioritizes weakly-coupled MCF with standard 125 um cladding and G.65x backward compatibility as first SDM fiber for standardization"
-    value: "WC-MCF, 125 um cladding, G.65x-compatible"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: itu_t_gsup87_2025
-    locator: "Summary"
-    quote: 'The first version of this Supplement considers a weakly-coupled multicore fibre (WC-MCF) having both a standard 125 μm cladding diameter'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.sdm.gsup87_timeline
-    section: "1.7"
-    claim: "Expected time to establish the first WC-MCF Recommendation/standard"
-    value: [2, 4]
-    unit: "years"
-    kind: fact
-    conditions:
-      note: "'at least' two to four years, ITU-T/IEC SC86A harmonization"
-    source_id: itu_t_gsup87_2025
-    locator: "Clause 8.2 'Harmonization methodology'"
-    quote: 'The first recommendation and standard for the WC-MCF can be expected to take at least two to four years to be established and revised.'
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: ""
-
-  - id: ch01.sdm.itu_sg15_2025_two_mcf_recs
-    section: "1.7"
-    claim: "ITU-T SG15 (Oct 2025) agreed to establish two Recommendations for weakly coupled MCF (G.652/G.657- and G.654-compatible); also a potential technical report on hollow-core fibers"
-    value: "G.smmcf and G.csmcf work items; HCF technical report under consideration"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: itu_t_sg15_execsum_2025_10
-    locator: "Q5/15 paragraph"
-    quote: 'It was also agreed to establish two Recommendations for a weakly coupled multi-core fibre with backward compatibility to G.652/G.657 and G.654 fibres'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Same summary: 'potential technical report on hollow core fibers' (relevant to HCF standardization gap cited by Wei Leping)."
-
-  - id: ch01.sdm.gsmmcf_target_2028
-    section: "1.7"
-    claim: "Target completion year for ITU-T G.smmcf (single-mode weakly-coupled MCF and cable)"
-    value: 2028
-    unit: "year"
-    kind: fact
-    conditions:
-      note: "G.csmcf (cut-off shifted, G.654-like) also 2028"
-    source_id: itu_t_q5_15_workprog_2025
-    locator: "Q5/15 work item list, row G.smmcf"
-    quote: 'G.smmcf Q5/15 Characteristics of a single-mode weakly-coupled multi-core optical fibre and cable 2028'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "CAICT, China Telecom and Purple Mountain Labs contributed C-0472 on fiber characteristics (Sept 2025); NTT/KDDI/CLPA proposed the work (C-0021)."
-
-  - id: ch01.sdm.google_tpu_first_mcf_subsea
-    section: "1.7"
-    claim: "Google and NEC adopt 2-core MCF on the Taiwan-Philippines-U.S. (TPU) cable, described as an industry first"
-    value: "2-core MCF in TPU subsea cable (announced 2023-09)"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: google_cloud_blog_2023_mcf
-    locator: "Blog text, paragraphs 2-3"
-    quote: 'Google and NEC are collaborating to adopt it on the Taiwan-Philippines-U.S. cable'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Same blog: 'This is a first for the submarine cable industry.' In-service date not confirmed from primary source (Japanese trade press says 2025)."
-
-  - id: ch01.sdm.sumitomo_2c_ull_loss
-    section: "1.7"
-    claim: "Sumitomo 2C Z-PLUS Fiber ULL (2-core submarine MCF) typical loss at 1550 nm; crosstalk <= -43 dB"
-    value: 0.158
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      aeff_um2: 112
-      crosstalk_dB: -43
-    source_id: sumitomo_press_2023_2c_zplus
-    locator: "Press release, Table 1 'Typical characteristics'"
-    quote: 'With a transmission loss of typically 0.158 dB/km at 1550 nm, the new fiber can be considered an ultra-low loss fiber'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Product press release (datasheet not located). Crosstalk is counter-propagating, guaranteed."
-
-  - id: ch01.sdm.petal_2029
-    section: "1.7"
-    claim: "Meta/NEC/Sumitomo 'Petal' transatlantic cable: 2-core fiber, 48 core-pairs, ~7,000 km, operation scheduled 2029"
-    value: 2029
-    unit: "year"
-    kind: fact
-    conditions:
-      length_km: 7000
-      spatial_channels: "48 core-pairs"
-    source_id: sumitomo_press_2026_petal
-    locator: "Press release, paragraph 1"
-    quote: 'is scheduled to commence operation in 2029. Petal will employ two-core fiber'
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Announced capacity 'petabit-class'; future claim."
-
-  # =====================================================================
-  # 1.7  Chinese fiber industry scale (tier B)
-  # =====================================================================
-  - id: ch01.industry.yofc_global_rank
-    section: "1.7"
-    claim: "YOFC states it has held first place in global market share for preforms, fibres and cables since 2016 (eight consecutive years to 2024)"
-    value: "global #1 in preform, fibre and cable market share, 2016-2024"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "basis not stated in ESG text; YOFC annual reports cite CRU for market data"
-    source_id: yofc_esg_2024_en
-    locator: "Company profile section, 'About YOFC'"
-    quote: 'the Group has held the first place in the world in the market share of optical fibre preforms, optical fibres and optical cables'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "No percentage share found in a primary YOFC document. A broker report (Dongguan Securities, 2024) gives 11.30% global share in 2023 citing 网络电信 - tier C, not recorded as a value (gap)."
-
-  - id: ch01.industry.yofc_cmcc_2023_share
-    section: "1.7"
-    claim: "YOFC winning share in China Mobile's July 2023 ordinary-cable centralized procurement (about 108 million core-km), ranked first"
-    value: 19.46
-    unit: "%"
-    kind: measured
-    conditions:
-      procurement_volume: "约1.08亿芯公里 (about 108 M core-km)"
-    source_id: yofc_ar_2023
-    locator: "Section 'Management discussion', China market paragraph"
-    quote: '在该次集中采购中，公司中标份额为 19.46%，位列第一'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: high
-    notes: "Gloss: 'in this centralized procurement the company's winning share was 19.46%, ranked first'."
-
-  - id: ch01.industry.yofc_cmcc_g654e_airblown
-    section: "1.7"
-    claim: "YOFC and China Mobile completed the first G.654.E air-blown micro-cable trunk line (December 2024)"
-    value: "first G.654.E air-blown micro-cable trunk, Dec 2024"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: yofc_ar_2024
-    locator: "Section 'Management discussion', new-fibre paragraph"
-    quote: '在二零二四年十二月完成了全球首条 G.654.E 气吹微型光缆干线项目铺设'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Gloss: 'completed in December 2024 the world's first G.654.E air-blown micro-cable trunk project'. More relevant to ch6/ch9. Same report: G.654.E share leading in domestic operator tenders; first data-center MCF pilot carrying live traffic in China."
-
-  - id: ch01.industry.yofc_mcf_dc_pilot
-    section: "1.7"
-    claim: "YOFC completed China's first data-center multicore fiber line pilot carrying live traffic (2024)"
-    value: "first live-traffic DC MCF pilot in China, 2024"
-    unit: "1"
-    kind: fact
-    conditions: {}
-    source_id: yofc_ar_2024
-    locator: "Section 'Management discussion', SDM paragraph"
-    quote: '公司完成了全国首条加载业务的数据中心多芯光纤线路试点'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Gloss: 'the company completed the nation's first data-center multicore fiber line pilot carrying live service'."
-
-  - id: ch01.industry.cru_growth_2025_2029
-    section: "1.7"
-    claim: "CRU (as cited by YOFC) forecasts ~4% average annual growth of global fibre/cable demand 2025-2029"
-    value: 4
-    unit: "%/yr"
-    kind: fact
-    conditions:
-      note: "market research cited in annual report; AI-related demand ~26%/yr per same report"
-    source_id: yofc_ar_2024
-    locator: "Section 'Industry situation', CRU paragraph"
-    quote: '二零二五年至二零二九年间保持 4%左右的稳健年均增速'
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Gloss: 'maintain steady average annual growth of about 4% over 2025-2029'. Underlying CRU report not accessed."
+- id: ch01.const.planck_h
+  section: '1.5'
+  claim: Planck constant h (exact by SI definition since 2019)
+  value: 6.62607015e-34
+  unit: J/Hz
+  kind: constant
+  conditions:
+    note: CODATA 2022 value; identical to CODATA 2018 because h is fixed exactly by the 2019 SI
+  source_id: codata_2022_nist_h
+  locator: NIST CUU 'Value?h' page, Numerical value row
+  quote: 6.626 070 15 x 10 -34 J Hz -1
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Task requested CODATA 2018; the NIST page now serves 2022 values. h and c are exact and unchanged between 2018 and
+    2022.
+  verified: match
+- id: ch01.const.speed_of_light_c
+  section: '1.5'
+  claim: Speed of light in vacuum c (exact)
+  value: 299792458
+  unit: m/s
+  kind: constant
+  conditions:
+    note: CODATA 2022, exact
+  source_id: codata_2022_nist_c
+  locator: NIST CUU constant page for c, Numerical value row
+  quote: 299 792 458 m s -1
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Same exact value in CODATA 2018.
+  verified: match
+- id: ch01.osnr.bref_0p1nm_equals_12p5ghz
+  section: '1.5'
+  claim: OSNR reference bandwidth B_ref of 0.1 nm corresponds to 12.5 GHz at 1550 nm
+  value: 12.5
+  unit: GHz
+  kind: fact
+  conditions:
+    wavelength_nm: 1550
+    note: 0.1 nm reference bandwidth expressed in frequency
+  source_id: essiambre_tkach_procieee_2012
+  locator: Sec. IV-B 'Relations between SNR and OSNR', text after Eq. (10), p. 1040
+  quote: Bref is a reference bandwidth, commonly taken to be 0.1 nm, which corresponds to 12.5 GHz at 1550 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Exact conversion c*0.1nm/(1550nm)^2 = 12.48 GHz; book/calc can recompute from ch01.const.speed_of_light_c.
+  verified: match
+- id: ch01.osnr.bref_g697_0p1nm
+  section: '1.5'
+  claim: ITU-T G.697 reports monitored OSNR in dB referred to a 0.1 nm noise bandwidth
+  value: 0.1
+  unit: nm
+  kind: spec_typ
+  conditions:
+    standard: ITU-T G.697 (11/2009)
+    note: parameter ID 5 in the monitoring parameter encoding
+  source_id: itu_t_g697_2009
+  locator: Appendix V, Table V.3 'Parameter ID encoding', row 5 (OSNR); also Tables III.x 'OSNR ... (in 0.1 nm optical bandwidth)'
+  quote: OSNR | dB (0.1 nm) | Referred to a 0.1 nm noise | bandwidth
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Table cells shown with '|' separators as extracted. G.697 has a newer 08/2026 edition (prepublished) not read. 11/2009
+    edition superseded; same value in G.697 (11/2016) Table V.3.
+  verified: partial_fixed
+- id: ch01.osnr.bref_iec_tr61282_12
+  section: '1.5'
+  claim: IEC in-band OSNR definitions normalize ASE PSD to a reference bandwidth B_r, usually 0.1 nm
+  value: 0.1
+  unit: nm
+  kind: spec_typ
+  conditions:
+    standard: IEC TR 61282-12:2016, consistent with IEC 61280-2-9:2009 clause 3.1
+  source_id: iec_tr_61282_12_2016
+  locator: Clause 3.2, definition of OSNR_int, Eq. (1) where-list
+  quote: Br is the reference bandwidth expressed in nm (usually 0,1 nm if not otherwise stated)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Read from the iTeh public preview pages only.
+  verified: match
+- id: ch01.osnr.gsup39_bref_typical
+  section: '1.5'
+  claim: OSNR is usually expressed in a 0.1 nm resolution (reference) bandwidth
+  value: 0.1
+  unit: nm
+  kind: spec_typ
+  conditions:
+    standard: ITU-T G.Sup39 (02/2006)
+  source_id: itu_t_gsup39_2006
+  locator: Clause 9.5.1 'OSNR measurement', text before Eq. (9-22)
+  quote: OSNR is usually expressed in a resolution bandwidth of 0.1 nm and determined by Equation 9-22
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Edition cited (02/2006) is superseded by G.Sup39 (10/2025); same relation, equations renumbered by +1.
+  verified: partial_fixed
+- id: ch01.osnr.gsup39_58db_constant
+  section: '1.5'
+  claim: The constant -10 log10(h nu nu_r) equals +58 dB (in dBm-consistent units) for 0.1 nm reference bandwidth at 1550
+    nm
+  value: 58
+  unit: dB
+  kind: model_param
+  conditions:
+    wavelength_nm: 1550
+    reference_bandwidth_nm: 0.1
+    note: h expressed in mJ*s so powers are in dBm; nu_r is B_ref in Hz
+  source_id: itu_t_gsup39_2006
+  locator: Clause 9.5.2, text between Eq. (9-23) and Eq. (9-24)
+  quote: 'applying: Preceived = Pout – L and −10log(hν νr) = +58 dB at 0.1-nm resolution bandwidth and at wavelength of 1550
+    mn'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: '''mn'' is a typo for nm in the source. This is the derivation source of the ''58 dB rule''; the same text appears
+    in G.Sup39 (10/2003). Calc check: h*nu*B_ref = 6.626e-34*1.934e14*1.248e10 W = 1.60e-9 mW -> -58.0 dBm. Edition cited
+    (02/2006) is superseded by G.Sup39 (10/2025); same relation, equations renumbered by +1. Check: h*nu*B_ref = 1.60e-9 W
+    (= -58.0 dBm); earlier note saying mW was wrong.'
+  verified: partial_fixed
+- id: ch01.amp.caves_half_quantum_limit
+  section: '1.5'
+  claim: A high-gain phase-insensitive linear amplifier must add input-referred noise at least equal to the half-quantum of
+    zero-point fluctuations (origin of the 3 dB NF limit)
+  value: added noise >= half-quantum (hbar*omega/2) referred to input, high-gain limit
+  unit: '1'
+  kind: fact
+  conditions:
+    note: phase-insensitive amplifier, single-mode and multimode analyses
+  source_id: caves_prd_1982
+  locator: Abstract
+  quote: in the limit of high gain, to add noise which, referred to the input, is at least as large as the half-quantum of
+    zero-point fluctuations
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only (APS paywall). Translation into F >= 2 (3 dB) for the optical NF definition comes from Desurvire/Carney
+    records below.
+  verified: match
+- id: ch01.amp.nf_min_3db_desurvire
+  section: '1.5'
+  claim: Minimum optical amplifier noise factor in ideal conditions is 2, i.e. a 3 dB penalty
+  value: 3
+  unit: dB
+  kind: model_param
+  conditions:
+    note: ideal, high-gain phase-insensitive amplifier; F >= 2
+  source_id: desurvire_scholarpedia_optamp
+  locator: Section 'Noise figure'
+  quote: the minimal NF, in ideal conditions is “two”, representing in engineering terms, a 3 dB tax penalty.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Read via search highlight of the Scholarpedia page (Noise figure section not in the fetched portion). Tier set B:
+    curated encyclopedia, though authored by Desurvire.'
+  verified: match
+- id: ch01.amp.nf_high_gain_2nsp
+  section: '1.5'
+  claim: For G >> 1 the signal-spontaneous noise factor reduces to F = 2 n_sp
+  value: F -> 2 n_sp for G >> 1
+  unit: '1'
+  kind: fact
+  conditions:
+    note: derived from F = 2 n_sp (G-1)/G + 1/G, Eq. (13) of source
+  source_id: carney_oe_2013
+  locator: Sec. 3.2, text after Eq. (13)
+  quote: For the situation where G >> 1, this expression reduces to nf = 2nsp
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Source context is SOAs but the expression is the generic amplifier result; see ch01.eq.nf_nsp.
+  verified: match
+- id: ch01.amp.nf_quantum_limit_3db_carney
+  section: '1.5'
+  claim: With full inversion (n_sp = 1) the high-gain noise figure quantum limit is 3 dB
+  value: 3
+  unit: dB
+  kind: model_param
+  conditions:
+    n_sp: 1
+    note: G >> 1
+  source_id: carney_oe_2013
+  locator: Sec. 3.2, text after Eq. (13), citing ref. [19]
+  quote: (nsp = 1), leads to a quantum limit of the NF of 3dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.amp.nsp_unity_full_inversion
+  section: '1.5'
+  claim: Spontaneous emission factor n_sp = N2/(N2-N1) tends to 1 at full inversion (N1 -> 0)
+  value: 1
+  unit: '1'
+  kind: model_param
+  conditions:
+    note: two-level model; n_sp > 1 for incomplete inversion (three-level erbium)
+  source_id: desurvire_scholarpedia_optamp
+  locator: Section 'Amplified spontaneous emission', text after Eq. (12)
+  quote: It asymptotically converges to unity as the inversion increases
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: ''
+  verified: match
+- id: ch01.amp.nf_definition_iec
+  section: '1.5'
+  claim: Optical amplifier noise factor is defined (IEC 61291-1) as SNR_in/SNR_out of the detected photocurrent with a shot-noise-limited
+    input; NF = 10 log10 F
+  value: F = SNR_in / SNR_out; NF = 10 log10 F
+  unit: '1'
+  kind: fact
+  conditions:
+    note: SNR is electrical (photocurrent) so NF is in electrical dB; definition adopted by ITU-T
+  source_id: baney_gallion_tucker_oft_2000
+  locator: Sec. III 'Noise figure definition', Eqs. (3)-(4), p. 128
+  quote: Using the nomenclature of the IEC, IEC 61291-1 , the noise factor F is defined by
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.osnr.both_polarizations_noise
+  section: '1.5'
+  claim: OSNR counts ASE noise in both polarization states regardless of whether the signal is polarization multiplexed
+  value: noise in both polarizations, OSNR = P/(2 N_ASE B_ref)
+  unit: '1'
+  kind: fact
+  conditions:
+    note: N_ASE is ASE PSD per polarization
+  source_id: essiambre_tkach_procieee_2012
+  locator: Sec. IV-B, text after Eq. (10), p. 1040
+  quote: The OSNR also considers the noise in both polarization states independent of whether PDM of the signal is used or
+    not.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Matches notation.yaml OSNR definition ('both polarizations of noise').
+  verified: match
+- id: ch01.osnr.sackinger_58db_preamp
+  section: '1.5'
+  claim: 'Textbook form of the 58 dB rule for a single optical preamplifier at 1.55 um and 0.1 nm: OSNR[dB] ~ 58 + P_in[dBm]
+    - F[dB]'
+  value: 58
+  unit: dB
+  kind: model_param
+  conditions:
+    wavelength_nm: 1550
+    reference_bandwidth_nm: 0.1
+  source_id: sackinger_tia_book_2017
+  locator: Appendix 'Answers to the Problems', Eq. (I.21)
+  quote: OSNR req [dB] ≈ 58 dB + P sens,OA [dBm] -F [dB]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: low
+  notes: Read from a search highlight of the book appendix; agrees with G.Sup39 Eq. (9-24). Verifier could not open; use G.Sup39
+    (10/2025) Eq. (9-25) instead.
+  verified: unreachable
+- id: ch01.amp.cband_range_itu
+  section: '1.5'
+  claim: ITU-T C-band (Conventional) wavelength range, named after the original EDFA gain band
+  value:
+  - 1530
+  - 1565
+  unit: nm
+  kind: fact
+  conditions:
+    standard: ITU-T G.Sup39 (10/2025) Table 5-1
+    note: bands are for discussion, not specification (Table 5-1 note 1)
+  source_id: itu_t_gsup39_2025_10
+  locator: Clause 5.2 and Table 5-1 'Single-mode spectral bands'
+  quote: “Conventional” C-band, 1530 nm to 1565 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same text: EDFAs ''had useful gain bands beginning at about 1530 nm and ending at about 1565 nm''.'
+  verified: match
+- id: ch01.amp.lband_range_itu
+  section: '1.5'
+  claim: ITU-T L-band (Long wavelength) range
+  value:
+  - 1565
+  - 1625
+  unit: nm
+  kind: fact
+  conditions:
+    standard: ITU-T G.Sup39 (10/2025) Table 5-1
+  source_id: itu_t_gsup39_2025_10
+  locator: Clause 5.2 and Table 5-1
+  quote: “Long wavelength” L-band, 1565 nm to 1625 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.amp.accelink_mw_nf_max
+  section: '1.5'
+  claim: Accelink EDFA-MW/MC multichannel gain module noise figure (booster, line and pre-amp variants)
+  value: 5
+  unit: dB
+  kind: spec_max
+  conditions:
+    band: C
+    wavelength_nm:
+    - 1528
+    - 1562
+    output_power_dBm: 20 (BA, LA), 13 (PA)
+    gain_dB: 25
+  source_id: accelink_edfa_mw_mc_ds
+  locator: Specifications table, row 'Noise Figure', BA/LA/PA columns
+  quote: BA Typ. Max. 1562 20 25 0.6 1.5 5
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Table text extraction scrambles columns; 5 dB appears in the Max position for all three variants. Verify against
+    PDF layout before using as max vs typical.
+  verified: match
+- id: ch01.amp.accelink_mw_wavelength
+  section: '1.5'
+  claim: Accelink EDFA-MW/MC operating wavelength (standard 40-channel option)
+  value:
+  - 1528
+  - 1562
+  unit: nm
+  kind: spec_typ
+  conditions:
+    band: C
+  source_id: accelink_edfa_mw_mc_ds
+  locator: Ordering Information, Operating Wavelength code 40
+  quote: Operating Wavelength：40:1528~1562nm、customer specify
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.amp.accelink_vga_nf
+  section: '1.5'
+  claim: Accelink EDFA-VGA card (two-stage, mid-stage DCM) noise figure versus set gain
+  value: 6
+  unit: dB
+  kind: spec_max
+  conditions:
+    gain_dB: 28
+    wavelength_nm:
+    - 1529
+    - 1564
+    note: <=6.5 dB at 25 dB gain; <=7 dB at 22 dB gain
+  source_id: accelink_edfa_vga_card_ds
+  locator: Product Specification table, row 'Noise figure'
+  quote: Noise figure | ≤6dB@gain=28dB ≤6.5dB@gain=25dB ≤7dB@gain=22dB
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Illustrates NF degradation at reduced gain in variable-gain EDFAs.
+  verified: match
+- id: ch01.amp.accelink_lband_wavelength
+  section: '1.5'
+  claim: Accelink L-band EDFA operating wavelength
+  value:
+  - 1569
+  - 1604
+  unit: nm
+  kind: spec_typ
+  conditions:
+    band: L
+  source_id: accelink_edfa_lband_ds
+  locator: Specifications table, row 'Operation wavelength', BA/LA/PA
+  quote: Min. 1569 | BA Typ. 17 23 0.6 | Max. 1604 1.5
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Narrower than the ITU L-band (1565-1625 nm). Table extraction scrambled; NF value (5.5 dB typ?) could not be assigned
+    to a column reliably, so not recorded.
+  verified: match
+- id: ch01.amp.coherent_pols_tx_nf
+  section: '1.5'
+  claim: Coherent QSFP pluggable optical line system, Tx booster EDFA noise figure
+  value: 6.7
+  unit: dB
+  kind: spec_max
+  conditions:
+    gain_dB: 17
+    wavelength_nm:
+    - 1528.77
+    - 1567.13
+    note: 32 ch 800G ZR at 150 GHz; Max column
+  source_id: coherent_pols_60p040001_ds
+  locator: Section 4.2 'TX (BA) Optical Amplifier Absolute Parameter', row 'Noise Figure'
+  quote: Noise Figure | | 6.7 | dB | @Gain 17dB
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Column placement (typ vs max) ambiguous in extraction; interpreted as max. Pluggable, low-gain amplifier, not a long-haul
+    ILA.
+  verified: match
+- id: ch01.amp.coherent_pols_rx_nf
+  section: '1.5'
+  claim: Coherent QSFP pluggable optical line system, Rx pre-amp EDFA noise figure
+  value: 6.5
+  unit: dB
+  kind: spec_max
+  conditions:
+    gain_dB: 18
+    wavelength_nm:
+    - 1528.48
+    - 1567.34
+  source_id: coherent_pols_60p040001_ds
+  locator: Rx Amplifier table, row 'Noise Figure'
+  quote: Noise Figure | | 6.5 | dB | @Gain 18
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Same column ambiguity as Tx record.
+  verified: match
+- id: ch01.amp.viavi_lownoise_nf
+  section: '1.5'
+  claim: VIAVI mEDFA-C1 low-noise single-channel EDFA noise figure at small input
+  value: 3.7
+  unit: dB
+  kind: spec_max
+  conditions:
+    wavelength_nm: 1550
+    input_power_dBm: -30
+    gain_dB: '>= 37'
+    note: test-and-measurement preamp, not a WDM line amplifier
+  source_id: viavi_medfa_c1_ds
+  locator: Single Channel Input Optical Specifications table, mEDFA-C11CA column, Noise Figure at Pin = -30 dBm; also overview
+    text
+  quote: including a low noise version with <3.7dB noise figure
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Shows practical EDFA NF within ~0.7 dB of the 3 dB limit at high gain/low input. DWDM booster variant: <=5.2-5.5
+    dB.'
+  verified: match
+- id: ch01.amp.viavi_cband_wavelength
+  section: '1.5'
+  claim: VIAVI mEDFA-C1 C-band operating wavelength range
+  value:
+  - 1528
+  - 1569
+  unit: nm
+  kind: spec_typ
+  conditions:
+    band: C (extended)
+    note: L-band variant 1565-1610 nm
+  source_id: viavi_medfa_c1_ds
+  locator: Single Channel Input Optical Specifications table, row 'Operating Wavelength Range'
+  quote: Operating Wavelength Range | | | 1528 nm – 1569 nm | 1565 nm – 1610 nm
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Vendor C-band ranges (1528-1562/1564/1569) exceed ITU 1530-1565 discussion band.
+  verified: match
+- id: ch01.hcf.poletti2014_nanf_proposal
+  section: '1.7'
+  claim: 'NANF proposal: simulations show total loss (leakage, surface scattering, bend) can in principle fall below conventional
+    solid fibers'
+  value: predicted total loss < solid-core fiber loss (simulation)
+  unit: '1'
+  kind: fact
+  conditions:
+    note: nested, non-touching antiresonant tubes; also effectively single-mode via resonant HOM out-coupling
+  source_id: poletti_oe_2014
+  locator: Abstract
+  quote: including leakage, surface scattering and bend contributions - that is lower than that of conventional solid fibers
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; numeric predicted loss values are in the full text (not read).
+  verified: match
+- id: ch01.hcf.jasion2020_nanf_028
+  section: '1.7'
+  claim: Record NANF loss (2020)
+  value: 0.28
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm:
+    - 1510
+    - 1600
+    fiber: NANF, 1.7 km, 500 m cutback
+    uncertainty_dB_per_km: 0.04
+  source_id: jasion_ofc_2020
+  locator: Abstract; Sec. 2 and Fig. 3(c)
+  quote: record-low 0.28dB/km loss from 1510 to 1600nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Internal inconsistency: abstract says 1.7 km fiber, conclusion says ''length of 2.8 km (measured: 1.2km)''. A short
+    (24 m) cutback on the same fiber gave 0.60 dB/km, showing HOM bias in short cutbacks.'
+  verified: match
+- id: ch01.hcf.jasion2022_dnanf_cband
+  section: '1.7'
+  claim: First DNANF; C-band loss comparable to commercial solid-core fiber
+  value: 0.174
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm:
+    - 1500
+    - 1560
+    fiber: DNANF, 5 sets of 3 nested tubes, core 28 um, 3.37 km, cutback to 273 m
+    uncertainty_dB_per_km: 0.031
+  source_id: jasion_ofc_2022
+  locator: Sec. 2, Fig. 2b-c
+  quote: In the S/C band the loss is 0.174 ± 0.031 dB/km from 1500 to 1560 nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Independent 1550 nm laser insertion-loss measurement gave 0.147 +/- 0.024 dB/km (ch01.hcf.jasion2022_dnanf_il1550).
+  verified: match
+- id: ch01.hcf.jasion2022_dnanf_il1550
+  section: '1.7'
+  claim: DNANF (2022) 1550 nm insertion-loss measurement with laser diode
+  value: 0.147
+  unit: dB/km
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    uncertainty_dB_per_km: 0.024
+  source_id: jasion_ofc_2022
+  locator: Sec. 2, Fig. 2c (black square)
+  quote: The measured loss of 0.147 ± 0.024 dB/km overlaps with the uncertainty of the white light measurement
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Two methods on the same fiber differ by 0.027 dB/km (within stated uncertainty); relevant to reproducibility box.
+  verified: match
+- id: ch01.hcf.jasion2022_dnanf_oband
+  section: '1.7'
+  claim: DNANF O-band loss (2022), lowest then measured in any fiber in the O-band
+  value: 0.22
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm:
+    - 1300
+    - 1340
+  source_id: jasion_ofc_2022
+  locator: Sec. 2 and Sec. 3
+  quote: In the O band it presents the lowest loss ever measured in an optical fiber, 0.22 dB/km from 1300 to 1340 nm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Paper compares with 0.35 dB/km Ge-doped SMF and 0.27 dB/km PSCF in O-band.
+  verified: match
+- id: ch01.hcf.chen2024_dnanf_008
+  section: '1.7'
+  claim: DNANF loss at 1550 nm averaged over three independent measurements (OFC 2024 postdeadline)
+  value: 0.08
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+    uncertainty_dB_per_km: 0.03
+    note: title claims <0.11 dB/km
+  source_id: chen_ofc_2024_dnanf
+  locator: Abstract
+  quote: Three independent loss measurements average 0.08±0.03 dB/km at 1550 nm, the lowest attenuation ever achieved in an
+    optical fiber.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Abstract only. Petrovich 2025 (ref. 29 there) describes this short HCF1 as giving 0.055-0.11 dB/km depending on
+    method. Verifier: abstract-only conference claim, tier C; contested box only. Petrovich et al. Nat. Photon. 2025 reports
+    this fibre at 0.055/0.065 (cutback), 0.09 (IL), 0.11 (OTDR) dB/km.'
+  verified: partial_fixed
+- id: ch01.hcf.petrovich2025_loss_1550
+  section: '1.7'
+  claim: DNANF (HCF2) measured attenuation at 1550 nm, lowest loss reported in a peer-reviewed journal for any optical waveguide
+    at time of publication
+  value: 0.091
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+    fiber: DNANF HCF2, 15 km, core 29.1-29.6 um, membranes ~500 nm
+    method: mean of four cutbacks (two methods), 95% CL band; OTDR agrees
+  source_id: petrovich_natphoton_2025
+  locator: Abstract; main text on HCF2 and Fig. 2c-d
+  quote: a measured loss of 0.091 dB km −1 at 1,550 nm that remains below 0.2 dB km −1 over a window of 66 THz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Title: ''Broadband optical fibre with an attenuation lower than 0.1 decibel per kilometre'', Nat. Photon. 19, 1203-1208
+    (2025). Later lower values exist only in conference abstracts/company reports (see contested records).'
+  verified: match
+- id: ch01.hcf.petrovich2025_otdr_1550
+  section: '1.7'
+  claim: DNANF HCF2 OTDR loss slope at 1550 nm (cross-check of cutback)
+  value: 0.095
+  unit: dB/km
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    note: 1310 nm OTDR slope 0.123 dB/km
+  source_id: petrovich_natphoton_2025
+  locator: Main text, Fig. 2b
+  quote: indicating a uniform loss with a slope of 0.123 dB km −1 and 0.095 dB km −1, respectively
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.hcf.petrovich2025_loss_1310
+  section: '1.7'
+  claim: DNANF HCF2 cutback loss at 1310 nm
+  value: 0.128
+  unit: dB/km
+  kind: measured
+  conditions:
+    wavelength_nm: 1310
+  source_id: petrovich_natphoton_2025
+  locator: Main text, Fig. 2d
+  quote: the average loss is 0.128 dB km −1 and 0.091 dB km −1 at 1,310 nm and 1,550 nm, respectively
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Below the 0.14 dB/km solid-core record in the O-band between 1292 and 1347 nm per the same paper.
+  verified: match
+- id: ch01.hcf.petrovich2025_bw_below_0p1
+  section: '1.7'
+  claim: Bandwidth over which DNANF HCF2 loss is below 0.1 dB/km
+  value: 18
+  unit: THz
+  kind: record
+  conditions:
+    wavelength_nm:
+    - 1481
+    - 1625
+  source_id: petrovich_natphoton_2025
+  locator: Conclusion paragraph
+  quote: <0.1 dB km −1 from 1,481 nm to 1,625 nm (18 THz)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.hcf.petrovich2025_bw_below_0p2
+  section: '1.7'
+  claim: Bandwidth over which DNANF HCF2 loss is below 0.2 dB/km, neglecting non-fundamental gas absorption
+  value: 66
+  unit: THz
+  kind: record
+  conditions:
+    wavelength_nm:
+    - 1250
+    - 1730
+    note: gas absorption lines (H2O, CO2) omitted; compared with ~25-26 THz for current telecom fibers
+  source_id: petrovich_natphoton_2025
+  locator: Conclusion paragraph; Abstract
+  quote: the fibre guides light with <0.2 dB km −1 from 1,250 nm to 1,730 nm (66 THz)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Abstract compares with 26 THz below 0.2 dB/km for silica; conclusion says 25 THz. Minor internal inconsistency.
+  verified: match
+- id: ch01.hcf.petrovich2025_silica_state_of_art
+  section: '1.7'
+  claim: 'State-of-the-art silica fiber benchmarks used by Petrovich et al.: 0.14 dB/km minimum loss and 26 THz below 0.2
+    dB/km'
+  value: 0.14
+  unit: dB/km
+  kind: fact
+  conditions:
+    note: 26 THz bandwidth below 0.2 dB/km
+  source_id: petrovich_natphoton_2025
+  locator: Abstract
+  quote: state-of-the-art fibres offering values of 0.14 dB km −1 and 26 THz below 0.2 dB km −1, respectively
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Cross-check with section 1.1 teammate (Sato 2025: 0.1397 dB/km).'
+  verified: match
+- id: ch01.hcf.gao2024_4tdnanf_loss
+  section: '1.7'
+  claim: Four-fold truncated DNANF (Jinan Univ./Linfiber) C-band loss from three methods
+  value: 0.1
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+    uncertainty_dB_per_km: 0.02
+    fiber: '4T-DNANF fiber #1, 4.2 km, 32 cm drum'
+    note: cutback 0.09+/-0.01; laser 0.1+/-0.01; OTDR 0.108 dB/km
+  source_id: gao_arxiv_2024_4tdnanf
+  locator: Sec. 3, Fig. 2(f)-(h)
+  quote: 'Based on these three sets of measurements, we conclude that fiber #1 achieved a loss of 0.1 ± 0.02 dB/km in the
+    C band.'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Petrovich 2025 refers to a team reporting 0.1-0.13 dB/km in a four-tube DNANF of 2.3-4.2 km; this is very likely
+    that work (their ref. 32, not verified). Authors note >10 km lengths are needed for accurate loss. Verifier: unrefereed
+    arXiv preprint, tier B.'
+  verified: partial_fixed
+- id: ch01.hcf.gao2025_ecoc_40km_0052
+  section: '1.7'
+  claim: 'Interstitial-tube-assisted DNANF (Linfiber/Jinan): loss in a 40 km span'
+  value: 0.052
+  unit: dB/km
+  kind: record
+  conditions:
+    fiber: interstitial-tube-assisted DNANF, 40 km
+    wavelength_nm: not stated in abstract
+  source_id: gao_ecoc_2025_itt_dnanf
+  locator: Abstract
+  quote: a record low loss of 0.052 dB/km in a 40-km span
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Abstract only (rendered with LaTeX in index). Conference abstract claims lower loss than the Nature Photonics record;
+    no journal-length verification found. Verifier: abstract-only conference claim, tier C; contested box only.'
+  verified: partial_fixed
+- id: ch01.hcf.gao2025_ecoc_83km_0076
+  section: '1.7'
+  claim: Interstitial-tube-assisted DNANF single-draw length and loss
+  value: 0.076
+  unit: dB/km
+  kind: record
+  conditions:
+    fiber_length_km: 83
+  source_id: gao_ecoc_2025_itt_dnanf
+  locator: Abstract
+  quote: We demonstrate a record single-draw span length of 83 km with loss of 0.076 dB/km
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Abstract only. Verifier: abstract-only conference claim, tier C; contested box only.'
+  verified: partial_fixed
+- id: ch01.hcf.jnu2024_sub0p1_press
+  section: '1.7'
+  claim: China Mobile Research Institute, Linfiber and Jinan Univ. report sub-0.1 dB/km 4-unit truncated double-nested AR-HCF
+    and 26,000x HOM suppression
+  value: 0.1
+  unit: dB/km
+  kind: record
+  conditions:
+    note: upper bound ('低于0.1dB/km'); presented at OPTICA Advanced Photonics Congress 2024
+  source_id: jnu_press_2024_sub0p1_hcf
+  locator: News text, first paragraph
+  quote: 实现了低于 0.1dB/km的超低传输损耗和 2.6万倍的高阶模式抑制比纪录
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''achieved ultra-low transmission loss below 0.1 dB/km and a record 26,000x higher-order-mode suppression
+    ratio''. arXiv 2409.13332 gives HOMER 50,000 for a different fiber; numbers differ by fiber.'
+  verified: match
+- id: ch01.hcf.ding2025_yofc_sthcf_005
+  section: '1.7'
+  claim: YOFC support-tube hollow-core fiber (ST-HCF) attenuation at 1550 nm
+  value: 0.05
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+    fiber_length_km: 9.1
+    uncertainty_dB_per_km: 0.01
+  source_id: ding_ecoc_2025_yofc_sthcf
+  locator: Abstract
+  quote: The 9.1 km ST-HCF achieved 0.05 ± 0.01 dB/km attenuation at 1550 nm.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Abstract only (LaTeX normalized). YOFC presented the same 0.05 dB/km at OFC 2025 (company news); fiber >20 km per
+    that news. Single-sample value, see batch average. Verifier: abstract-only conference claim, tier C; contested box only.'
+  verified: partial_fixed
+- id: ch01.hcf.ding2025_yofc_batch_avg
+  section: '1.7'
+  claim: YOFC ST-HCF batch-average attenuation over 733.3 km of production fiber
+  value: 0.147
+  unit: dB/km
+  kind: measured
+  conditions:
+    total_length_km: 733.3
+  source_id: ding_ecoc_2025_yofc_sthcf
+  locator: Abstract
+  quote: Batch tests on 733.3 km ST-HCF yielded an average attenuation of 0.147 dB/km.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Hero sample (0.05) vs batch mean (0.147) differ by ~3x; key data point for the ''record vs reproducible'' contested
+    box. Disagrees with CWW-reported 0.12 dB/km scale-production average (ch01.hcf.yofc_scale_avg_cww). Verifier: abstract-only
+    conference claim, tier C; contested box only.'
+  verified: partial_fixed
+- id: ch01.hcf.ge2026_field_min_span
+  section: '1.7'
+  claim: Lowest post-deployment span loss of field-installed AR-HCF cable (China Mobile network)
+  value: 0.065
+  unit: dB/km
+  kind: record
+  conditions:
+    note: four structurally distinct AR-HCF cables, 10-42.7 km, deployed fiber cable
+  source_id: ge_jlt_2026_arhcf_field
+  locator: Abstract
+  quote: with the lowest recorded span loss reaching 0.065 dB/km, scoring the world’s first fiber cable deployment to break
+    the 0.1 dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Abstract only. Authors: China Mobile Research Institute, Linfiber/Jinan Univ., YOFC, Peking Univ. Cabled, deployed
+    value: strongest evidence against ''lab-only'' criticism.'
+  verified: match
+- id: ch01.hcf.ge2026_field_avg_link
+  section: '1.7'
+  claim: Average deployed AR-HCF link loss improvement across successive field deployments
+  value:
+  - 0.599
+  - 0.113
+  unit: dB/km
+  kind: measured
+  conditions:
+    note: from earliest to latest deployment (range = before/after improvement, not min/max)
+  source_id: ge_jlt_2026_arhcf_field
+  locator: Abstract
+  quote: an average link loss reduction from 0.599 dB/km to 0.113 dB/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Also: 114.9 Tb/s over 137.36 km S+C+L real-time field demo (same abstract).'
+  verified: match
+- id: ch01.hcf.ng_nanf_vs_smf28
+  section: '1.7'
+  claim: 'Group index at 1550 nm: NANF approximately 1, SMF-28 approximately 1.47'
+  value:
+  - 1.0
+  - 1.47
+  unit: '1'
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    note: first value NANF, second SMF-28 (pair, not range)
+  source_id: antesberger_arxiv_2023
+  locator: Sec. 'Latency measurements', Fig. 2c
+  quote: At 1550 nm NANF has a group refractive index of approximately nHCF ≈ 1, while in SMF28 fiber nSMF28 ≈ 1.47
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'arXiv preprint; published venue not verified (see gaps). Verifier: unrefereed arXiv preprint, tier B. Peer-reviewed
+    companion: Trenti et al., IEEE JSTQE 2024, doi:10.1109/JSTQE.2024.3392416 (~13 us latency reduction over the same 7.72
+    km NANF).'
+  verified: partial_fixed
+- id: ch01.hcf.latency_reduction_antesberger
+  section: '1.7'
+  claim: Measured latency reduction of 7.7 km NANF vs 7.8 km SMF-28 (photons arrive 13.11 us earlier)
+  value: 34
+  unit: '%'
+  kind: measured
+  conditions:
+    note: single-photon arrival-time histogram
+  source_id: antesberger_arxiv_2023
+  locator: Sec. 'Latency measurements', Fig. 2a
+  quote: resulting in an approximately 34 % lower latency in NANF compared to SMF28
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Slightly above 1 - 1/1.4682 = 31.9% because fiber lengths differ (7.7 vs 7.8 km). Disagreement in quoted latency
+    figures across sources: 30%, 31%, 33%, 34%; speed-up 45%, 47%, 50%. Verifier: unrefereed arXiv preprint, tier B.'
+  verified: partial_fixed
+- id: ch01.hcf.poletti2013_speed_997pct
+  section: '1.7'
+  claim: HC-PBGF WDM transmission at 99.7% of vacuum light speed, 1.54 us/km faster than conventional fiber
+  value: 1.54
+  unit: us/km
+  kind: measured
+  conditions:
+    fiber: hollow-core photonic bandgap fiber, 3.5 dB/km, 160 nm bandwidth
+    note: 37 x 40 Gb/s WDM
+  source_id: poletti_natphoton_2013
+  locator: Abstract
+  quote: transmit 37 × 40 Gbit s −1 channels at a 1.54 µs km −1 faster speed than in a conventional fibre
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 'Abstract only. Same abstract: ''light propagates 31% slower in a silica glass fibre than in vacuum''.'
+  verified: match
+- id: ch01.hcf.poggiolini2022_speed_50pct
+  section: '1.7'
+  claim: NANF propagation speed relative to SMF
+  value: 50
+  unit: '%'
+  kind: fact
+  conditions:
+    note: 'body text of same paper: NANFs present 30% lower latency than glass-guiding fibers'
+  source_id: poggiolini_poletti_jlt_2022
+  locator: Abstract (accepted manuscript); Sec. II for 30% latency
+  quote: Propagation speed is 50% faster, a key feature in certain contexts.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Rounded figure; 1.4682 -> 46.8% speed-up, 31.9% latency reduction.
+  verified: match
+- id: ch01.hcf.petrovich2025_speed_45pct
+  section: '1.7'
+  claim: DNANF speed increase vs standard fiber (abstract figure)
+  value: 45
+  unit: '%'
+  kind: fact
+  conditions:
+    note: abstract
+  source_id: petrovich_natphoton_2025
+  locator: Abstract
+  quote: it also increases transmission speeds by 45%
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Conclusion of the same paper states 'a 30% reduced latency'. Microsoft blog says 47% / 33%. Record each figure; book/calc
+    should derive from group indices.
+  verified: match
+- id: ch01.hcf.petrovich2025_latency_30pct
+  section: '1.7'
+  claim: DNANF latency reduction vs standard telecom fibre (conclusion figure)
+  value: 30
+  unit: '%'
+  kind: fact
+  conditions:
+    note: also six times lower chromatic dispersion
+  source_id: petrovich_natphoton_2025
+  locator: Conclusion paragraph
+  quote: a 30% reduced latency and a six times reduction in chromatic dispersion compared with standard telecom fibres
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.hcf.yofc_ar2025_loss_claim_004
+  section: '1.7'
+  claim: YOFC annual report claims world-lowest hollow-core fiber attenuation
+  value: 0.04
+  unit: dB/km
+  kind: record
+  conditions:
+    note: no wavelength, length, or method stated
+  source_id: yofc_ar_2025
+  locator: Section 'Management discussion' (经营情况讨论与分析), hollow-core paragraph
+  quote: 空芯光纤技术持续提升，已实现全球最低衰减 0.04dB/公里
+  retrieved: 2026-11-02
+  tier: B
+  confidence: low
+  notes: 'Gloss: ''hollow-core technology continues to improve, having achieved the world''s lowest attenuation of 0.04 dB/km''.
+    Company claim without peer-reviewed support found (lowest peer-reviewed abstract from YOFC: 0.05 dB/km, ECOC 2025). Contested.'
+  verified: match
+- id: ch01.hcf.yofc_ar2025_draw_length
+  section: '1.7'
+  claim: YOFC single hollow-core preform draw length
+  value: 91.2
+  unit: km
+  kind: fact
+  conditions: {}
+  source_id: yofc_ar_2025
+  locator: Same hollow-core paragraph
+  quote: 单根空芯光纤预制棒拉丝长度达 91.2 公里
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Gloss: ''single hollow-core preform drawn to 91.2 km''. Compare Linfiber 83 km single draw (ECOC 2025).'
+  verified: match
+- id: ch01.hcf.yofc_ar2025_latency_31pct
+  section: '1.7'
+  claim: YOFC-stated hollow-core latency reduction vs solid-core fiber (speed +47%)
+  value: 31
+  unit: '%'
+  kind: fact
+  conditions: {}
+  source_id: yofc_ar_2025
+  locator: Same hollow-core paragraph
+  quote: 相较传统实芯光纤时延降低 31%、传输速度提升47%
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Gloss: ''compared with conventional solid-core fiber, latency reduced 31%, transmission speed up 47%''. Consistent
+    with n_g 1.468 vs ~1.0.'
+  verified: match
+- id: ch01.hcf.yofc_ar2025_commercial_year
+  section: '1.7'
+  claim: YOFC asserts 2025 was the first year of hollow-core commercial deployment, incl. 100 km Guangdong-Hong Kong link
+    and >10 projects
+  value: 2025 declared 'first year of commercial HCF'; >10 commercial/pilot projects; 100 km Guangdong-Hong Kong
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: yofc_ar_2025
+  locator: Same hollow-core paragraph
+  quote: 二零二五年已成为空芯光纤商用元年
+  retrieved: 2026-11-02
+  tier: B
+  confidence: low
+  notes: 'Gloss: ''2025 has become the first year of hollow-core fiber commercialization''. Pro side of contested item (a).
+    Company also targets >50 projects.'
+  verified: match
+- id: ch01.hcf.yofc_scale_avg_cww
+  section: '1.7'
+  claim: YOFC support-tube HCF scale-production average loss as reported by trade press
+  value: 0.12
+  unit: dB/km
+  kind: measured
+  conditions:
+    note: minimum 0.05 dB/km in the same sentence
+  source_id: cww_2025_11_yofc_three_operators_hcf
+  locator: Article text, paragraph on 支撑管结构 HCF
+  quote: 在规模制备中，最新的平均损耗为0.12dB/km，最低损耗为0.05dB/km
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''in scale production, latest average loss 0.12 dB/km, minimum 0.05 dB/km''. Differs from ECOC 2025 batch
+    average 0.147 dB/km (different time/batch).'
+  verified: match
+- id: ch01.hcf.ctel_hk_link_latency
+  section: '1.7'
+  claim: 'China Telecom Dongguan-Hong Kong commercial HCF cable: 110 km total (100 km hollow-core), round-trip latency 0.93
+    ms'
+  value: 0.93
+  unit: ms
+  kind: measured
+  conditions:
+    cable_length_km: 110
+    hollow_core_length_km: 100
+  source_id: cww_2025_11_yofc_three_operators_hcf
+  locator: Article text, China Telecom paragraph (October 2025)
+  quote: 实现了两地间双向时延低至0.93毫秒的业界最低时延
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''achieved bidirectional latency between the two sites as low as 0.93 ms, industry lowest''. Plausibility:
+    2 x 100 km x 3.34 us/km + 2 x 10 km x 4.9 us/km = 0.77 ms + equipment.'
+  verified: match
+- id: ch01.hcf.cmcc2024_800g_cable_loss
+  section: '1.7'
+  claim: 'China Mobile 800G HCF test network (Shenzhen-Dongguan, 20 km): installed cable loss (post-installation cable loss
+    per km; splice (0.05 dB) and connection (<0.3 dB) losses reported separately)'
+  value: 0.6
+  unit: dB/km
+  kind: measured
+  conditions:
+    link_length_km: 20
+    note: HCF-HCF splice 0.05 dB; HCF-SMF connection <0.3 dB; 128 Tb/s bidirectional
+  source_id: sasac_2024_06_cmcc_800g_hcf
+  locator: News text, first paragraph
+  quote: 铺设后光缆损耗每公里0.6分贝等多项核心技术指标
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''post-installation cable loss 0.6 dB per km, among other key indicators''. Fiber supplied by Linfiber/Jinan
+    Univ. (JNU news) and also claimed by YOFC (YOFC news); both reported. Latency improved >30% on the route. Verifier MISMATCH
+    fixed: cable loss excludes splice/connection loss.'
+  verified: mismatch_fixed
+- id: ch01.hcf.msft_deploy_since_2023
+  section: '1.7'
+  claim: Microsoft states HCF has been deployed in multiple Azure regions since 2023 with production links meeting targets
+  value: deployed in multiple Azure regions since 2023
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: msft_azure_blog_2025_09_hcf
+  locator: Blog text, section on Azure HCF journey
+  quote: Since 2023, Microsoft has deployed HCF across multiple Azure regions, with production links meeting performance and
+    reliability targets.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Pro side of contested item (a). Same blog: manufacturing partnerships with Corning and Heraeus (Sept 2025); ''47%
+    faster ... approximately 33% lower latency''.'
+  verified: match
+- id: ch01.hcf.msft_latency_33pct
+  section: '1.7'
+  claim: 'Microsoft-stated DNANF performance vs SMF: up to 47% faster, ~33% lower latency'
+  value: 33
+  unit: '%'
+  kind: fact
+  conditions: {}
+  source_id: msft_azure_blog_2025_09_hcf
+  locator: Blog text, second paragraph
+  quote: delivers up to 47% faster data transmission and approximately 33% lower latency compared to conventional Single Mode
+    Fiber (SMF)
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 33% is inconsistent with 47% speed-up (1 - 1/1.47 = 32%); rounding. Contrast Petrovich 2025 (30%/45%).
+  verified: match
+- id: ch01.hcf.msft_1200km_live
+  section: '1.7'
+  claim: Microsoft pilot HCF deployment carrying live traffic (per F. Poletti to Network World)
+  value: 1200
+  unit: km
+  kind: fact
+  conditions:
+    note: '''over 1,200 km of fibre''; fibre-km vs route-km not specified'
+  source_id: networkworld_2025_09_msft_hcf
+  locator: Article, quote attributed to Francesco Poletti
+  quote: it involved over 1,200 km of fibre, now installed underground and actively carrying live traffic
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Secondary report of a researcher statement.
+  verified: match
+- id: ch01.hcf.msft_15000km_plan
+  section: '1.7'
+  claim: Microsoft announced (Ignite 2024) plan to deploy 15,000 km of HCF across Azure
+  value: 15000
+  unit: km
+  kind: fact
+  conditions:
+    note: timeframe reported as 'coming months' (Network World) or '24 months' (other press); primary keynote transcript not
+      read
+  source_id: networkworld_2025_09_msft_hcf
+  locator: Article, paragraph after Poletti quote
+  quote: Microsoft CEO Satya Nadella announced at the company’s 2024 Ignite conference that 15,000 km of hollow core fiber
+    would be deployed
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Timing disagreement between press accounts; contested item (a). Primary source (Ignite 2024 keynote) is a gap.
+  verified: match
+- id: ch01.hcf.weileping_cost_2500x
+  section: '1.7'
+  claim: 'Former China Telecom S&T committee head Wei Leping: HCF unit price ~2500x G.652.D per core-km in an operator tender;
+    doubts it becomes general network fiber'
+  value: 2500
+  unit: '1'
+  kind: fact
+  conditions:
+    note: 152 core-km tender, ceiling 7.6 M CNY, ~50,000 CNY per core-km
+  source_id: c114_2025_06_weileping_hcf
+  locator: Article text, paragraphs 2-3
+  quote: 单价接近5万元/芯公里，是实芯光纤（G.652D）的2500倍
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''unit price close to 50,000 CNY per core-km, 2,500 times solid-core fiber (G.652D)''. Also: ''目前还看不到成为大网普适光纤的可能性''
+    (''no prospect yet of becoming general-purpose network fiber''). Skeptic side of contested item (a).'
+  verified: match
+- id: ch01.hcf.bt_lord_niche
+  section: '1.7'
+  claim: 'BT optics research lead A. Lord: HCF is a niche, not a wholesale replacement of existing fiber'
+  value: niche use cases; no wholesale swap-out of SMF
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: dcd_2025_07_ofc_hcf_lord
+  locator: Article, OFC 2025 keynote quotes
+  quote: a complete wholesale swap out of existing fiber for a new hollow core fiber? I don't think so
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Skeptic side of contested item (a).
+  verified: match
+- id: ch01.hcf.ctel_loss_race_over
+  section: '1.7'
+  claim: 'China Telecom Research Institute deputy head Fu Zhiren: the low-loss ''arms race'' for HCF is basically over; CAICT
+    chief engineer Ao Li: next 3-5 years is the key window'
+  value: loss race 'basically over'; 3-5 year window (CAICT)
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: c114_2025_05_yofc_newfiber_forum
+  locator: Article text, paragraphs quoting 敖立 and 傅志仁
+  quote: 当前基本结束低损耗的“军备竞赛”
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''the low-loss arms race has now basically ended''. CAICT: ''未来3-5年为技术突破重要窗口期'' (the next 3-5 years are the
+    important window for breakthroughs), citing standardization of geometry and process stability as open issues.'
+  verified: match
+- id: ch01.hcf.petrovich2025_hcf1_method_spread
+  section: '1.7'
+  claim: 'Short DNANF (HCF1, OFC 2024 fibre) 1550 nm loss varied with measurement method: cutbacks 0.055 and 0.065, insertion
+    loss 0.09, OTDR 0.11 dB/km'
+  value:
+  - 0.055
+  - 0.11
+  unit: dB/km
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    note: range across four methods on the same short fibre
+  source_id: petrovich_natphoton_2025
+  locator: Main text, paragraph on HCF1 (citing ref. 29)
+  quote: two independent cutbacks averaged a loss of 0.055 dB km −1 and 0.065 dB km −1
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Same paragraph: ''This clearly indicates that considerably longer fibres are needed for accurate measurements.''
+    Core evidence for contested item (b): sub-0.1 dB/km values from few-km fibres carry method-dependent spread of ~2x.'
+  verified: match
+- id: ch01.ull.sato2025_record_1566
+  section: '1.7'
+  claim: Record-low loss silica-core single-mode fiber (Sumitomo)
+  value: 0.1397
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1566
+    fiber: Ge-free silica-core, reduced fictive temperature
+  source_id: sato_jlt_2025_ull
+  locator: Abstract
+  quote: We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm on a silica-core single-mode fiber.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. Also presented at OFC 2024 Tu2E.1. Corning reported 0.1400 dB/km in a quasi-single-mode fiber (Khrapko
+    et al., IEEE PTL 36(8) 2024) - title seen only in a reference list; not recorded (gap).
+  verified: match
+- id: ch01.ull.sato2025_record_1550
+  section: '1.7'
+  claim: Record-low silica-core SMF loss at 1550 nm (Sumitomo)
+  value: 0.1406
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1550
+  source_id: sato_jlt_2025_ull
+  locator: Abstract
+  quote: We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: 2 mdB/km below the 2017 record.
+  verified: match
+- id: ch01.ull.tamura2018_0p1419
+  section: '1.7'
+  claim: Previous silica-core loss record (Sumitomo, 2017/2018)
+  value: 0.1419
+  unit: dB/km
+  kind: record
+  conditions:
+    wavelength_nm: 1560
+    note: 0.1424 dB/km at 1550 nm; Aeff 147 um^2
+  source_id: tamura_jlt_2018_ull
+  locator: Abstract
+  quote: We achieved the lowest-ever transmission losses of 0.1419 dB/km at 1560 nm wavelength and 0.1424 dB/km at 1550 nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only.
+  verified: match
+- id: ch01.ull.hengtong_g654d_0144
+  section: '1.7'
+  claim: Hengtong claims batch G.654.D fiber attenuation of 0.144 dB/km, a Chinese record for this fiber class
+  value: 0.144
+  unit: dB/km
+  kind: record
+  conditions:
+    fiber: G.654.D (submarine-class), batch
+    wavelength_nm: not stated (presumably 1550)
+  source_id: hengtong_press_2026_03_g654d
+  locator: Company news text, paragraph 1 and 3 (MWC 2026)
+  quote: G.654.D光纤衰减系数成功降至0.144dB/km，创造了中国同类产品性能的新纪录
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Gloss: ''G.654.D fiber attenuation successfully reduced to 0.144 dB/km, setting a new Chinese record for this product
+    class''. No peer-reviewed paper found. 0.0047 dB/km above Sumitomo record.'
+  verified: match
+- id: ch01.sdm.puttnam2021_classification
+  section: '1.7'
+  claim: 'SDM fiber classes reviewed: uncoupled multicore, multimode/few-mode, few-mode MCF, coupled-core MCF'
+  value: MCF, MMF/FMF, FM-MCF, coupled-core MCF
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: puttnam_optica_2021
+  locator: Abstract
+  quote: We first outline the main classifications and features of novel SDM fibers such as multicore fibers (MCFs), multimode
+    fibers, few-mode MCFs, and coupled-core MCFs.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only; Optica is OA but full text not fetched. Record values inside the review not extracted (gap).
+  verified: match
+- id: ch01.sdm.luis2025_19core_1p02pbps
+  section: '1.7'
+  claim: 'Long-haul SDM record: 1.02 Pb/s C+L over 1808.1 km in a 19-core randomly-coupled MCF (standard 125 um cladding)'
+  value: 1.02
+  unit: Pb/s
+  kind: record
+  conditions:
+    distance_km: 1808.1
+    fiber: 19-core randomly coupled MCF, 125 um cladding, 86.1 km recirculating loop
+    bands: C+L, 180 wavelengths, 16QAM, MIMO DSP
+  source_id: luis_ofc_2025_19core
+  locator: Abstract (OFC 2025 Th4A.1)
+  quote: We achieve record recirculating transmission of a 1.02 Pb/s, C+L band, signal over 1808.1 km of a novel 19-core,
+    randomly-coupled multicore fiber
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Loop details from NICT press release 2025-05-29. Verifier: abstract-only conference claim, tier C; contested box
+    only.'
+  verified: partial_fixed
+- id: ch01.sdm.luis2025_capacity_distance
+  section: '1.7'
+  claim: Capacity-distance product record in any fiber transmission
+  value: 1.86
+  unit: Eb/s*km
+  kind: record
+  conditions:
+    note: 1.02 Pb/s x 1808.1 km
+  source_id: luis_ofc_2025_19core
+  locator: Abstract
+  quote: as the highest reported capacity-distance-product in any fiber transmission of 1.86 Exabit/s.km
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Verifier: abstract-only conference claim, tier C; contested box only.'
+  verified: partial_fixed
+- id: ch01.sdm.nict2023_22p9pbps
+  section: '1.7'
+  claim: 'Single-fiber capacity record: 22.9 Pb/s over 13 km of 38-core 3-mode fiber, S+C+L (18.8 THz), PDM-256QAM'
+  value: 22.9
+  unit: Pb/s
+  kind: record
+  conditions:
+    distance_km: 13
+    fiber: 38-core, 3-mode (Sumitomo); 114 spatial channels
+    bandwidth_THz: 18.8
+  source_id: nict_press_2023_22p9pbps
+  locator: Press release highlights and main text
+  quote: A record-breaking transmission capacity of 22.9 petabits per second in a single optical fiber was demonstrated.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Press release only; peer-reviewed paper (likely ECOC 2023 postdeadline) not located (gap). Up to 24.7 Pb/s with better
+    FEC per release.
+  verified: match
+- id: ch01.sdm.gsup87_wcmcf_first_priority
+  section: '1.7'
+  claim: ITU-T G.Sup87 prioritizes weakly-coupled MCF with standard 125 um cladding and G.65x backward compatibility as first
+    SDM fiber for standardization
+  value: WC-MCF, 125 um cladding, G.65x-compatible
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: itu_t_gsup87_2025
+  locator: Summary
+  quote: The first version of this Supplement considers a weakly-coupled multicore fibre (WC-MCF) having both a standard 125
+    μm cladding diameter
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: unreachable
+- id: ch01.sdm.gsup87_timeline
+  section: '1.7'
+  claim: Expected time to establish the first WC-MCF Recommendation/standard
+  value:
+  - 2
+  - 4
+  unit: years
+  kind: fact
+  conditions:
+    note: '''at least'' two to four years, ITU-T/IEC SC86A harmonization'
+  source_id: itu_t_gsup87_2025
+  locator: Clause 8.2 'Harmonization methodology'
+  quote: The first recommendation and standard for the WC-MCF can be expected to take at least two to four years to be established
+    and revised.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: ''
+  verified: match
+- id: ch01.sdm.itu_sg15_2025_two_mcf_recs
+  section: '1.7'
+  claim: ITU-T SG15 (Oct 2025) agreed to establish two Recommendations for weakly coupled MCF (G.652/G.657- and G.654-compatible);
+    also a potential technical report on hollow-core fibers
+  value: G.smmcf and G.csmcf work items; HCF technical report under consideration
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: itu_t_sg15_execsum_2025_10
+  locator: Q5/15 paragraph
+  quote: It was also agreed to establish two Recommendations for a weakly coupled multi-core fibre with backward compatibility
+    to G.652/G.657 and G.654 fibres
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Same summary: ''potential technical report on hollow core fibers'' (relevant to HCF standardization gap cited by
+    Wei Leping).'
+  verified: match
+- id: ch01.sdm.gsmmcf_target_2028
+  section: '1.7'
+  claim: Target completion year for ITU-T G.smmcf (single-mode weakly-coupled MCF and cable)
+  value: 2028
+  unit: year
+  kind: fact
+  conditions:
+    note: G.csmcf (cut-off shifted, G.654-like) also 2028
+  source_id: itu_t_q5_15_workprog_2025
+  locator: Q5/15 work item list, row G.smmcf
+  quote: G.smmcf Q5/15 Characteristics of a single-mode weakly-coupled multi-core optical fibre and cable 2028
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: CAICT, China Telecom and Purple Mountain Labs contributed C-0472 on fiber characteristics (Sept 2025); NTT/KDDI/CLPA
+    proposed the work (C-0021).
+  verified: match
+- id: ch01.sdm.google_tpu_first_mcf_subsea
+  section: '1.7'
+  claim: Google and NEC adopt 2-core MCF on the Taiwan-Philippines-U.S. (TPU) cable, described as an industry first
+  value: 2-core MCF in TPU subsea cable (announced 2023-09)
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: google_cloud_blog_2023_mcf
+  locator: Blog text, paragraphs 2-3
+  quote: Google and NEC are collaborating to adopt it on the Taiwan-Philippines-U.S. cable
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Same blog: ''This is a first for the submarine cable industry.'' In-service date not confirmed from primary source
+    (Japanese trade press says 2025).'
+  verified: match
+- id: ch01.sdm.sumitomo_2c_ull_loss
+  section: '1.7'
+  claim: Sumitomo 2C Z-PLUS Fiber ULL (2-core submarine MCF) typical loss at 1550 nm; crosstalk <= -43 dB
+  value: 0.158
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    aeff_um2: 112
+    crosstalk_dB: -43
+  source_id: sumitomo_press_2023_2c_zplus
+  locator: Press release, Table 1 'Typical characteristics'
+  quote: With a transmission loss of typically 0.158 dB/km at 1550 nm, the new fiber can be considered an ultra-low loss fiber
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Product press release (datasheet not located). Crosstalk is counter-propagating, guaranteed.
+  verified: match
+- id: ch01.sdm.petal_2029
+  section: '1.7'
+  claim: 'Meta/NEC/Sumitomo ''Petal'' transatlantic cable: 2-core fiber, 48 core-pairs, ~7,000 km, operation scheduled 2029'
+  value: 2029
+  unit: year
+  kind: fact
+  conditions:
+    length_km: 7000
+    spatial_channels: 48 core-pairs
+  source_id: sumitomo_press_2026_petal
+  locator: Press release, paragraph 1
+  quote: is scheduled to commence operation in 2029. Petal will employ two-core fiber
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Announced capacity 'petabit-class'; future claim.
+  verified: match
+- id: ch01.industry.yofc_global_rank
+  section: '1.7'
+  claim: YOFC states it has held first place in global market share for preforms, fibres and cables since 2016 (eight consecutive
+    years to 2024)
+  value: 'global #1 in preform, fibre and cable market share, 2016-2024'
+  unit: '1'
+  kind: fact
+  conditions:
+    note: basis not stated in ESG text; YOFC annual reports cite CRU for market data
+  source_id: yofc_esg_2024_en
+  locator: Company profile section, 'About YOFC'
+  quote: the Group has held the first place in the world in the market share of optical fibre preforms, optical fibres and
+    optical cables
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: No percentage share found in a primary YOFC document. A broker report (Dongguan Securities, 2024) gives 11.30% global
+    share in 2023 citing 网络电信 - tier C, not recorded as a value (gap).
+  verified: unreachable
+- id: ch01.industry.yofc_cmcc_2023_share
+  section: '1.7'
+  claim: YOFC winning share in China Mobile's July 2023 ordinary-cable centralized procurement (about 108 million core-km),
+    ranked first
+  value: 19.46
+  unit: '%'
+  kind: measured
+  conditions:
+    procurement_volume: 约1.08亿芯公里 (about 108 M core-km)
+  source_id: yofc_ar_2023
+  locator: Section 'Management discussion', China market paragraph
+  quote: 在该次集中采购中，公司中标份额为 19.46%，位列第一
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: 'Gloss: ''in this centralized procurement the company''s winning share was 19.46%, ranked first''.'
+  verified: unreachable
+- id: ch01.industry.yofc_cmcc_g654e_airblown
+  section: '1.7'
+  claim: YOFC and China Mobile completed the first G.654.E air-blown micro-cable trunk line (December 2024)
+  value: first G.654.E air-blown micro-cable trunk, Dec 2024
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: yofc_ar_2024
+  locator: Section 'Management discussion', new-fibre paragraph
+  quote: 在二零二四年十二月完成了全球首条 G.654.E 气吹微型光缆干线项目铺设
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Gloss: ''completed in December 2024 the world''s first G.654.E air-blown micro-cable trunk project''. More relevant
+    to ch6/ch9. Same report: G.654.E share leading in domestic operator tenders; first data-center MCF pilot carrying live
+    traffic in China.'
+  verified: match
+- id: ch01.industry.yofc_mcf_dc_pilot
+  section: '1.7'
+  claim: YOFC completed China's first data-center multicore fiber line pilot carrying live traffic (2024)
+  value: first live-traffic DC MCF pilot in China, 2024
+  unit: '1'
+  kind: fact
+  conditions: {}
+  source_id: yofc_ar_2024
+  locator: Section 'Management discussion', SDM paragraph
+  quote: 公司完成了全国首条加载业务的数据中心多芯光纤线路试点
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Gloss: ''the company completed the nation''s first data-center multicore fiber line pilot carrying live service''.'
+  verified: match
+- id: ch01.industry.cru_growth_2025_2029
+  section: '1.7'
+  claim: CRU (as cited by YOFC) forecasts ~4% average annual growth of global fibre/cable demand 2025-2029
+  value: 4
+  unit: '%/yr'
+  kind: fact
+  conditions:
+    note: market research cited in annual report; AI-related demand ~26%/yr per same report
+  source_id: yofc_ar_2024
+  locator: Section 'Industry situation', CRU paragraph
+  quote: 二零二五年至二零二九年间保持 4%左右的稳健年均增速
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: 'Gloss: ''maintain steady average annual growth of about 4% over 2025-2029''. Underlying CRU report not accessed.'
+  verified: match

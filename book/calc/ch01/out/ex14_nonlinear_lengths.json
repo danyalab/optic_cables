@@ -5,6 +5,12 @@
     "digits": 2,
     "inputs": []
   },
+  "p_mw": {
+    "value": 1.0,
+    "unit": "mW",
+    "digits": 2,
+    "inputs": []
+  },
   "n2_spread_pct": {
     "value": 25.423728813559322,
     "unit": "%",
@@ -200,6 +206,30 @@
     "digits": 4,
     "inputs": [
       "ch01.kerr.leff_asymptote_gsup47"
+    ]
+  },
+  "fwm_L_km": {
+    "value": 50.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  },
+  "fwm_alpha_db": {
+    "value": 0.25,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
+    ]
+  },
+  "fwm_D": {
+    "value": 1.0,
+    "unit": "ps/(nm·km)",
+    "digits": 1,
+    "inputs": [
+      "ch01.fwm.vanish_100ghz_d1"
     ]
   },
   "eta_d1_100": {

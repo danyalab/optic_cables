@@ -12,6 +12,7 @@ equations:
   notes: 'A: Rayleigh coefficient (dB/(km·µm⁴)); B: wavelength-independent structural imperfection loss; C(λ): impurity absorption
     (incl. OH); D(λ): glass-defect absorption; E-term: UV Urbach tail; F-term: IR multiphonon tail. Source D(λ) here is NOT
     the dispersion parameter D of notation.yaml; rename (e.g. α_def) in prose. α here is in dB/km, i.e. α_dB of notation.yaml.'
+  verified: match
 - id: ch01.eq.rayleigh_density_fluct
   section: '1.1'
   latex: \frac{A_d}{\lambda^{4}} = \frac{8\pi^{3}}{3\lambda^{4}}\, n^{8} p^{2}\, k\, T_f\, \beta_{T_f}
@@ -23,6 +24,7 @@ equations:
   notes: 'p: photo-elastic constant; k: Boltzmann constant; T_f: fictive temperature; β_Tf: isothermal compressibility at
     T_f. Crawler text garbled the layout; structure verified against the variable list given immediately after the equation
     in the source. Source β is compressibility, NOT propagation constant β of notation.yaml; use κ_T in prose.'
+  verified: match
 - id: ch01.eq.link_attenuation
   section: '1.1'
   latex: A_{\mathrm{link}} = \alpha L + \alpha_s x + \alpha_c y
@@ -34,6 +36,7 @@ equations:
   notes: 'α: mean attenuation coefficient of fibre cables (dB/km; maps to α_dB); α_s: mean splice loss; x: number of splices;
     α_c: mean line-connector loss; y: number of line connectors; excludes equipment connectors; a margin for future modifications/ageing
     should be added. Basis for the 80 km span-budget worked example.'
+  verified: match
 - id: ch01.eq.malitson_sellmeier
   section: '1.2'
   latex: n^{2}-1 = \frac{0.6961663\,\lambda^{2}}{\lambda^{2}-(0.0684043)^{2}} + \frac{0.4079426\,\lambda^{2}}{\lambda^{2}-(0.1162414)^{2}}
@@ -46,6 +49,7 @@ equations:
   notes: 'λ in µm; fused silica at 20 °C; fitted over 0.21-3.71 µm (60 wavelengths); average absolute residual 10.5e-6. Coefficients:
     B1=0.6961663, λ1=0.0684043 µm; B2=0.4079426, λ2=0.1162414 µm; B3=0.8974794, λ3=9.896161 µm. Material dispersion D_M =
     −(λ/c) d²n/dλ² follows (derivation is textbook; not sourced here).'
+  verified: match
 - id: ch01.eq.d_from_beta2
   section: '1.2'
   latex: D = -\frac{2\pi c}{\lambda^{2}}\,\beta_2
@@ -58,6 +62,7 @@ equations:
   locator: Eq. (11)
   notes: Same relation in Vijayan licentiate thesis (2019) Eq. (2.5). Source writes β_2 for the GVD parameter; matches notation.yaml
     β_k convention.
+  verified: match
 - id: ch01.eq.slope_from_beta
   section: '1.2'
   latex: S = \left(\frac{2\pi c}{\lambda^{2}}\right)^{2}\beta_3 + \frac{4\pi c}{\lambda^{3}}\,\beta_2
@@ -70,6 +75,7 @@ equations:
   locator: Eq. (2.6), Chapter 2
   notes: 'Thesis (tier B). Prefer replacing with a textbook locator (Agrawal) if one is retrieved; see gaps. Verifier: formula
     correct; tier-A replacement Agrawal, Fiber-Optic Communication Systems, Sec. 2.3.3 (equation number unread).'
+  verified: partial_fixed
 - id: ch01.eq.g652_dispersion_curve
   section: '1.2'
   latex: D(\lambda) = \frac{S_0\,\lambda}{4}\left[1-\left(\frac{\lambda_0}{\lambda}\right)^{4}\right]
@@ -84,6 +90,7 @@ equations:
   notes: Eq. (6-1) evaluates the G.652.B limit with (λ0min, S0max) and (λ0max, S0max). Same functional form appears as Eq.
     (I-5) in Appendix I.6.2 and in the 100G Lambda MSA TDECQ channel formula (ch01.eq.fr4_tdecq_channel_cd). S0 maps to S
     at λ0.
+  verified: match
 - id: ch01.eq.g652d_boundary_1460_1625
   section: '1.2'
   latex: 8.625 + 0.052(\lambda-1460) \le D(\lambda) \le 12.472 + 0.068(\lambda-1460)
@@ -94,6 +101,7 @@ equations:
   locator: clause 6.10, Eq. (6-3)
   notes: 'λ in nm, D in ps/(nm·km), valid 1460-1625 nm for G.652.D. Read from the 2016 edition text; the 2024 edition keeps
     the same clause 6.10 specification (Table 2 values identical). Check: at 1550 nm gives 13.3 and 18.6, matching Table 2.'
+  verified: partial_fixed
 - id: ch01.eq.g652_link_dispersion
   section: '1.2'
   latex: D_{\mathrm{Link}}(\lambda) = L_{\mathrm{Link}}\left[D_{1550} + S_{1550}(\lambda-1550)\right]
@@ -105,6 +113,7 @@ equations:
   source_id: itu_t_g652_2024
   locator: Appendix I, clause I.2, Eq. (I-2)
   notes: 'Result in ps/nm. NOTE in source: no longer representative for G.652.D after the boundary-line revision.'
+  verified: match
 - id: ch01.eq.fr4_tdecq_channel_cd
   section: '1.2'
   latex: D_{\min}(\lambda) = 0.0465\,\lambda\left[1-\left(\frac{1324}{\lambda}\right)^{4}\right],\quad D_{\max}(\lambda) =
@@ -116,6 +125,7 @@ equations:
   locator: Section 3.6.1, Table 3-3 'Transmitter compliance channel specifications', footnote a
   notes: λ in nm; result in ps/nm; coefficient assumes 2 km (0.0465 = 0.093/4 × 2). 400G-LR4-10 uses 0.23 for 10 km (0.092/4
     × 10) in its Table 3-3.
+  verified: match
 - id: ch01.eq.imdd_power_fading
   section: '1.2'
   latex: H_1(f) = h(f) + h^{*}(f) = 2\cos\!\left(\frac{\pi\lambda^{2} D L f^{2}}{c}\right), \qquad h(f) = \exp\!\left(j\frac{\pi\lambda^{2}
@@ -129,6 +139,7 @@ equations:
   locator: Eqs. (3)-(4), Section 2.1
   notes: Chirp-free (push-pull MZM) small-signal IM/DD response, SSBI neglected. Fading nulls where πλ²DLf²/c = (1/2+n)π,
     i.e. first null f = sqrt(c/(2λ²DL)). Equivalent β2 form in ch01.eq.imdd_power_fading_beta2. f is RF (baseband) frequency.
+  verified: match
 - id: ch01.eq.imdd_power_fading_beta2
   section: '1.2'
   latex: H_{\mathrm{CD}}(f) \propto \cos\!\left(2\pi^{2}\beta_2 f^{2} z\right)
@@ -138,6 +149,7 @@ equations:
   locator: Eq. (4), section 'Chromatic-Dispersion-Induced Fading in IM/DD-OCDM'
   notes: z = fibre length (L in notation.yaml). With ω = 2πf this equals cos(β2 ω² L/2), the syllabus form. Read from crawler
     excerpt of the paper (not full PDF); confidence med.
+  verified: match
 - id: ch01.eq.pmd_rms_mean
   section: '1.3'
   latex: \langle \Delta\tau^{2} \rangle^{1/2} = \left(\frac{3\pi}{8}\right)^{1/2} \langle \Delta\tau \rangle
@@ -146,6 +158,7 @@ equations:
   source_id: itu_t_g650_2_2015
   locator: Clause 3.1.4, Eq. (3-3); definitions Eq. (3-1) PMD_AVG and Eq. (3-2) PMD_RMS
   notes: Valid only for Maxwellian DGD statistics (NOTE 3).
+  verified: match
 - id: ch01.eq.pmdq_definition
   section: '1.3'
   latex: P\left(X_M > \mathrm{PMD}_Q\right) = Q
@@ -154,6 +167,7 @@ equations:
   locator: Clause 3.1.7, Eq. (3-25)
   notes: 'X_M: link PMD coefficient of M concatenated cable sections (quadrature average); PMD_Q in ps/√km. Maps to D_PMD
     of notation.yaml as a statistical bound.'
+  verified: match
 - id: ch01.eq.maxwellian_dgd_pdf
   section: '1.3'
   latex: p(\Delta\tau) = \frac{32\,\Delta\tau^{2}}{\pi^{2}\langle\Delta\tau\rangle^{3}}\exp\!\left(-\frac{4\,\Delta\tau^{2}}{\pi\langle\Delta\tau\rangle^{2}}\right)
@@ -164,6 +178,7 @@ equations:
   notes: Source writes τ for DGD and τ_avg for mean DGD (map to Δτ, ⟨Δτ⟩). Thesis (tier B); tier-A original (Foschini & Poole,
     JLT 1991) not retrieved, see gaps. Consistent with G.959.1 Table 8-3 tail probabilities (3.0 → 4.2e-5) and G.650.2 Eq.
     (3-3).
+  verified: partial_fixed
 - id: ch01.eq.mean_dgd_sqrt_l
   section: '1.3'
   latex: \langle \Delta\tau \rangle = D_{\mathrm{PMD}}\sqrt{L}
@@ -175,6 +190,7 @@ equations:
   locator: 'Clause 3.1.5.1 (random mode coupling: PMD coefficient = PMD value divided by L^1/2)'
   notes: Stated in words in the source, not as a numbered equation. Gordon & Kogelnik (2000) Section 5 gives the random-walk
     √L explanation.
+  verified: match
 - id: ch01.eq.maxwellian_tail_g6502
   section: '1.3'
   latex: P(\Delta\tau > \Delta\tau_{\max}) = 1 - \Gamma_{\mathrm{cdf}}\!\left(\frac{4\Delta\tau_{\max}^2}{\pi\langle\Delta\tau\rangle^2};\
@@ -185,3 +201,4 @@ equations:
   locator: Appendix IV, clause IV.4, Eqs. (IV-3) and (IV-4)
   notes: Tier-A support for the Maxwellian DGD law in integrated (exceedance) form; equals the tail integral of the pdf in
     ch01.eq.maxwellian_dgd_pdf.
+  verified: not_checked

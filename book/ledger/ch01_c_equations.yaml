@@ -1,98 +1,164 @@
-# Equation records for ch01 sections 1.5 (retrieval agent ch01_c).
-# Symbols follow book/notation.yaml where possible; source symbols mapped in notes.
 equations:
-  - id: ch01.eq.ase_psd_per_pol
-    section: "1.5"
-    latex: 'S_{\mathrm{ASE}} = n_{\mathrm{sp}}\, h\nu\, (G-1)'
-    symbols: ["n_{\\mathrm{sp}}", "h", "\\nu", "G"]
-    source_id: carney_oe_2013
-    locator: "Eqs. (11)-(12)"
-    notes: "Source writes P_ASE = n_sp (G-1) h nu B_0 (Eq. 11) and rho_ASE = n_sp (G-1) h nu (Eq. 12), i.e. PSD in the signal polarization. Desurvire (Scholarpedia Eq. 12) gives P_ASE = n_sp (G-1) P_0 per mode and says to double for two polarizations. S_ASE is not yet in notation.yaml; propose adding it (W/Hz, per polarization) or reuse N_ASE as in Essiambre-Tkach."
-
-  - id: ch01.eq.ase_power_desurvire
-    section: "1.5"
-    latex: 'P_{\mathrm{ASE}} = \frac{N_2}{N_2-N_1}\,(G-1)\,P_0 \equiv n_{\mathrm{sp}}\,(G-1)\,P_0'
-    symbols: ["P_{\\mathrm{ASE}}", "n_{\\mathrm{sp}}", "G"]
-    source_id: desurvire_scholarpedia_optamp
-    locator: "Section 'Amplified spontaneous emission', Eq. (12)"
-    notes: "P_0 is the equivalent input noise power of one photon per mode (h nu per unit bandwidth); N_1, N_2 lower/upper level populations. Source: replace P_0 -> 2 P_0 for both polarizations. Tier B source."
-
-  - id: ch01.eq.nf_nsp
-    section: "1.5"
-    latex: 'F = \frac{2 n_{\mathrm{sp}} (G-1)}{G} + \frac{1}{G} \;\xrightarrow{G \gg 1}\; 2 n_{\mathrm{sp}}'
-    symbols: ["F", "n_{\\mathrm{sp}}", "G"]
-    source_id: carney_oe_2013
-    locator: "Eq. (13) and following sentence"
-    notes: "Source uses lowercase 'nf' for the linear noise factor (book: F). The 1/G term is the shot-noise contribution; high-gain limit 2 n_sp; with n_sp = 1 gives 3 dB."
-
-  - id: ch01.eq.nf_definition
-    section: "1.5"
-    latex: 'F(\nu, f) = \frac{\mathrm{SNR}_{\mathrm{in}}(\nu, f)}{\mathrm{SNR}_{\mathrm{out}}(\nu, f)}, \qquad \mathrm{NF} = 10\log_{10} F'
-    symbols: ["F", "\\nu"]
-    source_id: baney_gallion_tucker_oft_2000
-    locator: "Eqs. (3) and (4), Sec. III"
-    notes: "f is the electrical baseband frequency (not in notation.yaml; local symbol). SNR here is the photocurrent (electrical) SNR with a shot-noise-limited input, per IEC 61291-1; distinct from the book's SNR (per-symbol electrical SNR at the decision device). Signal-spontaneous form F_sig-sp = 2 rho_ASE/(h nu G) appears as Eqs. (13)-(14) in the source but was not read verbatim (see gaps)."
-
-  - id: ch01.eq.osnr_definition
-    section: "1.5"
-    latex: '\mathrm{OSNR} = \frac{P}{2 N_{\mathrm{ASE}} B_{\mathrm{ref}}}'
-    symbols: ["\\mathrm{OSNR}", "P", "B_{\\mathrm{ref}}"]
-    source_id: essiambre_tkach_procieee_2012
-    locator: "Eq. (10)"
-    notes: "P = average signal power summed over both polarizations if PDM; N_ASE = ASE PSD per polarization (= S_ASE of ch01.eq.ase_psd_per_pol, accumulated over spans); B_ref = 0.1 nm = 12.5 GHz at 1550 nm."
-
-  - id: ch01.eq.osnr_to_snr
-    section: "1.5"
-    latex: '\mathrm{OSNR} = \frac{p\, R_s}{2 B_{\mathrm{ref}}}\, \mathrm{SNR}'
-    symbols: ["\\mathrm{OSNR}", "R_s", "B_{\\mathrm{ref}}", "\\mathrm{SNR}"]
-    source_id: essiambre_tkach_procieee_2012
-    locator: "Eq. (11)"
-    notes: "p = 1 single polarization, p = 2 PDM. SNR defined in Eq. (2) as P/(N_0 R_s) = E_s/N_0 for a minimum-bandwidth (Nyquist) signal. Inverse: SNR = OSNR * 2 B_ref/(p R_s). Originally derived in Essiambre et al., JLT 28(4) 2010 (not read; paywalled)."
-
-  - id: ch01.eq.osnr_to_snr_2pol
-    section: "1.5"
-    latex: '\mathrm{OSNR} = \frac{R_s}{B_{\mathrm{ref}}}\, \mathrm{SNR}^{(2)}, \qquad \mathrm{SNR}^{(2)} = \frac{P_x + P_y}{N_x + N_y}'
-    symbols: ["\\mathrm{OSNR}", "R_s", "B_{\\mathrm{ref}}"]
-    source_id: essiambre_tkach_procieee_2012
-    locator: "Eqs. (12)-(13)"
-    notes: "SNR^(2) averages over both polarization modes (noise always summed over both). Local symbol; not in notation.yaml."
-
-  - id: ch01.eq.osnr_multispan_gsup39_full
-    section: "1.5"
-    latex: '\mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10}\!\left(N + 10^{-(L-G_{\mathrm{BA}})/10}\right) - 10\log_{10}(h\nu\,\nu_r)'
-    symbols: ["\\mathrm{OSNR}", "L", "F", "N_s", "h", "\\nu", "B_{\\mathrm{ref}}"]
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5, Eq. (9-17)"
-    notes: "All in dB/dBm; h in mJ*s. Source symbols: P_out = per-channel output power of booster and line amps (book P_ch), L = span loss in dB (= line-amp gain; NOT fiber length L of notation.yaml), G_BA = booster gain, NF in dB, N-1 line amplifiers (N spans; book N_s), nu_r = reference bandwidth in Hz (book B_ref). Equation reconstructed from garbled PDF text extraction; consistent with the two stated special cases Eqs. (9-18) and (9-19). Verify against the PDF before typesetting."
-
-  - id: ch01.eq.osnr_multispan_gsup39_booster_equal
-    section: "1.5"
-    latex: '\mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10}(N+1) - 10\log_{10}(h\nu\,\nu_r)'
-    symbols: ["\\mathrm{OSNR}", "N_s", "h", "\\nu", "B_{\\mathrm{ref}}"]
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5, Eq. (9-18)"
-    notes: "Case G_BA ~ L (booster gain equal to line gain): N+1 amplifiers contribute ASE."
-
-  - id: ch01.eq.osnr_multispan_58db_rule
-    section: "1.5"
-    latex: '\mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10} N - 10\log_{10}(h\nu\,\nu_r) \;\approx\; 58 + P_{\mathrm{ch}} - L_{\mathrm{span}} - \mathrm{NF} - 10\log_{10} N_s'
-    symbols: ["\\mathrm{OSNR}", "N_s", "h", "\\nu", "B_{\\mathrm{ref}}"]
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5, Eq. (9-19); 58 dB constant from clause 9.5.2 text before Eq. (9-24)"
-    notes: "Case L >> G_BA (booster ASE negligible). Right-hand '58 dB' form combines Eq. (9-19) with the stated value -10log(h nu nu_r) = +58 dB at 0.1 nm and 1550 nm. The combined one-line form is the book's assembly, both parts from the same source. OSNR referred to B_ref = 0.1 nm, noise in both polarizations."
-
-  - id: ch01.eq.osnr_single_preamp_58
-    section: "1.5"
-    latex: '\mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10}(h\nu\,\nu_r) \;=\; P_{\mathrm{received}} - \mathrm{NF} + 58\ \mathrm{dB}'
-    symbols: ["\\mathrm{OSNR}", "h", "\\nu", "B_{\\mathrm{ref}}"]
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5.2, Eqs. (9-23) and (9-24)"
-    notes: "Single span, one preamplifier; P_received = P_out - L in dBm. Same form in Säckinger 2017 Eq. (I.21) (ledger ch01.osnr.sackinger_58db_preamp)."
-
-  - id: ch01.eq.osnr_measurement_iec
-    section: "1.5"
-    latex: '\mathrm{OSNR} = 10\log_{10}\frac{P_i}{N_i} + 10\log_{10}\frac{B_m}{B_r}'
-    symbols: ["\\mathrm{OSNR}", "B_{\\mathrm{ref}}"]
-    source_id: itu_t_gsup39_2006
-    locator: "Clause 9.5.1, Eq. (9-22)"
-    notes: "P_i signal power of channel i, N_i interpolated noise power in the noise-equivalent measurement bandwidth B_m, B_r reference bandwidth (typically 0.1 nm; book B_ref). Same equation attributed to IEC 61280-2-9 in EXFO application note 098 (not recorded)."
+- id: ch01.eq.ase_psd_per_pol
+  section: '1.5'
+  latex: S_{\mathrm{ASE}} = n_{\mathrm{sp}}\, h\nu\, (G-1)
+  symbols:
+  - n_{\mathrm{sp}}
+  - h
+  - \nu
+  - G
+  source_id: carney_oe_2013
+  locator: Eqs. (11)-(12)
+  notes: Source writes P_ASE = n_sp (G-1) h nu B_0 (Eq. 11) and rho_ASE = n_sp (G-1) h nu (Eq. 12), i.e. PSD in the signal
+    polarization. Desurvire (Scholarpedia Eq. 12) gives P_ASE = n_sp (G-1) P_0 per mode and says to double for two polarizations.
+    S_ASE is not yet in notation.yaml; propose adding it (W/Hz, per polarization) or reuse N_ASE as in Essiambre-Tkach.
+  verified: match
+- id: ch01.eq.ase_power_desurvire
+  section: '1.5'
+  latex: P_{\mathrm{ASE}} = \frac{N_2}{N_2-N_1}\,(G-1)\,P_0 \equiv n_{\mathrm{sp}}\,(G-1)\,P_0
+  symbols:
+  - P_{\mathrm{ASE}}
+  - n_{\mathrm{sp}}
+  - G
+  source_id: desurvire_scholarpedia_optamp
+  locator: Section 'Amplified spontaneous emission', Eq. (12)
+  notes: 'P_0 is the equivalent input noise power of one photon per mode (h nu per unit bandwidth); N_1, N_2 lower/upper level
+    populations. Source: replace P_0 -> 2 P_0 for both polarizations. Tier B source.'
+  verified: match
+- id: ch01.eq.nf_nsp
+  section: '1.5'
+  latex: F = \frac{2 n_{\mathrm{sp}} (G-1)}{G} + \frac{1}{G} \;\xrightarrow{G \gg 1}\; 2 n_{\mathrm{sp}}
+  symbols:
+  - F
+  - n_{\mathrm{sp}}
+  - G
+  source_id: carney_oe_2013
+  locator: Eq. (13) and following sentence
+  notes: 'Source uses lowercase ''nf'' for the linear noise factor (book: F). The 1/G term is the shot-noise contribution;
+    high-gain limit 2 n_sp; with n_sp = 1 gives 3 dB.'
+  verified: match
+- id: ch01.eq.nf_definition
+  section: '1.5'
+  latex: F(\nu, f) = \frac{\mathrm{SNR}_{\mathrm{in}}(\nu, f)}{\mathrm{SNR}_{\mathrm{out}}(\nu, f)}, \qquad \mathrm{NF} =
+    10\log_{10} F
+  symbols:
+  - F
+  - \nu
+  source_id: baney_gallion_tucker_oft_2000
+  locator: Eqs. (3) and (4), Sec. III
+  notes: f is the electrical baseband frequency (not in notation.yaml; local symbol). SNR here is the photocurrent (electrical)
+    SNR with a shot-noise-limited input, per IEC 61291-1; distinct from the book's SNR (per-symbol electrical SNR at the decision
+    device). Signal-spontaneous form F_sig-sp = 2 rho_ASE/(h nu G) appears as Eqs. (13)-(14) in the source but was not read
+    verbatim (see gaps).
+  verified: match
+- id: ch01.eq.osnr_definition
+  section: '1.5'
+  latex: \mathrm{OSNR} = \frac{P}{2 N_{\mathrm{ASE}} B_{\mathrm{ref}}}
+  symbols:
+  - \mathrm{OSNR}
+  - P
+  - B_{\mathrm{ref}}
+  source_id: essiambre_tkach_procieee_2012
+  locator: Eq. (10)
+  notes: P = average signal power summed over both polarizations if PDM; N_ASE = ASE PSD per polarization (= S_ASE of ch01.eq.ase_psd_per_pol,
+    accumulated over spans); B_ref = 0.1 nm = 12.5 GHz at 1550 nm.
+  verified: match
+- id: ch01.eq.osnr_to_snr
+  section: '1.5'
+  latex: \mathrm{OSNR} = \frac{p\, R_s}{2 B_{\mathrm{ref}}}\, \mathrm{SNR}
+  symbols:
+  - \mathrm{OSNR}
+  - R_s
+  - B_{\mathrm{ref}}
+  - \mathrm{SNR}
+  source_id: essiambre_tkach_procieee_2012
+  locator: Eq. (11)
+  notes: 'p = 1 single polarization, p = 2 PDM. SNR defined in Eq. (2) as P/(N_0 R_s) = E_s/N_0 for a minimum-bandwidth (Nyquist)
+    signal. Inverse: SNR = OSNR * 2 B_ref/(p R_s). Originally derived in Essiambre et al., JLT 28(4) 2010 (not read; paywalled).'
+  verified: match
+- id: ch01.eq.osnr_to_snr_2pol
+  section: '1.5'
+  latex: \mathrm{OSNR} = \frac{R_s}{B_{\mathrm{ref}}}\, \mathrm{SNR}^{(2)}, \qquad \mathrm{SNR}^{(2)} = \frac{P_x + P_y}{N_x
+    + N_y}
+  symbols:
+  - \mathrm{OSNR}
+  - R_s
+  - B_{\mathrm{ref}}
+  source_id: essiambre_tkach_procieee_2012
+  locator: Eqs. (12)-(13)
+  notes: SNR^(2) averages over both polarization modes (noise always summed over both). Local symbol; not in notation.yaml.
+  verified: match
+- id: ch01.eq.osnr_multispan_gsup39_full
+  section: '1.5'
+  latex: \mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10}\!\left(N + 10^{-(L-G_{\mathrm{BA}})/10}\right) -
+    10\log_{10}(h\nu\,\nu_r)
+  symbols:
+  - \mathrm{OSNR}
+  - L
+  - F
+  - N_s
+  - h
+  - \nu
+  - B_{\mathrm{ref}}
+  source_id: itu_t_gsup39_2025
+  locator: Eq. (9-18), G.Sup39 (10/2025), clause 9.5
+  notes: 'All in dB/dBm; h in mJ*s. Source symbols: P_out = per-channel output power of booster and line amps (book P_ch),
+    L = span loss in dB (= line-amp gain; NOT fiber length L of notation.yaml), G_BA = booster gain, NF in dB, N-1 line amplifiers
+    (N spans; book N_s), nu_r = reference bandwidth in Hz (book B_ref). Equation reconstructed from garbled PDF text extraction;
+    consistent with the two stated special cases Eqs. (9-18) and (9-19). Verify against the PDF before typesetting.'
+  verified: partial_fixed
+- id: ch01.eq.osnr_multispan_gsup39_booster_equal
+  section: '1.5'
+  latex: \mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10}(N+1) - 10\log_{10}(h\nu\,\nu_r)
+  symbols:
+  - \mathrm{OSNR}
+  - N_s
+  - h
+  - \nu
+  - B_{\mathrm{ref}}
+  source_id: itu_t_gsup39_2025
+  locator: Eq. (9-19), G.Sup39 (10/2025), clause 9.5
+  notes: 'Case G_BA ~ L (booster gain equal to line gain): N+1 amplifiers contribute ASE.'
+  verified: partial_fixed
+- id: ch01.eq.osnr_multispan_58db_rule
+  section: '1.5'
+  latex: \mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10} N - 10\log_{10}(h\nu\,\nu_r) \;\approx\; 58 + P_{\mathrm{ch}}
+    - L_{\mathrm{span}} - \mathrm{NF} - 10\log_{10} N_s
+  symbols:
+  - \mathrm{OSNR}
+  - N_s
+  - h
+  - \nu
+  - B_{\mathrm{ref}}
+  source_id: itu_t_gsup39_2025
+  locator: Eq. (9-20), G.Sup39 (10/2025), clause 9.5
+  notes: Case L >> G_BA (booster ASE negligible). Right-hand '58 dB' form combines Eq. (9-19) with the stated value -10log(h
+    nu nu_r) = +58 dB at 0.1 nm and 1550 nm. The combined one-line form is the book's assembly, both parts from the same source.
+    OSNR referred to B_ref = 0.1 nm, noise in both polarizations. Polarization content follows from the signal-spontaneous
+    NF definition (ASE in both polarizations), see Essiambre-Tkach 2012 Eq. (10).
+  verified: partial_fixed
+- id: ch01.eq.osnr_single_preamp_58
+  section: '1.5'
+  latex: \mathrm{OSNR} = P_{\mathrm{out}} - L - \mathrm{NF} - 10\log_{10}(h\nu\,\nu_r) \;=\; P_{\mathrm{received}} - \mathrm{NF}
+    + 58\ \mathrm{dB}
+  symbols:
+  - \mathrm{OSNR}
+  - h
+  - \nu
+  - B_{\mathrm{ref}}
+  source_id: itu_t_gsup39_2025
+  locator: Eqs. (9-24), (9-25), G.Sup39 (10/2025), clause 9.5
+  notes: Single span, one preamplifier; P_received = P_out - L in dBm. Same form in Säckinger 2017 Eq. (I.21) (ledger ch01.osnr.sackinger_58db_preamp).
+  verified: partial_fixed
+- id: ch01.eq.osnr_measurement_iec
+  section: '1.5'
+  latex: \mathrm{OSNR} = 10\log_{10}\frac{P_i}{N_i} + 10\log_{10}\frac{B_m}{B_r}
+  symbols:
+  - \mathrm{OSNR}
+  - B_{\mathrm{ref}}
+  source_id: itu_t_gsup39_2025
+  locator: Eq. (9-23), G.Sup39 (10/2025), clause 9.5
+  notes: P_i signal power of channel i, N_i interpolated noise power in the noise-equivalent measurement bandwidth B_m, B_r
+    reference bandwidth (typically 0.1 nm; book B_ref). Same equation attributed to IEC 61280-2-9 in EXFO application note
+    098 (not recorded).
+  verified: partial_fixed

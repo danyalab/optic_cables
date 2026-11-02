@@ -1,251 +1,423 @@
-# Equations for chapter 1, sections 1.4 and 1.6 (retrieval agent ch01_b).
-# LaTeX is written in book notation where the mapping is unambiguous. `notes` gives the source's own symbols.
-# Key symbol conflicts (details in ch01_b_gaps.md):
-#  - Poggiolini et al. use alpha as the FIELD loss coefficient: power ~ exp(-2 alpha z). Book alpha (power) = 2 * alpha_Pogg.
-#  - Poggiolini 2012 defines beta2 as |beta2| (always positive).
-#  - Poggiolini uses G_WDM, G_NLI for power spectral densities. The book reserves G for amplifier gain;
-#    Poggiolini 2014 calls amplifier gain Lambda (Eq. 51) or Gamma (Eq. 1).
-#  - Poggiolini's 'OSNR' uses a generic noise bandwidth B_N, which the 2014 tutorial sets to R_s and calls 'SNR'.
-
 equations:
-  # ---------------- 1.4 Kerr / NLSE ----------------
-  - id: ch01.eq.kerr_index
-    section: "1.4"
-    latex: 'n = n_0 + n_2 I'
-    symbols: ['n', 'n_2']
-    source_id: itu_t_gsup47_2025
-    locator: "Appendix I, clause I.3, p. 10 (unnumbered)"
-    notes: "I is the optical intensity in W/m^2. The symbols match the book."
-
-  - id: ch01.eq.gamma_def
-    section: "1.4"
-    latex: '\gamma = \frac{n_2 \omega_0}{c A_{\mathrm{eff}}}, \qquad A_{\mathrm{eff}} = \frac{\left(\iint |F(x,y)|^2\,dx\,dy\right)^2}{\iint |F(x,y)|^4\,dx\,dy}'
-    symbols: ['\gamma', 'n_2', '\omega', 'c', 'A_{\mathrm{eff}}']
-    source_id: agrawal_josab_2011
-    locator: "Eq. (8), Sect. 2.B"
-    notes: "omega_0 is the carrier angular frequency and F(x,y) the modal field distribution. Book symbol omega carries subscript 0 for the carrier. The glyph-level layout was garbled in extraction, but the text 'γ ... ω0n2 ... cAeff' and the Aeff ratio of the |F|^2 and |F|^4 integrals are clear. Equivalent form gamma = 2 pi n2/(lambda Aeff). A_eff in µm² must be converted to m² before use."
-
-  - id: ch01.eq.nlse_general
-    section: "1.4"
-    latex: '\frac{\partial A}{\partial z} + \frac{\alpha}{2}A - \sum_{m\ge 2}\frac{i^{m+1}\beta_m}{m!}\frac{\partial^m A}{\partial t^m} = i\gamma\left(1 + \frac{i}{\omega_0}\frac{\partial}{\partial t}\right)\left(A(z,t)\int_0^\infty R(t^\prime)\,|A(z,t-t^\prime)|^2\,dt^\prime\right)'
-    symbols: ['A', '\alpha', '\beta', '\gamma', '\omega']
-    source_id: agrawal_josab_2011
-    locator: "Eq. (7), Sect. 2.B"
-    notes: "General scalar propagation equation with all dispersion orders, self-steepening and Raman response R(t) = (1 - f_R) delta(t) + f_R h_R(t) (Eq. 9, f_R about 0.18). The extraction showed fragments 'i mβm m!', 'α 2 A', 'iγ 1 i ∂ ω0 ∂t', 'R t0 |A z; t − t0|^2 dt0'. The sign arrangement is transcribed from Agrawal's standard form and should be checked against the PDF. alpha here is the POWER loss coefficient (book convention)."
-
-  - id: ch01.eq.nlse_beta3
-    section: "1.4"
-    latex: '\frac{\partial A}{\partial z} + \frac{\alpha}{2}A + \frac{i\beta_2}{2}\frac{\partial^2 A}{\partial T^2} - \frac{\beta_3}{6}\frac{\partial^3 A}{\partial T^3} = i\gamma |A|^2 A'
-    symbols: ['A', '\alpha', '\beta', '\gamma']
-    source_id: agrawal_josab_2011
-    locator: "Specialization of Eq. (7) (m <= 3, R(t) = delta(t), no self-steepening, retarded time T = t - beta1 z); not printed in this form in the source"
-    notes: "DERIVED, NOT PRINTED. The m = 2 term of Eq. (7) gives +(i beta2/2) d2A/dT2 and the m = 3 term gives -(beta3/6) d3A/dT3. The book must either cite Eq. (7) and show this reduction, or find a source that prints this exact form (e.g. Agrawal, Nonlinear Fiber Optics, Eq. 2.3.43 or similar; not verified). Listed in the gaps file."
-
-  - id: ch01.eq.nlse_lab_frame
-    section: "1.4"
-    latex: '\frac{\partial A}{\partial z} + \frac{\alpha}{2}A + \beta_1\frac{\partial A}{\partial t} + \frac{i\beta_2}{2}\frac{\partial^2 A}{\partial t^2} = i\gamma |A|^2 A'
-    symbols: ['A', '\alpha', '\beta', '\gamma']
-    source_id: agrawal_josab_2011
-    locator: "Eq. (10), Sect. 2.C"
-    notes: "Valid for pulses wider than about 5 ps: R(t) is replaced by a delta function and dispersion beyond second order is dropped."
-
-  - id: ch01.eq.nlse_retarded
-    section: "1.4"
-    latex: 'i\frac{\partial A}{\partial z} + \frac{i\alpha}{2}A - \frac{\beta_2}{2}\frac{\partial^2 A}{\partial T^2} + \gamma |A|^2 A = 0, \qquad T = t - \beta_1 z'
-    symbols: ['A', '\alpha', '\beta', '\gamma']
-    source_id: agrawal_josab_2011
-    locator: "Eq. (11), Sect. 2.C"
-    notes: "With alpha = 0 this is the NLS equation. Sign convention: field ~ exp[i(beta0 z - omega0 t)] (Eq. 6). Communications papers using exp(+j omega t), e.g. the GN literature, flip the sign of the beta2 term."
-
-  - id: ch01.eq.leff
-    section: "1.4"
-    latex: 'L_{\mathrm{eff}} = \frac{1 - e^{-\alpha L}}{\alpha}'
-    symbols: ['L_{\mathrm{eff}}', '\alpha', 'L']
-    source_id: agrawal_josab_2011
-    locator: "Text after Eq. (16), Sect. 3.A"
-    notes: "Also printed in ITU-T G.Sup47 clause 7.2 (p. 5) with the same symbols, and the asymptote 1/alpha is stated there. Poggiolini et al. write L_eff = [1 - exp(-2 alpha Ls)]/(2 alpha) with alpha the FIELD coefficient, which is identical once alpha_book = 2 alpha_Pogg."
-
-  - id: ch01.eq.lnl_and_N
-    section: "1.4"
-    latex: 'L_{\mathrm{NL}} = (\gamma P_0)^{-1}, \qquad N^2 = \frac{L_D}{L_{\mathrm{NL}}} = \frac{\gamma P_0 T_0^2}{|\beta_2|}'
-    symbols: ['L_{\mathrm{NL}}', '\gamma', 'P', 'L_D', '\beta']
-    source_id: agrawal_josab_2011
-    locator: "Eq. (14) and text following it, Sect. 2.C"
-    notes: "P_0 is the peak power and T_0 the pulse width. Book uses P (per-channel power) and L_D = T_0^2/|beta_2|."
-
-  - id: ch01.eq.spm_phase
-    section: "1.4"
-    latex: '\phi(L,T) = \phi(0,T) + \gamma P(0,T) L_{\mathrm{eff}}, \qquad \phi_{\mathrm{NL}}(L,T) = f_p(T)\,\frac{L_{\mathrm{eff}}}{L_{\mathrm{NL}}}'
-    symbols: ['\gamma', 'P', 'L_{\mathrm{eff}}', 'L_{\mathrm{NL}}']
-    source_id: agrawal_josab_2011
-    locator: "Eqs. (16) and (17), Sect. 3.A"
-    notes: "For CW light (f_p = 1) the peak SPM phase is phi_NL = gamma P L_eff. Valid when dispersion is negligible over L (beta2 = 0 in Eq. 11). P(0,T) = P_0 f_p(T)."
-
-  - id: ch01.eq.fwm_efficiency_gn
-    section: "1.4"
-    latex: '\rho(f_1,f_2,f) = \left|\frac{1 - e^{-\alpha L_s}\, e^{j\Delta\beta L_s}}{\alpha - j\Delta\beta}\right|^2 L_{\mathrm{eff}}^{-2}, \qquad \Delta\beta = 4\pi^2\beta_2 (f_1-f)(f_2-f) = \beta_2\,\Delta\omega_1\Delta\omega_2'
-    symbols: ['\alpha', '\beta', 'L', 'L_{\mathrm{eff}}']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (2), Sect. III"
-    notes: "As printed: rho = |(1 - e^{-2 alpha Ls} e^{j4pi^2 beta2 Ls (f1-f)(f2-f)}) / (2 alpha - j4pi^2 beta2 (f1-f)(f2-f))|^2 L_eff^{-2}, with alpha the FIELD loss (book alpha = 2 alpha_Pogg) and beta2 = |beta2|. The Delta-beta notation and Delta-omega_k = 2 pi (f_k - f) are book relabelings and do not appear in the source. This is the normalized non-degenerate FWM efficiency with phase mismatch Delta-beta. For f3 = f1 + f2 - f it gives the textbook Delta-beta = beta2 Delta-omega_1 Delta-omega_2. The 2014 tutorial Eq. (6) adds beta3: 4pi^2 (f1-f)(f2-f)[beta2 + pi beta3 (f1+f2)]."
-
-  - id: ch01.eq.fwm_efficiency_gsup47
-    section: "1.4"
-    latex: '\eta_{\mathrm{FWM}} = \left|\frac{1-\exp[-(\alpha + i\Delta\beta)L]}{(\alpha + i\Delta\beta)\,L_{\mathrm{eff}}}\right|^2 \;(\text{transcription uncertain}), \qquad \Delta\beta \propto \frac{\lambda_c^2}{c} D(\lambda_c)\, \Delta f^2'
-    symbols: ['\alpha', 'L', 'L_{\mathrm{eff}}', 'D', 'c']
-    source_id: itu_t_gsup47_2025
-    locator: "Clause 7.3 'Four-wave mixing efficiency', unnumbered equations, p. 6"
-    notes: "LOW CONFIDENCE TRANSCRIPTION. The PDF text extraction garbled the formulas. Readable fragments are: P_FWM proportional to (n2/Aeff)^2 ... L_eff ... e^{-alpha L} times eta; eta built from '1 exp', '(alpha + i Delta-beta)', 'L'; Delta-beta with factors '4', 'pi', 'lambda_c^2', 'c', 'Delta-f^2', 'D(lambda_c)'; lambda_c defined from c and (f_i + f_j). The source variable for FWM efficiency is eta; it is renamed eta_FWM here to avoid a clash with the book's GN eta. Use ch01.eq.fwm_efficiency_gn for the book; this record only notes that ITU gives an equivalent form. Re-read the PDF to fix the exact form."
-
-  - id: ch01.eq.manakov
-    section: "1.4"
-    latex: 'i\frac{\partial \mathbf{u}}{\partial z} + \frac{\beta_2}{2}\frac{\partial^2 \mathbf{u}}{\partial t^2} \cdots + \frac{8}{9}\gamma\,|\mathbf{u}|^2\mathbf{u} = (\text{linear PMD term}) + (\text{nonlinear PMD term})'
-    symbols: ['\gamma', '\beta']
-    source_id: marcuse_jlt_1997
-    locator: "Eq. (12), Sect. II, p. 1737"
-    notes: "STRUCTURE ONLY; the equation glyphs could not be extracted. The source text confirms that the left side of (12) holds the dispersion term and the Kerr term 'averaged over the Poincaré sphere with the well-known 8/9 factor', and that the right side holds the linear-PMD term and the new nonlinear-PMD term. Setting the right side to zero gives the Manakov equation. The exact signs, loss term and form of the right side MUST be transcribed from the PDF (photonics.umbc.edu PAJ108.pdf) before use. u is the two-component (Jones) field vector, |u|^2 = |u_x|^2 + |u_y|^2."
-
-  # ---------------- 1.6 GN model ----------------
-  - id: ch01.eq.gnrf
-    section: "1.6"
-    latex: 'G_{\mathrm{NLI}}(f) = \frac{16}{27}\gamma^2 L_{\mathrm{eff}}^2 \int_{-\infty}^{\infty}\!\int_{-\infty}^{\infty} G_{\mathrm{WDM}}(f_1)G_{\mathrm{WDM}}(f_2)G_{\mathrm{WDM}}(f_1+f_2-f)\,\rho(f_1,f_2,f)\,\chi(f_1,f_2,f)\,df_2\,df_1'
-    symbols: ['\gamma', 'L_{\mathrm{eff}}']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (1) 'GNRF', Sect. III"
-    notes: "G_NLI and G_WDM are UNILATERAL power spectral densities in W/Hz; these G symbols are NOT amplifier gain. Assumes identical spans with exact per-span loss compensation (transparent, homogeneous link) and dual-polarization signals; 16/27 is the PM coefficient. The 2014 tutorial prints the same formula as Eq. (2) and a general multi-span form as Eq. (1)."
-
-  - id: ch01.eq.gn_phased_array
-    section: "1.6"
-    latex: '\chi(f_1,f_2,f) = \frac{\sin^2\!\left(2N_s\pi^2 (f_1-f)(f_2-f)\beta_2 L_s\right)}{\sin^2\!\left(2\pi^2 (f_1-f)(f_2-f)\beta_2 L_s\right)}'
-    symbols: ['N_s', '\beta', 'L']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (3), Sect. III"
-    notes: "Phased-array factor that sets coherent NLI accumulation over N_s spans; chi = 1 for one span. The sum form is Eq. (16): chi = N_s + 2 sum_{n=1}^{N_s - 1} (N_s - n) cos(4 n pi^2 beta2 Ls (f1-f)(f2-f)). L_s is the span length (book L)."
-
-  - id: ch01.eq.gn_osnr_tot
-    section: "1.6"
-    latex: '\mathrm{GSNR} = \frac{P_{\mathrm{ch}}}{P_{\mathrm{ASE}} + P_{\mathrm{NLI}}}'
-    symbols: ['\mathrm{GSNR}', 'P', 'P_{\mathrm{ASE}}', 'P_{\mathrm{NLI}}']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (4), Sect. III"
-    notes: "The source calls this OSNR_tot, with P_ASE and P_NLI measured in a 'conventional noise bandwidth' B_N. The 2014 tutorial Eq. (22) calls it SNR_NL with B_N = R_s. The book's GSNR corresponds to B_N = R_s. Do NOT mix this with the book's OSNR in B_ref = 12.5 GHz."
-
-  - id: ch01.eq.gn_accumulation_eps
-    section: "1.6"
-    latex: 'G_{\mathrm{NLI}}(f) = G_{\mathrm{NLI}}(f)\big|_{N_s=1}\, N_s^{1+\varepsilon}'
-    symbols: ['N_s', '\varepsilon']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (7), Sect. IX"
-    notes: "epsilon = 0 means incoherent (power) accumulation and epsilon = 1 means fully phase-matched. The 2014 tutorial writes the same law as Eq. (16) and defines epsilon exactly as Eq. (18): epsilon = ln(1 + G_cc/G_inc)/ln(N_s). NOTATION CONFLICT: book/notation.yaml calls epsilon the 'EGN coherent-accumulation exponent correction', but in the sources epsilon belongs to the coherent GN model and is unrelated to the EGN non-Gaussianity correction."
-
-  - id: ch01.eq.gn_eps_closed_form
-    section: "1.6"
-    latex: '\varepsilon \approx \frac{3}{10}\ln\!\left(1 + \frac{6}{L_s}\frac{L_{\mathrm{eff,a}}}{\mathrm{asinh}\!\left(\frac{\pi^2}{2}\beta_2 L_{\mathrm{eff,a}} B_{\mathrm{WDM}}^2\right)}\right)'
-    symbols: ['\varepsilon', 'L', '\beta']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (23), Sect. XI-C"
-    notes: "Nyquist-WDM. Extracted as '3 10· loge( 1 + 6 Ls Leff,a asinh(π2 2 β2Leff,aB2 WDM))'. The placement of L_eff,a in the numerator and asinh in the denominator follows the 2014 tutorial Eq. (41), where the extraction shows the same order. VERIFY the fraction structure against the published PDF. L_eff,a = 1/(2 alpha_Pogg) = 1/alpha_book is the asymptotic effective length (2014 tutorial, after Eq. 37). Accurate within a few percent if the asinh argument is > 10 and span loss > 10 dB (2014)."
-
-  - id: ch01.eq.gn_nyquist_single_span
-    section: "1.6"
-    latex: 'G_{\mathrm{NLI}}(0) \approx \frac{8}{27}\gamma^2 G_{\mathrm{WDM}}^3 L_{\mathrm{eff}}^2\,\frac{\mathrm{asinh}\!\left(\frac{\pi^2}{2}|\beta_2| L_{\mathrm{eff,a}} B_{\mathrm{WDM}}^2\right)}{\pi |\beta_2| L_{\mathrm{eff,a}}}'
-    symbols: ['\gamma', 'L_{\mathrm{eff}}', '\beta']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (13), Sect. XI-A; also 2014 tutorial Eq. (37)"
-    notes: "Ideal Nyquist-WDM, one span, centre of comb. The leading 8/27 is visible in the extraction of the log-form Eq. (14) but was dropped from the Eq. (13) and 2014 Eq. (37) extractions. Check it against the published PDF. L_eff,a = 1/(2 alpha) with field alpha (stated explicitly in 2014 after Eq. 37). Requires span loss > ~7 dB (2012) or > ~10 dB (2014). Error is at most 0.35 dB at x ~ 1 (2014). Log form, Eq. (14): asinh(x) ~ ln(2x) for x > 3.5."
-
-  - id: ch01.eq.gn_nonnyquist_single_span
-    section: "1.6"
-    latex: 'G_{\mathrm{NLI}}(0) \approx \frac{8}{27}\gamma^2 G_{\mathrm{WDM}}^3 L_{\mathrm{eff}}^2\,\frac{\mathrm{asinh}\!\left(\frac{\pi^2}{2}|\beta_2| L_{\mathrm{eff,a}} B_{\mathrm{ch}}^2 N_{\mathrm{ch}}^{2B_{\mathrm{ch}}/\Delta f}\right)}{\pi|\beta_2| L_{\mathrm{eff,a}}}'
-    symbols: ['\gamma', 'L_{\mathrm{eff}}', '\beta', 'B_{\mathrm{ch}}', '\Delta f']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (15), Sect. XI-B; also 2014 tutorial Eq. (40)"
-    notes: "Rectangular channels of bandwidth B_ch, spacing Delta-f, N_ch channels. With B_ch = Delta-f it reduces to Eq. (13). Valid for span loss >= 7 dB, beta2 >= 4 ps^2/km, Rs >= 28 GBd and B_ch/Delta-f >= 0.25. Error < 0.5 dB at full C-band with roll-off 0.3. The exponent 2B_ch/Delta-f on N_ch is read from the extraction 'B 2 chN 2 Bch ∆f ch'; verify it."
-
-  - id: ch01.eq.gn_eta_cubic
-    section: "1.6"
-    latex: 'P_{\mathrm{NLI}} = \eta\, P_{\mathrm{ch}}^3'
-    symbols: ['P_{\mathrm{NLI}}', '\eta', 'P']
-    source_id: poggiolini_jlt_2014
-    locator: "Eq. (27), Sect. IV-A"
-    notes: "eta is independent of P_ch and has units 1/W^2. It matches book/notation.yaml. The 2014 tutorial was read as the pre-review preprint; the equation number may differ in the published version."
-
-  - id: ch01.eq.gn_snr_nl
-    section: "1.6"
-    latex: '\mathrm{GSNR} = \frac{P_{\mathrm{ch}}}{P_{\mathrm{ASE}} + \eta P_{\mathrm{ch}}^3}'
-    symbols: ['\mathrm{GSNR}', 'P', 'P_{\mathrm{ASE}}', '\eta']
-    source_id: poggiolini_jlt_2014
-    locator: "Eq. (28), Sect. IV-A"
-    notes: "Source symbol: SNR_NL, with B_N = R_s (Eq. 21)."
-
-  - id: ch01.eq.gn_popt
-    section: "1.6"
-    latex: 'P_{\mathrm{opt}} = \left(\frac{P_{\mathrm{ASE}}}{2\eta}\right)^{1/3}'
-    symbols: ['P_{\mathrm{ASE}}', '\eta']
-    source_id: poggiolini_jlt_2014
-    locator: "Eq. (29), Sect. IV-A"
-    notes: "Source: P_ch^opt = cube-root(P_ASE/(2 eta)). P_ASE and eta here are end-of-link totals. The per-span form is Eq. (55): P_opt = cube-root(P_ASE^{1 span}/(2 eta^{1 span})), identical when both scale as N_s (IGN, epsilon = 0). The 2012 paper's version with epsilon is ch01.eq.gn_popt_eps."
-
-  - id: ch01.eq.gn_popt_eps
-    section: "1.6"
-    latex: 'P_{\mathrm{ch,opt}}^{(\mathrm{BER})} = B_{\mathrm{ch}}^{\mathrm{eq}}\left(\frac{P_{\mathrm{ASE}}^{(1)}}{2\,p_{\mathrm{NLI}}^{(1)} N_s^{\varepsilon}}\right)^{1/3}'
-    symbols: ['P_{\mathrm{ASE}}', 'N_s', '\varepsilon']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (28), Sect. XII-A"
-    notes: "P_ASE^(1) is the ASE after one span. p_NLI^(1) is the one-span NLI normalized by P_ch^3 (B_ch^eq)^-3 (Eq. 26), and B_ch^eq = P_ch/G_WDM(0) (Eq. 27). Inserting it into Eq. (25) gives P_ASE = 2 P_NLI for any epsilon. With epsilon ~ 0 the reach-maximizing power, Eq. (29), equals this."
-
-  - id: ch01.eq.gn_osnr_vs_ns
-    section: "1.6"
-    latex: '\mathrm{GSNR} = \frac{P_{\mathrm{ch}}}{P_{\mathrm{ASE}}^{(1)} N_s + p_{\mathrm{NLI}}^{(1)} N_s^{1+\varepsilon} P_{\mathrm{ch}}^3 \left(B_{\mathrm{ch}}^{\mathrm{eq}}\right)^{-3}}'
-    symbols: ['\mathrm{GSNR}', 'P', 'P_{\mathrm{ASE}}', 'N_s', '\varepsilon']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (25), Sect. XII"
-    notes: "Source symbol: OSNR_tot. Identical spans with loss exactly compensated."
-
-  - id: ch01.eq.gn_nsmax
-    section: "1.6"
-    latex: 'N_s^{\max} = \frac{B_{\mathrm{ch}}^{\mathrm{eq}}}{3\,\mathrm{OSNR}_T}\left(\frac{4}{\left(P_{\mathrm{ASE}}^{(1)}\right)^2 p_{\mathrm{NLI}}^{(1)}}\right)^{1/3}'
-    symbols: ['N_s', 'P_{\mathrm{ASE}}']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (30), Sect. XII-B"
-    notes: "epsilon ~ 0. OSNR_T is the target OSNR (book: required GSNR). The 2014 tutorial Eq. (56) gives the per-span form N_s^max = (1/(3 SNR_T)) cube-root(4/((P_ASE^1span)^2 eta^1span)). The structure (4 over P_ASE^2 times p_NLI) comes from the extraction '3vuut 4 ( P (1) ASE ) 2 p (1) NLI'; verify it against the PDF."
-
-  - id: ch01.eq.gn_reach_sensitivity
-    section: "1.6"
-    latex: '\Delta N_s^{\max}[\mathrm{dB}] = -\frac{1}{3}\,\Delta p_{\mathrm{NLI}}^{(1)}[\mathrm{dB}]'
-    symbols: ['N_s']
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (32), Sect. XII-B"
-    notes: "The 2014 tutorial Eqs. (30), (32) and (33) give the same 1/3 dampening for P_opt, N_s^max and the max OSNR vs an error in eta. The 1/3 is lost in the 2014 extraction, but the text says 'a 1 dB error in η results in only 1/3 dB error'."
-
-  - id: ch01.eq.ase_per_span_2014
-    section: "1.6"
-    latex: 'P_{\mathrm{ASE}}^{1\,\mathrm{span}} = h\nu F (G - 1) R_s \approx h\nu F G R_s'
-    symbols: ['P_{\mathrm{ASE}}', 'h', '\nu', 'F', 'G', 'R_s']
-    source_id: poggiolini_jlt_2014
-    locator: "Eq. (51), Sect. VII"
-    notes: "Source writes the amplifier gain as Lambda: P_ASE = h nu F (Lambda - 1) R_s. Noise is counted over both polarizations in bandwidth R_s. Relabeled to the book's G here."
-
-  - id: ch01.eq.gn_def_ign
-    section: "1.6"
-    latex: 'G_{\mathrm{NLI}}^{\mathrm{inc}}(f) = G_{\mathrm{NLI}}^{1\,\mathrm{span}}(f)\,N_s, \qquad G_{\mathrm{NLI}}(f) = G_{\mathrm{NLI}}^{1\,\mathrm{span}}(f)\,N_s^{1+\varepsilon}, \qquad \varepsilon = \frac{\ln\!\left(1 + G_{\mathrm{NLI}}^{cc}(f)/G_{\mathrm{NLI}}^{\mathrm{inc}}(f)\right)}{\ln N_s}'
-    symbols: ['N_s', '\varepsilon']
-    source_id: poggiolini_jlt_2014
-    locator: "Eqs. (15), (16), (18), Sect. III-D"
-    notes: "Defines the IGN (incoherent GN) model and epsilon exactly. Epsilon was dropped from the extraction but is identified from context and from 2012 Eqs. (7) and (21)."
-
-  - id: ch01.eq.oct_shannon
-    section: "1.6"
-    latex: '\mathrm{OCT} = p\,\frac{R_s}{\Delta f}\log_2\!\left(1 + \mathrm{GSNR}\right)\ [\mathrm{bit/s/Hz}]'
-    symbols: ['R_s', '\Delta f', '\mathrm{GSNR}', 'C']
-    source_id: poggiolini_jlt_2014
-    locator: "Eq. (62), Sect. VIII-B"
-    notes: "p = 1 for a single-polarization signal and p = 2 for a PM signal. Assumes a Gaussian input constellation and a memoryless AWGN channel with the LWN approximation. At the Nyquist limit (R_s = Delta-f), OCT is the spectral efficiency. Source symbol for GSNR: SNR_NL. The book's C per polarization is log2(1 + GSNR) bit/symbol."
-
-  - id: ch01.eq.egn_decomposition
-    section: "1.6"
-    latex: 'G_{\mathrm{NLI}}^{\mathrm{EGN}}(f) = G_{\mathrm{NLI}}^{\mathrm{GN}}(f) + G_{\mathrm{NLI}}^{\mathrm{corr}}(f), \qquad G_{\mathrm{SCI}}^{\mathrm{EGN}}(f) = P^3\left[\kappa_1(f) + \Phi_a\,\kappa_2(f) + \Psi_a\,\kappa_3(f)\right]'
-    symbols: ['P']
-    source_id: carena_oe_2014
-    locator: "Eq. (1), Sect. 2, p. 16337; Eq. (5), Sect. 3"
-    notes: "The correction is written with a '+' sign; it reduces NLI for PM-QAM because Phi_a < 0 (QPSK -1, 16QAM -17/25, 64QAM -13/21; Table 1). kappa_1 is the GN-model SCI term; kappa_2 and kappa_3 are correction integrals that need 4th-order (Phi_a) and 6th-order (Psi_a) moments of the constellation. Similar decompositions hold for XCI (Eq. 14 and following) and MCI (Eq. 23). G here is a PSD, not amplifier gain. P is the per-channel power."
+- id: ch01.eq.kerr_index
+  section: '1.4'
+  latex: n = n_0 + n_2 I
+  symbols:
+  - n
+  - n_2
+  source_id: itu_t_gsup47_2025
+  locator: Appendix I, clause I.3, p. 10 (unnumbered)
+  notes: I is the optical intensity in W/m^2. The symbols match the book.
+  verified: match
+- id: ch01.eq.gamma_def
+  section: '1.4'
+  latex: \gamma = \frac{n_2 \omega_0}{c A_{\mathrm{eff}}}, \qquad A_{\mathrm{eff}} = \frac{\left(\iint |F(x,y)|^2\,dx\,dy\right)^2}{\iint
+    |F(x,y)|^4\,dx\,dy}
+  symbols:
+  - \gamma
+  - n_2
+  - \omega
+  - c
+  - A_{\mathrm{eff}}
+  source_id: agrawal_josab_2011
+  locator: Eq. (8), Sect. 2.B
+  notes: omega_0 is the carrier angular frequency and F(x,y) the modal field distribution. Book symbol omega carries subscript
+    0 for the carrier. The glyph-level layout was garbled in extraction, but the text 'γ ... ω0n2 ... cAeff' and the Aeff
+    ratio of the |F|^2 and |F|^4 integrals are clear. Equivalent form gamma = 2 pi n2/(lambda Aeff). A_eff in µm² must be
+    converted to m² before use.
+  verified: match
+- id: ch01.eq.nlse_general
+  section: '1.4'
+  latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A - \sum_{m\ge 2}\frac{i^{m+1}\beta_m}{m!}\frac{\partial^m A}{\partial
+    t^m} = i\gamma\left(1 + \frac{i}{\omega_0}\frac{\partial}{\partial t}\right)\left(A(z,t)\int_0^\infty R(t^\prime)\,|A(z,t-t^\prime)|^2\,dt^\prime\right)
+  symbols:
+  - A
+  - \alpha
+  - \beta
+  - \gamma
+  - \omega
+  source_id: agrawal_josab_2011
+  locator: Eq. (7), Sect. 2.B
+  notes: 'General scalar propagation equation with all dispersion orders, self-steepening and Raman response R(t) = (1 - f_R)
+    delta(t) + f_R h_R(t) (Eq. 9, f_R about 0.18). The extraction showed fragments ''i mβm m!'', ''α 2 A'', ''iγ 1 i ∂ ω0
+    ∂t'', ''R t0 |A z; t − t0|^2 dt0''. The sign arrangement is transcribed from Agrawal''s standard form and should be checked
+    against the PDF. alpha here is the POWER loss coefficient (book convention). Verifier: signs not glyph-verified; consistent
+    with Eqs. (10)-(11).'
+  verified: partial_fixed
+- id: ch01.eq.nlse_beta3
+  section: '1.4'
+  latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A + \frac{i\beta_2}{2}\frac{\partial^2 A}{\partial T^2} - \frac{\beta_3}{6}\frac{\partial^3
+    A}{\partial T^3} = i\gamma |A|^2 A
+  symbols:
+  - A
+  - \alpha
+  - \beta
+  - \gamma
+  source_id: agrawal_josab_2011
+  locator: Specialization of Eq. (7) (m <= 3, R(t) = delta(t), no self-steepening, retarded time T = t - beta1 z); not printed
+    in this form in the source
+  notes: 'DERIVED, NOT PRINTED. The m = 2 term of Eq. (7) gives +(i beta2/2) d2A/dT2 and the m = 3 term gives -(beta3/6) d3A/dT3.
+    The book must either cite Eq. (7) and show this reduction, or find a source that prints this exact form (e.g. Agrawal,
+    Nonlinear Fiber Optics, Eq. 2.3.43 or similar; not verified). Listed in the gaps file. Verifier: derivation checked; present
+    in prose as a derivation, not a citation.'
+  verified: partial_fixed
+- id: ch01.eq.nlse_lab_frame
+  section: '1.4'
+  latex: \frac{\partial A}{\partial z} + \frac{\alpha}{2}A + \beta_1\frac{\partial A}{\partial t} + \frac{i\beta_2}{2}\frac{\partial^2
+    A}{\partial t^2} = i\gamma |A|^2 A
+  symbols:
+  - A
+  - \alpha
+  - \beta
+  - \gamma
+  source_id: agrawal_josab_2011
+  locator: Eq. (10), Sect. 2.C
+  notes: 'Valid for pulses wider than about 5 ps: R(t) is replaced by a delta function and dispersion beyond second order
+    is dropped.'
+  verified: match
+- id: ch01.eq.nlse_retarded
+  section: '1.4'
+  latex: i\frac{\partial A}{\partial z} + \frac{i\alpha}{2}A - \frac{\beta_2}{2}\frac{\partial^2 A}{\partial T^2} + \gamma
+    |A|^2 A = 0, \qquad T = t - \beta_1 z
+  symbols:
+  - A
+  - \alpha
+  - \beta
+  - \gamma
+  source_id: agrawal_josab_2011
+  locator: Eq. (11), Sect. 2.C
+  notes: 'With alpha = 0 this is the NLS equation. Sign convention: field ~ exp[i(beta0 z - omega0 t)] (Eq. 6). Communications
+    papers using exp(+j omega t), e.g. the GN literature, flip the sign of the beta2 term.'
+  verified: match
+- id: ch01.eq.leff
+  section: '1.4'
+  latex: L_{\mathrm{eff}} = \frac{1 - e^{-\alpha L}}{\alpha}
+  symbols:
+  - L_{\mathrm{eff}}
+  - \alpha
+  - L
+  source_id: agrawal_josab_2011
+  locator: Text after Eq. (16), Sect. 3.A
+  notes: Also printed in ITU-T G.Sup47 clause 7.2 (p. 5) with the same symbols, and the asymptote 1/alpha is stated there.
+    Poggiolini et al. write L_eff = [1 - exp(-2 alpha Ls)]/(2 alpha) with alpha the FIELD coefficient, which is identical
+    once alpha_book = 2 alpha_Pogg.
+  verified: match
+- id: ch01.eq.lnl_and_N
+  section: '1.4'
+  latex: L_{\mathrm{NL}} = (\gamma P_0)^{-1}, \qquad N^2 = \frac{L_D}{L_{\mathrm{NL}}} = \frac{\gamma P_0 T_0^2}{|\beta_2|}
+  symbols:
+  - L_{\mathrm{NL}}
+  - \gamma
+  - P
+  - L_D
+  - \beta
+  source_id: agrawal_josab_2011
+  locator: Eq. (14) and text following it, Sect. 2.C
+  notes: P_0 is the peak power and T_0 the pulse width. Book uses P (per-channel power) and L_D = T_0^2/|beta_2|.
+  verified: match
+- id: ch01.eq.spm_phase
+  section: '1.4'
+  latex: \phi(L,T) = \phi(0,T) + \gamma P(0,T) L_{\mathrm{eff}}, \qquad \phi_{\mathrm{NL}}(L,T) = f_p(T)\,\frac{L_{\mathrm{eff}}}{L_{\mathrm{NL}}}
+  symbols:
+  - \gamma
+  - P
+  - L_{\mathrm{eff}}
+  - L_{\mathrm{NL}}
+  source_id: agrawal_josab_2011
+  locator: Eqs. (16) and (17), Sect. 3.A
+  notes: For CW light (f_p = 1) the peak SPM phase is phi_NL = gamma P L_eff. Valid when dispersion is negligible over L (beta2
+    = 0 in Eq. 11). P(0,T) = P_0 f_p(T).
+  verified: match
+- id: ch01.eq.fwm_efficiency_gn
+  section: '1.4'
+  latex: \rho(f_1,f_2,f) = \left|\frac{1 - e^{-\alpha L_s}\, e^{j\Delta\beta L_s}}{\alpha - j\Delta\beta}\right|^2 L_{\mathrm{eff}}^{-2},
+    \qquad \Delta\beta = 4\pi^2\beta_2 (f_1-f)(f_2-f) = \beta_2\,\Delta\omega_1\Delta\omega_2
+  symbols:
+  - \alpha
+  - \beta
+  - L
+  - L_{\mathrm{eff}}
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (2), Sect. III
+  notes: 'As printed: rho = |(1 - e^{-2 alpha Ls} e^{j4pi^2 beta2 Ls (f1-f)(f2-f)}) / (2 alpha - j4pi^2 beta2 (f1-f)(f2-f))|^2
+    L_eff^{-2}, with alpha the FIELD loss (book alpha = 2 alpha_Pogg) and beta2 = |beta2|. The Delta-beta notation and Delta-omega_k
+    = 2 pi (f_k - f) are book relabelings and do not appear in the source. This is the normalized non-degenerate FWM efficiency
+    with phase mismatch Delta-beta. For f3 = f1 + f2 - f it gives the textbook Delta-beta = beta2 Delta-omega_1 Delta-omega_2.
+    The 2014 tutorial Eq. (6) adds beta3: 4pi^2 (f1-f)(f2-f)[beta2 + pi beta3 (f1+f2)].'
+  verified: match
+- id: ch01.eq.fwm_efficiency_gsup47
+  section: '1.4'
+  latex: \eta_{\mathrm{FWM}} = \left|\frac{1-\exp[-(\alpha + i\Delta\beta)L]}{(\alpha + i\Delta\beta)\,L_{\mathrm{eff}}}\right|^2
+    \;(\text{transcription uncertain}), \qquad \Delta\beta \propto \frac{\lambda_c^2}{c} D(\lambda_c)\, \Delta f^2
+  symbols:
+  - \alpha
+  - L
+  - L_{\mathrm{eff}}
+  - D
+  - c
+  source_id: itu_t_gsup47_2025
+  locator: Clause 7.3 'Four-wave mixing efficiency', unnumbered equations, p. 6
+  notes: 'LOW CONFIDENCE TRANSCRIPTION. The PDF text extraction garbled the formulas. Readable fragments are: P_FWM proportional
+    to (n2/Aeff)^2 ... L_eff ... e^{-alpha L} times eta; eta built from ''1 exp'', ''(alpha + i Delta-beta)'', ''L''; Delta-beta
+    with factors ''4'', ''pi'', ''lambda_c^2'', ''c'', ''Delta-f^2'', ''D(lambda_c)''; lambda_c defined from c and (f_i +
+    f_j). The source variable for FWM efficiency is eta; it is renamed eta_FWM here to avoid a clash with the book''s GN eta.
+    Use ch01.eq.fwm_efficiency_gn for the book; this record only notes that ITU gives an equivalent form. Re-read the PDF
+    to fix the exact form. DO NOT USE: extraction garbled; use ch01.eq.fwm_efficiency_gn.'
+  verified: partial_fixed
+- id: ch01.eq.manakov
+  section: '1.4'
+  latex: i\frac{\partial \mathbf{u}}{\partial z} + \frac{\beta_2}{2}\frac{\partial^2 \mathbf{u}}{\partial t^2} \cdots + \frac{8}{9}\gamma\,|\mathbf{u}|^2\mathbf{u}
+    = (\text{linear PMD term}) + (\text{nonlinear PMD term})
+  symbols:
+  - \gamma
+  - \beta
+  source_id: marcuse_jlt_1997
+  locator: Eq. (12), Sect. II, p. 1737
+  notes: 'STRUCTURE ONLY; the equation glyphs could not be extracted. The source text confirms that the left side of (12)
+    holds the dispersion term and the Kerr term ''averaged over the Poincaré sphere with the well-known 8/9 factor'', and
+    that the right side holds the linear-PMD term and the new nonlinear-PMD term. Setting the right side to zero gives the
+    Manakov equation. The exact signs, loss term and form of the right side MUST be transcribed from the PDF (photonics.umbc.edu
+    PAJ108.pdf) before use. u is the two-component (Jones) field vector, |u|^2 = |u_x|^2 + |u_y|^2. Verifier: 8/9 factor and
+    structure confirmed; exact glyphs unverified.'
+  verified: partial_fixed
+- id: ch01.eq.gnrf
+  section: '1.6'
+  latex: G_{\mathrm{NLI}}(f) = \frac{16}{27}\gamma^2 L_{\mathrm{eff}}^2 \int_{-\infty}^{\infty}\!\int_{-\infty}^{\infty} G_{\mathrm{WDM}}(f_1)G_{\mathrm{WDM}}(f_2)G_{\mathrm{WDM}}(f_1+f_2-f)\,\rho(f_1,f_2,f)\,\chi(f_1,f_2,f)\,df_2\,df_1
+  symbols:
+  - \gamma
+  - L_{\mathrm{eff}}
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (1) 'GNRF', Sect. III
+  notes: G_NLI and G_WDM are UNILATERAL power spectral densities in W/Hz; these G symbols are NOT amplifier gain. Assumes
+    identical spans with exact per-span loss compensation (transparent, homogeneous link) and dual-polarization signals; 16/27
+    is the PM coefficient. The 2014 tutorial prints the same formula as Eq. (2) and a general multi-span form as Eq. (1).
+  verified: match
+- id: ch01.eq.gn_phased_array
+  section: '1.6'
+  latex: \chi(f_1,f_2,f) = \frac{\sin^2\!\left(2N_s\pi^2 (f_1-f)(f_2-f)\beta_2 L_s\right)}{\sin^2\!\left(2\pi^2 (f_1-f)(f_2-f)\beta_2
+    L_s\right)}
+  symbols:
+  - N_s
+  - \beta
+  - L
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (3), Sect. III
+  notes: 'Phased-array factor that sets coherent NLI accumulation over N_s spans; chi = 1 for one span. The sum form is Eq.
+    (16): chi = N_s + 2 sum_{n=1}^{N_s - 1} (N_s - n) cos(4 n pi^2 beta2 Ls (f1-f)(f2-f)). L_s is the span length (book L).'
+  verified: match
+- id: ch01.eq.gn_osnr_tot
+  section: '1.6'
+  latex: \mathrm{GSNR} = \frac{P_{\mathrm{ch}}}{P_{\mathrm{ASE}} + P_{\mathrm{NLI}}}
+  symbols:
+  - \mathrm{GSNR}
+  - P
+  - P_{\mathrm{ASE}}
+  - P_{\mathrm{NLI}}
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (4), Sect. III
+  notes: The source calls this OSNR_tot, with P_ASE and P_NLI measured in a 'conventional noise bandwidth' B_N. The 2014 tutorial
+    Eq. (22) calls it SNR_NL with B_N = R_s. The book's GSNR corresponds to B_N = R_s. Do NOT mix this with the book's OSNR
+    in B_ref = 12.5 GHz.
+  verified: match
+- id: ch01.eq.gn_accumulation_eps
+  section: '1.6'
+  latex: G_{\mathrm{NLI}}(f) = G_{\mathrm{NLI}}(f)\big|_{N_s=1}\, N_s^{1+\varepsilon}
+  symbols:
+  - N_s
+  - \varepsilon
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (7), Sect. IX
+  notes: 'epsilon = 0 means incoherent (power) accumulation and epsilon = 1 means fully phase-matched. The 2014 tutorial writes
+    the same law as Eq. (16) and defines epsilon exactly as Eq. (18): epsilon = ln(1 + G_cc/G_inc)/ln(N_s). NOTATION CONFLICT:
+    book/notation.yaml calls epsilon the ''EGN coherent-accumulation exponent correction'', but in the sources epsilon belongs
+    to the coherent GN model and is unrelated to the EGN non-Gaussianity correction.'
+  verified: match
+- id: ch01.eq.gn_eps_closed_form
+  section: '1.6'
+  latex: \varepsilon \approx \frac{3}{10}\ln\!\left(1 + \frac{6}{L_s}\frac{L_{\mathrm{eff,a}}}{\mathrm{asinh}\!\left(\frac{\pi^2}{2}\beta_2
+    L_{\mathrm{eff,a}} B_{\mathrm{WDM}}^2\right)}\right)
+  symbols:
+  - \varepsilon
+  - L
+  - \beta
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (23), Sect. XI-C
+  notes: Nyquist-WDM. Extracted as '3 10· loge( 1 + 6 Ls Leff,a asinh(π2 2 β2Leff,aB2 WDM))'. The placement of L_eff,a in
+    the numerator and asinh in the denominator follows the 2014 tutorial Eq. (41), where the extraction shows the same order.
+    VERIFY the fraction structure against the published PDF. L_eff,a = 1/(2 alpha_Pogg) = 1/alpha_book is the asymptotic effective
+    length (2014 tutorial, after Eq. 37). Accurate within a few percent if the asinh argument is > 10 and span loss > 10 dB
+    (2014).
+  verified: match
+- id: ch01.eq.gn_nyquist_single_span
+  section: '1.6'
+  latex: G_{\mathrm{NLI}}(0) \approx \frac{8}{27}\gamma^2 G_{\mathrm{WDM}}^3 L_{\mathrm{eff}}^2\,\frac{\mathrm{asinh}\!\left(\frac{\pi^2}{2}|\beta_2|
+    L_{\mathrm{eff,a}} B_{\mathrm{WDM}}^2\right)}{\pi |\beta_2| L_{\mathrm{eff,a}}}
+  symbols:
+  - \gamma
+  - L_{\mathrm{eff}}
+  - \beta
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (13), Sect. XI-A; also 2014 tutorial Eq. (37)
+  notes: 'Ideal Nyquist-WDM, one span, centre of comb. The leading 8/27 is visible in the extraction of the log-form Eq. (14)
+    but was dropped from the Eq. (13) and 2014 Eq. (37) extractions. Check it against the published PDF. L_eff,a = 1/(2 alpha)
+    with field alpha (stated explicitly in 2014 after Eq. 37). Requires span loss > ~7 dB (2012) or > ~10 dB (2014). Error
+    is at most 0.35 dB at x ~ 1 (2014). Log form, Eq. (14): asinh(x) ~ ln(2x) for x > 3.5.'
+  verified: match
+- id: ch01.eq.gn_nonnyquist_single_span
+  section: '1.6'
+  latex: G_{\mathrm{NLI}}(0) \approx \frac{8}{27}\gamma^2 G_{\mathrm{WDM}}^3 L_{\mathrm{eff}}^2\,\frac{\mathrm{asinh}\!\left(\frac{\pi^2}{2}|\beta_2|
+    L_{\mathrm{eff,a}} B_{\mathrm{ch}}^2 N_{\mathrm{ch}}^{2B_{\mathrm{ch}}/\Delta f}\right)}{\pi|\beta_2| L_{\mathrm{eff,a}}}
+  symbols:
+  - \gamma
+  - L_{\mathrm{eff}}
+  - \beta
+  - B_{\mathrm{ch}}
+  - \Delta f
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (15), Sect. XI-B; also 2014 tutorial Eq. (40)
+  notes: Rectangular channels of bandwidth B_ch, spacing Delta-f, N_ch channels. With B_ch = Delta-f it reduces to Eq. (13).
+    Valid for span loss >= 7 dB, beta2 >= 4 ps^2/km, Rs >= 28 GBd and B_ch/Delta-f >= 0.25. Error < 0.5 dB at full C-band
+    with roll-off 0.3. The exponent 2B_ch/Delta-f on N_ch is read from the extraction 'B 2 chN 2 Bch ∆f ch'; verify it.
+  verified: match
+- id: ch01.eq.gn_eta_cubic
+  section: '1.6'
+  latex: P_{\mathrm{NLI}} = \eta\, P_{\mathrm{ch}}^3
+  symbols:
+  - P_{\mathrm{NLI}}
+  - \eta
+  - P
+  source_id: poggiolini_jlt_2014
+  locator: Eq. (27), Sect. IV-A
+  notes: eta is independent of P_ch and has units 1/W^2. It matches book/notation.yaml. The 2014 tutorial was read as the
+    pre-review preprint; the equation number may differ in the published version.
+  verified: match
+- id: ch01.eq.gn_snr_nl
+  section: '1.6'
+  latex: \mathrm{GSNR} = \frac{P_{\mathrm{ch}}}{P_{\mathrm{ASE}} + \eta P_{\mathrm{ch}}^3}
+  symbols:
+  - \mathrm{GSNR}
+  - P
+  - P_{\mathrm{ASE}}
+  - \eta
+  source_id: poggiolini_jlt_2014
+  locator: Eq. (28), Sect. IV-A
+  notes: 'Source symbol: SNR_NL, with B_N = R_s (Eq. 21).'
+  verified: match
+- id: ch01.eq.gn_popt
+  section: '1.6'
+  latex: P_{\mathrm{opt}} = \left(\frac{P_{\mathrm{ASE}}}{2\eta}\right)^{1/3}
+  symbols:
+  - P_{\mathrm{ASE}}
+  - \eta
+  source_id: poggiolini_jlt_2014
+  locator: Eq. (29), Sect. IV-A
+  notes: 'Source: P_ch^opt = cube-root(P_ASE/(2 eta)). P_ASE and eta here are end-of-link totals. The per-span form is Eq.
+    (55): P_opt = cube-root(P_ASE^{1 span}/(2 eta^{1 span})), identical when both scale as N_s (IGN, epsilon = 0). The 2012
+    paper''s version with epsilon is ch01.eq.gn_popt_eps.'
+  verified: match
+- id: ch01.eq.gn_popt_eps
+  section: '1.6'
+  latex: P_{\mathrm{ch,opt}}^{(\mathrm{BER})} = B_{\mathrm{ch}}^{\mathrm{eq}}\left(\frac{P_{\mathrm{ASE}}^{(1)}}{2\,p_{\mathrm{NLI}}^{(1)}
+    N_s^{\varepsilon}}\right)^{1/3}
+  symbols:
+  - P_{\mathrm{ASE}}
+  - N_s
+  - \varepsilon
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (28), Sect. XII-A
+  notes: P_ASE^(1) is the ASE after one span. p_NLI^(1) is the one-span NLI normalized by P_ch^3 (B_ch^eq)^-3 (Eq. 26), and
+    B_ch^eq = P_ch/G_WDM(0) (Eq. 27). Inserting it into Eq. (25) gives P_ASE = 2 P_NLI for any epsilon. With epsilon ~ 0 the
+    reach-maximizing power, Eq. (29), equals this.
+  verified: match
+- id: ch01.eq.gn_osnr_vs_ns
+  section: '1.6'
+  latex: \mathrm{GSNR} = \frac{P_{\mathrm{ch}}}{P_{\mathrm{ASE}}^{(1)} N_s + p_{\mathrm{NLI}}^{(1)} N_s^{1+\varepsilon} P_{\mathrm{ch}}^3
+    \left(B_{\mathrm{ch}}^{\mathrm{eq}}\right)^{-3}}
+  symbols:
+  - \mathrm{GSNR}
+  - P
+  - P_{\mathrm{ASE}}
+  - N_s
+  - \varepsilon
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (25), Sect. XII
+  notes: 'Source symbol: OSNR_tot. Identical spans with loss exactly compensated.'
+  verified: match
+- id: ch01.eq.gn_nsmax
+  section: '1.6'
+  latex: N_s^{\max} = \frac{B_{\mathrm{ch}}^{\mathrm{eq}}}{3\,\mathrm{OSNR}_T}\left(\frac{4}{\left(P_{\mathrm{ASE}}^{(1)}\right)^2
+    p_{\mathrm{NLI}}^{(1)}}\right)^{1/3}
+  symbols:
+  - N_s
+  - P_{\mathrm{ASE}}
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (30), Sect. XII-B
+  notes: 'epsilon ~ 0. OSNR_T is the target OSNR (book: required GSNR). The 2014 tutorial Eq. (56) gives the per-span form
+    N_s^max = (1/(3 SNR_T)) cube-root(4/((P_ASE^1span)^2 eta^1span)). The structure (4 over P_ASE^2 times p_NLI) comes from
+    the extraction ''3vuut 4 ( P (1) ASE ) 2 p (1) NLI''; verify it against the PDF.'
+  verified: match
+- id: ch01.eq.gn_reach_sensitivity
+  section: '1.6'
+  latex: \Delta N_s^{\max}[\mathrm{dB}] = -\frac{1}{3}\,\Delta p_{\mathrm{NLI}}^{(1)}[\mathrm{dB}]
+  symbols:
+  - N_s
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (32), Sect. XII-B
+  notes: The 2014 tutorial Eqs. (30), (32) and (33) give the same 1/3 dampening for P_opt, N_s^max and the max OSNR vs an
+    error in eta. The 1/3 is lost in the 2014 extraction, but the text says 'a 1 dB error in η results in only 1/3 dB error'.
+  verified: match
+- id: ch01.eq.ase_per_span_2014
+  section: '1.6'
+  latex: P_{\mathrm{ASE}}^{1\,\mathrm{span}} = h\nu F (G - 1) R_s \approx h\nu F G R_s
+  symbols:
+  - P_{\mathrm{ASE}}
+  - h
+  - \nu
+  - F
+  - G
+  - R_s
+  source_id: poggiolini_jlt_2014
+  locator: Eq. (51), Sect. VII
+  notes: 'Source writes the amplifier gain as Lambda: P_ASE = h nu F (Lambda - 1) R_s. Noise is counted over both polarizations
+    in bandwidth R_s. Relabeled to the book''s G here.'
+  verified: match
+- id: ch01.eq.gn_def_ign
+  section: '1.6'
+  latex: G_{\mathrm{NLI}}^{\mathrm{inc}}(f) = G_{\mathrm{NLI}}^{1\,\mathrm{span}}(f)\,N_s, \qquad G_{\mathrm{NLI}}(f) = G_{\mathrm{NLI}}^{1\,\mathrm{span}}(f)\,N_s^{1+\varepsilon},
+    \qquad \varepsilon = \frac{\ln\!\left(1 + G_{\mathrm{NLI}}^{cc}(f)/G_{\mathrm{NLI}}^{\mathrm{inc}}(f)\right)}{\ln N_s}
+  symbols:
+  - N_s
+  - \varepsilon
+  source_id: poggiolini_jlt_2014
+  locator: Eqs. (15), (16), (18), Sect. III-D
+  notes: Defines the IGN (incoherent GN) model and epsilon exactly. Epsilon was dropped from the extraction but is identified
+    from context and from 2012 Eqs. (7) and (21).
+  verified: match
+- id: ch01.eq.oct_shannon
+  section: '1.6'
+  latex: \mathrm{OCT} = p\,\frac{R_s}{\Delta f}\log_2\!\left(1 + \mathrm{GSNR}\right)\ [\mathrm{bit/s/Hz}]
+  symbols:
+  - R_s
+  - \Delta f
+  - \mathrm{GSNR}
+  - C
+  source_id: poggiolini_jlt_2014
+  locator: Eq. (62), Sect. VIII-B
+  notes: 'p = 1 for a single-polarization signal and p = 2 for a PM signal. Assumes a Gaussian input constellation and a memoryless
+    AWGN channel with the LWN approximation. At the Nyquist limit (R_s = Delta-f), OCT is the spectral efficiency. Source
+    symbol for GSNR: SNR_NL. The book''s C per polarization is log2(1 + GSNR) bit/symbol. Verifier: source labels Eq. (62)
+    bit/symbol; check unit before use.'
+  verified: partial_fixed
+- id: ch01.eq.egn_decomposition
+  section: '1.6'
+  latex: G_{\mathrm{NLI}}^{\mathrm{EGN}}(f) = G_{\mathrm{NLI}}^{\mathrm{GN}}(f) + G_{\mathrm{NLI}}^{\mathrm{corr}}(f), \qquad
+    G_{\mathrm{SCI}}^{\mathrm{EGN}}(f) = P^3\left[\kappa_1(f) + \Phi_a\,\kappa_2(f) + \Psi_a\,\kappa_3(f)\right]
+  symbols:
+  - P
+  source_id: carena_oe_2014
+  locator: Eq. (1), Sect. 2, p. 16337; Eq. (5), Sect. 3
+  notes: The correction is written with a '+' sign; it reduces NLI for PM-QAM because Phi_a < 0 (QPSK -1, 16QAM -17/25, 64QAM
+    -13/21; Table 1). kappa_1 is the GN-model SCI term; kappa_2 and kappa_3 are correction integrals that need 4th-order (Phi_a)
+    and 6th-order (Psi_a) moments of the constellation. Similar decompositions hold for XCI (Eq. 14 and following) and MCI
+    (Eq. 23). G here is a PSD, not amplifier gain. P is the per-channel power.
+  verified: match

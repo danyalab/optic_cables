@@ -1,1302 +1,1356 @@
-# Ledger, chapter 1, sections 1.4 and 1.6 (retrieval agent ch01_b).
-# Symbol mapping between the sources and book/notation.yaml is in ch01_b_equations.yaml and ch01_b_gaps.md.
-
 records:
-  # ------------------------------------------------------------------
-  # 1.4  n2 measurements (disagreements recorded as separate records)
-  # ------------------------------------------------------------------
-  - id: ch01.kerr.n2_kato1995_smf
-    section: "1.4"
-    claim: "Nonlinear index n2 of standard single-mode fiber at 1.55 um, cross-phase-modulation method with depolarized pump"
-    value: 2.96e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "standard SMF (Ge-doped core)"
-      method: "XPM method, depolarized pump; repeatability within +/-1%"
-    source_id: kato_ol_1995
-    locator: "Abstract"
-    quote: "dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Abstract only. These values are about 15-30% higher than the SPM and cw measurements of other groups (Kim 1994, Namihira 1994, Stolen 1998, ITU-T G.Sup47). See ch01.kerr.n2_* records and the gaps file."
-
-  - id: ch01.kerr.n2_kato1995_dsf
-    section: "1.4"
-    claim: "Nonlinear index n2 of dispersion-shifted fiber at 1.55 um (Kato et al., XPM with depolarized pump)"
-    value: 3.35e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "DSF"
-      method: "XPM method, depolarized pump"
-    source_id: kato_ol_1995
-    locator: "Abstract"
-    quote: "dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Disagrees with Kim 1994 (2.52e-20), Namihira 1994 (~2.31e-20) and Stolen 1998 (2.45e-20) for DSF."
-
-  - id: ch01.kerr.n2_kato1995_pscf
-    section: "1.4"
-    claim: "Nonlinear index n2 of pure-silica-core single-mode fiber at 1.55 um (Kato et al.)"
-    value: 2.79e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "pure silica core SMF"
-      method: "XPM method, depolarized pump"
-    source_id: kato_ol_1995
-    locator: "Abstract"
-    quote: "dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "Disagrees with Kim 1994 silica-core 2.36e-20 (measured at 1.319 um) and G.Sup47 pure-silica constant 2.61e-20."
-
-  - id: ch01.kerr.n2_kato1995_dcf
-    section: "1.4"
-    claim: "Nonlinear index n2 of dispersion-compensating fiber at 1.55 um (Kato et al.)"
-    value: 4.44e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "DCF (high Ge doping)"
-      method: "XPM method, depolarized pump"
-    source_id: kato_ol_1995
-    locator: "Abstract"
-    quote: "and dispersion-compensating fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20, and 4.44 × 10−20 m2/W, respectively, at 1.55 μm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.kerr.n2_kim1994_silica_core
-    section: "1.4"
-    claim: "Nonlinear index n2 of the glass of silica-core fiber, measured at 1.319 um (+/-5%)"
-    value: 2.36e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1319
-      fiber: "silica-core fiber"
-      note: "Source gives 2.36e-16 cm^2/W, which equals 2.36e-20 m^2/W. The authors state the value should also hold at 1.55 um."
-    source_id: kim_ol_1994
-    locator: "Abstract"
-    quote: "the n 2 of silica-core and dispersion-shifted fibers is 2.36 × 10 −16 and 2.52 × 10 −16 cm 2 /W (±5%)"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.kerr.n2_kim1994_dsf
-    section: "1.4"
-    claim: "Nonlinear index n2 of dispersion-shifted fiber glass, measured at 1.319 um (+/-5%)"
-    value: 2.52e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1319
-      fiber: "DSF"
-      note: "Converted from 2.52e-16 cm^2/W"
-    source_id: kim_ol_1994
-    locator: "Abstract"
-    quote: "the n 2 of silica-core and dispersion-shifted fibers is 2.36 × 10 −16 and 2.52 × 10 −16 cm 2 /W (±5%)"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.kerr.n2_germania_ratio_kim1994
-    section: "1.4"
-    claim: "Estimated n2 of germania relative to pure silica"
-    value: 3
-    unit: "1"
-    kind: measured
-    conditions:
-      note: "ratio n2(GeO2)/n2(SiO2), estimated"
-    source_id: kim_ol_1994
-    locator: "Abstract"
-    quote: "We also estimate that the n(2) of germania is three times the n(2) of pure silica."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.kerr.n2_namihira1994_dsf
-    section: "1.4"
-    claim: "n2 of various DSFs at 1.55 um, SPM method, random polarization (+/-5%)"
-    value: 2.31e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "DSF (various)"
-      method: "SPM, random polarization states"
-    source_id: namihira_el_1994
-    locator: "Abstract"
-    quote: "n2 for various DSFs is found to be ~2.31 × 10-20 m2/W (± 5 %) for random polarisation states at 1.55 µm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.kerr.n2_stolen1998_dsf
-    section: "1.4"
-    claim: "n2 of two 20 km DSFs by SPM at 1.55 um for random polarization (+/-5%)"
-    value: 2.45e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "DSF, two 20 km samples"
-      method: "SPM, random polarization"
-      note: "Converted from 2.45e-16 cm^2/W"
-    source_id: stolen_jlt_1998
-    locator: "Abstract"
-    quote: "We measure a value of N/sub 2/=2.45/spl times/10/sup -16/ cm/sup 2//W (/spl plusmn/5%) by self-phase modulation (SPM) in two 20 km dispersion-shifted fibers"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "The quote is taken verbatim from the IEEE abstract markup. It reads 'n2 = 2.45 x 10^-16 cm^2/W (+/-5%)'."
-
-  - id: ch01.kerr.n2_pure_silica_gsup47
-    section: "1.4"
-    claim: "n2 of pure silica (constant term of the G.Sup47 empirical n2 vs effective GeO2 concentration relation)"
-    value: 2.61e-20
-    unit: "m^2/W"
-    kind: model_param
-    conditions:
-      note: "n2 [1e-20 m^2/W] = 0.0556 * eta_GeO2 [mol%] + 2.61; index profile and field distribution taken into account"
-    source_id: itu_t_gsup47_2025
-    locator: "Appendix I, clause I.3 'Non-linear refractive index', p. 10"
-    quote: "Here 𝜂GeO2 is the effective GeO2 concentration. The constant term on the right-hand side represents the n2 value of pure silica."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The 2.61 constant appears in the printed formula just before the quoted sentence. The value lies between Kim 1994 (2.36e-20, silica core) and Kato 1995 (2.79e-20, PSCF)."
-
-  - id: ch01.kerr.n2_geo2_slope_gsup47
-    section: "1.4"
-    claim: "Slope of n2 vs effective GeO2 concentration"
-    value: 0.0556
-    unit: "1e-20 m^2/W per mol% GeO2"
-    kind: model_param
-    conditions:
-      note: "linear empirical relation, G.Sup47 clause I.3"
-    source_id: itu_t_gsup47_2025
-    locator: "Appendix I, clause I.3, p. 10"
-    quote: "With GeO2, which is a typical dopant ... the non-linear refractive index increases linearly with GeO2 concentration."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The quote is abridged with an ellipsis. The full sentence is: 'With GeO2, which is a typical dopant that is added to increase the refractive index of the core region, the non-linear refractive index increases linearly with GeO2 concentration.'"
-
-  - id: ch01.kerr.n2_sterlite_g657a2
-    section: "1.4"
-    claim: "Vendor-measured n2 of G.657.A2 fiber (cw-SPM method)"
-    value: 2.17e-20
-    unit: "m^2/W"
-    kind: measured
-    conditions:
-      wavelength_nm: 1550
-      fiber: "Sterlite BOWLITE G.657.A2"
-      method: "cw dual-frequency SPM (Boskovic method), 1 km sample"
-    source_id: sterlite_appnote_n2_g657
-    locator: "Results section and conclusion"
-    quote: "average n2 for G657.A2 fiber is about 2.17×10 (m /W) and the nonlinear coefficient ( ) is about 1.255 (W- km)"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: low
-    notes: "Garbled extraction, and the PDF itself is inconsistent: the results section gives A2 = 2.17 and B3 = 2.15, while the conclusion gives A2 = 2.15 and B3 = 2.17. Use only to show the spread among measurements. The same note gives gamma of about 1.255 /W/km for A2 and 1.27 /W/km for B3."
-
-  - id: ch01.kerr.n2_boskovic_method_error
-    section: "1.4"
-    claim: "Claimed error of the cw dual-frequency beat-signal n2 measurement method"
-    value: 5
-    unit: "%"
-    kind: fact
-    conditions:
-      wavelength_nm: 1550
-      note: "upper bound on error; applied to standard, DSF and DCF fibers"
-    source_id: boskovic_ol_1996
-    locator: "Abstract"
-    quote: "A method for measuring the nonlinear refractive index of optical fibers with an error of less than 5% is demonstrated."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.kerr.kerr_index_relation
-    section: "1.4"
-    claim: "Kerr intensity-dependent index n = n0 + n2 I, valid for intense fields in silica fibers"
-    value: "n = n0 + n2 I"
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "G.Sup47 Appendix I.3"
-    source_id: itu_t_gsup47_2025
-    locator: "Appendix I, clause I.3, p. 10"
-    quote: "the refractive index of optical fibres depends on the optical intensity inside the fibres and can be expressed as follows"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  # ------------------------------------------------------------------
-  # 1.4  gamma, Aeff, L_eff
-  # ------------------------------------------------------------------
-  - id: ch01.kerr.gamma_range_silica_agrawal
-    section: "1.4"
-    claim: "Typical range of the nonlinear parameter gamma for most silica fibers"
-    value: [1, 10]
-    unit: "1/(W·km)"
-    kind: spec_typ
-    conditions:
-      note: "general statement covering all silica fiber types"
-    source_id: agrawal_josab_2011
-    locator: "Sect. 2.C, text after Eq. (11), p. A3"
-    quote: "The nonlinear param eter γ is positive and has a value in the range of 1–10 W −1=km for most silica fibers"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Large-Aeff pure-silica fibers fall below this range: Poggiolini uses gamma = 0.8 for PSCF. The page number is inferred from the A1-A10 pagination and should be verified."
-
-  - id: ch01.kerr.gamma_smf_gn2012
-    section: "1.4"
-    claim: "Nonlinear coefficient gamma of SMF used in the GN-model reference systems"
-    value: 1.3
-    unit: "1/(W·km)"
-    kind: model_param
-    conditions:
-      fiber: "SMF (G.652-like)"
-      wavelength_nm: 1550
-    source_id: poggiolini_jlt_2012
-    locator: "Table I"
-    quote: "| SMF | 0.2 | 16.5 | 1.3 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The quote is the table row (alpha dB/km, D ps/nm/km, gamma 1/W/km). The 2014 tutorial Table I also uses SMF gamma = 1.3."
-
-  - id: ch01.kerr.gamma_pscf_gn2012
-    section: "1.4"
-    claim: "Nonlinear coefficient gamma of large-effective-area pure-silica-core fiber (LPSCF) in GN-model reference systems"
-    value: 0.8
-    unit: "1/(W·km)"
-    kind: model_param
-    conditions:
-      fiber: "LPSCF (large-Aeff PSCF; G.654-like)"
-      wavelength_nm: 1550
-    source_id: poggiolini_jlt_2012
-    locator: "Table I"
-    quote: "| LPSCF | 0.165 | 20.4 | 0.8 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "This is the closest primary model parameter to G.654.E-class fiber that was found. The 2014 tutorial Table I PSCF row is alpha 0.17 dB/km, D 20.1, gamma 0.8. No measured gamma for a named G.654.E product was found (see gaps)."
-
-  - id: ch01.kerr.gamma_nzdsf_gn2012
-    section: "1.4"
-    claim: "Nonlinear coefficient gamma of NZDSF in GN-model reference systems"
-    value: 1.6
-    unit: "1/(W·km)"
-    kind: model_param
-    conditions:
-      fiber: "NZDSF (G.655-like), D = 3.9 ps/(nm·km)"
-    source_id: poggiolini_jlt_2012
-    locator: "Table I"
-    quote: "| NZDSF | 0.2 | 3.9 | 1.6 |"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The 2014 tutorial Table I instead gives NZDSF alpha 0.22, D 3.8, gamma 1.5, a small disagreement between two papers by the same group."
-
-  - id: ch01.kerr.gamma_ssmf_essiambre_params
-    section: "1.6"
-    claim: "SSMF parameters used by Essiambre et al. 2010 capacity study, as restated by Poggiolini et al. 2014"
-    value: 1.27
-    unit: "1/(W·km)"
-    kind: model_param
-    conditions:
-      alpha_dB_per_km: 0.22
-      beta2_ps2_per_km: -21.7
-      note: "secondary restatement of [69] = Essiambre 2010, Sect. XII, Tables I-III"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VIII-B, text below Eq. (65)"
-    quote: "γ = 1.27 1/W/km, α = 0.22 dB/km, β2 = − 21.7 ps 2/km"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "The primary (Essiambre 2010) full text was not read. Treat this as a secondary report of its parameters."
-
-  - id: ch01.kerr.aeff_g654e_typ
-    section: "1.4"
-    claim: "Typical effective area of G.654.E fiber at 1550 nm (Aeff is not specified by ITU-T)"
-    value: [110, 125]
-    unit: "µm²"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.654.E"
-    source_id: sumitomo_wp_g654e_2024
-    locator: "TR-23076A, Table 1 and footnote"
-    quote: "Typ. 110-125* | Typ. 80* ... *: Typical value. Aeff is not specified in ITU-T Recommendations."
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-    notes: "Same table gives G.652.D typ. 80 µm². G.654.E MFD @1550 nm 11.5-12.5 (+/-0.7) µm per ITU-T."
-
-  - id: ch01.kerr.aeff_g652d_typ
-    section: "1.4"
-    claim: "Typical effective area of G.652.D SSMF at 1550 nm"
-    value: 80
-    unit: "µm²"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "G.652.D"
-    source_id: sumitomo_wp_g654e_2024
-    locator: "TR-23076A, text and Table 1"
-    quote: "whereas that of G.652.D standard single mode fiber (SSMF) is typically 80 μm 2"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-
-  - id: ch01.kerr.pureadvance125_att
-    section: "1.4"
-    claim: "Attenuation of a commercial G.654.E fiber (Sumitomo PureAdvance-110/125) at 1550 nm"
-    value: 0.156
-    unit: "dB/km"
-    kind: spec_typ
-    conditions:
-      wavelength_nm: 1550
-      fiber: "PureAdvance-110 / -125 (G.654.E), spec <= 0.16 dB/km"
-    source_id: sumitomo_wp_g654e_2024
-    locator: "TR-23076A, introductory text"
-    quote: "realize ultra-low attenuation of 0.16 dB/km or less (typically 0.156 dB/km) at 1550 nm"
-    retrieved: 2026-11-02
-    tier: B
-    confidence: med
-
-  - id: ch01.kerr.leff_asymptote_gsup47
-    section: "1.4"
-    claim: "Asymptotic effective length 1/alpha for 0.25 dB/km fiber (alpha = 0.000058 1/m)"
-    value: 17.24
-    unit: "km"
-    kind: fact
-    conditions:
-      alpha_dB_per_km: 0.25
-      note: "Leff = (1 - exp(-alpha L))/alpha approaches 1/alpha"
-    source_id: itu_t_gsup47_2025
-    locator: "Clause 7.2, Figure 1 and text, p. 5-6"
-    quote: "for a fibre with an optical loss of 0.25 dB/km ( = 0.000058 m–1, 1/ = 17.24 km)"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The Greek alpha is missing from the extracted quote. A worked check value for the L_eff calculation script."
-
-  - id: ch01.kerr.fiber_enhancement_factor
-    section: "1.4"
-    claim: "Enhancement of nonlinear-interaction efficiency (I0*Leff) of fiber vs bulk near 1.55 um"
-    value: 1.0e9
-    unit: "1"
-    kind: fact
-    conditions:
-      wavelength_nm: 1550
-      alpha_dB_per_km: 0.2
-      note: "order of magnitude; ~1e7 in the visible at 10 dB/km"
-    source_id: agrawal_josab_2011
-    locator: "Sect. 2.A, text after Eq. (3)"
-    quote: "In the wavelength region near 1:55 μm (α 0:2 dB=km), the enhancement factor can ap proach 10 9."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  # ------------------------------------------------------------------
-  # 1.4  FWM, G.653 vs G.655
-  # ------------------------------------------------------------------
-  - id: ch01.fwm.g655_scope_1996
-    section: "1.4"
-    claim: "G.655 rationale: nonzero dispersion suppresses FWM growth, which is deleterious in dense WDM"
-    value: "Nonzero |D| over the operating band suppresses four-wave mixing in DWDM"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "Original 1996 scope; band 1500-1600 nm"
-    source_id: itu_t_g655_1996
-    locator: "Clause 1 'Scope', p. 1"
-    quote: "This dispersion suppresses the growth of four-wave mixing, a non-linear effect that can be particularly deleterious in dense Wavelength-Division Multiplexing (WDM)."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.fwm.g655_dmin_dmax_1996
-    section: "1.4"
-    claim: "G.655 (1996) allowed range for Dmin and Dmax, 1530-1565 nm"
-    value: [0.1, 6.0]
-    unit: "ps/(nm·km)"
-    kind: spec_max
-    conditions:
-      wavelength_range_nm: [1530, 1565]
-      note: "0.1 <= Dmin <= Dmax <= 6.0 ps/nm/km; superseded edition"
-    source_id: itu_t_g655_1996
-    locator: "Clause 6.2, NOTE 1, p. 4"
-    quote: "0.1 ps/nm•km ≤ Dmin ≤ Dmax ≤ 6.0 ps/nm•km and 1530 nm ≤ λmin ≤ λmax ≤ 1565 nm"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The 2009 edition's tables were not read. Current G.655.D/E limits must come from the in-force edition. Sumitomo TR-22077A gives G.655.D 2.80-6.20 ps/nm/km at 1550 nm (not separately recorded)."
-
-  - id: ch01.fwm.g655_scope_2009
-    section: "1.4"
-    claim: "G.655 (2009) summary: nonzero |D| above 1530 nm reduces growth of nonlinear effects deleterious in DWDM"
-    value: "Nonzero |D| above 1530 nm reduces nonlinear effects in DWDM"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "2009 edition summary"
-    source_id: itu_t_g655_2009
-    locator: "Summary (ITU e-publication page)"
-    quote: "This dispersion reduces the growth of non-linear effects that can be particularly deleterious in dense wavelength division multiplexing (DWDM) systems."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.fwm.local_dispersion_note_g655
-    section: "1.4"
-    claim: "Local dispersion may drop near zero along the fiber, enabling FWM; FWM power depends on |D|, slope, wavelengths, power, distance"
-    value: "FWM magnitude depends on |D|, dispersion slope, wavelengths, power, interaction length"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "Longitudinal uniformity NOTE; present in both 1996 (clause 5.9) and 2009 editions"
-    source_id: itu_t_g655_1996
-    locator: "Clause 5.9 'Longitudinal uniformity', NOTE, p. 4"
-    quote: "If the value decreases to a small value at a wavelength that is close to an operating wavelength ... four-wave mixing can induce"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.fwm.g653_vs_g652_g655_gsup47
-    section: "1.4"
-    claim: "WDM systems in the 1.55 um window over G.652 and G.655 fibre suffer much less FWM than over G.653"
-    value: "G.652/G.655 << G.653 in FWM impairment"
-    unit: ""
-    kind: fact
-    conditions:
-      wavelength_nm: 1550
-    source_id: itu_t_gsup47_2025
-    locator: "Clause 7.3 'Four-wave mixing efficiency', p. 6"
-    quote: "ITU-T G.652 fibres and ITU-T G.655 fibres experience much less FWM impairment than systems deployed over ITU-T G.653 fibres"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.fwm.vanish_100ghz_d1
-    section: "1.4"
-    claim: "For 50 km link with D = 1 ps/(nm·km) and 0.25 dB/km, FWM component nearly vanishes for channel spacing >= 100 GHz"
-    value: 100
-    unit: "GHz"
-    kind: fact
-    conditions:
-      L_km: 50
-      D_ps_nm_km: 1
-      alpha_dB_per_km: 0.25
-      note: "Figure 2 also shows D = 5 and 17 ps/nm/km curves"
-    source_id: itu_t_gsup47_2025
-    locator: "Clause 7.3, Figure 2 and text, p. 7"
-    quote: "50-km-long fibre cable link with dispersion coefficient D = 1 ps/nm/km, the FWM component nearly vanishes for channel spacing of 100 GHz"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.fwm.nonuniform_dispersion_10db
-    section: "1.4"
-    claim: "FWM crosstalk reduction in a G.653 link with non-uniform (random) dispersion vs uniform dispersion"
-    value: 10
-    unit: "dB"
-    kind: fact
-    conditions:
-      channels: 20
-      spacing_GHz: 100
-      distance_km: 500
-      launch_dBm_per_ch: -10
-      note: "2.5 km fibre pieces, 0.56 ps/nm/km variance of absolute dispersion"
-    source_id: itu_t_gsup47_2025
-    locator: "Clause 7.3, p. 7"
-    quote: "non-uniform fibre link composed of 2.5-km-long fibres with 0.56 ps/nm/km variance of the absolute dispersion value is about 10 dB smaller"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.fwm.bitrate_independence
-    section: "1.4"
-    claim: "FWM efficiency is not influenced by increasing bit rate (G.Sup47)"
-    value: "independent of bit rate"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "statement in intensity-modulation-era context"
-    source_id: itu_t_gsup47_2025
-    locator: "Clause 7.3, p. 7"
-    quote: "Note that FWM efficiency is not influenced by an increasing bit rate."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  # ------------------------------------------------------------------
-  # 1.4  Manakov
-  # ------------------------------------------------------------------
-  - id: ch01.manakov.eight_ninths
-    section: "1.4"
-    claim: "Kerr term averaged over the Poincare sphere in the Manakov(-PMD) equation carries the factor 8/9"
-    value: 0.8889
-    unit: "1"
-    kind: constant
-    conditions:
-      note: "exact value 8/9; random, rapidly varying birefringence"
-    source_id: marcuse_jlt_1997
-    locator: "Sect. II, text following Eq. (12), p. 1737"
-    quote: "includes the effect of Kerr nonlinearity averaged over the Poincaré sphere with the well-known 8/9 factor [8], [9]"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.manakov.nonlinear_pmd_negligible
-    section: "1.4"
-    claim: "Nonlinear PMD terms of the Manakov-PMD equation are negligible for practical communication parameters"
-    value: "negligible"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "per Marcuse, Menyuk, Wai 1997"
-    source_id: marcuse_jlt_1997
-    locator: "Sect. VI 'Conclusion', p. 1745"
-    quote: "We also examined the nonlinear PMD terms and showed that they are negligible even under fairly extreme circumstances."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "The conclusion page number is inferred and not confirmed."
-
-  - id: ch01.manakov.length_scales
-    section: "1.4"
-    claim: "Beat length vs birefringence-orientation correlation scale vs dispersive/nonlinear scale lengths in communication fibers"
-    value: "beat length 10-100 m; orientation varies on 0.3-300 m; dispersive and nonlinear lengths hundreds of km"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "In Sect. II the same paper gives 0.3-100 m for the variation scale (internal inconsistency)."
-    source_id: marcuse_jlt_1997
-    locator: "Sect. I 'Introduction', p. 1735"
-    quote: "the beat lengths are typically 10–100 m, while the dispersive and nonlinear scale lengths are hundreds of kilometers"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  # ------------------------------------------------------------------
-  # 1.6  GN model: assumptions, validity, reference system
-  # ------------------------------------------------------------------
-  - id: ch01.gn.validity_envelope_2012
-    section: "1.6"
-    claim: "GN-model reliability envelope suggested by accumulated evidence (2012)"
-    value: "Rs >= 28 GBd; spacing <= 100 GHz; >= 3 channels; D >= 2 ps/(nm·km); more than one span"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "Sect. II-A 'Validation and limitations'"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. II-A"
-    quote: "reliable predictions for symbol rates ≥ 28 GBaud, for channel spacings up to 100 GHz, of systems of at least 3 channels"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The sentence continues: 'over fibers with D ≥ 2 ps/(nm · km) and over more than a single span.'"
-
-  - id: ch01.gn.gaussianization_distance
-    section: "1.6"
-    claim: "Accumulated-dispersion distance for a ~30 GBd signal over SMF to approximately gaussianize"
-    value: 200
-    unit: "km"
-    kind: fact
-    conditions:
-      symbol_rate_GBd: 30
-      fiber: "SMF"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. II-A"
-    quote: "In a typical 30 GBaud system over SMF, such condition is approximately reached after 200km."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.ref_system_2012
-    section: "1.6"
-    claim: "GN 2012 reference system (RS-SMF): span 100 km, 50 GHz spacing, 32 GBd, raised-cosine roll-off 0.3, 101 channels (~5 THz C-band)"
-    value: "Ls=100 km; Δf=50 GHz; Rs=32 GBd; roll-off 0.3; Nch=101; SMF α=0.2 dB/km, D=16.5 ps/(nm·km), γ=1.3 1/(W·km)"
-    unit: "mixed (see value)"
-    kind: model_param
-    conditions:
-      note: "Nyquist variant NY-SMF uses Nch = 157 rectangular channels at 32 GBd, BWDM ~ 5 THz"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. IV and Table I"
-    quote: "span length is set at Ls=100 km. The channel spacing is assumed to be ∆f=50 GHz and the symbol rate"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Also in Sect. IV: 'raised-cosine shape with roll-off equal to 0.3', 'Nch=101'. EDFA NF = 6 dB is given only in Sect. XII-B for the P_opt example."
-
-  - id: ch01.gn.popt_rs_smf_check
-    section: "1.6"
-    claim: "CHECK VALUE: GN-model optimum launch power per channel for RS-SMF, full C-band, EDFA NF 6 dB, assuming epsilon ~ 0"
-    value: -0.4
-    unit: "dBm"
-    kind: model_param
-    conditions:
-      fiber: "SMF, α=0.2 dB/km, D=16.5 ps/(nm·km), γ=1.3 1/(W·km)"
-      span_km: 100
-      NF_dB: 6
-      symbol_rate_GBd: 32
-      spacing_GHz: 50
-      rolloff: 0.3
-      channels: 101
-      note: "Also: optimum PSD 28.5 µW/GHz; ~20 dBm total. Uses Eq. (29)."
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. XII-B, text after Eq. (31)"
-    quote: "turns out to be 28.5 [µW/GHz], or -0.4 dBm per channel, amounting to about 20 dBm overall"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "Primary reproducible check case for the worked example."
-
-  - id: ch01.gn.popt_ny_smf_check
-    section: "1.6"
-    claim: "CHECK VALUE: optimum launch power per channel, NY-SMF (Nyquist-WDM, full C-band), 100 km spans"
-    value: -1
-    unit: "dBm"
-    kind: model_param
-    conditions:
-      span_km: 100
-      NF_dB: 6
-      note: "Nyquist WDM, 32 GBd, BWDM ~ 5 THz (157 ch); value stated as 'about -1 dBm'"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. XII-B"
-    quote: "Assuming NY-SMF (full C-band) P (Ns) ch,opt(0) goes down only slightly, to about -1 dBm per channel."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.popt_ny_smf_75km_check
-    section: "1.6"
-    claim: "CHECK VALUE: optimum launch power per channel, NY-SMF, 75 km spans"
-    value: -2.6
-    unit: "dBm"
-    kind: model_param
-    conditions:
-      span_km: 75
-      NF_dB: 6
-      note: "Nyquist WDM, full C-band"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. XII-B"
-    quote: "Shortening the span length to 75 km, with NY SMF, P (Ns) ch,opt(0) goes further down to -2.6 dBm per channel."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.ase_eq_2nli
-    section: "1.6"
-    claim: "At the BER-optimal launch power, total ASE noise equals twice total NLI noise, for any epsilon"
-    value: 2
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "P_ASE = 2 P_NLI, i.e. NLI = 1/3 and ASE = 2/3 of total noise at optimum"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. XII-A, text after Eq. (28)"
-    quote: "the minimum BER (or maximum OSNR) is always obtained when PASE = 2PNLI in Eq. (4)"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The source credits ref. [24] with first pointing this out and ref. [15] with confirming it experimentally."
-
-  - id: ch01.gn.popt_indep_of_target_osnr
-    section: "1.6"
-    claim: "Span-count-maximizing optimum launch power is independent of target OSNR (format, transceiver)"
-    value: "independent"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "assumes epsilon ~ 0"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. XII-B, text after Eq. (30)"
-    quote: "the optimum launch power is independent of the target OSNR"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.reach_vs_nli_one_third
-    section: "1.6"
-    claim: "Max-reach change in dB is -1/3 of the change in normalized NLI (dB); a 0.5 dB NLI error gives ~4% reach error"
-    value: -0.3333
-    unit: "dB/dB"
-    kind: fact
-    conditions:
-      note: "Eq. (32); 0.5 dB NLI error -> 1/6 dB (4%) reach error"
-    source_id: poggiolini_jlt_2012
-    locator: "Eq. (32) and following text, Sect. XII-B"
-    quote: "which is, say, 0.5 dB in error, causes only a 1/6 dB (that is 4%) error in the estimate of N max s"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.reach_vs_dispersion_gamma
-    section: "1.6"
-    claim: "Reach scaling: +x dB in beta2 gives +x/3 dB reach; -x dB in gamma (or +x dB Aeff) gives +2x/3 dB reach"
-    value: "ΔNs[dB] = (1/3)Δβ2[dB]; ΔNs[dB] = -(2/3)Δγ[dB] = (2/3)ΔAeff[dB]"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "neglecting weak log dependences; from Eqs. (13)/(15) in (32)"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. XII-D (unnumbered equations)"
-    quote: "a reduction of x dB of γ or increase of x dB of Aeff brings about a 2x 3 dB reach increase"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "'2x 3' is the extraction of 2x/3. This supports the G.654.E motivation in section 1.4."
-
-  - id: ch01.gn.nlc_3db_gives_1db
-    section: "1.6"
-    claim: "Halving P_NLI (3 dB) by nonlinearity compensation gains only ~1 dB of reach (~25%)"
-    value: 1
-    unit: "dB"
-    kind: fact
-    conditions:
-      note: "RS-SMF, 50 spans; ~132 GHz receiver bandwidth needed for 3 dB NLI reduction"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. IX-C"
-    quote: "a 3-dB reduction of PNLI only gains 1 dB of system length increase (25%)"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.eps_nyquist_5thz
-    section: "1.6"
-    claim: "Best-fit NLI accumulation exponent epsilon for Nyquist-WDM at BWDM = 5 THz (all three fibers)"
-    value: 0.035
-    unit: "1"
-    kind: model_param
-    conditions:
-      BWDM_THz: 5
-      span_km: 100
-      note: "epsilon ~ 1 at BWDM = 1 GHz; below 0.05 above 1 THz"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. IX-A, Fig. 10"
-    quote: "the terminal value for BWDM =5 THz is almost the same for all curves, approximately ϵ ≈ 0.035"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.eps_rs_50ghz
-    section: "1.6"
-    claim: "Best-fit epsilon for full C-band 50 GHz-spaced systems (RS-SMF, RS-LPSCF; RS-NZDSF ~0.07)"
-    value: 0.06
-    unit: "1"
-    kind: model_param
-    conditions:
-      spacing_GHz: 50
-      channels: 101
-      span_km: 100
-      note: "NZDSF about 0.07; single channel (SCI only) SMF 0.19, NZDSF 0.36"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. IX-A, Fig. 11"
-    quote: "The terminal value is higher than in the Nyquist case, with ϵ ≈ 0.06 for SMF and LPSCF and about 0.07 for NZDSF."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.eps_100ghz
-    section: "1.6"
-    claim: "epsilon at 100 GHz spacing, 51 channels (C-band): RS-SMF value"
-    value: 0.09
-    unit: "1"
-    kind: model_param
-    conditions:
-      spacing_GHz: 100
-      channels: 51
-      note: "RS-LPSCF 0.096; RS-NZDSF 0.123. With Ls = 50 km and 50 GHz: SMF 0.088, LPSCF 0.090, NZDSF 0.103"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. IX-A"
-    quote: "Their values at 51 channels (the whole C-band) are: RS-SMF 0.09; RS-LPSCF 0.096; RS NZDSF 0.123."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.eps_experimental_range
-    section: "1.6"
-    claim: "Range of experimentally estimated NLI accumulation exponent epsilon (as of 2012)"
-    value: [0, 0.6]
-    unit: "1"
-    kind: measured
-    conditions:
-      note: "from refs [15], [18]-[19] of Poggiolini 2012; some experiments report higher epsilon than GN predicts"
-    source_id: poggiolini_jlt_2012
-    locator: "Sect. IX, text after Eq. (7)"
-    quote: "The estimated values of ϵ range between 0 and 0.6 [15], [18]– [19]."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "This is a secondary report of experimental results. It disagrees with the GN-model prediction of about 0.03-0.08 for full C-band (see the gaps file)."
-
-  - id: ch01.gn.eps_typical_2014
-    section: "1.6"
-    claim: "Typical epsilon for fully-populated C-band WDM (2014 tutorial)"
-    value: [0.03, 0.08]
-    unit: "1"
-    kind: model_param
-    conditions:
-      note: "depends on system parameters"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. III-D, text after Eq. (18)"
-    quote: "For fully-populated (C-band) WDM systems, the typical values of are between 0.03 and 0.08, depending on system parameters [36]."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The Greek epsilon was dropped by PDF extraction ('values of are'). The pre-review preprint was read."
-
-  - id: ch01.gn.lwn_error_max
-    section: "1.6"
-    claim: "Maximum P_NLI overestimate from the locally-white-noise (LWN) approximation (single channel)"
-    value: 0.53
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "32 GBd, roll-off 0.02, SMF, 25 x 85 km; <=0.4 dB at 5 ch, <0.35 dB at 25 ch / 50 GHz; always conservative"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. IV-B, Fig. 5"
-    quote: "the absolute maximum value of ΔPNLI,dB is found, expectedly, for a single channel, and amounts to about 0.53 dB"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.pd_sim_agreement
-    section: "1.6"
-    claim: "GN-model maximum-reach agreement with pre-dispersed (Gaussianized) signal simulations"
-    value: 0.25
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "15 ch, 32 GBd, PM-QPSK/16QAM/64QAM, SMF/PSCF/NZDSF, spacing 33.6-50 GHz, NF 5 dB"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. V-A, Fig. 6"
-    quote: "the PD simulations are very close to the GN-model predictions, within 0.25 dB error for all formats, fibers and spacings"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.first_span_overestimate_qpsk
-    section: "1.6"
-    claim: "GN-model NLI overestimate in the first span vs non-pre-dispersed PM-QPSK over SMF"
-    value: 6
-    unit: "dB"
-    kind: model_param
-    conditions:
-      format: "PM-QPSK"
-      fiber: "SMF"
-      span_km: 100
-      channels: 9
-      note: "PM-16QAM: 3.5 dB; PM-QPSK over NZDSF: 4 dB; gap decreases along link"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. V-C, Fig. 7"
-    quote: "the non-PD simulations show about 6 dB less NLI noise produced over the first span than either the PD simulation or the GN-model predict"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.ref_sim_max_reach_check
-    section: "1.6"
-    claim: "CHECK VALUE: simulated maximum reach of 2014 design-rule reference scenario (9 ch, 200G PM-16QAM, 32 GBd, Ks = 1.05, SMF 80 km spans)"
-    value: 15
-    unit: "spans"
-    kind: model_param
-    conditions:
-      channels: 9
-      format: "PM-16QAM, 200G"
-      symbol_rate_GBd: 32
-      Ks: 1.05
-      span_km: 80
-      alpha_dB_per_km: 0.22
-      span_loss_dB: 17.6
-      D_ps_nm_km: 16.7
-      gamma_per_W_km: 1.3
-      NF_dB: 5
-      target: "BER 1e-3, SNR_T = 16.85 dB"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VII-A and Table II"
-    quote: "The target BER was 10− 3 corresponding to SNRT,dB,ref= 16.85 dB. The simulation resulted in N max s,ref= 15."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "This is a split-step simulation result, not a GN closed form. It is a secondary check case with only 9 channels. Table II also lists experiment vs Eq. (60) predictions, all within 1 span."
-
-  - id: ch01.gn.popt_oct_20x85km
-    section: "1.6"
-    claim: "OCT-maximizing launch power per channel, 20 x 85 km SMF, Nyquist C-band, all PM-QAM formats"
-    value: -2.65
-    unit: "dBm"
-    kind: model_param
-    conditions:
-      span_km: 85
-      spans: 20
-      BWDM_THz: 5
-      note: "Nyquist limit; linear-only DSP. The symbol rate for this figure was not found in the text extract (see gaps)."
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VIII-C, Fig. 11"
-    quote: "For all formats, the optimum launch power per channel, i.e. the value of Pch maximizing the OCT, is equal to -2.65 dBm."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-    notes: "The symbol rate and NF for Fig. 11 are not stated in the extracted text. Link 1 in Sect. VIII-D uses F = 5 dB, so NF = 5 dB is likely but not confirmed."
-
-  - id: ch01.gn.closedform_eq37_error
-    section: "1.6"
-    claim: "Max error of Nyquist single-span closed form (asinh) vs GNRF, for span loss > ~10 dB"
-    value: 0.35
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "max error at asinh argument x ~ 1; <0.1 dB for x > 10; replacing pi^2/2 by 4.6 keeps error < 0.1 dB"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VI-A, text after Eq. (38)"
-    quote: "Eq. (37) is very accurate, with a maximum error of about 0.35 dB occurring at x ≈ 1"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.nlc_gain_single_channel
-    section: "1.6"
-    claim: "Ideal single-channel NLC gain at 32 GHz spacing (PSCF, 85 km spans): after 1 span vs after 40 spans"
-    value: [0.8, 2.2]
-    unit: "dB"
-    kind: model_param
-    conditions:
-      symbol_rate_GBd: 32
-      spacing_GHz: 32
-      fiber: "PSCF"
-      span_km: 85
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. IX-A, Fig. 14"
-    quote: "single-channel NLC at 32-GHz channel spacing achieves 0.8 dB NLC gain after a single span but 2.2 dB after 40 spans"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gn.nlc_200ghz_reach_gain
-    section: "1.6"
-    claim: "Max-reach gain with ideal NLC over 200 GHz optical bandwidth (PM-16QAM, PSCF 85 km, C-band)"
-    value: [1.1, 1.3]
-    unit: "dB"
-    kind: model_param
-    conditions:
-      BNLC_GHz: 200
-      note: "~2 THz BNLC needed to double reach (3 dB)"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. IX-B, Fig. 15"
-    quote: "the amount of MSR gain achievable in the analyzed scenarios reaches only 1.1 to 1.3 dB, depending on channel spacing"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  # ------------------------------------------------------------------
-  # 1.6  EGN
-  # ------------------------------------------------------------------
-  - id: ch01.egn.gn_reach_underestimate
-    section: "1.6"
-    claim: "GN-model underestimate of maximum reach vs simulation (PM-QPSK/16QAM, 32 GBd, 15 ch), PSCF/SMF/NZDSF"
-    value: [0.3, 0.6]
-    unit: "dB"
-    kind: model_param
-    conditions:
-      symbol_rate_GBd: 32
-      channels: 15
-      spacing_GHz: [33.6, 50]
-      NF_dB: 5
-      note: "up to 0.8 dB over Corning LS (very low dispersion, high nonlinearity)"
-    source_id: carena_oe_2014
-    locator: "Sect. 6, Fig. 9, p. 16353; also Sect. 1, p. 16336"
-    quote: "The GN-model underestimates the maximum reach by 0.3-0.6 dB over PSCF, SMF and NZDSF, in agreement with [14,16]."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.egn.gn_reach_underestimate_ls
-    section: "1.6"
-    claim: "GN-model maximum-reach underestimate over ultra-low-dispersion LS fiber"
-    value: 0.8
-    unit: "dB"
-    kind: model_param
-    conditions:
-      fiber: "Corning LS"
-    source_id: carena_oe_2014
-    locator: "Sect. 6, Fig. 9"
-    quote: "The error goes up to 0.8 dB in the case of the very low dispersion and high non-linearity LS fiber."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.egn.residual_error
-    section: "1.6"
-    claim: "EGN-model maximum-reach error vs simulation across all fibers and spacings"
-    value: 0.2
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "upper bound ('less than')"
-    source_id: carena_oe_2014
-    locator: "Sect. 6, p. 16354"
-    quote: "The error is less than 0.2 dB across all system configurations."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.egn.nli_overestimate_near_max_reach
-    section: "1.6"
-    claim: "GN-model NLI power overestimate at span counts near maximum reach (realistic systems)"
-    value: [1, 2]
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "several dB in first spans; translates to 0.3-0.6 dB reach / P_opt error; conservative for PM-QAM"
-    source_id: carena_oe_2014
-    locator: "Sect. 7A, p. 16355"
-    quote: "the error on NLI power estimation is typically 1 to 2 dB, depending on fiber type, modulation format and span length, for realistic systems"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.egn.mechanism
-    section: "1.6"
-    claim: "EGN adds a correction term to the GN PSD that removes the signal-Gaussianity assumption; correction depends on 4th and 6th moments of the constellation"
-    value: "G_NLI^EGN = G_NLI^GN + G_NLI^corr"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "Eq. (1); format-dependent coefficients Φ, Ψ in Table 1"
-    source_id: carena_oe_2014
-    locator: "Sect. 2, Eq. (1); Sect. 3, Table 1"
-    quote: "can be thought of as a correction term which takes the effect of signal non-Gaussianity into account"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.egn.phi_qpsk
-    section: "1.6"
-    claim: "EGN format coefficients for QPSK (and BPSK): Φa = -1, Ψa = 4"
-    value: [-1, 4]
-    unit: "1"
-    kind: constant
-    conditions:
-      note: "16QAM: Φ=-17/25, Ψ=52/25; 64QAM: Φ=-13/21, Ψ=1161/646"
-    source_id: carena_oe_2014
-    locator: "Table 1, p. 16341"
-    quote: "Format Φa Ψa BPSK −1 4 QPSK −1 4 16QAM −17/25 52/25 64 QAM −13/21 1161/646"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The value is [Φa, Ψa]. Larger constellations have smaller-magnitude Φ, so they need a smaller correction."
-
-  - id: ch01.egn.cpu_speedup
-    section: "1.6"
-    claim: "EGN-model CPU speed-up vs Monte-Carlo split-step simulation (as implemented)"
-    value: [10, 20]
-    unit: "1"
-    kind: fact
-    conditions:
-      note: "authors expect 20-40 achievable; GN is a further 5-10x faster; IGN 10-20x faster than GN"
-    source_id: carena_oe_2014
-    locator: "Sect. 7A, p. 16355-16356"
-    quote: "the EGN-model CPU gain vs. Monte Carlo simulations was still quantifiable as a factor of 10-20"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  # ------------------------------------------------------------------
-  # 1.6  GNPy
-  # ------------------------------------------------------------------
-  - id: ch01.gnpy.gsnr_accuracy
-    section: "1.6"
-    claim: "GNPy OSNR/GSNR prediction accuracy vs measurement: within 1 dB for >90% of 500 samples"
-    value: 1
-    unit: "dB"
-    kind: measured
-    conditions:
-      samples: 500
-      fraction_within: ">90%"
-      distance_km: [400, 4000]
-      note: "mixed-fiber, Raman-amplified, multivendor, full C-band; PM-QPSK, PM-8QAM, PM-16QAM; EDFA and hybrid Raman-EDFA"
-    source_id: ferrari_jocn_2020
-    locator: "Abstract"
-    quote: "within 1 dB accuracy for more than 90% of the 500 experimental samples"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.gnpy.popt_accuracy
-    section: "1.6"
-    claim: "GNPy accuracy in estimating the GSNR-maximizing launch power"
-    value: 0.5
-    unit: "dB"
-    kind: measured
-    conditions:
-      note: "same campaign as ch01.gnpy.gsnr_accuracy"
-    source_id: ferrari_jocn_2020
-    locator: "Abstract"
-    quote: "We also demonstrate the ability to estimate the transmitted power maximizing the GSNR within 0.5 dB of accuracy."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  # ------------------------------------------------------------------
-  # 1.6  Capacity / Shannon framing and implementation gap
-  # ------------------------------------------------------------------
-  - id: ch01.cap.essiambre_method
-    section: "1.6"
-    claim: "Essiambre et al. 2010 estimate a fiber-channel capacity limit using ring constellations over several dispersion maps and distances"
-    value: "capacity-limit estimate via ring constellations"
-    unit: ""
-    kind: fact
-    conditions:
-      note: "abstract only; headline SE numbers not read"
-    source_id: essiambre_jlt_2010
-    locator: "Abstract"
-    quote: "We proceed to evaluate a capacity limit estimate for this fiber channel using ring constellations."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.cap.soft_fec_gap
-    section: "1.6"
-    claim: "Coding-gain penalty of state-of-the-art soft FEC vs ideal maximum gain (2013-2014)"
-    value: 1.5
-    unit: "dB"
-    kind: fact
-    conditions:
-      note: "estimate; used as assumption in OCT-vs-distance curves together with a 3 dB system margin"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VIII-C, end; Fig. 12 caption"
-    quote: "for state-of the-art soft FEC codes the estimated coding gain penalty vs. the ideal maximum gain is around 1.5 dB"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.cap.oct_assumed_margin
-    section: "1.6"
-    claim: "SNR penalty from the quantum (ideal) limit assumed in GN-based OCT-vs-distance study"
-    value: 3
-    unit: "dB"
-    kind: model_param
-    conditions:
-      note: "assumption, not measurement; plus 1.5 dB soft-FEC penalty"
-    source_id: poggiolini_jlt_2014
-    locator: "Fig. 12 caption, Sect. VIII-D"
-    quote: "Assumptions: 3-dB SNR penalty from quantum limit and 1.5-dB penalty of soft FEC with respect to infinite-length codes ideal performance."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.cap.pm16qam_2000km
-    section: "1.6"
-    claim: "GN-based OCT of PM-16QAM over terrestrial SMF/EDFA (Link 1: F = 5 dB, 85 km spans, 5 THz Nyquist) at 2000 km"
-    value: 6.5
-    unit: "bit/symbol"
-    kind: model_param
-    conditions:
-      distance_km: 2000
-      span_km: 85
-      NF_dB: 5
-      note: "with 3 dB margin and 1.5 dB FEC penalty assumptions; PM-8QAM ~5-5.5 b/sym at 3000 km"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VIII-D, Fig. 12"
-    quote: "PM-16QAM allows to reach 2,000 km with an OCT' 6.5 bit/symbol."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The apostrophe in 'OCT'' is an extraction artifact of '≈'."
-
-  - id: ch01.cap.soft_fec_threshold_20pct
-    section: "1.6"
-    claim: "Pre-FEC BER threshold of state-of-the-art 20%-overhead soft FEC (circa 2013)"
-    value: 2.7e-2
-    unit: "1"
-    kind: fact
-    conditions:
-      FEC_overhead: "20%"
-    source_id: poggiolini_jlt_2014
-    locator: "Sect. VIII-D"
-    quote: "State-of-the-art soft FEC with 20% overhead can now operate at pre-FEC BER of 2.7∙ 10− 2 [71]"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-
-  - id: ch01.gap.osnr_penalty_64gbd
-    section: "1.6"
-    claim: "Implementation OSNR penalty vs theory for 64 GBd coherent transceivers with commercial device models: DP-16QAM/64QAM"
-    value: 2.2
-    unit: "dB"
-    kind: model_param
-    conditions:
-      symbol_rate_GBd: 64
-      note: "DP-4QAM (QPSK): 1.1 dB. Penalty vs theoretical format performance, not vs Shannon capacity. Likely simulation/device-model based."
-    source_id: rafique_ofc_2017
-    locator: "Abstract"
-    quote: "Compared to theory, our results suggest OSNR penalties as low as 2.2dB for DP-64QAM and DP-16QAM, and 1.1dB for DP-4QAM."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: med
-
-  - id: ch01.gap.transceiver_snr_range
-    section: "1.6"
-    claim: "Typical transceiver SNR (SNR_TR) of high-baud-rate coherent transceivers"
-    value: [14, 21]
-    unit: "dB"
-    kind: measured
-    conditions:
-      note: "cited from Matsushita et al. JLT 2020 [9]; SNR_TR depends on OSNR below ~20 dB"
-    source_id: yoshida_ecoc_2020
-    locator: "Section 'Definition of SNRs', p. 1"
-    quote: "Note that SNR୘ୖ typically ranges from 14 to 21 dB in high baud rate cases[9]."
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "'SNR୘ୖ' is an extraction artifact of SNR_TR. The value is secondary within this paper, since it cites Matsushita 2020."
-
-  - id: ch01.gap.ps_rosnr_reduction
-    section: "1.6"
-    claim: "Measured ROSNR reduction of PS-QAM (BICM or MLC) over uniform 32-QAM at the FEC threshold"
-    value: [1.3, 1.4]
-    unit: "dB"
-    kind: measured
-    conditions:
-      symbol_rate_GBd: 24
-      note: "over BICM uniform 16-QAM: 0.6-0.7 dB; noise-loading back-to-back; SD-FEC rate 4/5"
-    source_id: yoshida_ecoc_2020
-    locator: "Section 'Results: ROSNRs in BICM and MLC', Fig. 4"
-    quote: "The ROSNR reduction by BICM PS-QAM or MLC PS-QAM is significant (1.3–1.4 dB) over uniform 32-QAM"
-    retrieved: 2026-11-02
-    tier: A
-    confidence: high
-    notes: "The ROSNR gap to Shannon itself appears only in Figs. 4-5, and no numeric value was extractable (see gaps)."
-
-  - id: ch01.gap.vendor_claim_1_2db
-    section: "1.6"
-    claim: "Vendor-side claim: 7-nm-DSP coherent engines (e.g. Infinera ICE6) operate 1-2 dB from the Shannon limit"
-    value: [1, 2]
-    unit: "dB"
-    kind: fact
-    conditions:
-      note: "trade-press claim, conditions unspecified"
-    source_id: momtahan_isemag_2024
-    locator: "Article body"
-    quote: "Today’s high-performance embedded optical engines that leverage 7-nm CMOS DSPs, such as Infinera’s ICE6, are typically between 1 and 2 dB from the Shannon limit"
-    retrieved: 2026-11-02
-    tier: C
-    confidence: low
-    notes: "Tier C and vendor-affiliated. Use it only to present the claim in a contested box; it must not be the sole support for a number in prose."
+- id: ch01.kerr.n2_kato1995_smf
+  section: '1.4'
+  claim: Nonlinear index n2 of standard single-mode fiber at 1.55 um, cross-phase-modulation method with depolarized pump
+  value: 2.96e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: standard SMF (Ge-doped core)
+    method: XPM method, depolarized pump; repeatability within +/-1%
+  source_id: kato_ol_1995
+  locator: Abstract
+  quote: dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating
+    fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Abstract only. These values are about 15-30% higher than the SPM and cw measurements of other groups (Kim 1994, Namihira
+    1994, Stolen 1998, ITU-T G.Sup47). See ch01.kerr.n2_* records and the gaps file.
+  verified: match
+- id: ch01.kerr.n2_kato1995_dsf
+  section: '1.4'
+  claim: Nonlinear index n2 of dispersion-shifted fiber at 1.55 um (Kato et al., XPM with depolarized pump)
+  value: 3.35e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: DSF
+    method: XPM method, depolarized pump
+  source_id: kato_ol_1995
+  locator: Abstract
+  quote: dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating
+    fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Disagrees with Kim 1994 (2.52e-20), Namihira 1994 (~2.31e-20) and Stolen 1998 (2.45e-20) for DSF.
+  verified: match
+- id: ch01.kerr.n2_kato1995_pscf
+  section: '1.4'
+  claim: Nonlinear index n2 of pure-silica-core single-mode fiber at 1.55 um (Kato et al.)
+  value: 2.79e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: pure silica core SMF
+    method: XPM method, depolarized pump
+  source_id: kato_ol_1995
+  locator: Abstract
+  quote: dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating
+    fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: Disagrees with Kim 1994 silica-core 2.36e-20 (measured at 1.319 um) and G.Sup47 pure-silica constant 2.61e-20.
+  verified: match
+- id: ch01.kerr.n2_kato1995_dcf
+  section: '1.4'
+  claim: Nonlinear index n2 of dispersion-compensating fiber at 1.55 um (Kato et al.)
+  value: 4.44e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: DCF (high Ge doping)
+    method: XPM method, depolarized pump
+  source_id: kato_ol_1995
+  locator: Abstract
+  quote: and dispersion-compensating fiber as 3.35 × 10−20, 2.96 × 10−20, 2.79 × 10−20, and 4.44 × 10−20 m2/W, respectively,
+    at 1.55 μm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.kerr.n2_kim1994_silica_core
+  section: '1.4'
+  claim: Nonlinear index n2 of the glass of silica-core fiber, measured at 1.319 um (+/-5%)
+  value: 2.36e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1319
+    fiber: silica-core fiber
+    note: Source gives 2.36e-16 cm^2/W, which equals 2.36e-20 m^2/W. The authors state the value should also hold at 1.55
+      um.
+  source_id: kim_ol_1994
+  locator: Abstract
+  quote: the n 2 of silica-core and dispersion-shifted fibers is 2.36 × 10 −16 and 2.52 × 10 −16 cm 2 /W (±5%)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.kerr.n2_kim1994_dsf
+  section: '1.4'
+  claim: Nonlinear index n2 of dispersion-shifted fiber glass, measured at 1.319 um (+/-5%)
+  value: 2.52e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1319
+    fiber: DSF
+    note: Converted from 2.52e-16 cm^2/W
+  source_id: kim_ol_1994
+  locator: Abstract
+  quote: the n 2 of silica-core and dispersion-shifted fibers is 2.36 × 10 −16 and 2.52 × 10 −16 cm 2 /W (±5%)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.kerr.n2_germania_ratio_kim1994
+  section: '1.4'
+  claim: Estimated n2 of germania relative to pure silica
+  value: 3
+  unit: '1'
+  kind: measured
+  conditions:
+    note: ratio n2(GeO2)/n2(SiO2), estimated
+  source_id: kim_ol_1994
+  locator: Abstract
+  quote: We also estimate that the n(2) of germania is three times the n(2) of pure silica.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.kerr.n2_namihira1994_dsf
+  section: '1.4'
+  claim: n2 of various DSFs at 1.55 um, SPM method, random polarization (+/-5%)
+  value: 2.31e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: DSF (various)
+    method: SPM, random polarization states
+  source_id: namihira_el_1994
+  locator: Abstract
+  quote: n2 for various DSFs is found to be ~2.31 × 10-20 m2/W (± 5 %) for random polarisation states at 1.55 µm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.kerr.n2_stolen1998_dsf
+  section: '1.4'
+  claim: n2 of two 20 km DSFs by SPM at 1.55 um for random polarization (+/-5%)
+  value: 2.45e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: DSF, two 20 km samples
+    method: SPM, random polarization
+    note: Converted from 2.45e-16 cm^2/W
+  source_id: stolen_jlt_1998
+  locator: Abstract
+  quote: We measure a value of N/sub 2/=2.45/spl times/10/sup -16/ cm/sup 2//W (/spl plusmn/5%) by self-phase modulation (SPM)
+    in two 20 km dispersion-shifted fibers
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: The quote is taken verbatim from the IEEE abstract markup. It reads 'n2 = 2.45 x 10^-16 cm^2/W (+/-5%)'.
+  verified: match
+- id: ch01.kerr.n2_pure_silica_gsup47
+  section: '1.4'
+  claim: n2 of pure silica (constant term of the G.Sup47 empirical n2 vs effective GeO2 concentration relation)
+  value: 2.61e-20
+  unit: m^2/W
+  kind: model_param
+  conditions:
+    note: n2 [1e-20 m^2/W] = 0.0556 * eta_GeO2 [mol%] + 2.61; index profile and field distribution taken into account
+  source_id: itu_t_gsup47_2025
+  locator: Appendix I, clause I.3 'Non-linear refractive index', p. 10
+  quote: Here 𝜂GeO2 is the effective GeO2 concentration. The constant term on the right-hand side represents the n2 value
+    of pure silica.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The 2.61 constant appears in the printed formula just before the quoted sentence. The value lies between Kim 1994
+    (2.36e-20, silica core) and Kato 1995 (2.79e-20, PSCF).
+  verified: match
+- id: ch01.kerr.n2_geo2_slope_gsup47
+  section: '1.4'
+  claim: Slope of n2 vs effective GeO2 concentration
+  value: 0.0556
+  unit: 1e-20 m^2/W per mol% GeO2
+  kind: model_param
+  conditions:
+    note: linear empirical relation, G.Sup47 clause I.3
+  source_id: itu_t_gsup47_2025
+  locator: Appendix I, clause I.3, p. 10
+  quote: With GeO2, which is a typical dopant ... the non-linear refractive index increases linearly with GeO2 concentration.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'The quote is abridged with an ellipsis. The full sentence is: ''With GeO2, which is a typical dopant that is added
+    to increase the refractive index of the core region, the non-linear refractive index increases linearly with GeO2 concentration.'''
+  verified: match
+- id: ch01.kerr.n2_sterlite_g657a2
+  section: '1.4'
+  claim: Vendor-measured n2 of G.657.A2 fiber (cw-SPM method)
+  value: 2.17e-20
+  unit: m^2/W
+  kind: measured
+  conditions:
+    wavelength_nm: 1550
+    fiber: Sterlite BOWLITE G.657.A2
+    method: cw dual-frequency SPM (Boskovic method), 1 km sample
+  source_id: sterlite_appnote_n2_g657
+  locator: Results section and conclusion
+  quote: average n2 for G657.A2 fiber is about 2.17×10 (m /W) and the nonlinear coefficient ( ) is about 1.255 (W- km)
+  retrieved: 2026-11-02
+  tier: B
+  confidence: low
+  notes: 'Garbled extraction, and the PDF itself is inconsistent: the results section gives A2 = 2.17 and B3 = 2.15, while
+    the conclusion gives A2 = 2.15 and B3 = 2.17. Use only to show the spread among measurements. The same note gives gamma
+    of about 1.255 /W/km for A2 and 1.27 /W/km for B3.'
+  verified: match
+- id: ch01.kerr.n2_boskovic_method_error
+  section: '1.4'
+  claim: Claimed error of the cw dual-frequency beat-signal n2 measurement method
+  value: 5
+  unit: '%'
+  kind: fact
+  conditions:
+    wavelength_nm: 1550
+    note: upper bound on error; applied to standard, DSF and DCF fibers
+  source_id: boskovic_ol_1996
+  locator: Abstract
+  quote: A method for measuring the nonlinear refractive index of optical fibers with an error of less than 5% is demonstrated.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.kerr.kerr_index_relation
+  section: '1.4'
+  claim: Kerr intensity-dependent index n = n0 + n2 I, valid for intense fields in silica fibers
+  value: n = n0 + n2 I
+  unit: '1'
+  kind: fact
+  conditions:
+    note: G.Sup47 Appendix I.3
+  source_id: itu_t_gsup47_2025
+  locator: Appendix I, clause I.3, p. 10
+  quote: the refractive index of optical fibres depends on the optical intensity inside the fibres and can be expressed as
+    follows
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.kerr.gamma_range_silica_agrawal
+  section: '1.4'
+  claim: Typical range of the nonlinear parameter gamma for most silica fibers
+  value:
+  - 1
+  - 10
+  unit: 1/(W·km)
+  kind: spec_typ
+  conditions:
+    note: general statement covering all silica fiber types
+  source_id: agrawal_josab_2011
+  locator: Sect. 2.C, text after Eq. (11), p. A3
+  quote: The nonlinear param eter γ is positive and has a value in the range of 1–10 W −1=km for most silica fibers
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Large-Aeff pure-silica fibers fall below this range: Poggiolini uses gamma = 0.8 for PSCF. The page number is inferred
+    from the A1-A10 pagination and should be verified.'
+  verified: match
+- id: ch01.kerr.gamma_smf_gn2012
+  section: '1.4'
+  claim: Nonlinear coefficient gamma of SMF used in the GN-model reference systems
+  value: 1.3
+  unit: 1/(W·km)
+  kind: model_param
+  conditions:
+    fiber: SMF (G.652-like)
+    wavelength_nm: 1550
+  source_id: poggiolini_jlt_2012
+  locator: Table I
+  quote: '| SMF | 0.2 | 16.5 | 1.3 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The quote is the table row (alpha dB/km, D ps/nm/km, gamma 1/W/km). The 2014 tutorial Table I also uses SMF gamma
+    = 1.3.
+  verified: match
+- id: ch01.kerr.gamma_pscf_gn2012
+  section: '1.4'
+  claim: Nonlinear coefficient gamma of large-effective-area pure-silica-core fiber (LPSCF) in GN-model reference systems
+  value: 0.8
+  unit: 1/(W·km)
+  kind: model_param
+  conditions:
+    fiber: LPSCF (large-Aeff PSCF; G.654-like)
+    wavelength_nm: 1550
+  source_id: poggiolini_jlt_2012
+  locator: Table I
+  quote: '| LPSCF | 0.165 | 20.4 | 0.8 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: This is the closest primary model parameter to G.654.E-class fiber that was found. The 2014 tutorial Table I PSCF
+    row is alpha 0.17 dB/km, D 20.1, gamma 0.8. No measured gamma for a named G.654.E product was found (see gaps).
+  verified: match
+- id: ch01.kerr.gamma_nzdsf_gn2012
+  section: '1.4'
+  claim: Nonlinear coefficient gamma of NZDSF in GN-model reference systems
+  value: 1.6
+  unit: 1/(W·km)
+  kind: model_param
+  conditions:
+    fiber: NZDSF (G.655-like), D = 3.9 ps/(nm·km)
+  source_id: poggiolini_jlt_2012
+  locator: Table I
+  quote: '| NZDSF | 0.2 | 3.9 | 1.6 |'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The 2014 tutorial Table I instead gives NZDSF alpha 0.22, D 3.8, gamma 1.5, a small disagreement between two papers
+    by the same group.
+  verified: match
+- id: ch01.kerr.gamma_ssmf_essiambre_params
+  section: '1.6'
+  claim: SSMF parameters used by Essiambre et al. 2010 capacity study, as restated by Poggiolini et al. 2014
+  value: 1.27
+  unit: 1/(W·km)
+  kind: model_param
+  conditions:
+    alpha_dB_per_km: 0.22
+    beta2_ps2_per_km: -21.7
+    note: secondary restatement of [69] = Essiambre 2010, Sect. XII, Tables I-III
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VIII-B, text below Eq. (65)
+  quote: γ = 1.27 1/W/km, α = 0.22 dB/km, β2 = − 21.7 ps 2/km
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: The primary (Essiambre 2010) full text was not read. Treat this as a secondary report of its parameters.
+  verified: match
+- id: ch01.kerr.aeff_g654e_typ
+  section: '1.4'
+  claim: Typical effective area of G.654.E fiber at 1550 nm (Aeff is not specified by ITU-T)
+  value:
+  - 110
+  - 125
+  unit: µm²
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.654.E
+  source_id: sumitomo_wp_g654e_2024
+  locator: TR-23076A, Table 1 and footnote
+  quote: 'Typ. 110-125* | Typ. 80* ... *: Typical value. Aeff is not specified in ITU-T Recommendations.'
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  notes: Same table gives G.652.D typ. 80 µm². G.654.E MFD @1550 nm 11.5-12.5 (+/-0.7) µm per ITU-T.
+  verified: match
+- id: ch01.kerr.aeff_g652d_typ
+  section: '1.4'
+  claim: Typical effective area of G.652.D SSMF at 1550 nm
+  value: 80
+  unit: µm²
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: G.652.D
+  source_id: sumitomo_wp_g654e_2024
+  locator: TR-23076A, text and Table 1
+  quote: whereas that of G.652.D standard single mode fiber (SSMF) is typically 80 μm 2
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  verified: match
+- id: ch01.kerr.pureadvance125_att
+  section: '1.4'
+  claim: Attenuation of a commercial G.654.E fiber (Sumitomo PureAdvance-110/125) at 1550 nm
+  value: 0.156
+  unit: dB/km
+  kind: spec_typ
+  conditions:
+    wavelength_nm: 1550
+    fiber: PureAdvance-110 / -125 (G.654.E), spec <= 0.16 dB/km
+  source_id: sumitomo_wp_g654e_2024
+  locator: TR-23076A, introductory text
+  quote: realize ultra-low attenuation of 0.16 dB/km or less (typically 0.156 dB/km) at 1550 nm
+  retrieved: 2026-11-02
+  tier: B
+  confidence: med
+  verified: match
+- id: ch01.kerr.leff_asymptote_gsup47
+  section: '1.4'
+  claim: Asymptotic effective length 1/alpha for 0.25 dB/km fiber (alpha = 0.000058 1/m)
+  value: 17.24
+  unit: km
+  kind: fact
+  conditions:
+    alpha_dB_per_km: 0.25
+    note: Leff = (1 - exp(-alpha L))/alpha approaches 1/alpha
+  source_id: itu_t_gsup47_2025
+  locator: Clause 7.2, Figure 1 and text, p. 5-6
+  quote: for a fibre with an optical loss of 0.25 dB/km ( = 0.000058 m–1, 1/ = 17.24 km)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The Greek alpha is missing from the extracted quote. A worked check value for the L_eff calculation script.
+  verified: match
+- id: ch01.kerr.fiber_enhancement_factor
+  section: '1.4'
+  claim: Enhancement of nonlinear-interaction efficiency (I0*Leff) of fiber vs bulk near 1.55 um
+  value: 1.0e9
+  unit: '1'
+  kind: fact
+  conditions:
+    wavelength_nm: 1550
+    alpha_dB_per_km: 0.2
+    note: order of magnitude; ~1e7 in the visible at 10 dB/km
+  source_id: agrawal_josab_2011
+  locator: Sect. 2.A, text after Eq. (3)
+  quote: In the wavelength region near 1:55 μm (α 0:2 dB=km), the enhancement factor can ap proach 10 9.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.fwm.g655_scope_1996
+  section: '1.4'
+  claim: 'G.655 rationale: nonzero dispersion suppresses FWM growth, which is deleterious in dense WDM'
+  value: Nonzero |D| over the operating band suppresses four-wave mixing in DWDM
+  unit: ''
+  kind: fact
+  conditions:
+    note: Original 1996 scope; band 1500-1600 nm
+  source_id: itu_t_g655_1996
+  locator: Clause 1 'Scope', p. 1
+  quote: This dispersion suppresses the growth of four-wave mixing, a non-linear effect that can be particularly deleterious
+    in dense Wavelength-Division Multiplexing (WDM).
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.fwm.g655_dmin_dmax_1996
+  section: '1.4'
+  claim: G.655 (1996) allowed range for Dmin and Dmax, 1530-1565 nm
+  value:
+  - 0.1
+  - 6.0
+  unit: ps/(nm·km)
+  kind: spec_max
+  conditions:
+    wavelength_range_nm:
+    - 1530
+    - 1565
+    note: 0.1 <= Dmin <= Dmax <= 6.0 ps/nm/km; superseded edition
+  source_id: itu_t_g655_1996
+  locator: Clause 6.2, NOTE 1, p. 4
+  quote: 0.1 ps/nm•km ≤ Dmin ≤ Dmax ≤ 6.0 ps/nm•km and 1530 nm ≤ λmin ≤ λmax ≤ 1565 nm
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The 2009 edition's tables were not read. Current G.655.D/E limits must come from the in-force edition. Sumitomo TR-22077A
+    gives G.655.D 2.80-6.20 ps/nm/km at 1550 nm (not separately recorded).
+  verified: match
+- id: ch01.fwm.g655_scope_2009
+  section: '1.4'
+  claim: 'G.655 (2009) summary: nonzero |D| above 1530 nm reduces growth of nonlinear effects deleterious in DWDM'
+  value: Nonzero |D| above 1530 nm reduces nonlinear effects in DWDM
+  unit: ''
+  kind: fact
+  conditions:
+    note: 2009 edition summary
+  source_id: itu_t_g655_2009
+  locator: Clause 1 Scope
+  quote: This dispersion reduces the growth of non-linear effects that can be particularly deleterious in dense wavelength
+    division multiplexing (DWDM) systems.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: partial_fixed
+- id: ch01.fwm.local_dispersion_note_g655
+  section: '1.4'
+  claim: Local dispersion may drop near zero along the fiber, enabling FWM; FWM power depends on |D|, slope, wavelengths,
+    power, distance
+  value: FWM magnitude depends on |D|, dispersion slope, wavelengths, power, interaction length
+  unit: ''
+  kind: fact
+  conditions:
+    note: Longitudinal uniformity NOTE; present in both 1996 (clause 5.9) and 2009 editions
+  source_id: itu_t_g655_1996
+  locator: Clause 5.9 'Longitudinal uniformity', NOTE, p. 4
+  quote: If the value decreases to a small value at a wavelength that is close to an operating wavelength ... four-wave mixing
+    can induce
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.fwm.g653_vs_g652_g655_gsup47
+  section: '1.4'
+  claim: WDM systems in the 1.55 um window over G.652 and G.655 fibre suffer much less FWM than over G.653
+  value: G.652/G.655 << G.653 in FWM impairment
+  unit: ''
+  kind: fact
+  conditions:
+    wavelength_nm: 1550
+  source_id: itu_t_gsup47_2025
+  locator: Clause 7.3 'Four-wave mixing efficiency', p. 6
+  quote: ITU-T G.652 fibres and ITU-T G.655 fibres experience much less FWM impairment than systems deployed over ITU-T G.653
+    fibres
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.fwm.vanish_100ghz_d1
+  section: '1.4'
+  claim: For 50 km link with D = 1 ps/(nm·km) and 0.25 dB/km, FWM component nearly vanishes for channel spacing >= 100 GHz
+  value: 100
+  unit: GHz
+  kind: fact
+  conditions:
+    L_km: 50
+    D_ps_nm_km: 1
+    alpha_dB_per_km: 0.25
+    note: Figure 2 also shows D = 5 and 17 ps/nm/km curves
+  source_id: itu_t_gsup47_2025
+  locator: Clause 7.3, Figure 2 and text, p. 7
+  quote: 50-km-long fibre cable link with dispersion coefficient D = 1 ps/nm/km, the FWM component nearly vanishes for channel
+    spacing of 100 GHz
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.fwm.nonuniform_dispersion_10db
+  section: '1.4'
+  claim: FWM crosstalk reduction in a G.653 link with non-uniform (random) dispersion vs uniform dispersion
+  value: 10
+  unit: dB
+  kind: fact
+  conditions:
+    channels: 20
+    spacing_GHz: 100
+    distance_km: 500
+    launch_dBm_per_ch: -10
+    note: 2.5 km fibre pieces, 0.56 ps/nm/km variance of absolute dispersion
+  source_id: itu_t_gsup47_2025
+  locator: Clause 7.3, p. 7
+  quote: non-uniform fibre link composed of 2.5-km-long fibres with 0.56 ps/nm/km variance of the absolute dispersion value
+    is about 10 dB smaller
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.fwm.bitrate_independence
+  section: '1.4'
+  claim: FWM efficiency is not influenced by increasing bit rate (G.Sup47)
+  value: independent of bit rate
+  unit: ''
+  kind: fact
+  conditions:
+    note: statement in intensity-modulation-era context
+  source_id: itu_t_gsup47_2025
+  locator: Clause 7.3, p. 7
+  quote: Note that FWM efficiency is not influenced by an increasing bit rate.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.manakov.eight_ninths
+  section: '1.4'
+  claim: Kerr term averaged over the Poincare sphere in the Manakov(-PMD) equation carries the factor 8/9
+  value: 0.8889
+  unit: '1'
+  kind: constant
+  conditions:
+    note: exact value 8/9; random, rapidly varying birefringence
+  source_id: marcuse_jlt_1997
+  locator: Sect. II, text following Eq. (12), p. 1737
+  quote: includes the effect of Kerr nonlinearity averaged over the Poincaré sphere with the well-known 8/9 factor [8], [9]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.manakov.nonlinear_pmd_negligible
+  section: '1.4'
+  claim: Nonlinear PMD terms of the Manakov-PMD equation are negligible for practical communication parameters
+  value: negligible
+  unit: ''
+  kind: fact
+  conditions:
+    note: per Marcuse, Menyuk, Wai 1997
+  source_id: marcuse_jlt_1997
+  locator: Sect. VI 'Conclusion', p. 1745
+  quote: We also examined the nonlinear PMD terms and showed that they are negligible even under fairly extreme circumstances.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: The conclusion page number is inferred and not confirmed.
+  verified: match
+- id: ch01.manakov.length_scales
+  section: '1.4'
+  claim: Beat length vs birefringence-orientation correlation scale vs dispersive/nonlinear scale lengths in communication
+    fibers
+  value: beat length 10-100 m; orientation varies on 0.3-300 m; dispersive and nonlinear lengths hundreds of km
+  unit: ''
+  kind: fact
+  conditions:
+    note: In Sect. II the same paper gives 0.3-100 m for the variation scale (internal inconsistency).
+  source_id: marcuse_jlt_1997
+  locator: Sect. I 'Introduction', p. 1735
+  quote: the beat lengths are typically 10–100 m, while the dispersive and nonlinear scale lengths are hundreds of kilometers
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.validity_envelope_2012
+  section: '1.6'
+  claim: GN-model reliability envelope suggested by accumulated evidence (2012)
+  value: Rs >= 28 GBd; spacing <= 100 GHz; >= 3 channels; D >= 2 ps/(nm·km); more than one span
+  unit: ''
+  kind: fact
+  conditions:
+    note: Sect. II-A 'Validation and limitations'
+  source_id: poggiolini_jlt_2012
+  locator: Sect. II-A
+  quote: reliable predictions for symbol rates ≥ 28 GBaud, for channel spacings up to 100 GHz, of systems of at least 3 channels
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'The sentence continues: ''over fibers with D ≥ 2 ps/(nm · km) and over more than a single span.'''
+  verified: match
+- id: ch01.gn.gaussianization_distance
+  section: '1.6'
+  claim: Accumulated-dispersion distance for a ~30 GBd signal over SMF to approximately gaussianize
+  value: 200
+  unit: km
+  kind: fact
+  conditions:
+    symbol_rate_GBd: 30
+    fiber: SMF
+  source_id: poggiolini_jlt_2012
+  locator: Sect. II-A
+  quote: In a typical 30 GBaud system over SMF, such condition is approximately reached after 200km.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.ref_system_2012
+  section: '1.6'
+  claim: 'GN 2012 reference system (RS-SMF): span 100 km, 50 GHz spacing, 32 GBd, raised-cosine roll-off 0.3, 101 channels
+    (~5 THz C-band)'
+  value: Ls=100 km; Δf=50 GHz; Rs=32 GBd; roll-off 0.3; Nch=101; SMF α=0.2 dB/km, D=16.5 ps/(nm·km), γ=1.3 1/(W·km)
+  unit: mixed (see value)
+  kind: model_param
+  conditions:
+    note: Nyquist variant NY-SMF uses Nch = 157 rectangular channels at 32 GBd, BWDM ~ 5 THz
+  source_id: poggiolini_jlt_2012
+  locator: Sect. IV and Table I
+  quote: span length is set at Ls=100 km. The channel spacing is assumed to be ∆f=50 GHz and the symbol rate
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: 'Also in Sect. IV: ''raised-cosine shape with roll-off equal to 0.3'', ''Nch=101''. EDFA NF = 6 dB is given only
+    in Sect. XII-B for the P_opt example.'
+  verified: match
+- id: ch01.gn.popt_rs_smf_check
+  section: '1.6'
+  claim: 'CHECK VALUE: GN-model optimum launch power per channel for RS-SMF, full C-band, EDFA NF 6 dB, assuming epsilon ~
+    0'
+  value: -0.4
+  unit: dBm
+  kind: model_param
+  conditions:
+    fiber: SMF, α=0.2 dB/km, D=16.5 ps/(nm·km), γ=1.3 1/(W·km)
+    span_km: 100
+    NF_dB: 6
+    symbol_rate_GBd: 32
+    spacing_GHz: 50
+    rolloff: 0.3
+    channels: 101
+    note: 'Also: optimum PSD 28.5 µW/GHz; ~20 dBm total. Uses Eq. (29).'
+  source_id: poggiolini_jlt_2012
+  locator: Sect. XII-B, text after Eq. (31)
+  quote: turns out to be 28.5 [µW/GHz], or -0.4 dBm per channel, amounting to about 20 dBm overall
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: Primary reproducible check case for the worked example.
+  verified: match
+- id: ch01.gn.popt_ny_smf_check
+  section: '1.6'
+  claim: 'CHECK VALUE: optimum launch power per channel, NY-SMF (Nyquist-WDM, full C-band), 100 km spans'
+  value: -1
+  unit: dBm
+  kind: model_param
+  conditions:
+    span_km: 100
+    NF_dB: 6
+    note: Nyquist WDM, 32 GBd, BWDM ~ 5 THz (157 ch); value stated as 'about -1 dBm'
+  source_id: poggiolini_jlt_2012
+  locator: Sect. XII-B
+  quote: Assuming NY-SMF (full C-band) P (Ns) ch,opt(0) goes down only slightly, to about -1 dBm per channel.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.popt_ny_smf_75km_check
+  section: '1.6'
+  claim: 'CHECK VALUE: optimum launch power per channel, NY-SMF, 75 km spans'
+  value: -2.6
+  unit: dBm
+  kind: model_param
+  conditions:
+    span_km: 75
+    NF_dB: 6
+    note: Nyquist WDM, full C-band
+  source_id: poggiolini_jlt_2012
+  locator: Sect. XII-B
+  quote: Shortening the span length to 75 km, with NY SMF, P (Ns) ch,opt(0) goes further down to -2.6 dBm per channel.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.ase_eq_2nli
+  section: '1.6'
+  claim: At the BER-optimal launch power, total ASE noise equals twice total NLI noise, for any epsilon
+  value: 2
+  unit: '1'
+  kind: fact
+  conditions:
+    note: P_ASE = 2 P_NLI, i.e. NLI = 1/3 and ASE = 2/3 of total noise at optimum
+  source_id: poggiolini_jlt_2012
+  locator: Sect. XII-A, text after Eq. (28)
+  quote: the minimum BER (or maximum OSNR) is always obtained when PASE = 2PNLI in Eq. (4)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The source credits ref. [24] with first pointing this out and ref. [15] with confirming it experimentally.
+  verified: match
+- id: ch01.gn.popt_indep_of_target_osnr
+  section: '1.6'
+  claim: Span-count-maximizing optimum launch power is independent of target OSNR (format, transceiver)
+  value: independent
+  unit: ''
+  kind: fact
+  conditions:
+    note: assumes epsilon ~ 0
+  source_id: poggiolini_jlt_2012
+  locator: Sect. XII-B, text after Eq. (30)
+  quote: the optimum launch power is independent of the target OSNR
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.reach_vs_nli_one_third
+  section: '1.6'
+  claim: Max-reach change in dB is -1/3 of the change in normalized NLI (dB); a 0.5 dB NLI error gives ~4% reach error
+  value: -0.3333
+  unit: dB/dB
+  kind: fact
+  conditions:
+    note: Eq. (32); 0.5 dB NLI error -> 1/6 dB (4%) reach error
+  source_id: poggiolini_jlt_2012
+  locator: Eq. (32) and following text, Sect. XII-B
+  quote: which is, say, 0.5 dB in error, causes only a 1/6 dB (that is 4%) error in the estimate of N max s
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.reach_vs_dispersion_gamma
+  section: '1.6'
+  claim: 'Reach scaling: +x dB in beta2 gives +x/3 dB reach; -x dB in gamma (or +x dB Aeff) gives +2x/3 dB reach'
+  value: ΔNs[dB] = (1/3)Δβ2[dB]; ΔNs[dB] = -(2/3)Δγ[dB] = (2/3)ΔAeff[dB]
+  unit: ''
+  kind: fact
+  conditions:
+    note: neglecting weak log dependences; from Eqs. (13)/(15) in (32)
+  source_id: poggiolini_jlt_2012
+  locator: Sect. XII-D (unnumbered equations)
+  quote: a reduction of x dB of γ or increase of x dB of Aeff brings about a 2x 3 dB reach increase
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: '''2x 3'' is the extraction of 2x/3. This supports the G.654.E motivation in section 1.4.'
+  verified: match
+- id: ch01.gn.nlc_3db_gives_1db
+  section: '1.6'
+  claim: Halving P_NLI (3 dB) by nonlinearity compensation gains only ~1 dB of reach (~25%)
+  value: 1
+  unit: dB
+  kind: fact
+  conditions:
+    note: RS-SMF, 50 spans; ~132 GHz receiver bandwidth needed for 3 dB NLI reduction
+  source_id: poggiolini_jlt_2012
+  locator: Sect. IX-C
+  quote: a 3-dB reduction of PNLI only gains 1 dB of system length increase (25%)
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.eps_nyquist_5thz
+  section: '1.6'
+  claim: Best-fit NLI accumulation exponent epsilon for Nyquist-WDM at BWDM = 5 THz (all three fibers)
+  value: 0.035
+  unit: '1'
+  kind: model_param
+  conditions:
+    BWDM_THz: 5
+    span_km: 100
+    note: epsilon ~ 1 at BWDM = 1 GHz; below 0.05 above 1 THz
+  source_id: poggiolini_jlt_2012
+  locator: Sect. IX-A, Fig. 10
+  quote: the terminal value for BWDM =5 THz is almost the same for all curves, approximately ϵ ≈ 0.035
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.eps_rs_50ghz
+  section: '1.6'
+  claim: Best-fit epsilon for full C-band 50 GHz-spaced systems (RS-SMF, RS-LPSCF; RS-NZDSF ~0.07)
+  value: 0.06
+  unit: '1'
+  kind: model_param
+  conditions:
+    spacing_GHz: 50
+    channels: 101
+    span_km: 100
+    note: NZDSF about 0.07; single channel (SCI only) SMF 0.19, NZDSF 0.36
+  source_id: poggiolini_jlt_2012
+  locator: Sect. IX-A, Fig. 11
+  quote: The terminal value is higher than in the Nyquist case, with ϵ ≈ 0.06 for SMF and LPSCF and about 0.07 for NZDSF.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.eps_100ghz
+  section: '1.6'
+  claim: 'epsilon at 100 GHz spacing, 51 channels (C-band): RS-SMF value'
+  value: 0.09
+  unit: '1'
+  kind: model_param
+  conditions:
+    spacing_GHz: 100
+    channels: 51
+    note: 'RS-LPSCF 0.096; RS-NZDSF 0.123. With Ls = 50 km and 50 GHz: SMF 0.088, LPSCF 0.090, NZDSF 0.103'
+  source_id: poggiolini_jlt_2012
+  locator: Sect. IX-A
+  quote: 'Their values at 51 channels (the whole C-band) are: RS-SMF 0.09; RS-LPSCF 0.096; RS NZDSF 0.123.'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.eps_experimental_range
+  section: '1.6'
+  claim: Range of experimentally estimated NLI accumulation exponent epsilon (as of 2012)
+  value:
+  - 0
+  - 0.6
+  unit: '1'
+  kind: measured
+  conditions:
+    note: from refs [15], [18]-[19] of Poggiolini 2012; some experiments report higher epsilon than GN predicts
+  source_id: poggiolini_jlt_2012
+  locator: Sect. IX, text after Eq. (7)
+  quote: The estimated values of ϵ range between 0 and 0.6 [15], [18]– [19].
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: This is a secondary report of experimental results. It disagrees with the GN-model prediction of about 0.03-0.08
+    for full C-band (see the gaps file).
+  verified: match
+- id: ch01.gn.eps_typical_2014
+  section: '1.6'
+  claim: Typical epsilon for fully-populated C-band WDM (2014 tutorial)
+  value:
+  - 0.03
+  - 0.08
+  unit: '1'
+  kind: model_param
+  conditions:
+    note: depends on system parameters
+  source_id: poggiolini_jlt_2014
+  locator: Sect. III-D, text after Eq. (18)
+  quote: For fully-populated (C-band) WDM systems, the typical values of are between 0.03 and 0.08, depending on system parameters
+    [36].
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The Greek epsilon was dropped by PDF extraction ('values of are'). The pre-review preprint was read.
+  verified: match
+- id: ch01.gn.lwn_error_max
+  section: '1.6'
+  claim: Maximum P_NLI overestimate from the locally-white-noise (LWN) approximation (single channel)
+  value: 0.53
+  unit: dB
+  kind: model_param
+  conditions:
+    note: 32 GBd, roll-off 0.02, SMF, 25 x 85 km; <=0.4 dB at 5 ch, <0.35 dB at 25 ch / 50 GHz; always conservative
+  source_id: poggiolini_jlt_2014
+  locator: Sect. IV-B, Fig. 5
+  quote: the absolute maximum value of ΔPNLI,dB is found, expectedly, for a single channel, and amounts to about 0.53 dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.pd_sim_agreement
+  section: '1.6'
+  claim: GN-model maximum-reach agreement with pre-dispersed (Gaussianized) signal simulations
+  value: 0.25
+  unit: dB
+  kind: model_param
+  conditions:
+    note: 15 ch, 32 GBd, PM-QPSK/16QAM/64QAM, SMF/PSCF/NZDSF, spacing 33.6-50 GHz, NF 5 dB
+  source_id: poggiolini_jlt_2014
+  locator: Sect. V-A, Fig. 6
+  quote: the PD simulations are very close to the GN-model predictions, within 0.25 dB error for all formats, fibers and spacings
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.first_span_overestimate_qpsk
+  section: '1.6'
+  claim: GN-model NLI overestimate in the first span vs non-pre-dispersed PM-QPSK over SMF
+  value: 6
+  unit: dB
+  kind: model_param
+  conditions:
+    format: PM-QPSK
+    fiber: SMF
+    span_km: 100
+    channels: 9
+    note: 'PM-16QAM: 3.5 dB; PM-QPSK over NZDSF: 4 dB; gap decreases along link'
+  source_id: poggiolini_jlt_2014
+  locator: Sect. V-C, Fig. 7
+  quote: the non-PD simulations show about 6 dB less NLI noise produced over the first span than either the PD simulation
+    or the GN-model predict
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.ref_sim_max_reach_check
+  section: '1.6'
+  claim: 'CHECK VALUE: simulated maximum reach of 2014 design-rule reference scenario (9 ch, 200G PM-16QAM, 32 GBd, Ks = 1.05,
+    SMF 80 km spans)'
+  value: 15
+  unit: spans
+  kind: model_param
+  conditions:
+    channels: 9
+    format: PM-16QAM, 200G
+    symbol_rate_GBd: 32
+    Ks: 1.05
+    span_km: 80
+    alpha_dB_per_km: 0.22
+    span_loss_dB: 17.6
+    D_ps_nm_km: 16.7
+    gamma_per_W_km: 1.3
+    NF_dB: 5
+    target: BER 1e-3, SNR_T = 16.85 dB
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VII-A and Table II
+  quote: The target BER was 10− 3 corresponding to SNRT,dB,ref= 16.85 dB. The simulation resulted in N max s,ref= 15.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: This is a split-step simulation result, not a GN closed form. It is a secondary check case with only 9 channels.
+    Table II also lists experiment vs Eq. (60) predictions, all within 1 span.
+  verified: match
+- id: ch01.gn.popt_oct_20x85km
+  section: '1.6'
+  claim: OCT-maximizing launch power per channel, 20 x 85 km SMF, Nyquist C-band, all PM-QAM formats
+  value: -2.65
+  unit: dBm
+  kind: model_param
+  conditions:
+    span_km: 85
+    spans: 20
+    BWDM_THz: 5
+    note: Nyquist limit; linear-only DSP. The symbol rate for this figure was not found in the text extract (see gaps).
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VIII-C, Fig. 11
+  quote: For all formats, the optimum launch power per channel, i.e. the value of Pch maximizing the OCT, is equal to -2.65
+    dBm.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  notes: The symbol rate and NF for Fig. 11 are not stated in the extracted text. Link 1 in Sect. VIII-D uses F = 5 dB, so
+    NF = 5 dB is likely but not confirmed.
+  verified: match
+- id: ch01.gn.closedform_eq37_error
+  section: '1.6'
+  claim: Max error of Nyquist single-span closed form (asinh) vs GNRF, for span loss > ~10 dB
+  value: 0.35
+  unit: dB
+  kind: model_param
+  conditions:
+    note: max error at asinh argument x ~ 1; <0.1 dB for x > 10; replacing pi^2/2 by 4.6 keeps error < 0.1 dB
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VI-A, text after Eq. (38)
+  quote: Eq. (37) is very accurate, with a maximum error of about 0.35 dB occurring at x ≈ 1
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.nlc_gain_single_channel
+  section: '1.6'
+  claim: 'Ideal single-channel NLC gain at 32 GHz spacing (PSCF, 85 km spans): after 1 span vs after 40 spans'
+  value:
+  - 0.8
+  - 2.2
+  unit: dB
+  kind: model_param
+  conditions:
+    symbol_rate_GBd: 32
+    spacing_GHz: 32
+    fiber: PSCF
+    span_km: 85
+  source_id: poggiolini_jlt_2014
+  locator: Sect. IX-A, Fig. 14
+  quote: single-channel NLC at 32-GHz channel spacing achieves 0.8 dB NLC gain after a single span but 2.2 dB after 40 spans
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gn.nlc_200ghz_reach_gain
+  section: '1.6'
+  claim: Max-reach gain with ideal NLC over 200 GHz optical bandwidth (PM-16QAM, PSCF 85 km, C-band)
+  value:
+  - 1.1
+  - 1.3
+  unit: dB
+  kind: model_param
+  conditions:
+    BNLC_GHz: 200
+    note: ~2 THz BNLC needed to double reach (3 dB)
+  source_id: poggiolini_jlt_2014
+  locator: Sect. IX-B, Fig. 15
+  quote: the amount of MSR gain achievable in the analyzed scenarios reaches only 1.1 to 1.3 dB, depending on channel spacing
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.egn.gn_reach_underestimate
+  section: '1.6'
+  claim: GN-model underestimate of maximum reach vs simulation (PM-QPSK/16QAM, 32 GBd, 15 ch), PSCF/SMF/NZDSF
+  value:
+  - 0.3
+  - 0.6
+  unit: dB
+  kind: model_param
+  conditions:
+    symbol_rate_GBd: 32
+    channels: 15
+    spacing_GHz:
+    - 33.6
+    - 50
+    NF_dB: 5
+    note: up to 0.8 dB over Corning LS (very low dispersion, high nonlinearity)
+  source_id: carena_oe_2014
+  locator: Sect. 6, Fig. 9, p. 16353; also Sect. 1, p. 16336
+  quote: The GN-model underestimates the maximum reach by 0.3-0.6 dB over PSCF, SMF and NZDSF, in agreement with [14,16].
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.egn.gn_reach_underestimate_ls
+  section: '1.6'
+  claim: GN-model maximum-reach underestimate over ultra-low-dispersion LS fiber
+  value: 0.8
+  unit: dB
+  kind: model_param
+  conditions:
+    fiber: Corning LS
+  source_id: carena_oe_2014
+  locator: Sect. 6, Fig. 9
+  quote: The error goes up to 0.8 dB in the case of the very low dispersion and high non-linearity LS fiber.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.egn.residual_error
+  section: '1.6'
+  claim: EGN-model maximum-reach error vs simulation across all fibers and spacings
+  value: 0.2
+  unit: dB
+  kind: model_param
+  conditions:
+    note: upper bound ('less than')
+  source_id: carena_oe_2014
+  locator: Sect. 6, p. 16354
+  quote: The error is less than 0.2 dB across all system configurations.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.egn.nli_overestimate_near_max_reach
+  section: '1.6'
+  claim: GN-model NLI power overestimate at span counts near maximum reach (realistic systems)
+  value:
+  - 1
+  - 2
+  unit: dB
+  kind: model_param
+  conditions:
+    note: several dB in first spans; translates to 0.3-0.6 dB reach / P_opt error; conservative for PM-QAM
+  source_id: carena_oe_2014
+  locator: Sect. 7A, p. 16355
+  quote: the error on NLI power estimation is typically 1 to 2 dB, depending on fiber type, modulation format and span length,
+    for realistic systems
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.egn.mechanism
+  section: '1.6'
+  claim: EGN adds a correction term to the GN PSD that removes the signal-Gaussianity assumption; correction depends on 4th
+    and 6th moments of the constellation
+  value: G_NLI^EGN = G_NLI^GN + G_NLI^corr
+  unit: ''
+  kind: fact
+  conditions:
+    note: Eq. (1); format-dependent coefficients Φ, Ψ in Table 1
+  source_id: carena_oe_2014
+  locator: Sect. 2, Eq. (1); Sect. 3, Table 1
+  quote: can be thought of as a correction term which takes the effect of signal non-Gaussianity into account
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.egn.phi_qpsk
+  section: '1.6'
+  claim: 'EGN format coefficients for QPSK (and BPSK): Φa = -1, Ψa = 4'
+  value:
+  - -1
+  - 4
+  unit: '1'
+  kind: constant
+  conditions:
+    note: '16QAM: Φ=-17/25, Ψ=52/25; 64QAM: Φ=-13/21, Ψ=1161/646'
+  source_id: carena_oe_2014
+  locator: Table 1, p. 16341
+  quote: Format Φa Ψa BPSK −1 4 QPSK −1 4 16QAM −17/25 52/25 64 QAM −13/21 1161/646
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The value is [Φa, Ψa]. Larger constellations have smaller-magnitude Φ, so they need a smaller correction.
+  verified: match
+- id: ch01.egn.cpu_speedup
+  section: '1.6'
+  claim: EGN-model CPU speed-up vs Monte-Carlo split-step simulation (as implemented)
+  value:
+  - 10
+  - 20
+  unit: '1'
+  kind: fact
+  conditions:
+    note: authors expect 20-40 achievable; GN is a further 5-10x faster; IGN 10-20x faster than GN
+  source_id: carena_oe_2014
+  locator: Sect. 7A, p. 16355-16356
+  quote: the EGN-model CPU gain vs. Monte Carlo simulations was still quantifiable as a factor of 10-20
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gnpy.gsnr_accuracy
+  section: '1.6'
+  claim: 'GNPy OSNR/GSNR prediction accuracy vs measurement: within 1 dB for >90% of 500 samples'
+  value: 1
+  unit: dB
+  kind: measured
+  conditions:
+    samples: 500
+    fraction_within: '>90%'
+    distance_km:
+    - 400
+    - 4000
+    note: mixed-fiber, Raman-amplified, multivendor, full C-band; PM-QPSK, PM-8QAM, PM-16QAM; EDFA and hybrid Raman-EDFA
+  source_id: ferrari_jocn_2020
+  locator: Abstract
+  quote: within 1 dB accuracy for more than 90% of the 500 experimental samples
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.gnpy.popt_accuracy
+  section: '1.6'
+  claim: GNPy accuracy in estimating the GSNR-maximizing launch power
+  value: 0.5
+  unit: dB
+  kind: measured
+  conditions:
+    note: same campaign as ch01.gnpy.gsnr_accuracy
+  source_id: ferrari_jocn_2020
+  locator: Abstract
+  quote: We also demonstrate the ability to estimate the transmitted power maximizing the GSNR within 0.5 dB of accuracy.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.cap.essiambre_method
+  section: '1.6'
+  claim: Essiambre et al. 2010 estimate a fiber-channel capacity limit using ring constellations over several dispersion maps
+    and distances
+  value: capacity-limit estimate via ring constellations
+  unit: ''
+  kind: fact
+  conditions:
+    note: abstract only; headline SE numbers not read
+  source_id: essiambre_jlt_2010
+  locator: Abstract
+  quote: We proceed to evaluate a capacity limit estimate for this fiber channel using ring constellations.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: med
+  verified: match
+- id: ch01.cap.soft_fec_gap
+  section: '1.6'
+  claim: Coding-gain penalty of state-of-the-art soft FEC vs ideal maximum gain (2013-2014)
+  value: 1.5
+  unit: dB
+  kind: fact
+  conditions:
+    note: estimate; used as assumption in OCT-vs-distance curves together with a 3 dB system margin
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VIII-C, end; Fig. 12 caption
+  quote: for state-of the-art soft FEC codes the estimated coding gain penalty vs. the ideal maximum gain is around 1.5 dB
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.cap.oct_assumed_margin
+  section: '1.6'
+  claim: SNR penalty from the quantum (ideal) limit assumed in GN-based OCT-vs-distance study
+  value: 3
+  unit: dB
+  kind: model_param
+  conditions:
+    note: assumption, not measurement; plus 1.5 dB soft-FEC penalty
+  source_id: poggiolini_jlt_2014
+  locator: Fig. 12 caption, Sect. VIII-D
+  quote: 'Assumptions: 3-dB SNR penalty from quantum limit and 1.5-dB penalty of soft FEC with respect to infinite-length
+    codes ideal performance.'
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.cap.pm16qam_2000km
+  section: '1.6'
+  claim: 'GN-based OCT of PM-16QAM over terrestrial SMF/EDFA (Link 1: F = 5 dB, 85 km spans, 5 THz Nyquist) at 2000 km'
+  value: 6.5
+  unit: bit/symbol
+  kind: model_param
+  conditions:
+    distance_km: 2000
+    span_km: 85
+    NF_dB: 5
+    note: with 3 dB margin and 1.5 dB FEC penalty assumptions; PM-8QAM ~5-5.5 b/sym at 3000 km
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VIII-D, Fig. 12
+  quote: PM-16QAM allows to reach 2,000 km with an OCT' 6.5 bit/symbol.
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The apostrophe in 'OCT'' is an extraction artifact of '≈'.
+  verified: match
+- id: ch01.cap.soft_fec_threshold_20pct
+  section: '1.6'
+  claim: Pre-FEC BER threshold of state-of-the-art 20%-overhead soft FEC (circa 2013)
+  value: 0.027
+  unit: '1'
+  kind: fact
+  conditions:
+    FEC_overhead: 20%
+  source_id: poggiolini_jlt_2014
+  locator: Sect. VIII-D
+  quote: State-of-the-art soft FEC with 20% overhead can now operate at pre-FEC BER of 2.7∙ 10− 2 [71]
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  verified: match
+- id: ch01.gap.osnr_penalty_64gbd
+  section: '1.6'
+  claim: 'Implementation OSNR penalty vs theory for 64 GBd coherent transceivers with commercial device models: DP-16QAM/64QAM'
+  value: 2.2
+  unit: dB
+  kind: model_param
+  conditions:
+    symbol_rate_GBd: 64
+    note: 'DP-4QAM (QPSK): 1.1 dB. Penalty vs theoretical format performance, not vs Shannon capacity. Likely simulation/device-model
+      based.'
+  source_id: rafique_ofc_2017
+  locator: Abstract
+  quote: Compared to theory, our results suggest OSNR penalties as low as 2.2dB for DP-64QAM and DP-16QAM, and 1.1dB for DP-4QAM.
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: 'Verifier: abstract-only conference claim, tier C; contested box only. Penalty is relative to format theory, not
+    to Shannon.'
+  verified: partial_fixed
+- id: ch01.gap.transceiver_snr_range
+  section: '1.6'
+  claim: Typical transceiver SNR (SNR_TR) of high-baud-rate coherent transceivers
+  value:
+  - 14
+  - 21
+  unit: dB
+  kind: measured
+  conditions:
+    note: cited from Matsushita et al. JLT 2020 [9]; SNR_TR depends on OSNR below ~20 dB
+  source_id: yoshida_ecoc_2020
+  locator: Section 'Definition of SNRs', p. 1
+  quote: Note that SNR୘ୖ typically ranges from 14 to 21 dB in high baud rate cases[9].
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: '''SNR୘ୖ'' is an extraction artifact of SNR_TR. The value is secondary within this paper, since it cites Matsushita
+    2020.'
+  verified: match
+- id: ch01.gap.ps_rosnr_reduction
+  section: '1.6'
+  claim: Measured ROSNR reduction of PS-QAM (BICM or MLC) over uniform 32-QAM at the FEC threshold
+  value:
+  - 1.3
+  - 1.4
+  unit: dB
+  kind: measured
+  conditions:
+    symbol_rate_GBd: 24
+    note: 'over BICM uniform 16-QAM: 0.6-0.7 dB; noise-loading back-to-back; SD-FEC rate 4/5'
+  source_id: yoshida_ecoc_2020
+  locator: 'Section ''Results: ROSNRs in BICM and MLC'', Fig. 4'
+  quote: The ROSNR reduction by BICM PS-QAM or MLC PS-QAM is significant (1.3–1.4 dB) over uniform 32-QAM
+  retrieved: 2026-11-02
+  tier: A
+  confidence: high
+  notes: The ROSNR gap to Shannon itself appears only in Figs. 4-5, and no numeric value was extractable (see gaps).
+  verified: match
+- id: ch01.gap.vendor_claim_1_2db
+  section: '1.6'
+  claim: 'Vendor-side claim: 7-nm-DSP coherent engines (e.g. Infinera ICE6) operate 1-2 dB from the Shannon limit'
+  value:
+  - 1
+  - 2
+  unit: dB
+  kind: fact
+  conditions:
+    note: trade-press claim, conditions unspecified
+  source_id: momtahan_isemag_2024
+  locator: Article body
+  quote: Today’s high-performance embedded optical engines that leverage 7-nm CMOS DSPs, such as Infinera’s ICE6, are typically
+    between 1 and 2 dB from the Shannon limit
+  retrieved: 2026-11-02
+  tier: C
+  confidence: low
+  notes: Tier C and vendor-affiliated. Use it only to present the claim in a contested box; it must not be the sole support
+    for a number in prose.
+  verified: match

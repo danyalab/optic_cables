@@ -1,0 +1,1068 @@
+# Independent verification of ch01_b / ch01_c ledgers and equations. Verifier did not read book/chapters/.
+summary:
+  checked: 205
+  match: 175
+  mismatch: 1
+  partial: 25
+  unreachable: 4
+results:
+- id: ch01.kerr.n2_kato1995_smf
+  status: MATCH
+  found_locator: Abstract (Opt. Lett. 20(9) 988, 1995)
+  evidence: determined for dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 x 10-20, 2.96 x 10-20, 2.79 x 10-20, and
+  action: None for value. When comparing with SPM random-polarization values (Namihira, Stolen), state the polarization convention (depolarized-pump XPM vs random-polarization SPM effective n2, which can differ by the 8/9 averaging) before attributing the 15-30% spread to measurement disagreement.
+- id: ch01.kerr.n2_kato1995_dsf
+  status: MATCH
+  found_locator: Abstract (Opt. Lett. 20(9) 988, 1995)
+  evidence: determined for dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 x 10-20, 2.96 x 10-20, 2.79 x 10-20, and
+  action: None for value. When comparing with SPM random-polarization values (Namihira, Stolen), state the polarization convention (depolarized-pump XPM vs random-polarization SPM effective n2, which can differ by the 8/9 averaging) before attributing the 15-30% spread to measurement disagreement.
+- id: ch01.kerr.n2_kato1995_pscf
+  status: MATCH
+  found_locator: Abstract (Opt. Lett. 20(9) 988, 1995)
+  evidence: determined for dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 x 10-20, 2.96 x 10-20, 2.79 x 10-20, and
+  action: None for value. When comparing with SPM random-polarization values (Namihira, Stolen), state the polarization convention (depolarized-pump XPM vs random-polarization SPM effective n2, which can differ by the 8/9 averaging) before attributing the 15-30% spread to measurement disagreement.
+- id: ch01.kerr.n2_kato1995_dcf
+  status: MATCH
+  found_locator: Abstract (Opt. Lett. 20(9) 988, 1995)
+  evidence: determined for dispersion-shifted fiber, standard single-mode fiber, pure silica-core single-mode fiber, and dispersion-compensating fiber as 3.35 x 10-20, 2.96 x 10-20, 2.79 x 10-20, and
+  action: None for value. When comparing with SPM random-polarization values (Namihira, Stolen), state the polarization convention (depolarized-pump XPM vs random-polarization SPM effective n2, which can differ by the 8/9 averaging) before attributing the 15-30% spread to measurement disagreement.
+- id: ch01.kerr.n2_kim1994_silica_core
+  status: MATCH
+  found_locator: Abstract
+  evidence: the n 2 of silica-core and dispersion-shifted fibers is 2.36 × 10 −16 and 2.52 × 10 −16 cm 2 /W (±5%)
+  action: None.
+- id: ch01.kerr.n2_kim1994_dsf
+  status: MATCH
+  found_locator: Abstract
+  evidence: the n 2 of silica-core and dispersion-shifted fibers is 2.36 × 10 −16 and 2.52 × 10 −16 cm 2 /W (±5%)
+  action: None.
+- id: ch01.kerr.n2_germania_ratio_kim1994
+  status: MATCH
+  found_locator: Abstract
+  evidence: We also estimate that the n(2) of germania is three times the n(2) of pure silica.
+  action: None.
+- id: ch01.kerr.n2_namihira1994_dsf
+  status: MATCH
+  found_locator: Abstract, Electron. Lett. 1994
+  evidence: n2 for various DSFs is found to be ~2.31 x 10-20 m2/W (+/- 5 %) for random polarisation states at 1.55 um.
+  action: 'Add note: Namihira (OECC 1996, abstract) later reported ~2.2e-20 m^2/W for DSFs after correcting for pulse broadening; record as a separate (conference, tier C if abstract-only) record if the spread is discussed.'
+- id: ch01.kerr.n2_stolen1998_dsf
+  status: MATCH
+  found_locator: Abstract, JLT 16(6) 1006 (1998)
+  evidence: We measure a value of N2=2.45x10-16 cm2/W (+/-5%) by self-phase modulation (SPM) in two 20 km dispersion-shifted fibers for random polarization at 1.55 um.
+  action: Locator could add the page (JLT 16(6), p. 1006).
+- id: ch01.kerr.n2_pure_silica_gsup47
+  status: MATCH
+  found_locator: Appendix I, clause I.3 'Non-linear refractive index', p. 10
+  evidence: Here 𝜂GeO2 is the effective GeO2 concentration. The constant term on the right-hand side represents the n2 value of pure silica.
+  action: None.
+- id: ch01.kerr.n2_geo2_slope_gsup47
+  status: MATCH
+  found_locator: Appendix I, clause I.3, p. 10
+  evidence: With GeO2, which is a typical dopant ... the non-linear refractive index increases linearly with GeO2 concentration.
+  action: None.
+- id: ch01.kerr.n2_sterlite_g657a2
+  status: MATCH
+  found_locator: Results section and conclusion
+  evidence: average n2 for G657.A2 fiber is about 2.17×10 (m /W) and the nonlinear coefficient ( ) is about 1.255 (W- km)
+  action: None.
+- id: ch01.kerr.n2_boskovic_method_error
+  status: MATCH
+  found_locator: Abstract
+  evidence: A method for measuring the nonlinear refractive index of optical fibers with an error of less than 5% is demonstrated.
+  action: None.
+- id: ch01.kerr.kerr_index_relation
+  status: MATCH
+  found_locator: Appendix I, clause I.3, p. 10
+  evidence: the refractive index of optical fibres depends on the optical intensity inside the fibres and can be expressed as follows
+  action: None.
+- id: ch01.kerr.gamma_range_silica_agrawal
+  status: MATCH
+  found_locator: Sect. 2.C, text after Eq. (11), p. A3
+  evidence: The nonlinear param eter γ is positive and has a value in the range of 1–10 W −1=km for most silica fibers
+  action: None.
+- id: ch01.kerr.gamma_smf_gn2012
+  status: MATCH
+  found_locator: Table I
+  evidence: '| SMF | 0.2 | 16.5 | 1.3 |'
+  action: None.
+- id: ch01.kerr.gamma_pscf_gn2012
+  status: MATCH
+  found_locator: Table I
+  evidence: '| LPSCF | 0.165 | 20.4 | 0.8 |'
+  action: None.
+- id: ch01.kerr.gamma_nzdsf_gn2012
+  status: MATCH
+  found_locator: Table I
+  evidence: '| NZDSF | 0.2 | 3.9 | 1.6 |'
+  action: None.
+- id: ch01.kerr.gamma_ssmf_essiambre_params
+  status: MATCH
+  found_locator: Poggiolini et al. JLT 2014 preprint, Sect. VIII-B, text after Eq. (62)-(63)
+  evidence: 'the fiber is standard single-mode (SMF) with same parameters as in [69]: gamma = 1.27 1/W/km, alpha = 0.22 dB/km, beta2 = - 21.7 ps2/km'
+  action: Value matches the secondary source; ref [69] confirmed as Essiambre et al. JLT 28, 662-701. Primary full text still not read.
+- id: ch01.kerr.aeff_g654e_typ
+  status: MATCH
+  found_locator: TR-23076A, Table 1 and footnote
+  evidence: 'Typ. 110-125* | Typ. 80* ... *: Typical value. Aeff is not specified in ITU-T Recommendations.'
+  action: None.
+- id: ch01.kerr.aeff_g652d_typ
+  status: MATCH
+  found_locator: TR-23076A, text and Table 1
+  evidence: whereas that of G.652.D standard single mode fiber (SSMF) is typically 80 μm 2
+  action: None.
+- id: ch01.kerr.pureadvance125_att
+  status: MATCH
+  found_locator: TR-23076A, introductory text
+  evidence: realize ultra-low attenuation of 0.16 dB/km or less (typically 0.156 dB/km) at 1550 nm
+  action: None.
+- id: ch01.kerr.leff_asymptote_gsup47
+  status: MATCH
+  found_locator: Clause 7.2, Figure 1 and text, p. 5-6
+  evidence: for a fibre with an optical loss of 0.25 dB/km ( = 0.000058 m–1, 1/ = 17.24 km)
+  action: None.
+- id: ch01.kerr.fiber_enhancement_factor
+  status: MATCH
+  found_locator: Sect. 2.A, text after Eq. (3)
+  evidence: In the wavelength region near 1:55 μm (α 0:2 dB=km), the enhancement factor can ap proach 10 9.
+  action: None.
+- id: ch01.fwm.g655_scope_1996
+  status: MATCH
+  found_locator: Clause 1 'Scope', p. 1
+  evidence: This dispersion suppresses the growth of four-wave mixing, a non-linear effect that can be particularly deleterious in dense Wavelength-Division Multiplexing (WDM).
+  action: None.
+- id: ch01.fwm.g655_dmin_dmax_1996
+  status: MATCH
+  found_locator: Clause 6.2, NOTE 1, p. 4
+  evidence: 0.1 ps/nm•km ≤ Dmin ≤ Dmax ≤ 6.0 ps/nm•km and 1530 nm ≤ λmin ≤ λmax ≤ 1565 nm
+  action: None.
+- id: ch01.fwm.g655_scope_2009
+  status: PARTIAL
+  found_locator: G.655 (11/2009), clause 1 Scope (e-publication page)
+  evidence: This dispersion reduces the growth of non-linear effects that can be particularly deleterious in dense wavelength division multiplexing (DWDM) systems.
+  action: Change locator from 'Summary' to 'Clause 1 Scope'; the full clause text is openly viewable on the ITU e-publication page, so access can be 'open' and confidence 'high'.
+- id: ch01.fwm.local_dispersion_note_g655
+  status: MATCH
+  found_locator: Clause 5.9 'Longitudinal uniformity', NOTE, p. 4
+  evidence: If the value decreases to a small value at a wavelength that is close to an operating wavelength ... four-wave mixing can induce
+  action: None.
+- id: ch01.fwm.g653_vs_g652_g655_gsup47
+  status: MATCH
+  found_locator: Clause 7.3 'Four-wave mixing efficiency', p. 6
+  evidence: ITU-T G.652 fibres and ITU-T G.655 fibres experience much less FWM impairment than systems deployed over ITU-T G.653 fibres
+  action: None.
+- id: ch01.fwm.vanish_100ghz_d1
+  status: MATCH
+  found_locator: Clause 7.3, Figure 2 and text, p. 7
+  evidence: 50-km-long fibre cable link with dispersion coefficient D = 1 ps/nm/km, the FWM component nearly vanishes for channel spacing of 100 GHz
+  action: None.
+- id: ch01.fwm.nonuniform_dispersion_10db
+  status: MATCH
+  found_locator: Clause 7.3, p. 7
+  evidence: non-uniform fibre link composed of 2.5-km-long fibres with 0.56 ps/nm/km variance of the absolute dispersion value is about 10 dB smaller
+  action: None.
+- id: ch01.fwm.bitrate_independence
+  status: MATCH
+  found_locator: Clause 7.3, p. 7
+  evidence: Note that FWM efficiency is not influenced by an increasing bit rate.
+  action: None.
+- id: ch01.manakov.eight_ninths
+  status: MATCH
+  found_locator: Sect. II, text following Eq. (12), p. 1737
+  evidence: includes the effect of Kerr nonlinearity averaged over the Poincaré sphere with the well-known 8/9 factor [8], [9]
+  action: None.
+- id: ch01.manakov.nonlinear_pmd_negligible
+  status: MATCH
+  found_locator: Sect. VI 'Conclusion', p. 1745
+  evidence: We also examined the nonlinear PMD terms and showed that they are negligible even under fairly extreme circumstances.
+  action: None.
+- id: ch01.manakov.length_scales
+  status: MATCH
+  found_locator: Sect. I 'Introduction', p. 1735
+  evidence: the beat lengths are typically 10–100 m, while the dispersive and nonlinear scale lengths are hundreds of kilometers
+  action: None.
+- id: ch01.gn.validity_envelope_2012
+  status: MATCH
+  found_locator: Sect. II-A
+  evidence: reliable predictions for symbol rates ≥ 28 GBaud, for channel spacings up to 100 GHz, of systems of at least 3 channels
+  action: None.
+- id: ch01.gn.gaussianization_distance
+  status: MATCH
+  found_locator: Sect. II-A
+  evidence: In a typical 30 GBaud system over SMF, such condition is approximately reached after 200km.
+  action: None.
+- id: ch01.gn.ref_system_2012
+  status: MATCH
+  found_locator: Sect. IV and Table I
+  evidence: span length is set at Ls=100 km. The channel spacing is assumed to be ∆f=50 GHz and the symbol rate
+  action: None.
+- id: ch01.gn.popt_rs_smf_check
+  status: MATCH
+  found_locator: Sect. XII-B, text after Eq. (31)
+  evidence: turns out to be 28.5 [µW/GHz], or -0.4 dBm per channel, amounting to about 20 dBm overall
+  action: None.
+- id: ch01.gn.popt_ny_smf_check
+  status: MATCH
+  found_locator: Sect. XII-B
+  evidence: Assuming NY-SMF (full C-band) P (Ns) ch,opt(0) goes down only slightly, to about -1 dBm per channel.
+  action: None.
+- id: ch01.gn.popt_ny_smf_75km_check
+  status: MATCH
+  found_locator: Sect. XII-B
+  evidence: Shortening the span length to 75 km, with NY SMF, P (Ns) ch,opt(0) goes further down to -2.6 dBm per channel.
+  action: None.
+- id: ch01.gn.ase_eq_2nli
+  status: MATCH
+  found_locator: Sect. XII-A, text after Eq. (28)
+  evidence: the minimum BER (or maximum OSNR) is always obtained when PASE = 2PNLI in Eq. (4)
+  action: None.
+- id: ch01.gn.popt_indep_of_target_osnr
+  status: MATCH
+  found_locator: Sect. XII-B, text after Eq. (30)
+  evidence: the optimum launch power is independent of the target OSNR
+  action: None.
+- id: ch01.gn.reach_vs_nli_one_third
+  status: MATCH
+  found_locator: Eq. (32) and following text, Sect. XII-B
+  evidence: which is, say, 0.5 dB in error, causes only a 1/6 dB (that is 4%) error in the estimate of N max s
+  action: None.
+- id: ch01.gn.reach_vs_dispersion_gamma
+  status: MATCH
+  found_locator: Sect. XII-D (unnumbered equations)
+  evidence: a reduction of x dB of γ or increase of x dB of Aeff brings about a 2x 3 dB reach increase
+  action: None.
+- id: ch01.gn.nlc_3db_gives_1db
+  status: MATCH
+  found_locator: Sect. IX-C
+  evidence: a 3-dB reduction of PNLI only gains 1 dB of system length increase (25%)
+  action: None.
+- id: ch01.gn.eps_nyquist_5thz
+  status: MATCH
+  found_locator: Sect. IX-A, Fig. 10
+  evidence: the terminal value for BWDM =5 THz is almost the same for all curves, approximately ϵ ≈ 0.035
+  action: None.
+- id: ch01.gn.eps_rs_50ghz
+  status: MATCH
+  found_locator: Sect. IX-A, Fig. 11
+  evidence: The terminal value is higher than in the Nyquist case, with ϵ ≈ 0.06 for SMF and LPSCF and about 0.07 for NZDSF.
+  action: None.
+- id: ch01.gn.eps_100ghz
+  status: MATCH
+  found_locator: Sect. IX-A
+  evidence: 'Their values at 51 channels (the whole C-band) are: RS-SMF 0.09; RS-LPSCF 0.096; RS NZDSF 0.123.'
+  action: None.
+- id: ch01.gn.eps_experimental_range
+  status: MATCH
+  found_locator: Sect. IX, text after Eq. (7)
+  evidence: The estimated values of ϵ range between 0 and 0.6 [15], [18]– [19].
+  action: None.
+- id: ch01.gn.eps_typical_2014
+  status: MATCH
+  found_locator: Sect. III-D, text after Eq. (18)
+  evidence: For fully-populated (C-band) WDM systems, the typical values of are between 0.03 and 0.08, depending on system parameters [36].
+  action: None.
+- id: ch01.gn.lwn_error_max
+  status: MATCH
+  found_locator: Sect. IV-B, Fig. 5
+  evidence: the absolute maximum value of ΔPNLI,dB is found, expectedly, for a single channel, and amounts to about 0.53 dB
+  action: None.
+- id: ch01.gn.pd_sim_agreement
+  status: MATCH
+  found_locator: Sect. V-A, Fig. 6
+  evidence: the PD simulations are very close to the GN-model predictions, within 0.25 dB error for all formats, fibers and spacings
+  action: None.
+- id: ch01.gn.first_span_overestimate_qpsk
+  status: MATCH
+  found_locator: Sect. V-C, Fig. 7
+  evidence: the non-PD simulations show about 6 dB less NLI noise produced over the first span than either the PD simulation or the GN-model predict
+  action: None.
+- id: ch01.gn.ref_sim_max_reach_check
+  status: MATCH
+  found_locator: Sect. VII-A and Table II
+  evidence: The target BER was 10− 3 corresponding to SNRT,dB,ref= 16.85 dB. The simulation resulted in N max s,ref= 15.
+  action: None.
+- id: ch01.gn.popt_oct_20x85km
+  status: MATCH
+  found_locator: Sect. VIII-C, Fig. 11
+  evidence: For all formats, the optimum launch power per channel, i.e. the value of Pch maximizing the OCT, is equal to -2.65 dBm.
+  action: None.
+- id: ch01.gn.closedform_eq37_error
+  status: MATCH
+  found_locator: Sect. VI-A, text after Eq. (38)
+  evidence: Eq. (37) is very accurate, with a maximum error of about 0.35 dB occurring at x ≈ 1
+  action: None.
+- id: ch01.gn.nlc_gain_single_channel
+  status: MATCH
+  found_locator: Sect. IX-A, Fig. 14
+  evidence: single-channel NLC at 32-GHz channel spacing achieves 0.8 dB NLC gain after a single span but 2.2 dB after 40 spans
+  action: None.
+- id: ch01.gn.nlc_200ghz_reach_gain
+  status: MATCH
+  found_locator: Sect. IX-B, Fig. 15
+  evidence: the amount of MSR gain achievable in the analyzed scenarios reaches only 1.1 to 1.3 dB, depending on channel spacing
+  action: None.
+- id: ch01.egn.gn_reach_underestimate
+  status: MATCH
+  found_locator: Sect. 6, Fig. 9, p. 16353; also Sect. 1, p. 16336
+  evidence: The GN-model underestimates the maximum reach by 0.3-0.6 dB over PSCF, SMF and NZDSF, in agreement with [14,16].
+  action: None.
+- id: ch01.egn.gn_reach_underestimate_ls
+  status: MATCH
+  found_locator: Sect. 6, Fig. 9
+  evidence: The error goes up to 0.8 dB in the case of the very low dispersion and high non-linearity LS fiber.
+  action: None.
+- id: ch01.egn.residual_error
+  status: MATCH
+  found_locator: Sect. 6, p. 16354
+  evidence: The error is less than 0.2 dB across all system configurations.
+  action: None.
+- id: ch01.egn.nli_overestimate_near_max_reach
+  status: MATCH
+  found_locator: Sect. 7A, p. 16355
+  evidence: the error on NLI power estimation is typically 1 to 2 dB, depending on fiber type, modulation format and span length, for realistic systems
+  action: None.
+- id: ch01.egn.mechanism
+  status: MATCH
+  found_locator: Sect. 2, Eq. (1); Sect. 3, Table 1
+  evidence: can be thought of as a correction term which takes the effect of signal non-Gaussianity into account
+  action: None.
+- id: ch01.egn.phi_qpsk
+  status: MATCH
+  found_locator: Table 1, p. 16341
+  evidence: Format Φa Ψa BPSK −1 4 QPSK −1 4 16QAM −17/25 52/25 64 QAM −13/21 1161/646
+  action: None.
+- id: ch01.egn.cpu_speedup
+  status: MATCH
+  found_locator: Sect. 7A, p. 16355-16356
+  evidence: the EGN-model CPU gain vs. Monte Carlo simulations was still quantifiable as a factor of 10-20
+  action: None.
+- id: ch01.gnpy.gsnr_accuracy
+  status: MATCH
+  found_locator: Abstract, JOCN 12(6) C31-C40 (2020)
+  evidence: within 1 dB accuracy for more than 90% of the 500 experimental samples
+  action: Source is Optica Open Access (VoR also on iris.polito.it, hdl 11583/2826672); change access from abstract_only to open. Full text could not be fetched by tools (Optica full-text page returned empty; IRIS file URL not resolvable).
+- id: ch01.gnpy.popt_accuracy
+  status: MATCH
+  found_locator: Abstract, JOCN 12(6) C31 (2020)
+  evidence: We also demonstrate the ability to estimate the transmitted power maximizing the GSNR within 0.5 dB of accuracy.
+  action: 'Same as ch01.gnpy.gsnr_accuracy: access is open (OA).'
+- id: ch01.cap.essiambre_method
+  status: MATCH
+  found_locator: Abstract (IEEE Xplore 5420239 / Optica jlt-28-4-662)
+  evidence: We proceed to evaluate a capacity limit estimate for this fiber channel using ring constellations.
+  action: None. Full text remains unreachable (paywalled IEEE/Optica; no open copy found).
+- id: ch01.cap.soft_fec_gap
+  status: MATCH
+  found_locator: Sect. VIII-C, end; Fig. 12 caption
+  evidence: for state-of the-art soft FEC codes the estimated coding gain penalty vs. the ideal maximum gain is around 1.5 dB
+  action: None.
+- id: ch01.cap.oct_assumed_margin
+  status: MATCH
+  found_locator: Fig. 12 caption, Sect. VIII-D
+  evidence: 'Assumptions: 3-dB SNR penalty from quantum limit and 1.5-dB penalty of soft FEC with respect to infinite-length codes ideal performance.'
+  action: None.
+- id: ch01.cap.pm16qam_2000km
+  status: MATCH
+  found_locator: Sect. VIII-D, Fig. 12
+  evidence: PM-16QAM allows to reach 2,000 km with an OCT' 6.5 bit/symbol.
+  action: None.
+- id: ch01.cap.soft_fec_threshold_20pct
+  status: MATCH
+  found_locator: Sect. VIII-D
+  evidence: State-of-the-art soft FEC with 20% overhead can now operate at pre-FEC BER of 2.7∙ 10− 2 [71]
+  action: None.
+- id: ch01.gap.osnr_penalty_64gbd
+  status: PARTIAL
+  found_locator: Abstract only (OFC 2017 W2A.25)
+  evidence: Compared to theory, our results suggest OSNR penalties as low as 2.2dB for DP-64QAM and DP-16QAM, and 1.1dB for DP-4QAM.
+  action: Value verbatim. Per the verifier rule for abstract-only conference claims, set tier C (confidence low) or obtain the full paper; also note the penalties are vs format theory, not vs Shannon.
+- id: ch01.gap.transceiver_snr_range
+  status: MATCH
+  found_locator: Section 'Definition of SNRs', p. 1
+  evidence: Note that SNR୘ୖ typically ranges from 14 to 21 dB in high baud rate cases[9].
+  action: None.
+- id: ch01.gap.ps_rosnr_reduction
+  status: MATCH
+  found_locator: 'Section ''Results: ROSNRs in BICM and MLC'', Fig. 4'
+  evidence: The ROSNR reduction by BICM PS-QAM or MLC PS-QAM is significant (1.3–1.4 dB) over uniform 32-QAM
+  action: None.
+- id: ch01.gap.vendor_claim_1_2db
+  status: MATCH
+  found_locator: Article body
+  evidence: Today’s high-performance embedded optical engines that leverage 7-nm CMOS DSPs, such as Infinera’s ICE6, are typically between 1 and 2 dB from the Shannon limit
+  action: None.
+- id: ch01.const.planck_h
+  status: MATCH
+  found_locator: NIST CUU 'Value?h' page, Numerical value row
+  evidence: 6.626 070 15 x 10 -34 J Hz -1
+  action: None.
+- id: ch01.const.speed_of_light_c
+  status: MATCH
+  found_locator: NIST CUU constant page for c, Numerical value row
+  evidence: 299 792 458 m s -1
+  action: None.
+- id: ch01.osnr.bref_0p1nm_equals_12p5ghz
+  status: MATCH
+  found_locator: Sec. IV-B 'Relations between SNR and OSNR', text after Eq. (10), p. 1040
+  evidence: Bref is a reference bandwidth, commonly taken to be 0.1 nm, which corresponds to 12.5 GHz at 1550 nm.
+  action: None.
+- id: ch01.osnr.bref_g697_0p1nm
+  status: PARTIAL
+  found_locator: G.697 (11/2016), Appendix V, Table V.3 row 5 (same text in 02/2012)
+  evidence: 5 OSNR dB (0.1 nm) Referred to a 0.1 nm noise bandwidth
+  action: Value correct, but the 11/2009 edition is superseded; cite G.697 (11/2016) Table V.3 (or the newest in-force edition).
+- id: ch01.osnr.bref_iec_tr61282_12
+  status: MATCH
+  found_locator: Clause 3.2, definition of OSNR_int, Eq. (1) where-list
+  evidence: Br is the reference bandwidth expressed in nm (usually 0,1 nm if not otherwise stated)
+  action: None.
+- id: ch01.osnr.gsup39_bref_typical
+  status: PARTIAL
+  found_value: 0.1 nm (unchanged)
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5.1, text before Eq. (9-23)
+  evidence: OSNR is usually expressed in a reference optical bandwidth of 0.1 nm and defined as shown in Equation 9-23
+  action: 'G.Sup39 (02/2006) is superseded by G.Sup39 (10/2025): update source, quote (wording changed to reference optical bandwidth) and equation number (9-22 -> 9-23).'
+- id: ch01.osnr.gsup39_58db_constant
+  status: PARTIAL
+  found_value: +58 dB (unchanged)
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5.2, text between Eq. (9-24) and Eq. (9-25)
+  evidence: 'applying: Preceived = Pout - L and -10log(h nu nu_r) = +58 dB at 0.1-nm resolution bandwidth and at wavelength of 1550 nm'
+  action: 'Cite G.Sup39 (10/2025): equations renumbered (9-23 -> 9-24, 9-24 -> 9-25) and the ''mn'' typo is fixed. Fix the notes calc check: h*nu*B_ref = 1.60e-9 W (= 1.60e-6 mW = -58.0 dBm), not 1.60e-9 mW.'
+- id: ch01.amp.caves_half_quantum_limit
+  status: MATCH
+  found_locator: Abstract
+  evidence: in the limit of high gain, to add noise which, referred to the input, is at least as large as the half-quantum of zero-point fluctuations
+  action: None.
+- id: ch01.amp.nf_min_3db_desurvire
+  status: MATCH
+  found_locator: Section 'Noise figure'
+  evidence: the minimal NF, in ideal conditions is “two”, representing in engineering terms, a 3 dB tax penalty.
+  action: None.
+- id: ch01.amp.nf_high_gain_2nsp
+  status: MATCH
+  found_locator: Sec. 3.2, text after Eq. (13)
+  evidence: For the situation where G >> 1, this expression reduces to nf = 2nsp
+  action: None.
+- id: ch01.amp.nf_quantum_limit_3db_carney
+  status: MATCH
+  found_locator: Sec. 3.2, text after Eq. (13), citing ref. [19]
+  evidence: (nsp = 1), leads to a quantum limit of the NF of 3dB
+  action: None.
+- id: ch01.amp.nsp_unity_full_inversion
+  status: MATCH
+  found_locator: Section 'Amplified spontaneous emission', text after Eq. (12)
+  evidence: It asymptotically converges to unity as the inversion increases
+  action: None.
+- id: ch01.amp.nf_definition_iec
+  status: MATCH
+  found_locator: Sec. III 'Noise figure definition', Eqs. (3)-(4), p. 128
+  evidence: Using the nomenclature of the IEC, IEC 61291-1 , the noise factor F is defined by
+  action: None.
+- id: ch01.osnr.both_polarizations_noise
+  status: MATCH
+  found_locator: Sec. IV-B, text after Eq. (10), p. 1040
+  evidence: The OSNR also considers the noise in both polarization states independent of whether PDM of the signal is used or not.
+  action: None.
+- id: ch01.osnr.sackinger_58db_preamp
+  status: UNREACHABLE
+  found_locator: ''
+  evidence: ''
+  action: Tried Exa search/fetch of Wiley/O'Reilly Appendix I (Answers to the Problems); only the table of contents was returned, Eq. (I.21) text not visible. Keep confidence low or drop; G.Sup39 (10/2025) Eq. (9-25) supports the same relation as a tier-A source.
+- id: ch01.amp.cband_range_itu
+  status: MATCH
+  found_locator: Clause 5.2 and Table 5-1 'Single-mode spectral bands'
+  evidence: “Conventional” C-band, 1530 nm to 1565 nm.
+  action: None.
+- id: ch01.amp.lband_range_itu
+  status: MATCH
+  found_locator: Clause 5.2 and Table 5-1
+  evidence: “Long wavelength” L-band, 1565 nm to 1625 nm.
+  action: None.
+- id: ch01.amp.accelink_mw_nf_max
+  status: MATCH
+  found_locator: Specifications table, row 'Noise Figure', BA/LA/PA columns
+  evidence: BA Typ. Max. 1562 20 25 0.6 1.5 5
+  action: None.
+- id: ch01.amp.accelink_mw_wavelength
+  status: MATCH
+  found_locator: Ordering Information, Operating Wavelength code 40
+  evidence: Operating Wavelength：40:1528~1562nm、customer specify
+  action: None.
+- id: ch01.amp.accelink_vga_nf
+  status: MATCH
+  found_locator: Product Specification table, row 'Noise figure'
+  evidence: Noise figure | ≤6dB@gain=28dB ≤6.5dB@gain=25dB ≤7dB@gain=22dB
+  action: None.
+- id: ch01.amp.accelink_lband_wavelength
+  status: MATCH
+  found_locator: Specifications table, row 'Operation wavelength', BA/LA/PA
+  evidence: Min. 1569 | BA Typ. 17 23 0.6 | Max. 1604 1.5
+  action: None.
+- id: ch01.amp.coherent_pols_tx_nf
+  status: MATCH
+  found_locator: Section 4.2 'TX (BA) Optical Amplifier Absolute Parameter', row 'Noise Figure'
+  evidence: Noise Figure | | 6.7 | dB | @Gain 17dB
+  action: None.
+- id: ch01.amp.coherent_pols_rx_nf
+  status: MATCH
+  found_locator: Rx Amplifier table, row 'Noise Figure'
+  evidence: Noise Figure | | 6.5 | dB | @Gain 18
+  action: None.
+- id: ch01.amp.viavi_lownoise_nf
+  status: MATCH
+  found_locator: Single Channel Input Optical Specifications table, mEDFA-C11CA column, Noise Figure at Pin = -30 dBm; also overview text
+  evidence: including a low noise version with <3.7dB noise figure
+  action: None.
+- id: ch01.amp.viavi_cband_wavelength
+  status: MATCH
+  found_locator: Single Channel Input Optical Specifications table, row 'Operating Wavelength Range'
+  evidence: Operating Wavelength Range | | | 1528 nm – 1569 nm | 1565 nm – 1610 nm
+  action: None.
+- id: ch01.hcf.poletti2014_nanf_proposal
+  status: MATCH
+  found_locator: Abstract
+  evidence: including leakage, surface scattering and bend contributions - that is lower than that of conventional solid fibers
+  action: None.
+- id: ch01.hcf.jasion2020_nanf_028
+  status: MATCH
+  found_locator: Abstract; Sec. 2 and Fig. 3(c)
+  evidence: record-low 0.28dB/km loss from 1510 to 1600nm
+  action: None.
+- id: ch01.hcf.jasion2022_dnanf_cband
+  status: MATCH
+  found_locator: Sec. 2, Fig. 2b-c
+  evidence: In the S/C band the loss is 0.174 ± 0.031 dB/km from 1500 to 1560 nm
+  action: None.
+- id: ch01.hcf.jasion2022_dnanf_il1550
+  status: MATCH
+  found_locator: Sec. 2, Fig. 2c (black square)
+  evidence: The measured loss of 0.147 ± 0.024 dB/km overlaps with the uncertainty of the white light measurement
+  action: None.
+- id: ch01.hcf.jasion2022_dnanf_oband
+  status: MATCH
+  found_locator: Sec. 2 and Sec. 3
+  evidence: In the O band it presents the lowest loss ever measured in an optical fiber, 0.22 dB/km from 1300 to 1340 nm.
+  action: None.
+- id: ch01.hcf.chen2024_dnanf_008
+  status: PARTIAL
+  found_locator: Abstract, OFC 2024 Th4A.8 (postdeadline)
+  evidence: Three independent loss measurements average 0.08+/-0.03 dB/km at 1550 nm, the lowest attenuation ever achieved in an optical fiber.
+  action: 'Value verbatim. Abstract-only conference claim: set tier C, confidence low, OR re-source to Petrovich et al. Nat. Photon. 2025 (tier A, full text), which reports this HCF1 at 0.055/0.065 (cutback), 0.09 (IL), 0.11 (OTDR) dB/km and states longer fibres are needed.'
+- id: ch01.hcf.petrovich2025_loss_1550
+  status: MATCH
+  found_locator: Abstract; main text (HCF2, Fig. 2c-d); Nat. Photon. 19, 1203-1208 (2025)
+  evidence: with a measured loss of 0.091 dB km-1 at 1,550 nm that remains below 0.2 dB km-1 over a window of 66 THz
+  action: None. Note the Author Correction (17 Oct 2025, doi 10.1038/s41566-025-01803-0) was not read; check it does not affect loss values. Later lower values (Ge JLT 2026 field 0.065 dB/km, ECOC 2025 abstracts) do not supersede this journal full-text record but should be cross-referenced.
+- id: ch01.hcf.petrovich2025_otdr_1550
+  status: MATCH
+  found_locator: Main text, Fig. 2b
+  evidence: indicating a uniform loss with a slope of 0.123 dB km −1 and 0.095 dB km −1, respectively
+  action: None.
+- id: ch01.hcf.petrovich2025_loss_1310
+  status: MATCH
+  found_locator: Main text, Fig. 2d
+  evidence: the average loss is 0.128 dB km −1 and 0.091 dB km −1 at 1,310 nm and 1,550 nm, respectively
+  action: None.
+- id: ch01.hcf.petrovich2025_bw_below_0p1
+  status: MATCH
+  found_locator: Conclusion paragraph
+  evidence: <0.1 dB km −1 from 1,481 nm to 1,625 nm (18 THz)
+  action: None.
+- id: ch01.hcf.petrovich2025_bw_below_0p2
+  status: MATCH
+  found_locator: Conclusion paragraph; Abstract
+  evidence: the fibre guides light with <0.2 dB km −1 from 1,250 nm to 1,730 nm (66 THz)
+  action: None.
+- id: ch01.hcf.petrovich2025_silica_state_of_art
+  status: MATCH
+  found_locator: Abstract
+  evidence: state-of-the-art fibres offering values of 0.14 dB km −1 and 26 THz below 0.2 dB km −1, respectively
+  action: None.
+- id: ch01.hcf.gao2024_4tdnanf_loss
+  status: PARTIAL
+  found_locator: arXiv:2409.13332, Sect. 3, Fig. 2(f)-(h)
+  evidence: 'Based on these three sets of measurements, we conclude that fiber #1 achieved a loss of 0.1 +/- 0.02 dB/km in the C band.'
+  action: 'Value and conditions correct (4.2 km, 32 cm drum; cutback 0.09+/-0.01, laser 0.1+/-0.01, OTDR 0.108). Source is an unrefereed arXiv preprint: change source type from journal to report/preprint and tier A -> B (or C), confidence med, until a peer-reviewed version is located.'
+- id: ch01.hcf.gao2025_ecoc_40km_0052
+  status: PARTIAL
+  found_locator: Abstract, ECOC 2025 (doi 10.1109/ECOC66593.2025.11263318)
+  evidence: a record low loss of 0.052 dB/km in a 40-km span
+  action: 'Value verbatim; wavelength and method not stated in the abstract. Abstract-only company (Linfiber) conference claim: tier A -> C, confidence med -> low; keep only in the contested box.'
+- id: ch01.hcf.gao2025_ecoc_83km_0076
+  status: PARTIAL
+  found_locator: Abstract, ECOC 2025 (doi 10.1109/ECOC66593.2025.11263318)
+  evidence: We demonstrate a record single-draw span length of 83 km with loss of 0.076 dB/km
+  action: 'Value verbatim; wavelength and method not stated in the abstract. Abstract-only company (Linfiber) conference claim: tier A -> C, confidence med -> low; keep only in the contested box.'
+- id: ch01.hcf.jnu2024_sub0p1_press
+  status: MATCH
+  found_locator: News text, first paragraph
+  evidence: 实现了低于 0.1dB/km的超低传输损耗和 2.6万倍的高阶模式抑制比纪录
+  action: None.
+- id: ch01.hcf.ding2025_yofc_sthcf_005
+  status: PARTIAL
+  found_locator: Abstract, ECOC 2025 (doi 10.1109/ECOC66593.2025.11263260), all authors YOFC
+  evidence: The 9.1 km ST-HCF achieved 0.05 +/- 0.01 dB/km attenuation at 1550 nm.
+  action: 'Value verbatim. Abstract-only conference claim by the manufacturer: tier A -> C, confidence med -> low.'
+- id: ch01.hcf.ding2025_yofc_batch_avg
+  status: PARTIAL
+  found_locator: Abstract, ECOC 2025 (doi 10.1109/ECOC66593.2025.11263260), all authors YOFC
+  evidence: Batch tests on 733.3 km ST-HCF yielded an average attenuation of 0.147 dB/km.
+  action: 'Value verbatim. Abstract-only conference claim by the manufacturer: tier A -> C, confidence med -> low.'
+- id: ch01.hcf.ge2026_field_min_span
+  status: MATCH
+  found_locator: Abstract
+  evidence: with the lowest recorded span loss reaching 0.065 dB/km, scoring the world’s first fiber cable deployment to break the 0.1 dB/km
+  action: None.
+- id: ch01.hcf.ge2026_field_avg_link
+  status: MATCH
+  found_locator: Abstract
+  evidence: an average link loss reduction from 0.599 dB/km to 0.113 dB/km
+  action: None.
+- id: ch01.hcf.ng_nanf_vs_smf28
+  status: PARTIAL
+  found_locator: arXiv:2308.01337v3, Sect. Latency measurements, Fig. 2
+  evidence: At 1550 nm NANF has a group refractive index of approximately nHCF = 1, while in SMF28 fiber nSMF28 = 1.47
+  action: 'Value correct. Source is an arXiv preprint labelled type journal/tier A: relabel as preprint (tier B) or cite the peer-reviewed companion Trenti et al., IEEE JSTQE 2024 (doi 10.1109/JSTQE.2024.3392416), which reports ~13 us latency reduction over the same 7.72 km NANF.'
+- id: ch01.hcf.latency_reduction_antesberger
+  status: PARTIAL
+  found_locator: arXiv:2308.01337v3, Sect. Latency measurements, Fig. 2
+  evidence: arrives = 13 us later than when it propagates through the NANF, resulting in an approximately 34 % lower latency in NANF compared to SMF28
+  action: 'Value correct. Source is an arXiv preprint labelled type journal/tier A: relabel as preprint (tier B) or cite the peer-reviewed companion Trenti et al., IEEE JSTQE 2024 (doi 10.1109/JSTQE.2024.3392416), which reports ~13 us latency reduction over the same 7.72 km NANF.'
+- id: ch01.hcf.poletti2013_speed_997pct
+  status: MATCH
+  found_locator: Abstract
+  evidence: transmit 37 × 40 Gbit s −1 channels at a 1.54 µs km −1 faster speed than in a conventional fibre
+  action: None.
+- id: ch01.hcf.poggiolini2022_speed_50pct
+  status: MATCH
+  found_locator: Abstract (accepted manuscript); Sec. II for 30% latency
+  evidence: Propagation speed is 50% faster, a key feature in certain contexts.
+  action: None.
+- id: ch01.hcf.petrovich2025_speed_45pct
+  status: MATCH
+  found_locator: Abstract
+  evidence: it also increases transmission speeds by 45%
+  action: None.
+- id: ch01.hcf.petrovich2025_latency_30pct
+  status: MATCH
+  found_locator: Conclusion paragraph
+  evidence: a 30% reduced latency and a six times reduction in chromatic dispersion compared with standard telecom fibres
+  action: None.
+- id: ch01.hcf.yofc_ar2025_loss_claim_004
+  status: MATCH
+  found_locator: YOFC 2025 Annual Report (cninfo 2026-03-28), management discussion, hollow-core paragraph
+  evidence: 公司加强研发投入，空芯光纤技术持续提升， 已实现全球最低衰减 0.04dB/公里
+  action: 'Tier B / confidence low is appropriate. Note: the same 0.04 dB/km and 91.2 km were presented in an OFC 2026 talk (trade press, networktelecom.cn 2026-03-17); search for a citable OFC 2026 paper before upgrading.'
+- id: ch01.hcf.yofc_ar2025_draw_length
+  status: MATCH
+  found_locator: Same hollow-core paragraph
+  evidence: 单根空芯光纤预制棒拉丝长度达 91.2 公里
+  action: None.
+- id: ch01.hcf.yofc_ar2025_latency_31pct
+  status: MATCH
+  found_locator: Same hollow-core paragraph
+  evidence: 相较传统实芯光纤时延降低 31%、传输速度提升47%
+  action: None.
+- id: ch01.hcf.yofc_ar2025_commercial_year
+  status: MATCH
+  found_locator: Same hollow-core paragraph
+  evidence: 二零二五年已成为空芯光纤商用元年
+  action: None.
+- id: ch01.hcf.yofc_scale_avg_cww
+  status: MATCH
+  found_locator: Article text, paragraph on 支撑管结构 HCF
+  evidence: 在规模制备中，最新的平均损耗为0.12dB/km，最低损耗为0.05dB/km
+  action: None.
+- id: ch01.hcf.ctel_hk_link_latency
+  status: MATCH
+  found_locator: Article text, China Telecom paragraph (October 2025)
+  evidence: 实现了两地间双向时延低至0.93毫秒的业界最低时延
+  action: None.
+- id: ch01.hcf.cmcc2024_800g_cable_loss
+  status: MISMATCH
+  found_value: 0.6 dB/km cable loss after installation; splice (0.05 dB) and HCF-SMF connection (<0.3 dB) listed as separate indicators
+  found_locator: SASAC news 2024-06-12, paragraph 1
+  evidence: 在20公里链路上实现了空芯-空芯光纤熔接损耗低至0.05分贝、空芯—实芯连接小于0.3分贝和铺设后光缆损耗每公里0.6分贝
+  action: 'Conditions wrong: claim says ''including splices/connections''; source gives post-installation cable loss per km separately from splice and connection losses. Reword claim to ''post-installation cable loss''. Tier C / low is correct.'
+- id: ch01.hcf.msft_deploy_since_2023
+  status: MATCH
+  found_locator: Blog text, section on Azure HCF journey
+  evidence: Since 2023, Microsoft has deployed HCF across multiple Azure regions, with production links meeting performance and reliability targets.
+  action: None.
+- id: ch01.hcf.msft_latency_33pct
+  status: MATCH
+  found_locator: Blog text, second paragraph
+  evidence: delivers up to 47% faster data transmission and approximately 33% lower latency compared to conventional Single Mode Fiber (SMF)
+  action: None.
+- id: ch01.hcf.msft_1200km_live
+  status: MATCH
+  found_locator: Article, quote attributed to Francesco Poletti
+  evidence: it involved over 1,200 km of fibre, now installed underground and actively carrying live traffic
+  action: None.
+- id: ch01.hcf.msft_15000km_plan
+  status: MATCH
+  found_locator: Article, paragraph after Poletti quote
+  evidence: Microsoft CEO Satya Nadella announced at the company’s 2024 Ignite conference that 15,000 km of hollow core fiber would be deployed
+  action: None.
+- id: ch01.hcf.weileping_cost_2500x
+  status: MATCH
+  found_locator: C114 2025-06-05, paragraphs 2-3
+  evidence: 152芯公里空芯光纤最高限价为760万元，单价接近5万元/芯公里，是实芯光纤（G.652D）的2500倍
+  action: None for value. Note that the same article quotes Wei saying '比常规（光纤）高了1000倍' (1000x) a sentence earlier; record the internal inconsistency in notes.
+- id: ch01.hcf.bt_lord_niche
+  status: MATCH
+  found_locator: Article, OFC 2025 keynote quotes
+  evidence: a complete wholesale swap out of existing fiber for a new hollow core fiber? I don't think so
+  action: None.
+- id: ch01.hcf.ctel_loss_race_over
+  status: MATCH
+  found_locator: Article text, paragraphs quoting 敖立 and 傅志仁
+  evidence: 当前基本结束低损耗的“军备竞赛”
+  action: None.
+- id: ch01.hcf.petrovich2025_hcf1_method_spread
+  status: MATCH
+  found_locator: Main text, paragraph on HCF1 (citing ref. 29)
+  evidence: two independent cutbacks averaged a loss of 0.055 dB km −1 and 0.065 dB km −1
+  action: None.
+- id: ch01.ull.sato2025_record_1566
+  status: MATCH
+  found_locator: Abstract
+  evidence: We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm on a silica-core single-mode fiber.
+  action: None.
+- id: ch01.ull.sato2025_record_1550
+  status: MATCH
+  found_locator: Abstract
+  evidence: We achieved 0.1397 dB/km at 1566 nm and 0.1406 dB/km at 1550 nm
+  action: None.
+- id: ch01.ull.tamura2018_0p1419
+  status: MATCH
+  found_locator: Abstract
+  evidence: We achieved the lowest-ever transmission losses of 0.1419 dB/km at 1560 nm wavelength and 0.1424 dB/km at 1550 nm
+  action: None.
+- id: ch01.ull.hengtong_g654d_0144
+  status: MATCH
+  found_locator: Company news text, paragraph 1 and 3 (MWC 2026)
+  evidence: G.654.D光纤衰减系数成功降至0.144dB/km，创造了中国同类产品性能的新纪录
+  action: None.
+- id: ch01.sdm.puttnam2021_classification
+  status: MATCH
+  found_locator: Abstract
+  evidence: We first outline the main classifications and features of novel SDM fibers such as multicore fibers (MCFs), multimode fibers, few-mode MCFs, and coupled-core MCFs.
+  action: None.
+- id: ch01.sdm.luis2025_19core_1p02pbps
+  status: PARTIAL
+  found_locator: Abstract, OFC 2025 Th4A.1 (postdeadline)
+  evidence: We achieve record recirculating transmission of a 1.02 Pb/s, C+L band, signal over 1808.1 km of a novel 19-core, randomly-coupled multicore fiber
+  action: 'Value verbatim. Abstract-only conference claim: set tier C (or obtain the PDP full text) per verifier rule; loop details come from a press release.'
+- id: ch01.sdm.luis2025_capacity_distance
+  status: PARTIAL
+  found_locator: Abstract, OFC 2025 Th4A.1
+  evidence: as the highest reported capacity-distance-product in any fiber transmission of 1.86 Exabit/s.km
+  action: 'Same as ch01.sdm.luis2025_19core_1p02pbps: abstract-only, tier C unless full text read.'
+- id: ch01.sdm.nict2023_22p9pbps
+  status: MATCH
+  found_locator: Press release highlights and main text
+  evidence: A record-breaking transmission capacity of 22.9 petabits per second in a single optical fiber was demonstrated.
+  action: None.
+- id: ch01.sdm.gsup87_wcmcf_first_priority
+  status: UNREACHABLE
+  found_locator: ''
+  evidence: ''
+  action: Exa search returned clause 8.2 and clause 7.1.3 of G.Sup87 (03/2025) but not the Summary text; quote not confirmed. Clause 7.1.3 is consistent (125 um cladding, G.65x backward compatibility). Re-read the Summary page.
+- id: ch01.sdm.gsup87_timeline
+  status: MATCH
+  found_locator: Clause 8.2 'Harmonization methodology'
+  evidence: The first recommendation and standard for the WC-MCF can be expected to take at least two to four years to be established and revised.
+  action: None.
+- id: ch01.sdm.itu_sg15_2025_two_mcf_recs
+  status: MATCH
+  found_locator: Q5/15 paragraph
+  evidence: It was also agreed to establish two Recommendations for a weakly coupled multi-core fibre with backward compatibility to G.652/G.657 and G.654 fibres
+  action: None.
+- id: ch01.sdm.gsmmcf_target_2028
+  status: MATCH
+  found_locator: Q5/15 work item list, row G.smmcf
+  evidence: G.smmcf Q5/15 Characteristics of a single-mode weakly-coupled multi-core optical fibre and cable 2028
+  action: None.
+- id: ch01.sdm.google_tpu_first_mcf_subsea
+  status: MATCH
+  found_locator: Blog text, paragraphs 2-3
+  evidence: Google and NEC are collaborating to adopt it on the Taiwan-Philippines-U.S. cable
+  action: None.
+- id: ch01.sdm.sumitomo_2c_ull_loss
+  status: MATCH
+  found_locator: Press release, Table 1 'Typical characteristics'
+  evidence: With a transmission loss of typically 0.158 dB/km at 1550 nm, the new fiber can be considered an ultra-low loss fiber
+  action: None.
+- id: ch01.sdm.petal_2029
+  status: MATCH
+  found_locator: Press release, paragraph 1
+  evidence: is scheduled to commence operation in 2029. Petal will employ two-core fiber
+  action: None.
+- id: ch01.industry.yofc_global_rank
+  status: UNREACHABLE
+  found_locator: ''
+  evidence: ''
+  action: Did not retrieve the YOFC 2024 ESG (English) PDF; not attempted further due to budget. Keep confidence med pending re-check.
+- id: ch01.industry.yofc_cmcc_2023_share
+  status: UNREACHABLE
+  found_value: CWW (2023-09-04, tier C) reports ~19.4% citing YOFC half-year results
+  found_locator: ''
+  evidence: 在中国移动于2023年7月完成的2023年至2024年普通光缆集中采购中，长飞获得约19.4%的中标份额，位列第一
+  action: YOFC 2023 annual report text not retrieved (cninfo PDF not fetched). Secondary report agrees to rounding; re-check the AR quote 19.46%.
+- id: ch01.industry.yofc_cmcc_g654e_airblown
+  status: MATCH
+  found_locator: Section 'Management discussion', new-fibre paragraph
+  evidence: 在二零二四年十二月完成了全球首条 G.654.E 气吹微型光缆干线项目铺设
+  action: None.
+- id: ch01.industry.yofc_mcf_dc_pilot
+  status: MATCH
+  found_locator: Section 'Management discussion', SDM paragraph
+  evidence: 公司完成了全国首条加载业务的数据中心多芯光纤线路试点
+  action: None.
+- id: ch01.industry.cru_growth_2025_2029
+  status: MATCH
+  found_locator: Section 'Industry situation', CRU paragraph
+  evidence: 二零二五年至二零二九年间保持 4%左右的稳健年均增速
+  action: None.
+- id: ch01.eq.kerr_index
+  status: MATCH
+  found_locator: G.Sup47 (03/2025) Appendix I clause I.3, p. 10
+  evidence: 'can be expressed as follows: n = n0 + n2 I Here n is the refractive index, n0 is the linear part'
+  action: None.
+- id: ch01.eq.gamma_def
+  status: MATCH
+  found_locator: Agrawal 2011 Eq. (8)
+  evidence: the nonlinear parameter gamma is defined as gamma = omega0 n2 / (c Aeff), Aeff = (integral |F|^2)^2 / integral |F|^4 (8)
+  action: None.
+- id: ch01.eq.nlse_general
+  status: PARTIAL
+  found_locator: Agrawal JOSAB 28(12) A1 (2011), Eq. (7)
+  evidence: where alpha accounts for fiber losses and the nonlinear parameter gamma is defined as ... omega0 n2 / (c Aeff)
+  action: Glyph-level signs of Eq. (7) are unreadable in the open PDF extraction; the transcribed form is Agrawal's standard one and is consistent with Eqs. (10)-(11), which were verified. Confirm signs against the typeset PDF before printing.
+- id: ch01.eq.nlse_beta3
+  status: PARTIAL
+  found_locator: Not printed; derived from Agrawal 2011 Eq. (7) with m<=3
+  evidence: If we retain dispersion terms up to third order, Eq. (7)
+  action: 'Derivation checked: m=2 gives +(i beta2/2) d2A/dT2, m=3 gives -(beta3/6) d3A/dT3, consistent with Eq. (10)/(11). Needs a source that prints this form (e.g. Agrawal, Nonlinear Fiber Optics) or must be presented as a derivation.'
+- id: ch01.eq.nlse_lab_frame
+  status: MATCH
+  found_locator: Agrawal 2011 Eq. (10), Sect. 2.C
+  evidence: dA/dz + alpha/2 A + beta1 dA/dt + i beta2/2 d2A/dt2 = i gamma |A|^2 A (10)
+  action: None.
+- id: ch01.eq.nlse_retarded
+  status: MATCH
+  found_locator: Agrawal 2011 Eq. (11), Sect. 2.C
+  evidence: i dA/dz + i alpha/2 A - beta2/2 d2A/dT2 + gamma |A|^2 A = 0 (11)
+  action: None.
+- id: ch01.eq.leff
+  status: MATCH
+  found_locator: Agrawal 2011 Eq. (16) context; G.Sup47 clause 7.2 p. 5
+  evidence: Leff = (1 - exp(-alpha L))/alpha where alpha is the attenuation coefficient (m-1) and L is the fibre length
+  action: None.
+- id: ch01.eq.lnl_and_N
+  status: MATCH
+  found_locator: Agrawal 2011, Sect. 2.C after Eq. (13)
+  evidence: N2 = LD/LNL = gamma P0 T0^2/|beta2| ... The nonlinear length is defined as LNL = (gamma P0)^-1
+  action: None.
+- id: ch01.eq.spm_phase
+  status: MATCH
+  found_locator: Agrawal 2011 Eq. (16), Sect. 3.A
+  evidence: P(z,T) = P(0,T) e^-alpha z; phi(L,T) = phi(0,T) + gamma P(0,T) Leff (16)
+  action: None.
+- id: ch01.eq.fwm_efficiency_gn
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (2), Sect. III
+  evidence: rho = |(1 - e^-2alphaLs e^j4pi2 beta2 Ls (f1-f)(f2-f)) / (2alpha - j4pi2 beta2 (f1-f)(f2-f))|^2 Leff^-2 (2)
+  action: None.
+- id: ch01.eq.fwm_efficiency_gsup47
+  status: PARTIAL
+  found_locator: G.Sup47 (03/2025), clause 7.3, p. 6 (unnumbered)
+  evidence: the FWM power P is proportional to ... where ... eta is the FWM efficiency defined as ... 1 exp ( ) ... i L
+  action: 'Re-extraction again garbled. Visible fragments: P_FWM ~ (n2/Aeff)^2 L_eff^2 e^{-alpha L} eta; eta built from 1-exp[-(alpha+i dbeta)L] over (alpha+i dbeta); dbeta carries a leading minus sign (-4 pi lambda_c^2 D Df^2 / c). Whether eta is normalized by L_eff^2 cannot be confirmed. Do not use; use ch01.eq.fwm_efficiency_gn.'
+- id: ch01.eq.manakov
+  status: PARTIAL
+  found_locator: Marcuse, Menyuk, Wai, JLT 15(9) 1735 (1997), Eq. (12), Sect. II
+  evidence: the third term on the left-hand side of (12) includes the effect of Kerr nonlinearity averaged over the Poincare sphere with the well-known 8/9 factor
+  action: 8/9 factor and LHS/RHS structure confirmed; equation glyphs still not extractable. Transcribe exact Eq. (12) from the typeset PDF before use.
+- id: ch01.eq.gnrf
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (1), Sect. III
+  evidence: GNLI(f) = 16/27 gamma2 Leff2 double integral GWDM(f1) GWDM(f2) GWDM(f1+f2-f) rho chi df2 df1 (1)
+  action: None.
+- id: ch01.eq.gn_phased_array
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (3)
+  evidence: sin2(2Ns pi2 (f1-f)(f2-f) beta2 Ls) / sin2(2 pi2 (f1-f)(f2-f) beta2 Ls) (3)
+  action: None.
+- id: ch01.eq.gn_osnr_tot
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (4)
+  evidence: OSNRtot = Pch / (PASE + PNLI) (4) ... falling within the chosen OSNR conventional noise bandwidth BN
+  action: None.
+- id: ch01.eq.gn_accumulation_eps
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (7), Sect. IX
+  evidence: GNLI (f) = GNLI (f)| Ns=1 . N 1+eps s (7)
+  action: None.
+- id: ch01.eq.gn_eps_closed_form
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (23), Sect. XI-C; 2014 Eq. (41)
+  evidence: eps = 3/10 loge( 1 + 6/Ls Leff,a / asinh(pi2/2 beta2 Leff,a B2WDM)) (23)
+  action: None.
+- id: ch01.eq.gn_nyquist_single_span
+  status: MATCH
+  found_locator: P2012 Eq. (13) (8/27 confirmed via Eq. (14)); 2014 tutorial Eq. (37)
+  evidence: G 1 span NLI (0) = 8/27 gamma2 G3 WDM L2 eff asinh(pi2/2 |beta2| Leff,a B2 WDM) / (pi |beta2| Leff,a) (37) ... Leff,a=1/2alpha
+  action: 'Correct the note: the 8/27 factor IS present in the 2014 Eq. (37) extraction. Leff,a = 1/(2 alpha_field) confirmed.'
+- id: ch01.eq.gn_nonnyquist_single_span
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (15), Sect. XI-B
+  evidence: asinh(pi2/2 beta2 Leff,a B2ch N^(2Bch/Df) ch) (15) Note that if Bch = Df is imposed ... Eq. (13) is correctly found
+  action: None.
+- id: ch01.eq.gn_eta_cubic
+  status: MATCH
+  found_locator: Poggiolini 2014 preprint Eq. (27), Sect. IV-A
+  evidence: PNLI = eta P3ch (27) where eta is independent of Pch
+  action: None.
+- id: ch01.eq.gn_snr_nl
+  status: MATCH
+  found_locator: Poggiolini 2014 preprint Eq. (28)
+  evidence: SNRNL = Pch / (PASE + eta P3ch) (28)
+  action: None.
+- id: ch01.eq.gn_popt
+  status: MATCH
+  found_locator: Poggiolini 2014 preprint Eq. (29); per-span Eq. (55)
+  evidence: 'Elementary calculus then shows that the optimum launch power is: P opt ch = cube-root(PASE / 2eta) (29)'
+  action: None.
+- id: ch01.eq.gn_popt_eps
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (28), Sect. XII-A
+  evidence: P(BER) ch,opt = B eq ch cube-root( P(1) ASE / (2 p(1) NLI N eps s) ) (28)
+  action: None.
+- id: ch01.eq.gn_osnr_vs_ns
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (25), Sect. XII
+  evidence: OSNRtot = Pch / (P(1)ASE Ns + p(1)NLI N1+eps s P3ch (Beq ch)^-3) (25)
+  action: None.
+- id: ch01.eq.gn_nsmax
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (30), Sect. XII-B
+  evidence: N max s = B eq ch / (3 OSNRT) cube-root( 4 / ((P(1) ASE)^2 p(1) NLI) ) (30)
+  action: None.
+- id: ch01.eq.gn_reach_sensitivity
+  status: MATCH
+  found_locator: Poggiolini 2012 Eq. (32), Sect. XII-B
+  evidence: Delta N max s [dB] = - 1/3 Delta p(1) NLI [dB] (32)
+  action: None.
+- id: ch01.eq.ase_per_span_2014
+  status: MATCH
+  found_locator: Poggiolini 2014 preprint Eq. (51), Sect. VII
+  evidence: P 1 span ASE = h nu F (Lambda - 1) Rs = h nu F Lambda Rs (51) where the quantity Lambda is the
+  action: None.
+- id: ch01.eq.gn_def_ign
+  status: MATCH
+  found_locator: Poggiolini 2014 preprint Eqs. (15), (16), (18), Sect. III-D
+  evidence: G inc NLI (f) = G 1 span NLI (f) Ns (15) GNLI (f) = G 1 span NLI (f) N 1+eps s (16)
+  action: None.
+- id: ch01.eq.oct_shannon
+  status: PARTIAL
+  found_locator: Poggiolini et al. JLT 2014 preprint, Eq. (62), Sect. VIII-B
+  evidence: OCT = p Rs ... log2 1 + SNRNL [bit/symbol] (62) ... where p=1 for a single-polarization signal and p=2 for a polarization-multiplexed signal
+  action: Structure p (Rs/Df) log2(1+SNR_NL) is consistent with the garbled extraction and with the text 'at the Nyquist limit OCT coincides with ... SE, in bit/(s Hz)', but the source labels Eq. (62) '[bit/symbol]'. Verify the exact form and unit label against the published PDF.
+- id: ch01.eq.egn_decomposition
+  status: MATCH
+  found_locator: Carena OE 2014 Eq. (1) p. 16337; Eq. (5)
+  evidence: G EGN NLI = G GN NLI + G corr NLI (1) ... G EGN SCI = P3 [kappa1 + Phi_a kappa2 + Psi_a kappa3]
+  action: None.
+- id: ch01.eq.ase_psd_per_pol
+  status: MATCH
+  found_locator: Carney et al. (DCU preprint of Opt. Express 21, 7180 (2013)), Eqs. (11)-(12)
+  evidence: PASE = nsp (G-1) h nu B0 (11) ... rho_ASE is equal to the noise power per unit bandwidth ... rho_ASE = nsp (G-1) h
+  action: Source read is the submitted manuscript (OpEx_submission.pdf); published equation numbers may differ. rho_ASE is the co-polarized PSD, consistent with the per-polarization label.
+- id: ch01.eq.ase_power_desurvire
+  status: MATCH
+  found_locator: Scholarpedia Optical amplification, Eq. (12)
+  evidence: P_ASE = N2/(N2-N1) (G-1) P0 = nsp (G-1) P0 ... effect the change P0 -> 2 P0
+  action: None.
+- id: ch01.eq.nf_nsp
+  status: MATCH
+  found_locator: Carney preprint, Eq. (13) and following sentence
+  evidence: nf = 2 nsp (G-1)/G + 1/G (13) For the situation where G >> 1, this expression reduces to nf = 2nsp
+  action: None. Preprint numbering; for a tier-A primary derivation also cite Baney, Gallion, Tucker, OFT 6, 122 (2000), Eqs. (11)-(13) (F = F_sig-sp + F_shot).
+- id: ch01.eq.nf_definition
+  status: MATCH
+  found_locator: Baney et al. OFT 6 (2000), Sect. III, Eqs. (3)-(4), p. 128
+  evidence: Using the nomenclature of the IEC, IEC 61291-1, the noise factor F is defined by F(nu,f) = SNRin/SNRout (3)
+  action: None.
+- id: ch01.eq.osnr_definition
+  status: MATCH
+  found_locator: Essiambre-Tkach, Proc. IEEE 100(5) 2012, Eq. (10), p. 1040
+  evidence: OSNR = P/(2 NASE Bref) (10) where P is the average signal power, summed over the two states of polarization
+  action: None.
+- id: ch01.eq.osnr_to_snr
+  status: MATCH
+  found_locator: Essiambre-Tkach 2012 Eq. (11)
+  evidence: OSNR = p Rs/(2 Bref) SNR (11) where p = 1 for a singly-polarized signal and p = 2 for a PDM signal
+  action: None.
+- id: ch01.eq.osnr_to_snr_2pol
+  status: MATCH
+  found_locator: Essiambre-Tkach 2012 Eqs. (12)-(13)
+  evidence: OSNR = Rs/Bref SNR(2) (12) ... SNR(2) = (Px + Py)/(Nx + Ny) (13)
+  action: None.
+- id: ch01.eq.osnr_multispan_gsup39_full
+  status: PARTIAL
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5
+  evidence: OSNR = Pout - L - NF - 10log(N + 10^(-(L-G_BA)/10)) - 10log(h nu nu_r) (9-17) ... ASE noise is accumulated from all N +
+  action: Formula matches G.Sup39 (02/2006) Eq. (9-17), but that edition is superseded by G.Sup39 (10/2025), where the same formula is Eq. (9-18). Update source_id and locator.
+- id: ch01.eq.osnr_multispan_gsup39_booster_equal
+  status: PARTIAL
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5
+  evidence: If the gain of the booster amplifier is approximately the same as that of the line amplifiers ... OSNR = Pout - L - NF
+  action: Formula matches G.Sup39 (02/2006) Eq. (9-18), but that edition is superseded by G.Sup39 (10/2025), where the same formula is Eq. (9-19). Update source_id and locator.
+- id: ch01.eq.osnr_multispan_58db_rule
+  status: PARTIAL
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5
+  evidence: The ASE noise from the booster amplifier can be ignored only if the span loss L ... is much greater than the booster gain GBA
+  action: 'Formula matches G.Sup39 (02/2006) Eq. (9-19), but that edition is superseded by G.Sup39 (10/2025), where the same formula is Eq. (9-20). Update source_id and locator. Also: the source does not state polarizations; delete "noise in both polarizations" from notes or attribute it to the NF definition (signal-spontaneous NF implies ASE in both polarizations), with Essiambre-Tkach Eq. (10) as the supporting source.'
+- id: ch01.eq.osnr_single_preamp_58
+  status: PARTIAL
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5
+  evidence: OSNR = Preceived - NF + 58 dB (9-25) Equation 9-25 is valid for 1 span and for back-to-back measurements with an optical preamplifier
+  action: Formula matches G.Sup39 (02/2006) Eq. (9-23),(9-24), but that edition is superseded by G.Sup39 (10/2025), where the same formula is Eq. (9-24),(9-25). Update source_id and locator.
+- id: ch01.eq.osnr_measurement_iec
+  status: PARTIAL
+  found_locator: ITU-T G.Sup39 (10/2025), clause 9.5
+  evidence: OSNR is usually expressed in a reference optical bandwidth of 0.1 nm and defined as shown in Equation 9-23
+  action: Formula matches G.Sup39 (02/2006) Eq. (9-22), but that edition is superseded by G.Sup39 (10/2025), where the same formula is Eq. (9-23). Update source_id and locator.
+tier_a_replacements:
+- for: ch01.hcf.chen2024_dnanf_008
+  replacement: 'Petrovich et al., Nat. Photon. 19, 1203-1208 (2025), main text on HCF1 (ref. 29): cutbacks 0.055/0.065, IL 0.09+/-0.01, OTDR 0.11+/-0.01 dB/km at 1550 nm'
+  status: full text read
+- for: ch01.hcf.ng_nanf_vs_smf28 / ch01.hcf.latency_reduction_antesberger
+  replacement: 'Trenti et al., IEEE JSTQE (2024), doi 10.1109/JSTQE.2024.3392416: ~13 us latency reduction over 7.72 km NANF vs SMF28'
+  status: abstract read
+- for: ITU-T G.Sup39 (02/2006) OSNR equations and 58 dB constant
+  replacement: 'ITU-T G.Sup39 (10/2025), clause 9.5: Eqs. (9-18) to (9-25); same formulas, renumbered, typo fixed'
+  status: full text read
+- for: ch01.osnr.bref_g697_0p1nm
+  replacement: ITU-T G.697 (11/2016), Appendix V, Table V.3, parameter 5
+  status: text read
+- for: ch01.osnr.sackinger_58db_preamp
+  replacement: 'ITU-T G.Sup39 (10/2025) Eq. (9-25): OSNR = Preceived - NF + 58 dB'
+  status: full text read
+- for: ch01.eq.nf_nsp (Carney preprint)
+  replacement: Baney, Gallion, Tucker, Opt. Fiber Technol. 6, 122-154 (2000), Sect. III-IV, Eqs. (3), (11)-(13)
+  status: full text read (open copy)
+- for: ch01.sdm.nict2023_22p9pbps (press, tier C)
+  replacement: ECOC 2023 post-deadline paper presented by B. J. Puttnam (named in the NICT release); paper itself not retrieved
+  status: candidate only
+- for: practical transceiver gap to Shannon/GMI in dB (ch01.gap.vendor_claim_1_2db)
+  replacement: 'None found. Searched JLT/OE/OFC/ECOC (Winzer et al. OE 26(18) 24190 2018; Sun et al. JLT 38(17) 4744 2020; Yoshida ECOC 2020; Kobayashi et al. Proc. IEEE 2022): none states a numeric dB gap of a practical transceiver to Shannon in text. Closest tier-A numbers already in ledger: Poggiolini 2014 (1.5 dB soft-FEC penalty; 3 dB assumed SNR penalty) and Yoshida ECOC 2020 Figs. 4-5 (figure readout only).'
+  status: not found
+- for: Essiambre et al. JLT 28(4) 662 (2010) full text
+  replacement: 'Not reachable: IEEE Xplore and Optica pages give abstract only; no open copy found. Abstract confirms explicit SNR-OSNR relations; Essiambre-Tkach Proc. IEEE 2012 Eqs. (10)-(13) (open copy read) is the usable tier-A source.'
+  status: unreachable
+- for: Ferrari et al. JOCN 12(6) C31 (2020) GNPy full text
+  replacement: Paper is Optica Open Access (VoR also on iris.polito.it, hdl 11583/2826672); tools could not render the full text. Change access to open; abstract values verified.
+  status: abstract read; full text not rendered

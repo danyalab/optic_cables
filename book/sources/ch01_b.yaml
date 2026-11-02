@@ -1,291 +1,286 @@
-# Sources for chapter 1, sections 1.4 (Kerr nonlinearity, NLSE) and 1.6 (GN/EGN models).
-# Retrieval agent: ch01_b. All retrieved 2026-11-02.
-
 sources:
-  - id: poggiolini_jlt_2012
-    type: journal
-    title: "The GN Model of Non-Linear Propagation in Uncompensated Coherent Optical Systems"
-    authors: "P. Poggiolini"
-    venue: "Journal of Lightwave Technology, vol. 30, no. 24, pp. 3857-3879"
-    year: 2012
-    doi: "10.1109/JLT.2012.2217729"
-    url: "https://iris.polito.it/retrieve/e384c42e-870e-d4b2-e053-9f05fe0a1d67/2012_jlt_Poggiolini_invited_post_print_v1.pdf"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Read in full as the author's accepted post-print on the PoliTo IRIS repository. The post-print states that the erratum (DOI 10.1109/JLT.2012.2237115) is included. Page numbers in the published version could not be checked, so locators use equation, section and figure numbers."
-
-  - id: poggiolini_jlt_2014
-    type: journal
-    title: "The GN-Model of Fiber Non-Linear Propagation and its Applications"
-    authors: "P. Poggiolini, G. Bosco, A. Carena, V. Curri, Y. Jiang, F. Forghieri"
-    venue: "Journal of Lightwave Technology, vol. 32, no. 4, pp. 694-721"
-    year: 2014
-    doi: "10.1109/JLT.2013.2295208"
-    url: "https://iris.polito.it/handle/11583/2542088"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Read in full from the open file on IRIS, which the repository labels '2013_jlt_tutorial_re_revised_v4_no_bold.pdf, Preprint / submitted version [pre-review]'. Equation and table numbers may differ from the published JLT version. The PDF text extraction dropped the Greek epsilon and some leading fractions; see notes on each record."
-
-  - id: poggiolini_arxiv_2012_derivation
-    type: report
-    title: "A Detailed Analytical Derivation of the GN Model of Non-Linear Interference in Coherent Optical Transmission Systems"
-    authors: "P. Poggiolini, G. Bosco, A. Carena, V. Curri, Y. Jiang, F. Forghieri"
-    venue: "arXiv:1209.0394 (v13)"
-    year: 2012
-    doi: "10.48550/arXiv.1209.0394"
-    url: "https://arxiv.org/abs/1209.0394"
-    access: open
-    language: en
-    tier: C
-    retrieved: 2026-11-02
-    notes: "Preprint, never peer-reviewed as such. Only the first pages were read; Greek glyphs were lost in extraction. Listed so later agents know it exists. No values are taken from it."
-
-  - id: carena_oe_2014
-    type: journal
-    title: "EGN model of non-linear fiber propagation"
-    authors: "A. Carena, G. Bosco, V. Curri, Y. Jiang, P. Poggiolini, F. Forghieri"
-    venue: "Optics Express, vol. 22, no. 13, pp. 16335-16362"
-    year: 2014
-    doi: "10.1364/OE.22.016335"
-    url: "https://iris.polito.it/retrieve/e384c42e-36d2-d4b2-e053-9f05fe0a1d67/oe-22-13-16335.pdf"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Publisher PDF (open access), read in full from the IRIS copy. The page numbers in locators are the OE page footers."
-
-  - id: ferrari_jocn_2020
-    type: journal
-    title: "GNPy: an open source application for physical layer aware open optical networks"
-    authors: "A. Ferrari, M. Filer, K. Balasubramanian, Y. Yin, E. Le Rouzic, J. Kundrat, G. Grammel, G. Galimberti, V. Curri"
-    venue: "Journal of Optical Communications and Networking, vol. 12, no. 6, pp. C31-C40"
-    year: 2020
-    doi: "10.1364/JOCN.382906"
-    url: "https://opg.optica.org/jocn/abstract.cfm?uri=jocn-12-6-c31"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "The article is open access, but only the abstract was read because the full text could not be fetched."
-
-  - id: essiambre_jlt_2010
-    type: journal
-    title: "Capacity Limits of Optical Fiber Networks"
-    authors: "R.-J. Essiambre, G. Kramer, P. J. Winzer, G. J. Foschini, B. Goebel"
-    venue: "Journal of Lightwave Technology, vol. 28, no. 4, pp. 662-701"
-    year: 2010
-    doi: "10.1109/JLT.2009.2039464"
-    url: "https://ieeexplore.ieee.org/document/5420239"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  - id: agrawal_josab_2011
-    type: journal
-    title: "Nonlinear fiber optics: its history and recent progress [Invited]"
-    authors: "G. P. Agrawal"
-    venue: "Journal of the Optical Society of America B, vol. 28, no. 12, pp. A1-A10"
-    year: 2011
-    doi: "10.1364/JOSAB.28.0000A1"
-    url: "https://sites.rochester.edu/agrawal/wp-content/uploads/2019/08/paper_2011_15.pdf"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Author-hosted copy of the published paper, read in full for sections 1 to 3. The PDF text extraction garbled the equation glyphs, but the equation numbers and surrounding text were clear. The DOI was not shown in the PDF text and should be checked against the journal."
-
-  - id: itu_t_gsup47_2025
-    type: standard
-    title: "General aspects of optical fibres and cables"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T G-series Recommendations, Supplement 47 (03/2025)"
-    year: 2025
-    doi: ""
-    url: "https://www.itu.int/rec/T-REC-G.Sup47"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "This is a Supplement, which is informative rather than normative. Read in full as text; the equation glyphs in clause 7.3 were garbled in extraction."
-
-  - id: itu_t_g655_1996
-    type: standard
-    title: "Characteristics of a non-zero dispersion shifted single-mode optical fibre cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.655 (10/96)"
-    year: 1996
-    doi: ""
-    url: "https://www.itu.int/rec/T-REC-G.655-199610-S"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Superseded edition, read in full. It is cited for the original motivating scope text."
-
-  - id: itu_t_g655_2009
-    type: standard
-    title: "Characteristics of a non-zero dispersion-shifted single-mode optical fibre and cable"
-    authors: "ITU-T Study Group 15"
-    venue: "ITU-T Recommendation G.655 (11/2009)"
-    year: 2009
-    doi: ""
-    url: "https://www.itu.int/epublications/publication/itu-t-g-655-2009-11-characteristics-of-a-non-zero-dispersion-shifted-single-mode-optical-fibre-and-cable"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Only the summary and the longitudinal-uniformity NOTE shown on the ITU e-publication page were read; the full PDF was not read."
-
-  - id: kato_ol_1995
-    type: journal
-    title: "Measurement of the nonlinear refractive index in optical fiber by the cross-phase-modulation method with depolarized pump light"
-    authors: "T. Kato, Y. Suetsugu, M. Takagi, E. Sasaoka, M. Nishimura"
-    venue: "Optics Letters, vol. 20, no. 9, pp. 988-990"
-    year: 1995
-    doi: "10.1364/OL.20.000988"
-    url: "https://opg.optica.org/ol/abstract.cfm?uri=ol-20-9-988"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  - id: kim_ol_1994
-    type: journal
-    title: "Measurement of the nonlinear index of silica-core and dispersion-shifted fibers"
-    authors: "K. S. Kim, R. H. Stolen, W. A. Reed, K. W. Quoi"
-    venue: "Optics Letters, vol. 19, no. 4, pp. 257-259"
-    year: 1994
-    doi: "10.1364/OL.19.000257"
-    url: "https://opg.optica.org/ol/abstract.cfm?uri=ol-19-4-257"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  - id: namihira_el_1994
-    type: journal
-    title: "Nonlinear coefficient measurements for dispersion shifted fibres using self-phase modulation method at 1.55 um"
-    authors: "Y. Namihira, A. Miyata, N. Tanahashi"
-    venue: "Electronics Letters, vol. 30, no. 14, pp. 1171-1172"
-    year: 1994
-    doi: "10.1049/el:19940773"
-    url: "https://doi.org/10.1049/el:19940773"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  - id: stolen_jlt_1998
-    type: journal
-    title: "Measurement of the nonlinear refractive index of long dispersion-shifted fibers by self-phase modulation at 1.55 um"
-    authors: "R. H. Stolen, W. A. Reed, K. S. Kim, G. T. Harvey"
-    venue: "Journal of Lightwave Technology, vol. 16, no. 6"
-    year: 1998
-    doi: "10.1109/50.681457"
-    url: "https://doi.org/10.1109/50.681457"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  - id: boskovic_ol_1996
-    type: journal
-    title: "Direct continuous-wave measurement of n2 in various types of telecommunication fiber at 1.55 um"
-    authors: "A. Boskovic, S. V. Chernikov, J. R. Taylor, L. Gruner-Nielsen, O. A. Levring"
-    venue: "Optics Letters, vol. 21, no. 24, pp. 1966-1968"
-    year: 1996
-    doi: "10.1364/OL.21.001966"
-    url: "https://opg.optica.org/ol/abstract.cfm?uri=ol-21-24-1966"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "The abstract gives no numeric n2 values; the values are in the paper body, which was not read."
-
-  - id: sterlite_appnote_n2_g657
-    type: datasheet
-    title: "Measurement of nonlinear refractive index of Sterlite's BOWLITE G.657 A2 and B3 optical fibers"
-    authors: "Sterlite Technologies (STL)"
-    venue: "Application note"
-    year: 0
-    doi: ""
-    url: "https://www.stl.tech/new_pdf/pdf/knowledgecenter/appl-note/Measurement-of-nonlinear-refractive-index-of-sterlites-BOELITE-G_657-A2-and-B3-Optical-Fibers.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-    notes: "Year not stated in the text that was seen (year: 0 means unknown). This is a vendor measurement using the cw-SPM method (Boskovic). Only search-engine extracts of the PDF were seen."
-
-  - id: marcuse_jlt_1997
-    type: journal
-    title: "Application of the Manakov-PMD Equation to Studies of Signal Propagation in Optical Fibers with Randomly Varying Birefringence"
-    authors: "D. Marcuse, C. R. Menyuk, P. K. A. Wai"
-    venue: "Journal of Lightwave Technology, vol. 15, no. 9, pp. 1735-1746"
-    year: 1997
-    doi: "10.1109/50.622902"
-    url: "https://photonics.umbc.edu/wp-content/uploads/sites/688/2022/02/PAJ108.pdf"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Published PDF hosted by the UMBC group. The text of pp. 1735-1739 was read, but the equation glyphs were not extractable, so the symbol-level form of Eq. (12) is not verified."
-
-  - id: sumitomo_wp_g654e_2024
-    type: whitepaper
-    title: "ITU-T G.654.E Fiber, PureAdvance (TR-23076A) and Transition of Fiber Type for Terrestrial Long-Haul Networks, From G.655 to G.654.E (TR-22077A)"
-    authors: "Sumitomo Electric Industries"
-    venue: "Sumitomo Electric white papers"
-    year: 2024
-    doi: ""
-    url: "https://sumitomoelectric.com/sites/default/files/2024-05/download_documents/TR-23076A_White%20Paper_ITU-T%20G.654.E%20fiber%2C%20PureAdvance.pdf"
-    access: open
-    language: en
-    tier: B
-    retrieved: 2026-11-02
-    notes: "Vendor white paper; only search-engine extracts were seen."
-
-  - id: yoshida_ecoc_2020
-    type: conference
-    title: "Required and received SNRs in coded modulation"
-    authors: "T. Yoshida, K. Igarashi, M. Binkai, S. Chikamori, M. Mazur, J. Schroder, K. Matsuda, S. Koshikawa, N. Suzuki, M. Karlsson, E. Agrell"
-    venue: "European Conference on Optical Communication (ECOC) 2020"
-    year: 2020
-    doi: "10.1109/ECOC48923.2020.9333308"
-    url: "https://research.chalmers.se/publication/524977/file/524977_Fulltext.pdf"
-    access: open
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-    notes: "Author version from the Chalmers repository, read in full. The values in the ROSNR-gap figures were not extractable as text."
-
-  - id: rafique_ofc_2017
-    type: conference
-    title: "Enabling 64Gbaud Coherent Optical Transceivers"
-    authors: "D. Rafique, H. Griesser, J.-P. Elbers"
-    venue: "Optical Fiber Communication Conference (OFC) 2017, paper W2A.25"
-    year: 2017
-    doi: "10.1364/OFC.2017.W2A.25"
-    url: "https://doi.org/10.1364/ofc.2017.w2a.25"
-    access: abstract_only
-    language: en
-    tier: A
-    retrieved: 2026-11-02
-
-  - id: momtahan_isemag_2024
-    type: press
-    title: "In the Shadow of Shannon"
-    authors: "P. Momtahan"
-    venue: "ISE Magazine"
-    year: 2024
-    doi: ""
-    url: "https://www.isemag.com/fttx-optical-networks/article/14305047/in-the-shadow-of-shannon"
-    access: open
-    language: en
-    tier: C
-    retrieved: 2026-11-02
-    notes: "Trade-press article by a vendor (Infinera) marketing author. It is recorded only as a claim and must not support prose on its own."
+- id: poggiolini_jlt_2012
+  type: journal
+  title: The GN Model of Non-Linear Propagation in Uncompensated Coherent Optical Systems
+  authors: P. Poggiolini
+  venue: Journal of Lightwave Technology, vol. 30, no. 24, pp. 3857-3879
+  year: 2012
+  doi: 10.1109/JLT.2012.2217729
+  url: https://iris.polito.it/retrieve/e384c42e-870e-d4b2-e053-9f05fe0a1d67/2012_jlt_Poggiolini_invited_post_print_v1.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Read in full as the author's accepted post-print on the PoliTo IRIS repository. The post-print states that the erratum
+    (DOI 10.1109/JLT.2012.2237115) is included. Page numbers in the published version could not be checked, so locators use
+    equation, section and figure numbers.
+- id: poggiolini_jlt_2014
+  type: journal
+  title: The GN-Model of Fiber Non-Linear Propagation and its Applications
+  authors: P. Poggiolini, G. Bosco, A. Carena, V. Curri, Y. Jiang, F. Forghieri
+  venue: Journal of Lightwave Technology, vol. 32, no. 4, pp. 694-721
+  year: 2014
+  doi: 10.1109/JLT.2013.2295208
+  url: https://iris.polito.it/handle/11583/2542088
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Read in full from the open file on IRIS, which the repository labels '2013_jlt_tutorial_re_revised_v4_no_bold.pdf,
+    Preprint / submitted version [pre-review]'. Equation and table numbers may differ from the published JLT version. The
+    PDF text extraction dropped the Greek epsilon and some leading fractions; see notes on each record.
+- id: poggiolini_arxiv_2012_derivation
+  type: report
+  title: A Detailed Analytical Derivation of the GN Model of Non-Linear Interference in Coherent Optical Transmission Systems
+  authors: P. Poggiolini, G. Bosco, A. Carena, V. Curri, Y. Jiang, F. Forghieri
+  venue: arXiv:1209.0394 (v13)
+  year: 2012
+  doi: 10.48550/arXiv.1209.0394
+  url: https://arxiv.org/abs/1209.0394
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+  notes: Preprint, never peer-reviewed as such. Only the first pages were read; Greek glyphs were lost in extraction. Listed
+    so later agents know it exists. No values are taken from it.
+- id: carena_oe_2014
+  type: journal
+  title: EGN model of non-linear fiber propagation
+  authors: A. Carena, G. Bosco, V. Curri, Y. Jiang, P. Poggiolini, F. Forghieri
+  venue: Optics Express, vol. 22, no. 13, pp. 16335-16362
+  year: 2014
+  doi: 10.1364/OE.22.016335
+  url: https://iris.polito.it/retrieve/e384c42e-36d2-d4b2-e053-9f05fe0a1d67/oe-22-13-16335.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Publisher PDF (open access), read in full from the IRIS copy. The page numbers in locators are the OE page footers.
+- id: ferrari_jocn_2020
+  type: journal
+  title: 'GNPy: an open source application for physical layer aware open optical networks'
+  authors: A. Ferrari, M. Filer, K. Balasubramanian, Y. Yin, E. Le Rouzic, J. Kundrat, G. Grammel, G. Galimberti, V. Curri
+  venue: Journal of Optical Communications and Networking, vol. 12, no. 6, pp. C31-C40
+  year: 2020
+  doi: 10.1364/JOCN.382906
+  url: https://opg.optica.org/jocn/abstract.cfm?uri=jocn-12-6-c31
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: The article is open access, but only the abstract was read because the full text could not be fetched.
+- id: essiambre_jlt_2010
+  type: journal
+  title: Capacity Limits of Optical Fiber Networks
+  authors: R.-J. Essiambre, G. Kramer, P. J. Winzer, G. J. Foschini, B. Goebel
+  venue: Journal of Lightwave Technology, vol. 28, no. 4, pp. 662-701
+  year: 2010
+  doi: 10.1109/JLT.2009.2039464
+  url: https://ieeexplore.ieee.org/document/5420239
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: agrawal_josab_2011
+  type: journal
+  title: 'Nonlinear fiber optics: its history and recent progress [Invited]'
+  authors: G. P. Agrawal
+  venue: Journal of the Optical Society of America B, vol. 28, no. 12, pp. A1-A10
+  year: 2011
+  doi: 10.1364/JOSAB.28.0000A1
+  url: https://sites.rochester.edu/agrawal/wp-content/uploads/2019/08/paper_2011_15.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Author-hosted copy of the published paper, read in full for sections 1 to 3. The PDF text extraction garbled the
+    equation glyphs, but the equation numbers and surrounding text were clear. The DOI was not shown in the PDF text and should
+    be checked against the journal.
+- id: itu_t_gsup47_2025
+  type: standard
+  title: General aspects of optical fibres and cables
+  authors: ITU-T Study Group 15
+  venue: ITU-T G-series Recommendations, Supplement 47 (03/2025)
+  year: 2025
+  doi: ''
+  url: https://www.itu.int/rec/T-REC-G.Sup47
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: This is a Supplement, which is informative rather than normative. Read in full as text; the equation glyphs in clause
+    7.3 were garbled in extraction.
+- id: itu_t_g655_1996
+  type: standard
+  title: Characteristics of a non-zero dispersion shifted single-mode optical fibre cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.655 (10/96)
+  year: 1996
+  doi: ''
+  url: https://www.itu.int/rec/T-REC-G.655-199610-S
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Superseded edition, read in full. It is cited for the original motivating scope text.
+- id: itu_t_g655_2009
+  type: standard
+  title: Characteristics of a non-zero dispersion-shifted single-mode optical fibre and cable
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.655 (11/2009)
+  year: 2009
+  doi: ''
+  url: https://www.itu.int/epublications/publication/itu-t-g-655-2009-11-characteristics-of-a-non-zero-dispersion-shifted-single-mode-optical-fibre-and-cable
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Only the summary and the longitudinal-uniformity NOTE shown on the ITU e-publication page were read; the full PDF
+    was not read.
+- id: kato_ol_1995
+  type: journal
+  title: Measurement of the nonlinear refractive index in optical fiber by the cross-phase-modulation method with depolarized
+    pump light
+  authors: T. Kato, Y. Suetsugu, M. Takagi, E. Sasaoka, M. Nishimura
+  venue: Optics Letters, vol. 20, no. 9, pp. 988-990
+  year: 1995
+  doi: 10.1364/OL.20.000988
+  url: https://opg.optica.org/ol/abstract.cfm?uri=ol-20-9-988
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: kim_ol_1994
+  type: journal
+  title: Measurement of the nonlinear index of silica-core and dispersion-shifted fibers
+  authors: K. S. Kim, R. H. Stolen, W. A. Reed, K. W. Quoi
+  venue: Optics Letters, vol. 19, no. 4, pp. 257-259
+  year: 1994
+  doi: 10.1364/OL.19.000257
+  url: https://opg.optica.org/ol/abstract.cfm?uri=ol-19-4-257
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: namihira_el_1994
+  type: journal
+  title: Nonlinear coefficient measurements for dispersion shifted fibres using self-phase modulation method at 1.55 um
+  authors: Y. Namihira, A. Miyata, N. Tanahashi
+  venue: Electronics Letters, vol. 30, no. 14, pp. 1171-1172
+  year: 1994
+  doi: 10.1049/el:19940773
+  url: https://doi.org/10.1049/el:19940773
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: stolen_jlt_1998
+  type: journal
+  title: Measurement of the nonlinear refractive index of long dispersion-shifted fibers by self-phase modulation at 1.55
+    um
+  authors: R. H. Stolen, W. A. Reed, K. S. Kim, G. T. Harvey
+  venue: Journal of Lightwave Technology, vol. 16, no. 6
+  year: 1998
+  doi: 10.1109/50.681457
+  url: https://doi.org/10.1109/50.681457
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: boskovic_ol_1996
+  type: journal
+  title: Direct continuous-wave measurement of n2 in various types of telecommunication fiber at 1.55 um
+  authors: A. Boskovic, S. V. Chernikov, J. R. Taylor, L. Gruner-Nielsen, O. A. Levring
+  venue: Optics Letters, vol. 21, no. 24, pp. 1966-1968
+  year: 1996
+  doi: 10.1364/OL.21.001966
+  url: https://opg.optica.org/ol/abstract.cfm?uri=ol-21-24-1966
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: The abstract gives no numeric n2 values; the values are in the paper body, which was not read.
+- id: sterlite_appnote_n2_g657
+  type: datasheet
+  title: Measurement of nonlinear refractive index of Sterlite's BOWLITE G.657 A2 and B3 optical fibers
+  authors: Sterlite Technologies (STL)
+  venue: Application note
+  year: 0
+  doi: ''
+  url: https://www.stl.tech/new_pdf/pdf/knowledgecenter/appl-note/Measurement-of-nonlinear-refractive-index-of-sterlites-BOELITE-G_657-A2-and-B3-Optical-Fibers.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+  notes: 'Year not stated in the text that was seen (year: 0 means unknown). This is a vendor measurement using the cw-SPM
+    method (Boskovic). Only search-engine extracts of the PDF were seen.'
+- id: marcuse_jlt_1997
+  type: journal
+  title: Application of the Manakov-PMD Equation to Studies of Signal Propagation in Optical Fibers with Randomly Varying
+    Birefringence
+  authors: D. Marcuse, C. R. Menyuk, P. K. A. Wai
+  venue: Journal of Lightwave Technology, vol. 15, no. 9, pp. 1735-1746
+  year: 1997
+  doi: 10.1109/50.622902
+  url: https://photonics.umbc.edu/wp-content/uploads/sites/688/2022/02/PAJ108.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Published PDF hosted by the UMBC group. The text of pp. 1735-1739 was read, but the equation glyphs were not extractable,
+    so the symbol-level form of Eq. (12) is not verified.
+- id: sumitomo_wp_g654e_2024
+  type: whitepaper
+  title: ITU-T G.654.E Fiber, PureAdvance (TR-23076A) and Transition of Fiber Type for Terrestrial Long-Haul Networks, From
+    G.655 to G.654.E (TR-22077A)
+  authors: Sumitomo Electric Industries
+  venue: Sumitomo Electric white papers
+  year: 2024
+  doi: ''
+  url: https://sumitomoelectric.com/sites/default/files/2024-05/download_documents/TR-23076A_White%20Paper_ITU-T%20G.654.E%20fiber%2C%20PureAdvance.pdf
+  access: open
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+  notes: Vendor white paper; only search-engine extracts were seen.
+- id: yoshida_ecoc_2020
+  type: conference
+  title: Required and received SNRs in coded modulation
+  authors: T. Yoshida, K. Igarashi, M. Binkai, S. Chikamori, M. Mazur, J. Schroder, K. Matsuda, S. Koshikawa, N. Suzuki, M.
+    Karlsson, E. Agrell
+  venue: European Conference on Optical Communication (ECOC) 2020
+  year: 2020
+  doi: 10.1109/ECOC48923.2020.9333308
+  url: https://research.chalmers.se/publication/524977/file/524977_Fulltext.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+  notes: Author version from the Chalmers repository, read in full. The values in the ROSNR-gap figures were not extractable
+    as text.
+- id: rafique_ofc_2017
+  type: conference
+  title: Enabling 64Gbaud Coherent Optical Transceivers
+  authors: D. Rafique, H. Griesser, J.-P. Elbers
+  venue: Optical Fiber Communication Conference (OFC) 2017, paper W2A.25
+  year: 2017
+  doi: 10.1364/OFC.2017.W2A.25
+  url: https://doi.org/10.1364/ofc.2017.w2a.25
+  access: abstract_only
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: momtahan_isemag_2024
+  type: press
+  title: In the Shadow of Shannon
+  authors: P. Momtahan
+  venue: ISE Magazine
+  year: 2024
+  doi: ''
+  url: https://www.isemag.com/fttx-optical-networks/article/14305047/in-the-shadow-of-shannon
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+  notes: Trade-press article by a vendor (Infinera) marketing author. It is recorded only as a claim and must not support
+    prose on its own.
