@@ -1,609 +1,695 @@
-# Chapter 9 ledger: China network architecture. Retrieved 2026-11-02.
-# Chinese quotes are verbatim; English gloss in notes. Quotes for Chinese text are kept to about 25 words-equivalent.
 records:
-# =====================================================================
-# 9.1 Operators and backbones
-# =====================================================================
 - id: ch09.op.chinanet_cn2_two_backbones
-  section: "9.1"
-  claim: China Telecom runs two separate IP backbones, ChinaNet (163, public Internet) and CN2 (IP VPN, 3G, NGN, enterprise services)
-  value: "ChinaNet (163) and CN2: two separate IP backbones for different services"
-  unit: "1"
+  section: '9.1'
+  claim: China Telecom runs two separate IP backbones, ChinaNet (163, public Internet) and CN2 (IP VPN, 3G, NGN, enterprise
+    services)
+  value: 'ChinaNet (163) and CN2: two separate IP backbones for different services'
+  unit: '1'
   kind: fact
   conditions:
     note: 2013 description by China service-provider contributors to IEEE 802.3
   source_id: ieee8023_2013_china_sp_400gbe
   locator: Slide 'China Telecom IP Network Architecture'
-  quote: "ChinaNet(163)/CN2: two separate IP backbone network for different service."
+  quote: 'ChinaNet(163)/CN2: two separate IP backbone network for different service.'
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Diagram labels ChinaNet as '163, Internet' and CN2 as 'IP, 3G, NGN, Vnet'. Contributor affiliations not stated on the slide.
+  notes: 'Diagram labels ChinaNet as ''163, Internet'' and CN2 as ''IP, 3G, NGN, Vnet''. Contributor affiliations not stated
+    on the slide. Verifier (PARTIAL): Value and quote verified. Fix notes: affiliations ARE on the title slide (Xinyuan Wang,
+    Xin Chang, Huawei; Lu Huang, China Mobile). Tier B acceptable (vendor+operator contribution, not a standard).'
+  verified: partial
 - id: ch09.op.cn2_name_and_launch_2004
-  section: "9.1"
-  claim: CN2 = 中国电信下一代承载网 (ChinaNet Next Carrying Network); equipment tender awarded November 2004; phase 1 comprised backbone plus a 'premium service network' covering 200+ cities
-  value: "CN2 tender result 2004-11-10; 200+ city premium service network"
-  unit: "1"
+  section: '9.1'
+  claim: CN2 = 中国电信下一代承载网 (ChinaNet Next Carrying Network); equipment tender awarded November 2004; phase 1 comprised backbone
+    plus a 'premium service network' covering 200+ cities
+  value: CN2 tender result 2004-11-10; 200+ city premium service network
+  unit: '1'
   kind: fact
   conditions:
-    date: "2004-11-10"
+    date: '2004-11-10'
   source_id: cisco_2004_cn2_press
   locator: Paragraphs 1-3
-  quote: "中国电信下一代承载网（ChinaNet Next Carrying Network，又称CN2）设备招标工作揭晓"
+  quote: 中国电信下一代承载网（ChinaNet Next Carrying Network，又称CN2）设备招标工作揭晓
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Vendor press release (tier C); historical provenance only. Gloss 'China Telecom next-generation carrying network (CN2) equipment tender results announced'. Same release says ChinaNet backbone links were being upgraded to 10G in its 6th expansion.
+  notes: Vendor press release (tier C); historical provenance only. Gloss 'China Telecom next-generation carrying network
+    (CN2) equipment tender results announced'. Same release says ChinaNet backbone links were being upgraded to 10G in its
+    6th expansion.
+  verified: match
 - id: ch09.op.cn2_design_goal_2005
-  section: "9.1"
-  claim: CN2 was designed as a carrier-grade 'premium' multi-service IP bearer network to stabilise China Telecom IP operations (Guangzhou Research Institute description)
-  value: "精品的IP网络 (premium IP network) / 多业务电信级承载网络"
-  unit: "1"
+  section: '9.1'
+  claim: CN2 was designed as a carrier-grade 'premium' multi-service IP bearer network to stabilise China Telecom IP operations
+    (Guangzhou Research Institute description)
+  value: 精品的IP网络 (premium IP network) / 多业务电信级承载网络
+  unit: '1'
   kind: fact
   conditions:
     year: 2005
   source_id: xu_gdtx_2005_cn2
   locator: Abstract
-  quote: "中国电信集团下决心组建一张精品的IP网络,以提升电信业务运营支撑能力,确保IP网络的稳定发展和演进"
+  quote: 中国电信集团下决心组建一张精品的IP网络,以提升电信业务运营支撑能力,确保IP网络的稳定发展和演进
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: med
-  notes: Abstract only (CNKI via archive.org). Gloss 'China Telecom resolved to build a premium IP network to strengthen operational support and ensure stable IP network evolution.'
+  notes: 'Abstract only (CNKI via archive.org). Gloss ''China Telecom resolved to build a premium IP network to strengthen
+    operational support and ensure stable IP network evolution.'' Verifier (PARTIAL): Quote verbatim. Downgrade tier A to
+    B: trade journal of CT Guangzhou Research Institute, abstract only, peer review not evidenced.'
+  verified: partial_fixed
 - id: ch09.op.cn2_mpls_five_cos
-  section: "9.1"
-  claim: CN2 (AS4809) is an MPLS-optimized, IPv6-capable successor backbone to ChinaNet with SLA-backed QoS and five classes of service
+  section: '9.1'
+  claim: CN2 (AS4809) is an MPLS-optimized, IPv6-capable successor backbone to ChinaNet with SLA-backed QoS and five classes
+    of service
   value: 5
-  unit: "classes of service"
+  unit: classes of service
   kind: fact
   conditions:
     asn: 4809
   source_id: ctamericas_cn2_page
   locator: Section 'CN2 (AS 4809)', feature list
-  quote: "SLA-backed Quality of Service (QoS) and Five Classes of Service (CoS)"
+  quote: SLA-backed Quality of Service (QoS) and Five Classes of Service (CoS)
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Same page describes CN2 as 'next generation, IPv6-capable Internet backbone successor to our ChinaNet network'. Marketing page of China Telecom Americas.
+  notes: Same page describes CN2 as 'next generation, IPv6-capable Internet backbone successor to our ChinaNet network'. Marketing
+    page of China Telecom Americas.
+  verified: match
 - id: ch09.op.cn2_domestic_pop_coverage
-  section: "9.1"
+  section: '9.1'
   claim: CN2 domestic coverage advertised as dual PoPs in 223 cities and dual PEs in 148 single-PoP cities (mainland China)
   value: 223
-  unit: "cities (dual-PoP)"
+  unit: cities (dual-PoP)
   kind: fact
   conditions:
     note: China Telecom Asia Pacific GIA page, snapshot dated 2019-12; CT Americas page (2023) says 161 dual-PoP cities
   source_id: ctap_gia_page
   locator: Technical Details list
-  quote: "Dual-PoPs in 223 cities and Dual-PEs installed in 148 Single-PoP cities."
+  quote: Dual-PoPs in 223 cities and Dual-PEs installed in 148 Single-PoP cities.
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: DISAGREEMENT with ctamericas_cn2_page which states 'dual-PoPs in 161 cities and Dual-PEs installed in 148 Single-PoP cities'. Different marketing snapshots; neither dated precisely.
+  notes: DISAGREEMENT with ctamericas_cn2_page which states 'dual-PoPs in 161 cities and Dual-PEs installed in 148 Single-PoP
+    cities'. Different marketing snapshots; neither dated precisely.
+  verified: match
 - id: ch09.op.cn2_dual_pop_161
-  section: "9.1"
+  section: '9.1'
   claim: CN2 coverage per China Telecom Americas page, dual PoPs in 161 cities, 19 overseas nodes
   value: 161
-  unit: "cities (dual-PoP)"
+  unit: cities (dual-PoP)
   kind: fact
   conditions:
     note: page snapshot 2023-01
   source_id: ctamericas_cn2_page
   locator: Feature 'Coverage in Major Overseas Cities'
-  quote: "Coverage including 19 nodes in major overseas cities, dual-PoPs in 161 cities and Dual-PEs installed in 148 Single-PoP cities"
+  quote: Coverage including 19 nodes in major overseas cities, dual-PoPs in 161 cities and Dual-PEs installed in 148 Single-PoP
+    cities
   retrieved: 2026-11-02
   tier: B
   confidence: med
   notes: Disagrees with ch09.op.cn2_domestic_pop_coverage (223). Record both.
+  verified: match
 - id: ch09.op.cn2_transit_latency_hk_mainland
-  section: "9.1"
+  section: '9.1'
   claim: CN2 advertised average latency Hong Kong to mainland China
   value: 50
-  unit: "ms"
+  unit: ms
   kind: spec_max
   conditions:
-    path: "Hong Kong - Mainland China"
+    path: Hong Kong - Mainland China
     note: marketing 'average network latency' upper bound; RTT vs one-way not stated
   source_id: cteurope_ip_transit_page
   locator: Section 'CN2 low latency, high resilience connection'
-  quote: "Average Network Latency: Hong Kong – Mainland China < 50 ms Singapore – Mainland China < 80 ms"
+  quote: 'Average Network Latency: Hong Kong – Mainland China < 50 ms Singapore – Mainland China < 80 ms'
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: Same page states channel utilisation kept at no more than 50% ('Light loading') to ensure QoS, and 500 ms average convergence.
+  notes: Same page states channel utilisation kept at no more than 50% ('Light loading') to ensure QoS, and 500 ms average
+    convergence.
+  verified: match
 - id: ch09.op.cn2_light_loading_50pct
-  section: "9.1"
+  section: '9.1'
   claim: CN2 transit service keeps transmission channel utilisation at or below 50% (light loading) for QoS
   value: 50
-  unit: "%"
+  unit: '%'
   kind: spec_max
   conditions:
     note: China Telecom (Europe) service description
   source_id: cteurope_ip_transit_page
   locator: Section 'With China Telecom (Europe)'s Global IP Transit service you also get'
-  quote: "Light loading with transmission channel utilisation ratio at no more than 50% to ensure quality of service (QoS)"
+  quote: Light loading with transmission channel utilisation ratio at no more than 50% to ensure quality of service (QoS)
   retrieved: 2026-11-02
   tier: B
   confidence: med
   notes: 'Positioning evidence: CN2 premium = engineered headroom, not different optics.'
+  verified: match
 - id: ch09.op.ct_allotical_backbone_scale_2023
-  section: "9.1"
-  claim: China Telecom backbone all-optical switching network (fused first- and second-level trunk) covers nearly 200 cities with 500+ ROADM nodes and 2000+ OA nodes (as of Oct 2023)
+  section: '9.1'
+  claim: China Telecom backbone all-optical switching network (fused first- and second-level trunk) covers nearly 200 cities
+    with 500+ ROADM nodes and 2000+ OA nodes (as of Oct 2023)
   value: 500
-  unit: "ROADM nodes (lower bound)"
+  unit: ROADM nodes (lower bound)
   kind: measured
   conditions:
-    date: "2023-10"
+    date: 2023-10
     oa_nodes_lower_bound: 2000
-    cities: "近200"
+    cities: 近200
   source_id: lv_cww_2023_ct_400g
   locator: Introduction, paragraph 4
-  quote: "覆盖了近200座城市，包括500个以上的ROADM节点和2000个以上的光放大（OA）节点"
+  quote: 覆盖了近200座城市，包括500个以上的ROADM节点和2000个以上的光放大（OA）节点
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Authored by China Telecom Research Institute (吕凯 et al.). Gloss 'covering nearly 200 cities, with more than 500 ROADM nodes and more than 2000 optical amplifier (OA) nodes'. Defines 全光网2.0 as ROADM-based all-optical switching.
+  notes: Authored by China Telecom Research Institute (吕凯 et al.). Gloss 'covering nearly 200 cities, with more than 500 ROADM
+    nodes and more than 2000 optical amplifier (OA) nodes'. Defines 全光网2.0 as ROADM-based all-optical switching.
+  verified: match
 - id: ch09.op.cmnet_two_level
-  section: "9.1"
-  claim: China Mobile operates CMNet (Internet; national IP backbone plus provincial networks, 2-level) and a separate IP Dedicated Network (MPLS VPN) for internal services
-  value: "CMNet (2-level: national backbone + provincial) and IP 专网 (MPLS VPN)"
-  unit: "1"
+  section: '9.1'
+  claim: China Mobile operates CMNet (Internet; national IP backbone plus provincial networks, 2-level) and a separate IP
+    Dedicated Network (MPLS VPN) for internal services
+  value: 'CMNet (2-level: national backbone + provincial) and IP 专网 (MPLS VPN)'
+  unit: '1'
   kind: fact
   conditions:
     year: 2013
   source_id: ieee8023_2013_china_sp_400gbe
   locator: Slide 'China Mobile IP Network Architecture'
-  quote: "CMNet(China Mobile Internet): Internet service with 2-level structure, including national IP backbone and provincial network.  IP Dedicated Network: Internal service"
+  quote: 'CMNet(China Mobile Internet): Internet service with 2-level structure, including national IP backbone and provincial
+    network.  IP Dedicated Network: Internal service'
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: 2013 snapshot. China Mobile later describes a G-SRv6 云专网 (cloud private network) as its new-generation IP backbone; not quantified here.
+  notes: 2013 snapshot. China Mobile later describes a G-SRv6 云专网 (cloud private network) as its new-generation IP backbone;
+    not quantified here.
+  verified: match
 - id: ch09.op.cmcc_interprovincial_bw_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Mobile inter-provincial backbone transport network carried service bandwidth at end-2025
   value: 1098
-  unit: "Tb/s"
+  unit: Tb/s
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: cmcc_ar_2025_a
   locator: Section on 资本开支 / 网络能力品质不断提升 paragraph
-  quote: "省际骨干传送网承载业务带宽达到 1,098Tbps"
+  quote: 省际骨干传送网承载业务带宽达到 1,098Tbps
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'inter-provincial backbone transport network carried service bandwidth reached 1,098 Tbps'. Same sentence gives cable length 3,691万皮长公里.
+  notes: Gloss 'inter-provincial backbone transport network carried service bandwidth reached 1,098 Tbps'. Same sentence gives
+    cable length 3,691万皮长公里.
+  verified: match
 - id: ch09.op.cmcc_cable_sheath_km_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Mobile optical cable length (sheath km) at end-2025
   value: 3.691e7
-  unit: "km (sheath)"
+  unit: km (sheath)
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     metric: 皮长公里 (route/sheath length, not fibre-km)
   source_id: cmcc_ar_2025_a
   locator: 网络能力品质不断提升 paragraph
-  quote: "光缆长度达 3,691 万皮长公里"
+  quote: 光缆长度达 3,691 万皮长公里
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: 3,691万 = 36.91 million sheath-km. Compare national total 7499万 km (MIIT 2025), which is cable-line length across all operators.
+  notes: 3,691万 = 36.91 million sheath-km. Compare national total 7499万 km (MIIT 2025), which is cable-line length across
+    all operators.
+  verified: match
 - id: ch09.op.cmcc_ownership_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Mobile Communications Group (state-owned) holds about 68.80% of China Mobile Ltd shares at 2025-12-31
-  value: 68.80
-  unit: "%"
+  value: 68.8
+  unit: '%'
   kind: fact
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: cmcc_ar_2025_a
   locator: 公司基本情况 / 股东 section
-  quote: "该公司直接和间接持有本公司约 68.80%的已发行总股数"
+  quote: 该公司直接和间接持有本公司约 68.80%的已发行总股数
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'that company (China Mobile Communications Group) directly and indirectly holds about 68.80% of issued shares'. Ownership-model input for 9.6.
+  notes: Gloss 'that company (China Mobile Communications Group) directly and indirectly holds about 68.80% of issued shares'.
+    Ownership-model input for 9.6.
+  verified: match
 - id: ch09.op.ct_ownership_2025
-  section: "9.1"
-  claim: China Telecommunications Corporation (国有法人) holds 63.90% of China Telecom Corp. Ltd A+H shares (top-10 shareholder table)
-  value: 63.90
-  unit: "%"
+  section: '9.1'
+  claim: China Telecommunications Corporation (国有法人) holds 63.90% of China Telecom Corp. Ltd A+H shares (top-10 shareholder
+    table)
+  value: 63.9
+  unit: '%'
   kind: fact
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: ct_ar_2025_a
   locator: Section 股份变动及股东情况, 前十名股东持股情况 table
-  quote: "中国电信集团 有限公司 - 58,476,519,174 63.90 无 - - 国有 法人"
+  quote: 中国电信集团 有限公司 - 58,476,519,174 63.90 无 - - 国有 法人
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Additional provincial state-owned holders (广晟 5.24%, 浙江财开 2.34%, etc.) are also 国有法人.
+  verified: match
 - id: ch09.op.ct_users_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Telecom fixed broadband users and gigabit penetration, end-2025
   value: 2.01e8
-  unit: "subscribers"
+  unit: subscribers
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     gigabit_penetration_pct: 31.6
   source_id: ct_ar_2025_a
   locator: 经营情况讨论与分析, 双轮驱动 paragraph
-  quote: "宽带用户达到 2.01 亿户，千兆用户渗透率达到 31.6%"
+  quote: 宽带用户达到 2.01 亿户，千兆用户渗透率达到 31.6%
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Gloss 'broadband users reached 201 million; gigabit penetration 31.6%'.
+  verified: match
 - id: ch09.op.cmcc_gigabit_users_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Mobile gigabit broadband customers end-2025 (2024 value 99 million)
   value: 1.09e8
-  unit: "subscribers"
+  unit: subscribers
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: cmcc_ar_2025_a
   locator: 主要运营数据 table, row 千兆宽带客户数（百万户）
-  quote: "千兆宽带客户数（百万户） | 109 | 99 | 9.8%"
+  quote: 千兆宽带客户数（百万户） | 109 | 99 | 9.8%
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Table row. Total 宽带联网 customers 3.29亿 (includes enterprise lines).
+  verified: match
 - id: ch09.op.cu_169_vs_9929
-  section: "9.1"
-  claim: China Unicom backbone Internet network AS4837 (China169) vs premium bearer network AS9929 (A网), described as light-loaded with better performance
-  value: "AS4837 backbone internet; AS9929 premium bearer (light-loaded)"
-  unit: "1"
+  section: '9.1'
+  claim: China Unicom backbone Internet network AS4837 (China169) vs premium bearer network AS9929 (A网), described as light-loaded
+    with better performance
+  value: AS4837 backbone internet; AS9929 premium bearer (light-loaded)
+  unit: '1'
   kind: fact
   conditions:
     note: China Unicom Global DIA product page
   source_id: cuglobal_dia_page
   locator: DIA product description, paragraph 3
-  quote: "we can also utilize our premium bearer network(AS9929) provides this service, which is light-loaded and has much better performance."
+  quote: we can also utilize our premium bearer network(AS9929) provides this service, which is light-loaded and has much
+    better performance.
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Same page states 'China Unicom backbone internet network(AS4837) has over 400 PoPs' and 'Over 270T global Backbone Bandwidth'. The Chinese label 'A网' / 'CUII' is not on this page; it appears in tier-C sources only (see gaps).
+  notes: Same page states 'China Unicom backbone internet network(AS4837) has over 400 PoPs' and 'Over 270T global Backbone
+    Bandwidth'. The Chinese label 'A网' / 'CUII' is not on this page; it appears in tier-C sources only (see gaps).
+  verified: match
 - id: ch09.op.cu_backbone_270t
-  section: "9.1"
+  section: '9.1'
   claim: China Unicom advertised global backbone bandwidth
   value: 270
-  unit: "Tb/s (lower bound)"
+  unit: Tb/s (lower bound)
   kind: fact
   conditions:
     note: marketing page, undated
   source_id: cuglobal_dia_page
   locator: Network Capability list
-  quote: "Over 270T global Backbone Bandwidth"
+  quote: Over 270T global Backbone Bandwidth
   retrieved: 2026-11-02
   tier: B
   confidence: med
   notes: Definition of 'backbone bandwidth' (sum of link capacities?) not given.
+  verified: match
 - id: ch09.op.cu_new_88_cable_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Unicom 新“八纵八横” backbone cable network added more than 9000 km of lit route in 2025
   value: 9000
-  unit: "km (lower bound, added in 2025)"
+  unit: km (lower bound, added in 2025)
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
   source_id: cu_ar_2025_a
   locator: 报告期内公司从事的业务情况, 网络连接能力 item 5
-  quote: "新“八纵八横”骨干光缆网新增通光超 9000 公里，400G 骨干传输网络覆盖持续加强"
+  quote: 新“八纵八横”骨干光缆网新增通光超 9000 公里，400G 骨干传输网络覆盖持续加强
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'the new eight-vertical eight-horizontal backbone cable network added over 9000 km of lit cable; 400G backbone coverage strengthened'.
+  notes: Gloss 'the new eight-vertical eight-horizontal backbone cable network added over 9000 km of lit cable; 400G backbone
+    coverage strengthened'.
+  verified: match
 - id: ch09.op.cu_new_88_total_198k
-  section: "9.1"
-  claim: China Unicom 新八纵八横 backbone cable network service capability reached 198,000 km; double-plane heterogeneous 400G ROADM system built around national hubs
+  section: '9.1'
+  claim: China Unicom 新八纵八横 backbone cable network service capability reached 198,000 km; double-plane heterogeneous 400G
+    ROADM system built around national hubs
   value: 1.98e5
-  unit: "km"
+  unit: km
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
   source_id: cu_esg_2025
-  locator: 'Section 强化 AINet 建设 (table cell, text partly scrambled in extraction)'
-  quote: "骨干光缆网通信服务能力已达 19.8 万公里"
+  locator: Section 强化 AINet 建设 (table cell, text partly scrambled in extraction)
+  quote: 骨干光缆网通信服务能力已达 19.8 万公里
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: Extraction interleaved table cells; value and wording appear in the same cell. Also states '已建成双平面异构的 400G ROADM 系统'. Verify against PDF layout.
+  notes: Extraction interleaved table cells; value and wording appear in the same cell. Also states '已建成双平面异构的 400G ROADM
+    系统'. Verify against PDF layout.
+  verified: match
 - id: ch09.op.cu_10gpon_share_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Unicom 10G PON share of PON ports (2025)
   value: 86
-  unit: "%"
+  unit: '%'
   kind: measured
   conditions:
-    date: "2025"
-    ports_total: "宽带端口超2.8亿个"
+    date: '2025'
+    ports_total: 宽带端口超2.8亿个
   source_id: cu_ar_2025_a
   locator: 网络连接能力 item 2
-  quote: "宽带端口超 2.8 亿个，总体城市住宅覆盖率超 96%，10GPON 占比提升 4.5pp 达 86%"
+  quote: 宽带端口超 2.8 亿个，总体城市住宅覆盖率超 96%，10GPON 占比提升 4.5pp 达 86%
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: 'DISAGREEMENT inside the same report: section 核心竞争力 says ''10G PON 端口占比达 85%''. Record 86% (business section) and note 85%.'
+  notes: 'DISAGREEMENT inside the same report: section 核心竞争力 says ''10G PON 端口占比达 85%''. Record 86% (business section) and
+    note 85%.'
+  verified: match
 - id: ch09.op.cu_intl_interconnect_6p7t
-  section: "9.5"
-  claim: China Unicom international interconnection total bandwidth over 6.7 Tb/s with 180+ international networks; submarine cable resources 246 T
+  section: '9.5'
+  claim: China Unicom international interconnection total bandwidth over 6.7 Tb/s with 180+ international networks; submarine
+    cable resources 246 T
   value: 6.7
-  unit: "Tb/s (lower bound)"
+  unit: Tb/s (lower bound)
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
     submarine_capacity_T: 246
   source_id: cu_esg_2025
   locator: Section 强化国际网络能力
-  quote: "与国际超过 180 张互联网进行互联，国际互联总带宽超 6.7Tbps"
+  quote: 与国际超过 180 张互联网进行互联，国际互联总带宽超 6.7Tbps
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: 'Gloss ''interconnects with more than 180 international networks; total international interconnection bandwidth exceeds 6.7 Tbps''. Same section: ''海缆资源能力达到 246T''.'
+  notes: 'Gloss ''interconnects with more than 180 international networks; total international interconnection bandwidth exceeds
+    6.7 Tbps''. Same section: ''海缆资源能力达到 246T''.'
+  verified: match
 - id: ch09.op.cbn_5g_launch_2022
-  section: "9.1"
-  claim: China Broadnet (中国广电, China Radio and Television Network Group) launched 5G network service on 2022-06-27; licensed for 5G in June 2019; co-builds with China Mobile
-  value: "2022-06-27"
-  unit: "date"
+  section: '9.1'
+  claim: China Broadnet (中国广电, China Radio and Television Network Group) launched 5G network service on 2022-06-27; licensed
+    for 5G in June 2019; co-builds with China Mobile
+  value: '2022-06-27'
+  unit: date
   kind: fact
   conditions:
-    licence: "5G commercial licence, 2019-06"
+    licence: 5G commercial licence, 2019-06
   source_id: people_2022_06_cbn_5g_launch
   locator: Paragraphs 1 and 3
-  quote: "自2019年6月获颁5G商用牌照以来，中国广播电视网络集团有限公司按照中宣部、工信部、广电总局部署，与中国移动一并秉承共建、共享、共赢原则"
+  quote: 自2019年6月获颁5G商用牌照以来，中国广播电视网络集团有限公司按照中宣部、工信部、广电总局部署，与中国移动一并秉承共建、共享、共赢原则
   retrieved: 2026-11-02
   tier: C
   confidence: med
-  notes: Xinhua wire (tier C). Gloss 'Since receiving a 5G commercial licence in June 2019, China Broadnet ... with China Mobile, follows co-build and co-share principles.' No tier A/B source for the date found beyond NRTA 2022-07-01 news that also gives 6月27日.
+  notes: Xinhua wire (tier C). Gloss 'Since receiving a 5G commercial licence in June 2019, China Broadnet ... with China
+    Mobile, follows co-build and co-share principles.' No tier A/B source for the date found beyond NRTA 2022-07-01 news that
+    also gives 6月27日.
+  verified: match
 - id: ch09.op.cbn_700mhz_network
-  section: "9.1"
-  claim: China Mobile and China Broadnet jointly built a nationwide 5G 700 MHz network (co-build/co-share agreement in force since ~2020)
+  section: '9.1'
+  claim: China Mobile and China Broadnet jointly built a nationwide 5G 700 MHz network (co-build/co-share agreement in force
+    since ~2020)
   value: 700
-  unit: "MHz (band)"
+  unit: MHz (band)
   kind: fact
   conditions:
-    date: "2024-08-22 meeting"
+    date: 2024-08-22 meeting
   source_id: nrta_2024_08_cmcc_cbn_cooperation
   locator: Paragraph quoting 杨杰
-  quote: "建成了覆盖全国、技术先进、品质优良的5G 700MHz精品网络"
+  quote: 建成了覆盖全国、技术先进、品质优良的5G 700MHz精品网络
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'built a nationwide, technically advanced, high-quality 5G 700MHz network'. '四年来' implies cooperation from 2020.
+  notes: Gloss 'built a nationwide, technically advanced, high-quality 5G 700MHz network'. '四年来' implies cooperation from
+    2020.
+  verified: match
 - id: ch09.op.cbn_5g_users_2025
-  section: "9.1"
+  section: '9.1'
   claim: China Broadnet 5G users at end-2025 (nearly 42 million); 2024 value 32.7546 million
   value: 4.2e7
-  unit: "subscribers (approx., upper bound)"
+  unit: subscribers (approx., upper bound)
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: nrta_2025_tjgb
   locator: Section on 用户, paragraph 2
-  quote: "交互式网络电视（IPTV） 用户超过4亿户，互联网电视（OTT）平均月度活跃用户数 2.85亿户。广电5G用户近4200万户。"
+  quote: 交互式网络电视（IPTV） 用户超过4亿户，互联网电视（OTT）平均月度活跃用户数 2.85亿户。广电5G用户近4200万户。
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: '''近4200万'' = nearly 42 million. Same bulletin: 全国有线电视实际用户2.07亿户 and 完成全国有线电视“一省一网”整合. Compare MIIT 2025 mobile users 18.27亿 (MIIT includes CBN 5G in totals since Feb 2024).'
+  notes: '''近4200万'' = nearly 42 million. Same bulletin: 全国有线电视实际用户2.07亿户 and 完成全国有线电视“一省一网”整合. Compare MIIT 2025 mobile users
+    18.27亿 (MIIT includes CBN 5G in totals since Feb 2024).'
+  verified: match
 - id: ch09.op.cbn_in_miit_totals
-  section: "9.1"
+  section: '9.1'
   claim: From February 2024 MIIT includes China Broadnet data in 5G user and mobile user totals
-  value: "2024-02"
-  unit: "date"
+  value: 2024-02
+  unit: date
   kind: fact
   conditions: {}
   source_id: miit_txy_tjgb_2024
   locator: 注释 3
-  quote: "自2024年2月起，5G移动电话用户、5G移动互联网用户、5G移动互联网用户接入流量三项指标将中国广播电视网络集团有限公司数据纳入行业汇总数据"
+  quote: 自2024年2月起，5G移动电话用户、5G移动互联网用户、5G移动互联网用户接入流量三项指标将中国广播电视网络集团有限公司数据纳入行业汇总数据
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gloss 'From Feb 2024, three 5G indicators include China Broadnet data in industry totals.' Fixed broadband totals still cover only CT, CM, CU.
+  notes: Gloss 'From Feb 2024, three 5G indicators include China Broadnet data in industry totals.' Fixed broadband totals
+    still cover only CT, CM, CU.
+  verified: match
 - id: ch09.op.national_fixed_bb_users_2025
-  section: "9.1"
+  section: '9.1'
   claim: Fixed broadband subscribers of the three basic telcos, end-2025
   value: 6.91e8
-  unit: "subscribers"
+  unit: subscribers
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     scope: China Telecom, China Mobile, China Unicom
   source_id: miit_txy_tjgb_2025
   locator: Section 二(二) 固定宽带接入用户持续增加
-  quote: "三家基础电信企业的固定互联网宽带接入用户总数达6.91亿户，全年净增2099万户"
+  quote: 三家基础电信企业的固定互联网宽带接入用户总数达6.91亿户，全年净增2099万户
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: 2025 data are preliminary (注释1).
-# =====================================================================
-# 9.2 东数西算 and the national computing network
-# =====================================================================
+  verified: match
 - id: ch09.dsxs.eight_hubs
-  section: "9.2"
+  section: '9.2'
   claim: National computing-network hub nodes (国家枢纽节点) are planned in eight regions
   value: 8
-  unit: "hub nodes"
+  unit: hub nodes
   kind: fact
   conditions:
     hubs: 京津冀, 长三角, 粤港澳大湾区, 成渝, 贵州, 内蒙古, 甘肃, 宁夏
   source_id: ndrc_2021_709_hub_plan
   locator: 一(三) 发展思路
-  quote: "在京津冀、长三角、粤港澳大湾区、成渝，以及贵州、内蒙古、甘肃、宁夏等地布局建设全国一体化算力网络国家枢纽节点"
+  quote: 在京津冀、长三角、粤港澳大湾区、成渝，以及贵州、内蒙古、甘肃、宁夏等地布局建设全国一体化算力网络国家枢纽节点
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gloss 'build national hub nodes of the integrated national computing network in Beijing-Tianjin-Hebei, Yangtze River Delta, Greater Bay Area, Chengdu-Chongqing, Guizhou, Inner Mongolia, Gansu, Ningxia'.
+  notes: Gloss 'build national hub nodes of the integrated national computing network in Beijing-Tianjin-Hebei, Yangtze River
+    Delta, Greater Bay Area, Chengdu-Chongqing, Guizhou, Inner Mongolia, Gansu, Ningxia'.
+  verified: match
 - id: ch09.dsxs.ten_clusters
-  section: "9.2"
+  section: '9.2'
   claim: Ten national data-center clusters within the eight hubs (4 announced Jan 2022, 6 in Feb 2022)
   value: 10
-  unit: "clusters"
+  unit: clusters
   kind: fact
   conditions:
     clusters: 张家口 (京津冀); 长三角生态绿色一体化发展示范区, 芜湖 (长三角); 韶关 (粤港澳); 天府, 重庆 (成渝); 贵安 (贵州); 和林格尔 (内蒙古); 庆阳 (甘肃); 中卫 (宁夏)
   source_id: ndrc_2022_dsxs_interview
   locator: Paragraph 3 (cluster list)
-  quote: "这 10个集群具有明确的地理范围边界，提供充分的政策保障和设施配套"
+  quote: 这 10个集群具有明确的地理范围边界，提供充分的政策保障和设施配套
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: The paragraph lists 和林格尔, 贵安, 庆阳, 中卫 (announced Jan 2022) and 张家口, 长三角示范区, 芜湖, 韶关, 天府, 重庆 (Feb 2022). Gloss 'these 10 clusters have clear geographic boundaries'.
+  notes: The paragraph lists 和林格尔, 贵安, 庆阳, 中卫 (announced Jan 2022) and 张家口, 长三角示范区, 芜湖, 韶关, 天府, 重庆 (Feb 2022). Gloss 'these
+    10 clusters have clear geographic boundaries'.
+  verified: match
 - id: ch09.dsxs.cluster_latency_20ms
-  section: "9.2"
+  section: '9.2'
   claim: Data-center clusters serving real-time interactive services target end-to-end one-way network latency within 20 ms
   value: 20
-  unit: "ms (one-way)"
+  unit: ms (one-way)
   kind: spec_max
   conditions:
     scope: 数据中心集群, 端到端单向网络时延, '原则上' (in principle)
   source_id: ndrc_2021_709_hub_plan
   locator: 三(一) 数据中心集群
-  quote: "数据中心端到端单向网络时延原则上在 20 毫秒范围内"
+  quote: 数据中心端到端单向网络时延原则上在 20 毫秒范围内
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: ONE-WAY latency. Gloss 'data-center end-to-end one-way network latency in principle within 20 ms'. Western hubs (贵州, 内蒙古, 甘肃, 宁夏) prioritise non-real-time loads.
+  notes: ONE-WAY latency. Gloss 'data-center end-to-end one-way network latency in principle within 20 ms'. Western hubs (贵州,
+    内蒙古, 甘肃, 宁夏) prioritise non-real-time loads.
+  verified: match
 - id: ch09.dsxs.edge_latency_10ms
-  section: "9.2"
+  section: '9.2'
   claim: Urban (edge) data centers target end-to-end one-way latency within 10 ms
   value: 10
-  unit: "ms (one-way)"
+  unit: ms (one-way)
   kind: spec_max
   conditions:
     scope: 城市内部数据中心 (edge)
   source_id: ndrc_2021_709_hub_plan
   locator: 三(二) 城市内部数据中心
-  quote: "数据中心端到端单向网络时延原则上在 10 毫秒范围内"
+  quote: 数据中心端到端单向网络时延原则上在 10 毫秒范围内
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Gloss as above with 10 ms.
+  verified: match
 - id: ch09.dsxs.clusters_per_hub
-  section: "9.2"
+  section: '9.2'
   claim: Initial phase cluster limits, at most 2 per cross-regional hub and 1 per single-province hub
-  value: [1, 2]
-  unit: "clusters per hub"
+  value:
+  - 1
+  - 2
+  unit: clusters per hub
   kind: spec_max
   conditions: {}
   source_id: ndrc_2021_709_hub_plan
   locator: 三(一), paragraph 2
-  quote: "对于京津冀、长三角、粤港澳大湾区、成渝等跨区域的国家枢纽节点，原则上布局不超过 2 个集群"
+  quote: 对于京津冀、长三角、粤港澳大湾区、成渝等跨区域的国家枢纽节点，原则上布局不超过 2 个集群
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Single-province hubs (贵州, 内蒙古, 甘肃, 宁夏) 原则上布局 1 个集群.
+  verified: match
 - id: ch09.dsxs.zjk_rack_utilisation_65
-  section: "9.2"
+  section: '9.2'
   claim: Zhangjiakou cluster start-up target, average rack utilisation at least 65%
   value: 65
-  unit: "%"
+  unit: '%'
   kind: spec_min
   conditions:
     cluster: 张家口
   source_id: ndrc_2022_212_jjj_reply
   locator: Item 五
-  quote: "数据中心平均上架率不低于65%。数据中心电能利用效率指标控制在1.25以内"
+  quote: 数据中心平均上架率不低于65%。数据中心电能利用效率指标控制在1.25以内
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Same constraints (65%, PUE 1.25) appear in the 长三角 reply; NDRC Q&A says all clusters 'at least 65%'.
+  verified: match
 - id: ch09.dsxs.zjk_pue_1p25
-  section: "9.2"
+  section: '9.2'
   claim: Zhangjiakou cluster start-up target, PUE at most 1.25
   value: 1.25
-  unit: "1"
+  unit: '1'
   kind: spec_max
   conditions:
     cluster: 张家口
   source_id: ndrc_2022_212_jjj_reply
   locator: Item 五
-  quote: "数据中心电能利用效率指标控制在1.25以内"
+  quote: 数据中心电能利用效率指标控制在1.25以内
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Gloss 'PUE controlled within 1.25'.
+  verified: match
 - id: ch09.dsxs.east_west_rationale
-  section: "9.2"
-  claim: NDRC rationale, latency from long-distance transmission means western DCs cannot serve all demand; latency-tolerant work (backend, offline analysis, backup) moves west first
-  value: "后台加工、离线分析、存储备份 move west; latency-critical stays in eastern hubs"
-  unit: "1"
+  section: '9.2'
+  claim: NDRC rationale, latency from long-distance transmission means western DCs cannot serve all demand; latency-tolerant
+    work (backend, offline analysis, backup) moves west first
+  value: 后台加工、离线分析、存储备份 move west; latency-critical stays in eastern hubs
+  unit: '1'
   kind: fact
   conditions: {}
   source_id: ndrc_2022_dsxs_qa
   locator: Answer (二)
-  quote: "受限于网络长距离传输造成的时延，以及相关配套设施等因素影响，西部数据中心并不能满足所有算力需求"
+  quote: 受限于网络长距离传输造成的时延，以及相关配套设施等因素影响，西部数据中心并不能满足所有算力需求
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'Limited by latency from long-distance transmission and supporting facilities, western data centers cannot meet all computing demand.' Physical basis for the 9.2 worked example.
+  notes: Gloss 'Limited by latency from long-distance transmission and supporting facilities, western data centers cannot
+    meet all computing demand.' Physical basis for the 9.2 worked example.
+  verified: match
 - id: ch09.dsxs.latency_circles_1_5_20
-  section: "9.2"
-  claim: 2025 target, 1 ms city, 5 ms regional and 20 ms cross-hub computing networks initially realised in demonstration areas
-  value: [1, 5, 20]
-  unit: "ms"
+  section: '9.2'
+  claim: 2025 target, 1 ms city, 5 ms regional and 20 ms cross-hub computing networks initially realised in demonstration
+    areas
+  value:
+  - 1
+  - 5
+  - 20
+  unit: ms
   kind: spec_max
   conditions:
     target_date: end of 2025
     note: one-way vs round-trip not specified in this document
   source_id: ndrc_2023_1779_opinions
   locator: 一(三) 建设目标
-  quote: "1ms时延城市算力网、5ms时延区域算力网、20ms时延跨国家枢纽节点算力网在示范区域内初步实现"
+  quote: 1ms时延城市算力网、5ms时延区域算力网、20ms时延跨国家枢纽节点算力网在示范区域内初步实现
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gloss '1 ms city network, 5 ms regional network, 20 ms cross-hub network initially realised in demonstration areas'. Latency definition (one-way/RTT) not stated; 709号 uses one-way.
+  notes: Gloss '1 ms city network, 5 ms regional network, 20 ms cross-hub network initially realised in demonstration areas'.
+    Latency definition (one-way/RTT) not stated; 709号 uses one-way.
+  verified: match
 - id: ch09.dsxs.hub_share_new_compute_60
-  section: "9.2"
-  claim: 2025 target, hub regions account for at least 60% of national newly added compute; new DC green-power share in hubs above 80%
+  section: '9.2'
+  claim: 2025 target, hub regions account for at least 60% of national newly added compute; new DC green-power share in hubs
+    above 80%
   value: 60
-  unit: "%"
+  unit: '%'
   kind: spec_min
   conditions:
     target_date: end of 2025
     green_power_share_pct_min: 80
   source_id: ndrc_2023_1779_opinions
   locator: 一(三) 建设目标
-  quote: "国家枢纽节点地区各类新增算力占全国新增算力的60%以上"
+  quote: 国家枢纽节点地区各类新增算力占全国新增算力的60%以上
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: 'Same paragraph: ''国家枢纽节点新建数据中心绿电占比超过80%''. Also mandates no new large DCs outside hubs.'
+  verified: match
 - id: ch09.dsxs.tech_list_400g800g
-  section: "9.2"
-  claim: Implementation opinions name SRv6, lossless networking, 400G/800G and all-optical networks as technologies to deploy for compute transport
-  value: "SRv6, 智能无损网络, 400G/800G, 全光网络"
-  unit: "1"
+  section: '9.2'
+  claim: Implementation opinions name SRv6, lossless networking, 400G/800G and all-optical networks as technologies to deploy
+    for compute transport
+  value: SRv6, 智能无损网络, 400G/800G, 全光网络
+  unit: '1'
   kind: fact
   conditions: {}
   source_id: ndrc_2023_1779_opinions
   locator: 三(七) 提升算力网络传输效能
-  quote: "SRv6、智能无损网络、400G/800G、全闪存储、全光网络等先进技术部署应用"
+  quote: SRv6、智能无损网络、400G/800G、全闪存储、全光网络等先进技术部署应用
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gloss 'deploy advanced technologies such as SRv6, intelligent lossless networks, 400G/800G, all-flash storage, all-optical networks'.
+  notes: Gloss 'deploy advanced technologies such as SRv6, intelligent lossless networks, 400G/800G, all-flash storage, all-optical
+    networks'.
+  verified: match
 - id: ch09.dsxs.compute_target_300eflops
-  section: "9.2"
+  section: '9.2'
   claim: MIIT 2025 target, total compute above 300 EFLOPS with intelligent compute 35%
   value: 300
-  unit: "EFLOPS"
+  unit: EFLOPS
   kind: spec_min
   conditions:
     target_date: 2025
     intelligent_share_pct: 35
   source_id: miit_2023_180_compute_plan
   locator: 一(三) 主要目标, 计算力
-  quote: "到 2025年，计算力方面，算力规模超过 300EFLOPS，智能算力占比达到35%"
+  quote: 到 2025年，计算力方面，算力规模超过 300EFLOPS，智能算力占比达到35%
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Precision (FP32/FP16) not specified in target.
+  verified: match
 - id: ch09.dsxs.latency_1p5x_theory
-  section: "9.2"
-  claim: MIIT 2025 target, direct links between hub DC clusters with latency no more than 1.5 times theoretical latency; OTN coverage of key sites 80%; SRv6 share 40%
+  section: '9.2'
+  claim: MIIT 2025 target, direct links between hub DC clusters with latency no more than 1.5 times theoretical latency; OTN
+    coverage of key sites 80%; SRv6 share 40%
   value: 1.5
-  unit: "x theoretical latency"
+  unit: x theoretical latency
   kind: spec_max
   conditions:
     target_date: 2025
@@ -611,235 +697,273 @@ records:
     srv6_share_pct: 40
   source_id: miit_2023_180_compute_plan
   locator: 一(三) 主要目标, 运载力
-  quote: "国家枢纽节点数据中心集群间基本实现不高于理论时延 1.5倍的直连网络传输"
+  quote: 国家枢纽节点数据中心集群间基本实现不高于理论时延 1.5倍的直连网络传输
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: '''理论时延'' (theoretical latency) is not defined in the document; presumably straight-line or shortest-route fibre propagation. See ch09_equations. Gloss ''direct-link transmission between hub DC clusters not exceeding 1.5x theoretical latency''.'
+  notes: '''理论时延'' (theoretical latency) is not defined in the document; presumably straight-line or shortest-route fibre
+    propagation. See ch09_equations. Gloss ''direct-link transmission between hub DC clusters not exceeding 1.5x theoretical
+    latency''.'
+  verified: match
 - id: ch09.dsxs.urban_1ms_hub_5ms
-  section: "9.2"
-  claim: MIIT plan, latency between important compute facilities no more than 1 ms within a city and no more than 5 ms within a hub node; promote ultra-low-loss fibre and 400G/800G
-  value: [1, 5]
-  unit: "ms"
+  section: '9.2'
+  claim: MIIT plan, latency between important compute facilities no more than 1 ms within a city and no more than 5 ms within
+    a hub node; promote ultra-low-loss fibre and 400G/800G
+  value:
+  - 1
+  - 5
+  unit: ms
   kind: spec_max
   conditions: {}
   source_id: miit_2023_180_compute_plan
   locator: 二, 提升算力高效运载能力 items 2-3
-  quote: "国家枢纽节点内重要算力基础设施间时延不高于 5ms。推动超低损光纤部署，优化光缆路由"
+  quote: 国家枢纽节点内重要算力基础设施间时延不高于 5ms。推动超低损光纤部署，优化光缆路由
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Item 2 says '城区重要算力基础设施间时延不高于 1ms'. Item 3 also names 400G/800G, 全光交叉, SRv6, FlexE, OSU.
+  verified: match
 - id: ch09.dsxs.interconnect_plan_2028
-  section: "9.2"
-  claim: 算力互联网 (compute internet) target, by 2028 basically standardised interconnection of national public compute; by 2026 complete standards/identifier system
+  section: '9.2'
+  claim: 算力互联网 (compute internet) target, by 2028 basically standardised interconnection of national public compute; by 2026
+    complete standards/identifier system
   value: 2028
-  unit: "year"
+  unit: year
   kind: fact
   conditions: {}
   source_id: miit_2025_119_interconnect_plan
   locator: 一, 总体要求
-  quote: "到2028 年，基本实现全国公共算力标准化互联，逐步形成具备智能感知、实时发现、随需获取的算力互联网"
+  quote: 到2028 年，基本实现全国公共算力标准化互联，逐步形成具备智能感知、实时发现、随需获取的算力互联网
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gloss 'by 2028, basically achieve standardised interconnection of national public compute, gradually forming a compute internet with intelligent sensing, real-time discovery and on-demand access'.
+  notes: Gloss 'by 2028, basically achieve standardised interconnection of national public compute, gradually forming a compute
+    internet with intelligent sensing, real-time discovery and on-demand access'.
+  verified: match
 - id: ch09.dsxs.racks_2025_06
-  section: "9.2"
+  section: '9.2'
   claim: In-use compute-center racks, end of June 2025 (MIIT); intelligent compute 788 EFLOPS FP16
   value: 1.085e7
-  unit: "standard racks"
+  unit: standard racks
   kind: measured
   conditions:
-    date: "2025-06-30"
+    date: '2025-06-30'
     intelligent_compute_EFLOPS_FP16: 788
   source_id: news_cn_2025_08_compute_conf
   locator: Section 政策引领夯实算力发展根基
-  quote: "截至2025年6月底，我国在用算力中心标准机架达1085万架，智能算力规模达788EFLOPS，干线400G端口数量大幅增加至14060个"
+  quote: 截至2025年6月底，我国在用算力中心标准机架达1085万架，智能算力规模达788EFLOPS，干线400G端口数量大幅增加至14060个
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C (Xinhua report of MIIT figures at 2025 China Computing Power Conference). Use only in a provenance/contested box. Precision FP16 stated by other reports (ODCC, People's Daily). Contains the trunk 400G port count 14060.
+  notes: Tier C (Xinhua report of MIIT figures at 2025 China Computing Power Conference). Use only in a provenance/contested
+    box. Precision FP16 stated by other reports (ODCC, People's Daily). Contains the trunk 400G port count 14060.
+  verified: match
 - id: ch09.dsxs.trunk_400g_ports_2025_06
-  section: "9.2"
+  section: '9.2'
   claim: Trunk (干线) 400G port count, end of June 2025
   value: 14060
-  unit: "ports"
+  unit: ports
   kind: measured
   conditions:
-    date: "2025-06-30"
+    date: '2025-06-30'
   source_id: news_cn_2025_08_compute_conf
   locator: Section 政策引领夯实算力发展根基
-  quote: "干线400G端口数量大幅增加至14060个"
+  quote: 干线400G端口数量大幅增加至14060个
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C; no MIIT primary table found. Compare China Mobile 400G tender (11190 ports, 2023) and award story (11000+ ports deployed).
+  notes: Tier C; no MIIT primary table found. Compare China Mobile 400G tender (11190 ports, 2023) and award story (11000+
+    ports deployed).
+  verified: match
 - id: ch09.dsxs.compute_2025_09_1053
-  section: "9.2"
-  claim: Intelligent compute 1053 EFLOPS (FP16) and 12.5 million standard racks in use at September 2025; 234 trunk cables planned around 8 hubs forming three latency circles
+  section: '9.2'
+  claim: Intelligent compute 1053 EFLOPS (FP16) and 12.5 million standard racks in use at September 2025; 234 trunk cables
+    planned around 8 hubs forming three latency circles
   value: 1053
-  unit: "EFLOPS (FP16)"
+  unit: EFLOPS (FP16)
   kind: measured
   conditions:
-    date: "2025-09"
+    date: 2025-09
     racks: 1.25e7
     trunk_cables: 234
   source_id: digitalchina_2025_12_compute
   locator: Paragraph 2
-  quote: "截至2025年9月，我国在用算力中心机架总规模达1250万标准机架，智能算力规模达1053EFLOPS（FP16半精度）"
+  quote: 截至2025年9月，我国在用算力中心机架总规模达1250万标准机架，智能算力规模达1053EFLOPS（FP16半精度）
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C news on a government portal. DISAGREEMENT on trunk cable count - this source says '工信部围绕8大国家算力枢纽节点规划建设的234条干线光缆'; ncsti_2025_09_compute says '规划建设超过250条“东数西算”干线光缆'.
+  notes: 'Tier C news on a government portal. DISAGREEMENT on trunk cable count - this source says ''工信部围绕8大国家算力枢纽节点规划建设的234条干线光缆'';
+    ncsti_2025_09_compute says ''规划建设超过250条“东数西算”干线光缆''. Verifier (PARTIAL): Value OK. Fix conditions: ''234条'' dates to end-2024
+    (MIIT 信息通信发展司, 华夏时报 2025-03-11: ''规划建设234条…干线光缆，光缆长度8.5万公里''); not a Sep-2025 count. Superseded: 2592 EFLOPS at 2026-09
+    (gov.cn 2026-10-20, +146% y/y, consistent with 1053). The 234-cables figure is end-2024, not Sept 2025.'
+  verified: partial
 - id: ch09.dsxs.trunk_cables_250
-  section: "9.2"
+  section: '9.2'
   claim: More than 250 东数西算 trunk fibre cables planned/built (as of mid-2025)
   value: 250
-  unit: "trunk cables (lower bound)"
+  unit: trunk cables (lower bound)
   kind: fact
   conditions:
-    date: "2025-06"
+    date: 2025-06
   source_id: ncsti_2025_09_compute
   locator: Paragraph 1
-  quote: "运载力方面，规划建设超过250条“东数西算”干线光缆"
+  quote: 运载力方面，规划建设超过250条“东数西算”干线光缆
   retrieved: 2026-11-02
   tier: C
   confidence: low
   notes: Disagrees with 234 (digitalchina_2025_12_compute). Contested-box use only.
+  verified: match
 - id: ch09.dsxs.caict_device_compute_962
-  section: "9.2"
-  claim: CAICT device-side total compute 962 EFLOPS (FP32) at June 2025, of which intelligent 782 EFLOPS (FP32-converted, 81%), basic 175 EFLOPS
+  section: '9.2'
+  claim: CAICT device-side total compute 962 EFLOPS (FP32) at June 2025, of which intelligent 782 EFLOPS (FP32-converted,
+    81%), basic 175 EFLOPS
   value: 962
-  unit: "EFLOPS (FP32)"
+  unit: EFLOPS (FP32)
   kind: measured
   conditions:
-    date: "2025-06"
+    date: 2025-06
     basis: computing devices shipped (all servers), not in-DC infrastructure
     intelligent_EFLOPS_FP32: 782
     basic_EFLOPS_FP32: 175
   source_id: caict_compute_bluebook_2025
   locator: Section (一) 算力规模稳定增长, device-side paragraph
-  quote: "截至 2025 年 6 月，我国计算设备算力总规模达到962 EFlops（FP32）， 全球占比约为 21%，同比增速达 73%"
+  quote: 截至 2025 年 6 月，我国计算设备算力总规模达到962 EFlops（FP32）， 全球占比约为 21%，同比增速达 73%
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: 'Two measurement bases coexist - MIIT infrastructure-side 788 EFLOPS FP16 (intelligent) vs CAICT device-side 782 EFLOPS FP32-converted. Do not compare without precision/basis note. Same report: average rack utilisation near 60%, PUE 1.42.'
+  notes: 'Two measurement bases coexist - MIIT infrastructure-side 788 EFLOPS FP16 (intelligent) vs CAICT device-side 782
+    EFLOPS FP32-converted. Do not compare without precision/basis note. Same report: average rack utilisation near 60%, PUE
+    1.42.'
+  verified: match
 - id: ch09.dsxs.dc_racks_three_telcos_2025
-  section: "9.2"
+  section: '9.2'
   claim: Data-center racks offered externally by the three basic telcos, end-2025 (up 108,000)
   value: 9.38e5
-  unit: "racks"
+  unit: racks
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: miit_txy_tjgb_2025
   locator: Section 四(三) 数据中心建设协调推进
-  quote: "对外提供服务数据中心机架数量93.8万个，较上年增加10.8万个"
+  quote: 对外提供服务数据中心机架数量93.8万个，较上年增加10.8万个
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: 2024 value 83万 (miit_txy_tjgb_2024). Excludes non-telco IDCs.
+  verified: match
 - id: ch09.dsxs.schedulable_ai_compute_2025
-  section: "9.2"
+  section: '9.2'
   claim: Schedulable intelligent compute of the three telcos above 94.4 EFLOPS (FP16), end-2025 (as reported from MIIT interpretation)
   value: 94.4
-  unit: "EFLOPS (FP16, lower bound)"
+  unit: EFLOPS (FP16, lower bound)
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: ct_ar_2025_a
   locator: 行业情况 2、信息通信基础设施提档升级
-  quote: "可调度智能算力规模超 94.4EFlops（每秒万亿亿次浮点运算，FP16）"
+  quote: 可调度智能算力规模超 94.4EFlops（每秒万亿亿次浮点运算，FP16）
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: Annual report cites 工信部《2025年通信业统计公报解读》. Unit gloss in source ('每秒万亿亿次') is 1e20, inconsistent with EFLOPS = 1e18; treat the gloss as an error in the report.
+  notes: Annual report cites 工信部《2025年通信业统计公报解读》. Unit gloss in source ('每秒万亿亿次') is 1e20, inconsistent with EFLOPS = 1e18;
+    treat the gloss as an error in the report.
+  verified: match
 - id: ch09.dsxs.cmcc_ai_compute_2025
-  section: "9.2"
+  section: '9.2'
   claim: China Mobile total intelligent compute (own plus leased) end-2025
   value: 92.5
-  unit: "EFLOPS (FP16)"
+  unit: EFLOPS (FP16)
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: cmcc_ar_2025_a
   locator: 主要运营数据 table, 智算总规模
-  quote: "智算总规模 （EFLOPS，FP16） | 92.5"
+  quote: 智算总规模 （EFLOPS，FP16） | 92.5
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Includes leased capacity (footnote). 2024 report gave 29.2 EFLOPS FP16 intelligent and 8.5 EFLOPS FP32 general (cmcc_ar_2024_en).
+  verified: match
 - id: ch09.dsxs.cmcc_three_latency_circles
-  section: "9.2"
-  claim: China Mobile 'three-level compute latency circle', 1 ms metro, 5 ms provincial, 20 ms national; inter-provincial 400G OTN basically covers the country
-  value: [1, 5, 20]
-  unit: "ms"
+  section: '9.2'
+  claim: China Mobile 'three-level compute latency circle', 1 ms metro, 5 ms provincial, 20 ms national; inter-provincial
+    400G OTN basically covers the country
+  value:
+  - 1
+  - 5
+  - 20
+  unit: ms
   kind: spec_max
   conditions:
-    date: "2025"
+    date: '2025'
   source_id: cmcc_ar_2025_a
   locator: 运营能力全面升级, 算力网络加快布局
-  quote: "完善城域 1 毫秒、省域 5 毫秒、全国 20 毫秒的三级算力时延圈，省际骨干 400G OTN 网络基本覆盖全国"
+  quote: 完善城域 1 毫秒、省域 5 毫秒、全国 20 毫秒的三级算力时延圈，省际骨干 400G OTN 网络基本覆盖全国
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'improve the three-level latency circle of 1 ms metro, 5 ms provincial, 20 ms national; inter-provincial 400G OTN basically covers the whole country'. One-way vs RTT unstated.
+  notes: Gloss 'improve the three-level latency circle of 1 ms metro, 5 ms provincial, 20 ms national; inter-provincial 400G
+    OTN basically covers the whole country'. One-way vs RTT unstated.
+  verified: match
 - id: ch09.dsxs.ct_ai_compute_2025
-  section: "9.2"
-  claim: China Telecom intelligent compute, own plus connected (自有及接入), 91 EFLOPS (2025 annual report); self-owned 46 EFLOPS per results release
+  section: '9.2'
+  claim: China Telecom intelligent compute, own plus connected (自有及接入), 91 EFLOPS (2025 annual report); self-owned 46 EFLOPS
+    per results release
   value: 91
-  unit: "EFLOPS"
+  unit: EFLOPS
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
     self_owned_EFLOPS: 46
   source_id: ct_ar_2025_a
   locator: 2.1 持续深化“五位一体”智能云体系, PaaS paragraph
-  quote: "截至目前自 有及接入智算总规模达到 91EFLOPS"
+  quote: 截至目前自 有及接入智算总规模达到 91EFLOPS
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: The 46 EFLOPS self-owned figure ('自有智算能力达46EFLOPS') was read from China Telecom's 2025 results news page (chinatelecom.com.cn/ct/news/jtxw/165559.html, tier C), not recorded separately. Precision not stated. Line break inside '自有' is from PDF extraction.
+  notes: The 46 EFLOPS self-owned figure ('自有智算能力达46EFLOPS') was read from China Telecom's 2025 results news page (chinatelecom.com.cn/ct/news/jtxw/165559.html,
+    tier C), not recorded separately. Precision not stated. Line break inside '自有' is from PDF extraction.
+  verified: match
 - id: ch09.dsxs.cu_ai_compute_2025
-  section: "9.2"
+  section: '9.2'
   claim: China Unicom intelligent compute 45 EFLOPS (business section says 44.7) and 1.1 million+ standard racks, end-2025
   value: 44.7
-  unit: "EFLOPS"
+  unit: EFLOPS
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
   source_id: cu_ar_2025_a
   locator: 网络连接能力 item 3
-  quote: "AIDC 适智焕新，标准机架超 110 万架，大型园区覆盖国家八大枢纽节点"
+  quote: AIDC 适智焕新，标准机架超 110 万架，大型园区覆盖国家八大枢纽节点
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: 'Same item: ''智算规模达 44.7EFLOPS''; 算力业务 paragraph rounds to 45 EFLOPS. Precision not stated.'
-# =====================================================================
-# 9.3 400G long-haul and extended-band OTN
-# =====================================================================
+  verified: match
 - id: ch09.l400.cmcc_first_link_2024
-  section: "9.3"
-  claim: China Mobile first commercial 400G inter-provincial backbone link Beijing to Inner Mongolia, 711 km with 8 OA sites, lit 2024-02-27, announced commercial 2024-03-08
+  section: '9.3'
+  claim: China Mobile first commercial 400G inter-provincial backbone link Beijing to Inner Mongolia, 711 km with 8 OA sites,
+    lit 2024-02-27, announced commercial 2024-03-08
   value: 711
-  unit: "km"
+  unit: km
   kind: measured
   conditions:
-    date_lit: "2024-02-27"
+    date_lit: '2024-02-27'
     oa_sites: 8
   source_id: li_cww_2024_04_cmcc_400g
   locator: Final section (现网研究), last paragraph
-  quote: "在2024年2月27日贯通全球首条400G“东数西算”链路（北京—内蒙古，711km，8个OA站）"
+  quote: 在2024年2月27日贯通全球首条400G“东数西算”链路（北京—内蒙古，711km，8个OA站）
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Operator-authored article (CMRI and CMCC planning dept). Gloss 'on 27 Feb 2024 lit the world-first 400G East-Data-West-Computing link (Beijing - Inner Mongolia, 711 km, 8 OA stations)'.
+  notes: Operator-authored article (CMRI and CMCC planning dept). Gloss 'on 27 Feb 2024 lit the world-first 400G East-Data-West-Computing
+    link (Beijing - Inner Mongolia, 711 km, 8 OA stations)'.
+  verified: match
 - id: ch09.l400.cmcc_qpsk_130gbd_150ghz
-  section: "9.3"
+  section: '9.3'
   claim: China Mobile backbone 400G route, QPSK at about 130 GBd on a 150 GHz grid; 80 channels require 12 THz C6T+L6T
   value: 130
-  unit: "GBd"
+  unit: GBd
   kind: spec_typ
   conditions:
     format: DP-QPSK
@@ -848,46 +972,57 @@ records:
     band: C6T+L6T (12 THz)
   source_id: li_cww_2024_04_cmcc_400g
   locator: Section 中国产业力量主导400G骨干网技术路线, paragraph 2
-  quote: "信号波特率提升4倍至约130GBd，通道间隔为150GHz，80波400G QPSK系统需要扩展到12THz的“C6T+L6T”波段"
+  quote: 信号波特率提升4倍至约130GBd，通道间隔为150GHz，80波400G QPSK系统需要扩展到12THz的“C6T+L6T”波段
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss 'symbol rate rises 4x to about 130 GBd, channel spacing 150 GHz; an 80-wave 400G QPSK system needs the 12 THz C6T+L6T band'. 100G era for comparison - ~30 GBd, 50 GHz, C4T, 80 waves.
+  notes: Gloss 'symbol rate rises 4x to about 130 GBd, channel spacing 150 GHz; an 80-wave 400G QPSK system needs the 12 THz
+    C6T+L6T band'. 100G era for comparison - ~30 GBd, 50 GHz, C4T, 80 waves.
+  verified: match
 - id: ch09.l400.c6t_l6t_definition
-  section: "9.3"
+  section: '9.3'
   claim: C6T+L6T means 6 THz of C band plus 6 THz of L band
   value: 12
-  unit: "THz"
+  unit: THz
   kind: fact
   conditions: {}
   source_id: xinhua_2024_03_cmcc_400g
   locator: Footnote 注
-  quote: "C6T+L6T代表光信号传输时占用的频谱资源，即C波段的6THz和L波段的6THz"
+  quote: C6T+L6T代表光信号传输时占用的频谱资源，即C波段的6THz和L波段的6THz
   retrieved: 2026-11-02
   tier: C
   confidence: med
   notes: Tier C wire copy of China Mobile release; the band edges are given in tier A ch09.l400.ecoc2023_band_edges.
+  verified: match
 - id: ch09.l400.ecoc2023_band_edges
-  section: "9.3"
+  section: '9.3'
   claim: C6T band 1525 to 1572 nm and L6T band 1576 to 1626 nm in China Mobile 400G field trial
-  value: [1525, 1626]
-  unit: "nm"
+  value:
+  - 1525
+  - 1626
+  unit: nm
   kind: spec_typ
   conditions:
-    C6T_nm: [1525, 1572]
-    L6T_nm: [1576, 1626]
+    C6T_nm:
+    - 1525
+    - 1572
+    L6T_nm:
+    - 1576
+    - 1626
   source_id: zuo_ecoc_2023_2502km
   locator: Introduction, last paragraph
-  quote: "6-THz C (C6T, 1525~1572 nm) and 6-THz L (L6T, 1576~1626 nm) bands over 2502-km G.652.D fibre"
+  quote: 6-THz C (C6T, 1525~1572 nm) and 6-THz L (L6T, 1576~1626 nm) bands over 2502-km G.652.D fibre
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Full text (author PDF).
+  verified: match
 - id: ch09.l400.ecoc2023_reach_2502
-  section: "9.3"
-  claim: Field trial 80 x 400 Gb/s single-carrier 128 GBd DP-QPSK over 2502 km G.652.D (42 spans, Changsha to Gui'an loop), 32 Tb/s total
+  section: '9.3'
+  claim: Field trial 80 x 400 Gb/s single-carrier 128 GBd DP-QPSK over 2502 km G.652.D (42 spans, Changsha to Gui'an loop),
+    32 Tb/s total
   value: 2502
-  unit: "km"
+  unit: km
   kind: record
   conditions:
     symbol_rate_GBd: 128
@@ -898,32 +1033,39 @@ records:
     capacity_Tbps: 32
   source_id: zuo_ecoc_2023_2502km
   locator: Conclusions
-  quote: "we have demonstrated a total capacity of 32 Tb/s with 80×128-GBd DP-QPSK channels covering 12-THz optical bandwidth over 2502-km distance"
+  quote: we have demonstrated a total capacity of 32 Tb/s with 80×128-GBd DP-QPSK channels covering 12-THz optical bandwidth
+    over 2502-km distance
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Real-time DSP-ASIC modules (ZTE). 11 WSS sites at ROADMs. Spans 37.22 to 85 km.
+  verified: match
 - id: ch09.l400.ecoc2023_span_loss
-  section: "9.3"
-  claim: In the 2502 km field trial 57% of spans exceeded 20 dB loss, max 27.4 dB; span loss includes 0.06 dB/km engineering margin
+  section: '9.3'
+  claim: In the 2502 km field trial 57% of spans exceeded 20 dB loss, max 27.4 dB; span loss includes 0.06 dB/km engineering
+    margin
   value: 27.4
-  unit: "dB"
+  unit: dB
   kind: measured
   conditions:
     share_spans_gt_20dB_pct: 57
     margin_dB_per_km: 0.06
   source_id: zuo_ecoc_2023_2502km
   locator: System Architecture, Fig. 1(c) description
-  quote: "the losses for 57% of spans are greater than 20 dB and the maximal one is up to 27.4 dB"
+  quote: the losses for 57% of spans are greater than 20 dB and the maximal one is up to 27.4 dB
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Useful link-budget input for 9.3 worked example.
+  verified: match
 - id: ch09.l400.ecoc2023_edfa_nf
-  section: "9.3"
-  claim: C6T and L6T EDFA noise figures in the 2502 km trial, at most 4.9 dB (C) and 6.5 dB (L); average gains 25.5 and 25.9 dB
-  value: [4.9, 6.5]
-  unit: "dB"
+  section: '9.3'
+  claim: C6T and L6T EDFA noise figures in the 2502 km trial, at most 4.9 dB (C) and 6.5 dB (L); average gains 25.5 and 25.9
+    dB
+  value:
+  - 4.9
+  - 6.5
+  unit: dB
   kind: spec_max
   conditions:
     C_band_NF_max_dB: 4.9
@@ -932,32 +1074,39 @@ records:
     L_gain_dB: 25.9
   source_id: zuo_ecoc_2023_2502km
   locator: Results section, EDFA characterisation paragraph
-  quote: "while the NFs are not larger than 4.9 dB and 6.5 dB, respectively"
+  quote: while the NFs are not larger than 4.9 dB and 6.5 dB, respectively
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gain ripples 1.4 dB (C) and 2.7 dB (L). L-band NF penalty ~1.6 dB is the quantity the CMRI article wants reduced to <1 dB.
+  notes: Gain ripples 1.4 dB (C) and 2.7 dB (L). L-band NF penalty ~1.6 dB is the quantity the CMRI article wants reduced
+    to <1 dB.
+  verified: match
 - id: ch09.l400.ecoc2023_osnr_tolerance_margin
-  section: "9.3"
-  claim: After 2502 km, average OSNR tolerance 17.5 dB (C6T) and 17.7 dB (L6T); average net OSNR margin 3.0 dB (C6T) and 1.9 dB (L6T)
-  value: [1.9, 3.0]
-  unit: "dB"
+  section: '9.3'
+  claim: After 2502 km, average OSNR tolerance 17.5 dB (C6T) and 17.7 dB (L6T); average net OSNR margin 3.0 dB (C6T) and 1.9
+    dB (L6T)
+  value:
+  - 1.9
+  - 3.0
+  unit: dB
   kind: measured
   conditions:
     osnr_tolerance_C_dB: 17.5
     osnr_tolerance_L_dB: 17.7
   source_id: zuo_ecoc_2023_2502km
   locator: Results, Fig. 3(d) text
-  quote: "For C6T and L6T bands, their respective average net OSNR margins are 3.0 dB and 1.9 dB"
+  quote: For C6T and L6T bands, their respective average net OSNR margins are 3.0 dB and 1.9 dB
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: OSNR reference bandwidth presumably 0.1 nm (not restated). Optical path penalties ~1.6 dB (C) and 1.27 dB (L).
+  verified: match
 - id: ch09.l400.ofc2023_3075km
-  section: "9.3"
-  claim: 32 x 400 Gb/s single-carrier 120 GBaud DP-QPSK over 49-span 3075 km G.652.D with field-like large-loss configuration (lab)
+  section: '9.3'
+  claim: 32 x 400 Gb/s single-carrier 120 GBaud DP-QPSK over 49-span 3075 km G.652.D with field-like large-loss configuration
+    (lab)
   value: 3075
-  unit: "km"
+  unit: km
   kind: record
   conditions:
     symbol_rate_GBd: 120
@@ -965,32 +1114,35 @@ records:
     channels: 32
   source_id: zuo_ofc_2023_3075km
   locator: Abstract
-  quote: "record 32-λ×400 Gb/s single-carrier 120-Gbaud DP-QPSK transmission is achieved over 49-span 3075-km G.652.D fiber"
+  quote: record 32-λ×400 Gb/s single-carrier 120-Gbaud DP-QPSK transmission is achieved over 49-span 3075-km G.652.D fiber
   retrieved: 2026-11-02
   tier: A
   confidence: med
   notes: Abstract only.
+  verified: match
 - id: ch09.l400.acp2023_7000km
-  section: "9.3"
+  section: '9.3'
   claim: Fully loaded 80 x 400 Gb/s DP-QPSK with commercial 12 THz C6T+L6T EDFAs over 7000 km G.654.E (lab record)
   value: 7000
-  unit: "km"
+  unit: km
   kind: record
   conditions:
     fiber: G.654.E
     channels: 80
   source_id: ge_acp_2023_7000km
   locator: Abstract
-  quote: "a record 7000 km of 80×400Gb/s QPSK over G.654.E is demonstrated for the first time"
+  quote: a record 7000 km of 80×400Gb/s QPSK over G.654.E is demonstrated for the first time
   retrieved: 2026-11-02
   tier: A
   confidence: med
   notes: Abstract only. Pure EDFA per CMRI article (li_cww_2024_04_cmcc_400g).
+  verified: match
 - id: ch09.l400.field_5616km
-  section: "9.3"
-  claim: China Mobile Ningbo to Gui'an field trial, 400G QPSK over 5616 km G.652.D (EDFA plus Raman) with 2.2 dB OSNR margin, 0.06 dB/km maintenance margin reserved
+  section: '9.3'
+  claim: China Mobile Ningbo to Gui'an field trial, 400G QPSK over 5616 km G.652.D (EDFA plus Raman) with 2.2 dB OSNR margin,
+    0.06 dB/km maintenance margin reserved
   value: 5616
-  unit: "km"
+  unit: km
   kind: record
   conditions:
     osnr_margin_dB: 2.2
@@ -999,62 +1151,70 @@ records:
     latency_ms: 27.415
   source_id: cmri_2023_03_400g_trial_summary
   locator: Slide '现网试点测试结果'
-  quote: "完成5616km 400G QPSK实时现网极限传输，仍有2.2dB OSNR余量"
+  quote: 完成5616km 400G QPSK实时现网极限传输，仍有2.2dB OSNR余量
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Same slide records measured latency '时延27.415ms' over 5616 km (loopback), and B2B OSNR tolerance 15.8 dB for QPSK, 1 dB better than 16QAM-PCS. Gloss 'completed 5616 km real-time field limit transmission with 2.2 dB OSNR margin remaining'.
+  notes: Same slide records measured latency '时延27.415ms' over 5616 km (loopback), and B2B OSNR tolerance 15.8 dB for QPSK,
+    1 dB better than 16QAM-PCS. Gloss 'completed 5616 km real-time field limit transmission with 2.2 dB OSNR margin remaining'.
+  verified: match
 - id: ch09.l400.field_5616km_latency
-  section: "9.3"
+  section: '9.3'
   claim: Measured latency over the 5616 km Ningbo-Gui'an loop
   value: 27.415
-  unit: "ms"
+  unit: ms
   kind: measured
   conditions:
     distance_km: 5616
   source_id: cmri_2023_03_400g_trial_summary
   locator: Slide '现网试点测试结果', item 3
-  quote: "测试期间稳定无误码，时延27.415ms"
+  quote: 测试期间稳定无误码，时延27.415ms
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Implies ~4.88 us/km; calc can derive group index. Gloss 'stable, error-free during test, latency 27.415 ms'.
+  verified: match
 - id: ch09.l400.qpsk_b2b_osnr_15p8
-  section: "9.3"
+  section: '9.3'
   claim: Measured 400G QPSK back-to-back OSNR tolerance 15.8 dB, 1 dB better than 16QAM-PCS
   value: 15.8
-  unit: "dB"
+  unit: dB
   kind: measured
   conditions:
     format: 400G QPSK
   source_id: cmri_2023_03_400g_trial_summary
   locator: Slide '现网试点测试结果', item 1
-  quote: "实测QPSK 背靠背OSNR容限15.8dB，相比16QAM-PCS提升1dB"
+  quote: 实测QPSK 背靠背OSNR容限15.8dB，相比16QAM-PCS提升1dB
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Disagrees in framing with li_cww_2024 which gives 16QAM-PCS B2B OSNR 17.5 dB (difference 1.7 dB), different hardware generation.
+  notes: Disagrees in framing with li_cww_2024 which gives 16QAM-PCS B2B OSNR 17.5 dB (difference 1.7 dB), different hardware
+    generation.
+  verified: match
 - id: ch09.l400.pcs16qam_b2b_17p5
-  section: "9.3"
-  claim: 400G 16QAM-PCS back-to-back OSNR tolerance reached 17.5 dB; supports 1000 km point-to-point and 720 km span-by-span OXC networking on G.652.D
+  section: '9.3'
+  claim: 400G 16QAM-PCS back-to-back OSNR tolerance reached 17.5 dB; supports 1000 km point-to-point and 720 km span-by-span
+    OXC networking on G.652.D
   value: 17.5
-  unit: "dB"
+  unit: dB
   kind: measured
   conditions:
     p2p_reach_km: 1000
     oxc_reach_km: 720
   source_id: li_cww_2024_04_cmcc_400g
   locator: Section 中国产业力量主导400G骨干网技术路线, paragraph 1
-  quote: "400G 16AM-PCS的B2B OSNR（光信噪比）容限已达17.5dB"
+  quote: 400G 16AM-PCS的B2B OSNR（光信噪比）容限已达17.5dB
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Source typo '16AM' for 16QAM. Explains why CMCC rejected PCS-16QAM for >1500 km OXC networking; protection adds ~4.5 dB insertion loss.
+  notes: Source typo '16AM' for 16QAM. Explains why CMCC rejected PCS-16QAM for >1500 km OXC networking; protection adds ~4.5
+    dB insertion loss.
+  verified: match
 - id: ch09.l400.reach_1500_g652d_edfa
-  section: "9.3"
+  section: '9.3'
   claim: 400G QPSK on legacy G.652.D with EDFA-only can exceed 1500 km; G.654.E extends reach by about 30%
   value: 1500
-  unit: "km (lower bound)"
+  unit: km (lower bound)
   kind: spec_typ
   conditions:
     fiber: G.652.D
@@ -1062,31 +1222,34 @@ records:
     g654e_reach_gain_pct: 30
   source_id: li_natreveng_2026_400g
   locator: Key points, bullet 3
-  quote: "The legacy G.652.D fibre can still support large-capacity coherent 400G transmission over more than 1,500 km, and the G.654.E fibre can further prolong the transmission reach by more than 30%."
+  quote: The legacy G.652.D fibre can still support large-capacity coherent 400G transmission over more than 1,500 km, and
+    the G.654.E fibre can further prolong the transmission reach by more than 30%.
   retrieved: 2026-11-02
   tier: A
   confidence: med
   notes: Review key points (abstract page). Same claim in cmcc_jiuzhou_wp ('可增加 ~30% 传输距离').
+  verified: match
 - id: ch09.l400.module_energy_0p08
-  section: "9.3"
+  section: '9.3'
   claim: Projected 400G optical module efficiency about 0.08 nJ/b for 1500 km transmission
   value: 0.08
-  unit: "nJ/bit"
+  unit: nJ/bit
   kind: spec_typ
   conditions:
     reach_km: 1500
   source_id: li_natreveng_2026_400g
   locator: Abstract
-  quote: "will enable 1,500 km transmission with about 0.08 nJ b −1 efficiency per optical module"
+  quote: will enable 1,500 km transmission with about 0.08 nJ b −1 efficiency per optical module
   retrieved: 2026-11-02
   tier: A
   confidence: med
   notes: Forward-looking statement ('will enable'), not a measurement.
+  verified: match
 - id: ch09.l400.srs_power_transfer_7db
-  section: "9.3"
+  section: '9.3'
   claim: After one 80 km G.652.D span, full-load C6T+L6T 400G QPSK shows up to 7 dB SRS power transfer vs <1 dB for C4T
   value: 7
-  unit: "dB"
+  unit: dB
   kind: measured
   conditions:
     span_km: 80
@@ -1094,444 +1257,503 @@ records:
     channels: 80
   source_id: li_cww_2024_04_cmcc_400g
   locator: Section on 宽谱系统层面
-  quote: "经过一个80km G.652.D标准跨段传输后，产生的最大功率转移就已高达7dB"
+  quote: 经过一个80km G.652.D标准跨段传输后，产生的最大功率转移就已高达7dB
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Same article - C6T+L6T outermost frequency separation 12.5 THz vs SRS gain peak 13.4 THz; equalised OSNR flatness <= +/-0.25 dB, power flatness < +/-2.5 dB (static). The 2023 CMRI slide says simulation ~8 dB, measured +3 / -4.3 dB.
+  notes: Same article - C6T+L6T outermost frequency separation 12.5 THz vs SRS gain peak 13.4 THz; equalised OSNR flatness
+    <= +/-0.25 dB, power flatness < +/-2.5 dB (static). The 2023 CMRI slide says simulation ~8 dB, measured +3 / -4.3 dB.
+  verified: match
 - id: ch09.l400.srs_peak_13p4
-  section: "9.3"
+  section: '9.3'
   claim: C6T+L6T outermost channel separation 12.5 THz, close to the 13.4 THz SRS gain peak
   value: 12.5
-  unit: "THz"
+  unit: THz
   kind: fact
   conditions:
     srs_gain_peak_THz: 13.4
   source_id: li_cww_2024_04_cmcc_400g
   locator: Section on 宽谱系统层面, first sentence
-  quote: "“C6T+L6T”波段最长与最短波的频差达12.5THz，已经非常接近SRS（受激拉曼散射）效应的13.4THz增益峰值"
+  quote: “C6T+L6T”波段最长与最短波的频差达12.5THz，已经非常接近SRS（受激拉曼散射）效应的13.4THz增益峰值
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: 13.2 to 13.4 THz is the textbook silica Raman gain peak; cross-check with ch1/ch6 sources before prose.
+  verified: match
 - id: ch09.l400.cmcc_capacity_32t
-  section: "9.3"
+  section: '9.3'
   claim: China Mobile 400G backbone single-fiber capacity 32 Tb/s, 4x the 100G network
   value: 32
-  unit: "Tb/s per fiber"
+  unit: Tb/s per fiber
   kind: spec_typ
   conditions:
     channels: 80
     rate_Gbps: 400
   source_id: cmcc_jiuzhou_wp
   locator: Section 3 关键技术, C6T+L6T 光系统
-  quote: "单纤传输 80 波 150GHz 的 400G QPSK，达成骨干长距单纤 32Tbit/s 容量目标"
+  quote: 单纤传输 80 波 150GHz 的 400G QPSK，达成骨干长距单纤 32Tbit/s 容量目标
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Gloss 'single fibre transmits 80 x 150 GHz 400G QPSK, achieving 32 Tb/s per fibre long-haul target'.
+  verified: match
 - id: ch09.l400.cmcc_400g_history
-  section: "9.3"
-  claim: China Mobile 400G trials, 2018 16QAM 600 km field pilot; 2021 16QAM-PCS >1000 km pilot; 2023 QPSK 5616 km and 6028 km unrepeated (no electrical regeneration)
+  section: '9.3'
+  claim: China Mobile 400G trials, 2018 16QAM 600 km field pilot; 2021 16QAM-PCS >1000 km pilot; 2023 QPSK 5616 km and 6028
+    km unrepeated (no electrical regeneration)
   value: 6028
-  unit: "km"
+  unit: km
   kind: record
   conditions:
     year: 2023
   source_id: cmcc_jiuzhou_wp
   locator: Section 3, 1、400G 超大容量技术
-  quote: "推动现网实现 400G QPSK 5616km 无中继传输，6 月进一步突破 400G QPSK 6028km 无中继传输"
+  quote: 推动现网实现 400G QPSK 5616km 无中继传输，6 月进一步突破 400G QPSK 6028km 无中继传输
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: '''无中继'' here means no electrical regeneration (optical amplification present). The 6028 km test was Gui''an-Ningbo bidirectional with Huawei (cww_2023_11_cmcc_400g_tender).'
+  notes: '''无中继'' here means no electrical regeneration (optical amplification present). The 6028 km test was Gui''an-Ningbo
+    bidirectional with Huawei (cww_2023_11_cmcc_400g_tender).'
+  verified: match
 - id: ch09.l400.cmcc_backbone_scope_2024
-  section: "9.3"
-  claim: China Mobile 400G inter-provincial backbone (九州算力光网) completed June 2024, 1900+ OTN sets in 135 cities, covering 30 provinces, 200+ prefecture cities
+  section: '9.3'
+  claim: China Mobile 400G inter-provincial backbone (九州算力光网) completed June 2024, 1900+ OTN sets in 135 cities, covering
+    30 provinces, 200+ prefecture cities
   value: 1900
-  unit: "OTN equipment sets (lower bound)"
+  unit: OTN equipment sets (lower bound)
   kind: fact
   conditions:
     cities_with_equipment: 135
     provinces: 30
-    completion: "2024-06"
+    completion: 2024-06
   source_id: scjc_2024_11_jiuzhou
   locator: Paragraph 2
-  quote: "通过分布在全国135个城市的1900多套光传送设备，贯通了“东数西算”工程八大算力枢纽节点与周边区域的400G链路"
+  quote: 通过分布在全国135个城市的1900多套光传送设备，贯通了“东数西算”工程八大算力枢纽节点与周边区域的400G链路
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C feature (CCDI site repost). Same article - hub-to-hub latency 'as low as 20 ms', inter-province 5 ms. Tender (cww_2023_11) planned 1910 new OTN sets and 11190 400G line OTU ports. Total route km NOT found (see gaps).
+  notes: Tier C feature (CCDI site repost). Same article - hub-to-hub latency 'as low as 20 ms', inter-province 5 ms. Tender
+    (cww_2023_11) planned 1910 new OTN sets and 11190 400G line OTU ports. Total route km NOT found (see gaps).
+  verified: match
 - id: ch09.l400.cmcc_400g_ports_11000
-  section: "9.3"
+  section: '9.3'
   claim: China Mobile 400G inter-provincial backbone deployed 11,000+ 400G ports; uses 400G + OXC + 12 THz spectrum
   value: 11000
-  unit: "ports (lower bound)"
+  unit: ports (lower bound)
   kind: fact
   conditions:
-    date: "2024"
+    date: '2024'
   source_id: c114_2024_11_cmcc_400g_award
   locator: Paragraph 2
-  quote: "成功部署11000多个400G端口，是目前全球规模最大、覆盖最广的400G网络"
+  quote: 成功部署11000多个400G端口，是目前全球规模最大、覆盖最广的400G网络
   retrieved: 2026-11-02
   tier: C
   confidence: low
   notes: Tier C. Planned 2025 extension of 400G into provincial backbones and metro cores in 14 provinces.
+  verified: match
 - id: ch09.l400.cmcc_latency_claims_2024
-  section: "9.3"
-  claim: China Mobile 400G backbone claims, bandwidth 4x previous trunk, capacity >30 PB, hub-to-hub latency all below 20 ms, key link latency -20%, energy/bit -65%, cost/bit -20%
+  section: '9.3'
+  claim: China Mobile 400G backbone claims, bandwidth 4x previous trunk, capacity >30 PB, hub-to-hub latency all below 20
+    ms, key link latency -20%, energy/bit -65%, cost/bit -20%
   value: 20
-  unit: "ms (upper bound, hub-to-hub)"
+  unit: ms (upper bound, hub-to-hub)
   kind: spec_max
   conditions:
     energy_per_bit_reduction_pct: 65
     cost_per_bit_reduction_pct: 20
   source_id: xinhua_2024_03_cmcc_400g
   locator: Paragraph 2
-  quote: "网络容量超30PB、枢纽间时延均低于20ms、关键主用链路时延降幅达20%、安全能力全面升级、单比特能耗降低65%、单比特成本下降20%"
+  quote: 网络容量超30PB、枢纽间时延均低于20ms、关键主用链路时延降幅达20%、安全能力全面升级、单比特能耗降低65%、单比特成本下降20%
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C; press claims for a contested box. '30PB' capacity unit is unusual for a network (likely aggregate scheduling capacity); not defined.
+  notes: Tier C; press claims for a contested box. '30PB' capacity unit is unusual for a network (likely aggregate scheduling
+    capacity); not defined.
+  verified: match
 - id: ch09.l400.ct_ccsa_400g_qpsk_params
-  section: "9.3"
-  claim: CCSA long-haul 400G WDM draft (2023), PM-QPSK about 130 GBaud, C6T/C6T+L6T, 150 GHz spacing, 40/80 channels, 25/20 spans of 22 dB
+  section: '9.3'
+  claim: CCSA long-haul 400G WDM draft (2023), PM-QPSK about 130 GBaud, C6T/C6T+L6T, 150 GHz spacing, 40/80 channels, 25/20
+    spans of 22 dB
   value: 130
-  unit: "GBd"
+  unit: GBd
   kind: spec_typ
   conditions:
     spacing_GHz: 150
-    channels: [40, 80]
-    spans_22dB: [25, 20]
-    pcs16qam_alt: "~90 GBaud, 100 GHz, 17 spans"
+    channels:
+    - 40
+    - 80
+    spans_22dB:
+    - 25
+    - 20
+    pcs16qam_alt: ~90 GBaud, 100 GHz, 17 spans
   source_id: lv_cww_2023_ct_400g
   locator: Section 骨干400G全光传输技术发展, paragraph on CCSA 中长距 standard
-  quote: "支持PM-QPSK码型的波分系统，预计传输波段覆盖C6T/C6T+L6T，波特率约为130GBaud，跨段数预计为25/20跨（22dB）"
+  quote: 支持PM-QPSK码型的波分系统，预计传输波段覆盖C6T/C6T+L6T，波特率约为130GBaud，跨段数预计为25/20跨（22dB）
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: Draft standard values ('预计', expected) as of Oct 2023. CT DCI enterprise standard - PM-16QAM, ~60 GBaud, 64 x 75 GHz in C 4.8 THz, 4 spans. CCSA metro 400G - PM-16QAM, ~60 GBaud, 100 GHz.
+  notes: Draft standard values ('预计', expected) as of Oct 2023. CT DCI enterprise standard - PM-16QAM, ~60 GBaud, 64 x 75
+    GHz in C 4.8 THz, 4 spans. CCSA metro 400G - PM-16QAM, ~60 GBaud, 100 GHz.
+  verified: match
 - id: ch09.l400.ct_l6t_penalty_1db
-  section: "9.3"
-  claim: China Telecom analysis, 400G PM-QPSK C6T is 0.5 to 1 dB worse than 100G PM-QPSK; adding L6T costs about 1 dB more system penalty
+  section: '9.3'
+  claim: China Telecom analysis, 400G PM-QPSK C6T is 0.5 to 1 dB worse than 100G PM-QPSK; adding L6T costs about 1 dB more
+    system penalty
   value: 1
-  unit: "dB"
+  unit: dB
   kind: spec_typ
   conditions:
-    c6t_vs_100g_penalty_dB: [0.5, 1]
+    c6t_vs_100g_penalty_dB:
+    - 0.5
+    - 1
   source_id: lv_cww_2023_ct_400g
   locator: Paragraph after 表2/表3
-  quote: "400G PM-QPSKC6T与100G PM-QPSK的性能差距为0.5~1dB，是容量提升的固有代价；选择使用L6T波段，光层会额外再带来1dB的系统代价"
+  quote: 400G PM-QPSKC6T与100G PM-QPSK的性能差距为0.5~1dB，是容量提升的固有代价；选择使用L6T波段，光层会额外再带来1dB的系统代价
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Gloss '400G PM-QPSK C6T vs 100G PM-QPSK gap 0.5-1 dB; using L6T adds another ~1 dB system penalty in the optical layer'.
+  notes: Gloss '400G PM-QPSK C6T vs 100G PM-QPSK gap 0.5-1 dB; using L6T adds another ~1 dB system penalty in the optical
+    layer'.
+  verified: match
 - id: ch09.l400.ct_cl_module_band
-  section: "9.3"
-  claim: China Telecom tested an integrated extended C+L CFP2-DCO 400G module tuning across 1524 to 1627 nm (thin-film lithium niobate modulator)
-  value: [1524, 1627]
-  unit: "nm"
+  section: '9.3'
+  claim: China Telecom tested an integrated extended C+L CFP2-DCO 400G module tuning across 1524 to 1627 nm (thin-film lithium
+    niobate modulator)
+  value:
+  - 1524
+  - 1627
+  unit: nm
   kind: spec_typ
   conditions:
-    date: "2024-10"
+    date: 2024-10
   source_id: cfol_2024_10_ct_cl_module
   locator: Paragraph 1
-  quote: "波长覆盖扩展C+L波段要求的1524nm-1627nm"
+  quote: 波长覆盖扩展C+L波段要求的1524nm-1627nm
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C repost of CT Research Institute news. Notes CT chose extended C+L 12 THz for its 400G ROADM network in 2023, prioritising integrated (一体化) components for ROADM rerouting. Contrast with CMCC split C6T/L6T OTN design.
+  notes: Tier C repost of CT Research Institute news. Notes CT chose extended C+L 12 THz for its 400G ROADM network in 2023,
+    prioritising integrated (一体化) components for ROADM rerouting. Contrast with CMCC split C6T/L6T OTN design.
+  verified: match
 - id: ch09.l400.ct_800g400g_mixed_trial
-  section: "9.3"
-  claim: China Telecom Nanjing-Shanghai field trial of mixed 800G/400G, max capacity 64 Tb/s and longest unregenerated distance 1200+ km
+  section: '9.3'
+  claim: China Telecom Nanjing-Shanghai field trial of mixed 800G/400G, max capacity 64 Tb/s and longest unregenerated distance
+    1200+ km
   value: 1200
-  unit: "km (lower bound)"
+  unit: km (lower bound)
   kind: record
   conditions:
     capacity_Tbps: 64
-    date: "2024-05"
+    date: 2024-05
   source_id: c114_2024_05_ct_800g400g_mixed
   locator: Paragraph 1
-  quote: "实现了最大传输容量64Tbit/s、最长传输距离1200余公里的无电中继传输"
+  quote: 实现了最大传输容量64Tbit/s、最长传输距离1200余公里的无电中继传输
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C. Same article - China Telecom built first G.654.E commercial link 2018; planned 400G QPSK ROADM backbone in 2024.
+  notes: Tier C. Same article - China Telecom built first G.654.E commercial link 2018; planned 400G QPSK ROADM backbone in
+    2024.
+  verified: match
 - id: ch09.l400.ct_400g800g_roadm_2025
-  section: "9.3"
-  claim: China Telecom completed first field pilot of mixed 400G/800G single-wavelength rates on a live ROADM network (GBA, YRD, Chengdu-Chongqing, Guiyang-Guangzhou), 2025
-  value: "400G/800G mixed-rate ROADM field pilot, 2025-05"
-  unit: "1"
+  section: '9.3'
+  claim: China Telecom completed first field pilot of mixed 400G/800G single-wavelength rates on a live ROADM network (GBA,
+    YRD, Chengdu-Chongqing, Guiyang-Guangzhou), 2025
+  value: 400G/800G mixed-rate ROADM field pilot, 2025-05
+  unit: '1'
   kind: fact
   conditions:
-    date: "2025-05"
+    date: 2025-05
   source_id: ct_2025_05_400g800g_roadm
   locator: Paragraph 1
-  quote: "成功完成全球首次单波400G与800G双速率混合组网试点验证"
+  quote: 成功完成全球首次单波400G与800G双速率混合组网试点验证
   retrieved: 2026-11-02
   tier: C
   confidence: low
   notes: Tier C (operator news). Indicates CT backbone is 400G ROADM capable of 800G wavelength overlay.
+  verified: match
 - id: ch09.l400.miit_400g_scale_2024
-  section: "9.3"
+  section: '9.3'
   claim: MIIT, 2024 saw formal scale deployment of 400G backbone, initially linking the eight hubs and surrounding major cities
-  value: "400G骨干网正式规模化部署 (2024)"
-  unit: "1"
+  value: 400G骨干网正式规模化部署 (2024)
+  unit: '1'
   kind: fact
   conditions:
     year: 2024
   source_id: miit_txy_tjgb_2024_jiedu
   locator: 二、信息通信基础设施量质齐升, 高速传输网络加速构建
-  quote: "400G骨干网正式规模化部署，已初步打通国家八大枢纽节点间、枢纽与周边主要城市、与重点大省间高速传输通道"
+  quote: 400G骨干网正式规模化部署，已初步打通国家八大枢纽节点间、枢纽与周边主要城市、与重点大省间高速传输通道
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Gloss '400G backbone formally deployed at scale; high-speed channels opened between the eight national hubs, hubs and nearby major cities, and key provinces'.
+  notes: Gloss '400G backbone formally deployed at scale; high-speed channels opened between the eight national hubs, hubs
+    and nearby major cities, and key provinces'.
+  verified: match
 - id: ch09.l400.cu_400g_cl_1650km
-  section: "9.3"
+  section: '9.3'
   claim: China Unicom/BUPT lab demo, 400G QPSK over C4.8T+L4.8T, 1650 km, comparing G.652.D and G.654.E
   value: 1650
-  unit: "km"
+  unit: km
   kind: measured
   conditions:
     band: C4.8THz+L4.8THz
   source_id: wang_icicn_2024_cu_400g
   locator: Abstract
-  quote: "A 400G optical transmission system based on C4.8THz+L4.8THz band spectrum and QPSK modulation format was demonstrated experimentally for transmitting a distance of 1650km"
+  quote: A 400G optical transmission system based on C4.8THz+L4.8THz band spectrum and QPSK modulation format was demonstrated
+    experimentally for transmitting a distance of 1650km
   retrieved: 2026-11-02
   tier: A
   confidence: med
   notes: Abstract only. Shows CU evaluated a 9.6 THz C+L plan, distinct from CMCC 12 THz.
+  verified: match
 - id: ch09.l400.cu_srs_power_management
-  section: "9.3"
-  claim: In C+L QPSK 400G systems SRS shifts power from short to long wavelengths; managed by C/L amplifier gain and tilt plus WSS/DGE per-channel adjustment, with filling channels and amplifier output-power locking for fault protection
-  value: "SRS power management: gain/tilt + WSS/DGE + fill channels + power locking"
-  unit: "1"
+  section: '9.3'
+  claim: In C+L QPSK 400G systems SRS shifts power from short to long wavelengths; managed by C/L amplifier gain and tilt
+    plus WSS/DGE per-channel adjustment, with filling channels and amplifier output-power locking for fault protection
+  value: 'SRS power management: gain/tilt + WSS/DGE + fill channels + power locking'
+  unit: '1'
   kind: fact
   conditions: {}
   source_id: wang_oe_2024_c6tl6t_power
   locator: Abstract
-  quote: "the short-wavelength signal power will be shifted to the long-wavelength signal due to the presence of the stimulated Raman scattering (SRS) effect"
+  quote: the short-wavelength signal power will be shifted to the long-wavelength signal due to the presence of the stimulated
+    Raman scattering (SRS) effect
   retrieved: 2026-11-02
   tier: A
   confidence: med
   notes: Abstract only.
-# =====================================================================
-# 9.4 Access and fiber deployment
-# =====================================================================
+  verified: match
 - id: ch09.acc.cable_length_2025
-  section: "9.4"
+  section: '9.4'
   claim: National optical cable line length, end-2025 (2.113 million km added in 2025)
   value: 7.499e7
-  unit: "km"
+  unit: km
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     added_2025_km: 2.113e6
   source_id: miit_txy_tjgb_2025
   locator: Section 四(一) 千兆光网建设持续推进
-  quote: "新建光缆线路长度211.3万公里，全国光缆线路总长度达7499万公里"
+  quote: 新建光缆线路长度211.3万公里，全国光缆线路总长度达7499万公里
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: 光缆线路长度 = cable-route (sheath) length summed over operators, not fibre-km. Preliminary 2025 data.
+  verified: match
 - id: ch09.acc.cable_split_2025
-  section: "9.4"
-  claim: 2025 split of cable length, long-haul 1.143 million km, local trunk (本地网中继) 30.06 million km, access 43.79 million km
+  section: '9.4'
+  claim: 2025 split of cable length, long-haul 1.143 million km, local trunk (本地网中继) 30.06 million km, access 43.79 million
+    km
   value: 1.143e6
-  unit: "km (long-haul)"
+  unit: km (long-haul)
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     local_trunk_km: 3.006e7
     access_km: 4.379e7
   source_id: miit_txy_tjgb_2025
   locator: Section 四(一)
-  quote: "长途光缆线路、本地网中继光缆线路和接入网光缆线路长度分别达114.3万、3006万和4379万公里"
+  quote: 长途光缆线路、本地网中继光缆线路和接入网光缆线路长度分别达114.3万、3006万和4379万公里
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Access cable length fell from 4406万 (2024) to 4379万 (2025); possibly reclassification. Flag in prose.
+  verified: match
 - id: ch09.acc.cable_length_2024
-  section: "9.4"
-  claim: National optical cable line length end-2024 (8.562 million km added); long-haul 1.127 million km, local trunk 27.69 million km, access 44.06 million km
+  section: '9.4'
+  claim: National optical cable line length end-2024 (8.562 million km added); long-haul 1.127 million km, local trunk 27.69
+    million km, access 44.06 million km
   value: 7.288e7
-  unit: "km"
+  unit: km
   kind: measured
   conditions:
-    date: "2024-12-31"
+    date: '2024-12-31'
     longhaul_km: 1.127e6
     local_trunk_km: 2.769e7
     access_km: 4.406e7
   source_id: miit_txy_tjgb_2024
   locator: Section 四(一) 千兆光网建设有序推进
-  quote: "新建光缆线路长度856.2万公里，全国光缆线路总长度达7288万公里"
+  quote: 新建光缆线路长度856.2万公里，全国光缆线路总长度达7288万公里
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Exact value 72,880,293 km in MIIT Q4-2024 table (miit_2024q4_capacity_table).
+  verified: match
 - id: ch09.acc.cable_length_2024_exact
-  section: "9.4"
+  section: '9.4'
   claim: Exact optical cable line length end-2024 from MIIT quarterly capacity table
   value: 72880293
-  unit: "km"
+  unit: km
   kind: measured
   conditions:
-    date: "2024-12-31"
+    date: '2024-12-31'
   source_id: miit_2024q4_capacity_table
   locator: Table row 光缆线路长度
-  quote: "光缆线路长度 公里 72880293 8562352"
+  quote: 光缆线路长度 公里 72880293 8562352
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Net increase 8,562,352 km over 2023.
+  verified: match
 - id: ch09.acc.ftth_ports_2025
-  section: "9.4"
+  section: '9.4'
   claim: FTTH/O ports end-2025, 1.21 billion, 96.8% of 1.251 billion broadband ports
   value: 1.21e9
-  unit: "ports"
+  unit: ports
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     share_pct: 96.8
     total_ports: 1.251e9
   source_id: miit_txy_tjgb_2025
   locator: Section 四(一)
-  quote: "光纤接入（FTTH/O）端口达到12.1亿个，比上年末净增5030万个，占比由上年末的96.5%提升至96.8%"
+  quote: 光纤接入（FTTH/O）端口达到12.1亿个，比上年末净增5030万个，占比由上年末的96.5%提升至96.8%
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Ports, not subscribers. Share of FTTH among subscribers not separately published in bulletin.
+  verified: match
 - id: ch09.acc.10gpon_ports_2025
-  section: "9.4"
+  section: '9.4'
   claim: 10G PON ports with gigabit service capability, end-2025
   value: 3.162e7
-  unit: "ports"
+  unit: ports
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     net_add: 3.419e6
   source_id: miit_txy_tjgb_2025
   locator: Section 四(一)
-  quote: "具备千兆网络服务能力的10G PON端口数达3162万个，比上年末净增341.9万个"
+  quote: 具备千兆网络服务能力的10G PON端口数达3162万个，比上年末净增341.9万个
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: 2.6x the 14th FYP target per ct_ar_2025_a (target therefore ~1200万).
+  verified: match
 - id: ch09.acc.10gpon_ports_2024
-  section: "9.4"
+  section: '9.4'
   claim: 10G PON ports end-2024
   value: 2.82e7
-  unit: "ports"
+  unit: ports
   kind: measured
   conditions:
-    date: "2024-12-31"
+    date: '2024-12-31'
     net_add: 5.183e6
   source_id: miit_txy_tjgb_2024
   locator: Section 四(一)
-  quote: "具备千兆网络服务能力的10G PON端口数达2820万个，比上年末净增518.3万个"
+  quote: 具备千兆网络服务能力的10G PON端口数达2820万个，比上年末净增518.3万个
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: ""
+  notes: ''
+  verified: match
 - id: ch09.acc.gigabit_users_2025
-  section: "9.4"
+  section: '9.4'
   claim: 1000 Mb/s and above fixed broadband users end-2025, 238 million, 34.5% of users
   value: 2.38e8
-  unit: "subscribers"
+  unit: subscribers
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     share_pct: 34.5
   source_id: miit_txy_tjgb_2025
   locator: Section 二(二)
-  quote: "1000Mbps及以上接入速率的用户为2.38亿户，全年净增3157万户，占总用户数的34.5%"
+  quote: 1000Mbps及以上接入速率的用户为2.38亿户，全年净增3157万户，占总用户数的34.5%
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: ""
+  notes: ''
+  verified: match
 - id: ch09.acc.gigabit_users_2024
-  section: "9.4"
+  section: '9.4'
   claim: 1000 Mb/s and above users end-2024, 207 million, 30.9%
   value: 2.07e8
-  unit: "subscribers"
+  unit: subscribers
   kind: measured
   conditions:
-    date: "2024-12-31"
+    date: '2024-12-31'
     share_pct: 30.9
   source_id: miit_txy_tjgb_2024
   locator: Section 二(二)
-  quote: "1000Mbps及以上接入速率的用户为2.07亿户，全年净增4355万户，占总用户数的30.9%"
+  quote: 1000Mbps及以上接入速率的用户为2.07亿户，全年净增4355万户，占总用户数的30.9%
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: ""
+  notes: ''
+  verified: match
 - id: ch09.acc.fttr_users_2025
-  section: "9.4"
+  section: '9.4'
   claim: FTTR (fiber to the room) users end-2025
   value: 5.939e7
-  unit: "subscribers"
+  unit: subscribers
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
   source_id: miit_txy_tjgb_2025
   locator: Section 二(二), last sentence
-  quote: "截至2025年底，光纤到房间（FTTR）用户达5939万户"
+  quote: 截至2025年底，光纤到房间（FTTR）用户达5939万户
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: China Mobile alone reports 2527万 FTTR customers (cmcc_ar_2025_a).
+  verified: match
 - id: ch09.acc.household_bw_2025
-  section: "9.4"
+  section: '9.4'
   claim: Average household contracted bandwidth 553.4 Mb/s; total fixed access bandwidth 346,000 Tb/s (2025)
   value: 553.4
-  unit: "Mb/s per household"
+  unit: Mb/s per household
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
     total_access_bw_Tbps: 3.46e5
   source_id: ct_ar_2025_a
   locator: 行业情况 3、用户规模与质态同步跃升
-  quote: "家庭 户均签约带宽已达到 553.4Mbps/户，较上年末提高 41.6Mbps/户"
+  quote: 家庭 户均签约带宽已达到 553.4Mbps/户，较上年末提高 41.6Mbps/户
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: CT annual report quoting MIIT 2025 bulletin interpretation (primary interpretation not retrieved). Same paragraph - '固定宽带用户总接入带宽达 34.6 万 Tbps'.
+  notes: CT annual report quoting MIIT 2025 bulletin interpretation (primary interpretation not retrieved). Same paragraph
+    - '固定宽带用户总接入带宽达 34.6 万 Tbps'.
+  verified: match
 - id: ch09.acc.gigabit_cities_2024
-  section: "9.4"
+  section: '9.4'
   claim: Gigabit cities (千兆城市) built by end-2024
   value: 207
-  unit: "cities"
+  unit: cities
   kind: measured
   conditions:
-    date: "2024-12-31"
+    date: '2024-12-31'
   source_id: miit_txy_tjgb_2024_jiedu
   locator: 二, 双千兆网络覆盖持续完善
-  quote: "具备千兆网络服务能力的10G PON端口数达2820万个，比上年净增518.3万个，已建成千兆城市207个"
+  quote: 具备千兆网络服务能力的10G PON端口数达2820万个，比上年净增518.3万个，已建成千兆城市207个
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: 2025 count not published as a number; CNNIC 57th says 2/3 of prefecture cities meet the standard.
+  verified: match
 - id: ch09.acc.gigabit_cities_2025_share
-  section: "9.4"
-  claim: By end-2025 two-thirds of prefecture-level cities meet the gigabit-city standard; 10G PON ports 31.62 million; 10G (万兆) optical pilots begun
+  section: '9.4'
+  claim: By end-2025 two-thirds of prefecture-level cities meet the gigabit-city standard; 10G PON ports 31.62 million; 10G
+    (万兆) optical pilots begun
   value: 0.667
-  unit: "1 (fraction of prefecture-level cities)"
+  unit: 1 (fraction of prefecture-level cities)
   kind: measured
   conditions:
-    date: "2025-12"
+    date: 2025-12
   source_id: cnnic_57_2026
   locator: 一是基础网络建设从用得上到用得好 paragraph
-  quote: "全国 2/3 的地市达到千兆城市标准，并已在部分城市开展万兆光网试点建设"
+  quote: 全国 2/3 的地市达到千兆城市标准，并已在部分城市开展万兆光网试点建设
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: '''2/3'' stated as fraction; value 0.667 is its decimal. Gloss ''two-thirds of prefecture cities meet the gigabit-city standard; 10-gigabit optical network pilots under way''.'
+  notes: '''2/3'' stated as fraction; value 0.667 is its decimal. Gloss ''two-thirds of prefecture cities meet the gigabit-city
+    standard; 10-gigabit optical network pilots under way''.'
+  verified: match
 - id: ch09.acc.gigabit_city_criteria
-  section: "9.4"
-  claim: Gigabit city criteria, urban household gigabit-fibre coverage >= 80%, 10G-PON share of PON ports >= 25%, 500 Mb/s+ users >= 25%, 5G users >= 25%, >= 12 5G BS per 10k people, key-site 5G >= 80%, >= 5 dual-gigabit applications
+  section: '9.4'
+  claim: Gigabit city criteria, urban household gigabit-fibre coverage >= 80%, 10G-PON share of PON ports >= 25%, 500 Mb/s+
+    users >= 25%, 5G users >= 25%, >= 12 5G BS per 10k people, key-site 5G >= 80%, >= 5 dual-gigabit applications
   value: 80
-  unit: "% (household gigabit fibre coverage)"
+  unit: '% (household gigabit fibre coverage)'
   kind: spec_min
   conditions:
     tenG_pon_port_share_pct: 25
@@ -1542,16 +1764,21 @@ records:
     applications_min: 5
   source_id: miit_gigabit_city_criteria
   locator: 附件1 千兆城市评价指标, table rows 1-7
-  quote: "城市地区具备千兆接入能力的家庭数/ 城市地区家庭总数"
+  quote: 城市地区具备千兆接入能力的家庭数/ 城市地区家庭总数
   retrieved: 2026-11-02
   tier: A
   confidence: med
-  notes: Table text extraction scrambled column order; thresholds read from '指标值' column (80%, 25%, 80%, 12, 25%, 25%, 5). Verify against PDF. Quote is the row-1 formula; the 80% value sits in the adjacent cell.
+  notes: 'Table text extraction scrambled column order; thresholds read from ''指标值'' column (80%, 25%, 80%, 12, 25%, 25%,
+    5). Verify against PDF. Quote is the row-1 formula; the 80% value sits in the adjacent cell. Verifier (PARTIAL): Scrambled
+    table resolved: all seven thresholds confirmed. Quote must contain the value; replace formula quote with row-1 cells incl.
+    ''80%''. Raise confidence to high.'
+  verified: partial
 - id: ch09.acc.dual_gigabit_2023_targets
-  section: "9.4"
-  claim: 双千兆 action plan 2023 targets, gigabit fibre covering 400 million households, 10G-PON ports > 10 million, gigabit users > 30 million, 100 gigabit cities
+  section: '9.4'
+  claim: 双千兆 action plan 2023 targets, gigabit fibre covering 400 million households, 10G-PON ports > 10 million, gigabit
+    users > 30 million, 100 gigabit cities
   value: 1.0e7
-  unit: "10G-PON ports (target lower bound, end-2023)"
+  unit: 10G-PON ports (target lower bound, end-2023)
   kind: spec_min
   conditions:
     households_covered: 4.0e8
@@ -1559,171 +1786,195 @@ records:
     gigabit_cities: 100
   source_id: miit_2021_dual_gigabit_plan
   locator: 一(三) 主要目标, 2. 到2023年底
-  quote: "千兆光纤网络具备覆盖4亿户家庭的能力，10G-PON及以上端口规模超过1000万个，千兆宽带用户突破3000万户"
+  quote: 千兆光纤网络具备覆盖4亿户家庭的能力，10G-PON及以上端口规模超过1000万个，千兆宽带用户突破3000万户
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: 2021 targets - 2亿 households, 500万 10G-PON ports, 1000万 gigabit users, 20 gigabit cities. Actual 2024 - 2820万 ports, 2.07亿 users, 207 cities (overshoot is large).
+  notes: 2021 targets - 2亿 households, 500万 10G-PON ports, 1000万 gigabit users, 20 gigabit cities. Actual 2024 - 2820万 ports,
+    2.07亿 users, 207 cities (overshoot is large).
+  verified: match
 - id: ch09.acc.f5g_three_characteristics
-  section: "9.4"
+  section: '9.4'
   claim: ETSI F5G defined by three technical characteristics, eFBB, FFC and GRE
-  value: "eFBB, FFC, GRE"
-  unit: "1"
+  value: eFBB, FFC, GRE
+  unit: '1'
   kind: fact
   conditions:
     standard: ETSI GR F5G 001 V1.1.1 (2020-12)
   source_id: etsi_gr_f5g_001
   locator: Clause on F5G characteristics
-  quote: "These dimensions are implemented based on three technical characteristics, eFBB, FFC and GRE."
+  quote: These dimensions are implemented based on three technical characteristics, eFBB, FFC and GRE.
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
-  notes: eFBB = enhanced fixed broadband; FFC = full-fibre connection; GRE = guaranteed reliable experience. ETSI group report (GR) is informative, not normative.
+  notes: 'eFBB = enhanced fixed broadband; FFC = full-fibre connection; GRE = guaranteed reliable experience. ETSI group report
+    (GR) is informative, not normative. Verifier (PARTIAL): Quote verified. Tier: ISG Group Report is informative and ''does
+    not necessarily represent the views of the entire ETSI membership'' -> tier B, not A.'
+  verified: partial_fixed
 - id: ch09.acc.f5g_10x_bandwidth
-  section: "9.4"
+  section: '9.4'
   claim: F5G increases bandwidth by more than 10x vs F4G, represented by 10G-PON with symmetric gigabit per subscriber
   value: 10
-  unit: "x (lower bound)"
+  unit: x (lower bound)
   kind: fact
   conditions: {}
   source_id: etsi_gr_f5g_001
   locator: eFBB subsection
-  quote: "Compared to F4G fibre broadband, F5G further increases the bandwidth by more than 10 times."
+  quote: Compared to F4G fibre broadband, F5G further increases the bandwidth by more than 10 times.
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
-  notes: Same report - 10G-PON latency 'reduced to the level of 100 µs'; OTN '200 Gbit/s and 400 Gbit/s ... more than 40 Tbit/s per fibre'.
+  notes: 'Same report - 10G-PON latency ''reduced to the level of 100 µs''; OTN ''200 Gbit/s and 400 Gbit/s ... more than
+    40 Tbit/s per fibre''. Verifier (PARTIAL): Quote verified; tier A -> B (as above).'
+  verified: partial_fixed
 - id: ch09.acc.f5g_otn_40t
-  section: "9.4"
+  section: '9.4'
   claim: F5G vision, 200G and 400G single-wavelength OTN with C+L band achieving more than 40 Tb/s per fiber
   value: 40
-  unit: "Tb/s per fiber (lower bound)"
+  unit: Tb/s per fiber (lower bound)
   kind: fact
   conditions: {}
   source_id: etsi_gr_f5g_001
   locator: eFBB subsection, OTN paragraph
-  quote: "C-band and L-band are widely used, achieving high-performance transmission of more than 40 Tbit/s per fibre."
-  retrieved: 2026-11-02
-  tier: A
-  confidence: high
-  notes: Contrast with CMCC deployed 32 Tb/s (80 x 400G).
-# =====================================================================
-# 9.5 International gateways and cross-border links
-# =====================================================================
-- id: ch09.intl.exit_bw_2022
-  section: "9.5"
-  claim: China international Internet exit bandwidth, December 2022 (+33.5% y/y); latest value CNNIC has published
-  value: 18469972
-  unit: "Mb/s"
-  kind: measured
-  conditions:
-    date: "2022-12"
-    source_of_data: MIIT via CNNIC
-  source_id: cnnic_52_2023
-  locator: Ch. 1, (III) International Internet Bandwidth, Figure 4
-  quote: "By December 2022, China's international internet bandwidth was 18,469,972Mbps, an increase of 33.5% compared with December 2021."
+  quote: C-band and L-band are widely used, achieving high-performance transmission of more than 40 Tbit/s per fibre.
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Figure 4 series (Mb/s) - 2018 7,371,738; 2019 8,827,751; 2020 11,511,397; 2021 13,839,969; 2022 18,469,972. CNNIC 53rd-57th reports (to Feb 2026) contain no 国际出口带宽 section; no newer official figure found (see gaps).
-- id: ch09.intl.exit_bw_2021
-  section: "9.5"
-  claim: China international Internet exit bandwidth, December 2021
-  value: 13839969
-  unit: "Mb/s"
+  notes: 'Contrast with CMCC deployed 32 Tb/s (80 x 400G). Verifier (PARTIAL): Quote verified; tier A -> B (as above).'
+  verified: partial_fixed
+- id: ch09.intl.exit_bw_2022
+  section: '9.5'
+  claim: China international Internet exit bandwidth, December 2022 (+33.5% y/y); latest value CNNIC has published
+  value: 18469972
+  unit: Mb/s
   kind: measured
   conditions:
-    date: "2021-12"
+    date: 2022-12
+    source_of_data: MIIT via CNNIC
+  source_id: cnnic_52_2023
+  locator: Ch. 1, (III) International Internet Bandwidth, Figure 4
+  quote: By December 2022, China's international internet bandwidth was 18,469,972Mbps, an increase of 33.5% compared with
+    December 2021.
+  retrieved: 2026-11-02
+  tier: B
+  confidence: high
+  notes: Figure 4 series (Mb/s) - 2018 7,371,738; 2019 8,827,751; 2020 11,511,397; 2021 13,839,969; 2022 18,469,972. CNNIC
+    53rd-57th reports (to Feb 2026) contain no 国际出口带宽 section; no newer official figure found (see gaps).
+  verified: match
+- id: ch09.intl.exit_bw_2021
+  section: '9.5'
+  claim: China international Internet exit bandwidth, December 2021
+  value: 13839969
+  unit: Mb/s
+  kind: measured
+  conditions:
+    date: 2021-12
   source_id: cnnic_52_2023
   locator: Figure 4 data labels
-  quote: "13,839,969"
+  quote: 13,839,969
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Read from chart labels; quote is the label.
+  verified: match
 - id: ch09.intl.gateway_9_bsg
-  section: "9.5"
-  claim: Since 1994 the three telcos set up 9 international communication service gateways in Beijing, Shanghai and Guangzhou carrying public Internet
+  section: '9.5'
+  claim: Since 1994 the three telcos set up 9 international communication service gateways in Beijing, Shanghai and Guangzhou
+    carrying public Internet
   value: 9
-  unit: "gateways"
+  unit: gateways
   kind: fact
   conditions:
     cities: 北京, 上海, 广州
   source_id: gdca_2024_07_new_gateways
   locator: Paragraph 3
-  quote: "中国电信、中国移动、中国联通在北京、上海、广州设立了9个国际通信业务出入口局，实现公众互联网与国际互联网连通"
+  quote: 中国电信、中国移动、中国联通在北京、上海、广州设立了9个国际通信业务出入口局，实现公众互联网与国际互联网连通
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
-  notes: Gloss 'China Telecom, China Mobile and China Unicom set up 9 international service gateways in Beijing, Shanghai, Guangzhou, connecting the public Internet to the international Internet'.
+  tier: C
+  confidence: low
+  notes: 'Gloss ''China Telecom, China Mobile and China Unicom set up 9 international service gateways in Beijing, Shanghai,
+    Guangzhou, connecting the public Internet to the international Internet''. Verifier (PARTIAL): Value OK. Tier: page is
+    a CCTV news repost -> tier C; or re-source to caict interpretation (gateway_30_total) which states the same 9.'
+  verified: partial_fixed
 - id: ch09.intl.gateway_6_new_2024
-  section: "9.5"
-  claim: On 2024-07-10 MIIT licensed 6 new international service gateways in Nanning, Qingdao, Kunming and Haikou, the first addition in 30 years
+  section: '9.5'
+  claim: On 2024-07-10 MIIT licensed 6 new international service gateways in Nanning, Qingdao, Kunming and Haikou, the first
+    addition in 30 years
   value: 6
-  unit: "gateways"
+  unit: gateways
   kind: fact
   conditions:
-    date: "2024-07-10"
+    date: '2024-07-10'
     assignment: CT Kunming+Haikou; CM Nanning+Haikou; CU Qingdao+Haikou
   source_id: caict_2024_07_gateway_interpretation
   locator: Paragraph 3
-  quote: "中国电信在昆明、海口设立国际通信业务出入口局，中国移动在南宁、海口设立国际通信业务出入口局，中国联通在青岛、海口设立国际通信业务出入口局"
+  quote: 中国电信在昆明、海口设立国际通信业务出入口局，中国移动在南宁、海口设立国际通信业务出入口局，中国联通在青岛、海口设立国际通信业务出入口局
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
-  notes: ""
+  tier: C
+  confidence: low
+  notes: 'Verifier (PARTIAL): Value OK. Tier: newspaper report of CAICT experts, not a CAICT white paper -> tier C; seek MIIT
+    licence notice for tier A.'
+  verified: partial_fixed
 - id: ch09.intl.gateway_30_total
-  section: "9.5"
-  claim: Before July 2024, MIIT had approved 30 international service gateways in several cities, of which only the 9 in Beijing/Shanghai/Guangzhou carried international Internet
+  section: '9.5'
+  claim: Before July 2024, MIIT had approved 30 international service gateways in several cities, of which only the 9 in Beijing/Shanghai/Guangzhou
+    carried international Internet
   value: 30
-  unit: "gateways"
+  unit: gateways
   kind: fact
   conditions:
     internet_capable: 9
   source_id: caict_2024_07_gateway_interpretation
   locator: Paragraph 2
-  quote: "工信部批准三家基础电信企业在多个城市建设了30个国际通信业务出入口局，其中，仅北京、上海、广州三地设立的9个国际通信业务出入口局开通了国际互联网业务"
+  quote: 工信部批准三家基础电信企业在多个城市建设了30个国际通信业务出入口局，其中，仅北京、上海、广州三地设立的9个国际通信业务出入口局开通了国际互联网业务
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
-  notes: Distinction between voice/data gateways and Internet gateways.
+  tier: C
+  confidence: low
+  notes: 'Distinction between voice/data gateways and Internet gateways. Verifier (PARTIAL): Value OK; tier B -> C (as above).'
+  verified: partial_fixed
 - id: ch09.intl.gateway_rules_state_owned
-  section: "9.5"
-  claim: International gateways may only be applied for by wholly state-owned telecom operators and require MIIT approval; all international communications must pass through approved gateways
-  value: "国有独资 operators only"
-  unit: "1"
+  section: '9.5'
+  claim: International gateways may only be applied for by wholly state-owned telecom operators and require MIIT approval;
+    all international communications must pass through approved gateways
+  value: 国有独资 operators only
+  unit: '1'
   kind: fact
   conditions:
     regulation: 信息产业部令第22号 (2002)
   source_id: miit_2002_gateway_rules
   locator: 第五条, 第六条
-  quote: "国际通信出入口应当由国有独资的电信业务经营者申请设置，并承担其运行维护工作"
+  quote: 国际通信出入口应当由国有独资的电信业务经营者申请设置，并承担其运行维护工作
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Art. 3 defines channel gateways (cable landing/entry stations), service gateways (incl. Internet international egress routers), border gateways. Art. 6 - international communications must go through approved gateways.
+  notes: Art. 3 defines channel gateways (cable landing/entry stations), service gateways (incl. Internet international egress
+    routers), border gateways. Art. 6 - international communications must go through approved gateways.
+  verified: match
 - id: ch09.intl.crossborder_2014
-  section: "9.5"
-  claim: End-2014, 19 cross-border stations linking 11 neighbouring countries by terrestrial cable, total capacity above 7600 Gb/s (excluding HK/Macau)
+  section: '9.5'
+  claim: End-2014, 19 cross-border stations linking 11 neighbouring countries by terrestrial cable, total capacity above 7600
+    Gb/s (excluding HK/Macau)
   value: 7600
-  unit: "Gb/s (lower bound)"
+  unit: Gb/s (lower bound)
   kind: measured
   conditions:
-    date: "2014-12"
+    date: 2014-12
     stations: 19
     countries: 11
   source_id: itu_wsis_2015_china_interconnection
   locator: Slide 'International Transmission Networks'
-  quote: "China has established 19 cross-border stations to connect 11 adjacent countries"
+  quote: China has established 19 cross-border stations to connect 11 adjacent countries
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Countries - North Korea, Russia, Mongolia, Kazakhstan, Kyrgyzstan, Tajikistan, India, Nepal, Myanmar, Laos, Vietnam.
+  verified: match
 - id: ch09.intl.crossborder_caict
-  section: "9.5"
-  claim: CAICT, cross-border terrestrial cables connect 12 countries via 17 border crossings with 70 TB+ bandwidth; submarine 4 landing points, 9 cables, 40 TB+
+  section: '9.5'
+  claim: CAICT, cross-border terrestrial cables connect 12 countries via 17 border crossings with 70 TB+ bandwidth; submarine
+    4 landing points, 9 cables, 40 TB+
   value: 70
-  unit: "Tb/s (lower bound; source writes 'TB')"
+  unit: Tb/s (lower bound; source writes 'TB')
   kind: measured
   conditions:
     countries: 12
@@ -1734,35 +1985,36 @@ records:
     date: undated, approx. 2018
   source_id: caict_escap_intl_cable
   locator: Slide 7 'Cross-border Terrestrial Cables and Submarine Cables in China'
-  quote: "Cross-border terrestrial cables connect to neighboring countries 12 countries, 17 border crossings 70 TB+ bandwidth"
+  quote: Cross-border terrestrial cables connect to neighboring countries 12 countries, 17 border crossings 70 TB+ bandwidth
   retrieved: 2026-11-02
   tier: B
   confidence: med
-  notes: Undated; 'TB' probably means Tb/s. DISAGREEMENT with ITU 2015 deck (19 stations, 11 countries) - definitional (stations vs crossings) and date difference. Terrestrial capacity > submarine capacity here contrasts with global norm.
+  notes: Undated; 'TB' probably means Tb/s. DISAGREEMENT with ITU 2015 deck (19 stations, 11 countries) - definitional (stations
+    vs crossings) and date difference. Terrestrial capacity > submarine capacity here contrasts with global norm.
+  verified: match
 - id: ch09.intl.cmcc_intl_2025
-  section: "9.5"
-  claim: China Mobile international transmission bandwidth 406 Tb/s, 100+ submarine and terrestrial cable resources, 446 PoPs (end-2025)
+  section: '9.5'
+  claim: China Mobile international transmission bandwidth 406 Tb/s, 100+ submarine and terrestrial cable resources, 446 PoPs
+    (end-2025)
   value: 406
-  unit: "Tb/s"
+  unit: Tb/s
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     pops: 446
   source_id: cmcc_ar_2025_a
   locator: 国际信息基础设施布局持续优化 paragraph
-  quote: "公司已拥有通达全球的 100 余 条海陆缆资源、406Tbps 国际传输总带宽，446 个 POP 点覆盖全球主要国家和地区"
+  quote: 公司已拥有通达全球的 100 余 条海陆缆资源、406Tbps 国际传输总带宽，446 个 POP 点覆盖全球主要国家和地区
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: Transmission bandwidth (capacity on cables) is not the same metric as Internet exit bandwidth.
-# =====================================================================
-# 9.6 US and China compared (inputs only)
-# =====================================================================
+  verified: match
 - id: ch09.cmp.us_longhaul_map
-  section: "9.6"
+  section: '9.6'
   claim: US long-haul fiber map (2015), 273 nodes/cities, 2411 links, 542 conduits with multiple tenants
   value: 542
-  unit: "conduits"
+  unit: conduits
   kind: measured
   conditions:
     nodes: 273
@@ -1770,167 +2022,190 @@ records:
     year: 2015
   source_id: durairajan_sigcomm_2015
   locator: Sec. 2.5 'The US Long-haul Fiber Map'
-  quote: "contains 273 nodes/cities, 2411 links, and 542 conduits (with multiple tenants)"
+  quote: contains 273 nodes/cities, 2411 links, and 542 conduits (with multiple tenants)
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Authors state map is not complete. No total US route-km in this paper's abstract/sec 2.5.
+  verified: match
 - id: ch09.cmp.us_lumen_route_miles
-  section: "9.6"
+  section: '9.6'
   claim: Lumen fiber network over 340,000 route miles globally (mostly long-haul), 2025-12-31
   value: 340000
-  unit: "route miles (lower bound)"
+  unit: route miles (lower bound)
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     scope: global, owned and leased
   source_id: lumen_10k_2025
   locator: Item 1, 'Our Network' / 'Connectivity and Coverage'
-  quote: "our network included over 340,000 route miles of fiber optic plant, most of which consists of long-haul fiber connections"
+  quote: our network included over 340,000 route miles of fiber optic plant, most of which consists of long-haul fiber connections
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Quote shortened by dropping internal quotation marks around 'long-haul'. 340,000 mi = ~547,000 km (calc). One US carrier only; no US national total found.
+  notes: Quote shortened by dropping internal quotation marks around 'long-haul'. 340,000 mi = ~547,000 km (calc). One US
+    carrier only; no US national total found.
+  verified: match
 - id: ch09.cmp.us_fiber_passings_2025
-  section: "9.6"
+  section: '9.6'
   claim: US homes passed by fiber, ~84.6 million unique (>60% of households) as of Sept 2025; 40 million connected
   value: 8.46e7
-  unit: "households passed"
+  unit: households passed
   kind: measured
   conditions:
-    date: "2025-09"
+    date: 2025-09
     connected_households: 4.0e7
   source_id: fba_cartesian_cost_2025
   locator: Section 1 'Fiber year in review'
-  quote: "about 84.6M homes in total"
+  quote: about 84.6M homes in total
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: Full sentence reads 'more than 60% of US homes are now passed by fiber, about 84.6M homes in total' (Section 1). Same report - 'Of those with fiber access, 40M households are connected to fiber'. FBA press counts 98.3M passings including overlaps.
+  notes: Full sentence reads 'more than 60% of US homes are now passed by fiber, about 84.6M homes in total' (Section 1).
+    Same report - 'Of those with fiber access, 40M households are connected to fiber'. FBA press counts 98.3M passings including
+    overlaps.
+  verified: match
 - id: ch09.cmp.us_fiber_passings_incl_overlap
-  section: "9.6"
+  section: '9.6'
   claim: US total FTTH passings including overlaps 98.3 million; take rate 46.5% for primary passings (2025)
   value: 9.83e7
-  unit: "passings"
+  unit: passings
   kind: measured
   conditions:
-    date: "2025"
+    date: '2025'
     take_rate_pct: 46.5
   source_id: fba_2025_12_press
   locator: Paragraphs 1 and 3
-  quote: "totaling 98.3 million FTTH passings when including homes with more than one passing"
+  quote: totaling 98.3 million FTTH passings when including homes with more than one passing
   retrieved: 2026-11-02
   tier: C
   confidence: low
   notes: Tier C press; definitional difference vs 84.6M unique homes.
+  verified: match
 - id: ch09.cmp.us_verizon_na_latency
-  section: "9.6"
-  claim: Verizon North America backbone round-trip latency SLA 45 ms; measured monthly averages Oct 2025 to Sep 2026 about 33.3 to 36.4 ms
+  section: '9.6'
+  claim: Verizon North America backbone round-trip latency SLA 45 ms; measured monthly averages Oct 2025 to Sep 2026 about
+    33.3 to 36.4 ms
   value: 45
-  unit: "ms (round-trip, SLA max)"
+  unit: ms (round-trip, SLA max)
   kind: spec_max
   conditions:
-    measured_range_ms: [33.335, 36.421]
+    measured_range_ms:
+    - 33.335
+    - 36.421
     scope: between Verizon hub routers in North America
   source_id: verizon_latency_page
   locator: Targets list and 'Verizon Enterprise Latency Statistics' table, North America row
-  quote: "45ms or less for regional round trips within North America."
+  quote: 45ms or less for regional round trips within North America.
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: ROUND-TRIP. China targets (709号 20 ms) are ONE-WAY; CMCC 1-5-20 ms unspecified. Do not compare directly without conversion.
+  verified: match
 - id: ch09.cmp.us_bead_42p45b
-  section: "9.6"
-  claim: US BEAD program funding $42.45 billion (IIJA 2021); 2025 restructuring made subgrantee selection technology neutral, removing fiber preference
+  section: '9.6'
+  claim: US BEAD program funding $42.45 billion (IIJA 2021); 2025 restructuring made subgrantee selection technology neutral,
+    removing fiber preference
   value: 42.45
-  unit: "billion USD"
+  unit: billion USD
   kind: fact
   conditions:
-    date: "2025-06-06"
+    date: '2025-06-06'
   source_id: ntia_bead_2025_notice
   locator: SUMMARY and Section 3 'Technology Neutrality'
-  quote: "which provides $42.45 billion of funding to achieve high-speed broadband access throughout the United States"
+  quote: which provides $42.45 billion of funding to achieve high-speed broadband access throughout the United States
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: Planning-model contrast - US subsidy plus market, technology-neutral since 2025; China state-owned operators with ministry targets (双千兆 plan).
+  notes: Planning-model contrast - US subsidy plus market, technology-neutral since 2025; China state-owned operators with
+    ministry targets (双千兆 plan).
+  verified: match
 - id: ch09.cmp.us_bead_latency_100ms
-  section: "9.6"
+  section: '9.6'
   claim: BEAD priority broadband project requires >= 100/20 Mb/s and latency <= 100 ms
   value: 100
-  unit: "ms"
+  unit: ms
   kind: spec_max
   conditions:
     speed_down_Mbps: 100
     speed_up_Mbps: 20
   source_id: ntia_bead_2025_notice
   locator: Section 3.1 Priority Broadband Projects
-  quote: "has a latency less than or equal to 100 milliseconds"
+  quote: has a latency less than or equal to 100 milliseconds
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: Access-level latency, not backbone.
+  verified: match
 - id: ch09.cmp.oecd_fibre_share_2024
-  section: "9.6"
+  section: '9.6'
   claim: OECD average share of fibre in fixed broadband subscriptions end-2024
   value: 47
-  unit: "%"
+  unit: '%'
   kind: measured
   conditions:
-    date: "2024-12"
+    date: 2024-12
   source_id: oecd_2025_10_broadband_release
   locator: Section 'Fibre is a key enabler'
-  quote: "The share of fibre in total fixed broadband subscriptions across the OECD reached 47% by the end of 2024"
+  quote: The share of fibre in total fixed broadband subscriptions across the OECD reached 47% by the end of 2024
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  notes: US-specific OECD value not retrieved from primary spreadsheet (see gaps). China not in OECD; China's comparable metric is FTTH/O port share 96.8% (ports, not subscriptions).
+  notes: US-specific OECD value not retrieved from primary spreadsheet (see gaps). China not in OECD; China's comparable metric
+    is FTTH/O port share 96.8% (ports, not subscriptions).
+  verified: match
 - id: ch09.cmp.cn_fixed_bb_household_penetration
-  section: "9.6"
+  section: '9.6'
   claim: China household fixed broadband penetration 117.9 per 100 households; 583 million household broadband users (2025)
   value: 117.9
-  unit: "per 100 households"
+  unit: per 100 households
   kind: measured
   conditions:
-    date: "2025-12-31"
+    date: '2025-12-31'
     household_users: 5.83e8
   source_id: ct_ar_2025_a
   locator: 行业情况 3
-  quote: "其中家庭宽带接入用户 5.83 亿户，家庭宽带普及率达到 117.9 部/百户"
+  quote: 其中家庭宽带接入用户 5.83 亿户，家庭宽带普及率达到 117.9 部/百户
   retrieved: 2026-11-02
   tier: B
   confidence: med
   notes: Cited from MIIT 2025 bulletin interpretation via CT annual report. >100 means multiple lines per household.
-
+  verified: match
 - id: ch09.l400.cmcc_tender_2023
-  section: "9.3"
-  claim: China Mobile 2023 inter-provincial backbone 400G OTN tender, about 1910 new OTN sets and 11190 400G line OTU ports; winners Huawei, ZTE, FiberHome
+  section: '9.3'
+  claim: China Mobile 2023 inter-provincial backbone 400G OTN tender, about 1910 new OTN sets and 11190 400G line OTU ports;
+    winners Huawei, ZTE, FiberHome
   value: 11190
-  unit: "400G line OTU ports (planned)"
+  unit: 400G line OTU ports (planned)
   kind: fact
   conditions:
-    date: "2023-11"
+    date: 2023-11
     otn_sets: 1910
   source_id: cww_2023_11_cmcc_400g_tender
   locator: Paragraph 1
-  quote: "预估采购规模为新增OTN设备1910台、400G线路OTU端口11190个"
+  quote: 预估采购规模为新增OTN设备1910台、400G线路OTU端口11190个
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: Tier C trade news on tender notice. Gloss 'estimated procurement 1910 new OTN units and 11190 400G line OTU ports'. Consistent with 1900+ sets and 11000+ ports reported after completion.
+  notes: Tier C trade news on tender notice. Gloss 'estimated procurement 1910 new OTN units and 11190 400G line OTU ports'.
+    Consistent with 1900+ sets and 11000+ ports reported after completion.
+  verified: match
 - id: ch09.dsxs.cmcc_compute_2024
-  section: "9.2"
-  claim: China Mobile end-2024 general compute 8.5 EFLOPS (FP32) and intelligent compute 29.2 EFLOPS (FP16); 1-5-20 ms three-tier latency circle; 400G backbone named a 2024 central-SOE top-10 mega-project
+  section: '9.2'
+  claim: China Mobile end-2024 general compute 8.5 EFLOPS (FP32) and intelligent compute 29.2 EFLOPS (FP16); 1-5-20 ms three-tier
+    latency circle; 400G backbone named a 2024 central-SOE top-10 mega-project
   value: 29.2
-  unit: "EFLOPS (FP16)"
+  unit: EFLOPS (FP16)
   kind: measured
   conditions:
-    date: "2024-12-31"
+    date: '2024-12-31'
     general_EFLOPS_FP32: 8.5
   source_id: cmcc_ar_2024_en
   locator: Chairman's statement / business review, 'Our computility network continued to lead the industry'
-  quote: "Our general-purpose computility capacity has reached 8.5 EFLOPS (FP32), and our intelligent computility capacity has reached 29.2 EFLOPS (FP16)."
+  quote: Our general-purpose computility capacity has reached 8.5 EFLOPS (FP32), and our intelligent computility capacity
+    has reached 29.2 EFLOPS (FP16).
   retrieved: 2026-11-02
   tier: B
   confidence: high
   notes: 2025 value 92.5 EFLOPS FP16 includes leased capacity (definition change; growth not like-for-like).
+  verified: match

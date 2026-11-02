@@ -1,0 +1,923 @@
+# Independent verification of book/ledger/ch05.yaml and book/ledger/ch05_equations.yaml
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: direct HTTPS to ieee802.org, arxiv.org, nvidia.com, research.google etc. refused by the proxy; all sources read via Exa crawler
+# copies (full text for Al-Fares, Clos, Jupiter Rising, HPN Secs 1-4, IEEE objective PDFs, NVIDIA pages, Credo briefs; search-excerpt
+# full paragraphs for Lightwave Fabrics, TPU v4, Jupiter Evolving, Sirius, Apollo, Llama 3, MegaScale, Meta SIGCOMM'24/'26, ZTE Astral,
+# Thakur, Patarasuk, CloudMatrix, UALink (verbatim mirror)). Arithmetic checks: k=48 -> 48^3/4=27648, (k/2)^2=576; Clos 6N^1.5-3N
+# -> 1188 (N=36), 186737 (N=1000); TPU v4 6x16/2=48, 64x96=6144; Jupiter 64x512x40G=1.31 Pb/s.
+# IEEE P802.3dj status: 2nd SA recirculation closed 15 Aug 2026 (86% approve), D3.3 generated Sept 2026; not yet a standard on 2026-11-02.
+summary:
+  checked: 143
+  match: 129
+  mismatch: 0
+  partial: 14
+  unreachable: 0
+results:
+- id: ch05.clos.fattree_hosts_k48
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.2, p. 3
+  evidence: The network supports 27,648 hosts, made up of 1,152 subnets with 24 hosts each.
+  action: 'none (crawler ''net work'' normalized; also stated in Sec. 1: ''providing full bandwidth to up 27,648 hosts'')'
+- id: ch05.clos.fattree_paths_k48
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.2, p. 3
+  evidence: There are 576 equal-cost paths between any given pair of hosts in different pods.
+  action: none
+- id: ch05.clos.fattree_cost_k48
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.2, p. 3; cost assumptions Sec. 2.1.4
+  evidence: The cost of deploying such a network architecture would be $8.64M, compared to $37M for the traditional techniques described earlier.
+  action: none
+- id: ch05.clos.oversub_typical_2008
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.1.2, p. 2
+  evidence: Typical designs are oversubscribed by a factor of 2.5:1 (400 Mbps) to 8:1 (125 Mbps) [1].
+  action: none
+- id: ch05.clos.oversub_5to1_meaning
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.1.2, p. 2
+  evidence: An oversubscription value of 5:1 means that only 20% of available host bandwidth is available for some communication patterns.
+  action: none
+- id: ch05.clos.ecmp_path_limit_2008
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.1.3, p. 2
+  evidence: current ECMP implementations limit the multiplicity of paths to 8–16
+  action: none
+- id: ch05.clos.single_root_limit
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.1.3, p. 2
+  evidence: would be limited to 1,280 nodes (corresponding to the bandwidth available from a single 128-port 10 GigE switch)
+  action: none
+- id: ch05.clos.clos_n36_crosspoints
+  status: MATCH
+  found_value: ''
+  found_locator: p. 407, Fig. 2
+  evidence: In total, there are 1188 crosspoints which are less than the 1296 crosspoints required by equation (1).
+  action: none
+- id: ch05.clos.clos_n1000_crosspoints
+  status: MATCH
+  found_value: ''
+  found_locator: Table I, p. 408
+  evidence: 1,000 1,000,000 186,737
+  action: none
+- id: ch05.clos.jupiter_bisection
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.5; Table 2
+  evidence: In its largest configuration, Jupiter supports 1.3 Pbps bisection bandwidth among servers.
+  action: none
+- id: ch05.clos.jupiter_table_row
+  status: MATCH
+  found_value: ''
+  found_locator: Table 2
+  evidence: Jupiter 2012 16x40G 16x40G 8x128x40G (B) 128x40G (NB) 10/40G nx10G/ nx40G 1.3P
+  action: none
+- id: ch05.clos.fourpost_bisection_2004
+  status: MATCH
+  found_value: ''
+  found_locator: Table 2
+  evidence: Four-Post CRs 2004 vendor 48x1G - - 10G 1G 2T
+  action: none
+- id: ch05.clos.saturn_bisection_2009
+  status: MATCH
+  found_value: ''
+  found_locator: Table 2
+  evidence: Saturn 2009 24x10G 24x10G 4x288x10G (NB) 288x10G (NB) 10G nx10G 207T
+  action: none
+- id: ch05.clos.jupiter_growth
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: scaling in capacity by 100x over ten years to more than 1Pbps of bisection bandwidth.
+  action: none
+- id: ch05.clos.dc_bw_doubling
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 1, Fig. 1
+  evidence: Bandwidth demands in the datacenter are doubling every 12-15 months (Figure 1)
+  action: none
+- id: ch05.clos.dgx_h100_su_rail
+  status: MATCH
+  found_value: ''
+  found_locator: Network Fabrics, Compute InfiniBand Fabric
+  evidence: Each group of 32 nodes is rail-aligned. Traffic per rail of the DGX H100 systems is always one hop away from the other 31 nodes
+  action: none
+- id: ch05.clos.dgx_h100_4su_switches
+  status: MATCH
+  found_value: ''
+  found_locator: Table 4 (compute fabric component count)
+  evidence: 4 127 1016 32 16 1020 1024
+  action: none
+- id: ch05.clos.dgx_h100_16k_cables
+  status: MATCH
+  found_value: ''
+  found_locator: DGX SuperPOD Architecture, Table 3
+  evidence: 56 2048 16384 512 512 256 16384 16384 16384
+  action: none
+- id: ch05.clos.dgx_h100_fabric_def
+  status: MATCH
+  found_value: ''
+  found_locator: Key Components, Table 1
+  evidence: Rail-optimized, full fat-tree network with eight NDR400 connections per system
+  action: none
+- id: ch05.cu.ieee_40gcr4_7m
+  status: MATCH
+  found_value: ''
+  found_locator: Slide 'IEEE P802.3ba Nomenclature (Table 80-1)'
+  evidence: 40 Gb/s PHY using 40GBASE-R encoding over four lanes of shielded balanced copper cabling, with reach up to at least 7 m
+  action: Value matches. Contribution quotes ratified 802.3ba Table 80-1; cite IEEE Std 802.3-2022 Table 80-1 / Clause 85 as tier A (see tier_a_replacements).
+- id: ch05.cu.ieee_100gcr4_5m
+  status: MATCH
+  found_value: ''
+  found_locator: 'Comment #10 (proposed Table 80-1 text)'
+  evidence: 100 Gb/s PHY using 100GBASE-R encoding over 4 lanes 100GBASE-CR4 of shielded balanced copper cabling, with reach up to at least 5 m
+  action: Value matches; crawler interleaves '100GBASE-CR4' inside the sentence, quote reproduces it. Prefer IEEE Std 802.3-2022 Clause 92 / Table 80-1 as tier A.
+- id: ch05.cu.ieee_50g_cr_3m
+  status: MATCH
+  found_value: ''
+  found_locator: Objectives 2 of 2
+  evidence: Define single-lane 50 Gb/s PHYs for operation over copper twin-axial cables with lengths up to at least 3m.
+  action: 'none; tier B objective correct. Ratified equivalent: IEEE Std 802.3cd-2018 Clause 136 (now in 802.3-2022).'
+- id: ch05.cu.ieee_100g_lane_cr_2m
+  status: MATCH
+  found_value: ''
+  found_locator: Slide '100GEL Copper Cables in IEEE today'
+  evidence: Define a single-lane 100 Gb/s PHY for operation over twin-axial copper cables with lengths up to at least 2 meters
+  action: 'Value matches (contribution restating the 802.3ck objective). IEEE Std 802.3ck-2022 (Board approved 2022-09-21) Clause 162 is ratified: cite it as tier A once the clause text is read via IEEE
+    GET.'
+- id: ch05.cu.ieee_200g_lane_cr_1m
+  status: MATCH
+  found_value: ''
+  found_locator: Adopted P802.3dj Objectives (14 Mar 2024) p. 1
+  evidence: over 1 pair of copper twin-axial cables in each direction with a reach of up to at least 1.0 meter
+  action: 'none for value. Supersession check: P802.3dj passed 2nd SA recirculation 15 Aug 2026, D3.3 in Sept 2026, not yet RevCom-approved as of 2026-11; keep tier B and condition ''objective; draft''.'
+- id: ch05.cu.ieee_3dj_backplane_loss
+  status: MATCH
+  found_value: ''
+  found_locator: Objectives p. 1
+  evidence: over 1 lane over electrical backplanes supporting a die-to-die insertion loss <= 40 dB at 53.125 GHz
+  action: none; same ratification caveat as ch05.cu.ieee_200g_lane_cr_1m.
+- id: ch05.cu.nvidia_xdr_dac_lt_0p7m
+  status: MATCH
+  found_value: ''
+  found_locator: FAQ 'Why are there no passive DAC copper cables for XDR?'
+  evidence: At XDR's 200G PAM4 signaling rates, passive DAC cables have a maximum usable length of under 0.7 meters
+  action: none
+- id: ch05.cu.nvidia_xdr_active_reach
+  status: MATCH
+  found_value: ''
+  found_locator: FAQ 'What speeds and distances does LinkX support?'
+  evidence: copper options (LACC/AEC) reach up to 2.5–3 meters, while single-mode optical transceivers reach up to 500 meters (DR4)
+  action: none; FAQ also states 'all NVIDIA XDR copper cables are active ... 2.5-3 meters'.
+- id: ch05.cu.nvidia_aec_lacc_power
+  status: MATCH
+  found_value: ''
+  found_locator: FAQ 'AEC vs LACC'
+  evidence: consuming ~27 watts per end. LACCs use lower-power linear amplifier ICs (~4 watts) to extend signal reach up to 2.5 meters
+  action: Value matches; full FAQ text read, confidence can be high. Note AEC reach 'up to three meters'.
+- id: ch05.cu.nvidia_ndr_dac_2m
+  status: MATCH
+  found_value: ''
+  found_locator: Direct Attach Copper (DAC) Cables
+  evidence: DACs offer length of 0.5m to 2-meters for straight cables, and up to 3-meters for splitters
+  action: none
+- id: ch05.cu.nvidia_ndr_acc_5m
+  status: MATCH
+  found_value: ''
+  found_locator: Active Copper Cables (ACCs)
+  evidence: ACCs offer length of up to 3-meters for the straight cables, and 4- and 5-meters for splitters.
+  action: none
+- id: ch05.cu.credo_aec_800g_7m
+  status: MATCH
+  found_value: ''
+  found_locator: p. 1
+  evidence: A 800G AEC specifically designed for rack-to-rack connectivity, support up to 7m reach, consume up to 50% less power than optical
+  action: none
+- id: ch05.cu.credo_aec_power_claim_75
+  status: MATCH
+  found_value: ''
+  found_locator: p. 1
+  evidence: these cables support up to 7m reach, consume up to 75% less power than optics, cost up to 50% less than optics
+  action: none
+- id: ch05.cu.meta_rtsw_dac_ctsw_smf
+  status: PARTIAL
+  found_value: ''
+  found_locator: Gangidi et al. SIGCOMM 2024, Sec. 3.2 'The Network', paragraph 'AI Zone'
+  evidence: The RTSWs connect to CTSWs via single-mode fiber and 400G pluggable transceivers.
+  action: 'Change locator from ''Sec. 4 (AI Zone)'' to ''Sec. 3.2, AI Zone paragraph''. Same paragraph: ''cross-AI zone connectivity is oversubscribed by design'' (no ratio).'
+- id: ch05.cu.megascale_aoc_split
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.6
+  evidence: one 400G downlink port is split into two 200G downlink ports with specific AOC cables.
+  action: none
+- id: ch05.cu.broadcom_copper_rack_limit
+  status: MATCH
+  found_value: ''
+  found_locator: p. 1
+  evidence: with serialized data rates pushing past 200G/lane, passive copper interconnects are unable to extend beyond the physical distances within a single rack.
+  action: none
+- id: ch05.ai.allreduce_2x_bound
+  status: MATCH
+  found_value: ''
+  found_locator: Lemma 5, Sec. 3
+  evidence: This indicates that the best of any all-reduce algorithm can do is to achieve roughly 2 times the time to send the msize-byte data.
+  action: none
+- id: ch05.ai.rabenseifner_threshold
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 4.5
+  evidence: we use Rabenseifner's algorithm for long messages (> 2 KB) and the binomial tree algorithm for short messages (≤ 2 KB).
+  action: none
+- id: ch05.ai.nccl_tree_latency_180x
+  status: MATCH
+  found_value: ''
+  found_locator: Performance at scale, Fig. 3
+  evidence: The difference from ring increases with the scale, with up to 180x improvement at 24k GPUs.
+  action: none
+- id: ch05.ai.llama3_cluster_24k
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.3.1 (Network topology)
+  evidence: Our RoCE-based AI cluster comprises 24K GPUs connected by a three-layer Clos network
+  action: none
+- id: ch05.ai.llama3_pod_3072
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.3.1
+  evidence: 192 such racks are connected by Cluster Switches to form a pod of 3,072 GPUs with full bisection bandwidth
+  action: none
+- id: ch05.ai.llama3_oversub_1to7
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.3.1
+  evidence: network connectivity at the aggregation layer does not maintain full bisection bandwidth and instead has an oversubscription ratio of 1:7.
+  action: none
+- id: ch05.ai.llama3_400g_per_gpu
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.3.1
+  evidence: Both RoCE and Infiniband clusters leverage 400 Gbps interconnects between GPUs.
+  action: none
+- id: ch05.ai.llama3_16_flows
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.3.1 (Load balancing)
+  evidence: our collective library creates 16 network flows between two GPUs, instead of just one
+  action: none
+- id: ch05.ai.meta_zone_4k
+  status: PARTIAL
+  found_value: ~4K GPUs per zone (288 racks x 16 GPUs)
+  found_locator: Zeng et al. SIGCOMM 2026, Sec. 2 'Multi-building'
+  evidence: Each AI Zone can support up to 288 racks with 16 GPUs per rack (∼4K GPUs per zone)
+  action: Value 4608 is our product 288x16, not stated in source. Either record value 288 racks / 16 GPUs per rack, or keep 4608 with kind model_param and note 'derived; source says ~4K'.
+- id: ch05.ai.meta_oversub_2p8
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2 (Multi-hop fabric)
+  evidence: reduces the cross-AI-Zone over-subscription ratio from 1:7 to 1:2.8 to better support multi dimensional parallelism at larger scale.
+  action: 'none. Also confirmed in arXiv 2510.20171 (Si et al.): inter-DC traffic sees the same 1:2.8.'
+- id: ch05.ai.meta_129k_h100
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 6.1
+  evidence: Built in phases, the Cluster has about 129,000 H100 GPUs [32] at the completion.
+  action: none
+- id: ch05.ai.meta_latency_hierarchy
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2 (Latency)
+  evidence: across racks within the same AI zone, across AI zones, and across data center buildings can experience 7×, 15×, and 30× higher latency, respectively.
+  action: none
+- id: ch05.ai.hpn_segment_1k
+  status: PARTIAL
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 3 'HPN Architecture Overview' (Sec. 5.2 not reached in crawl)
+  evidence: By fully utilizing the 51.2Tbps switching chip's capability, HPN enables 1024 GPUs to be interconnected through a single layer network, called a segment
+  action: Value corroborated in Sec. 3; Sec. 5.2 quote not seen by verifier. Re-read Sec. 5.2 or swap to the Sec. 3 sentence.
+- id: ch05.ai.hpn_pod_15k
+  status: MATCH
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 6.2
+  evidence: we achieve the goal of containing 15K cards within the same Pod and we provide each GPU with 400Gbps network accessing capacity.
+  action: none
+- id: ch05.ai.hpn_core_oversub_15
+  status: PARTIAL
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 3 'HPN Architecture Overview'; restated Sec. 6.2
+  evidence: In our design, we opted for an oversubscription of 15:1 in the Aggregation-Core layer.
+  action: 'Quote and value match; change locator ''Sec. 2 / Sec. 6.2'' to ''Sec. 3; Sec. 6.2''. Sec. 6.2 adds: 15:1 ''releases 87.5% more ports on the Aggregation switches''.'
+- id: ch05.ai.hpn_host_3p2t
+  status: PARTIAL
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 3 'HPN Architecture Overview' (Sec. 5.2 not reached in crawl)
+  evidence: each GPU has a dedicated 400Gbps of RDMA network throughput, resulting in a total bandwidth of 3.2Tbps
+  action: Value corroborated in Sec. 3; Sec. 5.2 quote not seen. Swap to Sec. 3 sentence or re-read Sec. 5.2.
+- id: ch05.ai.hpn_nvlink_ratio
+  status: PARTIAL
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 3 'HPN Architecture Overview' (Sec. 5.2 not reached in crawl)
+  evidence: Each GPU can directly communicate with other GPUs via this intra-host network with 400GBps-900GBps (bidirectional).
+  action: Sec. 5.2 quote not seen. Sec. 3 gives 400-900 GB/s bidirectional, i.e. 200-450 GB/s per direction vs 50 GB/s NIC, consistent with 4-9x. State direction in conditions.
+- id: ch05.ai.hpn_jobs_under_1k
+  status: PARTIAL
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 3 'HPN Architecture Overview', Fig. 6
+  evidence: 'Figure 6 quantifies our benefit: about 96.3% of in-production LLM training jobs take less than 1K GPUs'
+  action: Change locator from 'Sec. 2, Fig. 6' to 'Sec. 3, Fig. 6'.
+- id: ch05.ai.hpn_cost_saving
+  status: MATCH
+  found_value: ''
+  found_locator: Qian et al. SIGCOMM 2024, Sec. 6.2 '15K GPUs in One Pod'
+  evidence: saving the overall network building cost by around 30% according to our statistics.
+  action: Full text read; raise confidence to high.
+- id: ch05.ai.megascale_tor_split
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.6 (Network topology)
+  evidence: The total bandwidth of each Tomahawk chip is 25.6Tbps with 64× 400Gbps ports.
+  action: none
+- id: ch05.ai.megascale_nics
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.6
+  evidence: eight 200G NICs on the server is connected to eight different switches in a multi-rail way.
+  action: none
+- id: ch05.ai.megascale_mfu
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: MegaScale achieves 55.2% Model FLOPs Utilization (MFU) when training a 175B LLM model on 12,288 GPUs
+  action: none
+- id: ch05.ai.tencent_8x400g
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.1 (TCCL), p. 6
+  evidence: 机内互联网络NVLink （通信带宽为400 GB/s） 和机间互联网络RoCE （400 Gbit/s×8 NIC =3.2 Tbit/s）
+  action: none
+- id: ch05.ai.tencent_100k_gpu
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract (zh and en)
+  evidence: 提出了一种能够实现超10万GPU集群互联的无损高性能网络方案
+  action: Full PDF text read; raise confidence to high.
+- id: ch05.ai.tencent_nvlink_roce_latency
+  status: PARTIAL
+  found_value: 200 ns vs 2 μs (Sec. 5); 200 ns vs 4 μs (Sec. 3.3)
+  found_locator: Li et al. ZTE Technol. J. 2025, Sec. 3.3 and evaluation section (Fig. 6 text)
+  evidence: NVLink 和 RoCE 网络的传输时延分别为 200 ns 和 4 μ s
+  action: Quote verified, but the same paper states RoCE latency 4 μs in Sec. 3.3. Record the internal disagreement in notes or add a second record; use a range [2, 4] us.
+- id: ch05.ai.tencent_a100_flow_180g
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 1, item 3
+  evidence: 在一个拥有1 000个NVIDIA A100卡的集群中，每个流的峰值带宽可达180 Gbit/s，而此时流的数量仅为4 000
+  action: none
+- id: ch05.ai.tencent_2023_1p6t
+  status: PARTIAL
+  found_value: ''
+  found_locator: cloud.tencent.com/developer/article/2234084, '超带宽计算节点' section
+  evidence: 计算网络平面配备8张RoCE网卡，提供1.6Tbps的超高带宽接入。
+  action: Quote does not contain the value 1.6 Tb/s (hard rule 2). Append this sentence to the quote. Page is a developer-community repost (InfoQ credits 腾讯网络平台团队); tier B acceptable, consider C.
+- id: ch05.ai.cx7_400g
+  status: MATCH
+  found_value: ''
+  found_locator: Product Specifications
+  evidence: Total Bandwidth 400 Gb/s InfiniBand Speeds NDR 400 Gb/s, HDR 200 Gb/s, EDR 100 Gb/s
+  action: none
+- id: ch05.ai.cx8_800g
+  status: MATCH
+  found_value: ''
+  found_locator: Specifications
+  evidence: Maximum total bandwidth 800 Gb/s InfiniBand speeds 800/400/200/100 Gb/s Ethernet speeds 400/200/100/50/25 Gb/s
+  action: none
+- id: ch05.ai.dgx_h100_400g_nvlink
+  status: MATCH
+  found_value: ''
+  found_locator: Key Components, DGX H100 highlights
+  evidence: 2X faster networking and storage @ 400 Gbps InfiniBand/Ethernet with NVIDIA ConnectX®-7 smart network interface cards (SmartNICs).
+  action: none
+- id: ch05.su.nvlink4_900
+  status: MATCH
+  found_value: ''
+  found_locator: Specifications table
+  evidence: NVLink Bandwidth per GPU | 900 GB/s | 1,800 GB/s | 3,000 GB/s
+  action: none
+- id: ch05.su.nvlink5_1800
+  status: MATCH
+  found_value: ''
+  found_locator: Specifications table
+  evidence: NVLink Bandwidth per GPU | 900 GB/s | 1,800 GB/s | 3,000 GB/s
+  action: none
+- id: ch05.su.nvlink6_3000
+  status: MATCH
+  found_value: ''
+  found_locator: Intro and specifications table
+  evidence: The sixth-generation NVLink enables 3 TB/s of bandwidth per GPU for the NVIDIA Vera Rubin platform
+  action: none; page still marks specs 'Preliminary'. Re-check when Vera Rubin ships.
+- id: ch05.su.nvl72_130tbs
+  status: MATCH
+  found_value: ''
+  found_locator: Overview
+  evidence: NVLink Switch System provides 130 terabytes per second (TB/s) of low-latency GPU communications
+  action: none
+- id: ch05.su.nvl72_copper_cables
+  status: MATCH
+  found_value: ''
+  found_locator: NVLink cartridges
+  evidence: These cartridges accommodate over 5,000 active copper cables, delivering an impressive aggregate All-to-All bandwidth of 130 TB/s and 260 TB/s AllReduce bandwidth.
+  action: none. Same blog calls them 'energy efficient coaxial copper cables' in the Fig. 3 caption; Jensen keynote (via SemiAnalysis) says '5,000 NVLink cables. In total, 2 miles'.
+- id: ch05.su.nvl72_5184_cables
+  status: MATCH
+  found_value: ''
+  found_locator: Section 'NVSwitch With 288 Copper Cables Per Switch'
+  evidence: These skittish observers saw the NVLink scale up to 72 GPUs over 5,184 direct drive copper cables
+  action: none. A later SemiAnalysis piece (GB200 BOM, Jul 2024) derives 5184 = 72 GPUs x 72 differential pairs, one pair per cable.
+- id: ch05.su.nvl72_optics_20kw_claim
+  status: MATCH
+  found_value: ''
+  found_locator: Quoted keynote transcript
+  evidence: those transceivers and retimers alone would have cost 20,000 watts, 20 kilowatts of just transceivers alone, just to drive the NVLink spine.
+  action: none
+- id: ch05.su.nvl72_switch_tray
+  status: MATCH
+  found_value: ''
+  found_locator: Fifth-generation NVLink and NVLink Switch System
+  evidence: Each NVLink switch tray delivers 144 NVLink ports at 100 GB so the nine switches fully connect each of the 18 NVLink ports
+  action: none
+- id: ch05.su.nvlink_576_domain
+  status: MATCH
+  found_value: ''
+  found_locator: Fifth-generation NVLink and NVLink Switch System
+  evidence: connects up to 576 GPUs in a single NVLink domain with over 1 PB/s total bandwidth and 240 TB of fast memory.
+  action: 'Quote matches the 2024 blog. Supersession caution: no 576-GPU NVLink 5 system shipped; NVIDIA''s later NVL576 roadmap is Rubin Ultra. Phrase as ''2024 announced maximum''.'
+- id: ch05.su.nvl72_copper_cartridge
+  status: MATCH
+  found_value: ''
+  found_locator: GB200 NVL72 section
+  evidence: The GB200 NVL72 densely packs and interconnects the GPUs using a copper cable cartridge for operational simplicity.
+  action: none
+- id: ch05.su.ualink_lane_rate
+  status: MATCH
+  found_value: ''
+  found_locator: UALink_200 v1.0 Sec. 1.1 (read via verbatim mirror 2022hitoss.github.io/papers/UALink-Spec)
+  evidence: This Specification shall supports a max data rate of 200 GT/s per Lane and a max link width of 4 Lanes.
+  action: none; verifier read a verbatim mirror, not the consortium PDF.
+- id: ch05.su.ualink_station_800g
+  status: MATCH
+  found_value: ''
+  found_locator: UALink_200 v1.0 Sec. 1.1 (mirror)
+  evidence: The maximum bandwidth for each UALink Station shall be 800 Gigabits /s (Gbps).
+  action: none
+- id: ch05.su.ualink_1024
+  status: MATCH
+  found_value: ''
+  found_locator: UALink_200 v1.0 Sec. 1.1 (mirror)
+  evidence: The UPLI allows up to 1024 Accelerators or endpoints in a system to communicate using a 10-bit Identifier.
+  action: none
+- id: ch05.su.ironwood_9216
+  status: PARTIAL
+  found_value: ''
+  found_locator: docs.cloud.google.com/tpu/docs/tpu7x, System architecture table (2026-11 crawl)
+  evidence: With a 9,216-chip footprint per Pod, TPU7x shares many similarities with TPU v5p.
+  action: Value matches; quoted sentence '(144 cubes)' not in current page. Use this sentence, or cite google_ironwood_stack_blog_2025 ('a 9,216-chip system with 144 cubes').
+- id: ch05.su.ironwood_ici
+  status: PARTIAL
+  found_value: ''
+  found_locator: docs.cloud.google.com/tpu/docs/tpu7x, System architecture table (2026-11 crawl)
+  evidence: Bidirectional inter-chip interconnect (ICI) bandwidth per chip (GBps) | 1200 | 800 | 1200
+  action: Value matches; 'six ICI links ... 200 GBps' sentence not found in current page. Quote the table row instead.
+- id: ch05.su.ironwood_dcn_100g
+  status: MATCH
+  found_value: ''
+  found_locator: Specifications table
+  evidence: Data center network (DCN) bandwidth per chip (Gbps) | 50 | 100 | 100
+  action: none
+- id: ch05.su.cloudmatrix_384
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.1
+  evidence: CloudMatrix384 is engineered as an AI supernode that integrates 384 Ascend 910C neural-network processing units (NPUs) and 192 Kunpeng central processing units (CPUs)
+  action: Matches v2. Note arXiv v3 (2025-06-19) reverts to 'Ascend 910'; cite v2 explicitly and keep the naming note.
+- id: ch05.su.cloudmatrix_ub_bw
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.2/3.3
+  evidence: Each NPU is provisioned with up to 392 GB/s of unidirectional UB bandwidth
+  action: none
+- id: ch05.su.cloudmatrix_internode
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.1, Table 1
+  evidence: inter-node bandwidth degradation is under 3%, and inter-node latency increase is less than 1 µs.
+  action: none
+- id: ch05.su.broadcom_512_scaleup
+  status: MATCH
+  found_value: ''
+  found_locator: p. 1, Fig. 1
+  evidence: a 102.4T switch with a radix of 512 could support 12.8 Tb/s of all-to-all connectivity (over fiber) between 512 GPUs
+  action: none
+- id: ch05.su.lightpath_32
+  status: PARTIAL
+  found_value: ''
+  found_locator: Vijaya Kumar et al. HotNets 2024, Sec. 1
+  evidence: One wavelength can sustain up to 224 Gbps bandwidth, and programming optical switches on Lightpath can take up to 3.7 s.
+  action: 'Ledger value 224 Gb/s is not in the quote; append this sentence. Full text read: raise confidence to high. (''3.7 s'' likely a crawl loss of ''µs''; Lumorph uses 3.7 µs.)'
+- id: ch05.su.lumorph_speedup
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: (2) 74% faster rack-scale collective communication, and (3) 1.7X speedup in end-to-end ML training throughput.
+  action: none; abstract read in full (tier B preprint).
+- id: ch05.ocs.palomar_ports
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 4.1.1
+  evidence: tens of thousands of Palomar OCS with 136×136 duplex ports (each with eight spare ports) have been manufactured and deployed
+  action: none
+- id: ch05.ocs.palomar_mirrors
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.2.2
+  evidence: 176 micro-mirrors were fabricated on each MEMS die from which the best 136 mirrors were used for the switch
+  action: none
+- id: ch05.ocs.palomar_power
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 4.1.1
+  evidence: The maximum power consumption of the entire system is 108W
+  action: none
+- id: ch05.ocs.palomar_il
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 4.1.1, Fig. 10a
+  evidence: Insertion losses are typically less than 2dB for all 136×136 permutations of connectivity.
+  action: none. Apollo preprint describes the same OCS as 'worst-case insertion loss of 2dB'; note typical-vs-worst-case wording.
+- id: ch05.ocs.palomar_rl
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 4.1.1, Fig. 10b
+  evidence: Return loss caused by reflections is typically −46dB, with a nominal specification of less than −38dB.
+  action: none
+- id: ch05.ocs.palomar_availability
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 4.1.1
+  evidence: leads to the chassis typically achieving greater than 99.98% availability in the field today.
+  action: none
+- id: ch05.ocs.il_target_lightwave
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3.2.1
+  evidence: requires driving down the insertion loss through the OCS, ideally below 3dB.
+  action: none
+- id: ch05.ocs.il_target_apollo
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3 (requirements)
+  evidence: requires driving down the insertion loss through the OCS, ideally below 2dB.
+  action: none
+- id: ch05.ocs.commercial_switch_time
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3 (Faster switching time)
+  evidence: Commercial OCS switching times are typically between 10-20ms, limited by OCS control software and mirror configuration time.
+  action: 'none. For the Palomar gap: Apollo Sec. 2 says ''a highly reliable and manufacturable 136x136 OCS, with millisecond-scale switching time'' (tier B); consider a new record.'
+- id: ch05.ocs.fiber_latency
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3 (Low latency)
+  evidence: Latency is set by speed-of-light propagation delay, i.e., ~5ns per meter in optical fiber and ~3.3ns per meter in free space.
+  action: none
+- id: ch05.ocs.mems_drive_power
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 3 (Low power consumption)
+  evidence: A well designed high voltage driver circuit can consume on the order of tens of milliwatts of power per mirror and port.
+  action: none
+- id: ch05.ocs.lightwave_vs_static_cost
+  status: PARTIAL
+  found_value: ''
+  found_locator: Liu et al. SIGCOMM 2023, Sec. 4.2 (ML fabric), Table 1
+  evidence: the cost of a lightwave fabric is 6% more expensive and uses 1% more power compared to the baseline static fabric.
+  action: 'Quote verbatim; change locator from ''Sec. 2 / Table 1'' to ''Sec. 4.2, Table 1''; raise confidence to high. Abstract frames it differently: ''despite constituting less than 6% of the total system
+    cost''. Note in contested box.'
+- id: ch05.ocs.tpuv4_cost_share
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract; Sec. 'Cost of OCS Flexibility'
+  evidence: OCSes and underlying optical components are <5% of system cost and <3% of system power.
+  action: none
+- id: ch05.ocs.tpuv4_48_ocs
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2.2
+  evidence: each 4 3 block connects to 6 × 16 ÷ 2 = 48 OCSes.
+  action: none
+- id: ch05.ocs.tpuv4_6144_links
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 2
+  evidence: A TPUv4 supercomputer consists of 64 cubes, with a total of 6144 optical ICI links connected to 48 distinct optical circuit switches.
+  action: none
+- id: ch05.ocs.tpuv4_chips
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: The TPU v4 supercomputer is 4x larger at 4096 chips and thus nearly 10x faster overall
+  action: none
+- id: ch05.ocs.jupiter_capex_30
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: Jupiter has delivered 5x higher speed and capacity, 30% reduction in capex, 41% reduction in power
+  action: none
+- id: ch05.ocs.jupiter_power_41
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: Jupiter has delivered 5x higher speed and capacity, 30% reduction in capex, 41% reduction in power
+  action: none
+- id: ch05.ocs.jupiter_pathlen
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: achieving an average block-level path length of 1.4 in our fleet today.
+  action: none
+- id: ch05.ocs.jupiter_reconfig_3x
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: OCS also achieves 3x faster fabric reconfiguration compared to pre-evolution Clos fabrics that used a patch panel based interconnect.
+  action: none
+- id: ch05.ocs.jupiter_circulator_halving
+  status: MATCH
+  found_value: ''
+  found_locator: Poutievski et al. SIGCOMM 2022, Sec. 6.5 (cost model, Fig. 14)
+  evidence: Our use of direct-connect topology and circulators each separately halves the OCS ports required
+  action: 'Full sentence seen; raise confidence to high. Same section: PoR capex 62-70% and power 59% of baseline.'
+- id: ch05.ocs.sirius_tuning
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 6 (Sirius v2), Fig. 8a
+  evidence: the worst-case values measured are 527 ps and 912 ps respectively.
+  action: none. 527 ps is SOA turn-on, 912 ps turn-off; tuning set by the slower.
+- id: ch05.ocs.sirius_reconfig
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: we demonstrate 3.84 ns end-to-end reconfiguration atop 50 Gbps channels.
+  action: none. 3.84 ns is the guardband including laser tuning and cell preamble, PAM-4 50 Gb/s.
+- id: ch05.ocs.sirius_power
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract
+  evidence: Sirius can approximate the performance of an ideal, electrically-switched non blocking network with up to 74-77% lower power.
+  action: Full abstract read; raise confidence to high.
+- id: ch05.ocs.ironwood_ocs_bypass
+  status: MATCH
+  found_value: ''
+  found_locator: Scaling with OCS
+  evidence: the OCS fabric manager instructs the OCS to optically bypass the unhealthy unit and establish new, complete optical circuits connecting only the healthy cubes
+  action: none
+- id: ch05.ocs.tencent_astral3_shuffle
+  status: MATCH
+  found_value: ''
+  found_locator: Abstract (zh)
+  evidence: 本文利用光 Shuffle 技术构建扁平化的二级单轨网络，设计了星脉 3.0 网络架构
+  action: none; journal page shows only the abstract (no full text), keep confidence med.
+- id: ch05.ocs.photonic_rails
+  status: MATCH
+  found_value: ''
+  found_locator: Sec. 1
+  evidence: We propose a re-imagined rail-optimized fabric in which each rail is implemented not with electrical packet switches, but with OCSes.
+  action: 'Quote matches arXiv v-html. Now published in HotNets 2025 (doi 10.1145/3772356.3772414): upgrade source to tier A (see tier_a_replacements).'
+- id: ch05.pw.transceiver_1p6t_30w
+  status: MATCH
+  found_value: ''
+  found_locator: Section on DSP power
+  evidence: a 1.6 Tbps transceiver might use around 30 watts, with the DSP consuming more than half of that.
+  action: 'Value matches. Tier B here vs C for the same-venue CPO blog (ch04): harmonize.'
+- id: ch05.pw.cpo_9w
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA Technical Blog, A. Seyedi, 18 Aug 2025
+  evidence: reducing electrical loss to only ~4 dB and slashing power use to as low as 9W.
+  action: 'Value and quote match. Tier: ch04 tags nvidia_cpo_blog_2025 ''press/C'' while ch05 tags the same-venue NVIDIA Technical Blog posts (nvidia_siph_blog_2025_03, gb200 tech/OCP blogs, NCCL blog)
+    as B. Harmonize. SCHEMA lists ''blog'' under C, so C is defensible; a product spec should then be moved to an NVIDIA Quantum-X/Spectrum-X Photonics datasheet.'
+- id: ch05.pw.cpo_3p5x
+  status: MATCH
+  found_value: ''
+  found_locator: Benefits list
+  evidence: Co-packaged Silicon Photonics slash power consumption by 3.5x compared to traditional pluggable transceivers.
+  action: Value matches; same tier-harmonization note as ch05.pw.transceiver_1p6t_30w.
+- id: ch05.pw.quantum_x_photonics
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA Technical Blog, A. Seyedi, 18 Aug 2025
+  evidence: 115 Tb/s of switching capacity, supporting 144 ports at 800 Gb/s each
+  action: 'Value and quote match. Tier: ch04 tags nvidia_cpo_blog_2025 ''press/C'' while ch05 tags the same-venue NVIDIA Technical Blog posts (nvidia_siph_blog_2025_03, gb200 tech/OCP blogs, NCCL blog)
+    as B. Harmonize. SCHEMA lists ''blog'' under C, so C is defensible; a product spec should then be moved to an NVIDIA Quantum-X/Spectrum-X Photonics datasheet.'
+- id: ch05.pw.spectrum_x_sn6800
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA Technical Blog, A. Seyedi, 18 Aug 2025
+  evidence: 'Spectrum SN6800: 409.6 Tb/s bandwidth with a remarkable 512 ports at 800 Gb/s'
+  action: 'Value and quote match. Tier: ch04 tags nvidia_cpo_blog_2025 ''press/C'' while ch05 tags the same-venue NVIDIA Technical Blog posts (nvidia_siph_blog_2025_03, gb200 tech/OCP blogs, NCCL blog)
+    as B. Harmonize. SCHEMA lists ''blog'' under C, so C is defensible; a product spec should then be moved to an NVIDIA Quantum-X/Spectrum-X Photonics datasheet.'
+- id: ch05.pw.jensen_6_xcvr_per_gpu
+  status: MATCH
+  found_value: ''
+  found_locator: Report of GTC 2025 keynote
+  evidence: each of those GPUs would require six individual transceivers, meaning a power consumption of 180 Watts and a cost of $6000 per GPU.
+  action: none
+- id: ch05.pw.broadcom_51t_128_modules
+  status: MATCH
+  found_value: ''
+  found_locator: Integration section
+  evidence: compares the quantity of (128) 400G optical modules required to fully populate a 51.2 Tbps switch to Broadcom's Bailly 51.2T equivalent CPO solution.
+  action: none
+- id: ch05.pw.xai_colossus_100k
+  status: MATCH
+  found_value: ''
+  found_locator: Paragraphs 1-3
+  evidence: xAI's Colossus supercomputer cluster comprising 100,000 NVIDIA Hopper GPUs in Memphis, Tennessee, achieved this massive scale by using the NVIDIA Spectrum-X
+  action: none
+- id: ch05.pw.xai_throughput_claim
+  status: MATCH
+  found_value: ''
+  found_locator: Paragraph 4-5
+  evidence: It has maintained 95% data throughput enabled by Spectrum-X congestion control.
+  action: none
+- id: ch05.pw.fairwater_800g
+  status: MATCH
+  found_value: ''
+  found_locator: Scale-out section
+  evidence: We achieve this with a two-tier, ethernet-based backend network that supports massive cluster sizes with 800 Gbps GPU-to-GPU connectivity.
+  action: none. The Sept 2025 blog says pods use 'InfiniBand and Ethernet fabrics that deliver 800 Gbps, in a full fat tree non-blocking architecture'.
+- id: ch05.pw.fairwater_fiber_4x_earth
+  status: MATCH
+  found_value: ''
+  found_locator: Body text
+  evidence: a datacenter with enough fiber cable to circle the Earth four times
+  action: none
+- id: ch05.pw.msft_ai_wan_fiber
+  status: MATCH
+  found_value: ''
+  found_locator: AI WAN section
+  evidence: we delivered over 120,000 new fiber miles across the US last year
+  action: none
+- id: ch05.pw.fairwater_rack_bw_wording
+  status: MATCH
+  found_value: ''
+  found_locator: GB200 paragraph
+  evidence: Each rack packs 72 NVIDIA Blackwell GPUs, tied together in a single NVLink domain that delivers 1.8 terabytes of GPU-to-GPU bandwidth
+  action: none
+- id: ch05.pw.credo_savings_claim
+  status: MATCH
+  found_value: ''
+  found_locator: Quote by A. Suri
+  evidence: Credo's HiWire AECs offer power savings of up to 14W per link and cost savings of up to $1,000 per GPU.
+  action: none
+- id: ch05.pw.lightwave_millions_xcvr
+  status: MATCH
+  found_value: ''
+  found_locator: Liu et al. SIGCOMM 2023, Sec. 4.2 subsection 'Optical Transceiver Evaluation'
+  evidence: At the scale of millions of transceivers for all our applications, guaranteeing transceiver performance is a significant challenge
+  action: Locator refinement only.
+- id: ch05.eq.fattree_hosts
+  status: MATCH
+  found_value: formula correct
+  found_locator: Al-Fares 2008 Sec. 2.2
+  evidence: In general, a fat-tree built with k-port switches supports k3/4 hosts.
+  action: none; factors and definitions checked
+- id: ch05.eq.fattree_core
+  status: MATCH
+  found_value: formula correct
+  found_locator: Al-Fares 2008 Sec. 2.2
+  evidence: There are (k/2)2 k-port core switches. Each core switch has one port connected to each of k pods.
+  action: none; factors and definitions checked
+- id: ch05.eq.fattree_paths
+  status: MATCH
+  found_value: formula correct
+  found_locator: Al-Fares 2008 Sec. 3.1
+  evidence: there are (k/2)2 such shortest-paths between any two hosts on different pods, but only one is chosen.
+  action: none; factors and definitions checked
+- id: ch05.eq.oversubscription_def
+  status: PARTIAL
+  found_value: verbal definition only
+  found_locator: Al-Fares 2008 Sec. 2.1.2
+  evidence: the ratio of the worst-case achievable aggregate bandwidth among the end hosts to the total bisection bandwidth
+  action: Factor-of-2 risk. With bisection bandwidth as one-direction capacity across a balanced cut, a 1:1 fabric has B_bis = (N/2)B_h, so sum over all hosts / B_bis = 2. Either sum over one half of the
+    hosts, or define B_bis as total (both halves) capacity. Jupiter's 1.3 Pb/s = 64 blocks x 512 x 40G uses the total convention. State the convention.
+- id: ch05.eq.clos_nonblocking
+  status: MATCH
+  found_value: formula correct
+  found_locator: Clos 1953 p. 408, Fig. 3
+  evidence: SWITCHES REQUIRED (n-1)+(m-1)+1=n+m-1 WHEN n = m, ABOVE=2n-1
+  action: none; source Fig. 3 'n+m-1 ... WHEN n = m, ABOVE=2n-1' with m as outputs per output switch, mapping in notes is correct.
+- id: ch05.eq.clos_crosspoints_3stage
+  status: MATCH
+  found_value: formula correct
+  found_locator: Clos 1953 Eq. (2a), Fig. 2, Table I
+  evidence: NUMBER OF CROSSPOINTS = 6N3/2-3N (1188 CROSSPOINTS WHEN N = 36)
+  action: none; 6N^{3/2}-3N gives 1188 at N=36 and 186,737 at N=1000 (Table I), checked.
+- id: ch05.eq.allreduce_lower_bound
+  status: MATCH
+  found_value: formula correct
+  found_locator: Patarasuk & Yuan 2009, Lemma 4
+  evidence: there exists at least one process that must communicate a total of at least ⌈2 × N−1 N × X⌉ × itsize bytes data
+  action: none; source says 'communicate' (send and/or receive), not 'send'. Adjust wording in notes.
+- id: ch05.eq.ring_allreduce_time
+  status: MATCH
+  found_value: formula correct
+  found_locator: Patarasuk & Yuan 2009, Theorem 1 proof
+  evidence: Hence, the total communication time is 2 × (N − 1) × T ( X×itsize N ).
+  action: none; factors and definitions checked
+- id: ch05.eq.hockney_message_cost
+  status: MATCH
+  found_value: formula correct
+  found_locator: Thakur et al. 2005, Cost model section
+  evidence: The time taken to send a message between any two nodes can be modeled as α + nβ
+  action: none (notation clash flagged correctly).
+- id: ch05.eq.rabenseifner_allreduce
+  status: MATCH
+  found_value: formula correct
+  found_locator: Thakur et al. 2005, Sec. 4.5 'Reduce and Allreduce'
+  evidence: Therefore, the total cost is Trabenseifner = 2 lg p α + 2 p− 1 p nβ + p− 1 p nγ.
+  action: none; factors and definitions checked
+- id: ch05.eq.recursive_doubling_allreduce
+  status: MATCH
+  found_value: formula correct
+  found_locator: Thakur et al. 2005, Sec. 4.5
+  evidence: The time taken by this algorithm is Trec− dbl = lg p α + n lg p β + n lg p γ.
+  action: none; factors and definitions checked
+- id: ch05.eq.binomial_reduce
+  status: MATCH
+  found_value: formula correct
+  found_locator: Thakur et al. 2005, Sec. 4.5
+  evidence: Therefore, the time taken by this algorithm is Ttree = d lg pe (α + nβ + nγ).
+  action: none; factors and definitions checked
+- id: ch05.eq.nccl_busbw
+  status: MATCH
+  found_value: formula correct
+  found_locator: Li et al. ZTE Technol. J. 2025, evaluation metric paragraph
+  evidence: Busbw = 2( n - 1)n × Algbw，其中， n表示GPU的数量，Algbw为算法带宽
+  action: none; factors and definitions checked
+- id: ch05.eq.tpuv4_ocs_count
+  status: MATCH
+  found_value: formula correct
+  found_locator: Jouppi et al. ISCA 2023, Sec. 2.2
+  evidence: Thus, each 4 3 block connects to 6 × 16 ÷ 2 = 48 OCSes.
+  action: none; also 48 OCSes x 128 used ports = 64 cubes x 96 links = 6144.
+tier_a_replacements:
+- for: ch05.cu.ieee_100g_lane_cr_2m
+  citation: 'IEEE Std 802.3ck-2022, Amendment 4: Physical Layer Specifications and Management Parameters for 100 Gb/s, 200 Gb/s, and 400 Gb/s Electrical Interfaces Based on 100 Gb/s Signaling (Board approved
+    2022-09-21)'
+  url: https://standards.ieee.org/ieee/802.3ck/7322/
+  locator: Clause 162 (100GBASE-CR1/200GBASE-CR2/400GBASE-CR4), 162.1 Overview and 162.11 cable assembly; free via IEEE GET program
+  value: 2 m reach (objective restated by kocsis_ieee_b400g_2021); clause text not read by verifier
+  note: Ratified tier A. Read clause text and record the verbatim reach and cable-assembly insertion-loss limit before use.
+- for: ch05.cu.ieee_40gcr4_7m
+  citation: IEEE Std 802.3-2022, Table 80-1 and Clause 85 (40GBASE-CR4, from 802.3ba-2010)
+  url: https://standards.ieee.org/ieee/802.3/10422/
+  locator: Table 80-1 nomenclature row 40GBASE-CR4
+  value: '''reach up to at least 7 m (See Clause 85)'' (seen verbatim as quoted in dambrosia_ieee_8023bj_2012)'
+  note: Ratified table, quoted verbatim in the contribution; verify in the standard via IEEE GET.
+- for: ch05.cu.ieee_100gcr4_5m
+  citation: IEEE Std 802.3-2022, Table 80-1 and Clause 92 (100GBASE-CR4, from 802.3bj-2014)
+  url: https://standards.ieee.org/ieee/802.3/10422/
+  locator: Table 80-1 row 100GBASE-CR4
+  value: 5 m
+  note: Not read by verifier.
+- for: ch05.cu.ieee_50g_cr_3m
+  citation: IEEE Std 802.3cd-2018 (now in IEEE Std 802.3-2022), Clause 136 (50GBASE-CR, 100GBASE-CR2, 200GBASE-CR4)
+  url: https://standards.ieee.org/ieee/802.3cd/6726/
+  locator: Clause 136.1 / Table 80-1
+  value: 3 m
+  note: Not read by verifier.
+- for: 'gap: 800GBASE-CR8 reach'
+  citation: IEEE Std 802.3df-2024 (800 Gb/s based on 100 Gb/s lanes)
+  url: https://standards.ieee.org/ieee/802.3df/10928/
+  locator: 800GBASE-CR8 PMD (Clause 162 extension)
+  value: 2 m expected (Kocsis 2021 proposed objective 'at least 2 meters')
+  note: Ratified Feb 2024; clause text and URL id not verified.
+- for: ch05.ocs.photonic_rails
+  citation: E. Ding, C. Ouyang, R. Singh, 'Photonic Rails in ML Datacenters', ACM HotNets 2025, doi:10.1145/3772356.3772414
+  url: https://doi.org/10.1145/3772356.3772414
+  locator: Sec. 1, 'Replacing rail packet switches with OCSes'
+  value: same sentence as ledger quote (verified in the DOI abstract page crawl)
+  note: Peer-reviewed version of the arXiv preprint; upgrade tier B to A.
+- for: 'gap 5: Palomar switching time'
+  citation: Urata et al., Mission Apollo (arXiv 2208.10041), Sec. 2
+  url: https://arxiv.org/abs/2208.10041
+  locator: Sec. 2 design principles paragraph
+  value: '''136x136 OCS, with millisecond-scale switching time and worst-case insertion loss of 2dB and return loss of -38dB'''
+  note: Tier B only (preprint). No tier-A Palomar switching time found.

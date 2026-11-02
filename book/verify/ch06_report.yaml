@@ -1,0 +1,659 @@
+# Independent verification of book/ledger/ch06.yaml and book/ledger/ch06_equations.yaml
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: WebFetch blocked for arxiv.org and discovery.ucl.ac.uk (host not allowed); all reading via Exa search/fetch
+# (Exa fetch began returning 401 late in the session). Full text read for G.694.1, OIF-400ZR-01.0/03.0 TOC, OIF-800ZR-01.0,
+# OIF-1600ZR-01.0 intro, Semrau JLT 2018/2019, Semrau JOCN 2020, Pelouch JLT 2016, Pointurier JOCN 2017, Rizzelli JLT 2025,
+# Zuo ECOC 2023, Huang JLT 2023, Gerstel/Gringeri ComMag, Kjaer thesis, Andre OA 2003, Mardoyan arXiv, Hazarika OE 2021,
+# all Chinese articles, vendor pages and press releases. Abstract only: Ma, Pan, Rahman, Davey, Gumaste, Filer, Downie, Auge,
+# Wright, Puttnam (OFC and JLT 2025), Zuo OFC 2025. Pulikkaseril OE 2011 full text: not reachable.
+# Tier note: the verifier brief places OIF IAs in tier B and abstract-only conference claims in tier C; flagged as PARTIAL.
+summary:
+  checked: 99
+  match: 78
+  mismatch: 2
+  partial: 19
+  unreachable: 0
+results:
+- id: ch06.grid.flex_center_granularity
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) clause 8
+  evidence: 193.1 + n × 0.00625 where n is a positive or negative integer including 0 and 0.00625 is the nominal central frequency granularity in THz
+  action: none (10/2020 still the in-force edition per ITU page)
+- id: ch06.grid.flex_slot_granularity
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) clause 8
+  evidence: 12.5 × m where m is a positive integer and 12.5 is the slot width granularity in GHz.
+  action: none
+- id: ch06.grid.anchor_193p1
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) Summary
+  evidence: The frequency grid, anchored to 193.1 THz, supports a variety of channel spacings ranging from 12.5 GHz to 100 GHz and wider.
+  action: none
+- id: ch06.grid.why_6p25
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) Appendix I.1 (text before Figure I.3)
+  evidence: an even multiple of 12.5 GHz next to one with a width that is an odd multiple of 12.5 GHz without a gap
+  action: none
+- id: ch06.grid.no_interface_recs_use_flexgrid
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) Appendix I.1
+  evidence: there are currently no DWDM optical interface Recommendations that make use of this grid.
+  action: none; prose must date the statement to the 2020 edition
+- id: ch06.zr.oif400zr_baud
+  status: PARTIAL
+  found_value: 59.843750000 GBd per polarization (value matches)
+  found_locator: OIF-400ZR-01.0 section 12.5; Table 14
+  evidence: The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization.
+  action: 'Value, unit, quote and locator match. Tier: the verifier brief lists OIF IAs as tier B, but source oif_400zr_01_2020 is tier A; orchestrator to set B (or resolve the PIPELINE/SCHEMA wording).
+    Supersession: cite OIF-400ZR-03.0 (Oct 2024), the current edition.'
+- id: ch06.zr.oif400zr_channel_plans
+  status: PARTIAL
+  found_value: 48 and 64 channels (match)
+  found_locator: 'OIF-400ZR-03.0 TOC: 15.1, 15.2, 15.3; Tables 43-44 p. 119'
+  evidence: 15.1 48 x 100 GHz DWDM Application Channels ... 15.2 64 x 75 GHz DWDM Application Channels ... 15.3 Optional Flexible DWDM Grid
+  action: Match. Tier A -> B per brief (OIF IA). Channel tables (n=30..-17 at 100 GHz, 196.100-191.400 THz; 3n=120..-69 at 75 GHz, 196.100-191.375 THz) also reproduced verbatim in a module datasheet; still
+    read IA Tables 43-44 for a direct record.
+- id: ch06.zr.cband_191p3_196p1
+  status: MATCH
+  found_value: ''
+  found_locator: lyubomirsky_3ct_01_190221 slide 'Tx Optical Specs I'
+  evidence: Start Channel Frequency | 191.3 | THz | ... Stop Channel frequency | 196.1 | THz
+  action: 'none. Note supersession: 400GBASE-ZR was later ratified by IEEE (P802.3cw); a tier-A IEEE clause would replace this task-force contribution (not read).'
+- id: ch06.zr.cfec_threshold
+  status: MATCH
+  found_value: ''
+  found_locator: lyubomirsky_3ct_01_190221 'Black Link Channel Characteristics'
+  evidence: c Pre FEC BER (max) | 1.25e-2 ... c). BER at the CFEC threshold.
+  action: none
+- id: ch06.wss.finisar_cband_4p8thz
+  status: MATCH
+  found_value: ''
+  found_locator: Finisar single WSS product brief (Jun 2020), Features
+  evidence: 'Frequency range: 4.8 THz (default) - wider frequency range up to 6THz (Super C-band) can be supported'
+  action: none (current Finisar dual-WSS web page says up to 10 THz C+L)
+- id: ch06.sc.gerstel_1t_qpsk_gain
+  status: MATCH
+  found_value: ''
+  found_locator: Gerstel ComMag 2012 Table 1
+  evidence: 1000 | DP-QPSK | 190+10 | 10 100G in 10 50 GHz channels | 200 GHz vs. 500 = 150%
+  action: none (300 km point-to-point link confirmed in text)
+- id: ch06.sc.gerstel_400g_16qam_gain
+  status: MATCH
+  found_value: ''
+  found_locator: Gerstel ComMag 2012 Table 1
+  evidence: 400 | DP-16QAM | 75+10 | 2 200Gb/s in 2 50 GHz channels | 85 GHz vs. 100 = 17%
+  action: none
+- id: ch06.roadm.cdc_definitions
+  status: MATCH
+  found_value: ''
+  found_locator: Gringeri ComMag 2010, section on ROADM evolution (Fig. 2)
+  evidence: A contention less architecture allows multiple copies of the same wavelength on a single add/drop structure.
+  action: none
+- id: ch06.roadm.contentionless_limit
+  status: MATCH
+  found_value: ''
+  found_locator: Gringeri ComMag 2010, 'Colorless, directionless, and contentionless ROADM implementation'
+  evidence: as long as the num ber of channels with the same wavelength is not more than the number of degrees in the node.
+  action: none
+- id: ch06.wss.lcos_dominates
+  status: MATCH
+  found_value: ''
+  found_locator: Ma et al. JLT 39(4) 896 (2021), abstract
+  evidence: Liquid crystal on silicon (LCoS) technology dominates current WSS installations as LCoS-based WSS can support Flexgrid technology
+  action: none
+- id: ch06.wss.lumentum_twin_1x35
+  status: MATCH
+  found_value: ''
+  found_locator: Lumentum Twin 1x35 product page
+  evidence: Various configuration options are available, including 1x35 and universal MxN (M + N ≤36).
+  action: none
+- id: ch06.wss.lumentum_twin_1x20_range
+  status: MATCH
+  found_value: ''
+  found_locator: Lumentum Twin WSS product brief (2025-12), Specifications table
+  evidence: Wavelength range | 191.15 to 196.25 THz
+  action: none
+- id: ch06.wss.huang_twin1x35_il
+  status: MATCH
+  found_value: ''
+  found_locator: Huang et al. JLT 41(1) 2023, Table I
+  evidence: Insertion loss (dB) | 4.65 | 5.96 | 7.2
+  action: none (text calls 5.96 dB the median)
+- id: ch06.wss.huang_passband_50ghz
+  status: MATCH
+  found_value: ''
+  found_locator: Huang et al. JLT 2023, Table I
+  evidence: -3.0 dB passband width for 50 GHz channel (GHz) | 42.1 | 42.8 | 43.2
+  action: none (-0.5 dB 33.0 and -1.0 dB 36.0 GHz typ also confirmed)
+- id: ch06.wss.filter_cascade_pan2017
+  status: MATCH
+  found_value: ''
+  found_locator: Pan & Tibuleac IEEE JPhot 9(3) 2017, abstract
+  evidence: resulting in a doubling of the number of WSSs, which can be supported per link from three to six.
+  action: none
+- id: ch06.wss.filter_cascade_rahman2014
+  status: MATCH
+  found_value: ''
+  found_locator: Rahman et al. PTL 26(2) 2014, abstract
+  evidence: With an average bandwidth of 33 GHz per WSS, an optical signal to noise ratio penalty below 1 dB at BER=1×10-3is observed.
+  action: none
+- id: ch06.wss.cascade_bw_narrowing_24roadm
+  status: MISMATCH
+  found_value: 1.6 dB (R&S), ~1 dB (B&S); signal 120 Gb/s DP-QPSK, not 100 Gb/s real-time
+  found_locator: Doggart MSc 2017, ch. 2 literature review citing [17]
+  evidence: The ROADM architectures were tested using 120-Gb/s Dual-Polarization Quadrature Phase-Shift Keying (DP-QPSK) transmission
+  action: Fix conditions.signal to '120 Gb/s DP-QPSK'; passbands narrowed to 30 GHz (B&S) and 28 GHz (R&S). Primary paper is almost certainly Filer & Tibuleac, OFC 2014 Th1I.2, doi:10.1364/OFC.2014.Th1I.2
+    (same 120G DP-QPSK, B&S vs R&S); obtain full text and re-source.
+- id: ch06.wss.filter_model_bwotf
+  status: MATCH
+  found_value: ''
+  found_locator: polito webthesis 8987, sect. 2.1, Eq. (2.1), Fig. 2.1
+  evidence: They are obtained for B = 37.5 GHz and BOT F = 10.4 GHz.
+  action: Value matches but source is an MSc thesis. Tier-A support for the model (not the 10.4 GHz value) is Rizzelli JLT 2025 Eq. (1); see tier_a_replacements.
+- id: ch06.wss.sg_order_bwotf_map
+  status: MATCH
+  found_value: ''
+  found_locator: Rizzelli JLT 43(3) 2025, Section II
+  evidence: we will consider super Gaussian filters of order 3, 6 and 9 corresponding to 12.5 GHz, 6.8 GHz and 4.6 GHz BWOT F , respectively.
+  action: none; add that BW_OTF scales as Bch/Bref with Bref = 50 GHz
+- id: ch06.wss.rizzelli_6wss_63ghz
+  status: MATCH
+  found_value: ''
+  found_locator: Rizzelli JLT 2025, Section II, Fig. 1(b)
+  evidence: After 6 filters, i.e. 3 ROADMs, we observe a significant bandwidth reduction down to about 63 GHz.
+  action: none
+- id: ch06.raman.gain_eff_ssmf
+  status: MATCH
+  found_value: ''
+  found_locator: Kjaer PhD DTU 2008, sect. 2.1 (Fig. 2.2 text)
+  evidence: These fibers show moderate peak values of g from 0.4 W −1km −1 for SSMF up to 0.7 W −1km −1 for TW-RS.
+  action: none (DCF 2.4 / 3.5 and peak 13.0-13.3 THz confirmed)
+- id: ch06.raman.peak_gr_ssmf_andre
+  status: MATCH
+  found_value: ''
+  found_locator: Andre et al. Optica Applicata 33(4) 2003, abstract and Section 5
+  evidence: which results in a value of 0.540x10-13 mW-1.
+  action: none (OCR 'mW-1' = m/W). 12.841 THz centre and 91.61 um2 not re-read.
+- id: ch06.raman.cr_ssmf
+  status: PARTIAL
+  found_value: 0.028 1/(W km THz) (match)
+  found_locator: Semrau JOCN 12(6) 2020, Section 3 (not Section 4)
+  evidence: ISRS gain slope C r = 0.028 1/W/km/THz at 1550 nm
+  action: Fix locator to 'Section 3, system parameters'. C_r is per THz (units 1/(W km THz)) confirmed; JOCN Eq. (3) defines g_r(Δf) = C_r Δf.
+- id: ch06.raman.isrs_negligible_cband
+  status: MATCH
+  found_value: ''
+  found_locator: Semrau JLT 36(14) 2018, Section I
+  evidence: for systems that occupy the entire C + L band (ap proximately 10 THz) or beyond, ISRS becomes significant
+  action: none
+- id: ch06.raman.isrs_gn_accuracy
+  status: MATCH
+  found_value: ''
+  found_locator: Semrau JLT 2018, abstract
+  evidence: A maximum deviation of only 0.1 dB in nonlinear interference power between simulations and the ISRS GN model is reported.
+  action: none
+- id: ch06.raman.triangular_validity
+  status: MATCH
+  found_value: ''
+  found_locator: Semrau JLT 37(9) 2019, abstract
+  evidence: The proposed result is applicable for dispersion unmanaged, ultra-wideband transmission systems that use optical bandwidths of up to 15 THz.
+  action: none (JLT 2018 says approximately 14 THz)
+- id: ch06.raman.pelouch_edfa_nf
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 34(1) 2016, Sec. III.A, Eq. (10)
+  evidence: the sum of the span loss in dB and the EDFA NF in dB (which is typically 4.5 to 6 dB).
+  action: none
+- id: ch06.raman.pelouch_bwd_osnr_gain
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 2016, Sec. III.B, Fig. 7, Eq. (12)
+  evidence: the OSNR ben efit from backward Raman is about 4.75 dB better than with an EDFA-only span
+  action: 'none. Conditions confirmed: three backward pumps totalling 650 mW, SMF, C-band, NF_EDFA = 4.5 dB, total NF -0.25 to -0.52 dB plus span loss; 3x reach is linear OSNR scaling, no nonlinearity.'
+- id: ch06.raman.pelouch_fwd_bwd_15db
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 2016, Sec. III.C, Eq. (13)
+  evidence: The OSNR improvement for the case of 10 dB forward Raman gain and the backward Raman of case (c) is about 15 dB
+  action: none
+- id: ch06.raman.pelouch_span_loss_thresholds
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 2016, Fig. 18 discussion
+  evidence: An OSNR threshold of 30 dB suggests the deployment of backward Raman at a span loss greater than 27.5 dB and forward + backward Raman
+  action: none (12 dB Raman gain each, 0 dBm/ch confirmed in Fig. 18 caption)
+- id: ch06.raman.xtera_reach_factor
+  status: MATCH
+  found_value: ''
+  found_locator: Xtera white paper Sept 2015, p. 2-3
+  evidence: a 10-dB backward Raman amplifier has a maximum reach that is (3.5) 2/3 =2.3 X the distance of an EDFA-only line system
+  action: none
+- id: ch06.cl.semrau_cl_10thz
+  status: MATCH
+  found_value: ''
+  found_locator: Semrau JLT 2018, abstract
+  evidence: The model is applied to a trans mission system that occupies the entire C + L band (10 THz optical bandwidth).
+  action: none
+- id: ch06.cl.super_cl_12thz_bands
+  status: PARTIAL
+  found_value: about 6 THz each, 12 THz total (match)
+  found_locator: Jiang arXiv:2407.14401, Section I
+  evidence: amplification can be stretched (in separate units) to the super-L and super-C band, about 6 THz each
+  action: Quote matches. Band edges 184.5-190.32 / 190.75-196.57 THz not seen in retrieved text (band-boundary paragraph truncated); re-read and confirm.
+- id: ch06.cl.supercl_raman_plus60
+  status: MISMATCH
+  found_value: +60% at 3000 km (match); 68.3 Tb/s is the 1000 km ISRS-off throughput, not the 3000 km Raman case
+  found_locator: Jiang arXiv:2407.14401, Sec. II, Fig. 3 and Table 1
+  evidence: The throughput increase vs the same link without Raman is a remarkable +60%.
+  action: 'Remove conditions.throughput_Tbps 68.3 (Table 1: 1000 km, ISRS off). The 3000 km no-Raman cubic value is 46.1 Tb/s; the with-Raman absolute value was not stated in the text read.'
+- id: ch06.cl.cmcc_c6t_l6t_2502km
+  status: MATCH
+  found_value: ''
+  found_locator: Zuo et al., ECOC 2023, doi:10.1049/icp.2023.2353, abstract and Fig. 1
+  evidence: We demonstrate a record of real-time 80-λ×400-Gb/s DP-QPSK field transmission over 2502- km terrestrial G.652.D fibre
+  action: Venue confirmed (ECOC 2023, IET proceedings). 42 spans, 150 GHz grid, 40 ch/band, Changsha-Guian confirmed; symbol rate 128 GBd; BDRA on spans >22 dB.
+- id: ch06.cl.cmcc_96tb_305km
+  status: PARTIAL
+  found_value: 96 Tb/s (match)
+  found_locator: OFC 2025 Th3C.1, abstract
+  evidence: We demonstrate a record of real-time 96-Tb/s (80×1.2-Tb/s) DP-64QAM-PCS field transmission covering 12-THz-wide super C+L band over 305-km
+  action: 'Tier A -> C: abstract-only conference claim per brief. Route Zhengzhou-Luohe per China Mobile article (sina_2025_01).'
+- id: ch06.uwb.puttnam_402tbps
+  status: PARTIAL
+  found_value: 402.2 Tb/s GMI, 378.9 decoded, 37.6 THz, 50 km (match)
+  found_locator: OFC 2024 Th4A.3 abstract; full version JLT 43(23) 10371 (2025)
+  evidence: achieving an SMF record data-rate of 402.2 Tb/s (GMI)-378.9 Tb/s (Decoded) and 37.6 THz transmission bandwidth after 50 km.
+  action: 'As sourced it is tier C (abstract-only conference). Re-source to Puttnam et al., JLT 43(23) 10371 (2025) (tier A), whose abstract resolves the 5-vs-6 dispute: ''6 doped-fiber amplifiers (O-(x2),
+    E-, S-, C-, L-bands)''. Superseded as record: 430.2 Tb/s (ECOC 2025, G.654 fibre, few-mode O-band) and 450 Tb/s over 42.4 THz on 39 km field fibre (NICT press, 1 Jun 2026). Prose must say ''record at
+    the time''.'
+- id: ch06.uwb.puttnam_1505ch
+  status: MATCH
+  found_value: ''
+  found_locator: NICT press release 26 Jun 2024
+  evidence: A wideband DWDM signal comprising up to 1,505 channels covering 275 nm (37.6 THz), from 1,281.2 nm to 1,649.9 nm
+  action: none; JLT 2025 abstract gives the same 1505 x 25 GHz, 1281.2-1649.9 nm in tier A
+- id: ch06.uwb.band_definitions_nict
+  status: MATCH
+  found_value: ''
+  found_locator: NICT press release 26 Jun 2024, glossary 'Transmission bands (OESCLU)'
+  evidence: S-band (1,460 - 1,530 nm) transmission experiments have been enabled by development of Thulium (T-) doped fiber amplifiers (DFAs)
+  action: none (tier C; use G.Sup39 for prose as noted)
+- id: ch06.zr.oif800zr_scope
+  status: PARTIAL
+  found_value: 80-120 km (match)
+  found_locator: OIF-800ZR-01.0 section 1; section 8.1 TOC
+  evidence: single-span, amplified, 80-120km, point-to-point, DWDM noise limited links (e.g. data center interconnect applications).
+  action: 'Tier A -> B per brief (OIF IA). Note OIF-1600ZR-01.0 (1 Sep 2026) now extends the family: single-span, amplified, up to 120 km, single 1.6TbE client.'
+- id: ch06.zr.400zr_vs_800zr_baud
+  status: MATCH
+  found_value: ''
+  found_locator: OIF OFC 2023 Berger slide '400ZR -> 800ZR spec comparison'
+  evidence: Nominal Symbol Rate 59.87GBaud 118.2GBaud Modulation DP-QAM16 DP-QAM16
+  action: none. An OIF ECOC 2022 rate table gives 800ZR nominal 118.203350603 GBd (tier B); prefer it or the IA if a precise value is needed.
+- id: ch06.zr.oif1600zr_exists
+  status: MATCH
+  found_value: ''
+  found_locator: OIF IA list page; OIF-1600ZR-01.0 title page
+  evidence: OIF-1600ZR-01.0 – Implementation Agreement 1600ZR (September 2026)
+  action: 'Add record from IA section 1: ''single-span, amplified, point-to-point, DWDM noise limited links up to 120km''. Symbol rate/modulation still unread.'
+- id: ch06.ipodwdm.bt_ecoc2020
+  status: PARTIAL
+  found_value: (qualitative, match)
+  found_locator: Wright, Davey, Lord (BT), ECOC 2020, abstract
+  evidence: WDM optics can now be integrated into IP routers in a cost-effective manner without reducing IP router port density.
+  action: 'Tier A -> C: abstract-only conference claim. Authors are BT (operator), not vendor.'
+- id: ch06.ipodwdm.davey_express_cheaper
+  status: PARTIAL
+  found_value: 28 -> 220 Tb/s (match)
+  found_locator: Davey, Iqbal, Wright (BT), JOCN 16(1) A33 (2024), abstract
+  evidence: The model shows that, as bandwidths increase, “optical express” architectures become lower cost compared to “hop-by-hop” architectures.
+  action: 'Value and quote match. Fix source davey_jocn_2023_zr: published JOCN 16(1), A33 (2024; online Sept/Dec 2023), not 15(10). Peer-reviewed, operator-authored: tier A correct.'
+- id: ch06.ipodwdm.gumaste_transceiver_count
+  status: PARTIAL
+  found_value: 75% and 51% (match)
+  found_locator: Gumaste et al. JOCN 14(3) 127 (2022), abstract
+  evidence: Results show a 75% decrease in transceiver count for flexponders developed from coherent transponders/muxponders when compared to ZR + pluggables
+  action: 'Fix source: JOCN 14(3), 127 (not 14(2)). All four authors are Infinera (transponder/muxponder vendor): peer-reviewed so tier A stands, but the contested box must label it vendor-authored, like
+    the Cisco/Juniper-sponsored side.'
+- id: ch06.ipodwdm.acg_tco_46pct
+  status: MATCH
+  found_value: ''
+  found_locator: ACG Research for Cisco, 'Report Highlights' and TCO Results (Fig. 5)
+  evidence: IP transport networks have 46% TCO savings, 57% OPEX savings, and 35% CAPEX savings over router bypass networks
+  action: none; tier C correct (vendor-commissioned). Year not printed in text read.
+- id: ch06.ipodwdm.arelion_capex64
+  status: MATCH
+  found_value: ''
+  found_locator: Heavy Reading 'Making IPoDWDM a Reality' (hosted by Juniper), p. 2-3
+  evidence: For example, Arelion has reported capex savings of 64% and opex savings of 76% with IPoDWDM
+  action: none; tier C correct (secondary relay of operator claim, vendor-hosted).
+- id: ch06.openroadm.members_2025
+  status: MATCH
+  found_value: ''
+  found_locator: NTT Technical Review Aug 2025, Section 2
+  evidence: Since its launch in 2016, the MSA has 32 member organizations as of April 2025, including 15 operators and 17 optical-communication-equipment vendors.
+  action: 'Locator: Section 2 (not Section 1).'
+- id: ch06.openroadm.w_63p1gbd
+  status: MATCH
+  found_value: ''
+  found_locator: NTT Technical Review Aug 2025, Section 2, Table 1 text
+  evidence: includes 30 Gbaud for 100- and 200-Gbit/s transmission and 63.1 Gbaud for 200-, 300-, and 400-Gbit/s transmission.
+  action: none
+- id: ch06.openroadm.ofec_threshold
+  status: MATCH
+  found_value: ''
+  found_locator: Open ROADM MSA 6.0 W-Port Digital Spec Rev 1.0.1, abstract
+  evidence: 11.6 dB @ 10 -15 (DP-16QAM), with pre-FEC BER threshold of 2.0×10 -2.
+  action: none
+- id: ch06.openroadm.pcs_first
+  status: MATCH
+  found_value: ''
+  found_locator: NTT Technical Review Aug 2025, Section 2 (beyond-400G paragraph)
+  evidence: the OpenROADM MSA became the first in the industry to standardize the interoperable probabilistic constellation shaping (PCS) scheme
+  action: 'Locator: Section 2.'
+- id: ch06.openroadm.controller_equalization
+  status: MATCH
+  found_value: ''
+  found_locator: Open ROADM R7 device white paper v1.2, sect. 2.2.2
+  evidence: Otherwise, there is no ROADM to ROADM communication and optical equalization is handled off box by the controller.
+  action: none
+- id: ch06.coh.wl6e_200gbd_1p6t
+  status: MATCH
+  found_value: ''
+  found_locator: Ciena WL6e 1.6T MOTR data sheet, intro
+  evidence: Powered by advanced 3 nm coherent DSP technology and leading-edge 200 GBaud electro optics
+  action: none (1.6 Tb/s single-carrier sentence also confirmed)
+- id: ch06.coh.pse6s_130gbd_1p2t
+  status: MATCH
+  found_value: ''
+  found_locator: Nokia PSE-6s product page
+  evidence: The PSE-6s operates at speeds of 130 GBaud and higher, optimized for use in 150GHz WDM channel spacings.
+  action: 'none (same page: up to 1.2Tb/s per wavelength; 5-nm DSP; 2.4Tb/s multi-channel linecard)'
+- id: ch06.coh.ice7_148gbd
+  status: PARTIAL
+  found_value: 148 GBd in 2023 launch text; current Nokia ICE7 page says 'up to 140 GBaud'
+  found_locator: OCN 1 Mar 2023 article; Nokia ICE7 product page (2026)
+  evidence: while supporting symbol rates of up to 148 Gbaud. With the ability to deliver 800G-based transmission up to 3,000 km
+  action: 'Quote matches source, but this is launch marketing (tier C). Add tier-B record from nokia.com/optical-networks/ice7: ''baud rates of up to 140 GBaud'', ''up to 1.2 Tb/s per wavelength'', 5-nm
+    CMOS; Nokia submarine app note: tunable 68 to 140+ Gbaud. Prose: ICE7 = 140(+) GBd / 1.2T.'
+- id: ch06.coh.zayo_ice7_1t_1391km
+  status: MATCH
+  found_value: ''
+  found_locator: Zayo/Infinera press release 18 Feb 2025, para 1
+  evidence: deliver 1 Tb/s single 150GHz wavelength transmission over 1,391 kilometers (km)
+  action: none (route Sacramento-Salt Lake City; 32 Tb/s C-band stated explicitly)
+- id: ch06.coh.att_wl6e_1p6t_296km
+  status: MATCH
+  found_value: ''
+  found_locator: AT&T newsroom 12 Mar 2025
+  evidence: successfully completed testing a 1.6 terabit-per-second single-carrier wavelength across 296 kilometers of its commercial long-distance network
+  action: none (Newark-Philadelphia; WL6e)
+- id: ch06.coh.nokia_globalconnect_800g_2019km
+  status: MATCH
+  found_value: ''
+  found_locator: Nokia press release 23 Feb 2023
+  evidence: to achieve 1.2 T b/s over metro distances (118km) and 800 G b/s over long haul distances (2,019 km), both using a single wavelength.
+  action: none
+- id: ch06.coh.mardoyan_300gbd_1p6t_9075km
+  status: MATCH
+  found_value: ''
+  found_locator: arXiv:2409.00057 (ECOC 2024 Th2B.2), abstract and Transmission results
+  evidence: We demonstrate net 1.6 Tb/s over 9075 km with PCS-16QAM and 2.4 Tb/s over 1210 km with PCS-36QAM.
+  action: none (5.22 b/s/Hz, r = 0.74 confirmed). Read via arXiv; tier A assumes the ECOC version.
+- id: ch06.coh.cmcc_400g_130gbd_qpsk
+  status: MATCH
+  found_value: ''
+  found_locator: cww.net.cn id=600734 (26 May 2025), para 4
+  evidence: 率先在骨干网400G中提出并采用了130GBd光模块+QPSK+C6T/L6T技术路线。
+  action: none. Note the ECOC 2023 field trial used 128 GBd modules; '130 GBd' is the class name.
+- id: ch06.g654e.downie_reach_55pct
+  status: PARTIAL
+  found_value: 55% (match)
+  found_locator: Downie et al., Proc. SPIE 10560 (2018), abstract
+  evidence: We demonstrate significant transmission reach increases for 200 Gb/s PM-16QAM channels of at least 55% compared to standard single-mode fiber
+  action: 'Tier A -> C: abstract-only conference proceedings; all authors Corning (fibre vendor). Recirculating loop (lab).'
+- id: ch06.g654e.corning_fom_range
+  status: MATCH
+  found_value: ''
+  found_locator: Makovejs et al. (Corning), Chinese article, Section 2 (Fig. 1 text)
+  evidence: G.654E 光纤相对于常规 G.652D 光纤 FOM 有 2.4 – 3.2 dB 的优势，相 对于低损耗 G.652D 光纤 FOM 有 2.2 – 2.8 dB 的优势。
+  action: 'Add condition: span lengths 60-120 km. Conclusion of same article says 2.2-2.8 dB for 50-90 km spans (internal inconsistency; note it). FOM formula partly legible (10log terms, weights 2/3, 1/3),
+    see gaps item 7.'
+- id: ch06.g654e.ctel_osnr_3p5db
+  status: PARTIAL
+  found_value: 3.5 dB (match)
+  found_locator: sasac.gov.cn 23 Sep 2021, para 4
+  evidence: 现网对比测试结果表明，G.654E光缆的应用可以使得系统OSNR相较G.652D纤芯环境提升3.5dB
+  action: 'Value, route 1970 km, PM-16QAM 400G ~1500 km and >1900 km unregenerated all confirmed. Tier: page says ''文章来源：中国电信集团有限公司'', i.e. an operator press announcement republished by SASAC; tier C per
+    brief (press), not B. Use in a contested box or pair with a tier-A G.654.E reach result.'
+- id: ch06.g654e.ctel_shanghai_guangzhou_1970km
+  status: PARTIAL
+  found_value: 1970 km (match)
+  found_locator: sasac.gov.cn 23 Sep 2021, para 1
+  evidence: 中国电信在上海-广州间建成国内首条全G.654E陆地干线光缆，全长1970公里。
+  action: Tier B -> C (operator press release). cww 2025 report also states 'Shanghai-Guangzhou 1970km' (2019 trial-commercial project).
+- id: ch06.g654e.ctel_tender_2029km
+  status: MATCH
+  found_value: ''
+  found_locator: C114 27 Sep 2019
+  evidence: 本工程采用直埋硅芯管及租用高速公路管道方式新建光缆2029公里，使用G.654E光纤光缆共计29.3万纤芯公里。
+  action: none. 2029 = Shanghai 103 + Zhejiang 717 + Fujian 649 + Guangdong 560 km of new cable (Shanghai-Jinhua-Heyuan-Guangzhou project); neither source explains the 1970 vs 2029 difference, so prose
+    should say 'planned new-build cable length' vs 'completed line length', not assert a cause.
+- id: ch06.g654e.cmcc_jingjinjining_1539km
+  status: MATCH
+  found_value: ''
+  found_locator: cww.net.cn id=447488 (26 Feb 2019), para 1
+  evidence: 本次测试在中国移动京津济宁G.654.E干线进行，该干线全长1539.6km。
+  action: none (400G 16QAM 'over 600 km', 200G QPSK 'over 1500 km' with standard margin)
+- id: ch06.g654e.cmcc_cost_minus20
+  status: MATCH
+  found_value: ''
+  found_locator: cww.net.cn id=582356 (12 Sep 2023), para 4
+  evidence: G.654.E的引入使得无电中继传输距离增加和光中继节点减少，通信系统总体建设成本减少20％
+  action: none (2016 Beijing-Jinan-Nanjing mixed G.654.E+G.652.D cable)
+- id: ch06.g654e.cunicom_first_terrestrial
+  status: MATCH
+  found_value: ''
+  found_locator: 邮电设计技术 2019(10), doi:10.12045/j.issn.1007-3043.2019.10.003, abstract
+  evidence: 2个试验段是世界上第1次实际部署G.654.E陆地光缆干线
+  action: none; add DOI to source
+- id: ch06.g654e.cunicom_800g_1100km
+  status: MATCH
+  found_value: ''
+  found_locator: cww.net.cn id=600673 (23 May 2025)
+  evidence: G.654.E能力优势非常明显，能传到1100公里，G.652.D只能传到600公里
+  action: 'none (10-20% total build-cost increase confirmed; same article: G.652.D >95% of trunk fibre)'
+- id: ch06.g654e.cmcc_tender_2025_2027
+  status: MATCH
+  found_value: ''
+  found_locator: cww.net.cn id=601640 (25 Jun 2025), para 2
+  evidence: 预估采购规模约2.29万皮长公里，折合313.86万芯公里。
+  action: 'none (2022: 2134 sheath-km; 2023-24: 8463 sheath-km confirmed in cww id=582356)'
+- id: ch06.g654e.cunicom_2024_4365k_fiberkm
+  status: MATCH
+  found_value: ''
+  found_locator: chinacable.com news 9894 (24 Jul 2025), last para
+  evidence: 2024年中国联通光缆集采，其中干线光缆绝大部分采用G.654.E光纤，总量达到了436.5万芯公里。
+  action: none; ambiguity noted in ledger is real
+- id: ch06.g654e.sgcc_10000km_467km_span
+  status: MATCH
+  found_value: ''
+  found_locator: cww.net.cn id=600566 (20 May 2025)
+  evidence: 首创性地使用G.654.E光纤为特高压工程超长站距传输提供有效解决方案，实现了单跨距467km的无中继长距离传输的突破。
+  action: 'none. eefocus says 460 km. Tier-A-ish support for 467 km: Wu et al., Proc. SPIE (2023), doi:10.1117/12.2651555 abstract (''467 km non-relay ultra-long haul optical transmission'').'
+- id: ch06.g654e.operators_2024_58k
+  status: MATCH
+  found_value: ''
+  found_locator: eefocus 1845365 (30 May 2025), section 02
+  evidence: 2024年度三大运营商共建设光缆超5.8万皮长公里，相比2023年总建设长度增长43%。
+  action: none
+- id: ch06.g654e.cmcc_400g_records
+  status: MATCH
+  found_value: ''
+  found_locator: sina finance 23 Jan 2025 (通信世界), para 2
+  evidence: 推动5616km现网极限、7000km实验室极限、1673km现网部署等三大400G传输世界纪录
+  action: none (>500 GBd and >24 THz for QPSK 1.6T confirmed)
+- id: ch06.g654e.aston_raman_rin
+  status: MATCH
+  found_value: ''
+  found_locator: Hazarika et al. OE 29(20) 32081 (2021), Sec. 1 and Fig. 5(a)
+  evidence: Using the BW pumping configuration a maximum transmission reach of ∼6000 km was obtained for G.654.E, whereas for G.652.D the maximum reach was ∼4900 km.
+  action: none (BI 3000 vs 1800 km confirmed; 28 GBd PM-QPSK loop, HD-FEC 8.5 dB)
+- id: ch06.margin.pointurier_table
+  status: MATCH
+  found_value: ''
+  found_locator: Pointurier JOCN 9(1) A9 2017, Table I
+  evidence: Design margin (D) <2 dB [1] Nonlinearities (S) 1.5–3 dB [2] Amplifier NF aging (S) 0.7 dB [3]
+  action: none (value 2 dB is an upper bound '<2 dB')
+- id: ch06.margin.pointurier_example_bol
+  status: MATCH
+  found_value: ''
+  found_locator: Pointurier JOCN 2017, Section II
+  evidence: Including a D-margin of 2 dB, the BoL SNR margin is 14.5 dB.
+  action: 'none. Confirmed: S = 5.9 dB, reach 7500 km, U+S = 10log10(7500/600) = 12.5 dB, U = 6.6 dB, EoL total 9 dB; 0.22 dB/km fibre; 3 dB NLI, 0.7 NF, 1.1 fibre, 0.2 filters, 0.5 TRX, 0.4 fast.'
+- id: ch06.margin.linear_to_total_2over3
+  status: PARTIAL
+  found_value: 2/3 (match)
+  found_locator: Pointurier JOCN 2017, footnote 1 to Section II text (not a Table I footnote)
+  evidence: the SNR penalty corresponding to a linear SNR penalty α is 2α∕3.
+  action: 'Fix locator to ''Section II, footnote 1''. Same footnote: 4.3 cuts/1000 miles/yr, 0.3 dB/splice, 1.6 dB over 10 yr for 100 km spans.'
+- id: ch06.margin.auge_taxonomy
+  status: PARTIAL
+  found_value: (qualitative, match)
+  found_locator: Auge (Orange), OFC 2013 OTu2A.1, abstract
+  evidence: The different network margins are discussed along with the related strategies to reduce them.
+  action: Tier A -> C (abstract-only conference). Taxonomy should be cited from Pointurier JOCN 2017 (full text, tier A).
+- id: ch06.gnpy.filer_0p75db
+  status: MATCH
+  found_value: ''
+  found_locator: Filer et al. JLT 36(15) 3073 (2018), abstract
+  evidence: The observed ±0.75 dB of accuracy in OLE predictions can be further reduced by including the stimulated Raman scattering in the GN model
+  action: none; an open repository copy exists (iris.polito.it handle 11583/2704376), so full text can be read.
+- id: ch06.eq.flexgrid_center
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) clause 8
+  evidence: 193.1 + n × 0.00625 where n is a positive or negative integer including 0
+  action: none
+- id: ch06.eq.flexgrid_width
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) clause 8
+  evidence: 'a slot width defined by: 12.5 × m where m is a positive integer'
+  action: none
+- id: ch06.eq.fixed_grid
+  status: MATCH
+  found_value: ''
+  found_locator: G.694.1 (10/2020) clause 7 (ITU ePublication summary)
+  evidence: 'Fixed grids (anchored at 193.1 THz) permit nominal central frequencies: - 12.5 GHz spacing: 193.1 + n×0.0125 THz'
+  action: 'none (100 GHz: ''and multiples'' of 0.1 THz)'
+- id: ch06.eq.net_rate_pcs
+  status: MATCH
+  found_value: ''
+  found_locator: Mardoyan arXiv:2409.00057, Transmission results (unnumbered)
+  evidence: the net bit rate is obtained from the relation = 2 ∙ ∙ (1 − ) ∙ ( − (1 − ) ∙ )
+  action: 'Form R = 2 Rs (1-OH_p)[H-(1-r)m] confirmed; m = native constellation bits/symbol/pol (4 for 16QAM, 6 for 36QAM). Check: 2x300x2.76 = 1656 Gb/s before pilot OH, consistent with 1.6 Tb/s.'
+- id: ch06.eq.wss_passband
+  status: PARTIAL
+  found_value: same functional form; source prefactor (1/2)σ√(2π), no N_WSS exponent in tier-A source
+  found_locator: Rizzelli JLT 43(3) 2025, Eq. (1) (tier A); polito thesis Eq. (2.1) adds exponent N_WSS
+  evidence: where Bch is the channel bandwidth and σ = BWOT F /2√2ln2. BWOT F is defined as the optical transfer function bandwidth
+  action: Pulikkaseril OE 2011 full text still unreachable (Optica full text empty to crawler; arxiv/ucl hosts blocked). Re-source the single-filter equation to Rizzelli JLT 2025 Eq. (1), which states S(f)
+    as an optical field response with σ = BW_OTF/(2√(2 ln 2)) citing [16] (Pulikkaseril). Keep thesis only for the N_WSS cascade exponent, or derive it in prose. Ledger's unit-peak normalisation (dropping
+    σ√(2π)) is a valid choice; say so.
+- id: ch06.eq.isrs_profile_general
+  status: MATCH
+  found_value: ''
+  found_locator: Semrau JLT 2018 (published), Eq. (8)
+  evidence: ρ(z, f ) = Ptote− αz− PtotCrLeff f GTx(ν)e− PtotCrLeffνdν , (8) where Cr is the slope of a linear regression
+  action: none. Note arXiv v1 (1801.02460) prints +P_tot C_r L_eff ν in the denominator (typo); published version has the minus sign as in ledger.
+- id: ch06.eq.isrs_profile_uniform
+  status: PARTIAL
+  found_value: form correct; locator not found
+  found_locator: arXiv:2210.09067 v1 has a single numbered Eq. (1) and a first-order Taylor profile; Eqs. (21)-(22) do not exist in it
+  evidence: the normalised signal profile ... is represented as ρ(z, f i ) = e -αz [1 -(...)( f i -f )] [7]
+  action: 'Fix source: the sinh form appears directly in Semrau JLT 37(9) 2019 Eq. (8) (factor (P_tot C_r L_eff B_tot/2)/sinh(P_tot C_r L_eff B_tot/2)); it also follows from JLT 2018 Eq. (8) with G_Tx =
+    P_tot/B. The long Buglia paper (likely JLT 2023) may be the intended one; verify before citing.'
+- id: ch06.eq.isrs_tilt_db
+  status: MATCH
+  found_value: ''
+  found_locator: Semrau JLT 2019 Eq. (3), citing [28, Eq. (8)]; also Semrau JLT 2018 (arXiv Eq. (10))
+  evidence: Δρ(z)[dB] ≜ 10log10[Δρ(z)] = 4.3 · P_tot C_r L_eff B_tot, (3) where B_tot is the total optical bandwidth.
+  action: 'Confirmed: C_r in 1/(W km THz) and B_tot in THz, so the product is dimensionless. 4.3 is 10/ln10 = 4.343 rounded; the relation is exact (not a small-signal approx) under the triangular gain model,
+    since ρ(-B/2)/ρ(B/2) = exp(P_tot C_r L_eff B_tot). Recommend calc use 10/ln(10). Δρ is outer-channel net transfer (gain of lowest + loss of highest frequency).'
+- id: ch06.eq.span_nf_edfa
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 2016 Eq. (10)
+  evidence: NFtotal = Lspan · NFEDFA . (10)
+  action: none
+- id: ch06.eq.span_nf_bwd_raman
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 2016 Eqs. (11)-(12)
+  evidence: then the total NF is NFtotal = Lspan NFBR + NFEDFA − 1 GBR (12)
+  action: Bracketing L_span(NF_BR + (NF_EDFA-1)/G_BR) confirmed by Eq. (11) structure and Xtera WP Eq. (2). G_BR is on-off backward gain excluding span loss.
+- id: ch06.eq.span_nf_fwd_bwd_raman
+  status: MATCH
+  found_value: ''
+  found_locator: Pelouch JLT 2016 Eq. (13)
+  evidence: The total NF includ ing both forward and backward Raman and an EDFA at the end of the span is (Lspan > 30 dB)
+  action: none
+- id: ch06.eq.raman_reach_ratio
+  status: MATCH
+  found_value: ''
+  found_locator: Xtera WP 2015 p. 2-3
+  evidence: The ratio of OSNReff of an EDFA-only span to a backward Raman amplified span is equal to NFratio -2/3.
+  action: none (tier B; derivable from Ch. 1 GN scaling)
+- id: ch06.eq.margin_reach
+  status: MATCH
+  found_value: ''
+  found_locator: Pointurier JOCN 2017 Section II
+  evidence: resulting in a combined U- and S-margin of 10 log10 7500∕600 12.5 dB, i.e., a U-margin of 6.6 dB.
+  action: none; state assumptions (unloaded system at BoL, linear ASE scaling)
+- id: ch06.eq.linear_to_total_penalty
+  status: PARTIAL
+  found_value: 2α/3 (match)
+  found_locator: Pointurier JOCN 2017, Section II footnote 1
+  evidence: For the optical power that minimizes BER, penalties due to linear effects are twice the penalties due to nonlinear effect
+  action: Fix locator to 'Section II, footnote 1'.
+tier_a_replacements:
+- for: ch06.uwb.puttnam_402tbps
+  citation: B. J. Puttnam, R. S. Luis, I. Phillips, M. Tan, A. Donodin et al., 'High Data-Rate OESCLU-Band Transmission', J. Lightwave Technol. 43(23), 10371- (2025)
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-43-23-10371
+  locator: Abstract (full text not read)
+  value: '402.2 Tb/s GMI, 378.9 Tb/s decoded, 37.6 THz, 50 km; 1505 x 25 GHz channels 1281.2-1649.9 nm; 6 doped-fibre amplifiers (O x2, E, S, C, L) + discrete Raman U-band; 100 km: 36.6 THz, 339 Tb/s GMI,
+    322.8 Tb/s decoded'
+  note: 'Journal version of OFC 2024 Th4A.3; resolves the 5-vs-6 amplifier wording. Supersession: 430.2 Tb/s (Luis et al., ECOC 2025, doi:10.1109/ECOC66593.2025.11263200, G.654 fibre, 3-mode O-band, abstract)
+    and 450 Tb/s / 42.4 THz over 39 km field fibre (NICT press 1 Jun 2026, tier C; paper not located).'
+- for: ch06.eq.wss_passband
+  citation: G. Rizzelli, P. Torres-Ferrera, A. Napoli, R. Gaudino, 'Filtering Effects Characterization in Metro-Access Networks and Future High-Speed Coherent Optical Communication Schemes', J. Lightwave
+    Technol. 43(3), 1114-1122 (2025), doi:10.1109/JLT.2024.3477552 (open access)
+  url: https://iris.polito.it/retrieve/handle/11583/2996905/fcb202da-bdf9-4ea0-8a3e-460100dd320d/2024_JLT_filtering_modelling_versione_pubblicata.pdf
+  locator: Section II, Eq. (1)
+  value: S(f) = (1/2) σ√(2π) [erf((Bch/2 - f)/(σ√2)) - erf((-Bch/2 - f)/(σ√2))], σ = BW_OTF/(2√(2 ln 2)); BW_OTF 12.5/6.8/4.6 GHz for SG order 3/6/9 at Bref = 50 GHz, scaling as Bch/Bref
+  note: Tier-A replacement for the thesis equation (single filter). Pulikkaseril et al. OE 19(9) 8458 (2011) remains the original but its full text could not be fetched (Optica full-text crawl empty).
+- for: ch06.wss.cascade_bw_narrowing_24roadm
+  citation: 'M. Filer, S. Tibuleac, ''N-degree ROADM Architecture Comparison: Broadcast-and-Select versus Route-and-Select in 120 Gb/s DP-QPSK Transmission Systems'', OFC 2014, Th1I.2, doi:10.1364/OFC.2014.Th1I.2'
+  url: https://opg.optica.org/abstract.cfm?uri=ofc-2014-Th1I.2
+  locator: not verified (paywalled; abstract has no numbers)
+  value: 24-ROADM penalties 1.6 dB (R&S) / ~1 dB (B&S) as relayed by Doggart thesis
+  note: Probable primary behind the thesis's ref [17] (same 120G DP-QPSK B&S vs R&S study); confirm ref [17] and read the paper before citing numbers.
+- for: ch06.eq.isrs_profile_uniform
+  citation: D. Semrau, R. I. Killey, P. Bayvel, 'A Closed-Form Approximation of the Gaussian Noise Model in the Presence of Inter-Channel Stimulated Raman Scattering', J. Lightwave Technol. 37(9), 1924-1936
+    (2019)
+  url: https://ar5iv.labs.arxiv.org/html/1808.07940
+  locator: Eq. (8) (integrand) and Eq. (2)
+  value: 'normalised profile for uniform launch: (P_tot C_r L_eff B_tot/2) e^{-P_tot C_r L_eff f} / sinh(P_tot C_r L_eff B_tot/2) times e^{-αz}'
+  note: Already a ch06 source (semrau_jlt_2019_isrs_cf); replaces the arXiv Buglia locator.
+- for: ch06.coh.ice7_148gbd
+  citation: Nokia, 'ICE7 1.2Tb/s high-performance coherent optics' product page (tier B, not A)
+  url: https://www.nokia.com/optical-networks/ice7/
+  locator: Product page
+  value: up to 1.2 Tb/s per wavelength; 5-nm CMOS DSP; baud rates of up to 140 GBaud
+  note: No tier-A source exists; this tier-B page should replace the tier-C trade press as the ICE7 baud-rate record.

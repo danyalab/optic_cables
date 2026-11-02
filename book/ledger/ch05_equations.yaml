@@ -1,4 +1,3 @@
-# Chapter 5 equations. Symbols not in notation.yaml are flagged in notes.
 equations:
 - id: ch05.eq.fattree_hosts
   section: '5.1'
@@ -10,6 +9,7 @@ equations:
   locator: Sec. 2.2, p. 3 (in-text)
   notes: 'k: switch radix (ports per identical switch). k pods, each with k/2 edge and k/2 aggregation switches; each edge
     switch serves k/2 hosts. Proposed new symbols (not in notation.yaml): k (switch radix), N_host. k = 48 gives 27,648 (ch05.clos.fattree_hosts_k48).'
+  verified: match
 - id: ch05.eq.fattree_core
   section: '5.1'
   latex: N_{\mathrm{core}} = \left(\frac{k}{2}\right)^{2}
@@ -19,6 +19,7 @@ equations:
   locator: Sec. 2.2, p. 3 (in-text)
   notes: Number of k-port core switches; each core switch has one port to each of the k pods. Total switches 5k^2/4 follows
     by adding k^2 pod switches (derived, not stated in source).
+  verified: match
 - id: ch05.eq.fattree_paths
   section: '5.1'
   latex: N_{\mathrm{path}} = \left(\frac{k}{2}\right)^{2}
@@ -27,6 +28,7 @@ equations:
   source_id: alfares_sigcomm_2008
   locator: Sec. 3.1
   notes: Shortest (equal-cost) paths between two hosts in different pods; 576 for k = 48.
+  verified: match
 - id: ch05.eq.oversubscription_def
   section: '5.1'
   latex: \sigma = \frac{\sum_{h} B_{h}}{B_{\mathrm{bis}}}\quad(\text{expressed as } \sigma{:}1)
@@ -37,7 +39,11 @@ equations:
   notes: 'Source definition is verbal: ''the ratio of the worst-case achievable aggregate bandwidth among the end hosts to
     the total bisection bandwidth''. Latex is our transcription; sigma = 1 means full bisection, 5:1 leaves 20% of host bandwidth.
     Caution: Meta and Llama 3 write the same quantity as 1:7, Alibaba as 15:1. Proposed symbols sigma (oversubscription) and
-    B_bis.'
+    B_bis. Verifier (PARTIAL): Factor-of-2 risk. With bisection bandwidth as one-direction capacity across a balanced cut,
+    a 1:1 fabric has B_bis = (N/2)B_h, so sum over all hosts / B_bis = 2. Either sum over one half of the hosts, or define
+    B_bis as total (both halves) capacity. Jupiter''s 1.3 Pb/s = 64 blocks x 512 x 40G uses the total convention. State the
+    convention.'
+  verified: partial
 - id: ch05.eq.clos_nonblocking
   section: '5.1'
   latex: m \ge n_{\mathrm{in}} + n_{\mathrm{out}} - 1 \;\;\Rightarrow\;\; m \ge 2n - 1 \;(n_{\mathrm{in}} = n_{\mathrm{out}}
@@ -51,6 +57,7 @@ equations:
     non-blocking condition. Source Fig. 3: ''SWITCHES REQUIRED (n-1)+(m-1)+1=n+m-1; WHEN n = m, ABOVE=2n-1'' where the source''s
     m is outputs per output switch, not middle switches. Rename to avoid clash with notation (n is refractive index in notation.yaml):
     propose n_p for ports per edge switch.'
+  verified: match
 - id: ch05.eq.clos_crosspoints_3stage
   section: '5.1'
   latex: C(3) = (2N^{1/2} - 1)\,(3N) = 6N^{3/2} - 3N
@@ -61,6 +68,7 @@ equations:
   notes: 'N: inputs = outputs; n = N^{1/2} per edge switch. Crawler text garbled (''C(3) = (2iV1/2 - 1) (SN) = W3/2 - ZN'');
     verified against Fig. 2 caption ''NUMBER OF CROSSPOINTS = 6N^{3/2}-3N (1188 CROSSPOINTS WHEN N = 36)''. Square array C(1)
     = N^2 (Eq. 1).'
+  verified: match
 - id: ch05.eq.allreduce_lower_bound
   section: '5.3'
   latex: D_{\min} = \left\lceil 2\,\frac{N-1}{N}\,X \right\rceil \cdot s_{\mathrm{item}}
@@ -72,6 +80,7 @@ equations:
   notes: 'N: processes; X: items; s_item: item size in bytes (source ''itsize''). At least one process must send this many
     bytes. Under the linear model T(m) the time bound is about 2T(msize) (Lemma 5). N here clashes only with nothing in notation.yaml;
     proposed new symbol N_gpu in prose.'
+  verified: match
 - id: ch05.eq.ring_allreduce_time
   section: '5.3'
   latex: T_{\mathrm{ring}} = 2\,(N-1)\,T\!\left(\frac{X s_{\mathrm{item}}}{N}\right) = T\!\left(2\,\frac{N-1}{N}\,X s_{\mathrm{item}}\right)
@@ -81,6 +90,7 @@ equations:
   locator: Theorem 1 (proof)
   notes: Reduce-scatter then all-gather on a logical ring, each N-1 steps; second equality holds under the linear model T(m)
     proportional to m. Bandwidth optimal when X divisible by N.
+  verified: match
 - id: ch05.eq.hockney_message_cost
   section: '5.3'
   latex: T_{\mathrm{msg}} = \alpha_{\mathrm{c}} + n_{\mathrm{B}}\,\beta_{\mathrm{c}}
@@ -90,6 +100,7 @@ equations:
   notes: 'Source symbols: alpha (latency per message), beta (transfer time per byte), n (bytes). CONFLICT: alpha, beta and
     n are attenuation, propagation constant and refractive index in notation.yaml. Propose alpha_c, beta_c (or t_s, t_w) and
     n_B. gamma (reduction cost per byte) likewise conflicts with the nonlinear coefficient; propose gamma_c.'
+  verified: match
 - id: ch05.eq.rabenseifner_allreduce
   section: '5.3'
   latex: T_{\mathrm{Rab}} = 2\log_{2}p\;\alpha_{\mathrm{c}} + 2\,\frac{p-1}{p}\,n_{\mathrm{B}}\beta_{\mathrm{c}} + \frac{p-1}{p}\,n_{\mathrm{B}}\gamma_{\mathrm{c}}
@@ -98,6 +109,7 @@ equations:
   locator: Sec. 4.5
   notes: Reduce-scatter (recursive halving) + allgather (recursive doubling), p a power of two. Bandwidth term identical to
     the ring; latency term logarithmic instead of 2(p-1) alpha.
+  verified: match
 - id: ch05.eq.recursive_doubling_allreduce
   section: '5.3'
   latex: T_{\mathrm{rd}} = \log_{2}p\;\alpha_{\mathrm{c}} + n_{\mathrm{B}}\log_{2}p\;\beta_{\mathrm{c}} + n_{\mathrm{B}}\log_{2}p\;\gamma_{\mathrm{c}}
@@ -105,6 +117,7 @@ equations:
   source_id: thakur_ijhpca_2005
   locator: Sec. 4.5
   notes: Short-message allreduce in MPICH. Source writes 'lg p'.
+  verified: match
 - id: ch05.eq.binomial_reduce
   section: '5.3'
   latex: T_{\mathrm{tree}} = \lceil \log_{2}p \rceil\,(\alpha_{\mathrm{c}} + n_{\mathrm{B}}\beta_{\mathrm{c}} + n_{\mathrm{B}}\gamma_{\mathrm{c}})
@@ -112,6 +125,7 @@ equations:
   source_id: thakur_ijhpca_2005
   locator: Sec. 4.5
   notes: Binomial-tree reduce; the old MPICH allreduce was this followed by a broadcast.
+  verified: match
 - id: ch05.eq.nccl_busbw
   section: '5.3'
   latex: B_{\mathrm{bus}} = \frac{2(n_{g}-1)}{n_{g}}\,B_{\mathrm{alg}}
@@ -120,6 +134,7 @@ equations:
   locator: Sec. 5.1 (evaluation metric)
   notes: 'zh source: ''Busbw = 2(n - 1)/n x Algbw, 其中 n 表示GPU的数量，Algbw为算法带宽''. n_g: number of GPUs; B_alg: message size /
     collective time. This is the NCCL-tests all-reduce bus-bandwidth convention, and follows from the ring traffic 2(N-1)/N.'
+  verified: match
 - id: ch05.eq.tpuv4_ocs_count
   section: '5.5'
   latex: N_{\mathrm{OCS}} = \frac{6 \times 16}{2} = 48
@@ -128,3 +143,4 @@ equations:
   locator: Sec. 2.2
   notes: 6 cube faces x 16 links per face; opposite faces share an OCS to close the torus wrap-around. 64 cubes x 96 links
     = 6144 links (zu_nsdi_2024), each OCS uses 128 of 136 ports.
+  verified: match

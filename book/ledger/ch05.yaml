@@ -1,4 +1,3 @@
-# Chapter 5 (Data center fabrics) ledger. Retrieval agent ch05, retrieved 2026-11-02.
 records:
 - id: ch05.clos.fattree_hosts_k48
   section: '5.1'
@@ -17,6 +16,7 @@ records:
   tier: A
   confidence: high
   notes: Crawler text splits 'net work' across a line break; normalized. Checks against k^3/4 = 48^3/4 = 27,648 (ch05.eq.fattree_hosts).
+  verified: match
 - id: ch05.clos.fattree_paths_k48
   section: '5.1'
   claim: Equal-cost paths between two hosts in different pods of a k = 48 fat tree ((k/2)² = 576)
@@ -31,6 +31,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.fattree_cost_k48
   section: '5.1'
   claim: Switching-hardware cost of a 27,648-host fat tree vs. traditional hierarchy (2008 prices)
@@ -50,6 +51,7 @@ records:
   tier: A
   confidence: high
   notes: Historical cost, illustrative only. The $37M figure is for ~20,000 hosts at 1:1 (Sec. 2.1.4).
+  verified: match
 - id: ch05.clos.oversub_typical_2008
   section: '5.1'
   claim: Typical oversubscription of 2008 data center designs
@@ -68,6 +70,7 @@ records:
   tier: A
   confidence: high
   notes: Crawler hyphenation 'over subscribed' normalized. Definition of oversubscription is in ch05.eq.oversubscription_def.
+  verified: match
 - id: ch05.clos.oversub_5to1_meaning
   section: '5.1'
   claim: Fraction of host bandwidth available under 5:1 oversubscription
@@ -83,6 +86,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.ecmp_path_limit_2008
   section: '5.1'
   claim: Path multiplicity supported by 2008 ECMP implementations
@@ -99,6 +103,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.single_root_limit
   section: '5.1'
   claim: Largest 1:1 cluster with a singly rooted core of one 128-port 10GbE switch (no ECMP)
@@ -114,6 +119,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.clos_n36_crosspoints
   section: '5.1'
   claim: Crosspoints of Clos' 36-input three-stage non-blocking example vs. 1296 for a square array
@@ -131,6 +137,7 @@ records:
   tier: A
   confidence: high
   notes: Eleven 6x6 middle switches = 2n-1 with n = 6, the strict-sense non-blocking condition (ch05.eq.clos_nonblocking).
+  verified: match
 - id: ch05.clos.clos_n1000_crosspoints
   section: '5.1'
   claim: Crosspoints of a three-stage non-blocking Clos array with N = 1000 (vs. 10^6 square)
@@ -148,6 +155,7 @@ records:
   confidence: high
   notes: Table row (N, square array N², three-stage array). Table I header reads 'Three-Stage Array 6N^{3/2} - 3N'; for N
     = 1000 the formula gives 186,737 to rounding.
+  verified: match
 - id: ch05.clos.jupiter_bisection
   section: '5.1'
   claim: Bisection bandwidth of Google Jupiter in its largest configuration
@@ -164,6 +172,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.jupiter_table_row
   section: '5.1'
   claim: 'Jupiter generation parameters: 16x40G merchant silicon, 128x40G non-blocking spine block, 1.3 Pb/s bisection'
@@ -180,6 +189,7 @@ records:
   confidence: high
   notes: 'Columns: generation, first deployed, merchant silicon, ToR config, aggregation block, spine block, fabric speed,
     host speed, bisection BW.'
+  verified: match
 - id: ch05.clos.fourpost_bisection_2004
   section: '5.1'
   claim: Bisection bandwidth of Google's 2004 Four-Post cluster-router network
@@ -194,6 +204,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.saturn_bisection_2009
   section: '5.1'
   claim: Bisection bandwidth of Google Saturn (2009) fabric
@@ -211,6 +222,7 @@ records:
   confidence: high
   notes: Four-Post (2 Tb/s, 2004) to Jupiter (1.3 Pb/s, 2012) is a 650x increase in 8 years; the abstract summarizes '100x
     over ten years' (ch05.clos.jupiter_growth).
+  verified: match
 - id: ch05.clos.jupiter_growth
   section: '5.1'
   claim: Capacity growth of Google datacenter networks over ten years
@@ -225,6 +237,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.dc_bw_doubling
   section: '5.1'
   claim: Doubling time of datacenter bandwidth demand at Google (2015)
@@ -241,6 +254,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.clos.dgx_h100_su_rail
   section: '5.1'
   claim: 'DGX SuperPOD (H100) scalable unit: 32 nodes, rail-aligned, one hop within a rail'
@@ -257,6 +271,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.clos.dgx_h100_4su_switches
   section: '5.1'
   claim: Leaf and spine switch counts for a 4-SU (127-node, 1016-GPU) DGX H100 SuperPOD compute fabric
@@ -277,6 +292,7 @@ records:
   tier: B
   confidence: high
   notes: One node removed per SU for UFM connectivity (table footnote).
+  verified: match
 - id: ch05.clos.dgx_h100_16k_cables
   section: '5.1'
   claim: 'Cables per tier in a 56-SU (2048-node, 16,384-GPU) DGX H100 SuperPOD: equal to GPU count at every tier'
@@ -297,6 +313,7 @@ records:
   confidence: high
   notes: 'Basis for a links-per-GPU-per-tier = 1 transceiver count model in a non-blocking 3-tier rail-optimized fat tree.
     Same table: 16 SU = 4096 GPUs uses 128 leaf, 128 spine, 64 core.'
+  verified: match
 - id: ch05.clos.dgx_h100_fabric_def
   section: '5.1'
   claim: DGX SuperPOD compute fabric is rail-optimized, balanced full fat tree with eight NDR400 links per system
@@ -311,6 +328,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.cu.ieee_40gcr4_7m
   section: '5.2'
   claim: Passive twinax reach objective at 10 Gb/s per lane (40GBASE-CR4)
@@ -329,6 +347,7 @@ records:
   tier: B
   confidence: high
   notes: Task-force contribution quoting the standard's Table 80-1 verbatim; IEEE 802.3 base text itself not opened.
+  verified: match
 - id: ch05.cu.ieee_100gcr4_5m
   section: '5.2'
   claim: Passive twinax reach at 25 Gb/s per lane (100GBASE-CR4, IEEE 802.3bj)
@@ -348,6 +367,7 @@ records:
   confidence: high
   notes: Quote spans a two-column table where the PHY name is interleaved. The same 5 m appears in the 802.3bj D3.0 ballot
     comments.
+  verified: match
 - id: ch05.cu.ieee_50g_cr_3m
   section: '5.2'
   claim: Passive twinax reach objective at 50 Gb/s per lane (50GBASE-CR, 100GBASE-CR2, 200GBASE-CR4; IEEE 802.3cd)
@@ -364,6 +384,7 @@ records:
   tier: B
   confidence: high
   notes: Crawler stripped spaces from the PDF text; spacing restored.
+  verified: match
 - id: ch05.cu.ieee_100g_lane_cr_2m
   section: '5.2'
   claim: Passive twinax reach objective at 100 Gb/s per lane (100GBASE-CR1/200GBASE-CR2/400GBASE-CR4; IEEE 802.3ck)
@@ -382,6 +403,7 @@ records:
   confidence: high
   notes: Contribution quoting the 802.3ck objectives. IEEE Std 802.3ck-2022 (Clause 162) itself not read (IEEE GET access
     not reachable). 802.3df later added 800GBASE-CR8 at the same 100G/lane class.
+  verified: match
 - id: ch05.cu.ieee_200g_lane_cr_1m
   section: '5.2'
   claim: Passive twinax reach objective at 200 Gb/s per lane (IEEE P802.3dj, 200G to 1.6T CR PHYs)
@@ -401,6 +423,7 @@ records:
   confidence: high
   notes: Same 1.0 m objective for 400G (2 pairs), 800G (4 pairs) and 1.6T (8 pairs). Disagrees with NVIDIA's statement that
     passive DAC at 200G PAM4 is usable to under 0.7 m (ch05.cu.nvidia_xdr_dac_lt_0p7m).
+  verified: match
 - id: ch05.cu.ieee_3dj_backplane_loss
   section: '5.2'
   claim: Die-to-die insertion-loss objective for 200 Gb/s per lane electrical backplane (IEEE P802.3dj)
@@ -416,6 +439,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.cu.nvidia_xdr_dac_lt_0p7m
   section: '5.2'
   claim: Maximum usable passive DAC length at 200G PAM4 (NVIDIA XDR)
@@ -434,6 +458,7 @@ records:
   confidence: high
   notes: 'Disagreement: IEEE P802.3dj objective is at least 1.0 m (ch05.cu.ieee_200g_lane_cr_1m). The gap reflects different
     host/package loss assumptions. Use a contested box.'
+  verified: match
 - id: ch05.cu.nvidia_xdr_active_reach
   section: '5.2'
   claim: Reach of active copper (LACC/AEC) at 200G PAM4 (XDR, 1.6T)
@@ -451,6 +476,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.cu.nvidia_aec_lacc_power
   section: '5.2'
   claim: Power per end of NVIDIA XDR AEC (DSP) vs. LACC (linear)
@@ -472,6 +498,7 @@ records:
   confidence: med
   notes: Range is [LACC, AEC]. AEC sentence begins 'AECs use digital signal processors (DSPs) at each end to restore and retime
     signals, enabling reach up to three meters'.
+  verified: match
 - id: ch05.cu.nvidia_ndr_dac_2m
   section: '5.2'
   claim: NVIDIA 800G (100G PAM4) straight passive DAC length range and power
@@ -490,6 +517,7 @@ records:
   confidence: high
   notes: 'Same page: ''Power consumption is 0.1 Watts per end''. NVIDIA spec table (nvidia_linkx_page) lists ''Max DAC Reach
     3 m'' for 800G/400G OSFP, i.e. counting splitters.'
+  verified: match
 - id: ch05.cu.nvidia_ndr_acc_5m
   section: '5.2'
   claim: NVIDIA 100G-PAM4 linear active copper cable (ACC) reach and power
@@ -507,6 +535,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.cu.credo_aec_800g_7m
   section: '5.2'
   claim: Reach of an 800G (8x112G PAM4) DSP-based active electrical cable
@@ -525,6 +554,7 @@ records:
   tier: B
   confidence: high
   notes: 'Same brief: ''Typ.10W power dissipation each end''.'
+  verified: match
 - id: ch05.cu.credo_aec_power_claim_75
   section: '5.2'
   claim: Vendor claim of AEC power saving vs. optics (SHIFT 800G-to-2x400G AEC)
@@ -541,6 +571,7 @@ records:
   confidence: med
   notes: Disagrees with the 'up to 50% less power than optical' in the same vendor's SPAN brief (ch05.cu.credo_aec_800g_7m).
     Marketing upper bounds; do not use as a technical value.
+  verified: match
 - id: ch05.cu.meta_rtsw_dac_ctsw_smf
   section: '5.2'
   claim: 'Meta AI Zone media: DAC inside the rack, single-mode fiber with 400G pluggables from RTSW to CTSW'
@@ -555,7 +586,10 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: 'Same paragraph: RTSW ''offers scale-up connectivity for GPUs within the rack using copper-based DAC cables''.'
+  notes: 'Same paragraph: RTSW ''offers scale-up connectivity for GPUs within the rack using copper-based DAC cables''. Verifier
+    (PARTIAL): Change locator from ''Sec. 4 (AI Zone)'' to ''Sec. 3.2, AI Zone paragraph''. Same paragraph: ''cross-AI zone
+    connectivity is oversubscribed by design'' (no ratio).'
+  verified: partial
 - id: ch05.cu.megascale_aoc_split
   section: '5.2'
   claim: ByteDance MegaScale ToR downlinks split one 400G port into two 200G using AOCs
@@ -569,6 +603,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.cu.broadcom_copper_rack_limit
   section: '5.2'
   claim: 'Broadcom position: past 200G/lane passive copper cannot extend beyond one rack'
@@ -584,6 +619,7 @@ records:
   tier: B
   confidence: med
   notes: Vendor white paper (CPO supplier), interested party.
+  verified: match
 - id: ch05.ai.allreduce_2x_bound
   section: '5.3'
   claim: Lower bound on all-reduce time is about twice the time to send the full message (linear model)
@@ -601,6 +637,7 @@ records:
   tier: A
   confidence: high
   notes: Ring algorithm achieves this (Theorem 1); see ch05.eq.allreduce_lower_bound and ch05.eq.ring_allreduce_time.
+  verified: match
 - id: ch05.ai.rabenseifner_threshold
   section: '5.3'
   claim: MPICH message-size switch to Rabenseifner's reduce-scatter-based reduce for predefined ops
@@ -616,6 +653,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ai.nccl_tree_latency_180x
   section: '5.3'
   claim: NCCL 2.4 double-binary-tree latency improvement over ring at 24,576 GPUs
@@ -629,9 +667,10 @@ records:
   locator: Performance at scale, Fig. 3
   quote: The difference from ring increases with the scale, with up to 180x improvement at 24k GPUs.
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
-  notes: 'Same post: ''latency scales linearly with the number of GPUs'' for rings.'
+  tier: C
+  confidence: low
+  notes: 'Same post: ''latency scales linearly with the number of GPUs'' for rings. Tier C: vendor blog (SCHEMA rule).'
+  verified: match
 - id: ch05.ai.llama3_cluster_24k
   section: '5.3'
   claim: 'Meta RoCE cluster used for Llama 3 405B: 24K GPUs, three-layer Clos'
@@ -648,6 +687,7 @@ records:
   tier: B
   confidence: high
   notes: Meta engineering blog states two 24,576-GPU clusters; '24K' is the paper's rounding.
+  verified: match
 - id: ch05.ai.llama3_pod_3072
   section: '5.3'
   claim: 'Meta pod: 192 racks of 16 GPUs with full bisection (3,072 GPUs)'
@@ -664,6 +704,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ai.llama3_oversub_1to7
   section: '5.3'
   claim: Oversubscription at the aggregation layer between pods (Meta 24K cluster)
@@ -682,6 +723,7 @@ records:
   confidence: high
   notes: Gangidi et al. SIGCOMM 2024 states only that cross-AI-zone connectivity is 'oversubscribed by design'; the 1:7 number
     is confirmed by zeng_sigcomm_2026.
+  verified: match
 - id: ch05.ai.llama3_400g_per_gpu
   section: '5.3'
   claim: Per-GPU scale-out bandwidth in Meta's RoCE and InfiniBand Llama 3 clusters
@@ -695,6 +737,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ai.llama3_16_flows
   section: '5.3'
   claim: Number of network flows the collective library opens between two GPUs for ECMP load balance
@@ -708,6 +751,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ai.meta_zone_4k
   section: '5.3'
   claim: 'Meta AI Zone size (2026 generation): up to 288 racks of 16 GPUs'
@@ -725,7 +769,10 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: '288 x 16 = 4608 computed here; the paper itself rounds to ~4K. Earlier generation: 192 racks, 3,072 GPUs (ch05.ai.llama3_pod_3072).'
+  notes: '288 x 16 = 4608 computed here; the paper itself rounds to ~4K. Earlier generation: 192 racks, 3,072 GPUs (ch05.ai.llama3_pod_3072).
+    Verifier (PARTIAL): Value 4608 is our product 288x16, not stated in source. Either record value 288 racks / 16 GPUs per
+    rack, or keep 4608 with kind model_param and note ''derived; source says ~4K''.'
+  verified: partial
 - id: ch05.ai.meta_oversub_2p8
   section: '5.3'
   claim: Cross-AI-Zone oversubscription in Meta's 100K+ GPU fabric, reduced from 1:7
@@ -742,6 +789,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ai.meta_129k_h100
   section: '5.3'
   claim: H100 GPUs in Meta's multi-building RoCE cluster at completion (5 buildings)
@@ -758,6 +806,7 @@ records:
   tier: A
   confidence: high
   notes: 'Same section: ''There is a 1:1 mapping between GPUs and NICs.'''
+  verified: match
 - id: ch05.ai.meta_latency_hierarchy
   section: '5.3'
   claim: 'GPU-to-GPU latency relative to intra-rack: cross-rack, cross-zone, cross-building'
@@ -776,6 +825,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ai.hpn_segment_1k
   section: '5.3'
   claim: 'Alibaba HPN segment: GPUs under one tier of dual-ToR rail-optimized switches using 51.2 Tb/s chips'
@@ -792,6 +842,9 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: partial
+  notes: 'Verifier (PARTIAL): Value corroborated in Sec. 3; Sec. 5.2 quote not seen by verifier. Re-read Sec. 5.2 or swap
+    to the Sec. 3 sentence.'
 - id: ch05.ai.hpn_pod_15k
   section: '5.3'
   claim: Alibaba HPN Pod size in a 2-tier dual-plane architecture
@@ -808,6 +861,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ai.hpn_core_oversub_15
   section: '5.3'
   claim: Aggregation-to-Core oversubscription in Alibaba HPN
@@ -823,7 +877,9 @@ records:
   tier: A
   confidence: high
   notes: 'Sec. 6.2: 15:1 ''releases 87.5% more ports on the Aggregation switches''. Note opposite ratio convention to Meta
-    (1:7).'
+    (1:7). Verifier (PARTIAL): Quote and value match; change locator ''Sec. 2 / Sec. 6.2'' to ''Sec. 3; Sec. 6.2''. Sec. 6.2
+    adds: 15:1 ''releases 87.5% more ports on the Aggregation switches''.'
+  verified: partial
 - id: ch05.ai.hpn_host_3p2t
   section: '5.3'
   claim: Per-host scale-out bandwidth in Alibaba HPN (8 x 400G, each NIC 2x200G)
@@ -839,6 +895,9 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: partial
+  notes: 'Verifier (PARTIAL): Value corroborated in Sec. 3; Sec. 5.2 quote not seen. Swap to Sec. 3 sentence or re-read Sec.
+    5.2.'
 - id: ch05.ai.hpn_nvlink_ratio
   section: '5.3'
   claim: Intra-host (NVLink) bandwidth relative to a 2x200G NIC
@@ -855,6 +914,9 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: partial
+  notes: 'Verifier (PARTIAL): Sec. 5.2 quote not seen. Sec. 3 gives 400-900 GB/s bidirectional, i.e. 200-450 GB/s per direction
+    vs 50 GB/s NIC, consistent with 4-9x. State direction in conditions.'
 - id: ch05.ai.hpn_jobs_under_1k
   section: '5.3'
   claim: Share of Alibaba production LLM training jobs using fewer than 1K GPUs
@@ -868,6 +930,8 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: partial
+  notes: 'Verifier (PARTIAL): Change locator from ''Sec. 2, Fig. 6'' to ''Sec. 3, Fig. 6''.'
 - id: ch05.ai.hpn_cost_saving
   section: '5.3'
   claim: Network build cost saving from a single 15K-GPU Pod vs. multiple Pods (Alibaba)
@@ -882,6 +946,7 @@ records:
   tier: A
   confidence: med
   notes: Operator internal statistic, not itemized.
+  verified: match
 - id: ch05.ai.megascale_tor_split
   section: '5.3'
   claim: 'ByteDance MegaScale switch: Tomahawk 4, 64x400G, 1:1 down/up at every layer'
@@ -898,6 +963,7 @@ records:
   tier: A
   confidence: high
   notes: 'Same paragraph: ''For switches at each layer, the bandwidth percentage between downlink and uplink is 1:1.'''
+  verified: match
 - id: ch05.ai.megascale_nics
   section: '5.3'
   claim: 'ByteDance MegaScale server NICs: eight 200G NICs, multi-rail to eight switches'
@@ -913,6 +979,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ai.megascale_mfu
   section: '5.3'
   claim: Model FLOPs utilization of MegaScale training a 175B model on 12,288 GPUs
@@ -928,6 +995,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ai.tencent_8x400g
   section: '5.3'
   claim: 'Tencent Astral (星脉) server scale-out NICs: 8 x 400 Gb/s RoCE, dual-port, two-tier multi-rail'
@@ -946,6 +1014,7 @@ records:
   confidence: high
   notes: 'zh: ''intra-node NVLink (400 GB/s) and inter-node RoCE (400 Gbit/s x 8 NIC = 3.2 Tbit/s)''. Sec. 1 describes two-tier
     (Leaf/Spine) multi-rail topology, 8 x 400G RoCE NICs per server.'
+  verified: match
 - id: ch05.ai.tencent_100k_gpu
   section: '5.3'
   claim: Scale claimed for Tencent Astral network
@@ -961,6 +1030,7 @@ records:
   confidence: med
   notes: 'zh: ''a lossless high-performance network able to interconnect clusters of over 100,000 GPUs''. Capability claim,
     not a measured deployment.'
+  verified: match
 - id: ch05.ai.tencent_nvlink_roce_latency
   section: '5.3'
   claim: NVLink vs. RoCE transfer latency quoted by Tencent
@@ -978,7 +1048,10 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: med
-  notes: 'zh: ''NVLink latency 200 ns, far below RoCE latency 2 µs''.'
+  notes: 'zh: ''NVLink latency 200 ns, far below RoCE latency 2 µs''. Verifier (PARTIAL): Quote verified, but the same paper
+    states RoCE latency 4 μs in Sec. 3.3. Record the internal disagreement in notes or add a second record; use a range [2,
+    4] us.'
+  verified: partial
 - id: ch05.ai.tencent_a100_flow_180g
   section: '5.3'
   claim: Peak per-flow bandwidth and flow count in a 1,000-A100 cluster (Tencent)
@@ -996,6 +1069,7 @@ records:
   confidence: high
   notes: 'zh: ''in a 1,000-A100 cluster, peak per-flow bandwidth reaches 180 Gbit/s while there are only 4,000 flows'' (low
     entropy, elephant flows).'
+  verified: match
 - id: ch05.ai.tencent_2023_1p6t
   section: '5.3'
   claim: 'Tencent StarNet (2023): 1.6 Tb/s per node (8 x 2x100G RoCE), 2K GPU non-blocking fat tree, up to 32K'
@@ -1012,7 +1086,10 @@ records:
   tier: B
   confidence: high
   notes: 'zh: ''non-blocking fat-tree, single cluster 2K GPUs ... scalable up to 32K GPU clusters''. Same article: 8 RoCE
-    NICs giving 1.6 Tbps per node; ''网络建设成本降低30%''.'
+    NICs giving 1.6 Tbps per node; ''网络建设成本降低30%''. Verifier (PARTIAL): Quote does not contain the value 1.6 Tb/s (hard rule
+    2). Append this sentence to the quote. Page is a developer-community repost (InfoQ credits 腾讯网络平台团队); tier B acceptable,
+    consider C.'
+  verified: partial
 - id: ch05.ai.cx7_400g
   section: '5.3'
   claim: Maximum total bandwidth of NVIDIA ConnectX-7 NIC
@@ -1028,6 +1105,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ai.cx8_800g
   section: '5.3'
   claim: Maximum total bandwidth of NVIDIA ConnectX-8 SuperNIC
@@ -1044,6 +1122,7 @@ records:
   tier: B
   confidence: high
   notes: Ethernet single port tops out at 400G (2x400G for 800G) on this datasheet; InfiniBand XDR single-port 800G.
+  verified: match
 - id: ch05.ai.dgx_h100_400g_nvlink
   section: '5.3'
   claim: 'DGX H100 per-GPU networking vs. NVLink: 400 Gb/s ConnectX-7 vs 900 GB/s NVLink 4'
@@ -1059,6 +1138,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.su.nvlink4_900
   section: '5.4'
   claim: NVLink 4 (Hopper) bandwidth per GPU, 18 links
@@ -1076,6 +1156,7 @@ records:
   tier: B
   confidence: high
   notes: Columns are fourth, fifth, sixth generation. NVIDIA quotes NVLink figures as bidirectional totals.
+  verified: match
 - id: ch05.su.nvlink5_1800
   section: '5.4'
   claim: NVLink 5 (Blackwell) bandwidth per GPU, 18 links
@@ -1092,6 +1173,7 @@ records:
   tier: B
   confidence: high
   notes: Also 'The revolutionary 1.8 TB/s of bidirectional throughput per GPU is over 14x the bandwidth of PCIe Gen5' (nvidia_gb200_techblog_2024).
+  verified: match
 - id: ch05.su.nvlink6_3000
   section: '5.4'
   claim: NVLink 6 (Vera Rubin) bandwidth per GPU, 36 links; NVL72 aggregate 216 TB/s
@@ -1110,6 +1192,7 @@ records:
   tier: B
   confidence: med
   notes: Page marks specs 'Preliminary specifications; may be subject to change.'
+  verified: match
 - id: ch05.su.nvl72_130tbs
   section: '5.4'
   claim: Aggregate NVLink bandwidth of a GB200 NVL72 rack
@@ -1126,6 +1209,7 @@ records:
   tier: B
   confidence: high
   notes: 72 x 1.8 TB/s = 129.6 TB/s; marketing rounds to 130.
+  verified: match
 - id: ch05.su.nvl72_copper_cables
   section: '5.4'
   claim: Copper cables in the four NVLink cartridges of a GB200 NVL72 rack
@@ -1139,10 +1223,12 @@ records:
   quote: These cartridges accommodate over 5,000 active copper cables, delivering an impressive aggregate All-to-All bandwidth
     of 130 TB/s and 260 TB/s AllReduce bandwidth.
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
-  notes: Same blog elsewhere says 'over 5,000 energy efficient coaxial copper cables' and calls them passive in function (driven
-    directly by SerDes); 'active' here is inconsistent with other NVIDIA descriptions. SemiAnalysis counts 5,184 (ch05.su.nvl72_5184_cables).
+  tier: C
+  confidence: low
+  notes: 'Same blog elsewhere says ''over 5,000 energy efficient coaxial copper cables'' and calls them passive in function
+    (driven directly by SerDes); ''active'' here is inconsistent with other NVIDIA descriptions. SemiAnalysis counts 5,184
+    (ch05.su.nvl72_5184_cables). Tier C: vendor blog (SCHEMA rule).'
+  verified: match
 - id: ch05.su.nvl72_5184_cables
   section: '5.4'
   claim: Third-party count of NVL72 NVLink copper cables (72 GPUs x 18 links x 4 ... as counted by SemiAnalysis)
@@ -1158,6 +1244,7 @@ records:
   confidence: low
   notes: Tier C; use only in a contested box alongside NVIDIA's 'over 5,000'. 5,184 = 72 x 18 x 4 (differential pairs per
     link direction?) is not derived in the visible text.
+  verified: match
 - id: ch05.su.nvl72_optics_20kw_claim
   section: '5.4'
   claim: 'NVIDIA CEO claim: optics and retimers for the NVL72 NVLink spine would have consumed 20 kW'
@@ -1176,6 +1263,7 @@ records:
   confidence: low
   notes: 'Secondary transcription of a keynote. Contested-box material: SemiAnalysis argues scale-out optics per GPU do not
     decrease.'
+  verified: match
 - id: ch05.su.nvl72_switch_tray
   section: '5.4'
   claim: 'NVLink Switch tray ports: 144 NVLink ports at 100 GB/s each; nine trays per NVL72'
@@ -1191,9 +1279,10 @@ records:
   quote: Each NVLink switch tray delivers 144 NVLink ports at 100 GB so the nine switches fully connect each of the 18 NVLink
     ports
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
-  notes: 9 x 144 = 1296 = 72 x 18 switch-side ports.
+  tier: C
+  confidence: low
+  notes: '9 x 144 = 1296 = 72 x 18 switch-side ports. Tier C: vendor blog (SCHEMA rule).'
+  verified: match
 - id: ch05.su.nvlink_576_domain
   section: '5.4'
   claim: Maximum fifth-generation NVLink domain size (multi-rack)
@@ -1206,8 +1295,10 @@ records:
   locator: Fifth-generation NVLink and NVLink Switch System
   quote: connects up to 576 GPUs in a single NVLink domain with over 1 PB/s total bandwidth and 240 TB of fast memory.
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
+  tier: C
+  confidence: low
+  verified: match
+  notes: 'Tier C: vendor blog (SCHEMA rule).'
 - id: ch05.su.nvl72_copper_cartridge
   section: '5.4'
   claim: NVL72 interconnects GPUs with a copper cable cartridge
@@ -1219,8 +1310,10 @@ records:
   locator: GB200 NVL72 section
   quote: The GB200 NVL72 densely packs and interconnects the GPUs using a copper cable cartridge for operational simplicity.
   retrieved: 2026-11-02
-  tier: B
-  confidence: high
+  tier: C
+  confidence: low
+  verified: match
+  notes: 'Tier C: vendor blog (SCHEMA rule).'
 - id: ch05.su.ualink_lane_rate
   section: '5.4'
   claim: UALink 1.0 maximum data rate per lane (signaling 212.5 GT/s incl. Ethernet L1 FEC)
@@ -1237,6 +1330,7 @@ records:
   tier: B
   confidence: high
   notes: Verbatim grammar ('shall supports') preserved. Consortium spec, not a standards-body document.
+  verified: match
 - id: ch05.su.ualink_station_800g
   section: '5.4'
   claim: UALink station (4 lanes) maximum bandwidth per direction
@@ -1251,6 +1345,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.su.ualink_1024
   section: '5.4'
   claim: Maximum accelerators in a UALink scale-up Pod (10-bit identifier)
@@ -1264,6 +1359,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.su.ironwood_9216
   section: '5.4'
   claim: 'Google TPU7x (Ironwood) pod size: 144 cubes of 64 chips, OCS-connected'
@@ -1279,6 +1375,9 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: partial
+  notes: 'Verifier (PARTIAL): Value matches; quoted sentence ''(144 cubes)'' not in current page. Use this sentence, or cite
+    google_ironwood_stack_blog_2025 (''a 9,216-chip system with 144 cubes'').'
 - id: ch05.su.ironwood_ici
   section: '5.4'
   claim: Ironwood ICI bandwidth per chip (six links, 200 GB/s bidirectional each)
@@ -1296,7 +1395,9 @@ records:
   tier: B
   confidence: high
   notes: 'Google Cloud blog states ''ICI networking at 9.6 Tb/s'' (= 1.2 TB/s x 8). DCN (scale-out) per chip: 100 Gbps (same
-    table), a 96:1 scale-up:scale-out ratio.'
+    table), a 96:1 scale-up:scale-out ratio. Verifier (PARTIAL): Value matches; ''six ICI links ... 200 GBps'' sentence not
+    found in current page. Quote the table row instead.'
+  verified: partial
 - id: ch05.su.ironwood_dcn_100g
   section: '5.4'
   claim: Ironwood data-center-network (scale-out) bandwidth per chip
@@ -1311,6 +1412,7 @@ records:
   tier: B
   confidence: high
   notes: Columns v5p, v6e, TPU7x.
+  verified: match
 - id: ch05.su.cloudmatrix_384
   section: '5.4'
   claim: 'Huawei CloudMatrix384 supernode: 384 Ascend 910C NPUs and 192 CPUs on one UB scale-up fabric'
@@ -1327,6 +1429,7 @@ records:
   tier: B
   confidence: high
   notes: v1 of the arXiv paper says 'Ascend 910'; v2 says 910C.
+  verified: match
 - id: ch05.su.cloudmatrix_ub_bw
   section: '5.4'
   claim: UB scale-up bandwidth per Ascend 910C NPU (unidirectional)
@@ -1344,6 +1447,7 @@ records:
   tier: B
   confidence: high
   notes: 'Per die: seven 224 Gbps transceivers = 196 GB/s unidirectional. Scale-out RDMA: 200 Gbps per die, i.e. ~7.8:1 scale-up:scale-out.'
+  verified: match
 - id: ch05.su.cloudmatrix_internode
   section: '5.4'
   claim: Inter-node vs intra-node UB bandwidth degradation and latency increase in CloudMatrix384
@@ -1358,6 +1462,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.su.broadcom_512_scaleup
   section: '5.4'
   claim: 'Optical scale-up example: one 102.4T, radix-512 switch layer gives 512 GPUs 12.8 Tb/s each'
@@ -1376,6 +1481,7 @@ records:
   confidence: med
   notes: 'Vendor architecture proposal. Same paper: BiDi CPO lowers optics cost ~15% vs DR for 512-1024 GPU scale-up at 30
     m average link.'
+  verified: match
 - id: ch05.su.lightpath_32
   section: '5.4'
   claim: 'Lightpath server-scale photonic interconnect prototype: accelerators and per-wavelength rate'
@@ -1393,7 +1499,10 @@ records:
   tier: A
   confidence: med
   notes: 'Same paragraph: ''One wavelength can sustain up to 224 Gbps bandwidth, and programming optical switches on Lightpath
-    can take up to 3.7 s'' (unit as in crawler text; verify, likely µs).'
+    can take up to 3.7 s'' (unit as in crawler text; verify, likely µs). Verifier (PARTIAL): Ledger value 224 Gb/s is not
+    in the quote; append this sentence. Full text read: raise confidence to high. (''3.7 s'' likely a crawl loss of ''µs'';
+    Lumorph uses 3.7 µs.)'
+  verified: partial
 - id: ch05.su.lumorph_speedup
   section: '5.4'
   claim: 'Lumorph optically reconfigurable rack: collective and training speedup (preprint)'
@@ -1411,6 +1520,7 @@ records:
   tier: B
   confidence: med
   notes: Abstract only; crawler rendered '1.7' twice ('$1.71.7$ X'). Preprint.
+  verified: match
 - id: ch05.ocs.palomar_ports
   section: '5.5'
   claim: Palomar MEMS OCS port count (duplex, incl. 8 spares)
@@ -1427,6 +1537,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.palomar_mirrors
   section: '5.5'
   claim: Micro-mirrors fabricated per Palomar MEMS die (best 136 used)
@@ -1440,6 +1551,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.palomar_power
   section: '5.5'
   claim: Maximum power of a Palomar OCS system
@@ -1453,6 +1565,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.palomar_il
   section: '5.5'
   claim: Typical Palomar OCS insertion loss across all 136x136 permutations
@@ -1467,6 +1580,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.palomar_rl
   section: '5.5'
   claim: 'Palomar OCS return loss: typical -46 dB, specification below -38 dB'
@@ -1485,6 +1599,7 @@ records:
   tier: A
   confidence: high
   notes: Stringent because links are bidirectional through circulators.
+  verified: match
 - id: ch05.ocs.palomar_availability
   section: '5.5'
   claim: Field availability of Palomar OCS chassis
@@ -1498,6 +1613,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.il_target_lightwave
   section: '5.5'
   claim: OCS insertion-loss target for low-cost transceivers (Lightwave fabrics)
@@ -1512,6 +1628,7 @@ records:
   tier: A
   confidence: high
   notes: 'Disagreement: the earlier Apollo preprint states ''ideally below 2dB'' (ch05.ocs.il_target_apollo).'
+  verified: match
 - id: ch05.ocs.il_target_apollo
   section: '5.5'
   claim: OCS insertion-loss target (Apollo preprint)
@@ -1526,6 +1643,7 @@ records:
   tier: B
   confidence: high
   notes: See ch05.ocs.il_target_lightwave (3 dB) for the later peer-reviewed wording.
+  verified: match
 - id: ch05.ocs.commercial_switch_time
   section: '5.5'
   claim: Typical switching time of commercial OCS
@@ -1542,6 +1660,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ocs.fiber_latency
   section: '5.5'
   claim: Propagation latency in fiber vs free space quoted for OCS
@@ -1557,6 +1676,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ocs.mems_drive_power
   section: '5.5'
   claim: MEMS mirror high-voltage driver power per mirror and port
@@ -1571,6 +1691,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: med
+  verified: match
 - id: ch05.ocs.lightwave_vs_static_cost
   section: '5.5'
   claim: TPU v4 superpod lightwave fabric cost and power vs. static optical baseline
@@ -1591,7 +1712,10 @@ records:
   tier: A
   confidence: med
   notes: 'Same text: an EPS-based fabric is 24% more expensive and uses 10% more power. Internal study. Different framing
-    from TPU v4 ''<5% of cost, <3% of power'' (ch05.ocs.tpuv4_cost_share).'
+    from TPU v4 ''<5% of cost, <3% of power'' (ch05.ocs.tpuv4_cost_share). Verifier (PARTIAL): Quote verbatim; change locator
+    from ''Sec. 2 / Table 1'' to ''Sec. 4.2, Table 1''; raise confidence to high. Abstract frames it differently: ''despite
+    constituting less than 6% of the total system cost''. Note in contested box.'
+  verified: partial
 - id: ch05.ocs.tpuv4_cost_share
   section: '5.5'
   claim: OCS plus all optical components as share of TPU v4 supercomputer cost and power
@@ -1612,6 +1736,7 @@ records:
   confidence: high
   notes: Values are upper bounds [<5% cost, <3% power]. Zu et al. NSDI 2024 repeat 'OCS and optical fiber costs are < 5%'
     and '< 3% of a pod's total power'.
+  verified: match
 - id: ch05.ocs.tpuv4_48_ocs
   section: '5.5'
   claim: Number of OCSes in a 4096-chip TPU v4 supercomputer
@@ -1629,6 +1754,7 @@ records:
   tier: A
   confidence: high
   notes: '''4 3'' is the crawler rendering of 4^3. See ch05.eq.tpuv4_ocs_count.'
+  verified: match
 - id: ch05.ocs.tpuv4_6144_links
   section: '5.5'
   claim: Optical ICI links in a TPU v4 supercomputer
@@ -1646,6 +1772,7 @@ records:
   tier: A
   confidence: high
   notes: 1.5 optical links per chip.
+  verified: match
 - id: ch05.ocs.tpuv4_chips
   section: '5.5'
   claim: TPU v4 supercomputer size
@@ -1659,6 +1786,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.jupiter_capex_30
   section: '5.5'
   claim: Jupiter capex reduction over a decade with OCS direct-connect evolution
@@ -1673,6 +1801,7 @@ records:
   tier: A
   confidence: high
   notes: Same quote supports ch05.ocs.jupiter_power_41 and the 5x speed/capacity figure.
+  verified: match
 - id: ch05.ocs.jupiter_power_41
   section: '5.5'
   claim: Jupiter power reduction over a decade with OCS direct-connect evolution
@@ -1686,6 +1815,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.jupiter_pathlen
   section: '5.5'
   claim: Average block-level path length in direct-connect Jupiter (60% of traffic direct)
@@ -1700,6 +1830,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.jupiter_reconfig_3x
   section: '5.5'
   claim: OCS fabric reconfiguration speedup vs. patch-panel Clos
@@ -1714,6 +1845,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch05.ocs.jupiter_circulator_halving
   section: '5.5'
   claim: Direct-connect topology and circulators each halve required OCS ports
@@ -1728,6 +1860,7 @@ records:
   tier: A
   confidence: med
   notes: Seen in a search-engine excerpt of the full text; locator approximate.
+  verified: match
 - id: ch05.ocs.sirius_tuning
   section: '5.5'
   claim: Sirius custom tunable laser worst-case tuning time
@@ -1744,6 +1877,7 @@ records:
   tier: A
   confidence: high
   notes: 527 ps SOA turn-on, 912 ps turn-off.
+  verified: match
 - id: ch05.ocs.sirius_reconfig
   section: '5.5'
   claim: Sirius end-to-end reconfiguration (guardband) at 50 Gb/s PAM4
@@ -1759,6 +1893,7 @@ records:
   tier: A
   confidence: high
   notes: 'First-generation prototype with an off-the-shelf laser: 92 ns tuning, 100 ns guardband.'
+  verified: match
 - id: ch05.ocs.sirius_power
   section: '5.5'
   claim: Simulated power reduction of Sirius vs. ideal electrically switched non-blocking network
@@ -1776,6 +1911,7 @@ records:
   tier: A
   confidence: med
   notes: Simulation result.
+  verified: match
 - id: ch05.ocs.ironwood_ocs_bypass
   section: '5.5'
   claim: Ironwood superpods use OCS to optically bypass failed cubes and swap in spares
@@ -1791,6 +1927,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
+  verified: match
 - id: ch05.ocs.tencent_astral3_shuffle
   section: '5.5'
   claim: Tencent Astral 3.0 uses optical shuffle to build a flat two-tier single-rail network
@@ -1806,6 +1943,7 @@ records:
   confidence: med
   notes: 'zh: ''we use optical-shuffle technology to build a flattened two-tier single-rail network, designing the Astral
     3.0 architecture''. Abstract only; no numbers read.'
+  verified: match
 - id: ch05.ocs.photonic_rails
   section: '5.5'
   claim: 'Proposal: implement each rail of a rail-optimized fabric with an OCS instead of packet switches'
@@ -1821,6 +1959,7 @@ records:
   tier: B
   confidence: med
   notes: Preprint.
+  verified: match
 - id: ch05.pw.transceiver_1p6t_30w
   section: '5.6'
   claim: Power of a 1.6 Tb/s pluggable transceiver, DSP more than half
@@ -1833,8 +1972,10 @@ records:
   locator: Section on DSP power
   quote: a 1.6 Tbps transceiver might use around 30 watts, with the DSP consuming more than half of that.
   retrieved: 2026-11-02
-  tier: B
+  tier: C
   confidence: med
+  verified: match
+  notes: 'Tier C: vendor blog (SCHEMA rule).'
 - id: ch05.pw.cpo_9w
   section: '5.6'
   claim: Per-interface optical power with co-packaged optics vs. ~30 W pluggable (NVIDIA)
@@ -1853,6 +1994,7 @@ records:
   notes: 'Same post: pluggables ''often 30W per interface''. 30/9 = 3.3, consistent with the ''3.5x'' claim within rounding.
     Source reused from sources/ch04.yaml, where it is classed tier C (vendor blog); record tier set to C to match. Use only
     with a corroborating datasheet or in a contested box.'
+  verified: match
 - id: ch05.pw.cpo_3p5x
   section: '5.6'
   claim: Claimed power-efficiency gain of co-packaged silicon photonics vs. pluggable transceivers
@@ -1864,8 +2006,10 @@ records:
   locator: Benefits list
   quote: Co-packaged Silicon Photonics slash power consumption by 3.5x compared to traditional pluggable transceivers.
   retrieved: 2026-11-02
-  tier: B
+  tier: C
   confidence: med
+  verified: match
+  notes: 'Tier C: vendor blog (SCHEMA rule).'
 - id: ch05.pw.quantum_x_photonics
   section: '5.6'
   claim: 'NVIDIA Quantum-X Photonics CPO switch: 144 ports at 800 Gb/s'
@@ -1883,6 +2027,7 @@ records:
   confidence: med
   notes: Source reused from sources/ch04.yaml, where it is classed tier C (vendor blog); record tier set to C to match. Use
     only with a corroborating datasheet or in a contested box.
+  verified: match
 - id: ch05.pw.spectrum_x_sn6800
   section: '5.6'
   claim: 'NVIDIA Spectrum-X Photonics SN6800 CPO switch: 512 ports at 800 Gb/s'
@@ -1900,6 +2045,7 @@ records:
   confidence: med
   notes: Source reused from sources/ch04.yaml, where it is classed tier C (vendor blog); record tier set to C to match. Use
     only with a corroborating datasheet or in a contested box.
+  verified: match
 - id: ch05.pw.jensen_6_xcvr_per_gpu
   section: '5.6'
   claim: 'NVIDIA CEO: transceivers per GPU today and their power and cost'
@@ -1919,6 +2065,7 @@ records:
   confidence: low
   notes: Keynote claim relayed by press; the topology behind 'six' is not stated. Contested-box only; compare a model from
     ch05.clos.dgx_h100_16k_cables (3 tiers, 2 transceivers per link).
+  verified: match
 - id: ch05.pw.broadcom_51t_128_modules
   section: '5.6'
   claim: Pluggables needed to populate a 51.2 Tb/s switch vs. CPO engines
@@ -1937,6 +2084,7 @@ records:
   tier: B
   confidence: high
   notes: 'Same article: ''eight 6.4 Tbps optical engines co-packaged ... with a 51.2 Tbps Tomahawk 5''.'
+  verified: match
 - id: ch05.pw.xai_colossus_100k
   section: '5.6'
   claim: 'xAI Colossus: 100,000 Hopper GPUs on Spectrum-X Ethernet, expanding to 200,000'
@@ -1955,6 +2103,7 @@ records:
   tier: C
   confidence: low
   notes: 'Press release. Optics counts not disclosed. Tier C: contested/illustrative only.'
+  verified: match
 - id: ch05.pw.xai_throughput_claim
   section: '5.6'
   claim: Claimed Spectrum-X data throughput at Colossus vs. standard Ethernet
@@ -1971,6 +2120,7 @@ records:
   tier: C
   confidence: low
   notes: Release contrasts with 'standard Ethernet ... delivering only 60% data throughput'. Vendor claim.
+  verified: match
 - id: ch05.pw.fairwater_800g
   section: '5.6'
   claim: 'Microsoft Fairwater backend: two-tier Ethernet with 800 Gb/s GPU-to-GPU connectivity'
@@ -1987,6 +2137,7 @@ records:
   tier: C
   confidence: low
   notes: The September 2025 post describes pods as 'full fat tree non-blocking' over InfiniBand and Ethernet at 800 Gbps.
+  verified: match
 - id: ch05.pw.fairwater_fiber_4x_earth
   section: '5.6'
   claim: Fiber in Microsoft's Wisconsin Fairwater site, in Earth circumferences
@@ -2002,6 +2153,7 @@ records:
   confidence: low
   notes: '4 x 40,075 km ~ 160,000 km of fiber; not converted in source. Same source: ''hundreds of thousands'' of GPUs (no
     exact count).'
+  verified: match
 - id: ch05.pw.msft_ai_wan_fiber
   section: '5.6'
   claim: New fiber miles deployed by Microsoft for its AI WAN in one year
@@ -2015,6 +2167,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch05.pw.fairwater_rack_bw_wording
   section: '5.6'
   claim: Microsoft description of per-rack NVLink bandwidth (wording conflicts with per-GPU spec)
@@ -2031,6 +2184,7 @@ records:
   confidence: low
   notes: 1.8 TB/s is NVIDIA's per-GPU figure (ch05.su.nvlink5_1800); the rack aggregate is 130 TB/s. Flag as a misstatement;
     do not use.
+  verified: match
 - id: ch05.pw.credo_savings_claim
   section: '5.6'
   claim: Vendor claim of AEC savings vs. optics per link and per GPU
@@ -2046,6 +2200,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch05.pw.lightwave_millions_xcvr
   section: '5.6'
   claim: Google transceiver fleet scale
@@ -2060,3 +2215,4 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
