@@ -1,0 +1,28 @@
+<title>$pagetitle$</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans+Condensed:wght@500;600&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&amp;display=swap">
+<style>
+$css$
+</style>
+<script>
+window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]] }, svg: { fontCache: "global" } };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" defer></script>
+<header class="masthead">
+  <div class="kicker">$kicker$</div>
+  <h1 class="title">$title$</h1>
+  <p class="subtitle">$subtitle$</p>
+  <div class="legend">
+    <span><span class="lv">underlined</span>: value from a cited source</span>
+    <span><span class="cv">dotted</span>: computed in a worked-example script</span>
+    <span>[n]: reference, with source tier A/B/C</span>
+  </div>
+</header>
+$if(toc)$
+<nav id="TOC"><details open><summary>Contents</summary>
+$table-of-contents$
+</details></nav>
+$endif$
+<main>
+$body$
+</main>
