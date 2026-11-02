@@ -1003,7 +1003,7 @@ records:
   locator: Sect. 11.1.2, Table 11.1.2-1, item 11.1.2.2
   quote: Fiber Output Power | 20mW | P | 12.5 | 13.5 14.5
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
   notes: OIF IA (tier A per SCHEMA). 10 mW class 9.5-11.5 dBm.
 - id: ch03.itla.oif_linewidth_app1
@@ -1018,7 +1018,7 @@ records:
   locator: Table 11.1.2-1, item 11.1.2.8
   quote: 11.1.2.8 | Spectral Linewidth | | f | | 5 | MHz
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
   notes: 'Legacy (2004-2015) spec written for direct-detection DWDM; coherent nano-ITLAs achieve <100-300 kHz (ch03.itla.furukawa_linewidth,
     ch03.itla.sedi_linewidth). Application 2: 10 MHz.'
@@ -1035,7 +1035,7 @@ records:
   locator: Table 11.1.2-1, item 11.1.2.7
   quote: 11.1.2.7 | Relative Intensity Noise | | RIN | | -145 | dB/Hz
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
 - id: ch03.itla.oif_freq_error
   section: '3.3'
@@ -1050,7 +1050,7 @@ records:
   locator: Table 11.1.2-1, items 11.1.2.4-5
   quote: Frequency error to ITU Grid | 50 GHz channel spacing 25 GHz channel spacing | F F | -2.5 -1.25 | +2.5 +1.25 | GHz
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
 - id: ch03.itla.oif_smsr_app1
   section: '3.3'
@@ -1065,7 +1065,7 @@ records:
   locator: Table 11.1.2-1, item 11.1.2.6
   quote: 11.1.2.6 | Side Mode Suppression Ratio | | SMSR | 43 | | dB
   retrieved: 2026-11-02
-  tier: A
+  tier: B
   confidence: high
 - id: ch03.itla.furukawa_linewidth
   section: '3.3'

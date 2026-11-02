@@ -1,4 +1,3 @@
-# Chapter 6 sources. Ids are global; ch01 sources reused by reference (e.g. ferrari_jocn_2020, poggiolini_jlt_2012).
 sources:
 - id: itu_t_g694_1_2020
   type: standard
@@ -146,7 +145,8 @@ sources:
   retrieved: '2026-11-02'
 - id: doggart_msc_thesis_2017
   type: thesis
-  title: Cascaded ROADM Filter Replication and the Effects of Statistical Variations in the Response of Cascaded ROADMs on 100 Gb/s DP-QPSK System Performance
+  title: Cascaded ROADM Filter Replication and the Effects of Statistical Variations in the Response of Cascaded ROADMs on
+    100 Gb/s DP-QPSK System Performance
   authors: C. Doggart
   venue: MSc thesis, Queen's University
   year: 2017
@@ -182,7 +182,8 @@ sources:
   retrieved: '2026-11-02'
 - id: rizzelli_jlt_2025
   type: journal
-  title: Filtering Effects Characterization in Metro-Access Networks and Future High-Speed Coherent Optical Communication Schemes
+  title: Filtering Effects Characterization in Metro-Access Networks and Future High-Speed Coherent Optical Communication
+    Schemes
   authors: G. Rizzelli, P. Torres-Ferrera, A. Napoli, R. Gaudino
   venue: Journal of Lightwave Technology 43(3), 1114-1122
   year: 2025
@@ -302,7 +303,8 @@ sources:
   retrieved: '2026-11-02'
 - id: zuo_ofc_2025_cmcc_96t
   type: conference
-  title: First Field Demonstration of Real-time Sub-100-Tb/s Transmission with Net 1.2-Tb/s Channels over 12-THz-wide Super C+L band along 305-km G.652.D fiber
+  title: First Field Demonstration of Real-time Sub-100-Tb/s Transmission with Net 1.2-Tb/s Channels over 12-THz-wide Super
+    C+L band along 305-km G.652.D fiber
   authors: M. Zuo, D. Zhang, D. Wang, H. Zou, D. Liu, B. Yan, H. Shi, H. Li
   venue: OFC 2025, Th3C.1
   year: 2025
@@ -352,8 +354,8 @@ sources:
   type: journal
   title: ZR 400 Gbit/s and 800 Gbit/s use cases, trials, deployments, and future prospects [Invited]
   authors: R. P. Davey, M. A. Iqbal, P. Wright
-  venue: Journal of Optical Communications and Networking 15(10)
-  year: 2023
+  venue: Journal of Optical Communications and Networking 16(1), A33
+  year: 2024
   doi: 10.1364/JOCN.499365
   url: https://doi.org/10.1364/jocn.499365
   access: abstract_only
@@ -364,7 +366,7 @@ sources:
   type: journal
   title: Optimized IP-over-WDM core networks using ZR+ and flexible muxponders for 400 Gb/s and beyond
   authors: A. Gumaste, M. Sosa, H. Bock, P. Kandappan
-  venue: Journal of Optical Communications and Networking 14(2)
+  venue: Journal of Optical Communications and Networking 14(3)
   year: 2022
   doi: 10.1364/JOCN.444943
   url: https://doi.org/10.1364/jocn.444943
@@ -372,6 +374,7 @@ sources:
   language: en
   tier: A
   retrieved: '2026-11-02'
+  notes: ' All authors Infinera (vendor).'
 - id: acg_cisco_wp_400g_ip_transport
   type: whitepaper
   title: The Economic Benefits of IP Transport at 400G
@@ -494,8 +497,10 @@ sources:
   retrieved: '2026-11-02'
 - id: mardoyan_ecoc_2024_300gbd
   type: conference
-  title: First Single-Carrier Transmission at Net Data Rates of 1.6 Tb/s over 9075 km and 2.4 Tb/s over 1210 km Using 300 GBd Dual-Polarization Signals and Probabilistic Constellation Shaping
-  authors: H. Mardoyan, D. Drayss, S. Almonacil, D. Fang, A. Sherifaj, A. Ghazisaeidi, M. Kelany, C. Castineiras Carrero, C. Koos, J. Renaudier
+  title: First Single-Carrier Transmission at Net Data Rates of 1.6 Tb/s over 9075 km and 2.4 Tb/s over 1210 km Using 300
+    GBd Dual-Polarization Signals and Probabilistic Constellation Shaping
+  authors: H. Mardoyan, D. Drayss, S. Almonacil, D. Fang, A. Sherifaj, A. Ghazisaeidi, M. Kelany, C. Castineiras Carrero,
+    C. Koos, J. Renaudier
   venue: ECOC 2024, Th2B.2 (arXiv:2409.00057)
   year: 2024
   doi: 10.48550/arXiv.2409.00057

@@ -287,7 +287,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/2019/01/OIF-ITLA-MSA-01.3.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: 2026-11-02
 - id: terada_ieice_2023
   type: journal

@@ -1,102 +1,183 @@
-# Chapter 6 equations (sections 6.1-6.6). GN-model, ASE and OSNR equations are in
-# ch01_b_equations.yaml / ch01_c_equations.yaml (e.g. ch01.eq.gn_osnr_tot, ch01.eq.gn_popt,
-# ch01.eq.ase_psd_per_pol, ch01.eq.osnr_multispan_58db_rule); reference them, do not duplicate.
 equations:
-  - id: ch06.eq.flexgrid_center
-    section: "6.1"
-    latex: "f_{c} = 193.1\\,\\mathrm{THz} + n \\times 0.00625\\,\\mathrm{THz},\\quad n \\in \\mathbb{Z}"
-    symbols: ["f_{c}", "n"]
-    source_id: itu_t_g694_1_2020
-    locator: "Clause 8"
-    notes: "Nominal central frequency of a flexgrid slot. f_c and n are new symbols (proposal: f_c = slot nominal central frequency)."
-  - id: ch06.eq.flexgrid_width
-    section: "6.1"
-    latex: "\\Delta f_{\\mathrm{slot}} = 12.5\\,\\mathrm{GHz} \\times m,\\quad m \\in \\mathbb{Z}^{+}"
-    symbols: ["\\Delta f_{\\mathrm{slot}}", "m"]
-    source_id: itu_t_g694_1_2020
-    locator: "Clause 8"
-    notes: "Slot width. Slots [f_c - Δf/2, f_c + Δf/2] must not overlap. Source writes '12.5 × m'."
-  - id: ch06.eq.fixed_grid
-    section: "6.1"
-    latex: "f = 193.1\\,\\mathrm{THz} + n \\times \\Delta_{\\mathrm{grid}},\\quad \\Delta_{\\mathrm{grid}} \\in \\{0.0125, 0.025, 0.05, 0.1\\}\\,\\mathrm{THz}"
-    symbols: ["n"]
-    source_id: itu_t_g694_1_2020
-    locator: "Clause 7 (fixed grids)"
-    notes: "Compact form of the four fixed-grid formulas (193.1 + n × 0.0125 / 0.025 / 0.05 / 0.1). Conversion to wavelength uses c = 2.99792458e8 m/s (ch01.const.speed_of_light_c)."
-  - id: ch06.eq.net_rate_pcs
-    section: "6.1"
-    latex: "R_{\\mathrm{net}} = 2 R_s (1 - \\mathrm{OH}_{\\mathrm{p}}) \\left[ H - (1 - r) m \\right]"
-    symbols: ["R_s", "R_{\\mathrm{net}}", "H", "r", "m"]
-    source_id: mardoyan_ecoc_2024_300gbd
-    locator: "Transmission results section (unnumbered equation)"
-    notes: "Net bit rate of a dual-polarization PCS-QAM carrier: OH_p pilot overhead, H PCS entropy (bit/symbol/pol), m bits per symbol of the native constellation (4 for 16QAM), r FEC code rate. AIR is obtained by replacing r with NGMI. Text extraction garbled the symbols; mapping from the surrounding sentence. Net SE = R_net / channel spacing (e.g. 1.6 Tb/s / 306.25 GHz = 5.22 b/s/Hz, as in the paper). Here m collides with the flexgrid m; writer should rename (proposal: m_c)."
-  - id: ch06.eq.wss_passband
-    section: "6.2"
-    latex: "S(f) = \\left\\{ \\tfrac{1}{2} \\left[ \\mathrm{erf}\\!\\left( \\frac{B/2 - f}{\\sqrt{2}\\,\\sigma} \\right) - \\mathrm{erf}\\!\\left( \\frac{-B/2 - f}{\\sqrt{2}\\,\\sigma} \\right) \\right] \\right\\}^{N_{\\mathrm{WSS}}},\\quad \\sigma = \\frac{\\mathrm{BW}_{\\mathrm{OTF}}}{2\\sqrt{2 \\ln 2}}"
-    symbols: ["B", "\\sigma", "\\mathrm{BW}_{\\mathrm{OTF}}", "N_{\\mathrm{WSS}}"]
-    source_id: polito_thesis_2018_scm_filtering
-    locator: "Eq. (2.1)"
-    notes: "Rectangular slot of width B convolved with a Gaussian optical transfer function, raised to the number of cascaded WSSs. Originates in Pulikkaseril et al., Opt. Express 19(9) 8458 (2011), which could not be fetched. The thesis writes a prefactor 'C σ√2π/2'; we normalise to unit peak for B >> σ. Verify against Pulikkaseril before use (gaps item 2). Example values B = 37.5 GHz, BW_OTF = 10.4 GHz."
-  - id: ch06.eq.isrs_profile_general
-    section: "6.3"
-    latex: "\\rho(z,f) = \\frac{P_{\\mathrm{tot}}\\, e^{-\\alpha z - P_{\\mathrm{tot}} C_r L_{\\mathrm{eff}} f}}{\\int G_{\\mathrm{Tx}}(\\nu)\\, e^{-P_{\\mathrm{tot}} C_r L_{\\mathrm{eff}} \\nu}\\, d\\nu},\\quad L_{\\mathrm{eff}} = \\frac{1 - e^{-\\alpha z}}{\\alpha}"
-    symbols: ["\\rho", "P_{\\mathrm{tot}}", "C_r", "L_{\\mathrm{eff}}", "\\alpha", "G_{\\mathrm{Tx}}"]
-    source_id: semrau_jlt_2018_isrs
-    locator: "Eq. (8)"
-    notes: "Normalised signal power profile under ISRS with the triangular (linear) Raman gain approximation, valid to about 14-15 THz. L_eff here is z-dependent (ch01 L_eff evaluated at z). C_r is the slope of the normalised Raman gain spectrum (new symbol)."
-  - id: ch06.eq.isrs_profile_uniform
-    section: "6.3"
-    latex: "\\rho(z,f) = e^{-\\alpha z}\\, \\frac{x B\\, e^{-x f}}{2 \\sinh(x B / 2)},\\quad x = P_{\\mathrm{tot}} C_r L_{\\mathrm{eff}}"
-    symbols: ["\\rho", "P_{\\mathrm{tot}}", "C_r", "L_{\\mathrm{eff}}", "B_{\\mathrm{tot}}"]
-    source_id: buglia_arxiv_2022_isrs_dra
-    locator: "Eqs. (21)-(22)"
-    notes: "Uniform launch spectrum of total power P_tot over bandwidth B (= B_tot) centred at f = 0 (source writes f - f̂ for a pump-centred frame and B_ch for the bandwidth). Same factor appears in Semrau JLT 2019 Eq. (8)-(9) inside the XPM term. First-order Taylor: ρ ≈ e^{-αz}[1 - x f]."
-  - id: ch06.eq.isrs_tilt_db
-    section: "6.3"
-    latex: "\\Delta\\rho\\,[\\mathrm{dB}] = 4.3\\, P_{\\mathrm{tot}}\\, C_r\\, L_{\\mathrm{eff}}\\, B_{\\mathrm{tot}}"
-    symbols: ["P_{\\mathrm{tot}}", "C_r", "L_{\\mathrm{eff}}", "B_{\\mathrm{tot}}"]
-    source_id: semrau_jlt_2019_isrs_cf
-    locator: "Eq. (3) (citing Semrau et al. Opt. Express 2017, Eq. (8))"
-    notes: "Net ISRS power transfer between outermost channels (gain of lowest-frequency plus loss of highest-frequency channel). 4.3 ≈ 10 log10(e). Worked example: C_r = 0.028 /W/km/THz (ch06.raman.cr_ssmf)."
-  - id: ch06.eq.span_nf_edfa
-    section: "6.3"
-    latex: "F_{\\mathrm{span}} = L_{\\mathrm{span}}\\, F_{\\mathrm{EDFA}}"
-    symbols: ["F", "L_{\\mathrm{span}}"]
-    source_id: pelouch_jlt_2016
-    locator: "Eq. (10)"
-    notes: "Linear units; L_span is the span loss (linear, ≥ 1), not a length. Notation proposal: use A_span for span loss to avoid clash with L (length) in notation.yaml."
-  - id: ch06.eq.span_nf_bwd_raman
-    section: "6.3"
-    latex: "F_{\\mathrm{tot}} = L_{\\mathrm{span}} \\left( F_{\\mathrm{BR}} + \\frac{F_{\\mathrm{EDFA}} - 1}{G_{\\mathrm{BR}}} \\right)"
-    symbols: ["F", "G", "L_{\\mathrm{span}}"]
-    source_id: pelouch_jlt_2016
-    locator: "Eq. (12)"
-    notes: "Backward distributed Raman followed by an EDFA. F_BR = effective NF of the Raman-pumped span excluding span loss; G_BR = on-off backward Raman gain. Extracted text read 'NFtotal = Lspan NFBR + NFEDFA − 1 GBR'; bracketing confirmed by Xtera white paper Eq. (2) (L_span · NF_R+E with NF_R+E = NF_BR + (NF_EDFA - 1)/G_BR)."
-  - id: ch06.eq.span_nf_fwd_bwd_raman
-    section: "6.3"
-    latex: "F_{\\mathrm{tot}} = \\frac{L_{\\mathrm{span}}}{G_{\\mathrm{FR}}} \\left( F_{\\mathrm{BR}} + \\frac{F_{\\mathrm{EDFA}} - 1}{G_{\\mathrm{BR}}} \\right)"
-    symbols: ["F", "G", "L_{\\mathrm{span}}"]
-    source_id: pelouch_jlt_2016
-    locator: "Eq. (13)"
-    notes: "Forward plus backward Raman, valid for span loss > 30 dB. Forward gain G_FR effectively reduces span loss."
-  - id: ch06.eq.raman_reach_ratio
-    section: "6.3"
-    latex: "\\frac{L_{\\max,\\mathrm{Raman}}}{L_{\\max,\\mathrm{EDFA}}} = \\left( \\frac{F_{\\mathrm{EDFA}}}{F_{\\mathrm{R+E}}} \\right)^{2/3}"
-    symbols: ["F"]
-    source_id: xtera_wp_raman_scaling_2015
-    locator: "p. 2-3 (unnumbered)"
-    notes: "Follows from GN optimum-power scaling (ch01.eq.gn_popt, ch01.gn.reach_vs_nli_one_third): effective OSNR ∝ F^{-2/3}. Vendor white paper (tier B); derivation can be done in prose from Ch. 1."
-  - id: ch06.eq.margin_reach
-    section: "6.6"
-    latex: "M_{\\mathrm{U}} + M_{\\mathrm{S}} = 10\\log_{10}\\frac{L_{\\max}}{L_{\\mathrm{path}}}"
-    symbols: ["L"]
-    source_id: pointurier_jocn_2017
-    locator: "Section II worked example"
-    notes: "Combined unallocated + system margin in dB from linear SNR-vs-length scaling (ASE-limited, unloaded system). Example 10 log10(7500/600) = 12.5 dB. Margin symbols M_U, M_S, M_D are new (proposal)."
-  - id: ch06.eq.linear_to_total_penalty
-    section: "6.6"
-    latex: "\\Delta \\mathrm{SNR}_{\\mathrm{dB}} = \\tfrac{2}{3}\\, \\Delta \\mathrm{SNR}_{\\mathrm{lin,dB}}"
-    symbols: ["\\mathrm{SNR}"]
-    source_id: pointurier_jocn_2017
-    locator: "Table I, footnote 1"
-    notes: "At the optimum launch power a linear (ASE) SNR penalty α (dB) gives a total SNR penalty 2α/3. Consistent with the 1/3 exponent of ch01.eq.gn_popt and ch06.eq.raman_reach_ratio."
+- id: ch06.eq.flexgrid_center
+  section: '6.1'
+  latex: f_{c} = 193.1\,\mathrm{THz} + n \times 0.00625\,\mathrm{THz},\quad n \in \mathbb{Z}
+  symbols:
+  - f_{c}
+  - n
+  source_id: itu_t_g694_1_2020
+  locator: Clause 8
+  notes: 'Nominal central frequency of a flexgrid slot. f_c and n are new symbols (proposal: f_c = slot nominal central frequency).'
+  verified: match
+- id: ch06.eq.flexgrid_width
+  section: '6.1'
+  latex: \Delta f_{\mathrm{slot}} = 12.5\,\mathrm{GHz} \times m,\quad m \in \mathbb{Z}^{+}
+  symbols:
+  - \Delta f_{\mathrm{slot}}
+  - m
+  source_id: itu_t_g694_1_2020
+  locator: Clause 8
+  notes: Slot width. Slots [f_c - Δf/2, f_c + Δf/2] must not overlap. Source writes '12.5 × m'.
+  verified: match
+- id: ch06.eq.fixed_grid
+  section: '6.1'
+  latex: f = 193.1\,\mathrm{THz} + n \times \Delta_{\mathrm{grid}},\quad \Delta_{\mathrm{grid}} \in \{0.0125, 0.025, 0.05,
+    0.1\}\,\mathrm{THz}
+  symbols:
+  - n
+  source_id: itu_t_g694_1_2020
+  locator: Clause 7 (fixed grids)
+  notes: Compact form of the four fixed-grid formulas (193.1 + n × 0.0125 / 0.025 / 0.05 / 0.1). Conversion to wavelength
+    uses c = 2.99792458e8 m/s (ch01.const.speed_of_light_c).
+  verified: match
+- id: ch06.eq.net_rate_pcs
+  section: '6.1'
+  latex: R_{\mathrm{net}} = 2 R_s (1 - \mathrm{OH}_{\mathrm{p}}) \left[ H - (1 - r) m \right]
+  symbols:
+  - R_s
+  - R_{\mathrm{net}}
+  - H
+  - r
+  - m
+  source_id: mardoyan_ecoc_2024_300gbd
+  locator: Transmission results section (unnumbered equation)
+  notes: 'Net bit rate of a dual-polarization PCS-QAM carrier: OH_p pilot overhead, H PCS entropy (bit/symbol/pol), m bits
+    per symbol of the native constellation (4 for 16QAM), r FEC code rate. AIR is obtained by replacing r with NGMI. Text
+    extraction garbled the symbols; mapping from the surrounding sentence. Net SE = R_net / channel spacing (e.g. 1.6 Tb/s
+    / 306.25 GHz = 5.22 b/s/Hz, as in the paper). Here m collides with the flexgrid m; writer should rename (proposal: m_c).'
+  verified: match
+- id: ch06.eq.wss_passband
+  section: '6.2'
+  latex: S(f) = \left\{ \tfrac{1}{2} \left[ \mathrm{erf}\!\left( \frac{B/2 - f}{\sqrt{2}\,\sigma} \right) - \mathrm{erf}\!\left(
+    \frac{-B/2 - f}{\sqrt{2}\,\sigma} \right) \right] \right\}^{N_{\mathrm{WSS}}},\quad \sigma = \frac{\mathrm{BW}_{\mathrm{OTF}}}{2\sqrt{2
+    \ln 2}}
+  symbols:
+  - B
+  - \sigma
+  - \mathrm{BW}_{\mathrm{OTF}}
+  - N_{\mathrm{WSS}}
+  source_id: polito_thesis_2018_scm_filtering
+  locator: Eq. (2.1)
+  notes: 'Rectangular slot of width B convolved with a Gaussian optical transfer function, raised to the number of cascaded
+    WSSs. Originates in Pulikkaseril et al., Opt. Express 19(9) 8458 (2011), which could not be fetched. The thesis writes
+    a prefactor ''C σ√2π/2''; we normalise to unit peak for B >> σ. Verify against Pulikkaseril before use (gaps item 2).
+    Example values B = 37.5 GHz, BW_OTF = 10.4 GHz. Verifier (PARTIAL): Pulikkaseril OE 2011 full text still unreachable (Optica
+    full text empty to crawler; arxiv/ucl hosts blocked). Re-source the single-filter equation to Rizzelli JLT 2025 Eq. (1),
+    which states S(f) as an optical field response with σ = BW_OTF/(2√(2 ln 2)) citing [16] (Pulikkaseril). Keep thesis only
+    for the N_WSS cascade exponent, or derive it in prose. Ledger''s unit-peak normalisation (dropping σ√(2π)) is a valid
+    choice; say so.'
+  verified: partial
+- id: ch06.eq.isrs_profile_general
+  section: '6.3'
+  latex: \rho(z,f) = \frac{P_{\mathrm{tot}}\, e^{-\alpha z - P_{\mathrm{tot}} C_r L_{\mathrm{eff}} f}}{\int G_{\mathrm{Tx}}(\nu)\,
+    e^{-P_{\mathrm{tot}} C_r L_{\mathrm{eff}} \nu}\, d\nu},\quad L_{\mathrm{eff}} = \frac{1 - e^{-\alpha z}}{\alpha}
+  symbols:
+  - \rho
+  - P_{\mathrm{tot}}
+  - C_r
+  - L_{\mathrm{eff}}
+  - \alpha
+  - G_{\mathrm{Tx}}
+  source_id: semrau_jlt_2018_isrs
+  locator: Eq. (8)
+  notes: Normalised signal power profile under ISRS with the triangular (linear) Raman gain approximation, valid to about
+    14-15 THz. L_eff here is z-dependent (ch01 L_eff evaluated at z). C_r is the slope of the normalised Raman gain spectrum
+    (new symbol).
+  verified: match
+- id: ch06.eq.isrs_profile_uniform
+  section: '6.3'
+  latex: \rho(z,f) = e^{-\alpha z}\, \frac{x B\, e^{-x f}}{2 \sinh(x B / 2)},\quad x = P_{\mathrm{tot}} C_r L_{\mathrm{eff}}
+  symbols:
+  - \rho
+  - P_{\mathrm{tot}}
+  - C_r
+  - L_{\mathrm{eff}}
+  - B_{\mathrm{tot}}
+  source_id: buglia_arxiv_2022_isrs_dra
+  locator: Eqs. (21)-(22)
+  notes: 'Uniform launch spectrum of total power P_tot over bandwidth B (= B_tot) centred at f = 0 (source writes f - f̂ for
+    a pump-centred frame and B_ch for the bandwidth). Same factor appears in Semrau JLT 2019 Eq. (8)-(9) inside the XPM term.
+    First-order Taylor: ρ ≈ e^{-αz}[1 - x f]. Verifier (PARTIAL): Fix source: the sinh form appears directly in Semrau JLT
+    37(9) 2019 Eq. (8) (factor (P_tot C_r L_eff B_tot/2)/sinh(P_tot C_r L_eff B_tot/2)); it also follows from JLT 2018 Eq.
+    (8) with G_Tx = P_tot/B. The long Buglia paper (likely JLT 2023) may be the intended one; verify before citing.'
+  verified: partial
+- id: ch06.eq.isrs_tilt_db
+  section: '6.3'
+  latex: \Delta\rho\,[\mathrm{dB}] = 4.3\, P_{\mathrm{tot}}\, C_r\, L_{\mathrm{eff}}\, B_{\mathrm{tot}}
+  symbols:
+  - P_{\mathrm{tot}}
+  - C_r
+  - L_{\mathrm{eff}}
+  - B_{\mathrm{tot}}
+  source_id: semrau_jlt_2019_isrs_cf
+  locator: Eq. (3) (citing Semrau et al. Opt. Express 2017, Eq. (8))
+  notes: 'Net ISRS power transfer between outermost channels (gain of lowest-frequency plus loss of highest-frequency channel).
+    4.3 ≈ 10 log10(e). Worked example: C_r = 0.028 /W/km/THz (ch06.raman.cr_ssmf).'
+  verified: match
+- id: ch06.eq.span_nf_edfa
+  section: '6.3'
+  latex: F_{\mathrm{span}} = L_{\mathrm{span}}\, F_{\mathrm{EDFA}}
+  symbols:
+  - F
+  - L_{\mathrm{span}}
+  source_id: pelouch_jlt_2016
+  locator: Eq. (10)
+  notes: 'Linear units; L_span is the span loss (linear, ≥ 1), not a length. Notation proposal: use A_span for span loss to
+    avoid clash with L (length) in notation.yaml.'
+  verified: match
+- id: ch06.eq.span_nf_bwd_raman
+  section: '6.3'
+  latex: F_{\mathrm{tot}} = L_{\mathrm{span}} \left( F_{\mathrm{BR}} + \frac{F_{\mathrm{EDFA}} - 1}{G_{\mathrm{BR}}} \right)
+  symbols:
+  - F
+  - G
+  - L_{\mathrm{span}}
+  source_id: pelouch_jlt_2016
+  locator: Eq. (12)
+  notes: Backward distributed Raman followed by an EDFA. F_BR = effective NF of the Raman-pumped span excluding span loss;
+    G_BR = on-off backward Raman gain. Extracted text read 'NFtotal = Lspan NFBR + NFEDFA − 1 GBR'; bracketing confirmed by
+    Xtera white paper Eq. (2) (L_span · NF_R+E with NF_R+E = NF_BR + (NF_EDFA - 1)/G_BR).
+  verified: match
+- id: ch06.eq.span_nf_fwd_bwd_raman
+  section: '6.3'
+  latex: F_{\mathrm{tot}} = \frac{L_{\mathrm{span}}}{G_{\mathrm{FR}}} \left( F_{\mathrm{BR}} + \frac{F_{\mathrm{EDFA}} - 1}{G_{\mathrm{BR}}}
+    \right)
+  symbols:
+  - F
+  - G
+  - L_{\mathrm{span}}
+  source_id: pelouch_jlt_2016
+  locator: Eq. (13)
+  notes: Forward plus backward Raman, valid for span loss > 30 dB. Forward gain G_FR effectively reduces span loss.
+  verified: match
+- id: ch06.eq.raman_reach_ratio
+  section: '6.3'
+  latex: \frac{L_{\max,\mathrm{Raman}}}{L_{\max,\mathrm{EDFA}}} = \left( \frac{F_{\mathrm{EDFA}}}{F_{\mathrm{R+E}}} \right)^{2/3}
+  symbols:
+  - F
+  source_id: xtera_wp_raman_scaling_2015
+  locator: p. 2-3 (unnumbered)
+  notes: 'Follows from GN optimum-power scaling (ch01.eq.gn_popt, ch01.gn.reach_vs_nli_one_third): effective OSNR ∝ F^{-2/3}.
+    Vendor white paper (tier B); derivation can be done in prose from Ch. 1.'
+  verified: match
+- id: ch06.eq.margin_reach
+  section: '6.6'
+  latex: M_{\mathrm{U}} + M_{\mathrm{S}} = 10\log_{10}\frac{L_{\max}}{L_{\mathrm{path}}}
+  symbols:
+  - L
+  source_id: pointurier_jocn_2017
+  locator: Section II worked example
+  notes: Combined unallocated + system margin in dB from linear SNR-vs-length scaling (ASE-limited, unloaded system). Example
+    10 log10(7500/600) = 12.5 dB. Margin symbols M_U, M_S, M_D are new (proposal).
+  verified: match
+- id: ch06.eq.linear_to_total_penalty
+  section: '6.6'
+  latex: \Delta \mathrm{SNR}_{\mathrm{dB}} = \tfrac{2}{3}\, \Delta \mathrm{SNR}_{\mathrm{lin,dB}}
+  symbols:
+  - \mathrm{SNR}
+  source_id: pointurier_jocn_2017
+  locator: Section II, footnote 1
+  notes: 'At the optimum launch power a linear (ASE) SNR penalty α (dB) gives a total SNR penalty 2α/3. Consistent with the
+    1/3 exponent of ch01.eq.gn_popt and ch06.eq.raman_reach_ratio. Verifier (PARTIAL): Fix locator to ''Section II, footnote
+    1''.'
+  verified: partial_fixed

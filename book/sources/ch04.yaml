@@ -250,7 +250,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-CEI-5.0.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: '2026-11-02'
 - id: oif_current_work_2026
   type: report
@@ -274,7 +274,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-800ZR-01.0.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: '2026-11-02'
 - id: oif_800lr_ia_2025
   type: standard
@@ -286,7 +286,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-800LR-01.0.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: '2026-11-02'
 - id: oif_1600zr_ia_2026
   type: standard
@@ -298,7 +298,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-1600ZR-01.0.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: '2026-11-02'
 - id: oif_elsfp_ia_v2_2025
   type: standard
@@ -310,7 +310,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-02.0.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: '2026-11-02'
 - id: openzrplus_spec_rev3_2023
   type: standard

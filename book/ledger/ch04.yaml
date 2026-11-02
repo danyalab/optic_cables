@@ -279,7 +279,7 @@ records:
   locator: Title page
   quote: 'IA # OIF-CEI-05.0 May 5, 2022'
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: CEI-112G-VSR clause added in CEI-05.1 (29 Dec 2022); later revisions 05.2 (Jan 2024) and 05.3 (Jul 2025) per OIF
     IA list.
@@ -1445,7 +1445,7 @@ records:
   locator: Section 3.5, Table 6 'Optical power classes'
   quote: Low Power - LP | 11dBm | Medium Power - | MP | 14dBm | High Power - HP | 17dBm
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: Table text flattened by crawler. ELSFP-01.0 published 8 Aug 2023; 02.0 on 8 Jan 2025.
 - id: ch04.cpo.elsfp_supply
@@ -1460,7 +1460,7 @@ records:
   locator: Section 4.3 'Electrical Requirements'
   quote: six pairs of 3.3V power and ground pins. The current capability of each of these pins is up to 1.5 A DC
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: ''
 - id: ch04.cpo.oif_3p2t_module_ia
@@ -1554,7 +1554,7 @@ records:
   locator: Section 5 Introduction
   quote: 120 km or less, amplified, point-to-point, DWDM noise limited links.
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: Targeted amplified reach 'is 80km or more' (Sec. 7.1). Press release (2020-04-29) gives unamplified loss budget 11
     dB.
@@ -1570,7 +1570,7 @@ records:
   locator: Section 12.5 'Frame Expansion Rate'
   quote: The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization.
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: '''per polarization'' wording is the IA''s; 478.75 Gb/s is the total line rate.'
 - id: ch04.coh.400zr_cfec
@@ -1588,7 +1588,7 @@ records:
   locator: Section 10
   quote: ~10.8dB of NCG with ~14.8% overhead (e.g. BER_in = 1.25E-2 results in BER_out = 1.0E-15).
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: ''
 - id: ch04.coh.400zr_osnr_26
@@ -1692,7 +1692,7 @@ records:
   locator: Section 1 Introduction
   quote: single-span, amplified, 80-120km, point-to-point, DWDM noise limited links (e.g. data center interconnect applications).
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: ''
 - id: ch04.coh.800zr_baud
@@ -1795,7 +1795,7 @@ records:
   locator: Section 7.3, Table 7
   quote: The 800LR optical signal is DP-16QAM with a symbol rate of 123.6 GS/s (989.1 Gbps).
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: Supports 1x800GE or 2x400GE.
 - id: ch04.coh.800lr_loss_budget
@@ -1814,7 +1814,7 @@ records:
   locator: Table 8 'Application codes'
   quote: 10km or less, unamplified, point-to point, single channel links – | 8dB O-band. | 0x01 – 800LR–O
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: ''
 - id: ch04.coh.800lr_fec
@@ -1829,7 +1829,7 @@ records:
   locator: Section 5
   quote: This provides 10.35 dB of net coding gain, with ~14.5% additional overhead compared to RS-FEC-encoded client signal.
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: ''
 - id: ch04.coh.1600zr_ia
@@ -1846,7 +1846,7 @@ records:
   quote: defines a single-wavelength 1.6T coherent line interface and frame format for single-span, amplified, point-to-point,
     DWDM noise limited links up to 120km
   retrieved: '2026-11-02'
-  tier: A
+  tier: B
   confidence: high
   notes: Fig. 15 gives 1600ZR line bit rate 1891.253609648 Gbit/s; with DP-16QAM (8 bits/symbol) this implies ~236.4 GBd (derived,
     not stated in text read). OIF press release 9 Sep 2026.

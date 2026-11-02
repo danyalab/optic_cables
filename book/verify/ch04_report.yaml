@@ -1,0 +1,972 @@
+# Independent verification of book/ledger/ch04.yaml (121 records) and book/ledger/ch04_equations.yaml (8 equations)
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: direct HTTP to all hosts is blocked in this session (curl 000; lpo-msa.org DNS refused), so every source was read
+# through the Exa crawler copy (full PDF text for QSFP-DD 7.1, OSFP 5.2/5.22/4.0, OSFP-XD 1.1, OIF 400ZR/800ZR/800LR/1600ZR/ELSFP/
+# CEI-5.0/CEI-224G FD, LPO MSA, 100G Lambda MSA, P802.3dj objectives/key motions/Clause 12 report, P802.3dv PAR, Meta ECOC 2025
+# paper, Broadcom Bailly deck, Minkenberg, Nagarajan; abstract page + table for Evans; vendor/press pages in full).
+# Tier rule note: SCHEMA.md lists OIF standards as tier A and PIPELINE.md groups OIF with A-tier standards; the audit brief
+# says OIF IAs are B unless ratified. This report keeps the repository rule (OIF IA = A) and does not count it as a mismatch;
+# the orchestrator should decide. Vendor slide decks and promotional flyers are treated as C (not formal datasheets).
+# Numerical cross-checks: 850e9*126/110*64/63/8 = 123.636 GBd; 59.84375*8 = 478.75; 118.2*8 = 945.6; 1891.2536/8 = 236.41 GBd;
+# 17/111 = 15.3%; 14/800 = 17.5 pJ/b; 5.5/800 = 6.9 pJ/b; Evans columns sum to 6400/4983/4093 W; 13 A x 3.3 V = 42.9 W.
+summary:
+  checked: 129
+  match: 113
+  mismatch: 1
+  partial: 15
+  unreachable: 0
+results:
+- id: ch04.ff.qsfpdd_class7_max
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Sec. 4.7.3, Table 13
+  evidence: '| Power Consumption | Class | P_7 | | | 14 | W |'
+  action: none (Rev 7.1 is still the latest hardware rev on qsfp-dd.com/specification)
+- id: ch04.ff.qsfpdd_class_ladder
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Table 13
+  evidence: P_0 1.5 W; P_2 3.5; P_3 7; P_4 8; P_5 10; P_6 12; P_7 14 W
+  action: none
+- id: ch04.ff.qsfpdd_class8
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Table 13 and Note 4
+  evidence: '| Power Consumption | Class | 4 P_8 | | | >14 | W | ... 4: P_8 is the module power dissipation reported by CMIS
+    Byte 201.'
+  action: none (Sec. 4.7.1 also says 'power class 8 (>~20 W)' in a host design note; do not confuse)
+- id: ch04.ff.qsfpdd_icc8_steady
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Table 13
+  evidence: '| Steady state current | | Icc_8 | - | - | 12 | A |'
+  action: none (12 A x 3.3 V = 39.6 W derived)
+- id: ch04.ff.qsfpdd_rev6_25w
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Change History row 6.0 (May 20, 2021)
+  evidence: Module power contacts rating increased from 1 A to 1.5 A and max module power dissipation increased to at least
+    25 W.
+  action: none
+- id: ch04.ff.qsfpdd1600_40w
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Change History row 7.0 (Sept. 29, 2023)
+  evidence: Current rating for each of QSFP-DD1600 contacts are increased to 2 A with feasibility of at least 40 W module
+    power dissipation.
+  action: none
+- id: ch04.ff.qsfpdd_msa_first_release
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Change History row 1.0; also qsfp-dd.com/specification list
+  evidence: 1.0 | Sept 19, 2016 | First public release
+  action: none (condition 'MSA formed Feb 2016' not seen in the source; drop or source it)
+- id: ch04.ff.osfp_rev40_33w
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP MSA Rev 4.0 (2021-05-28), Sec. 11.6, Table 11-9, p. 105
+  evidence: '| 4.0 | 10 A | 33.0 W |'
+  action: none (historical; superseded for OSFP1600 by Rev 5.2 42.9 W)
+- id: ch04.ff.osfp_rev10_19w8
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP MSA Rev 4.0, Table 11-9; Rev 1.0 dated 3/17/2017 in revision history
+  evidence: '| 1.0 | 6 A | 19.8 W |'
+  action: none
+- id: ch04.ff.osfp1600_42w9
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP MSA Rev 5.2 PDF (title page April 17, 2025), Revision History; still in Rev 5.22 (Aug 9, 2025) Sec.
+    4.4
+  evidence: Finally, in Section 15.6, the maximum power of OSFP1600 has been increased from 33 W to 42.9 W.
+  action: 'none. Rev 5.22 (current) retains it: ''OSFP1600 module can have a maximum power of up to 42.9W, as specified in
+    the section 15.6''. 42.9 W = 13 A x 3.3 V (derived). osfpmsa.org lists the posting as April 18, 2025; PDF date 17 Apr
+    is correct. Table 15-8 (power classes) still not read.'
+- id: ch04.ff.osfpxd_lanes
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP-XD Spec Rev 1.1 (2024-09-12), Sec. 10.4
+  evidence: 3.2TAUI-16 mode provides 16 differential lanes using 224G-PAM4 signaling operating at 106.25 GBaud. This results
+    in 16 lanes of 200Gb/s for a total of 3.2Tb/s.
+  action: none (Rev 1.11, 23 Nov 2025, is now current but only corrects Fig. 4-11)
+- id: ch04.ff.osfpxd_40w_target
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP MSA white paper 'The Next Generation of Pluggable Optical Module Solutions', Kocsis and Park, 18 Sep
+    2022, Sec. 'OSFP-XD', objective 1
+  evidence: 1. Support up to 40W power for future 1600-ZR and 3200G optics modules
+  action: none
+- id: ch04.ff.osfpxd_1p6t_dc_lt25w
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP MSA white paper 'The Next Generation of Pluggable Optical Module Solutions', Kocsis and Park, 18 Sep
+    2022, Sec. 'Thermal Management Capabilities'
+  evidence: While 1.6T Datacenter optics are expected to consume less than 25W power, 1.6T-ZR coherent modules are expected
+    to be in the 35-40W range
+  action: none (2022 expectation; actual 1.6T DR8 datasheets range 25 W (JPC) to 33.5 W (NVIDIA MMS4A00))
+- id: ch04.el.cei_lr_evolution_table
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-FD-CEI-224G-01.0 (Feb 7, 2022), Table 1
+  evidence: '| Timeline | 2011-2014 | 2014-2018 | 2018-2021 | 2021- |'
+  action: none
+- id: ch04.el.cei224_pam4_112gbd
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-FD-CEI-224G-01.0 (Feb 7, 2022), Sec. 2.3.4
+  evidence: Maintaining a PAM4 modulation, a data rate of 224 Gbps requires a baud rate of 112 GBd.
+  action: none (Table 3 of same doc gives 112.5 GBd for 224G PAM4 with overhead)
+- id: ch04.el.cei40_date
+  status: MATCH
+  found_value: ''
+  found_locator: OIF Implementation Agreements page, Electrical Interfaces list (crawled 2026)
+  evidence: OIF-CEI-04.0 ... 56G+ bps I/O (December 2017)
+  action: none
+- id: ch04.el.cei50_date
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-CEI-05.0 PDF title page
+  evidence: 'IA # OIF-CEI-05.0 May 5, 2022'
+  action: none (05.1 Dec 2022, 05.2 Jan 2024, 05.3 Jul 2025 confirmed on IA list)
+- id: ch04.el.cei224_ia_status
+  status: MATCH
+  found_value: ''
+  found_locator: OIF Current Work page (crawled 2026); OIF IA list
+  evidence: CEI-224G-VSR ... The reach objective shall be at least 200 mm host channel, 20 mm module channel and up to one
+    connector over advanced materials.
+  action: 'none. Negative finding re-confirmed: no CEI-224G IA in the IA list; latest electrical IA OIF-CEI-05.3 (July 2025);
+    CEI-224G-Linear, XSR, VSR, MR, LR and CEI-448G-VSR/LR still current work.'
+- id: ch04.el.cei224_mr_lr_range
+  status: PARTIAL
+  found_value: ''
+  found_locator: OIF Hot Topics page 'Common Electrical I/O (CEI)-224G' (https://www.oiforum.com/technical-work/hot-topics/common-electrical-i-o-cei-224g/),
+    NOT the current-work page
+  evidence: Common Electrical I/O - 224G-MR ... Medium Reach electrical interface operating @144 to 232Gbps signaling over
+    up to 500 mm of PCB and up to one connector.
+  action: Value and quote correct, but the quote is not on oif_current_work_2026 (that page now says 'at least 500 mm ...
+    over advanced materials' with no rate range). Create a source for the hot-topics page and re-point source_id/locator.
+- id: ch04.std.8023bs_approval
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE SA standard page 802.3bs-2017
+  evidence: 'PAR Approval : 2016-05-12 Board Approval : 2017-12-06 ... Published: 2017-12-12'
+  action: none (status now 'Superseded Standard', i.e. rolled into 802.3-2022; dates unaffected)
+- id: ch04.std.8023cd_approval
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE SA standard page 802.3cd-2018
+  evidence: 'PAR Approval : 2016-05-12 Board Approval : 2018-12-05 ... Published: 2019-02-14'
+  action: none
+- id: ch04.std.8023cu_approval
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE SA standard page 802.3cu-2021
+  evidence: 'PAR Approval : 2019-03-21 Board Approval : 2021-02-09 ... Published: 2021-02-26'
+  action: none
+- id: ch04.std.8023ck_approval
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE SA standard page 802.3ck-2022
+  evidence: 'PAR Approval : 2018-05-14 Board Approval : 2022-09-21 ... Published: 2022-12-28'
+  action: none
+- id: ch04.std.8023df_approval_sa
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE SA standard page 802.3df-2024; SASB approvals page 15 Feb 2024; RevCom recommendations 29 Jan 2024
+  evidence: 'Board Approval : 2024-02-15 ... [SASB approval date: 15-Feb-2024] ... P802.3df/Draft 3.2 ... Recommendation:
+    APPROVE'
+  action: 'Disagreement resolved: 15 Feb 2024 is the SASB meeting date. Remove the ''likely timezone'' speculation from notes.'
+- id: ch04.std.8023df_approval_tf
+  status: PARTIAL
+  found_value: 2024-02-15 (SASB meeting date)
+  found_locator: ieee802.org/3/df/ home page
+  evidence: completed with the approval of IEEE Std 802.3df-2024 by the IEEE-SA Standards Boards on 16 February 2024.
+  action: Quote is verbatim, but the page is wrong. The task-force chair's own March 2024 opening report (2403_3df_open_report.pdf,
+    slide 3) says '15 Feb 2024 - Approved by IEEE SA Standards Board'; 16 Feb is the date of D'Ambrosia's announcement email
+    ('I was informed today', Fri 16 Feb 2024). Keep only as a noted erratum; cite 2024-02-15 in prose.
+- id: ch04.std.8023dj_status
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE 802.3 Clause 12 report for P802.3dj (D. Law, dated 15-Oct-26), opening paragraph and items a)-c)
+  evidence: received conditional approval to proceed to RevCom at the 6 October 2026 IEEE 802 LMSC teleconference meeting.
+    ... The fourth recirculation ballot is not required.
+  action: none. As of 2026-11-02 IEEE SA page still shows P802.3dj as 'Active PAR' (Amendment 13, Clauses 174-187); no SASB
+    approval found. Re-check after the next SASB meeting (Dec 2026).
+- id: ch04.std.8023dj_ballot_approval
+  status: MATCH
+  found_value: ''
+  found_locator: Same report, item b) table
+  evidence: The approval rate is 97%. There are no new DISAPPROVE votes. | 159 | Voters | 133 | Approve | 3 | Disapprove with
+    comment
+  action: none (2nd recirculation, closed 15 Aug 2026, was 86%)
+- id: ch04.std.8023dj_dr_reach
+  status: MATCH
+  found_value: ''
+  found_locator: Adopted IEEE P802.3dj Objectives, 14 Mar 2024, p. 2 (1.6 Tb/s related)
+  evidence: over 8 pairs of SMF with lengths up to at least 500 m ... over 8 pairs of SMF with lengths up to at least 2 km
+  action: none
+- id: ch04.std.8023dj_800g_lr1_10km
+  status: MATCH
+  found_value: ''
+  found_locator: Adopted objectives p. 2 and footnotes
+  evidence: over 1 wavelength over a single SMF in each direction with lengths up to at least 10 km * ... * - Approved by
+    IEEE 802.3 WG 16 Mar 2023
+  action: none
+- id: ch04.std.8023dj_coherent_dp16qam
+  status: MATCH
+  found_value: ''
+  found_locator: 'KeyMotions_3dj_240516, motion 05-2023 #10 (also motions_3cwdfdj_2305 Motion #10)'
+  evidence: 'adopt DP-16QAM modulation on a single wavelength as the basis for the following objectives ... Nowell Brown 802.3:
+    Passed by Unanimous Consent'
+  action: none
+- id: ch04.std.8023dj_lr1_oband_strawpoll
+  status: MATCH
+  found_value: ''
+  found_locator: cheng_3dj_01_2401, slide 'IEEE 802.3dj recent history'
+  evidence: 'Nov ''23: Straw poll on O vs C-band for LR1. O:34, C: 20, NMI: 22, Abs: 33'
+  action: none
+- id: ch04.std.8023dv_par
+  status: MATCH
+  found_value: ''
+  found_locator: P802.3dv PAR (ieee802.org/3/dv/P802.3dv_PAR.pdf), header and 4.3
+  evidence: 'PAR Approval Date: 25 Sep 2026 ... 4.3 Projected Completion Date for Submittal to RevCom: Sep 2029'
+  action: none
+- id: ch04.pmd.100g_fr_lr_wavelength
+  status: MATCH
+  found_value: ''
+  found_locator: 100G Lambda MSA 100G-FR/100G-LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: '| Wavelength (range) | | 1304.5- 1317.5 | 1304.5- 1317.5 | nm |'
+  action: none (tier B; see tier_a_replacements for IEEE 802.3cu candidate)
+- id: ch04.pmd.400g_fr4_grid
+  status: MATCH
+  found_value: ''
+  found_locator: 400G-FR4 Technical Spec Rev 2.0 (2018-09-18), Sec. 2.1, Table 2-1
+  evidence: '| L0 | 1271 nm | 1264.5 to 1277.5 nm | | L1 | 1291 nm | 1284.5 to 1297.5 nm | ... L2 1311 ... L3 1331'
+  action: none
+- id: ch04.pmd.400g_dr4_power_qdd
+  status: MATCH
+  found_value: ''
+  found_locator: Cisco 400G QSFP-DD data sheet c78-743172, product table
+  evidence: QDD-400G-DR4-S | 400G QSFP-DD Transceiver, 400GBASE-DR4, MPO 12 parallel SMF, 500m | 12 | MPO-12 SMF APC
+  action: 'none (note: most QDD optics in the table are listed at a uniform 12 W, i.e. a rating, not a measured power)'
+- id: ch04.pmd.400g_dr4_power_qsfp112
+  status: MATCH
+  found_value: ''
+  found_locator: Cisco QSFP-400G-DR4 data sheet, Table 2
+  evidence: QSFP-400G-DR4 | 400G QSFP112 Transceiver, 400GBASE-DR4, MPO-12 parallel SMF, 500m | 10 | MPO-12 SMF APC
+  action: none
+- id: ch04.pmd.800g_2xdr4_power
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA MMS4X00-NM Specifications page, Recommended Operating Conditions
+  evidence: '| Maximum Power Dissipation | PD | - | 16 | 17 | W |'
+  action: none (condition 'EML' not stated on the spec page read; verify or drop)
+- id: ch04.pmd.1p6t_dr8_power
+  status: PARTIAL
+  found_value: 25 W (JPC); 33.5 W max for NVIDIA MMS4A00
+  found_locator: JPC datasheet RFD-20260129100-001 (2026-01-29), Sec. 5
+  evidence: '| Power | Dissipation | Pdiss | - | - | 25 | W |'
+  action: Value correct for this small third-party part, but not representative as 'the' 1.6T DR8 maximum. NVIDIA's formal
+    datasheet for MMS4A00 (1.6T twin-port OSFP 2xDR4, 8x106.25 GBd, 500 m) gives 'Maximum Power Dissipation | PD | - | - |
+    33.5 | W' (case temp 20-64 C). Add an NVIDIA record (tier B) and present 25-33.5 W as the vendor spread.
+- id: ch04.gen.innolight_800g_launch
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), Part 3 core competitiveness
+  evidence: 2020 年 12 月 4 日，公司也在 ECOC2020 线上展会中推出业界首个 800G 可插拔 OSFP 和 QSFP DD800 系列光模块。
+  action: none
+- id: ch04.gen.innolight_1p6t_demo_2023
+  status: MATCH
+  found_value: ''
+  found_locator: PR Newswire, 2 Mar 2023, para 2
+  evidence: delivers up to 1.6 Tbps of transmission speed over 2km distance at a low power consumption of less than 23W over
+    0-70C temperature range
+  action: none
+- id: ch04.gen.innolight_1p6t_ship_2025q2
+  status: MATCH
+  found_value: ''
+  found_locator: cls.cn 2025-08-27
+  evidence: 二季度1.6T已开始逐步出货，预计未来两个季度1.6T将持续量产和规模出货。
+  action: none
+- id: ch04.gen.eoptolink_1p6t_first
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 annual report (300502, 2026-04-24), Sec. (三) 2 公司市场地位
+  evidence: 是全球首批量产并交付 1.6T 光模块产品的公司，是全球首个推出并规模量产线性可插拔 LPO 光模块的厂商
+  action: none
+- id: ch04.gen.eoptolink_1p6t_dr4_400g
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 annual report (300502, 2026-04-24), same paragraph
+  evidence: 2026 年 3 月，公司在行业内率先发布了多款面向 AI 数据中心算力互联的新产品，包括基于单波 400G IMDD 技术的 1.6T DR4 光模块
+  action: none
+- id: ch04.gen.innolight_3p2t_2028
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), 未来发展趋势 1、数通市场
+  evidence: 未来三年内 800G 和 1.6T 等高速光模块的需求将占据市场主导地位，3.2T 光模块有望从 2028 年起 逐步起量。
+  action: none
+- id: ch04.gen.innolight_units_2025
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), 产销量 table
+  evidence: '| 光通 信收 发模 块 | 2,806 万只 | 2,376 万只 | 2,109 万只 | 37,456,518,745.90 | 42.61% | ... 1,459 万只'
+  action: none
+- id: ch04.gen.eoptolink_units_2025
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 annual report (300502, 2026-04-24), 公司生产经营和投资项目情况 table
+  evidence: '| 光互联 | 万 1,747 | 万 1,634 | 万 1,603 | ... 47.81% ... 877 ... 44.85%'
+  action: none
+- id: ch04.gen.hgtech_3p2t_cpo_npo
+  status: MATCH
+  found_value: ''
+  found_locator: HG Tech 2025 董事会工作报告 (2026-03-26), (一) 主业向新
+  evidence: 成功实现业界第一梯队首发 1.6T 光模块，行业首推 3.2T CPO/NPO 解决方案
+  action: none
+- id: ch04.pw.dsp_half_module
+  status: PARTIAL
+  found_value: ''
+  found_locator: Nagarajan et al., J. Lightwave Technol. 42(12), 15 June 2024, doi:10.1109/JLT.2024.3399032, Section I (Introduction),
+    text on Fig. 2
+  evidence: The DSP power is nominally about 50% of the module.
+  action: 'Value and quote correct. Fix locator to ''Sec. I (Introduction), Fig. 2'' (the paragraph precedes ''Section II
+    discusses...''). Fix source nagarajan_ieee_2024: venue JLT 42(12), DOI 10.1109/JLT.2024.3399032, published online 9 May
+    2024; full text open (CC BY-NC-ND) so confidence can be high.'
+- id: ch04.pw.power_overhead
+  status: PARTIAL
+  found_value: ''
+  found_locator: Nagarajan et al., J. Lightwave Technol. 42(12), 15 June 2024, doi:10.1109/JLT.2024.3399032, Section I
+  evidence: These losses are between 10% and 15% of the total power consumption and are labeled “power overhead” in Fig. 2.
+  action: Same locator/venue fix as ch04.pw.dsp_half_module.
+- id: ch04.pw.1p6t_breakdown_dsp
+  status: MATCH
+  found_value: ''
+  found_locator: chang_3df_01_2211 (F. Chang, R. Yu, Nov 2022), slide 'Transceiver Power Consumption (800 vs 1.6T)'
+  evidence: 9.2% 8.9% 59.6% 8.6% 0.9% 12.8% 1.6T (8x200G) DR8/2xFR4 at <22W ... TEC Laser DSP TIA MCU Other
+  action: Numbers verbatim; legend mapping still inferred from text order (consistent with 400G slide where DSP=60% is the
+    largest slice). Check slide image before prose use.
+- id: ch04.pw.800g_breakdown_dsp
+  status: MATCH
+  found_value: ''
+  found_locator: chang_3df_01_2211 (F. Chang, R. Yu, Nov 2022), slide 'Transceiver Power Consumption (800 vs 1.6T)'
+  evidence: 7.0% 10.0% 70.0% 9.0% 1.0% 3.0% 800G DR4/FR4 at ~11~12W ... Rough estimation with 3nm DSP
+  action: Same caveat as 1p6t_breakdown_dsp.
+- id: ch04.pw.broadcom_pluggable_14w_800g
+  status: PARTIAL
+  found_value: ''
+  found_locator: Broadcom 'TH5 51.2T Bailly CPO' deck, Mar 2023 (docs.broadcom.com), slide 5
+  evidence: Co-Packaged Optics vs. Pluggables 5.5W Power 5.5W/800G Power 14W/800G
+  action: 'Value correct. Tier: a vendor marketing slide deck is not a formal datasheet; per the brief''s rule it is C, so
+    this can only appear in a contested box.'
+- id: ch04.pw.sian3_1p6t_sub23w
+  status: MATCH
+  found_value: ''
+  found_locator: Broadcom press release 25 Mar 2025, Solution Highlights
+  evidence: Low power 3nm 200G/lane DSP for sub-13W 800G and sub-23W 1.6T transceivers ... Sian3 production ramping in Q3
+    2025
+  action: none
+- id: ch04.pw.marvell_ara_20pct
+  status: MATCH
+  found_value: ''
+  found_locator: Marvell press release 3 Dec 2024 (web page dated 2 Dec), subtitle and para 1
+  evidence: New Ara PAM4 DSP Reduces Optical Module Power by 20% ... to reduce 1.6 Tbps optical module power by over 20%
+  action: none (condition 'sampling Q1 2025' not in text read)
+- id: ch04.pw.eoptolink_3nm_20pct
+  status: MATCH
+  found_value: ''
+  found_locator: c-fol.net 2025-03-28
+  evidence: 基于3nm DSP的模块设计可将整体功耗降低约20%。
+  action: none
+- id: ch04.pw.innolight_800g_5nm_lt14w
+  status: MATCH
+  found_value: ''
+  found_locator: PR Newswire 2 Mar 2023, para 4
+  evidence: showcase low power 800G OSFP DR8+ and 2xFR4 optical transceivers at less than 14W over 0-70C
+  action: none
+- id: ch04.pw.macom_800g_mm
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), 未来发展趋势 (3) LPO
+  evidence: 根据 Macom 的数据，具有 DSP 功能的 800G 多模光模块的功耗可 超过 13W，而利用 MACOM PURE DRIVE 技术的 800G 多模光模块功耗低于 4W。
+  action: none
+- id: ch04.lpo.msa_formed
+  status: MATCH
+  found_value: ''
+  found_locator: LPO MSA press release, 21 Mar 2024
+  evidence: San Diego, CA, March 21, 2024 - A group of industry-leading networking, semiconductor, and optics companies announce
+    the formation of the LPO MSA
+  action: none
+- id: ch04.lpo.spec_rev1_date
+  status: MATCH
+  found_value: ''
+  found_locator: LPO MSA 100G-DR-LPO Spec Rev 1.0 (file LPO_MSA_Specification_v1p2_final.pdf), Revision History
+  evidence: '| 1.0 | Initial revision | 2025-03-19 |'
+  action: none (site also hosts v1p0 and v1p01 files; all read show Rev 1.0)
+- id: ch04.lpo.host_loss
+  status: MATCH
+  found_value: ''
+  found_locator: LPO MSA 100G-DR-LPO Spec Rev 1.0 (file LPO_MSA_Specification_v1p2_final.pdf), Sec. 8, Table 12; Sec. 7.2
+  evidence: LEI-100G-PAM4-1 ... LEI-800G-PAM4-8 | 0 to 16 dB | 0.5 m to 500 m ... extends the maximum electrical channel loss
+    of OIF CEI-112G LINEAR-PAM4 by 3 dB from 13 dB to 16 dB
+  action: none
+- id: ch04.lpo.power_budget
+  status: MATCH
+  found_value: ''
+  found_locator: LPO MSA 100G-DR-LPO Spec Rev 1.0 (file LPO_MSA_Specification_v1p2_final.pdf), Sec. 8.3, Table 15
+  evidence: '| Total channel loss | 3.0 | dB | MPI penalty | 0.3 | TDECQ (max.) | 3.4 | Total Power Budget | 6.7 | dB |'
+  action: none
+- id: ch04.lpo.tx_launch_power_min
+  status: MATCH
+  found_value: ''
+  found_locator: LPO MSA 100G-DR-LPO Spec Rev 1.0 (file LPO_MSA_Specification_v1p2_final.pdf), Table 13
+  evidence: Average launch power, each lane -2.9 4 dBm
+  action: none
+- id: ch04.lpo.interop_2025
+  status: MATCH
+  found_value: ''
+  found_locator: LPO MSA press release 25 Mar 2025, para 2
+  evidence: the February 2025 interoperability event demonstrated margins above the required link performance while successfully
+    interfacing with a diverse ecosystem of link partners.
+  action: none
+- id: ch04.lpo.eoptolink_40pct
+  status: PARTIAL
+  found_value: ''
+  found_locator: OIF_PLL_Demo_Eoptolink_ECOC2023.pdf, 'Advantage of DSP based and Linear solutions'
+  evidence: The module power consumption gets reduced by around 40% when keeping the Host ASIC/system power consumption equal.
+    This means that instead of 14W module power consumption, each module needs less than 8W.
+  action: 'Value and quote correct. Tier: this is an Eoptolink promotional flyer hosted on oiforum.com, not an OIF document
+    or datasheet; reclassify source eoptolink_oif_lpo_ecoc2023 as C (press) and keep the record in the contested LPO-savings
+    box. Attribution is Eoptolink, not OIF.'
+- id: ch04.lpo.bechtolsheim_50pct
+  status: MATCH
+  found_value: ''
+  found_locator: OFC 2023 OCP panel slides (Theater II, 7 Mar 2023), Bechtolsheim section, slide 'Linear Drive Optics Modules'
+  evidence: Opportunity to cut optics module power by 50% and system power by up to 25%
+  action: 'none (attribution exact: Bechtolsheim/Arista, OCP panel at OFC 2023)'
+- id: ch04.lpo.bechtolsheim_lpo_vs_cpo_200g
+  status: MATCH
+  found_value: ''
+  found_locator: OFC 2023 OCP panel slides (Theater II, 7 Mar 2023), Bechtolsheim section, table 'LPO Comparison to Direct
+    Drive CPO at 200G'
+  evidence: '| Projected Power | 6.3 pJ/Bit SiPh 5 pJ/Bit TFLN | 5 pJ/Bit SiPh @ Device Voltage | Very similar |'
+  action: none
+- id: ch04.lpo.marvell_20pct
+  status: MATCH
+  found_value: ''
+  found_locator: LightCounting research note 'Progress in Linear Drive Pluggable Optics' (29 Sep 2023)
+  evidence: His calculations of the power savings of LPO are a lot more conservative - only 20%. Other transceiver vendors
+    presented data showing 30-40% improvement
+  action: 'none (attribution exact: Lenin Patra, Marvell, LightCounting/IPEC webinar 20 Sep 2023)'
+- id: ch04.lpo.arista_14c_cooler
+  status: MATCH
+  found_value: ''
+  found_locator: LightCounting research note 'Progress in Linear Drive Pluggable Optics' (29 Sep 2023)
+  evidence: one with 64 standard 800G transceivers, another with 64 LPO modules. The latter was running 14 degrees Celsius
+    cooler
+  action: none (Hacene Chaouch, Arista)
+- id: ch04.lpo.hgtech_800g_lpo_volume
+  status: MATCH
+  found_value: ''
+  found_locator: HG Tech 2025 董事会工作报告, (三) 布局向远
+  evidence: 联接 业务 800G LPO 光模块在北美客户实现批量交付
+  action: none
+- id: ch04.lpo.eoptolink_lpo_lt11w
+  status: MISMATCH
+  found_value: <11 W applies to Eoptolink 800G AEC cable module, not direct-drive optics
+  found_locator: Eoptolink 2025 annual report (300502, 2026-04-24), 研发投入 table; cross-checked with Eoptolink 2024 annual report
+    (2025-04-23) same table
+  evidence: 2024 AR row '高速 AEC 电缆模块 | 研发 800G 高速带电缆模块 | ... | 功耗低于 11W，满足 IEEE 802.3ck 协议要求。' In the 2025 AR crawl the '<11
+    W, 802.3ck' cell sits between the 高速直驱 row (whose target is '实现 800G 高速率传输的同时，保证低功耗') and the AEC row, whose target cell
+    is otherwise missing.
+  action: The <11 W / IEEE 802.3ck target belongs to the 800G AEC (active electrical cable) project, not the direct-drive
+    (linear) optical module. 802.3ck is an electrical-interface standard, which fits AEC. Delete the record or re-scope it
+    to 'Eoptolink 800G AEC target <11 W' (not LPO evidence).
+- id: ch04.lpo.accelink_lro_lpo_products
+  status: MATCH
+  found_value: ''
+  found_locator: Accelink 2025 annual report (002281, 2026-04-23), 3、数据通信类产品
+  evidence: 800G 系列光模块主要包括800GVR8、 800G DR8、800G 2xFR4、800G 2xLR4、800G DR8 LRO 及 800G 2xFR4 LPO 等；1.6T 等系列光模块 产品主要包括 1.6T
+    DR8 等
+  action: none
+- id: ch04.lpo.innolight_lro_definition
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), 未来发展趋势 (4) LRO
+  evidence: 只需在从电口输入到光口输出的传输路径上放置一个用于信 号重定时和均衡的 DSP，接收端采用线性设计 ... LRO 被定义为 DSP 和 LPO 光模 块的过渡技术。
+  action: none
+- id: ch04.lpo.oif_rtlr_ia
+  status: MATCH
+  found_value: ''
+  found_locator: OIF IA list, Energy Efficient Interfaces
+  evidence: OIF-EEI-112G-RTLR-01.0 - Implementation Agreement for 112 Gb/s Retimed Transmitter Linear Receiver (RTLR) (October
+    2025)
+  action: none (EEI-224G-RTLR still current work)
+- id: ch04.cpo.bailly_5p5w
+  status: PARTIAL
+  found_value: ''
+  found_locator: Broadcom 'TH5 51.2T Bailly CPO' deck, Mar 2023 (docs.broadcom.com), slide 10 'Tomahawk 5 - Bailly 51.2T CPO'
+  evidence: '8 Silicon Photonic Engines @ 6.4T (64ch) 51.2T CPO links, no electrical links Optical Power: 5.5W/800G Bailly
+    CPO 30% Power Savings 2023 Performance Demonstration'
+  action: 'Value correct. Tier: marketing deck = C by the brief''s rule. Use the tier-A Meta ECOC 2025 Fig. 1(a) (measured
+    optics power per 800 Gb/s, about 5.2-5.6 W across OE die temperature on 16 OEs) as primary support; see tier_a_replacements.
+    Note the same slide says ''30% Power Savings'', not 70%.'
+- id: ch04.cpo.humboldt_102w
+  status: PARTIAL
+  found_value: ''
+  found_locator: Broadcom 'TH5 51.2T Bailly CPO' deck, Mar 2023 (docs.broadcom.com), slide 9 'Tomahawk 4 - Humboldt 25.6T
+    CPO'
+  evidence: TH4 Power W 367 CPO Power (128 lanes) W 102 Air Temp C 24 ... 6.4W/800G 2023 Performance Demonstration
+  action: Value correct; tier C (marketing deck), same as bailly_5p5w.
+- id: ch04.cpo.bailly_70pct_claim
+  status: MATCH
+  found_value: ''
+  found_locator: Broadcom press release 14 Mar 2024, para 1
+  evidence: Bailly enables the optical interconnect to operate at 70% lower power consumption and delivers an 8x improvement
+    in silicon area efficiency as compared to pluggable transceiver solutions.
+  action: none (condition '128 x 400G FR4, 4RU' comes from the Meta paper, not this release)
+- id: ch04.cpo.meta_65pct
+  status: MATCH
+  found_value: ''
+  found_locator: Amiralizadeh et al. (Meta), 'Co-Packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches',
+    ECOC 2025, doi:10.1109/ECOC66593.2025.11263202, 'Power consumption' section and Conclusions
+  evidence: Our measurements show a 65% optics power reduction from CPO compared to retimed pluggable optics, resulting in
+    over 500W savings ... The CPO technology demonstrated a power saving of 65% compared to retimed pluggable optical modules
+    in 100G/lane generation
+  action: 'none on value. Add to conditions: CPO = 120 OEs + 240 PLSs from 15 systems at 40 C ambient; baseline = 48 retimed
+    2x400G FR4 pluggables from four vendors at 70 C case (Minipack3 worst case). Add DOI to source; the groups.io URL is an
+    author copy.'
+- id: ch04.cpo.meta_1m_hours
+  status: MATCH
+  found_value: ''
+  found_locator: Amiralizadeh et al. (Meta), 'Co-Packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches',
+    ECOC 2025, doi:10.1109/ECOC66593.2025.11263202, 'Link reliability and performance', Fig. 5
+  evidence: we did not see any failures or uncorrectable codewords (UCWs) in the links. The maximum non-zero FEC bin is smaller
+    than 7 on 75% of the ports after 1.05 million device hours of operation.
+  action: none (lab, 128x400G optical self-loopback, 40 C ambient; not production traffic)
+- id: ch04.cpo.meta_laser_tj
+  status: MATCH
+  found_value: ''
+  found_locator: Amiralizadeh et al. (Meta), 'Co-Packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches',
+    ECOC 2025, doi:10.1109/ECOC66593.2025.11263202
+  evidence: The laser junction temperature is typically less than 50°C in the worst-case operation condition of CPO systems,
+    while in contrast pluggable transceivers ... uncooled lasers with junction temperatures at around 80°C.
+  action: none
+- id: ch04.cpo.meta_pls_8ports
+  status: MATCH
+  found_value: ''
+  found_locator: Amiralizadeh et al. (Meta), 'Co-Packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches',
+    ECOC 2025, doi:10.1109/ECOC66593.2025.11263202, 'System overview'
+  evidence: the system is designed to work with field-replaceable pluggable laser sources (PLSs) accessible through the front
+    panel. Each PLS supports eight 400Gbps ports.
+  action: none
+- id: ch04.cpo.meta_15m_hours_5x_mtbf
+  status: MATCH
+  found_value: ''
+  found_locator: Converge Digest, J. Carroll, 23/24 Oct 2025, 'Meta's CPO Evaluation'
+  evidence: roughly 15 million CPO device-hours and two million pluggable-module hours so far ... CPO modules show about a
+    5× improvement in MTBF over comparable pluggables, with roughly 65 percent lower power consumption
+  action: none (tier C news of a PECC talk; no primary Meta document for 15M h / 5x found)
+- id: ch04.cpo.nvidia_3p5x
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA press release, GTC, 18 Mar 2025, para 2
+  evidence: They integrate optics innovations with 4x fewer lasers to deliver 3.5x more power efficiency, 63x greater signal
+    integrity, 10x better network resiliency at scale
+  action: none
+- id: ch04.cpo.nvidia_5x_2026
+  status: MATCH
+  found_value: ''
+  found_locator: nvidia.com silicon-photonics product page (crawled 2026), 'Reduced Power Consumption'
+  evidence: NVIDIA CPO technology significantly reduces network power, enabling 5x better power efficiency over pluggable
+    transceivers.
+  action: none. NVIDIA's 14 Aug 2026 Spectrum-X Photonics full-production announcement also uses '5x lower power consumption'
+    (per StorageReview, 15 Aug 2026), so 5x is now NVIDIA's current figure; 3.5x is the 2025 figure.
+- id: ch04.cpo.nvidia_quantumx_ports
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA Technical Blog, A. Seyedi, 18 Aug 2025, body bullet list 'How Quantum-X Photonics marks the next generation'
+  evidence: 115 Tb/s of switching capacity, supporting 144 ports at 800 Gb/s each
+  action: none
+- id: ch04.cpo.nvidia_electrical_loss
+  status: PARTIAL
+  found_value: ''
+  found_locator: NVIDIA Technical Blog, A. Seyedi, 18 Aug 2025, body text (not the summary)
+  evidence: This segmented journey incurs substantial electrical loss, up to 22 dB for 200 gigabit-per-second channels ...
+    reducing electrical loss to only ~4 dB and slashing power use to as low as 9W.
+  action: Values correct, but the recorded quote is from the page's 'AI-Generated Summary' box (machine-written, flagged by
+    NVIDIA as possibly incomplete), not the author's text. Replace the quote with the body sentence above. Also note 'up to
+    22 dB' is an upper bound.
+- id: ch04.cpo.nvidia_availability_slip
+  status: PARTIAL
+  found_value: ''
+  found_locator: NVIDIA Technical Blog, A. Seyedi, 18 Aug 2025, closing paragraph (body)
+  evidence: With commercial availability for NVIDIA Quantum-X InfiniBand switches set for early 2026 and Spectrum-X Ethernet
+    switches in the second half of 2026
+  action: '(1) Recorded quote is from the AI-Generated Summary; replace with the body sentence above. (2) Superseded as of
+    2026-11: NVIDIA announced on 14 Aug 2026 that Spectrum-X Ethernet Photonics entered full production (first customers CoreWeave,
+    Lambda, Oracle), and Quantum-X Q3450-LD units were delivered to Lambda by June 2026 (Lambda blog, 1 Jun 2026). Only secondary
+    copies of the Aug 2026 NVIDIA announcement were reachable (StorageReview 15 Aug 2026); find the NVIDIA primary before
+    citing.'
+- id: ch04.cpo.elsfp_power_classes
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-ELSFP-02.0 (8 Jan 2025), Sec. 3.5, Table 6
+  evidence: Low Power - LP | 11dBm | Medium Power - | MP | 14dBm | High Power - HP | 17dBm | ... VHP 20dBm | UHP 23dBm | SHP
+    26dBm (Power/λ/Core (+/- 1.5dB))
+  action: none
+- id: ch04.cpo.elsfp_supply
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-ELSFP-02.0 (8 Jan 2025), Sec. 4.3
+  evidence: Power for the ELSFP shall be delivered by six pairs of 3.3V power and ground pins. The current capability of each
+    of these pins is up to 1.5 A DC
+  action: none
+- id: ch04.cpo.oif_3p2t_module_ia
+  status: MATCH
+  found_value: ''
+  found_locator: OIF IA list, Energy Efficient Interfaces
+  evidence: OIF-Co-Packaging-3.2T-Module-01.0 - Implementation Agreement for a 3.2Tb/s Co-Packaged (CPO) Module (March 2023)
+  action: none
+- id: ch04.cpo.minkenberg_50pct
+  status: MATCH
+  found_value: ''
+  found_locator: 'Minkenberg et al., ''Co-packaged datacenter optics: Opportunities and challenges'', IET Optoelectronics,
+    first published 22 Mar 2021, doi:10.1049/ote2.12020, Conclusions; Introduction'
+  evidence: Co-packaged optics is ultimately the most attractive as it can realize cost and power reductions of up to 50%.
+    ... CPO solutions deliver substantial (say, 50% or more) gains in terms of energy efficiency (pJ/bit) and capital expenditure
+    ($/Gb/s)
+  action: 'none. Venue confirmed: IET Optoelectronics (not JOCN). Same paper targets 10-15 pJ/bit for first-gen CPO vs <20
+    pJ/bit pluggables (25-50% reduction).'
+- id: ch04.cpo.evans_eff_vs_dsp
+  status: MATCH
+  found_value: ''
+  found_locator: Evans, 'Data Center Switch Power Consumption Comparison Between Co-Packaged Optics and Pluggable Transceivers',
+    JLT 44(16):7158 (published 2026-08-15), abstract
+  evidence: current CPO transceivers have a 23% and 67% improvement in energy efficiency, respectively, compared to LPO and
+    DSP transceivers, which increases to 44% and 69% when including the switch ASIC host SERDES
+  action: none (add DOI to source when found)
+- id: ch04.cpo.evans_switch_power
+  status: MATCH
+  found_value: ''
+  found_locator: Evans, 'Data Center Switch Power Consumption Comparison Between Co-Packaged Optics and Pluggable Transceivers',
+    JLT 44(16):7158 (published 2026-08-15), table on abstract page
+  evidence: '| Total Power | 100% | 6400 | 4983 | 4093 | ... Optical Transceivers | 33% | 2112 | 922 | 512 | Switch SERDES
+    | 6% | 410 | 410 | 72'
+  action: 'none (columns sum: 6400, 4983, 4093 checked)'
+- id: ch04.coh.400zr_reach
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-400ZR-01.0 (10 Mar 2020), Sec. 5 Introduction; Sec. 7.1
+  evidence: 120 km or less, amplified, point-to-point, DWDM noise limited links. ... The 400ZR targeted reach for these applications
+    is 80km or more.
+  action: 'Supersession note: OIF-400ZR-03.0 (Oct 2024) is the current IA; cite 03.0 or say ''first edition''.'
+- id: ch04.coh.400zr_baud
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-400ZR-01.0 (10 Mar 2020), Sec. 12.5
+  evidence: The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization.
+  action: Same supersession note.
+- id: ch04.coh.400zr_cfec
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-400ZR-01.0 (10 Mar 2020), Sec. 10
+  evidence: ~10.8dB of NCG with ~14.8% overhead (e.g. BER_in = 1.25E-2 results in BER_out = 1.0E-15).
+  action: Same supersession note.
+- id: ch04.coh.400zr_osnr_26
+  status: MATCH
+  found_value: ''
+  found_locator: Juniper HCT spec page QDD-400G-ZR-M-HP
+  evidence: '| Optical receiver minimum OSNR (back-to-back), worst-case, EOL | 26dB | 24dB | 21dB | 16dB | 12.5dB | ... typical
+    | 25.5dB'
+  action: none on value. IA Table 13.1.3 still not read (TOC confirms 13.1.3 'Receiver Optical Specifications' p. 67 in 02.0).
+    OIF OFC2023 slide (Berger) also lists '400ZR ROSNR 26db'.
+- id: ch04.coh.400zr_module_power
+  status: MATCH
+  found_value: ''
+  found_locator: Juniper HCT spec page QDD-400G-ZR-M-HP
+  evidence: '| Maximum Power consumption (W) | 19.5W | 22.5W | 23W | 21.5W | 18W | ... Typical 17W'
+  action: none
+- id: ch04.coh.400zr_15w_target
+  status: MATCH
+  found_value: ''
+  found_locator: OpenZR+ white paper, Dec 2023, Introduction
+  evidence: The Optical Internetworking Forum (OIF) started the 400ZR project in 2016 ... Targeting a module power consumption/dissipation
+    of 15 Watts, OIF standardized on the minimum features
+  action: none
+- id: ch04.coh.openzrplus_ofec
+  status: MATCH
+  found_value: ''
+  found_locator: OpenZR+ Spec Rev 3.0, Table 1-3; Change History
+  evidence: ZR400-OFEC-16QAM | 60 138 546 798 | 16QAM | OFEC | 11.6 | 2.0E-2 | OpenZR+ ... 1.0 | 4-Sep-2020 ... 2.0 | 29-July-2022
+    ... 3.0 | 28-July-2023
+  action: none
+- id: ch04.coh.openzrplus_osnr24
+  status: MATCH
+  found_value: ''
+  found_locator: OpenZR+ white paper, Dec 2023, Summary
+  evidence: When in loop-back, all optical transceiver modules transported 400G traffic to the OpenZR+ requirement of a receiver
+    OSNR of 24 dB/0.1 nm, with at least 2.3 dB of margin.
+  action: none
+- id: ch04.coh.800zr_reach
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-800ZR-01.0 (8 Oct 2024), Sec. 1 Introduction
+  evidence: defines a single-wavelength 800G coherent line interface and frame format for single-span, amplified, 80-120km,
+    point-to-point, DWDM noise limited links
+  action: none
+- id: ch04.coh.800zr_baud
+  status: MATCH
+  found_value: ''
+  found_locator: Juniper HCT JCO800-QDD-ZR-M-HP, Signaling rate row
+  evidence: '| Signaling rate | 945.6Gbps, (118.2GBd), +/-20ppm |'
+  action: 'none. Also stated in OIF OFC 2023 slides (Berger: ''Nominal Symbol Rate ... 118.2GBaud'') and van den Borne. IA
+    Table 20 still not read.'
+- id: ch04.coh.800zr_osnr
+  status: PARTIAL
+  found_value: ''
+  found_locator: van den Borne, ECOC 2024 Market Focus slides (Juniper), 'From 400ZR to 800ZR'
+  evidence: Rx recevied OSNR 26.0 dB/0.1 nm 27.0 dB/0.1 nm
+  action: 'Value correct. Source is vendor marketing slides (C by the brief''s rule). Better support: OIF ''OFC 2025 800ZR
+    Interop White Paper'' (Gass): ''met the 800ZR Rx OSNR tolerance requirement of ≤27 dB/0.1 nm ... following the OIF reference
+    6.1.330''. Re-source to that (B) and, ideally, to IA ref 6.1.330 (Table 22) itself.'
+- id: ch04.coh.800zr_module_power
+  status: MATCH
+  found_value: ''
+  found_locator: Juniper HCT JCO800-QDD-ZR-M-HP
+  evidence: '| Maximum Power consumption (W) | 30W, 1x800GAUI-8 client, CD = 2.4ns/nm, OSNR at ROSNR, case temp from 15C to
+    75C | ... Typical 28W'
+  action: none
+- id: ch04.coh.800zrplus_nokia_31w
+  status: MATCH
+  found_value: ''
+  found_locator: Nokia 800G ZR/ZR+ data sheet (asset 215394), Table 4
+  evidence: '| Baud rate | Gbaud | 131.30 | ... | Minimum receive OSNR | dB | 24.7 | Pre FEC BER ... | 0.02 | ... | Power
+    consumption | W | 31 |'
+  action: none
+- id: ch04.coh.800g_openzrplus_modes
+  status: MATCH
+  found_value: ''
+  found_locator: OpenZR+ 800G white paper, 28 Jul 2025, Sec. 3 table
+  evidence: '| OR-W-800G-oFEC-118Gbd | No | FlexO-8e-DO | ... | OR-W-800G-oFEC-131GbdE | Yes | FlexO-8e-DPO |'
+  action: none
+- id: ch04.coh.800lr_baud
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-800LR-01.0 (1 Apr 2025), Sec. 7.3, Table 7
+  evidence: The 800LR optical signal is DP-16QAM with a symbol rate of 123.6 GS/s (989.1 Gbps). ... | 0ppm | 850,000,000,000
+    | 973,636,363,636 | 989,090,909,091 | 123,636,363,636 |
+  action: none
+- id: ch04.coh.800lr_loss_budget
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-800LR-01.0 (1 Apr 2025), Table 8
+  evidence: 10km or less, unamplified, point-to point, single channel links - | 8dB O-band. | 0x01 - 800LR-O ... | 5dB C-band.
+    | 0x02 - 800LR- C
+  action: none
+- id: ch04.coh.800lr_fec
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-800LR-01.0 (1 Apr 2025), Sec. 5
+  evidence: This provides 10.35 dB of net coding gain, with ~14.5% additional overhead compared to RS-FEC-encoded client signal.
+  action: none
+- id: ch04.coh.1600zr_ia
+  status: PARTIAL
+  found_value: ~236.41 GBd stated in Fig. 15
+  found_locator: OIF-1600ZR-01.0 (title page September 1, 2026), Sec. 1 and Fig. 15
+  evidence: defines a single-wavelength 1.6T coherent line interface and frame format for single-span, amplified, point-to-point,
+    DWDM noise limited links up to 120km ... 1600ZR Frame ~236.41 GBd ... 1891.253609648 Gbit/s ±20 ppm
+  action: 'Date, reach and line rate correct. The note ''symbol rate not stated in text read; derived'' is wrong: Fig. 15
+    itself states ''~236.41 GBd''. Correct the note and add a tier-A record for the 1600ZR symbol rate (closes gap 5 for 1600ZR).
+    OIF press-release date 9 Sep 2026 not verified.'
+- id: ch04.coh.innolight_800g_lr2
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), Part 3 technology history
+  evidence: 2025 年公司在 OFC2025 现场展示了 3nm 1.6T OSFP 2xFR4 光 模块和 800G LR2 OSFP 相干精简型光模块。
+  action: none
+- id: ch04.oio.intel_oci_5pj
+  status: MATCH
+  found_value: ''
+  found_locator: Intel newsroom, 26 Jun 2024, 'How It Works'
+  evidence: The co-packaged solution is also remarkably energy efficient, consuming only 5 pico-Joules (pJ) per bit compared
+    to pluggable optical transceiver modules at about 15 pJ/bit.
+  action: none
+- id: ch04.oio.intel_oci_bw
+  status: MATCH
+  found_value: ''
+  found_locator: Intel Hot Chips 2024 (Fathololoumi), slide '4Tbps OCI and System Overview'
+  evidence: 2 Tbps BW per direction (8f x 8 x 32 Gb/s) ... 64 lanes @ 32Gb/s = 4Tbps (bidirectional)
+  action: none
+- id: ch04.oio.ayar_8tbps
+  status: MATCH
+  found_value: ''
+  found_locator: Ayar Labs Hot Chips 2025 (Stojanovic), slide 'UCIe 8 Tbps TeraPHY Optical I/O Chiplet'
+  evidence: Support of up to 8.192 Tbps of bidirectional bandwidth ... 16 TX and 16 RX lanes @ 32Gbps NRZ per lane, 1024Gbps
+    bi-directional BW
+  action: 'none (latency ''<25 ns'' condition not in text read). Tier-A peer-reviewed version exists: OFC 2025 postdeadline
+    Th4B.3; see tier_a_replacements.'
+- id: ch04.oio.ayar_claim_4to8x
+  status: MATCH
+  found_value: ''
+  found_locator: ayarlabs.com/teraphy (crawled 2026)
+  evidence: Optical I/O delivers 5x-10x higher bandwidth at 10x lower latency and 4x-8x more power efficiency compared to
+    traditional interconnects (pluggable optics + electrical SerDes).
+  action: none (page still lists '8 Tbps bi-directional' and '512 Gbps per port (4 Tbps per chiplet)')
+- id: ch04.oio.innolight_cpo_caution
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 annual report (300308, 2026-03-31), 未来发展趋势 (5) CPO
+  evidence: 目前 CPO 正在经历技术突破到早期商业化，其行业标准形成预计还要一定时间
+  action: none
+- id: ch04.oio.hgtech_cpo_2026_27
+  status: MATCH
+  found_value: ''
+  found_locator: HG Tech 2025 annual report (000988), 行业情况
+  evidence: LightCounting 预计，CPO 产品有望在 2026 至 2027 年开始规模上量，主要应用于超大型云服务商的数通短距场景。
+  action: 'none (same paragraph: 800G 2025 1,800-1,990 万只; 1.6T 250-350 万只)'
+- id: ch04.oio.minkenberg_hurdle
+  status: MATCH
+  found_value: ''
+  found_locator: 'Minkenberg et al., ''Co-packaged datacenter optics: Opportunities and challenges'', IET Optoelectronics,
+    first published 22 Mar 2021, doi:10.1049/ote2.12020, Introduction'
+  evidence: the main hurdle to CPO adoption is not of a technical nature, but rather in overcoming the inertia of moving an
+    entire industry away from a deeply entrenched incumbent deployment model
+  action: none
+- id: ch04.cpo.broadcom_meta_flapfree
+  status: MATCH
+  found_value: ''
+  found_locator: Broadcom press release 1 Oct 2025, para 1-3 and footnote 1
+  evidence: Testing of Broadcom CPO solutions at Meta has demonstrated one million link hours without a single link flap ...
+    CPO reduces optics power by 65 percent ... 1. ECOC 2025 ... Amiralizadeh
+  action: none (footnote confirms the primary is the Meta ECOC 2025 paper)
+- id: ch04.std.400gpl_sg_chartered
+  status: MATCH
+  found_value: ''
+  found_locator: ieee802.org/3/400GPL
+  evidence: On 13 March 2026, the IEEE 802 LMSC chartered a Study Group under the IEEE 802.3 Ethernet Working Group
+  action: none (page now records transition to P802.3dv TF after PAR approval 25 Sep 2026; draft PAR/CSD approved by LMSC
+    17 Jul 2026)
+- id: ch04.coh.cisco_800zr_power_class
+  status: PARTIAL
+  found_value: ''
+  found_locator: Cisco 800G ZR/ZR+ data sheet, Table 2
+  evidence: Power consumption QSFP-DD type 2B compliant, OSFP power class 8
+  action: 'Quote correct, but the note''s inference is wrong: ''type 2B'' is a QSFP-DD module type (mechanical/thermal), not
+    QSFP-DD Power Class 8, and ''power class 8'' here is the OSFP class ladder. Reword the note; for ''800ZR exceeds 14 W''
+    cite Juniper JCO800 (30 W max) or Nokia (31 W).'
+- id: ch04.eq.pam_bitrate
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-FD-CEI-224G-01.0, Sec. 2.3.4 and Table 3
+  evidence: 'Maintaining a PAM4 modulation, a data rate of 224 Gbps requires a baud rate of 112 GBd. ... Table 3: Bits per
+    symbol 2 2 2.25 2.5 2.75 3 4; 112.5 100 90 81.82 75 56.25 GBd'
+  action: none (Table 3 gives 2.5 bits/symbol for PAM6, i.e. 224/2.5 = 89.6 -> 90 GBd)
+- id: ch04.eq.aggregate_rate
+  status: MATCH
+  found_value: ''
+  found_locator: OSFP-XD Rev 1.1, Sec. 10.4
+  evidence: This results in 16 lanes of 200Gb/s for a total of 3.2Tb/s.
+  action: none
+- id: ch04.eq.coherent_bitrate
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-400ZR-01.0 Sec. 12.5; Juniper JCO800
+  evidence: 59.843750000 Gbaud (478.750 Gbps) ... 945.6Gbps, (118.2GBd)
+  action: none (59.84375 x 2 x 4 = 478.75; 118.2 x 8 = 945.6 checked)
+- id: ch04.eq.800lr_expansion
+  status: MATCH
+  found_value: ''
+  found_locator: OIF-800LR-01.0 Sec. 7.3, Table 7
+  evidence: with a 126/110 ratio to account for the BCH-FEC adaption and a 64/63 ratio to account for the pilot insertion
+    ... 850,000,000,000 ... 123,636,363,636
+  action: none (850e9 x 126/110 x 64/63 / 8 = 123.636 GBd checked)
+- id: ch04.eq.energy_per_bit
+  status: MATCH
+  found_value: ''
+  found_locator: Broadcom 'TH5 51.2T Bailly CPO' deck, Mar 2023 (docs.broadcom.com), slide 5 (per-800G power)
+  evidence: 5.5W/800G ... 14W/800G
+  action: none (definitional; 14/800 = 17.5 pJ/bit, 5.5/800 = 6.9 pJ/bit checked). Source tier note as for pw.broadcom_pluggable_14w_800g.
+- id: ch04.eq.fec_overhead_ofec
+  status: PARTIAL
+  found_value: ''
+  found_locator: OpenZR+ Spec Rev 3.0, Sec. 7.1
+  evidence: Here k = 239, and each constituent component codeword has (2N - k) = 17 parity bits. The fraction of bits that
+    are parity bits is 17/128, the rate of the code is 111/128 = 0.867, and the overhead is 17/111 = 15.3%.
+  action: 'Numbers correct, but the source defines k = 239 (component code, 2N = 256); the equation''s n = 128, k = 111 are
+    per-row quantities. State the mapping in notes. Also fix notes typo: ''oif_400zr_ia_2020'' should be ''oif_400zr_01_2020''.'
+- id: ch04.eq.qsfpdd_class8_current
+  status: MATCH
+  found_value: ''
+  found_locator: QSFP-DD MSA Hardware Rev 7.1 (2024-06-25), Table 13, Power Class 8 rows
+  evidence: '| Instantaneous peak current | | Icc_ip_8 | - | - | P_8/2.5 | A | Sustained peak current | | Icc_sp_8 | - | -
+    | P_8/3.03 | A |'
+  action: none
+- id: ch04.eq.switch_power_sum
+  status: MATCH
+  found_value: ''
+  found_locator: Evans, 'Data Center Switch Power Consumption Comparison Between Co-Packaged Optics and Pluggable Transceivers',
+    JLT 44(16):7158 (published 2026-08-15), table
+  evidence: Switch and Supervisor 2854 | Optical Transceivers 2112 | Switch SERDES 410 | Cooling 640 | Power Supply 384 |
+    Total Power 6400
+  action: none (all three columns re-summed exactly)
+tier_a_replacements:
+- for: ch04.std.8023df_approval_tf
+  citation: 'IEEE SA Standards Board Approvals, 15 February 2024 (lists 802.3df-2024 under New Standards); RevCom recommendations
+    of 29 Jan 2024 ''[SASB approval date: 15-Feb-2024]'''
+  url: https://standards.ieee.org/about/sasb/sba/15feb2024/
+  locator: '''New Standards'' list'
+  value: '2024-02-15'
+  note: Primary IEEE-SA record of the board action; supersedes the task-force page's 16 Feb.
+- for: ch04.cpo.bailly_5p5w
+  citation: S. Amiralizadeh et al., 'Co-Packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches',
+    ECOC 2025, Copenhagen, doi:10.1109/ECOC66593.2025.11263202
+  url: https://ieeexplore.ieee.org/document/11263202
+  locator: Fig. 1(a) 'Optics power consumption at different OE die temperatures' (y-axis W per 800 Gb/s)
+  value: about 5.2 to 5.6 W per 800 Gb/s measured on 16 OEs and 32 PLSs (figure readout; not stated as a single number in
+    text)
+  note: Peer-reviewed measurement of Bailly optics power; record with confidence med (digitized), keep Broadcom 5.5 W as the
+    vendor figure.
+- for: ch04.coh.800zr_osnr
+  citation: OIF-800ZR-01.0 Implementation Agreement (8 Oct 2024), receiver OSNR tolerance, ref 6.1.330 (Table 22)
+  url: https://www.oiforum.com/wp-content/uploads/OIF-800ZR-01.0.pdf
+  locator: Table 22 / ref 6.1.330 (table itself not read in this audit; requirement quoted by OIF 'OFC 2025 800ZR Interop
+    White Paper')
+  value: Rx OSNR tolerance <= 27 dB/0.1 nm
+  note: 'Read the IA table before citing as A; the OIF white paper (B) is verified: ''the 800ZR Rx OSNR tolerance requirement
+    of ≤27 dB/0.1 nm''.'
+- for: ch04.coh.1600zr_ia
+  citation: OIF-1600ZR-01.0 Implementation Agreement for 1600ZR Coherent Interfaces (1 Sep 2026)
+  url: https://www.oiforum.com/wp-content/uploads/OIF-1600ZR-01.0.pdf
+  locator: Fig. 15 'Expansion Rates and Adaptation of 1600ZR Frame to the 1600ZR Coherent Line Interface'
+  value: ~236.41 GBd; line bit rate 1891.253609648 Gbit/s ±20 ppm; DP-16QAM, OFEC
+  note: Stated in the source; replaces the derived 236.4 GBd.
+- for: ch04.oio.ayar_8tbps
+  citation: P. Bhargava et al. (Ayar Labs), 'A UCIe Optical I/O Retimer Chiplet for AI Scale-up Fabrics', OFC 2025 Postdeadline
+    Th4B.3, doi:10.1364/OFC.2025.Th4B.3
+  url: https://opg.optica.org/abstract.cfm?uri=ofc-2025-Th4B.3
+  locator: Abstract
+  value: 1.024 Tb/s bidirectional per optical port; aggregate 8.192 Tb/s
+  note: Peer-reviewed postdeadline paper; abstract only read.
+- for: ch04.pw.dsp_half_module
+  citation: R. Nagarajan et al., 'Recent Advances in Low-Power Digital Signal Processing Technologies for Data Center Applications',
+    J. Lightwave Technol. 42(12), 15 June 2024, doi:10.1109/JLT.2024.3399032
+  url: https://doi.org/10.1109/JLT.2024.3399032
+  locator: Sec. I (Introduction), Fig. 2
+  value: DSP about 50% of module power; power overhead 10-15%
+  note: 'Not a replacement but a source correction: venue was unverified in the source file.'
+- for: ch04.lpo.marvell_20pct
+  citation: A. F. Evans, 'Data Center Switch Power Consumption Comparison Between Co-Packaged Optics and Pluggable Transceivers',
+    J. Lightwave Technol. 44(16):7158 (2026)
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-44-16-7158
+  locator: Table on abstract page (102.4 Tb/s switch, 128 x 800G)
+  value: 'Optical transceivers: DSP 2112 W vs LPO 922 W (LPO about 56% lower, derived); switch total 6400 vs 4983 W (about
+    22% lower, derived)'
+  note: Only peer-reviewed number found for LPO vs DSP savings; it is a model, not a measurement. Use alongside the contested
+    20/40/50% claims.
+- for: ch04.pmd.100g_fr_lr_wavelength
+  citation: IEEE Std 802.3cu-2021, 100GBASE-FR1/LR1 (Clause 140 amendments)
+  url: https://standards.ieee.org/ieee/802.3cu/7515/
+  locator: not verified (normative PMD tables not read; gap 1)
+  value: 1304.5-1317.5 nm expected
+  note: Candidate only; read the clause before use.

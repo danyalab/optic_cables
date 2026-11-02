@@ -73,7 +73,8 @@ sources:
   retrieved: 2026-11-02
 - id: crivelli_tcasi_2014
   type: journal
-  title: Architecture of a Single-Chip 50 Gb/s DP-QPSK/BPSK Transceiver With Electronic Dispersion Compensation for Coherent Optical Channels
+  title: Architecture of a Single-Chip 50 Gb/s DP-QPSK/BPSK Transceiver With Electronic Dispersion Compensation for Coherent
+    Optical Channels
   authors: Diego E. Crivelli, Mario R. Hueda, Hugo S. Carrer, Martin del Barco, Ramiro Lopez, Pablo Gianni, et al.
   venue: IEEE Transactions on Circuits and Systems I 61(4)
   year: 2014
@@ -117,7 +118,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-400ZR-01.0_reduced2.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: 2026-11-02
 - id: oif_400zr_03_2024
   type: standard
@@ -129,7 +130,7 @@ sources:
   url: https://www.oiforum.com/wp-content/uploads/OIF-400ZR-03.0.pdf
   access: open
   language: en
-  tier: A
+  tier: B
   retrieved: 2026-11-02
 - id: openroadm_msa6_wport_2023
   type: standard
@@ -349,7 +350,8 @@ sources:
   retrieved: 2026-11-02
 - id: fei_jlt_2025
   type: journal
-  title: 'Nonuniform Error Distributions Induced by Multipath Interference in Optical IM/DD PAM4 Systems: Implications for FEC Performance'
+  title: 'Nonuniform Error Distributions Induced by Multipath Interference in Optical IM/DD PAM4 Systems: Implications for
+    FEC Performance'
   authors: Leyan Fei, Yicheng Xu, Yu Guo, Weisheng Hu, Qunbi Zhuge
   venue: Journal of Lightwave Technology (early access 2025)
   year: 2025
@@ -458,7 +460,8 @@ sources:
 - id: pillai_jlt_2014
   type: journal
   title: End-to-End Energy Modeling and Analysis of Long-Haul Coherent Transmission Systems
-  authors: Bipin Sankar Gopalakrishna Pillai, Behnam Sedighi, Kyle Guan, N. Prasanth Anthapadmanabhan, William Shieh, Kerry J. Hinton, Rodney S. Tucker
+  authors: Bipin Sankar Gopalakrishna Pillai, Behnam Sedighi, Kyle Guan, N. Prasanth Anthapadmanabhan, William Shieh, Kerry
+    J. Hinton, Rodney S. Tucker
   venue: Journal of Lightwave Technology 32(18), 3093-3111
   year: 2014
   doi: 10.1109/JLT.2014.2331086
