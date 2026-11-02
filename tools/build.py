@@ -32,7 +32,7 @@ def load_ledger(ch):
         if not p.name.endswith("_equations.yaml"):
             for r in (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("records") or []:
                 recs[r["id"]] = r
-    for p in sorted((BOOK / "sources").glob(f"ch{ch}*.yaml")):
+    for p in sorted((BOOK / "sources").glob("ch*.yaml")):
         for s in (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("sources") or []:
             srcs[s["id"]] = s
     return recs, srcs
