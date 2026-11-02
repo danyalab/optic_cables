@@ -29,6 +29,6 @@ Several chapter agents run at the same time. To avoid write conflicts:
 - Contested or uncertain boxes present both sides with sources.
 - Chinese term in parentheses at first use of each glossary term.
 - No em dashes (U+2014) anywhere.
-- Figures: matplotlib, Agg, SVG to `book/figs/chNN/`, transparent background, mid-gray axes, no pure black; captions say computed or redrawn.
+- Figures: matplotlib, Agg, reproducible SVG (`rcParams["svg.hashsalt"]` fixed, `savefig(..., metadata={"Date": None})`) to `book/figs/chNN/`, transparent background, mid-gray axes, no pure black; captions say computed or redrawn.
 - End with `## Problems` and `## Solutions` (answers from `book/calc/chNN/problems.py`).
 - Check: `make calc CH=NN`, `make build CH=NN`, `make lint` all pass.

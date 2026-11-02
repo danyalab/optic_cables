@@ -98,6 +98,7 @@ def setup_mpl():
     plt.rcParams.update({
         "figure.facecolor": "none",
         "axes.facecolor": "none",
+        "svg.hashsalt": "optic_cables",
         "savefig.facecolor": "none",
         "savefig.transparent": True,
         "axes.edgecolor": GRAY,
@@ -123,4 +124,4 @@ def setup_mpl():
 
 def savefig(fig, name):
     FIGDIR.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGDIR / f"{name}.svg", format="svg", bbox_inches="tight", transparent=True)
+    fig.savefig(FIGDIR / f"{name}.svg", format="svg", bbox_inches="tight", transparent=True, metadata={"Date": None})
