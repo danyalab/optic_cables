@@ -67,6 +67,11 @@ for tag, m in (("tp", tp), ("ta", ta)):
 # spans per fiber -> less ASE), N* grows
 assert ta.optimum_linear()[1] > tp.optimum_linear()[1]
 r.emit("ta_over_tp_pe", Pe_ta / Pe_tp, "", 3, ins)
+# fiber-pair count below which each fiber can be driven to its GN optimum (power not binding)
+for tag, m in (("tp", tp), ("ta", ta)):
+    knee = m.p / (m.P_opt * NCH / eta_EO + P_0)
+    r.emit(f"{tag}_knee", knee, "", 3, ins)
+    r.emit(f"{tag}_gsnr_max_db", cl.lin2db(m.P_opt / (1.5 * m.P_ase_ch)), "dB", 3, ins)
 
 # ---------------------------------------------------------------- 24 FP -> 48 core pairs
 # Doubling spatial channels at fixed electrical power: 2-core MCF in the same 24-FP cable.
@@ -95,6 +100,11 @@ for tag, m, Lk in (("tp", tp, L_tp), ("ta", ta, L_ta)):
     r.emit(f"{tag}_c48_fifo", c48_fifo / 1e12, "Tb/s", 3, ins + [FIFO])
     r.emit(f"{tag}_mcf_gain_pct", 100 * (c48_fifo / c24 - 1), "%", 2, ins + [FIFO])
     r.emit(f"{tag}_fifo_removal_pct", 100 * (c48_ideal / c48_fifo - 1), "%", 2, ins + [FIFO])
+    # ASSUMPTION: an integrated two-core MC-EDFA shares control and supervisory electronics
+    # between the two cores, so the overhead per core path is P_0/2, with no FIFOs.
+    mi = cable(Pe, Lk, P0=P_0 / 2)
+    r.emit(f"{tag}_c48_mcedfa", mi.capacity(48) / 1e12, "Tb/s", 3, ins)
+    r.emit(f"{tag}_mcedfa_gain_pct", 100 * (mi.capacity(48) / c24 - 1), "%", 2, ins)
     # crosstalk alone vs loss alone
     r.emit(f"{tag}_xt_only_pct", 100 * (1 - cap_xt(m, 48) / c48_ideal), "%", 2, ins + [FIFO])
 # Downie's comparison: 16 FP of 4-core MCF (64 cores per direction) at 7,000 km

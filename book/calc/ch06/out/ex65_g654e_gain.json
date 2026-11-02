@@ -1,0 +1,563 @@
+{
+  "a654": {
+    "value": 130.0,
+    "unit": "µm²",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou"
+    ]
+  },
+  "a652": {
+    "value": 80.0,
+    "unit": "µm²",
+    "digits": 2,
+    "inputs": [
+      "ch01.kerr.aeff_g652d_typ"
+    ]
+  },
+  "g652": {
+    "value": 1.499857137842869,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "g654": {
+    "value": 0.8699795040710196,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "d654": {
+    "value": 20.0,
+    "unit": "ps/(nm·km)",
+    "digits": 2,
+    "inputs": [
+      "ch01.cd.g654e_d1550_range"
+    ]
+  },
+  "d652": {
+    "value": 17.0,
+    "unit": "ps/(nm·km)",
+    "digits": 2,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "n2_ratio_db": {
+    "value": 0.25687507785341035,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "aeff_ratio_db": {
+    "value": 2.108533653148932,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ds_dloss": {
+    "value": 0.4800000000000005,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou"
+    ]
+  },
+  "ds_gain": {
+    "value": 2.0706581193291145,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ds_deta": {
+    "value": 5.244477591219708,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ds_dase": {
+    "value": 0.48374838338381937,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ds_dpopt": {
+    "value": 1.5869097359452957,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ds_reach_pct": {
+    "value": 61.088972700715246,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_dloss": {
+    "value": 1.5999999999999992,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.zte_g654e_vs_g652d_80km"
+    ]
+  },
+  "zte_gain": {
+    "value": 2.7274677833422487,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.zte_g654e_vs_g652d_80km",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_deta": {
+    "value": 4.9537936912887135,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.zte_g654e_vs_g652d_80km",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_dase": {
+    "value": 1.6143048293690176,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.zte_g654e_vs_g652d_80km",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_dpopt": {
+    "value": 1.1131629539732317,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.zte_g654e_vs_g652d_80km",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_reach_pct": {
+    "value": 87.39015841115064,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.att.zte_g654e_vs_g652d_80km",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "itu_dloss": {
+    "value": 5.599999999999998,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652d_max_1530_1565",
+      "ch01.att.g654e_max_1550"
+    ]
+  },
+  "itu_gain": {
+    "value": 5.134707314576116,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652d_max_1530_1565",
+      "ch01.att.g654e_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "itu_deta": {
+    "value": 4.185726602912828,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652d_max_1530_1565",
+      "ch01.att.g654e_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "itu_dase": {
+    "value": 5.60919767040776,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652d_max_1530_1565",
+      "ch01.att.g654e_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "itu_dpopt": {
+    "value": -0.47449035583164445,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652d_max_1530_1565",
+      "ch01.att.g654e_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "itu_reach_pct": {
+    "value": 226.19006662541318,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652d_max_1530_1565",
+      "ch01.att.g654e_max_1550",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "bd_gamma": {
+    "value": 4.7308174620046834,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "bd_disp": {
+    "value": 0.6368195628866073,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "bd_leff": {
+    "value": -0.12315943367158341,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ds_fixed_launch": {
+    "value": 0.48374838338381937,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_fixed_launch": {
+    "value": 1.6143048293690176,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "ct_claim": {
+    "value": 3.5,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.ctel_osnr_3p5db"
+    ]
+  },
+  "ct_dalpha": {
+    "value": 0.03642710642090874,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.g654e.ctel_osnr_3p5db"
+    ]
+  },
+  "ct_dloss": {
+    "value": 2.914168513672699,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.g654e.ctel_osnr_3p5db"
+    ]
+  },
+  "ct_gap": {
+    "value": 0.7725322166577513,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.g654e.ctel_osnr_3p5db"
+    ]
+  },
+  "ct_dalpha_fixed": {
+    "value": 0.04375,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.ctel_osnr_3p5db"
+    ]
+  },
+  "fom_lo": {
+    "value": 2.2,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.corning_fom_range"
+    ]
+  },
+  "fom_hi": {
+    "value": 3.2,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.corning_fom_range"
+    ]
+  },
+  "haz_db": {
+    "value": 0.8795517035512999,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.aston_raman_rin"
+    ]
+  },
+  "haz_pct": {
+    "value": 22.44897959183674,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.aston_raman_rin"
+    ]
+  },
+  "cor_pct": {
+    "value": 60.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.corning_fom_range"
+    ]
+  },
+  "cor_db": {
+    "value": 2.0411998265592484,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.corning_fom_range"
+    ]
+  },
+  "dow_db": {
+    "value": 1.903316981702915,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.downie_reach_55pct"
+    ]
+  },
+  "cu_db": {
+    "value": 2.632414347745814,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.g654e.cunicom_800g_1100km"
+    ]
+  },
+  "zte_gain_120": {
+    "value": 3.2201710413894236,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  },
+  "zte_gain_50": {
+    "value": 2.3985755907537243,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.yofc_ct_shanghai_guangzhou",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.cd.g654e_d1550_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_pscf",
+      "ch01.kerr.n2_kato1995_smf"
+    ]
+  }
+}

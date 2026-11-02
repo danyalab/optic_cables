@@ -1,0 +1,1102 @@
+{
+  "rs400": {
+    "value": 59.84375,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch04.coh.400zr_baud"
+    ]
+  },
+  "rs_ozr": {
+    "value": 60.138546798,
+    "unit": "GBd",
+    "digits": 4,
+    "inputs": [
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "rs800": {
+    "value": 118.2,
+    "unit": "GBd",
+    "digits": 4,
+    "inputs": [
+      "ch04.coh.800zr_baud"
+    ]
+  },
+  "rs800p": {
+    "value": 131.3,
+    "unit": "GBd",
+    "digits": 4,
+    "inputs": [
+      "ch04.coh.800zrplus_nokia_31w"
+    ]
+  },
+  "rs_lr": {
+    "value": 123.636,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch04.coh.800lr_baud"
+    ]
+  },
+  "rs1600": {
+    "value": 236.40625,
+    "unit": "GBd",
+    "digits": 4,
+    "inputs": [
+      "ch04.coh.1600zr_ia"
+    ]
+  },
+  "line400": {
+    "value": 478.75,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch04.coh.400zr_baud"
+    ]
+  },
+  "line800": {
+    "value": 945.6,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch04.coh.800zr_baud"
+    ]
+  },
+  "line_lr": {
+    "value": 989.088,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch04.coh.800lr_baud"
+    ]
+  },
+  "line1600": {
+    "value": 1891.25,
+    "unit": "Gb/s",
+    "digits": 6,
+    "inputs": [
+      "ch04.coh.1600zr_ia"
+    ]
+  },
+  "lr_client": {
+    "value": 850.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800lr_baud"
+    ]
+  },
+  "lr_rs_calc": {
+    "value": 123.63636363636364,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch04.coh.800lr_baud"
+    ]
+  },
+  "client_oh_pct": {
+    "value": 6.25,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800lr_baud"
+    ]
+  },
+  "ofec_oh_pct": {
+    "value": 15.315315315315315,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "ofec_rate": {
+    "value": 0.8671875,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "eb_400zr": {
+    "value": 48.75,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_module_power"
+    ]
+  },
+  "eb_400zr_t": {
+    "value": 37.5,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_15w_target"
+    ]
+  },
+  "eb_800zr": {
+    "value": 37.5,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_module_power"
+    ]
+  },
+  "eb_800zrp": {
+    "value": 38.75,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zrplus_nokia_31w"
+    ]
+  },
+  "eb_1600zr": {
+    "value": 25.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfpxd_40w_target"
+    ]
+  },
+  "p400_over_target": {
+    "value": 4.5,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.400zr_15w_target",
+      "ch04.coh.400zr_module_power"
+    ]
+  },
+  "p400_typ": {
+    "value": 17.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.400zr_module_power"
+    ]
+  },
+  "p800_typ": {
+    "value": 28.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800zr_module_power"
+    ]
+  },
+  "zr_nch": {
+    "value": 32.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "zr_df": {
+    "value": 150.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "zr_band": {
+    "value": 4.8,
+    "unit": "THz",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "zr_cap": {
+    "value": 25.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "zr_se": {
+    "value": 5.333333333333333,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "zr_rolloff_room": {
+    "value": 1.2690355329949239,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lr_o_margin": {
+    "value": 4.8,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1310",
+      "ch04.coh.800lr_loss_budget"
+    ]
+  },
+  "lr_c_margin": {
+    "value": 3.2,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch04.coh.800lr_loss_budget"
+    ]
+  },
+  "lr_o_fiber": {
+    "value": 3.2,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1310"
+    ]
+  },
+  "lr_c_fiber": {
+    "value": 1.7999999999999998,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "bref": {
+    "value": 12.5,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch01.osnr.bref_0p1nm_equals_12p5ghz"
+    ]
+  },
+  "snr800_req": {
+    "value": 17.2429253646282,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr"
+    ]
+  },
+  "snr400_req": {
+    "value": 19.198912130233207,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_baud",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "baud_ratio_db": {
+    "value": 2.95598676560501,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_baud",
+      "ch04.coh.800zr_baud"
+    ]
+  },
+  "ber800": {
+    "value": 0.02,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "ber400": {
+    "value": 0.0125,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_cfec"
+    ]
+  },
+  "snr800_th": {
+    "value": 12.710795955365327,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "snr400_th": {
+    "value": 13.549317146911958,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_cfec"
+    ]
+  },
+  "gap800": {
+    "value": 4.532129409262872,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.openzrplus_ofec"
+    ]
+  },
+  "gap400": {
+    "value": 5.649594983321249,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.400zr_cfec",
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "nf": {
+    "value": 5.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "gamma": {
+    "value": 1.3225091654628,
+    "unit": "1/(W·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47"
+    ]
+  },
+  "ba_max": {
+    "value": 20.0,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "ba_per_ch": {
+    "value": 4.948500216800939,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "alpha_dsfib": {
+    "value": 0.18,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "popt_dsfib_80": {
+    "value": 2.4643917656649035,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "ptot_dsfib_80": {
+    "value": 17.515891548863962,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "osnr_dsfib_80": {
+    "value": 39.30708084730594,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margin_dsfib_80": {
+    "value": 12.307080847305937,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lspan_dsfib_80": {
+    "value": 14.399999999999999,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "osnrcap_dsfib_80": {
+    "value": 39.30708084730594,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margincap_dsfib_80": {
+    "value": 12.307080847305937,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "popt_dsfib_120": {
+    "value": 4.7909610125133275,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "ptot_dsfib_120": {
+    "value": 19.842460795712388,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "osnr_dsfib_120": {
+    "value": 34.39300968648821,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margin_dsfib_120": {
+    "value": 7.393009686488207,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lspan_dsfib_120": {
+    "value": 21.599999999999998,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "osnrcap_dsfib_120": {
+    "value": 34.39300968648821,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margincap_dsfib_120": {
+    "value": 7.393009686488207,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "eta_dsfib_db": {
+    "value": 21.01093037666032,
+    "unit": "dB(1/W²)",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "pase_ref_dsfib_dbm": {
+    "value": -31.362961264531695,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmax_dsfib": {
+    "value": 181.40531397827522,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmaxcap_dsfib": {
+    "value": 170.03353332368627,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmax_loss_dsfib": {
+    "value": 32.65295651608954,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmaxcap_loss_dsfib": {
+    "value": 30.60603599826353,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmaxcap26_dsfib": {
+    "value": 175.93597313879303,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "alpha_itulink": {
+    "value": 0.275,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "popt_itulink_80": {
+    "value": 5.600732246410058,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "ptot_itulink_80": {
+    "value": 20.652232029609117,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "osnr_itulink_80": {
+    "value": 34.801943154307956,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margin_itulink_80": {
+    "value": 7.801943154307956,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lspan_itulink_80": {
+    "value": 22.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "osnrcap_itulink_80": {
+    "value": 34.70936101245848,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margincap_itulink_80": {
+    "value": 7.709361012458482,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "popt_itulink_120": {
+    "value": 9.253186269311401,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "ptot_itulink_120": {
+    "value": 24.304686052510462,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "osnr_itulink_120": {
+    "value": 27.446411571690795,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margin_itulink_120": {
+    "value": 0.4464115716907932,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lspan_itulink_120": {
+    "value": 33.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband"
+    ]
+  },
+  "osnrcap_itulink_120": {
+    "value": 24.793026540710983,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "margincap_itulink_120": {
+    "value": -2.2069734592890176,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "eta_itulink_db": {
+    "value": 19.03307797786158,
+    "unit": "dB(1/W²)",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "pase_ref_itulink_dbm": {
+    "value": -19.95413789293621,
+    "unit": "dBm",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmax_itulink": {
+    "value": 122.43348388464332,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmaxcap_itulink": {
+    "value": 111.70722976911047,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmax_loss_itulink": {
+    "value": 33.669208068276916,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmaxcap_loss_itulink": {
+    "value": 30.71948818650538,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "lmaxcap26_itulink": {
+    "value": 115.48215810935284,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.g652_link_typ_cband",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_pure_silica_gsup47",
+      "ch04.coh.800zr_baud",
+      "ch04.coh.800zr_osnr",
+      "ch04.coh.800zr_reach"
+    ]
+  },
+  "osnr58_itulink_120": {
+    "value": 24.948500216800937,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652_link_typ_cband",
+      "ch01.osnr.gsup39_58db_constant"
+    ]
+  }
+}

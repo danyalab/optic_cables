@@ -1,0 +1,212 @@
+{
+  "hw_rev": {
+    "value": 880.941,
+    "unit": "CNY bn",
+    "digits": 4,
+    "inputs": [
+      "ch10.sys.huawei_2025_revenue"
+    ]
+  },
+  "hw_ict_pct": {
+    "value": 42.569706711346164,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.huawei_2025_ict_infra",
+      "ch10.sys.huawei_2025_revenue"
+    ]
+  },
+  "hw_cn_pct": {
+    "value": 69.95349291269223,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.huawei_2025_china_revenue",
+      "ch10.sys.huawei_2025_revenue"
+    ]
+  },
+  "hw_am_pct": {
+    "value": 4.22094101648124,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.sys.huawei_2025_china_revenue",
+      "ch10.sys.huawei_2025_revenue"
+    ]
+  },
+  "hw_growth_pct": {
+    "value": 2.2,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.sys.huawei_2025_revenue"
+    ]
+  },
+  "zte_rev": {
+    "value": 133.8955,
+    "unit": "CNY bn",
+    "digits": 4,
+    "inputs": [
+      "ch10.sys.zte_2025_revenue"
+    ]
+  },
+  "zte_op_pct": {
+    "value": 46.94481890728217,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.zte_2025_operator",
+      "ch10.sys.zte_2025_revenue"
+    ]
+  },
+  "zte_growth_pct": {
+    "value": 10.38,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.sys.zte_2025_revenue"
+    ]
+  },
+  "zte_op_change_pct": {
+    "value": -10.62,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.sys.zte_2025_operator"
+    ]
+  },
+  "fh_rev": {
+    "value": 24.919,
+    "unit": "CNY bn",
+    "digits": 4,
+    "inputs": [
+      "ch10.sys.fiberhome_2025_revenue"
+    ]
+  },
+  "fh_sys_pct": {
+    "value": 74.8616316866648,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.fiberhome_2025_revenue",
+      "ch10.sys.fiberhome_2025_systems"
+    ]
+  },
+  "fh_os_pct": {
+    "value": 32.07704964083631,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.fiberhome_2025_overseas",
+      "ch10.sys.fiberhome_2025_revenue"
+    ]
+  },
+  "fh_change_pct": {
+    "value": -12.72,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.sys.fiberhome_2025_revenue"
+    ]
+  },
+  "ci_rev": {
+    "value": 4.769507,
+    "unit": "BUSD",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.ciena_fy25_revenue"
+    ]
+  },
+  "ci_opt": {
+    "value": 3.246239,
+    "unit": "BUSD",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.ciena_fy25_optical"
+    ]
+  },
+  "ci_opt_pct": {
+    "value": 68.06235948495306,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.ciena_fy25_optical",
+      "ch10.sys.ciena_fy25_revenue"
+    ]
+  },
+  "ci_opt_growth_pct": {
+    "value": 22.84433710757321,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.ciena_fy25_optical"
+    ]
+  },
+  "ci_cloud_pct": {
+    "value": 17.855094876682223,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.ciena_fy25_cloud_customer",
+      "ch10.sys.ciena_fy25_revenue"
+    ]
+  },
+  "ci_apac_pct": {
+    "value": 9.040515088876061,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.sys.ciena_fy25_apac",
+      "ch10.sys.ciena_fy25_revenue"
+    ]
+  },
+  "ci_am_pct": {
+    "value": 75.61383178596866,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.ciena_fy25_apac",
+      "ch10.sys.ciena_fy25_revenue"
+    ]
+  },
+  "nk_opt": {
+    "value": 3.019,
+    "unit": "BEUR",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.nokia_2025_optical"
+    ]
+  },
+  "nk_opt24": {
+    "value": 1.636,
+    "unit": "BEUR",
+    "digits": 3,
+    "inputs": [
+      "ch10.sys.nokia_2025_optical"
+    ]
+  },
+  "nk_growth_pct": {
+    "value": 84.53545232273838,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.sys.nokia_2025_optical"
+    ]
+  },
+  "nk_ccp_pct": {
+    "value": 14.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.sys.nokia_2025_optical"
+    ]
+  },
+  "nk_infinera": {
+    "value": 2.5,
+    "unit": "BEUR",
+    "digits": 2,
+    "inputs": [
+      "ch10.sys.nokia_infinera_close"
+    ]
+  }
+}

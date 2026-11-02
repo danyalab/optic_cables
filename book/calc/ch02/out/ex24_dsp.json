@@ -1,0 +1,374 @@
+{
+  "D": {
+    "value": 17.0,
+    "unit": "ps/(nm·km)",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "beta2": {
+    "value": 21.682619391414896,
+    "unit": "ps²/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "rs_gbd": {
+    "value": 64.0,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": []
+  },
+  "len_km": {
+    "value": 1000.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": []
+  },
+  "nss": {
+    "value": 2.0,
+    "unit": "samples/symbol",
+    "digits": 2,
+    "inputs": []
+  },
+  "dtau_ns": {
+    "value": 8.719098597203537,
+    "unit": "ns",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "dtau_sym": {
+    "value": 558.0223102210264,
+    "unit": "symbols",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "dl_ns_nm": {
+    "value": 17.0,
+    "unit": "ns/nm",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "ncd_2": {
+    "value": 2232.0892408841055,
+    "unit": "taps",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "ncd_15": {
+    "value": 1255.5501979973094,
+    "unit": "taps",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch02.dsp.fse_oversampling_min"
+    ]
+  },
+  "sav_fullband": {
+    "value": 3.6700352882126217,
+    "unit": "taps per 1000 ps/nm",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.savory_taps_per_ps_nm"
+    ]
+  },
+  "sav_ratio": {
+    "value": 0.5994492769772366,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.savory_taps_per_ps_nm"
+    ]
+  },
+  "sav_bw_rs": {
+    "value": 1.1988985539544732,
+    "unit": "R_s",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.savory_taps_per_ps_nm"
+    ]
+  },
+  "ncd_savory_scaled": {
+    "value": 1338.0242815966458,
+    "unit": "taps",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550",
+      "ch02.dsp.savory_taps_per_ps_nm"
+    ]
+  },
+  "nfft_opt": {
+    "value": 32768.0,
+    "unit": "points",
+    "digits": 5,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "fd_per_sample": {
+    "value": 17.169504846738278,
+    "unit": "mult/sample",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "td_per_sample": {
+    "value": 2233.0,
+    "unit": "mult/sample",
+    "digits": 4,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "fd_td_ratio": {
+    "value": 130.05616760253906,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "td_fd_cross_km": {
+    "value": 3.5,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "cd_per_sym": {
+    "value": 68.67801938695311,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "dgd_mean_ps": {
+    "value": 6.324555320336759,
+    "unit": "ps",
+    "digits": 3,
+    "inputs": [
+      "ch01.pmd.g652d_pmdq"
+    ]
+  },
+  "dgd3_sym": {
+    "value": 1.2143146215046576,
+    "unit": "symbols",
+    "digits": 3,
+    "inputs": [
+      "ch01.pmd.g652d_pmdq"
+    ]
+  },
+  "n_mimo": {
+    "value": 15.0,
+    "unit": "taps",
+    "digits": 2,
+    "inputs": []
+  },
+  "mimo_per_sym": {
+    "value": 60.0,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.td_fir_complexity"
+    ]
+  },
+  "mimo_upd_per_sym": {
+    "value": 60.0,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": []
+  },
+  "lw_4_mhz": {
+    "value": 26.24,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_4qam"
+    ]
+  },
+  "lw_4_phase_deg": {
+    "value": 2.908067581080424,
+    "unit": "°",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_4qam"
+    ]
+  },
+  "lw_16_mhz": {
+    "value": 8.96,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam"
+    ]
+  },
+  "lw_16_phase_deg": {
+    "value": 1.6993255389887332,
+    "unit": "°",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam"
+    ]
+  },
+  "lw_64_mhz": {
+    "value": 2.56,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "lw_64_phase_deg": {
+    "value": 0.9083277079272577,
+    "unit": "°",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "lw_256_mhz": {
+    "value": 0.512,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_256qam"
+    ]
+  },
+  "lw_256_phase_deg": {
+    "value": 0.40621650015438454,
+    "unit": "°",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_256qam"
+    ]
+  },
+  "lw_16_zr_mhz": {
+    "value": 8.378124999999999,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "lw_ratio_4_16": {
+    "value": 2.928571428571429,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch02.dsp.bps_lw_256qam",
+      "ch02.dsp.bps_lw_4qam",
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "lw_ratio_16_64": {
+    "value": 3.4999999999999996,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch02.dsp.bps_lw_256qam",
+      "ch02.dsp.bps_lw_4qam",
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "lw_ratio_64_256": {
+    "value": 5.000000000000001,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch02.dsp.bps_lw_256qam",
+      "ch02.dsp.bps_lw_4qam",
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "b_bps": {
+    "value": 32.0,
+    "unit": "test phases",
+    "digits": 2,
+    "inputs": [
+      "ch02.dsp.bps_test_phases"
+    ]
+  },
+  "cpr_per_sym": {
+    "value": 64.0,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_test_phases"
+    ]
+  },
+  "tot_per_sym": {
+    "value": 252.6780193869531,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": []
+  },
+  "tot_per_bit": {
+    "value": 31.58475242336914,
+    "unit": "mult/bit",
+    "digits": 3,
+    "inputs": []
+  },
+  "cd_share_pct": {
+    "value": 27.180052920146984,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "tot_rate_tmult": {
+    "value": 16.171393240765,
+    "unit": "×10¹² mult/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "dci_km": {
+    "value": 120.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": []
+  },
+  "dci_ncd": {
+    "value": 268.0,
+    "unit": "taps",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "dci_cd_per_sym": {
+    "value": 55.19595732734419,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "dci_tot_per_bit": {
+    "value": 29.899494665918024,
+    "unit": "mult/bit",
+    "digits": 3,
+    "inputs": []
+  },
+  "dci_cd_share_pct": {
+    "value": 23.075622992995434,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  }
+}

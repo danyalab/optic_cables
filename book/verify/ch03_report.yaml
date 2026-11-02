@@ -1,0 +1,1030 @@
+summary:
+  checked: 163
+  match: 131
+  mismatch: 10
+  partial: 22
+  unreachable: 0
+results:
+- id: ch03.las.henry_alpha_fit
+  status: MATCH
+  found_value: ''
+  found_locator: Henry, IEEE JQE 18(2) 259 (1982), Abstract (doi.org/ADS copies)
+  evidence: A value of \alpha \approx 5.4, needed to explain the observed linewidth, is close to the experimental values of a of 4.6 and 6.2.
+  action: 'none. Optional: kind is a fitted parameter (model_param), not ''measured''.'
+- id: ch03.las.henry_alpha_measured
+  status: MATCH
+  found_value: ''
+  found_locator: Henry, IEEE JQE 18(2) 259 (1982), Abstract (doi.org/ADS copies)
+  evidence: is close to the experimental values of a of 4.6 and 6.2.
+  action: none (the 'a' is Henry's alpha rendered by the abstract OCR)
+- id: ch03.las.henry_linewidth_1mw
+  status: MATCH
+  found_value: ''
+  found_locator: Henry, IEEE JQE 18(2) 259 (1982), Abstract (doi.org/ADS copies)
+  evidence: They found the linewidth to be inversely proportional to power and to have a value of 114 MHz at 1 mW per facet.
+  action: none
+- id: ch03.las.henry_excess_ratio
+  status: MATCH
+  found_value: ''
+  found_locator: Henry, IEEE JQE 18(2) 259 (1982), Abstract (doi.org/ADS copies)
+  evidence: This value is 30 times greater than can be explained by existing theories.
+  action: none
+- id: ch03.las.vcsel_alpha_range
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 4.4 after Eq. (68)
+  evidence: where αH is the linewidth enhancement factor that has also been determined for VCSELs [64] and typically takes values between − 2 and − 7.
+  action: none. Add DOI 10.1007/978-3-662-05263-1_3 (Springer 2003 chapter) to source record.
+- id: ch03.las.vcsel_residual_linewidth
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 4.4, Fig. 22 text
+  evidence: a residual linewidth of ∆ν0 = 11 MHz is observed for the extrapolation P → ∞
+  action: none
+- id: ch03.las.rin_shot_limit_1ma
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 4.3 after Eq. (65)
+  evidence: For a mean photocurrent h IPDi = 1 mA, the quantum noise limit is found at − 155 dB/Hz
+  action: none (2q/I = -154.9 dB/Hz checks)
+- id: ch03.las.vcsel_min_kfactor
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 4.2 after Eq. (55)
+  evidence: Smallest K-factors observed for VCSELs so far are in the 0.15 to 0.2 ns range [58], [59]
+  action: none
+- id: ch03.las.vcsel_mcef_2003
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 4.2 after Eq. (58)
+  evidence: MCEFs exceeding 14 GHz/√mA have already been reported [58]
+  action: none
+- id: ch03.las.vcsel_thermal_shift
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 3, thermal resistance discussion
+  evidence: As mentioned before, C2 ≈ 0.07 nm/K for short-wavelength VCSELs.
+  action: none
+- id: ch03.las.vcsel_ith_temp
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Sect. 3, Fig. 15 discussion
+  evidence: the threshold current varies between 300 and 500 µA, while the laser current required for 1 mW output power ranges be tween 1.5 and 1.85 mA.
+  action: none
+- id: ch03.mat.gaas_eg_0k
+  status: MATCH
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Sect. III.A
+  evidence: This is especially true of the fundamental energy gap with a value of 1.519 eV at 0 K.
+  action: none
+- id: ch03.mat.gaas_eg_300k_range
+  status: MATCH
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Table I
+  evidence: Eg G ~eV! 1.519 1.420–1.435 ~300 K!
+  action: none
+- id: ch03.mat.gaas_varshni_alpha
+  status: MATCH
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Sect. III.A and Table I
+  evidence: The analysis by Thurmond 88 indicated a50.5405 meV/K and b5204 K @in Eq. ~2.13!#.
+  action: none (Varshni gives 1.4225 eV at 300 K)
+- id: ch03.mat.inp_eg_0k
+  status: MATCH
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Table VI
+  evidence: Eg G ~eV! 1.4236 1.420–1.432
+  action: none
+- id: ch03.mat.inp_varshni_alpha
+  status: MATCH
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Table VI
+  evidence: a~G! ~meV/K! 0.363 0.51–1.06 b~G! ~K! 162 190–671
+  action: none for 0.363/162. The a,b Range columns duplicate Table I in the crawl; do not quote ranges.
+- id: ch03.mat.inp_substrate_role
+  status: PARTIAL
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Sect. III.F (not re-located)
+  evidence: InP section text retrieved discusses band gap and masses; substrate sentence not surfaced in this session.
+  action: Re-read Sect. III.F opening paragraph and confirm quote; qualitative fact is uncontroversial.
+- id: ch03.vcsel.chalmers_bw_record
+  status: PARTIAL
+  found_value: 30 GHz (2015 record; superseded)
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), Abstract and Fig. 2 text
+  evidence: Fig. 2 shows the measured modulation response for the 3.5 µm VCSEL, reaching 30 GHz at a bias current of 4.1 mA.
+  action: 'Value, unit, conditions correct. ''Record'' is superseded: 33.4 GHz 850 nm VCSEL (Yang, Cheng, Wu, JLT 42(1) 293, 2024). Reword as ''record in 2015''.'
+- id: ch03.vcsel.chalmers_bw_low_bias
+  status: MATCH
+  found_value: ''
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), Abstract
+  evidence: A record-high modulation bandwidth of 30 GHz is reached for a 3.5 µm oxide aperture VCSEL, with 25 GHz bandwidth already at a bias current of 1.8 mA.
+  action: none
+- id: ch03.vcsel.chalmers_dfactor
+  status: MATCH
+  found_value: ''
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), text below Fig. 2
+  evidence: the resonance frequency increases rapidly with bias current at a rate of 17.5 GHz/mA 1/2 (the D-factor), reaching a maximum value of 27 GHz
+  action: none
+- id: ch03.vcsel.chalmers_mcef
+  status: MATCH
+  found_value: ''
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), text below Fig. 2
+  evidence: the modulation bandwidth increases rapidly with current at a rate of 20.6 GHz/mA 1/2 (the modulation current efficiency factor, MCEF)
+  action: none
+- id: ch03.vcsel.chalmers_hdr_40g
+  status: MATCH
+  found_value: ''
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), BER section and Conclusion
+  evidence: the bias current had to be increased to 1.7 mA (17.7 kA/cm 2) to enable error-free transmission, resulting in a HDR of 73 fJ/bit.
+  action: none (record HDR claimed in source for 2015)
+- id: ch03.vcsel.chalmers_hdr_50g
+  status: MATCH
+  found_value: ''
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), BER section
+  evidence: the bias current had to be further increased to 2.5 mA (26.0 kA/cm 2) for sufficient VCSEL bandwidth, giving a HDR of 95 fJ/bit.
+  action: none
+- id: ch03.vcsel.photon_lifetime_opt
+  status: MATCH
+  found_value: ''
+  found_locator: Westbergh et al., IEEE JSTQE 17(6) 1603 (2011), Abstract
+  evidence: leading to an optimum photon lifetime close to 3 ps for this particular VCSEL design that enables a modulation bandwidth of 23 GHz
+  action: none
+- id: ch03.mmf.om3_emb
+  status: MATCH
+  found_value: ''
+  found_locator: Parsons et al., JLT (2019) doi 10.1109/JLT.2018.2878666, Sect. I
+  evidence: OM3 and OM4 fibers only specify EMB at 850 nm with values of ≥2000 MHz * km for OM3 fiber and ≥4700 MHz * km for OM4 fiber.
+  action: Source access is effectively open (intro read), not abstract_only. Note TIA-492AAAF (adopting IEC 60793-2-10:2019) replaces 492AAAC/D/E; same EMB values.
+- id: ch03.mmf.om4_emb
+  status: MATCH
+  found_value: ''
+  found_locator: Parsons et al., JLT (2019) doi 10.1109/JLT.2018.2878666, Sect. I
+  evidence: OM3 and OM4 fibers only specify EMB at 850 nm with values of ≥2000 MHz * km for OM3 fiber and ≥4700 MHz * km for OM4 fiber.
+  action: 'none (also IEEE Cl. 95 draft Table 95-13: 2000/4700 MHz.km)'
+- id: ch03.mmf.om5_emb_953
+  status: MATCH
+  found_value: ''
+  found_locator: Parsons et al., JLT (2019) doi 10.1109/JLT.2018.2878666, Sect. I
+  evidence: With OM5 fibers, EMB values of ≥4700 MHz * km at 850 nm and ≥2470 MHz * km at 953 nm are required.
+  action: none
+- id: ch03.mmf.om5_atten_953
+  status: MATCH
+  found_value: ''
+  found_locator: Kolesar, kolesar_3cd_01_0716 (IEEE 802.3cd, July 2016), slide 6
+  evidence: Cabled attenuation at 953 nm per 568.3-D, max (dB/km) | Not spec’d | 2.3 a
+  action: none
+- id: ch03.mmf.om5_cd_953
+  status: MATCH
+  found_value: ''
+  found_locator: Kolesar, kolesar_3cd_01_0716 (IEEE 802.3cd, July 2016), slide 6
+  evidence: Chromatic dispersion at 953 nm, max (|ps/nm*km|) | 65 | 61.7
+  action: none
+- id: ch03.mmf.sr4_reach_om3
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE Draft P802.3bm/D3.2 (3 Aug 2014), Clause 95, Table 95-5
+  evidence: 100GBASE-SR4 | 0.5 m to 70 m for OM3 0.5 m to 100 m for OM4
+  action: none. Draft text; also in Table 95-8/95-12. Cite final IEEE Std 802.3-2022 Cl. 95 when read.
+- id: ch03.mmf.sr4_reach_om4
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE Draft P802.3bm/D3.2 (3 Aug 2014), Clause 95, Table 95-5
+  evidence: 100GBASE-SR4 | 0.5 m to 70 m for OM3 0.5 m to 100 m for OM4
+  action: none
+- id: ch03.mmf.sr4_channel_il_om4
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE Draft P802.3bm/D3.2 (3 Aug 2014), Clause 95, Table 95-12 and footnote b
+  evidence: Channel insertion lossb (max) | 1.8 | 1.9 | dB ... include cable loss plus 1.5 dB allocated for connection and splice loss
+  action: none
+- id: ch03.mmf.sr4_cable_atten
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE Draft P802.3bm/D3.2 (3 Aug 2014), Clause 95, Table 95-13
+  evidence: Cabled optical fiber attenuation (max) | | 3.5 | dB/km
+  action: none
+- id: ch03.mmf.ieee8023cm_reach
+  status: MATCH
+  found_value: ''
+  found_locator: IEEE SA page / IEEE Xplore abstract, IEEE Std 802.3cm-2020
+  evidence: for 400 Gb/s operation on four pairs (400GBASE-SR4.2) and eight pairs (400GBASE-SR8) of multimode fiber, over reaches of at least 100 m.
+  action: 'Value fine. Supersession: IEEE SA lists 802.3cm-2020 as ''Superseded Standard'' (rolled into IEEE Std 802.3-2022); cite Cl. 138/150 of 802.3-2022.'
+- id: ch03.mmf.sr8_reach_om3
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC 400GBASE-SR8 page (2023), channel characteristics table
+  evidence: 'Operating range: | 0.5 to 70 | 0.5 to 100 | | m'
+  action: none. Note the same page misstates 53.125 GBd per lane (SR8 lanes are 26.5625 GBd); ledger conditions are correct.
+- id: ch03.mmf.sr8_reach_om4
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC 400GBASE-SR8 page (2023), channel characteristics table
+  evidence: 'Operating range: | 0.5 to 70 | 0.5 to 100 | | m'
+  action: none
+- id: ch03.mmf.sr4p2_reach_om3
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC 400GBASE-SR4.2 page (2023), channel characteristics table
+  evidence: 'Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150 | m'
+  action: Notes claim 'first IEEE MMF PMD to exploit OM5 953 nm EMB' is not in the source; remove or source it.
+- id: ch03.mmf.sr4p2_reach_om4
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC 400GBASE-SR4.2 page (2023), channel characteristics table
+  evidence: 'Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150 | m'
+  action: same note as sr4p2_reach_om3
+- id: ch03.mmf.sr4p2_reach_om5
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC 400GBASE-SR4.2 page (2023), channel characteristics table
+  evidence: 'Modal bandwidth at 953 nm (min): | not specified | | 2,470 ... Operating range: | 0.5 to 70 | 0.5 to 100 | 0.5 to 150'
+  action: same note as sr4p2_reach_om3
+- id: ch03.mmf.fotc_sr4_conflict_om3
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC multimode applications page, 'All Speeds' table
+  evidence: '| 100GBASE-SR4 | 8 | OM3 OM4/OM5 | 0.5 m to 100 m 0.5 m to 150 m | IEEE Std 802.3, Clause 95 |'
+  action: none. Conflict confirmed; same page's 8-fiber tab cites 'Clause 198' for SR4, further evidence of copy errors. Use IEEE 70/100 m.
+- id: ch03.mmf.fotc_sr4_conflict_om4
+  status: MATCH
+  found_value: ''
+  found_locator: TIA FOTC multimode applications page, 'All Speeds' table
+  evidence: '| 100GBASE-SR4 | 8 | OM3 OM4/OM5 | 0.5 m to 100 m 0.5 m to 150 m | IEEE Std 802.3, Clause 95 |'
+  action: none (see om3 entry)
+- id: ch03.mmf.swdm4_wavelengths_l0
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.1, Table 2-1
+  evidence: L0 | 850 nm | 844 to 858 nm | Tx0, Rx0
+  action: 'none. Source record: revision is Rev 2, dated March 8, 2017 (resolves gap 7).'
+- id: ch03.mmf.swdm4_wavelengths_l1
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.1, Table 2-1
+  evidence: L1 | 880 nm | 874 to 888 nm | Tx1, Rx1
+  action: 'none. Source record: revision is Rev 2, dated March 8, 2017 (resolves gap 7).'
+- id: ch03.mmf.swdm4_wavelengths_l2
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.1, Table 2-1
+  evidence: L2 | 910 nm | 904 to 918 nm | Tx2, Rx2
+  action: 'none. Source record: revision is Rev 2, dated March 8, 2017 (resolves gap 7).'
+- id: ch03.mmf.swdm4_wavelengths_l3
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.1, Table 2-1
+  evidence: L3 | 940 nm | 934 to 948 nm | Tx3, Rx3
+  action: 'none. Source record: revision is Rev 2, dated March 8, 2017 (resolves gap 7).'
+- id: ch03.mmf.swdm4_reach_om3
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.2, Table 2-2
+  evidence: OM3 | 2 to 75 m
+  action: none
+- id: ch03.mmf.swdm4_reach_om4
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.2, Table 2-2
+  evidence: OM4 | 2 to 100 m
+  action: none
+- id: ch03.mmf.swdm4_reach_om5
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Sect. 2.2, Table 2-2
+  evidence: OM5 | 2 to 150 m
+  action: none
+- id: ch03.mmf.swdm4_rms_width
+  status: MATCH
+  found_value: ''
+  found_locator: SWDM MSA Technical Specifications Rev 2 (8 Mar 2017), Ascent Optics copy, Table 2-3
+  evidence: RMS spectral width (max) [1] | | 0.59 | nm
+  action: none
+- id: ch03.dml.ntt_membrane_bw
+  status: PARTIAL
+  found_value: 108 GHz (superseded by >110 GHz, 2023)
+  found_locator: Yamaoka et al., Nat. Photon. 15, 28 (2021; online 19 Oct 2020), Abstract
+  evidence: By employing the photon–photon resonance at 95 GHz due to optical feedback from an integrated output waveguide, we achieve an f 3dB of 108 GHz
+  action: 'Value correct. ''Record'' superseded by same group: >110 GHz at 25 C (Yamaoka et al., JLT 2023, doi 10.1109/JLT.2023.3239614). Update kind/claim.'
+- id: ch03.dml.ntt_membrane_fr
+  status: MATCH
+  found_value: ''
+  found_locator: Yamaoka et al., Nat. Photon. 15, 28 (2021; online 19 Oct 2020), Abstract
+  evidence: We achieve a 42 GHz relaxation oscillation frequency by using a laser with a 50-μm-long active region.
+  action: none
+- id: ch03.dml.ntt_membrane_intrinsic
+  status: MATCH
+  found_value: ''
+  found_locator: Yamaoka et al., Nat. Photon. 15, 28 (2021; online 19 Oct 2020), Abstract
+  evidence: suppresses the damping effect while keeping the threshold carrier density low, resulting in a 60 GHz intrinsic 3 dB bandwidth (f 3dB).
+  action: none
+- id: ch03.dml.ntt_membrane_pam4
+  status: MATCH
+  found_value: ''
+  found_locator: Yamaoka et al., Nat. Photon. 15, 28 (2021; online 19 Oct 2020), Abstract
+  evidence: demonstrate 256 Gbit s −1 four-level pulse-amplitude modulations with a 475 fJ bit −1 energy cost of the direct-current electrical input.
+  action: none
+- id: ch03.eml.mitsubishi_225g_bw
+  status: MATCH
+  found_value: ''
+  found_locator: Uchiyama et al., JLT 42(4) 1225-1230 (2024), Abstract
+  evidence: Fabricated EMLs demonstrated a 3-dB down frequency bandwidth of 65 GHz, which is sufficient for 225 Gb/s PAM4 operation.
+  action: Add DOI 10.1109/JLT.2023.3303884 to source uchiyama_jlt_2024.
+- id: ch03.eml.broadcom_uncooled_bw
+  status: MISMATCH
+  found_value: tier should be C
+  found_locator: Bhasker et al., OFC 2023 M2D.3, Abstract only
+  evidence: We report uncooled (20-70C) hybrid CMBH-Ridge O-band CWDM EMLs with 60 GHz bandwidth (BW).
+  action: Value/conditions match, but abstract-only conference claim is tier C per PIPELINE.md; set tier C, confidence low, or read full paper (IEEE Xplore 10117040) to restore A.
+- id: ch03.eml.hhi_array_bw
+  status: MATCH
+  found_value: ''
+  found_locator: Theurer et al., OFC 2023 M2D.5 (POETICS full text), Sect. 3
+  evidence: An identical response with a 3dB bandwidth >42 GHz is achieved for all four EML in the array.
+  action: none
+- id: ch03.eml.mitsubishi_400g_lane
+  status: MISMATCH
+  found_value: tier should be C; tier-A replacement exists
+  found_locator: Uchiyama et al., OFC 2024 Tu2D.1, Abstract only
+  evidence: TDECQ less than 3.3 dB at 310 Gbps (155 Gbaud PAM4) and clear eye diagram at 400 Gbps (155 Gbaud PAM6) were achieved.
+  action: 'Value matches, but tier C (abstract-only conference). Replace with journal version JLT 2024 doi 10.1109/JLT.2024.3476997 (310 Gb/s PAM4, 85 GHz EML). ''record'' kind wrong: Ozolins OFC 2023 reports
+    197 GBd PAM4 EML.'
+- id: ch03.eam.qcse_field
+  status: MATCH
+  found_value: ''
+  found_locator: Miller et al., PRL 53, 2173 (1984), Abstract
+  evidence: the exciton resonances remain resolved even for shifts much larger than the zero-field binding energy and fields > 50 times the classical ionization field.
+  action: none
+- id: ch03.cw.gokhale_100mw_pce
+  status: MISMATCH
+  found_value: tier should be C
+  found_locator: Gokhale, Emanuel, Li, OFC 2023 paper M4C.1 (doi 10.1364/OFC.2023.M4C.1), Abstract only
+  evidence: We demonstrate record high 75°C power conversion efficiencies of 25% at 100mW (1mm cavity) and 20% at 200mW (2mm cavity)
+  action: 'Value matches. Abstract-only conference claim: tier C per PIPELINE.md. Add DOI and paper number to source; set tier C or read full text.'
+- id: ch03.cw.inoue_350mw
+  status: MISMATCH
+  found_value: tier should be C
+  found_locator: Inoue et al., OFC 2023 M4C.4, Abstract only
+  evidence: exhibits a power conversion efficiency of more than 25% with output power of 350 mW up to 45°C. This device also shows an averaged RIN of below -155 dB/Hz.
+  action: Value matches; tier should be C (abstract-only conference). Add paper number M4C.4.
+- id: ch03.cw.lam_100mw_75c
+  status: MATCH
+  found_value: ''
+  found_locator: Lam ... Loh, Opt. Eng. 62(4) 046102 (2023), Abstract (ADS)
+  evidence: with record power efficiency of 20% at optical power of more than 100 mW at 75°C and current of 400 mA.
+  action: none. Note the 'record' claim conflicts with Gokhale OFC 2023 (25% at 100 mW, 75 C); present both as claims.
+- id: ch03.itla.oif_power_20mw
+  status: MISMATCH
+  found_value: tier should be B; App-1 value unverified
+  found_locator: 'OIF-ITLA-MSA-01.3 (2015) Sect. 11.1.2, Table 11.1.2-1 (not reachable: oiforum.com blocked; Exa returns ToC only); corroboration for Application 2 from Furukawa Review No.123, Table 2'
+  evidence: 'Table 11.1.2-1: Optical Specifications (Application 1) ... 102'
+  action: 'Tier: OIF IAs are tier B per verifier brief/PIPELINE.md; change record and source tier A->B. Application-1 table values not re-read; Application-2 values (10 MHz, -135 dB/Hz, 40 dB, +/-2.5 GHz)
+    corroborated by Furukawa Review. Re-read p. 102 of the PDF.'
+- id: ch03.itla.oif_linewidth_app1
+  status: MISMATCH
+  found_value: tier should be B; App-1 value unverified
+  found_locator: 'OIF-ITLA-MSA-01.3 (2015) Sect. 11.1.2, Table 11.1.2-1 (not reachable: oiforum.com blocked; Exa returns ToC only); corroboration for Application 2 from Furukawa Review No.123, Table 2'
+  evidence: 線幅 | 10 MHz以下 | RIN | －135 dB/Hz
+  action: 'Tier: OIF IAs are tier B per verifier brief/PIPELINE.md; change record and source tier A->B. Application-1 table values not re-read; Application-2 values (10 MHz, -135 dB/Hz, 40 dB, +/-2.5 GHz)
+    corroborated by Furukawa Review. Re-read p. 102 of the PDF.'
+- id: ch03.itla.oif_rin_app1
+  status: MISMATCH
+  found_value: tier should be B; App-1 value unverified
+  found_locator: 'OIF-ITLA-MSA-01.3 (2015) Sect. 11.1.2, Table 11.1.2-1 (not reachable: oiforum.com blocked; Exa returns ToC only); corroboration for Application 2 from Furukawa Review No.123, Table 2'
+  evidence: 線幅 | 10 MHz以下 | RIN | －135 dB/Hz（10MHz ～ 10 GHz） | SMSR | 40 dB以上
+  action: 'Tier: OIF IAs are tier B per verifier brief/PIPELINE.md; change record and source tier A->B. Application-1 table values not re-read; Application-2 values (10 MHz, -135 dB/Hz, 40 dB, +/-2.5 GHz)
+    corroborated by Furukawa Review. Re-read p. 102 of the PDF.'
+- id: ch03.itla.oif_freq_error
+  status: MISMATCH
+  found_value: tier should be B; App-1 value unverified
+  found_locator: 'OIF-ITLA-MSA-01.3 (2015) Sect. 11.1.2, Table 11.1.2-1 (not reachable: oiforum.com blocked; Exa returns ToC only); corroboration for Application 2 from Furukawa Review No.123, Table 2'
+  evidence: 周波数誤差 | ITU_Grid±2.5 GHz
+  action: 'Tier: OIF IAs are tier B per verifier brief/PIPELINE.md; change record and source tier A->B. Application-1 table values not re-read; Application-2 values (10 MHz, -135 dB/Hz, 40 dB, +/-2.5 GHz)
+    corroborated by Furukawa Review. Re-read p. 102 of the PDF.'
+- id: ch03.itla.oif_smsr_app1
+  status: MISMATCH
+  found_value: tier should be B; App-1 value unverified
+  found_locator: 'OIF-ITLA-MSA-01.3 (2015) Sect. 11.1.2, Table 11.1.2-1 (not reachable: oiforum.com blocked; Exa returns ToC only); corroboration for Application 2 from Furukawa Review No.123, Table 2'
+  evidence: SMSR | 40 dB以上
+  action: 'Tier: OIF IAs are tier B per verifier brief/PIPELINE.md; change record and source tier A->B. Application-1 table values not re-read; Application-2 values (10 MHz, -135 dB/Hz, 40 dB, +/-2.5 GHz)
+    corroborated by Furukawa Review. Re-read p. 102 of the PDF.'
+- id: ch03.itla.furukawa_linewidth
+  status: PARTIAL
+  found_value: ''
+  found_locator: Terada et al., IEICE Trans. C J106-C(11) 382 (2023) (invited paper), あらまし (abstract) and Sect. 5
+  evidence: 光出力 > 17 dBm，フル C バンド動作，スペクトル線幅 < 100 kHz，波長精度 ±4 pm を得た
+  action: 'Value correct. Quote not verbatim: abstract reads ''光出力'' not ''レーザモジュール出力''. Replace quote.'
+- id: ch03.itla.furukawa_freq_accuracy
+  status: MATCH
+  found_value: ''
+  found_locator: Terada et al., IEICE Trans. C J106-C(11) 382 (2023) (invited paper), Sect. 5, Fig. 9
+  evidence: ケース温度 −5～80◦C の範囲で ±0.5 GHz 以内の周波数精度を得た
+  action: none
+- id: ch03.itla.sedi_linewidth
+  status: MATCH
+  found_value: ''
+  found_locator: SEDI Nano-ITLA product page, row STY6BUC
+  evidence: '| STY6BUC | 191.30 to 196.10 | 0.1 | 16.5 (≥17dBm optional) | 3 | 300 | OIF-ITLA-MSA-01.2 |'
+  action: none
+- id: ch03.si.soref_dn_electron_1550
+  status: MATCH
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, Eq. (1)
+  evidence: 'At λ0=1.55µm: Δn = Δne+Δnh= -[8.8x10 -22 ⋅ΔNe+ 8.5x10 -18 ⋅(ΔNh) 0.8 ] (1)'
+  action: none. Original Soref & Bennett 1987 is open (CC0) at zenodo.org/records/1232209 (scanned PDF, not text-extractable here); retrieval should read it and add the original equation number.
+- id: ch03.si.soref_dn_hole_1550
+  status: MATCH
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, Eq. (1)
+  evidence: Δn = Δne+Δnh= -[8.8x10 -22 ⋅ΔNe+ 8.5x10 -18 ⋅(ΔNh) 0.8 ] (1)
+  action: none (unit cm^2.4 is the implied unit for N in cm^-3; fine)
+- id: ch03.si.soref_worked_dn
+  status: MATCH
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, text after Eq. (4)
+  evidence: a change in the carrier density of the order of 5×10 17 cm -3 results in a change in refractive index, Δn, of -1.66×10 -3, at a wavelength of 1.55 µm
+  action: none (assumes equal electron and hole change; state that)
+- id: ch03.si.soref_abstract_1300
+  status: MATCH
+  found_value: ''
+  found_locator: Soref & Bennett, IEEE JQE 23(1) 123 (1987), Abstract (IEEE/ADS/zenodo)
+  evidence: a depletion or injection of 1018carriers/cm3produces an index change of\pm1.5 \times 10^{-3} at \lambda = 1.3 \mum.
+  action: 'Source access: open copy exists at zenodo 1232209; update access field.'
+- id: ch03.si.feng_vpil
+  status: MATCH
+  found_value: ''
+  found_locator: Feng et al., Opt. Express 18(8) 7994 (2010), Abstract
+  evidence: We demonstrate a very efficient high speed silicon modulator with an ultralow pi-phase-shift voltage-length product V(pi)L = 1.4V-cm.
+  action: 'none. IPR 2010 text: 1.4 V-cm inferred from 0.42pi at 6 V reverse bias on 1 mm; note extrapolation.'
+- id: ch03.si.feng_bw_1mm
+  status: MATCH
+  found_value: ''
+  found_locator: Feng et al., Opt. Express 18(8) 7994 (2010), Abstract
+  evidence: The 3dB bandwidth of a typical 1mm long device was measured to be more than 12GHz.
+  action: none
+- id: ch03.si.feng_doping_loss
+  status: MATCH
+  found_value: ''
+  found_locator: Feng et al., IPR 2010 IMB3 (ResearchGate full text), Sect. 2
+  evidence: This includes ~1.9dB excess loss due to th e doping (a 1m m long phase shifter at about 19dB/cm absorption loss)
+  action: none
+- id: ch03.si.witzens_depletion_bw
+  status: MATCH
+  found_value: ''
+  found_locator: Witzens, Proc. IEEE 106(12) 2158 (2018), Sect. I
+  evidence: electro-optic (E/O) cutoff frequencies in excess of 50 GHz have been reached with the more common carrier depletion modulators [2]
+  action: none
+- id: ch03.si.witzens_soh_vpil
+  status: MATCH
+  found_value: ''
+  found_locator: Witzens, Proc. IEEE 106(12) 2158 (2018), Sect. I
+  evidence: phase shifting efficiencies Vπl better than 0.5 V • mm [4] have been demonstrated with semiconductor organic hybrid (SOH) polymer integration.
+  action: none
+- id: ch03.si.reed_mzi_energy
+  status: MATCH
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint (Nature version), Performance metrics
+  evidence: one of the most compact MZI modulators reported so far has an energy requirement of 5 pJ bit –1 at 10 Gbit s –1 for a ~200-μm-long device
+  action: none
+- id: ch03.si.reed_ring_heater_budget
+  status: PARTIAL
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, resonant-modulator section (not re-located)
+  evidence: Not surfaced in this session's excerpts of the eprint.
+  action: Re-locate the 1 mW / 100 fJ/bit sentence; arithmetic (1 mW / 10 Gb/s = 100 fJ/bit) is correct.
+- id: ch03.ring.sun_q
+  status: MATCH
+  found_value: ''
+  found_locator: Sun et al., Nature 528, 534 (2015), Berkeley author PDF / eScholarship, main text
+  evidence: The modula tor has a loaded quality factor of approximately 10,000, and a voltage swing of only 1Vpp
+  action: none
+- id: ch03.ring.sun_er_il
+  status: MATCH
+  found_value: ''
+  found_locator: Sun et al., Nature 528, 534 (2015), Berkeley author PDF / eScholarship, main text
+  evidence: across the modulator achieves on:off ratios of 6dB at an insertion loss of 3dB for non-return-to-zero binary data.
+  action: none (C = 15 fF also confirmed)
+- id: ch03.ring.sun_heater_eff
+  status: PARTIAL
+  found_value: ~1.2 nm/mW (consistent)
+  found_locator: Sun et al., Nature 528, 534 (2015), Berkeley author PDF / eScholarship, Methods ('Transmitter and Receiver Circuit Specifications') and Extended Data Table 2
+  evidence: This system provides up to 3 nm of λ0 change ... 0 mW to 2.5 mW for the heater power, dependent on the tuned range
+  action: 3 nm over 0-2.5 mW gives ~1.2 nm/mW, consistent with 1.25 nm/mW. Table itself not seen; specs are summarized in Extended Data Table 2, not 'Table 1'. Fix locator and quote from the table.
+- id: ch03.ring.sun_lock_range
+  status: MATCH
+  found_value: ''
+  found_locator: Sun et al., Nature 528, 534 (2015), Berkeley author PDF / eScholarship, main text
+  evidence: This system provides up to 3 nm of λ0 change and can compensate temperature swings of 60 K
+  action: none
+- id: ch03.ring.sun_lock_time
+  status: MATCH
+  found_value: ''
+  found_locator: Sun et al., Nature 528, 534 (2015), Berkeley author PDF / eScholarship, main text
+  evidence: The controller achieves initial lock within 7 ms and has a tracking time constant of 13 µs after lock-on.
+  action: none
+- id: ch03.ring.timurdogan_energy
+  status: MATCH
+  found_value: ''
+  found_locator: Timurdogan et al., Nat. Commun. 5, 4008 (2014), Abstract
+  evidence: the first modulator to achieve simultaneous high-speed (25 Gb s −1), low-voltage (0.5 V PP) and efficient 0.9 fJ per bit error-free operation.
+  action: none
+- id: ch03.ring.timurdogan_eo_shift
+  status: MATCH
+  found_value: ''
+  found_locator: Timurdogan et al., Nat. Commun. 5, 4008 (2014), Abstract
+  evidence: obtained in a vertical p– n junction device that at 250 pm V −1 (30 GHz V −1) is up to 10 times larger than prior demonstrations.
+  action: none
+- id: ch03.ring.timurdogan_athermal
+  status: MATCH
+  found_value: ''
+  found_locator: Timurdogan et al., Nat. Commun. 5, 4008 (2014), Results and Conclusion
+  evidence: leads to a total energy consumption of 1.03 fJ per bit over a 7.5 °C temperature range.
+  action: none (tuning 0.24 + modulation 0.79 fJ/bit confirmed)
+- id: ch03.ring.bogaerts_ng
+  status: MATCH
+  found_value: ''
+  found_locator: Bogaerts et al., LPR 6(1) 47 (2012), Sect. 3.3.2, Fig. 13 caption
+  evidence: We see the FSR 1 L behavior from formula (9) corresponding to an ng of 4.30.
+  action: Value 4.30 confirmed; replace garbled quote ('ng 430') with Fig. 13 caption text.
+- id: ch03.tfln.wang_vpi_20mm
+  status: MATCH
+  found_value: ''
+  found_locator: Wang et al., Nature 562, 101 (2018), Extended Data Fig. 1 caption
+  evidence: showing half-wave voltages of 1.4 V, 2.3 V and 4.4 V, respectively. The inset of a shows ... an extinction ratio of 30 dB.
+  action: none
+- id: ch03.tfln.wang_bw_5mm
+  status: PARTIAL
+  found_value: 100 GHz (preprint)
+  found_locator: Wang et al. author preprint (15 Apr 2018), text before Fig. 4; Nature VoR body not reachable
+  evidence: By reducing the device lengths to 10 mm and 5 mm, we further expand the 3dB electro-optic bandwidths to 80 GHz and 100 GHz
+  action: Value read from preprint only (tier B). Confirm in Nature Fig. 4 before using as tier A. Not a current record (>110 GHz TFLN in ledger itself).
+- id: ch03.tfln.wang_loss
+  status: MATCH
+  found_value: ''
+  found_locator: Wang et al., Nature 562, 101 (2018), Abstract
+  evidence: support data rates up to 210 gigabits per second and show an on-chip optical loss of less than 0.5 decibels.
+  action: none
+- id: ch03.tfln.wang_rate
+  status: MATCH
+  found_value: ''
+  found_locator: Wang et al., Nature 562, 101 (2018), Abstract; preprint for 8-ASK
+  evidence: In the case of 8-ASK (3 bits per symbol), the modulator transmits a total data rate of 210 Gbit/s.
+  action: none (BER 1.5e-2 from preprint)
+- id: ch03.tfln.legacy_ln
+  status: PARTIAL
+  found_value: ''
+  found_locator: Wang et al. preprint, text before Fig. 2
+  evidence: the voltage-bandwidth performance of these modulators is typically limited to ∼ 3.5 V and 35 GHz
+  action: 'Quote verbatim, but from preprint: tier B unless found in Nature VoR.'
+- id: ch03.tfln.valdez_110g
+  status: MATCH
+  found_value: ''
+  found_locator: Valdez et al., Sci. Rep. 12 (2022), Abstract
+  evidence: which can handle high optical power of 110 mW, while having 3-dB bandwidth greater than 110 GHz at 1550 nm.
+  action: none
+- id: ch03.tfln.valdez_vpil
+  status: MATCH
+  found_value: ''
+  found_locator: Valdez et al., Sci. Rep. 12 (2022), Abstract
+  evidence: The MZM has a VπL product of 3.1 V.cm and an on-chip optical insertion loss of 1.8 dB.
+  action: none
+- id: ch03.tfln.yang_110g
+  status: MATCH
+  found_value: ''
+  found_locator: Fan Yang et al., Chin. Opt. Lett. 20(2) 022502 (2022), doi 10.3788/COL202220.022502, Abstract
+  evidence: we experimentally demonstrate a thin film LN Mach-Zehnder modulator with a 3 dB bandwidth exceeding 110 GHz
+  action: Add DOI and authors to source yang_col_2022.
+- id: ch03.tfln.yang_vpil
+  status: MATCH
+  found_value: ''
+  found_locator: Fan Yang et al., Chin. Opt. Lett. 20(2) 022502 (2022), doi 10.3788/COL202220.022502, Abstract
+  evidence: The fabricated modulator also exhibits a comparable low half-wave voltage-length product of ∼2.37 V • cm
+  action: none (4.74 V on 5 mm device)
+- id: ch03.tfln.weigel_106g
+  status: MATCH
+  found_value: ''
+  found_locator: Weigel et al., Opt. Express 26(18) 23728 (2018), doi 10.1364/OE.26.023728, Abstract
+  evidence: This hybrid Si-LN MZM achieves beyond 106 GHz 3-dB electrical modulation bandwidth
+  action: Add DOI to source.
+- id: ch03.inp.ogiso_67g
+  status: MATCH
+  found_value: ''
+  found_locator: Ogiso et al., JLT 35(8) 1450 (2017), Abstract
+  evidence: The modulator also exhibits a static extinction ratio of over 24 dB with a Vπ of less than 1.5 V for the entire C-band.
+  action: none; note 67 GHz was the instrument limit (NTT Tech. Rev.).
+- id: ch03.inp.ogiso_80g
+  status: MATCH
+  found_value: ''
+  found_locator: Ogiso et al., JLT 38(2) 249 (2020), doi 10.1109/JLT.2019.2924671, Abstract
+  evidence: The 3-dB EO bandwidth of the 1.5-V Vπ modulator reaches 80 GHz.
+  action: Add DOI to source ogiso_jlt_2020.
+- id: ch03.inp.fiber_to_fiber_loss
+  status: MATCH
+  found_value: ''
+  found_locator: Ozaki, Ogiso, Nakano, NTT Tech. Rev. 16(4) (2018), Sect. 3.1
+  evidence: The fiber-to-fiber optical insertion loss at peak transmission was less than 9 dB, which includes the coupling loss of lensed fibers (~3.5 dB/facet).
+  action: none
+- id: ch03.bto.abel_r42
+  status: MATCH
+  found_value: ''
+  found_locator: Abel et al., Nat. Mater. 18, 42 (2019; online Nov 2018), Abstract
+  evidence: We verify the Pockels effect to be the physical origin of the response, with r 42 = 923 pm V −1
+  action: none
+- id: ch03.pd.lischke_265g
+  status: MATCH
+  found_value: ''
+  found_locator: Lischke et al., Nat. Photon. 15, 925 (2021), Abstract
+  evidence: Here we demonstrate waveguide-coupled germanium photodiodes with optoelectrical 3-dB bandwidths of 265 GHz and 240 GHz at a photocurrent of 1 mA.
+  action: none
+- id: ch03.pd.lischke_responsivity
+  status: MATCH
+  found_value: ''
+  found_locator: Lischke et al., Nat. Photon. 15, 925 (2021), Abstract and Table 1
+  evidence: Our photodetectors show internal responsivities of 0.3 A W −1 (265 GHz) and 0.45 A W −1 (240 GHz) at a wavelength of 1,550 nm.
+  action: none (external 0.12/0.2 A/W, GC ~3.9 dB confirmed)
+- id: ch03.pd.lischke_bep
+  status: MATCH
+  found_value: ''
+  found_locator: Lischke et al., Nat. Photon. 15, 925 (2021), Abstract
+  evidence: The internal bandwidth–efficiency product of the latter device is 86 GHz.
+  action: none
+- id: ch03.pd.lischke_dark
+  status: MATCH
+  found_value: ''
+  found_locator: Lischke et al., Nat. Photon. 15, 925 (2021), Abstract
+  evidence: Low dark currents of 100–200 nA are obtained from these ultra-fast photodetectors.
+  action: none
+- id: ch03.pd.imec_responsivity_1550
+  status: MATCH
+  found_value: ''
+  found_locator: Chen et al., OFC 2016 Tu2D.6, Abstract and Sect. 3
+  evidence: The dark current is below 4 nA and the responsivity is 0.74 A/W at 1550 nm and 0.93 A/W at 1310 nm.
+  action: none; journal version available (see tier_a_replacements).
+- id: ch03.pd.imec_bw
+  status: MATCH
+  found_value: ''
+  found_locator: Chen et al., OFC 2016 Tu2D.6, Sect. 1
+  evidence: the opto-electrical 3-dB bandwidth at -1 V is enhanced to over 50 GHz and 44 GHz at 1550 nm and 1310 nm, respectively.
+  action: none (50 GHz = VNA limit; 6.8 fF confirmed)
+- id: ch03.apd.kang_gbp
+  status: MATCH
+  found_value: ''
+  found_locator: Kang et al., Nat. Photon. 3, 59 (2009), Abstract
+  evidence: we report a monolithically grown germanium/silicon avalanche photodetector with a gain–bandwidth product of 340 GHz, a k eff of 0.09
+  action: Value fine. 'Record' only as scoped by source (at 1,300 nm, 2009); a waveguide Ge/Si APD with 432 GHz GBP at 1510 nm was later reported (Sandia, OSTI 1326061).
+- id: ch03.apd.kang_keff
+  status: MATCH
+  found_value: ''
+  found_locator: Kang et al., Nat. Photon. 3, 59 (2009), Abstract
+  evidence: a gain–bandwidth product of 340 GHz, a k eff of 0.09 and a sensitivity of −28 dB m at 10 Gb s −1.
+  action: none
+- id: ch03.apd.kang_sensitivity
+  status: MATCH
+  found_value: ''
+  found_locator: Kang et al., Nat. Photon. 3, 59 (2009), Abstract
+  evidence: a k eff of 0.09 and a sensitivity of −28 dB m at 10 Gb s −1.
+  action: none
+- id: ch03.ge.direct_gap
+  status: MATCH
+  found_value: ''
+  found_locator: Liu, Michel, Kimerling, IEEE Photonics Soc. Annual Mtg 2010 pp. 325-326 (MIT DSpace), Sect. 2
+  evidence: The direct gap of 0.8 eV corresponds to a wavelength of 1550 nm, the most technically important wavelength in optical communications.
+  action: 'none (Fig. 1: 0.800 / 0.664 eV, 136 meV confirmed)'
+- id: ch03.ge.tensile_strain
+  status: MATCH
+  found_value: ''
+  found_locator: Liu, Michel, Kimerling, IEEE Photonics Soc. Annual Mtg 2010 pp. 325-326 (MIT DSpace), Sect. 2
+  evidence: A thermally induced tensile strain of 0.2-0.3% can be incorporated into epitaxial Ge-on-Si
+  action: none
+- id: ch03.tia.patel_noise
+  status: MATCH
+  found_value: ''
+  found_locator: Patel, Sharif-Bakhtiar, Chan Carusone, IEEE JSSC (2023), Abstract and Eq. (6)
+  evidence: It achieves 63-dB gain, 32-GHz BW, and an average input-referred current noise density of 16.9 pA/√Hz while operating at 0.9-V supply
+  action: none (3.0 uA rms / sqrt(32 GHz) confirmed)
+- id: ch03.tia.declercq_noise
+  status: MATCH
+  found_value: ''
+  found_locator: Declercq et al., JLT 43(9) 4139 (2025), Abstract
+  evidence: The input-referred noise is measured at 18.8 pA/√Hz.
+  action: Add volume/pages 43(9) 4139 to source. Note TIA alone >67 GHz; 64 GHz is with Ge PD.
+- id: ch03.cpl.gc_record
+  status: MATCH
+  found_value: ''
+  found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Sect. 4.C
+  evidence: made it possible to ex perimentally demonstrate a CE of 87% (−0.62 dB), which, to the best of our knowledge, constitutes the current record value for SOI 1D-GCs [63].
+  action: 'Value correct; ''record'' is as of 2019: say so, and check post-2019 literature before calling it current.'
+- id: ch03.cpl.gc_double_etch
+  status: PARTIAL
+  found_value: ''
+  found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Table 1 (not re-read)
+  evidence: Table 1 row not surfaced in this session.
+  action: Re-read Table 1 row [78] in the PDF; reconstructed row unverified.
+- id: ch03.cpl.ec_sion
+  status: MATCH
+  found_value: ''
+  found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Sect. 3.A
+  evidence: This approach resulted in a measured CE of 89.1% (−0.5 dB) (for a 4.3 μm fiber MFD) and a 350 nm increase in band width
+  action: 'Value fine. Not the best EC in the review: SiOx SSC reached 94.4% (-0.25 dB) with 3 um MFD lensed fiber [28]; record that if ''edge coupler record'' is needed.'
+- id: ch03.cpl.ec_misalign
+  status: PARTIAL
+  found_value: ''
+  found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Sect. 3.A (not re-located)
+  evidence: Sentence not surfaced in this session.
+  action: Re-locate quote in Sect. 3.A.
+- id: ch03.cpl.large_ssc_tol
+  status: PARTIAL
+  found_value: ''
+  found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Sect. 7 (not re-located)
+  evidence: Sentence not surfaced in this session.
+  action: Re-locate quote in Conclusions.
+- id: ch03.het.komljenovic_claim
+  status: MATCH
+  found_value: ''
+  found_locator: Komljenovic et al., JLT 34(1) 20 (2016), Abstract
+  evidence: Heterogeneous silicon photonics has recently demonstrated performance that significantly outperforms native III/V components.
+  action: none
+- id: ch03.rel.gr468_issue
+  status: MISMATCH
+  found_value: tier should be B
+  found_locator: Telcordia/Ericsson catalog page for GR-468
+  evidence: Document Number GR-468 Issue Number 02 Issue Date Sep 2004 Replaces TR-NWT-000468 Issue01
+  action: 'Value/quote match. Tier: Telcordia GR is an industry generic requirement, not a ratified standards-body document; set tier B (record and source).'
+- id: ch03.rel.damp_heat
+  status: MATCH
+  found_value: ''
+  found_locator: OZ Optics TRE0006 (20 Nov 2014), Table 2, test 6
+  evidence: 6. Damp Heat Operation | 85 °C / 85% RH, 1000 hours | GR-468-CORE, 3.3.2.3 [2]
+  action: none (Agiltron 2021 also lists 85C/85%RH 1000 h)
+- id: ch03.rel.temp_cycling
+  status: MATCH
+  found_value: ''
+  found_locator: Agiltron SWLD GR-468 qualification report (2021-03-16), Sect. 4 table
+  evidence: 'For un-control Environment: -40°C to 85°C 500 cycles for pass/fail, 1,000 cycles for information'
+  action: none
+- id: ch03.rel.accel_aging
+  status: MATCH
+  found_value: ''
+  found_locator: Agiltron SWLD GR-468 qualification report (2021-03-16), Sect. 4 table
+  evidence: 'For un-control Environment: Ts/Tp=25°C/85°C, rated power, 2000hours min., 5000'
+  action: none
+- id: ch03.rel.mech_shock
+  status: MATCH
+  found_value: ''
+  found_locator: Agiltron SWLD GR-468 qualification report (2021-03-16), Sect. 4 table and Sect. 5
+  evidence: 5 times/axis with TEC 500g, 1.0ms; w/o TEC1,500g, 0.5ms
+  action: 'none (Sect. 5: 5 shocks per direction, 6 directions)'
+- id: ch03.rel.gr468_default_ea
+  status: MATCH
+  found_value: ''
+  found_locator: VI Systems V25-850 reliability report (short version), random failures section
+  evidence: 'the recommended conservative default values according to Telcordia GR-468–Core have been used: AF = (Jstress/Juse) 2 exp[(0.35eV)/kB*(1/Tuse – 1/Tstress)]'
+  action: none
+- id: ch03.rel.vcsel_wearout_ea
+  status: MATCH
+  found_value: ''
+  found_locator: VI Systems V25-850 reliability report (short version), wear-out section
+  evidence: for the power number of current acceleration N=8 and for the thermal activation energy EA=1.3eV.
+  action: none (literature 0.7 eV, N=2 below 10 kA/cm2 confirmed)
+- id: ch03.rel.vcsel_fit_lab
+  status: MATCH
+  found_value: ''
+  found_locator: VI Systems V25-850 reliability report (short version), random failures section
+  evidence: Given a confidence level of 60%, we can derive an upper limit of the random FIT rate of 189.
+  action: none (4.8 M device-hours, 45 C, 5 mA confirmed)
+- id: ch03.rel.vcsel_fit_field
+  status: MATCH
+  found_value: ''
+  found_locator: Murty, murty_3dh_01a_220713 (IEEE 802.3dh, Jul 2022), slide 'Failure Rate'
+  evidence: 'Field experience: Over 100M 850nm 25GBd VCSEL channels deployed for Data Centers Field experience < 1 DPPM (channel) < 1 FIT (channel)'
+  action: none
+- id: ch03.rel.vcsel_fit_105c
+  status: MATCH
+  found_value: ''
+  found_locator: Hoser, Hoser_3dh_220824 (IEEE 802.3dh ad hoc, Aug 2022), slide 5
+  evidence: < 1 FIT at 40°C and <7 FIT at 105°C substrate T
+  action: 'none; add condition: no current acceleration (n=0), Ea 0.35 eV, ~0.3 B device-hours.'
+- id: ch03.eq.rate_photon
+  status: MATCH
+  found_value: ''
+  found_locator: Ahmed & El-Lafi, Pramana 71(1) 99 (2008), Eq. (1)
+  evidence: dS dt = (G − Gth)S + C τr N, (1)
+  action: none
+- id: ch03.eq.rate_carrier
+  status: MATCH
+  found_value: ''
+  found_locator: Ahmed & El-Lafi, Pramana 71(1) 99 (2008), Eq. (2) with Eqs. (3)-(4)
+  evidence: dN dt = 1 e I(t) − AS − N τe ... G = A − BS (3) ... A = aξ V (N − Ng), (4)
+  action: none
+- id: ch03.eq.threshold_gain
+  status: PARTIAL
+  found_value: ''
+  found_locator: Ahmed & El-Lafi, Pramana 71(1) 99 (2008), Eq. (7) (not surfaced)
+  evidence: Eq. (7) not surfaced in this session's excerpt.
+  action: Unverified; as flagged, use textbook form Gamma g_th = alpha_i + (1/2L) ln(1/R1R2) (with v_g for rate form) after reading Coldren.
+- id: ch03.eq.bias_photon_number
+  status: PARTIAL
+  found_value: ''
+  found_locator: Ahmed & El-Lafi, Pramana 71(1) 99 (2008), Eq. (20) (garbled in excerpt)
+  evidence: Sb ... Ib ... which can be approximated above threshold in terms of the threshold current Ith =
+  action: Form plausible (S_b = (I_b - I_th)/(e G_th) with G_th in 1/s) but not read cleanly; re-check Eq. (20).
+- id: ch03.eq.im_response_ulm
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (48)
+  evidence: M(ν) = ... 1 1 + i2πντs A 4π 2(ν 2 r − ν 2) + i2πγν (48)
+  action: none
+- id: ch03.eq.resonance_freq
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (51)
+  evidence: νr = 1 2πs A Vp τpµ 1 + ε τsp,wvgrΓra¯¶≈ 1 2πs A Vp τp , (51)
+  action: none; bracket placement as in ledger is consistent with the extraction.
+- id: ch03.eq.damping_kfactor
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (53)
+  evidence: γ = Kν 2 r + 1 χτsp,w (53)
+  action: none
+- id: ch03.eq.kfactor
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (54)
+  evidence: K = 4π 2µ τp + ε vgrΓra/χ ¯ ¶ . (54)
+  action: none; epsilon/(v Gamma a/chi) = epsilon*chi/(v Gamma a).
+- id: ch03.eq.max_bandwidth_k
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (55)
+  evidence: νmax =√2 2π K , (55) indicating the intrinsic modulation limit of the laser without any parasitic effects.
+  action: none; 2*sqrt(2)*pi/K checks (K=0.3 ns gives 29.6 GHz).
+- id: ch03.eq.fr_current
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eqs. (57)-(58)
+  evidence: one would expect a relation MCEF ≈p 1 + √2 Mr ≈ 1.55 Mr which is usually not observed in practice
+  action: none
+- id: ch03.eq.rin_quantum_limit
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (65)
+  evidence: RINQ = 2q h IPDi = 2¯hω ηPDh Pi (65)
+  action: none
+- id: ch03.eq.rin_spectrum
+  status: PARTIAL
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (61) (not surfaced)
+  evidence: Eq. (61) not surfaced; only Eq. (60) RIN definition seen.
+  action: Prefactor layout unverified; check PDF.
+- id: ch03.eq.linewidth_henry
+  status: MATCH
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (68); Henry 1982 Abstract
+  evidence: The linewidth enhancement is shown to be 1 + \alpha^{2}, where \alpha = \Delta n'/\Delta n".
+  action: none
+- id: ch03.eq.henry_alpha_def
+  status: MATCH
+  found_value: ''
+  found_locator: Henry, IEEE JQE 18(2) 259 (1982), Abstract (doi.org/ADS copies)
+  evidence: The linewidth enhancement is shown to be 1 + \alpha^{2}, where \alpha = \Delta n'/\Delta n".
+  action: none
+- id: ch03.eq.varshni
+  status: MATCH
+  found_value: ''
+  found_locator: Vurgaftman, Meyer, Ram-Mohan, JAP 89, 5815 (2001), Sect. II, Eq. (2.13)
+  evidence: Eg~T!5Eg~T50!2 aT 2 T1b , ~2.13! where a and b are adjustable ~Varshni! parameters.
+  action: Form confirmed (crawl renders = as 5, - as 2, + as 1).
+- id: ch03.eq.hdr
+  status: MATCH
+  found_value: ''
+  found_locator: Haglund et al., Electron. Lett. 51(14) 1096 (2015), Introduction
+  evidence: It is calculated as HDR = (Pel–Popt)/ BR, where Pel is the electrical DC power supplied to the VCSEL
+  action: none
+- id: ch03.eq.mzm_field
+  status: PARTIAL
+  found_value: ''
+  found_locator: Witzens Proc. IEEE 2018 (equation text not reachable)
+  evidence: Equations (4)-(6) not surfaced; only Sect. I text retrieved.
+  action: Formula is the standard lossless 50/50 MZM/IQ relation and is dimensionally and factor-wise correct; confirm equation numbers in the PDF.
+- id: ch03.eq.mzm_power
+  status: PARTIAL
+  found_value: ''
+  found_locator: Witzens Proc. IEEE 2018 (equation text not reachable)
+  evidence: Equations (4)-(6) not surfaced; only Sect. I text retrieved.
+  action: Formula is the standard lossless 50/50 MZM/IQ relation and is dimensionally and factor-wise correct; confirm equation numbers in the PDF.
+- id: ch03.eq.iq_field
+  status: PARTIAL
+  found_value: ''
+  found_locator: Witzens Proc. IEEE 2018 (equation text not reachable)
+  evidence: Equations (4)-(6) not surfaced; only Sect. I text retrieved.
+  action: Formula is the standard lossless 50/50 MZM/IQ relation and is dimensionally and factor-wise correct; confirm equation numbers in the PDF.
+- id: ch03.eq.soref_dn_1550
+  status: MATCH
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, Eq. (1)
+  evidence: Δn = Δne+Δnh= -[8.8x10 -22 ⋅ΔNe+ 8.5x10 -18 ⋅(ΔNh) 0.8 ] (1)
+  action: none; 1.3 um coefficients 6.2e-22/6.0e-18 (Eq. 3) also confirmed.
+- id: ch03.eq.soref_dalpha_1550
+  status: MATCH
+  found_value: ''
+  found_locator: Reed et al., Nat. Photon. 4, 518 (2010), Southampton eprint, Eq. (2)
+  evidence: Δα = Δαe+Δαh = 8.5x10 -18 ⋅ΔNe + 6.0x10 -18 ⋅ΔNh (2)
+  action: none
+- id: ch03.eq.ring_allpass
+  status: MATCH
+  found_value: ''
+  found_locator: Bogaerts et al., LPR 6(1) 47 (2012), Eq. (2)
+  evidence: Tn = a2 − 2racosφ + r2 / 1 − 2arcosφ + (ra)2 (2)
+  action: none (a^2 = exp(-alpha L) confirmed)
+- id: ch03.eq.ring_resonance
+  status: MATCH
+  found_value: ''
+  found_locator: Bogaerts et al., LPR 6(1) 47 (2012), Eq. (3)
+  evidence: λres neffL m m 1 2 3 (3)
+  action: none
+- id: ch03.eq.ring_fsr
+  status: MATCH
+  found_value: ''
+  found_locator: Bogaerts et al., LPR 6(1) 47 (2012), Eq. (9)
+  evidence: FSR λ 2 ngL (9) ... Note that in both FWHM and FSR we find the group index in the denominator
+  action: none
+- id: ch03.eq.ring_q
+  status: PARTIAL
+  found_value: ''
+  found_locator: Bogaerts et al., LPR 6(1) 47 (2012), Eq. (7) FWHM seen; Eq. (20) not surfaced
+  evidence: FWHM 1 ra λ 2 res πngL ra (7)
+  action: Q = lambda/FWHM with Eq. (7) (sqrt(ra) in denominator of FWHM) gives the ledger form; confirm Eq. (20) number.
+- id: ch03.eq.ring_shift
+  status: PARTIAL
+  found_value: ''
+  found_locator: Bogaerts et al., LPR 6(1) 47 (2012), Eq. (24) (not surfaced)
+  evidence: Eq. (24) not surfaced in this session.
+  action: Re-check; first-order form also needs n_g correction as noted.
+- id: ch03.eq.ring_energy_bit
+  status: PARTIAL
+  found_value: ''
+  found_locator: Timurdogan et al., Nat. Commun. 5, 4008 (2014) (equation not surfaced)
+  evidence: 'Only P_s = CV^2/tau tuning expression surfaced: ''P s = CV 2 /τ=69.6 fJ''.'
+  action: CV^2/4 for NRZ PRBS is standard; locate the source equation number.
+- id: ch03.eq.mcintyre_noise
+  status: MATCH
+  found_value: ''
+  found_locator: McIntyre, IEEE TED ED-13(1) 164 (1966), Abstract
+  evidence: by2eI_{in}M^{3}[1 - (1 - k)(\frac{M - 1}{M})^{2}]if the only carriers injected into the depletion layer are electrons.
+  action: none; algebra to F(M)=kM+(1-k)(2-1/M) verified.
+- id: ch03.eq.gc_bragg
+  status: PARTIAL
+  found_value: ''
+  found_locator: Marchetti et al., Photon. Res. 7(2) 201 (2019), Eq. (9) (referenced, not displayed in excerpt)
+  evidence: '[expressed by Eq. (9)], so that no further numerical optimiza tion was required'
+  action: Standard first-order phase-matching form; confirm sign convention of theta in Eq. (9).
+- id: ch03.eq.gaussian_coupling
+  status: PARTIAL
+  found_value: ''
+  found_locator: Michalzik & Ebeling, 'Operating Principles of VCSELs' (uni-ulm author copy), Eq. (70) (not surfaced)
+  evidence: Eq. (70) not surfaced in this session.
+  action: Formula is the standard Gaussian overlap 4w1^2w2^2/(w1^2+w2^2)^2; confirm equation number.
+- id: ch03.eq.vcsel_aging_af
+  status: MATCH
+  found_value: ''
+  found_locator: VI Systems V25-850 reliability report (short version), Eq. (2)
+  evidence: AF = (Jstress/Juse) N * exp[Ea/kB*(1/Tuse – 1/Tstress)] (2)
+  action: none
+tier_a_replacements:
+- for: ch03.eml.mitsubishi_400g_lane
+  citation: A. Uchiyama et al., 'Demonstration of 155-Gbaud PAM4 and PAM6 Using a Narrow High-Mesa Electro-Absorption Modulator Integrated Laser for 400 Gb/s Per Lane Transmission', J. Lightwave Technol.
+    (2024), doi:10.1109/JLT.2024.3476997
+  url: https://doi.org/10.1109/jlt.2024.3476997
+  locator: Abstract
+  value: 155-GBd PAM4 (310 Gb/s) and 155-GBd PAM6 (400 Gb/s); narrow EML 3-dB bandwidth 85 GHz
+  note: Journal version of the OFC 2024 Tu2D.1 abstract; also raises the EML bandwidth beyond the 60-65 GHz records in the ledger.
+- for: ch03.vcsel.chalmers_bw_record
+  citation: Y.-C. Yang, H.-T. Cheng, C.-H. Wu, 'Single-Channel 106.25 Gb/s PAM-4 and 64 Gb/s NRZ Transmission With a 33.4-GHz 850-nm VCSEL With low-RIN Characteristics', J. Lightwave Technol. 42(1), 293-301
+    (2024), doi:10.1109/JLT.2023.3306077
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-42-1-293
+  locator: Abstract
+  value: 33.4 GHz frequency response at 25 C, 4 um oxide aperture 850 nm VCSEL
+  note: Supersedes the 30 GHz 'record'. Keep Haglund 2015 for D-factor/MCEF/HDR.
+- for: ch03.dml.ntt_membrane_bw
+  citation: S. Yamaoka et al., 'Uncooled 100-GBaud Directly Modulated Membrane Lasers on SiC Substrate', J. Lightwave Technol. (2023), doi:10.1109/JLT.2023.3239614
+  url: https://doi.org/10.1109/jlt.2023.3239614
+  locator: Abstract and Sect. on small-signal response
+  value: f3dB >110 GHz (25 C, instrument-limited), 97 GHz (55 C), 74 GHz (85 C)
+  note: Same group; supersedes 108 GHz as DML bandwidth record.
+- for: ch03.pd.imec_responsivity_1550, ch03.pd.imec_bw
+  citation: H. T. Chen et al., '-1 V bias 67 GHz bandwidth Si-contacted germanium waveguide p-i-n photodetector for optical links at 56 Gbps and beyond', Opt. Express 24(5), 4622 (2016), doi:10.1364/OE.24.004622
+  url: https://doi.org/10.1364/oe.24.004622
+  locator: Results (S21 section)
+  value: '>50 GHz at -1 V, 1550 nm (VNA-limited); 67 GHz in title'
+  note: Journal version of OFC 2016 Tu2D.6; read for responsivity/dark-current figures before swapping.
+- for: ch03.si.soref_dn_electron_1550, ch03.si.soref_dn_hole_1550, ch03.eq.soref_dn_1550, ch03.eq.soref_dalpha_1550
+  citation: R. A. Soref, B. R. Bennett, 'Electrooptical effects in silicon', IEEE J. Quantum Electron. 23(1), 123-129 (1987), open copy (CC0) on Zenodo
+  url: https://zenodo.org/records/1232209
+  locator: not verified (scanned PDF, no text layer reachable here)
+  value: original empirical Delta n, Delta alpha fits
+  note: Primary is openly available; retrieval should read it and record the original equation numbers. Reed 2010 Eqs. (1)-(4) verified.
+- for: ch03.apd.kang_gbp (context)
+  citation: N. J. D. Martinez et al. (Sandia), 'High performance waveguide-coupled Ge-on-Si linear mode avalanche photodiodes' (OSTI 1326061, journal version in Optics Express 2016; venue to be confirmed)
+  url: https://www.osti.gov/servlets/purl/1326061
+  locator: Abstract and Conclusions
+  value: 432 GHz gain-bandwidth product, waveguide-coupled Ge/Si APD at 1510 nm
+  note: Shows 340 GHz is not the overall Ge/Si GBP record; confirm journal citation before use.

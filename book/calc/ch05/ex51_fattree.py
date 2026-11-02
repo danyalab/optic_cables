@@ -84,6 +84,7 @@ for tag, prate in (("400", 400), ("800", 800)):
         r.emit(f"k{tag}_l{l}_xcvr", 2 * sl, "transceiver ports", 4, [BC])
         r.emit(f"k{tag}_l{l}_xcvr_per_host", 2 * sl / n, "per host", 2, [BC])
         r.emit(f"k{tag}_l{l}_bis", bis / 1e15, "Pb/s", 3, [BC])
+        r.emit(f"k{tag}_l{l}_tot", 2 * bis / 1e15, "Pb/s", 3, [BC])
         r.emit(f"k{tag}_l{l}_sw_per_khost", s / n * 1e3, "switches per 1000 hosts", 3, [BC])
     r.emit(f"k{tag}_paths3", (k / 2) ** 2, "paths", 4, [BC])
 # switches per host fall as 1/k: check (2l-1)/(k/2)

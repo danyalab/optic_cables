@@ -594,6 +594,51 @@
       "ch07.power.perin_linear_regime_pump"
     ]
   },
+  "n_opt_droop": {
+    "value": 18.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "c_opt_droop_tbps": {
+    "value": 216.08315678472516,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "se_opt_droop": {
+    "value": 2.759682717557154,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
   "c_1": {
     "value": 28.455532628722807,
     "unit": "Tb/s",

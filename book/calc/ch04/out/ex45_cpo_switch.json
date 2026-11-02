@@ -1,4 +1,12 @@
 {
+  "w_dsp_ds": {
+    "value": 17.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
   "eb_dsp_ds": {
     "value": 21.25,
     "unit": "pJ/bit",
@@ -21,6 +29,146 @@
     "digits": 3,
     "inputs": [
       "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "w_dsp_ev": {
+    "value": 16.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "eb_dsp_ev": {
+    "value": 20.625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p51_dsp_ev": {
+    "value": 1056.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p102_dsp_ev": {
+    "value": 2112.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "w_lpo_ev": {
+    "value": 7.203125,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "eb_lpo_ev": {
+    "value": 9.00390625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p51_lpo_ev": {
+    "value": 461.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p102_lpo_ev": {
+    "value": 922.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "w_cpo_meta": {
+    "value": 5.949999999999999,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "eb_cpo_meta": {
+    "value": 7.437499999999999,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "p51_cpo_meta": {
+    "value": 380.79999999999995,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "p102_cpo_meta": {
+    "value": 761.5999999999999,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "w_cpo_ev": {
+    "value": 4.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "eb_cpo_ev": {
+    "value": 5.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p51_cpo_ev": {
+    "value": 256.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p102_cpo_ev": {
+    "value": 512.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "w_dsp_ref": {
+    "value": 14.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.broadcom_pluggable_14w_800g"
     ]
   },
   "eb_dsp_ref": {
@@ -47,7 +195,15 @@
       "ch04.pw.broadcom_pluggable_14w_800g"
     ]
   },
-  "eb_lpo": {
+  "w_lpo_eo": {
+    "value": 8.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "eb_lpo_eo": {
     "value": 10.0,
     "unit": "pJ/bit",
     "digits": 3,
@@ -55,7 +211,7 @@
       "ch04.lpo.eoptolink_40pct"
     ]
   },
-  "p51_lpo": {
+  "p51_lpo_eo": {
     "value": 512.0,
     "unit": "W",
     "digits": 3,
@@ -63,12 +219,20 @@
       "ch04.lpo.eoptolink_40pct"
     ]
   },
-  "p102_lpo": {
+  "p102_lpo_eo": {
     "value": 1024.0,
     "unit": "W",
     "digits": 3,
     "inputs": [
       "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "w_cpo": {
+    "value": 5.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.bailly_5p5w"
     ]
   },
   "eb_cpo": {
@@ -107,6 +271,23 @@
     "digits": 3,
     "inputs": []
   },
+  "save51_meta": {
+    "value": 707.2,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "save51_ev": {
+    "value": 800.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
   "save51_cpo_vs_ref": {
     "value": 544.0,
     "unit": "W",
@@ -114,6 +295,23 @@
     "inputs": [
       "ch04.cpo.bailly_5p5w",
       "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "save102_meta": {
+    "value": 1414.4,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "save102_ev": {
+    "value": 1600.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
     ]
   },
   "save102_cpo_vs_ref": {
@@ -134,15 +332,6 @@
       "ch04.pw.broadcom_pluggable_14w_800g"
     ]
   },
-  "cpo_vs_lpo_pct": {
-    "value": 31.25,
-    "unit": "%",
-    "digits": 3,
-    "inputs": [
-      "ch04.cpo.bailly_5p5w",
-      "ch04.lpo.eoptolink_40pct"
-    ]
-  },
   "meta_implied_cpo_w": {
     "value": 4.8999999999999995,
     "unit": "W",
@@ -150,6 +339,14 @@
     "inputs": [
       "ch04.cpo.meta_65pct",
       "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "meta_pct": {
+    "value": 65.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.cpo.meta_65pct"
     ]
   },
   "p102_16_model": {
@@ -318,6 +515,14 @@
     "digits": 2,
     "inputs": [
       "ch04.cpo.evans_eff_vs_dsp"
+    ]
+  },
+  "hum_per800": {
+    "value": 6.4,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.cpo.humboldt_102w"
     ]
   },
   "hum_eb": {

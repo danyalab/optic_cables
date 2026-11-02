@@ -1,0 +1,208 @@
+{
+  "pw_tec_pct": {
+    "value": 9.2,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_tec_w": {
+    "value": 2.024,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_laser_pct": {
+    "value": 8.9,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_laser_w": {
+    "value": 1.9580000000000002,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_tia_pct": {
+    "value": 8.6,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_tia_w": {
+    "value": 1.892,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_mcu_pct": {
+    "value": 0.9,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_mcu_w": {
+    "value": 0.198,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_other_pct": {
+    "value": 12.8,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_other_w": {
+    "value": 2.816,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_dsp_pct": {
+    "value": 59.6,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_dsp_w": {
+    "value": 13.112,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "pw_optics_pct": {
+    "value": 18.1,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "X_ref_pct": {
+    "value": 63.3,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "c_dsp_pct": {
+    "value": 30.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "c_laser_pct": {
+    "value": 15.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "c_pic_pct": {
+    "value": 12.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "c_drv_pct": {
+    "value": 8.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": []
+  },
+  "c_mech_pct": {
+    "value": 15.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "c_asm_pct": {
+    "value": 20.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "m_dsp_pct": {
+    "value": 100.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "m_laser_pct": {
+    "value": 80.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "m_pic_pct": {
+    "value": 80.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "m_drv_pct": {
+    "value": 90.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "m_mech_pct": {
+    "value": 30.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "X_laser_pct": {
+    "value": 51.300000000000004,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "X_laser_pic_pct": {
+    "value": 41.7,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "X_dsp_floor_pct": {
+    "value": 30.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "dX_dlaser_pct": {
+    "value": 15.0,
+    "unit": "%/unit m",
+    "digits": 2,
+    "inputs": []
+  },
+  "dsp_frac_after_pct": {
+    "value": 71.94244604316546,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  }
+}

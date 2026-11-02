@@ -12,16 +12,30 @@ import ch04lib as cl
 
 r = Results()
 
-# ------------------------------------------------ per-800G powers
+# ------------------------------------------------ per-800G powers (tier A/B only in the main cases)
+ev = "ch04.cpo.evans_switch_power"
+meta = L("ch04.cpo.meta_65pct") / 100
+p_ds = L("ch04.pmd.800g_2xdr4_power")
+# ASSUMPTION: Meta's measured 65 % CPO saving (relative to its own retimed 100G/lane pluggables, whose
+# wattage is not in the ledger) is applied to the 800G 2xDR4 datasheet maximum.
 cases = [
-    ("dsp_ds", "Retimed pluggable,\ndatasheet max (100G lanes)", L("ch04.pmd.800g_2xdr4_power"), ["ch04.pmd.800g_2xdr4_power"]),
-    ("dsp_ref", "Retimed pluggable,\nBroadcom reference", L("ch04.pw.broadcom_pluggable_14w_800g"), ["ch04.pw.broadcom_pluggable_14w_800g"]),
-    ("lpo", "LPO (Eoptolink\n800G bound)", cl.cond_num("ch04.lpo.eoptolink_40pct", "to_W"), ["ch04.lpo.eoptolink_40pct"]),
-    ("cpo", "CPO (Bailly)", L("ch04.cpo.bailly_5p5w"), ["ch04.cpo.bailly_5p5w"]),
+    ("dsp_ds", "Retimed pluggable,\ndatasheet max", p_ds, ["ch04.pmd.800g_2xdr4_power"]),
+    ("dsp_ev", "Retimed pluggable,\nEvans model", cl.cond(ev, "optics_DSP_W") / 128, [ev]),
+    ("lpo_ev", "LPO,\nEvans model", cl.cond(ev, "optics_LPO_W") / 128, [ev]),
+    ("cpo_meta", "CPO, Meta saving\non datasheet max", p_ds * (1 - meta), ["ch04.cpo.meta_65pct", "ch04.pmd.800g_2xdr4_power"]),
+    ("cpo_ev", "CPO,\nEvans model", cl.cond(ev, "optics_CPO_W") / 128, [ev]),
+]
+# tier-C slide values, used only in the contested box
+cases_c = [
+    ("dsp_ref", L("ch04.pw.broadcom_pluggable_14w_800g"), ["ch04.pw.broadcom_pluggable_14w_800g"]),
+    ("lpo_eo", cl.cond_num("ch04.lpo.eoptolink_40pct", "to_W"), ["ch04.lpo.eoptolink_40pct"]),
+    ("cpo", L("ch04.cpo.bailly_5p5w"), ["ch04.cpo.bailly_5p5w"]),
 ]
 SW = {"51": 51.2e3, "102": 102.4e3}         # Gb/s
 power = {}
-for key, lab, p800, ins in cases:
+for key, *rest in cases + [(k, None, p, i) for k, p, i in cases_c]:
+    lab, p800, ins = rest
+    r.emit(f"w_{key}", p800, "W", 3, ins)
     r.emit(f"eb_{key}", cl.pj_per_bit(p800, 800), "pJ/bit", 3, ins)
     for s, cap in SW.items():
         n = cap / 800
@@ -30,16 +44,15 @@ for key, lab, p800, ins in cases:
 r.emit("n51", SW["51"] / 800, "", 2)
 r.emit("n102", SW["102"] / 800, "", 3)
 for s in SW:
+    r.emit(f"save{s}_meta", power[("dsp_ds", s)] - power[("cpo_meta", s)], "W", 3, cases[3][3])
+    r.emit(f"save{s}_ev", power[("dsp_ev", s)] - power[("cpo_ev", s)], "W", 3, [ev])
     r.emit(f"save{s}_cpo_vs_ref", power[("dsp_ref", s)] - power[("cpo", s)], "W", 3,
            ["ch04.pw.broadcom_pluggable_14w_800g", "ch04.cpo.bailly_5p5w"])
 r.emit("cpo_vs_ref_pct", 100 * (1 - L("ch04.cpo.bailly_5p5w") / L("ch04.pw.broadcom_pluggable_14w_800g")), "%", 3,
        ["ch04.pw.broadcom_pluggable_14w_800g", "ch04.cpo.bailly_5p5w"])
-r.emit("cpo_vs_lpo_pct", 100 * (1 - L("ch04.cpo.bailly_5p5w") / cl.cond_num("ch04.lpo.eoptolink_40pct", "to_W")), "%", 3,
-       ["ch04.lpo.eoptolink_40pct", "ch04.cpo.bailly_5p5w"])
-# Meta measured saving applied to the Broadcom reference
-meta = L("ch04.cpo.meta_65pct") / 100
 r.emit("meta_implied_cpo_w", L("ch04.pw.broadcom_pluggable_14w_800g") * (1 - meta), "W", 3,
        ["ch04.cpo.meta_65pct", "ch04.pw.broadcom_pluggable_14w_800g"])
+r.emit("meta_pct", 100 * meta, "%", 2, ["ch04.cpo.meta_65pct"])
 # 1.6T pluggables in a 102.4T switch (64 modules), model and datasheet
 ex43 = __import__("json").loads((pathlib.Path(__file__).parent / "out" / "ex43_power_model.json").read_text())
 p16 = ex43["p16"]["value"]
@@ -47,7 +60,6 @@ r.emit("p102_16_model", 64 * p16, "W", 3, ["ch04.pw.1p6t_breakdown_dsp"])
 r.emit("p102_16_ds", 64 * L("ch04.pmd.1p6t_dr8_power"), "W", 3, ["ch04.pmd.1p6t_dr8_power"])
 
 # ------------------------------------------------ Evans 102.4T switch
-ev = "ch04.cpo.evans_switch_power"
 E = {k: cl.cond(ev, k) for k in ("DSP_W", "LPO_W", "CPO_W", "optics_DSP_W", "optics_LPO_W", "optics_CPO_W",
                                     "SerDes_DSP_W", "SerDes_CPO_W")}
 r.emit("ev_dsp_tot", E["DSP_W"], "W", 4, [ev])
@@ -86,6 +98,7 @@ assert 100 * inc > L("ch04.cpo.evans_eff_vs_dsp")
 # ------------------------------------------------ Humboldt (TH4, previous generation)
 hum = L("ch04.cpo.humboldt_102w")
 per800 = cl.cond("ch04.cpo.humboldt_102w", "per_800G_W")
+r.emit("hum_per800", per800, "W", 2, ["ch04.cpo.humboldt_102w"])
 r.emit("hum_eb", cl.pj_per_bit(per800, 800), "pJ/bit", 3, ["ch04.cpo.humboldt_102w"])
 r.emit("hum_cap", hum / per800 * 0.8, "Tb/s", 3, ["ch04.cpo.humboldt_102w"])
 r.emit("hum_lane", hum / per800 * 800 / cl.cond_num("ch04.cpo.humboldt_102w", "lanes"), "Gb/s", 3, ["ch04.cpo.humboldt_102w"])
@@ -137,19 +150,16 @@ dl = cl.cond("ch04.cpo.nvidia_electrical_loss", "pluggable_dB") - L("ch04.cpo.nv
 r.emit("nv_loss_delta", dl, "dB", 2, ["ch04.cpo.nvidia_electrical_loss"])
 r.emit("nv_loss_amp", 10 ** (dl / 20), "1", 2, ["ch04.cpo.nvidia_electrical_loss"])
 
-# ------------------------------------------------ figure
+# ------------------------------------------------ figure (tier A/B inputs only)
 plt = cl.setup_mpl()
-fig, ax = plt.subplots(figsize=(7.6, 4.6))
+fig, ax = plt.subplots(figsize=(7.8, 4.6))
 x = np.arange(len(cases))
 w = 0.36
-for j, (s, lab) in enumerate((("51", "51.2T switch (64 x 800G)"), ("102", "102.4T switch (128 x 800G)"))):
-    vals = [power[(k, s)] for k, *_ in cases]
+for j, (sk, lab) in enumerate((("51", "51.2T switch (64 x 800G)"), ("102", "102.4T switch (128 x 800G)"))):
+    vals = [power[(k, sk)] for k, *_ in cases]
     ax.bar(x + (j - 0.5) * w, vals, width=w, color=cl.COLORS[j * 2], label=lab, edgecolor="none")
-ev_pts = [E["optics_DSP_W"], E["optics_DSP_W"], E["optics_LPO_W"], E["optics_CPO_W"]]
-ax.plot(x + 0.5 * w, ev_pts, ls="none", marker="D", ms=7, mfc="none", mew=1.6, color=cl.COLORS[3],
-        label="Evans (2026) model, 102.4T")
 ax.set_xticks(x)
-ax.set_xticklabels([c[1] for c in cases], fontsize=8.5)
+ax.set_xticklabels([c[1] for c in cases], fontsize=8.2)
 ax.set_ylabel("Optics power per switch (W)")
 ax.legend(fontsize=8.5, loc="upper right")
 ax.set_title("Computed: switch optics power = (capacity / 800G) x power per 800G", fontsize=10)

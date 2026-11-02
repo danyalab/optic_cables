@@ -1,0 +1,450 @@
+{
+  "cn_ow": {
+    "value": 20.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "cn_rtt": {
+    "value": 40.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "us_rtt": {
+    "value": 45.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "us_ow": {
+    "value": 22.5,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "us_meas_ow_lo": {
+    "value": 16.6675,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "us_meas_ow_hi": {
+    "value": 18.2105,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "cn_L": {
+    "value": 4083.809535485629,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "us_L": {
+    "value": 4594.285727421333,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "us_cn_rtt_ratio": {
+    "value": 1.125,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency",
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "bead_lat": {
+    "value": 100.0,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_bead_latency_100ms"
+    ]
+  },
+  "mile_km": {
+    "value": 1.609344,
+    "unit": "km",
+    "digits": 7,
+    "inputs": []
+  },
+  "lumen_kkm": {
+    "value": 547.1769600000001,
+    "unit": "thousand km",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_lumen_route_miles"
+    ]
+  },
+  "cn_lh_kkm": {
+    "value": 1143.0,
+    "unit": "thousand km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "cn_lh_over_lumen": {
+    "value": 2.0889037433155075,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.cable_split_2025",
+      "ch09.cmp.us_lumen_route_miles"
+    ]
+  },
+  "cu_88_over_lumen": {
+    "value": 0.36185734136174147,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.cmp.us_lumen_route_miles",
+      "ch09.op.cu_new_88_total_198k"
+    ]
+  },
+  "it_conduits": {
+    "value": 542.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_longhaul_map"
+    ]
+  },
+  "it_nodes": {
+    "value": 273.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_longhaul_map"
+    ]
+  },
+  "it_links": {
+    "value": 2411.0,
+    "unit": "",
+    "digits": 4,
+    "inputs": [
+      "ch09.cmp.us_longhaul_map"
+    ]
+  },
+  "it_share_ge2": {
+    "value": 89.67,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch08.intertubes.share_ge2"
+    ]
+  },
+  "us_pass_m": {
+    "value": 84.6,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_fiber_passings_2025"
+    ]
+  },
+  "us_conn_m": {
+    "value": 40.0,
+    "unit": "million",
+    "digits": 2,
+    "inputs": [
+      "ch09.cmp.us_fiber_passings_2025"
+    ]
+  },
+  "us_take_pct": {
+    "value": 47.28132387706856,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_fiber_passings_2025"
+    ]
+  },
+  "cn_ftth_b": {
+    "value": 1.21,
+    "unit": "billion",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "cn_port_use_pct": {
+    "value": 55.23581135091926,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "oecd_fibre_pct": {
+    "value": 47.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.cmp.oecd_fibre_share_2024"
+    ]
+  },
+  "cn_ftth_share": {
+    "value": 96.8,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "bead_busd": {
+    "value": 42.45,
+    "unit": "billion USD",
+    "digits": 4,
+    "inputs": [
+      "ch09.cmp.us_bead_42p45b"
+    ]
+  },
+  "cn2_load": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.cn2_light_loading_50pct"
+    ]
+  },
+  "b4_util": {
+    "value": 70.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.avg_util"
+    ]
+  },
+  "wan_util_lo": {
+    "value": 30.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "wan_util_hi": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "swan_lo": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.swan.busy_link_util"
+    ]
+  },
+  "swan_hi": {
+    "value": 60.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.swan.busy_link_util"
+    ]
+  },
+  "chisel_free": {
+    "value": 75.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "cn2_vs_b4_capacity": {
+    "value": 1.4,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.avg_util",
+      "ch09.op.cn2_light_loading_50pct"
+    ]
+  },
+  "cmcc_cap": {
+    "value": 32.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.cmcc_capacity_32t"
+    ]
+  },
+  "google13_cap": {
+    "value": 12.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch08.google_optical.fiber_pair_capacity"
+    ]
+  },
+  "iris_cap": {
+    "value": 16.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.dc_capacity_example"
+    ]
+  },
+  "cmcc_over_google": {
+    "value": 2.6666666666666665,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch08.google_optical.fiber_pair_capacity",
+      "ch09.l400.cmcc_capacity_32t"
+    ]
+  },
+  "google_cl": {
+    "value": 2.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch08.google_optical.cl_band"
+    ]
+  },
+  "radwan_qpsk": {
+    "value": 3000.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch08.radwan.reach_qpsk"
+    ]
+  },
+  "radwan_8qam": {
+    "value": 2100.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch08.radwan.reach_8qam"
+    ]
+  },
+  "radwan_16qam": {
+    "value": 800.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch08.radwan.reach_16qam"
+    ]
+  },
+  "cmcc_reach": {
+    "value": 1500.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.reach_1500_g652d_edfa"
+    ]
+  },
+  "chisel_austin_nyc": {
+    "value": 2800.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch08.chisel.austin_nyc_reach"
+    ]
+  },
+  "chisel_austin_nyc_ms": {
+    "value": 13.71268652795795,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.chisel.austin_nyc_reach"
+    ]
+  },
+  "cmcc_state": {
+    "value": 68.8,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cmcc_ownership_2025"
+    ]
+  },
+  "ct_state": {
+    "value": 63.9,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_ownership_2025"
+    ]
+  },
+  "lumen_400g_kkm": {
+    "value": 160.9344,
+    "unit": "thousand km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_400g_route_miles"
+    ]
+  },
+  "lumen_400g_mi": {
+    "value": 100000.0,
+    "unit": "route-mi",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_400g_route_miles"
+    ]
+  },
+  "lumen_400g_frac": {
+    "value": 29.41176470588235,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_400g_route_miles",
+      "ch09.cmp.us_lumen_route_miles"
+    ]
+  },
+  "miit_fp16": {
+    "value": 788.0,
+    "unit": "EFLOPS",
+    "digits": 3,
+    "inputs": [
+      "ch09.dsxs.racks_2025_06"
+    ]
+  },
+  "caict_fp32_ai": {
+    "value": 782.0,
+    "unit": "EFLOPS",
+    "digits": 3,
+    "inputs": [
+      "ch09.dsxs.caict_device_compute_962"
+    ]
+  },
+  "caict_fp32_tot": {
+    "value": 962.0,
+    "unit": "EFLOPS",
+    "digits": 3,
+    "inputs": [
+      "ch09.dsxs.caict_device_compute_962"
+    ]
+  },
+  "caict_basic": {
+    "value": 175.0,
+    "unit": "EFLOPS",
+    "digits": 3,
+    "inputs": [
+      "ch09.dsxs.caict_device_compute_962"
+    ]
+  }
+}

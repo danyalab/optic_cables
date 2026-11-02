@@ -1,0 +1,151 @@
+{
+  "bw_2018": {
+    "value": 7.371738,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "bw_2019": {
+    "value": 8.827751,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "bw_2020": {
+    "value": 11.511397,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "bw_2021": {
+    "value": 13.839969,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "bw_2022": {
+    "value": 18.469972,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "yoy_2022_pct": {
+    "value": 33.45385383449919,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.intl.exit_bw_2021",
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "cagr_pct": {
+    "value": 25.812585215825877,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "n_years": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "doubling_yr": {
+    "value": 3.018628764214336,
+    "unit": "yr",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "waves_400g": {
+    "value": 46.174929999999996,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.intl.exit_bw_2022",
+      "ch09.l400.cmcc_capacity_32t"
+    ]
+  },
+  "frac_fiber": {
+    "value": 0.577186625,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.exit_bw_2022",
+      "ch09.l400.cmcc_capacity_32t"
+    ]
+  },
+  "ratio_backbone": {
+    "value": 59.447843234413135,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.exit_bw_2022",
+      "ch09.op.cmcc_interprovincial_bw_2025"
+    ]
+  },
+  "ratio_cmcc_intl": {
+    "value": 21.981625093963327,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.cmcc_intl_2025",
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "cu_intl": {
+    "value": 6.7,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.cu_intl_interconnect_6p7t"
+    ]
+  },
+  "cu_sub_tb": {
+    "value": 246.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cu_intl_interconnect_6p7t"
+    ]
+  },
+  "cb14_tbps": {
+    "value": 7.6,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.crossborder_2014"
+    ]
+  },
+  "cb18_tbps": {
+    "value": 70.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.crossborder_caict"
+    ]
+  },
+  "cb18_sub_tbps": {
+    "value": 40.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.crossborder_caict"
+    ]
+  }
+}

@@ -122,9 +122,8 @@ for k in ["DSP", "laser", "TEC", "TIA", "MCU", "other"]:
     vals = np.array([cl.pj_per_bit(sh[k] * P, R) for sh, P, R in data])
     ax.bar(x, vals, bottom=bottom, width=0.5, color=cols[k], label=k, edgecolor="none")
     bottom += vals
-marks = [(0, cl.pj_per_bit(ds8, R8), "800G 2xDR4 datasheet max\n(100G lanes)"),
-         (0, cl.pj_per_bit(ref8, R8), "Broadcom pluggable reference"),
-         (1, cl.pj_per_bit(Pds, R16), "1.6T DR8 datasheet max")]
+marks = [(0, cl.pj_per_bit(ds8, R8), "800G 2xDR4 datasheet max\n(8 x 100G lanes)"),
+         (1, cl.pj_per_bit(Pds, R16), "1.6T DR8 datasheet max\n(one third-party part)")]
 for xi, v, lab in marks:
     ax.plot([xi - 0.32, xi + 0.32], [v, v], color=cl.GRAY, lw=1.4, ls="--")
     ax.text(xi + 0.34, v, lab, fontsize=8, va="center")

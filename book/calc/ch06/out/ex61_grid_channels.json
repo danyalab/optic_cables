@@ -1,0 +1,483 @@
+{
+  "lam_anchor_nm": {
+    "value": 1552.5243811496632,
+    "unit": "nm",
+    "digits": 6,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch06.grid.anchor_193p1"
+    ]
+  },
+  "s375_m": {
+    "value": 3.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "s375_ghz": {
+    "value": 37.5,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch06.grid.flex_slot_granularity"
+    ]
+  },
+  "s75_m": {
+    "value": 6.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "s75_ghz": {
+    "value": 75.0,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch06.grid.flex_slot_granularity"
+    ]
+  },
+  "s1125_m": {
+    "value": 9.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "s1125_ghz": {
+    "value": 112.5,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch06.grid.flex_slot_granularity"
+    ]
+  },
+  "s150_m": {
+    "value": 12.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "s150_ghz": {
+    "value": 150.0,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch06.grid.flex_slot_granularity"
+    ]
+  },
+  "ex_fc_thz": {
+    "value": 193.10625,
+    "unit": "THz",
+    "digits": 7,
+    "inputs": [
+      "ch06.grid.anchor_193p1",
+      "ch06.grid.flex_center_granularity"
+    ]
+  },
+  "ex_lo_thz": {
+    "value": 193.0875,
+    "unit": "THz",
+    "digits": 7,
+    "inputs": [
+      "ch06.grid.anchor_193p1"
+    ]
+  },
+  "ex_hi_thz": {
+    "value": 193.125,
+    "unit": "THz",
+    "digits": 7,
+    "inputs": [
+      "ch06.grid.anchor_193p1"
+    ]
+  },
+  "bc_thz": {
+    "value": 4.8,
+    "unit": "THz",
+    "digits": 2,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "zr_lam_lo_nm": {
+    "value": 1528.7733707292198,
+    "unit": "nm",
+    "digits": 5,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "zr_lam_hi_nm": {
+    "value": 1567.132556194459,
+    "unit": "nm",
+    "digits": 5,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "b_itu_thz": {
+    "value": 4.382106968197281,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu"
+    ]
+  },
+  "b_superc_thz": {
+    "value": 6.0,
+    "unit": "THz",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.finisar_cband_4p8thz"
+    ]
+  },
+  "b_lumentum_thz": {
+    "value": 5.099999999999994,
+    "unit": "THz",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.lumentum_twin_1x20_range"
+    ]
+  },
+  "nc_50": {
+    "value": 96.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "nc_75": {
+    "value": 64.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "nc_100": {
+    "value": 48.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "nc_150": {
+    "value": 32.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "b_sl_thz": {
+    "value": 5.819999999999993,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "b_sc_thz": {
+    "value": 5.819999999999993,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "b_scl_thz": {
+    "value": 11.639999999999986,
+    "unit": "THz",
+    "digits": 4,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "gap_cl_ghz": {
+    "value": 430.0000000000068,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "b_sc_vs_c_pct": {
+    "value": 21.249999999999858,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands",
+      "ch06.zr.cband_191p3_196p1"
+    ]
+  },
+  "ncl_50": {
+    "value": 200.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.semrau_cl_10thz"
+    ]
+  },
+  "nscl_50": {
+    "value": 232.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "ncl_75": {
+    "value": 133.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.semrau_cl_10thz"
+    ]
+  },
+  "nscl_75": {
+    "value": 154.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "ncl_150": {
+    "value": 66.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.semrau_cl_10thz"
+    ]
+  },
+  "nscl_150": {
+    "value": 76.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "cm_occupied_thz": {
+    "value": 12.0,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "cm_extra_vs_jiang": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km",
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "cm_c6_thz": {
+    "value": 5.8775478771952185,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "cm_l6_thz": {
+    "value": 5.849435450890063,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "cm_c6_lo": {
+    "value": 1525.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "cm_c6_hi": {
+    "value": 1572.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "cm_l6_lo": {
+    "value": 1576.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "cm_l6_hi": {
+    "value": 1626.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "zr_line_gbps": {
+    "value": 478.75,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr_oh_pct": {
+    "value": 19.687499999999993,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr_occ": {
+    "value": 0.7979166666666667,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud",
+      "ch06.zr.oif400zr_channel_plans"
+    ]
+  },
+  "se_400zr": {
+    "value": 5.333333333333333,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_channel_plans"
+    ]
+  },
+  "se_800zr": {
+    "value": 5.333333333333333,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif800zr_scope"
+    ]
+  },
+  "cap_c_400zr": {
+    "value": 25.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_channel_plans"
+    ]
+  },
+  "se_mardoyan": {
+    "value": 5.224489795918367,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.mardoyan_300gbd_1p6t_9075km"
+    ]
+  },
+  "se_cm_400g": {
+    "value": 2.6666666666666665,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.cmcc_c6t_l6t_2502km"
+    ]
+  },
+  "se_cm_96t": {
+    "value": 8.0,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.cmcc_96tb_305km"
+    ]
+  },
+  "cap_scl_800zr_grid": {
+    "value": 60.800000000000004,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch06.cl.super_cl_12thz_bands"
+    ]
+  },
+  "gerstel_q_gain": {
+    "value": 150.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch06.sc.gerstel_1t_qpsk_gain"
+    ]
+  },
+  "gerstel_s_gain": {
+    "value": 17.647058823529417,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch06.sc.gerstel_400g_16qam_gain"
+    ]
+  },
+  "gerstel_s_flex": {
+    "value": 85.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch06.sc.gerstel_400g_16qam_gain"
+    ]
+  },
+  "se_sc_1": {
+    "value": 5.333333333333333,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "se_sc_2": {
+    "value": 5.818181818181818,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "se_sc_4": {
+    "value": 6.095238095238095,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "se_sc_8": {
+    "value": 6.2439024390243905,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "se_sc_inf": {
+    "value": 6.4,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "sub_sp_ghz": {
+    "value": 62.5,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": []
+  },
+  "guard_ghz": {
+    "value": 12.5,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": []
+  }
+}

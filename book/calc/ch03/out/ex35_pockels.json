@@ -1,0 +1,253 @@
+{
+  "w5_vpil": {
+    "value": 2.2,
+    "unit": "V·cm",
+    "digits": 2,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w5_bw_over_vpi": {
+    "value": 22.727272727272727,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w5_xi": {
+    "value": 3.5227272727272725e-05,
+    "unit": "1/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w10_vpil": {
+    "value": 2.3,
+    "unit": "V·cm",
+    "digits": 2,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w10_bw_over_vpi": {
+    "value": 34.78260869565218,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w10_xi": {
+    "value": 3.369565217391304e-05,
+    "unit": "1/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w20_vpil": {
+    "value": 2.8,
+    "unit": "V·cm",
+    "digits": 2,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w20_bw_over_vpi": {
+    "value": 32.142857142857146,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w20_xi": {
+    "value": 2.767857142857143e-05,
+    "unit": "1/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w_p_10_20": {
+    "value": 0.8300749985576876,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w_p_5_10": {
+    "value": 0.32192809488736235,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "w20_vpi_il": {
+    "value": 0.7,
+    "unit": "V·dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_loss",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  },
+  "valdez_vpi": {
+    "value": 6.2,
+    "unit": "V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.valdez_110g",
+      "ch03.tfln.valdez_vpil"
+    ]
+  },
+  "valdez_bw_over_vpi": {
+    "value": 17.741935483870968,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.valdez_110g",
+      "ch03.tfln.valdez_vpil"
+    ]
+  },
+  "valdez_vpi_il": {
+    "value": 11.16,
+    "unit": "V·dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.valdez_110g",
+      "ch03.tfln.valdez_vpil"
+    ]
+  },
+  "valdez_xi": {
+    "value": 2.4999999999999998e-05,
+    "unit": "1/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.valdez_110g",
+      "ch03.tfln.valdez_vpil"
+    ]
+  },
+  "yang_vpil_alpha": {
+    "value": 0.47400000000000003,
+    "unit": "V·dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.yang_110g",
+      "ch03.tfln.yang_vpil"
+    ]
+  },
+  "si_vpi_1mm": {
+    "value": 13.999999999999998,
+    "unit": "V",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "si_vpil_alpha": {
+    "value": 26.599999999999998,
+    "unit": "V·dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "si_bw_over_vpi": {
+    "value": 0.8571428571428572,
+    "unit": "GHz/V",
+    "digits": 2,
+    "inputs": [
+      "ch03.si.feng_bw_1mm",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "yang_vs_si_alpha": {
+    "value": 56.1181434599156,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil",
+      "ch03.tfln.yang_110g",
+      "ch03.tfln.yang_vpil"
+    ]
+  },
+  "soh_vs_si": {
+    "value": 27.999999999999996,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_vpil",
+      "ch03.si.witzens_soh_vpil"
+    ]
+  },
+  "inp_bw_over_vpi": {
+    "value": 53.333333333333336,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.inp.ogiso_80g"
+    ]
+  },
+  "inp_vpi_il": {
+    "value": 3.0,
+    "unit": "V·dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.inp.fiber_to_fiber_loss",
+      "ch03.inp.ogiso_80g"
+    ]
+  },
+  "inp_ftf_calc": {
+    "value": 9.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.inp.fiber_to_fiber_loss"
+    ]
+  },
+  "inp_ftf_rest": {
+    "value": 0.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.inp.fiber_to_fiber_loss"
+    ]
+  },
+  "bulk_bw_over_vpi": {
+    "value": 10.0,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.legacy_ln"
+    ]
+  },
+  "tfln_gain_over_bulk": {
+    "value": 2.2727272727272725,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.tfln.legacy_ln",
+      "ch03.tfln.wang_bw_5mm",
+      "ch03.tfln.wang_vpi_20mm"
+    ]
+  }
+}

@@ -89,6 +89,7 @@
     "unit": "",
     "digits": 3,
     "inputs": [
+      "ch09.l400.cmcc_capacity_32t",
       "ch09.op.cmcc_interprovincial_bw_2025"
     ]
   },

@@ -1,0 +1,438 @@
+{
+  "n": {
+    "value": 100000.0,
+    "unit": "accelerators",
+    "digits": 6,
+    "inputs": []
+  },
+  "k": {
+    "value": 128.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "tiers": {
+    "value": 3.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": []
+  },
+  "p_gpu": {
+    "value": 700.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "cpo_ratio": {
+    "value": 2.5454545454545454,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "sw_leaf": {
+    "value": 1563.0,
+    "unit": "switches",
+    "digits": 4,
+    "inputs": []
+  },
+  "sw_core": {
+    "value": 782.0,
+    "unit": "switches",
+    "digits": 3,
+    "inputs": []
+  },
+  "sw_total": {
+    "value": 3908.0,
+    "unit": "switches",
+    "digits": 4,
+    "inputs": []
+  },
+  "a_ends": {
+    "value": 4.0,
+    "unit": "port ends",
+    "digits": 3,
+    "inputs": []
+  },
+  "a_mods": {
+    "value": 2.0,
+    "unit": "modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "a_mods_total": {
+    "value": 200.0,
+    "unit": "thousand modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "a_w": {
+    "value": 34.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "a_mw": {
+    "value": 3.4,
+    "unit": "MW",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "a_w_cpo": {
+    "value": 13.357142857142858,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "a_share": {
+    "value": 4.857142857142857,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "a_share_cpo": {
+    "value": 1.9081632653061225,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "b_ends": {
+    "value": 6.0,
+    "unit": "port ends",
+    "digits": 3,
+    "inputs": []
+  },
+  "b_mods": {
+    "value": 3.5,
+    "unit": "modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "b_mods_total": {
+    "value": 350.0,
+    "unit": "thousand modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "b_w": {
+    "value": 52.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "b_mw": {
+    "value": 5.25,
+    "unit": "MW",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "b_w_cpo": {
+    "value": 26.696428571428573,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "b_share": {
+    "value": 7.5,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "b_share_cpo": {
+    "value": 3.8137755102040813,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "c_ends": {
+    "value": 2.2857142857142856,
+    "unit": "port ends",
+    "digits": 3,
+    "inputs": []
+  },
+  "c_mods": {
+    "value": 1.1428571428571428,
+    "unit": "modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "c_mods_total": {
+    "value": 114.28571428571428,
+    "unit": "thousand modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "c_w": {
+    "value": 19.428571428571427,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "c_mw": {
+    "value": 1.9428571428571426,
+    "unit": "MW",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "c_w_cpo": {
+    "value": 7.632653061224489,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "c_share": {
+    "value": 2.775510204081632,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "c_share_cpo": {
+    "value": 1.0903790087463556,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "d_ends": {
+    "value": 6.0,
+    "unit": "port ends",
+    "digits": 3,
+    "inputs": []
+  },
+  "d_mods": {
+    "value": 3.5,
+    "unit": "modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "d_mods_total": {
+    "value": 350.0,
+    "unit": "thousand modules",
+    "digits": 3,
+    "inputs": []
+  },
+  "d_w": {
+    "value": 79.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "d_mw": {
+    "value": 7.95,
+    "unit": "MW",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "d_w_cpo": {
+    "value": 41.55357142857143,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "d_share": {
+    "value": 11.357142857142858,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "d_share_cpo": {
+    "value": 5.936224489795919,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qsfp112",
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.broadcom_pluggable_14w_800g",
+      "ch05.ai.llama3_cluster_24k"
+    ]
+  },
+  "sig_meta": {
+    "value": 7.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.llama3_oversub_1to7"
+    ]
+  },
+  "v4_ends": {
+    "value": 3.0,
+    "unit": "port ends",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.tpuv4_6144_links",
+      "ch05.ocs.tpuv4_chips"
+    ]
+  },
+  "j_w_each": {
+    "value": 30.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.jensen_6_xcvr_per_gpu"
+    ]
+  },
+  "j_usd_each": {
+    "value": 1000.0,
+    "unit": "USD",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.jensen_6_xcvr_per_gpu"
+    ]
+  },
+  "j_w_dr8": {
+    "value": 150.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch05.pw.jensen_6_xcvr_per_gpu"
+    ]
+  },
+  "a_cost_1": {
+    "value": 1.9607843137254901,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "a_cost_3": {
+    "value": 5.660377358490566,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "b_cost_1": {
+    "value": 3.381642512077295,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "b_cost_3": {
+    "value": 9.502262443438914,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "tpu_cost_cap": {
+    "value": 5.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": [
+      "ch05.ocs.tpuv4_cost_share"
+    ]
+  },
+  "rho_at_cap": {
+    "value": 1.5037593984962407,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.tpuv4_cost_share"
+    ]
+  }
+}

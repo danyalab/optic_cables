@@ -1,0 +1,355 @@
+{
+  "ager_pairs": {
+    "value": 78210.0,
+    "unit": "AS pairs",
+    "digits": 4,
+    "inputs": [
+      "ch08.ixp.ager_members"
+    ]
+  },
+  "ager_links_from_pct": {
+    "value": 52400.7,
+    "unit": "links",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.ager_members",
+      "ch08.ixp.ager_peering_links"
+    ]
+  },
+  "ager_avg_tbps": {
+    "value": 0.9259259259259259,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.ager_daily_volume"
+    ]
+  },
+  "ager_eb_yr": {
+    "value": 3.65,
+    "unit": "EB/yr",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.ager_daily_volume"
+    ]
+  },
+  "ager_per_member_gbps": {
+    "value": 2.3381967826412273,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.ager_daily_volume",
+      "ch08.ixp.ager_members"
+    ]
+  },
+  "ny_avg_tbps": {
+    "value": 1.2683916793505834,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.decix_ny_annual_2025"
+    ]
+  },
+  "ny_peak_over_avg": {
+    "value": 1.3954680000000002,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.decix_ny_annual_2025",
+      "ch08.ixp.decix_ny_peak_2024"
+    ]
+  },
+  "na_avg_tbps": {
+    "value": 2.7904616945712837,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.decix_na_annual_2025"
+    ]
+  },
+  "na_growth_pct": {
+    "value": 46.66666666666666,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.decix_na_annual_2025"
+    ]
+  },
+  "gl_avg_tbps": {
+    "value": 20.040588533739218,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.decix_global_annual_2025"
+    ]
+  },
+  "gl_peak_over_avg": {
+    "value": 1.2474683544303797,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.decix_global_annual_2025",
+      "ch08.ixp.decix_global_peak_2025"
+    ]
+  },
+  "gl_peak_dec": {
+    "value": 26.99,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch08.ixp.decix_global_peak_2025"
+    ]
+  },
+  "gl_peakdec_over_avg": {
+    "value": 1.346766835443038,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.decix_global_annual_2025",
+      "ch08.ixp.decix_global_peak_2025"
+    ]
+  },
+  "ny_share_pct": {
+    "value": 6.329113924050633,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.decix_global_annual_2025",
+      "ch08.ixp.decix_ny_annual_2025"
+    ]
+  },
+  "ny_over_ager": {
+    "value": 1.36986301369863,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.ager_daily_volume",
+      "ch08.ixp.decix_ny_annual_2025"
+    ]
+  },
+  "eq_dcs": {
+    "value": 280.0,
+    "unit": "data centers",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.equinix_interconnections_ar"
+    ]
+  },
+  "eq_markets": {
+    "value": 77.0,
+    "unit": "markets",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.equinix_interconnections_ar"
+    ]
+  },
+  "eq_per_dc": {
+    "value": 1810.7142857142858,
+    "unit": "interconnections per DC",
+    "digits": 3,
+    "inputs": [
+      "ch08.ixp.equinix_interconnections_ar"
+    ]
+  },
+  "eq_per_customer": {
+    "value": 48.285714285714285,
+    "unit": "interconnections per customer",
+    "digits": 2,
+    "inputs": [
+      "ch08.ixp.equinix_customers",
+      "ch08.ixp.equinix_interconnections_ar"
+    ]
+  },
+  "ow_ratio": {
+    "value": 1.2,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.hotel.one_wilshire_networks_coresite",
+      "ch08.hotel.one_wilshire_networks_owner"
+    ]
+  },
+  "sh_ratio": {
+    "value": 3.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.hotel.sixty_hudson_hudsonix",
+      "ch08.hotel.sixty_hudson_owner"
+    ]
+  },
+  "decl_98_10": {
+    "value": 36.66422877932346,
+    "unit": "%/yr",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.transit_price_1998",
+      "ch08.peering.transit_price_2010"
+    ]
+  },
+  "decl_10_15": {
+    "value": 33.919380010132336,
+    "unit": "%/yr",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.transit_price_2010",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "price_ratio_98_15": {
+    "value": 1904.7619047619048,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.transit_price_1998",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "tbe_98": {
+    "value": 8.333333333333334,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.transit_price_1998"
+    ]
+  },
+  "tbe_10": {
+    "value": 2000.0,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.transit_price_2010"
+    ]
+  },
+  "tbe_15": {
+    "value": 15873.015873015873,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "p_star": {
+    "value": 1.3157894736842106,
+    "unit": "USD/(Mb/s·month)",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw"
+    ]
+  },
+  "peer_unit_cost": {
+    "value": 1.3157894736842106,
+    "unit": "USD/(Mb/s·month)",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw"
+    ]
+  },
+  "t_star": {
+    "value": 2013.2223466754574,
+    "unit": "year",
+    "digits": 5,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2010",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "tbe15_over_teff": {
+    "value": 2.0885547201336676,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "ex_T": {
+    "value": 20.0,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "ex_phi": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "ex_ports": {
+    "value": 2.0,
+    "unit": "ports",
+    "digits": 1,
+    "inputs": [
+      "ch08.peering.effective_10g_bw"
+    ]
+  },
+  "ex_peered": {
+    "value": 8.0,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "ex_ctr_10": {
+    "value": 100000.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.transit_price_2010"
+    ]
+  },
+  "ex_cmix_10": {
+    "value": 80000.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2010"
+    ]
+  },
+  "ex_save_10": {
+    "value": 20000.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2010"
+    ]
+  },
+  "ex_ctr_15": {
+    "value": 12600.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "ex_cmix_15": {
+    "value": 27560.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "ex_save_15": {
+    "value": -14960.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2015"
+    ]
+  }
+}

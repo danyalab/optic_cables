@@ -1,0 +1,554 @@
+{
+  "dn_5e17": {
+    "value": -0.001666294920021134,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550",
+      "ch03.si.soref_worked_dn"
+    ]
+  },
+  "dn_e_5e17": {
+    "value": -0.00044,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "dn_h_5e17": {
+    "value": -0.0012262949200211339,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "hole_over_e": {
+    "value": 2.7870339091389407,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "dalpha_5e17": {
+    "value": 7.250000000000001,
+    "unit": "1/cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_worked_dn"
+    ]
+  },
+  "dalpha_5e17_db": {
+    "value": 31.48634993798576,
+    "unit": "dB/cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_worked_dn"
+    ]
+  },
+  "fom_e": {
+    "value": 0.00010352941176470586,
+    "unit": "cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "fom_h": {
+    "value": 0.00040876497334037796,
+    "unit": "cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "lpi_ideal": {
+    "value": 465.1037404532029,
+    "unit": "µm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "vbi": {
+    "value": 0.9,
+    "unit": "V",
+    "digits": 2,
+    "inputs": []
+  },
+  "w_wg": {
+    "value": 0.5,
+    "unit": "µm",
+    "digits": 2,
+    "inputs": []
+  },
+  "gamma_y": {
+    "value": 0.8,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "eps_si": {
+    "value": 11.7,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "wdep0": {
+    "value": 59.08931821223286,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": []
+  },
+  "wdep_vb": {
+    "value": 163.610913568431,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "vpil_avg": {
+    "value": 1.2515157901740377,
+    "unit": "V·cm",
+    "digits": 2,
+    "inputs": [
+      "ch03.si.feng_vpil",
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "vpil_ss0": {
+    "value": 0.6643167856892986,
+    "unit": "V·cm",
+    "digits": 2,
+    "inputs": [
+      "ch03.si.feng_vpil",
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "vpil_ss2": {
+    "value": 1.192256826101023,
+    "unit": "V·cm",
+    "digits": 2,
+    "inputs": [
+      "ch03.si.feng_vpil",
+      "ch03.si.soref_dn_electron_1550",
+      "ch03.si.soref_dn_hole_1550"
+    ]
+  },
+  "vb": {
+    "value": 6.0,
+    "unit": "V",
+    "digits": 2,
+    "inputs": [
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "vpp": {
+    "value": 2.0,
+    "unit": "V",
+    "digits": 2,
+    "inputs": []
+  },
+  "a_np": {
+    "value": 4.374911676688686,
+    "unit": "1/cm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss"
+    ]
+  },
+  "lopt": {
+    "value": 1.7784266790368042,
+    "unit": "mm",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "vpi_pp_opt": {
+    "value": 3.9360633095041058,
+    "unit": "V",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "il_opt": {
+    "value": 3.379010690169928,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "oma_opt_db": {
+    "value": -4.829454905082635,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "vpil_alpha_si": {
+    "value": 26.599999999999998,
+    "unit": "V·dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.si.feng_doping_loss",
+      "ch03.si.feng_vpil"
+    ]
+  },
+  "ring_lam": {
+    "value": 1180.0000000000002,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch03.ring.sun_q"
+    ]
+  },
+  "ring_lr": {
+    "value": 31.415926535897928,
+    "unit": "µm",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_q"
+    ]
+  },
+  "fsr": {
+    "value": 10.307318267960705,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "fsr_ghz": {
+    "value": 2219.230306621834,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "fwhm_pm": {
+    "value": 118.0,
+    "unit": "pm",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_q"
+    ]
+  },
+  "fwhm_ghz": {
+    "value": 25.40614050847457,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_q"
+    ]
+  },
+  "finesse": {
+    "value": 87.35015481322631,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "tau_ph": {
+    "value": 6.2644282014738515,
+    "unit": "ps",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_q"
+    ]
+  },
+  "ra": {
+    "value": 0.9646754365211762,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "dldt": {
+    "value": 50.0,
+    "unit": "pm/K",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_lock_range"
+    ]
+  },
+  "dndt": {
+    "value": 0.00018220338983050848,
+    "unit": "1/K",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_lock_range"
+    ]
+  },
+  "dT_fwhm": {
+    "value": 2.36,
+    "unit": "K",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_lock_range",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "k_per_mw": {
+    "value": 25.0,
+    "unit": "K/mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_lock_range"
+    ]
+  },
+  "p_fsr": {
+    "value": 8.245854614368564,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_range": {
+    "value": 2.4,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_heater_eff"
+    ]
+  },
+  "eo_ghz": {
+    "value": 31.195885327783564,
+    "unit": "GHz/V",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.timurdogan_eo_shift"
+    ]
+  },
+  "eo_shift_pm": {
+    "value": 125.00000000000001,
+    "unit": "pm",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.timurdogan_energy",
+      "ch03.ring.timurdogan_eo_shift"
+    ]
+  },
+  "eo_shift_over_fwhm": {
+    "value": 0.8064516129032259,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.ring.sun_q",
+      "ch03.ring.timurdogan_eo_shift"
+    ]
+  },
+  "e_sun": {
+    "value": 3.7500000000000004,
+    "unit": "fJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.sun_er_il"
+    ]
+  },
+  "c_timurdogan": {
+    "value": 14.4,
+    "unit": "fF",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.timurdogan_energy"
+    ]
+  },
+  "n_rings": {
+    "value": 8.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "spacing": {
+    "value": 1.288414783495088,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "spacing_ghz": {
+    "value": 277.4037883277293,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "sig_local": {
+    "value": 0.3,
+    "unit": "nm",
+    "digits": 2,
+    "inputs": []
+  },
+  "br": {
+    "value": 50.0,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "p_fixed_mean": {
+    "value": 4.145780276243776,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_fixed_bus": {
+    "value": 33.166242209950205,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_fixed_p99": {
+    "value": 8.166353229804509,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_bar_mean": {
+    "value": 0.8572619934420239,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_bar_bus": {
+    "value": 6.858095947536191,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_bar_p99": {
+    "value": 8.010717784282384,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_bar0_mean": {
+    "value": 0.5156288737925211,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "p_bar_hot_mean": {
+    "value": 0.8557157686404756,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_lock_range",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "fj_fixed": {
+    "value": 82.91560552487553,
+    "unit": "fJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "fj_bar": {
+    "value": 17.14523986884048,
+    "unit": "fJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "frac_fixed_over_range": {
+    "value": 71.460625,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "frac_bar_over_range": {
+    "value": 1.1581249999999998,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_heater_eff",
+      "ch03.ring.sun_q"
+    ]
+  },
+  "tuning_ratio": {
+    "value": 4.836071478682849,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.ring.bogaerts_ng",
+      "ch03.ring.sun_q"
+    ]
+  }
+}

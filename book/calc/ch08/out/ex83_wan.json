@@ -1,0 +1,247 @@
+{
+  "gain_lo": {
+    "value": 1.75,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4.avg_util",
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "gain_hi": {
+    "value": 2.3333333333333335,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4.avg_util",
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "gain_mid": {
+    "value": 2.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.avg_util",
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "op_lo": {
+    "value": 2.5,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "op_hi": {
+    "value": 3.3333333333333335,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4.typical_wan_util"
+    ]
+  },
+  "b4_ndoublings": {
+    "value": 6.643856189774724,
+    "unit": "doublings",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.traffic_growth_5y"
+    ]
+  },
+  "b4_td_months": {
+    "value": 9.030899869919434,
+    "unit": "months",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.traffic_growth_5y"
+    ]
+  },
+  "b4_td_diff_pct": {
+    "value": 0.3433318879937117,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4after.doubling_time",
+      "ch08.b4after.traffic_growth_5y"
+    ]
+  },
+  "b4_annual_factor": {
+    "value": 2.51188643150958,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.traffic_growth_5y"
+    ]
+  },
+  "b4_annual_pct": {
+    "value": 151.188643150958,
+    "unit": "%/yr",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.traffic_growth_5y"
+    ]
+  },
+  "b4_5y_from_9m": {
+    "value": 101.59366732596479,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.doubling_time"
+    ]
+  },
+  "zhao_td_lo": {
+    "value": 20.514135496217456,
+    "unit": "months",
+    "digits": 3,
+    "inputs": [
+      "ch08.google_optical.traffic_growth"
+    ]
+  },
+  "zhao_td_hi": {
+    "value": 17.69723816828338,
+    "unit": "months",
+    "digits": 3,
+    "inputs": [
+      "ch08.google_optical.traffic_growth"
+    ]
+  },
+  "ebb_years": {
+    "value": 8.0,
+    "unit": "years",
+    "digits": 1,
+    "inputs": [
+      "ch08.ebb.traffic_growth"
+    ]
+  },
+  "ebb_td_months": {
+    "value": 14.449439791871095,
+    "unit": "months",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.traffic_growth"
+    ]
+  },
+  "ebb_annual_pct": {
+    "value": 77.82794100389228,
+    "unit": "%/yr",
+    "digits": 2,
+    "inputs": [
+      "ch08.ebb.traffic_growth"
+    ]
+  },
+  "win_min": {
+    "value": 43200.0,
+    "unit": "min",
+    "digits": 5,
+    "inputs": []
+  },
+  "unavail_lo": {
+    "value": 432.0000000000004,
+    "unit": "min",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.availability"
+    ]
+  },
+  "unavail_hi": {
+    "value": 4.32000000000432,
+    "unit": "min",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.availability"
+    ]
+  },
+  "slo0_min": {
+    "value": 0.4320000000028301,
+    "unit": "min",
+    "digits": 2,
+    "inputs": [
+      "ch08.blastshield.slo"
+    ]
+  },
+  "slo1_min": {
+    "value": 43.19999999999524,
+    "unit": "min",
+    "digits": 2,
+    "inputs": [
+      "ch08.blastshield.slo"
+    ]
+  },
+  "sg_over_sat_lo": {
+    "value": 12.799999999999999,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.saturn_capacity",
+      "ch08.b4after.stargate_capacity"
+    ]
+  },
+  "sg_over_sat_hi": {
+    "value": 25.599999999999998,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.saturn_capacity",
+      "ch08.b4after.stargate_capacity"
+    ]
+  },
+  "sg_fiber_pairs_2013": {
+    "value": 6.826666666666667,
+    "unit": "fiber pairs",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4after.stargate_capacity",
+      "ch08.google_optical.fiber_pair_capacity"
+    ]
+  },
+  "plane_ceiling_4": {
+    "value": 75.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.planes"
+    ]
+  },
+  "plane_loss_4": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.planes"
+    ]
+  },
+  "plane_ceiling_8": {
+    "value": 87.5,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.planes"
+    ]
+  },
+  "plane_loss_8": {
+    "value": 12.5,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.planes"
+    ]
+  },
+  "swan_factor": {
+    "value": 1.6,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.swan.gain_vs_mpls"
+    ]
+  },
+  "blast_remaining": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.blastshield.loss_reduction"
+    ]
+  }
+}

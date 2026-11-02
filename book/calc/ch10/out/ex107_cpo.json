@@ -1,0 +1,124 @@
+{
+  "nv_n": {
+    "value": 3.5,
+    "unit": "x",
+    "digits": 2,
+    "inputs": [
+      "ch10.open.nvidia_cpo_efficiency"
+    ]
+  },
+  "nv_p_pct": {
+    "value": 71.42857142857143,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.open.nvidia_cpo_efficiency"
+    ]
+  },
+  "bd_n": {
+    "value": 3.333333333333333,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch10.open.broadcom_th6_davisson"
+    ]
+  },
+  "meta_n": {
+    "value": 2.857142857142857,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_65pct"
+    ]
+  },
+  "bailly_n": {
+    "value": 3.333333333333333,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.bailly_70pct_claim"
+    ]
+  },
+  "ev_opt_n": {
+    "value": 4.125,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_sw_n": {
+    "value": 1.5636452479843634,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_sw_p_pct": {
+    "value": 36.046875,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "nv_dloss": {
+    "value": 18.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch10.open.nvidia_cpo_loss"
+    ]
+  },
+  "nv_lin": {
+    "value": 63.09573444801933,
+    "unit": "x",
+    "digits": 2,
+    "inputs": [
+      "ch10.open.nvidia_cpo_loss"
+    ]
+  },
+  "nv_q63": {
+    "value": 63.0,
+    "unit": "x",
+    "digits": 2,
+    "inputs": [
+      "ch10.open.nvidia_cpo_efficiency"
+    ]
+  },
+  "cw_ratio": {
+    "value": 4.285714285714286,
+    "unit": "x",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_cw70_mass",
+      "ch10.open.yuanjie_cw300_dev"
+    ]
+  },
+  "cw_ratio_db": {
+    "value": 6.320232147054056,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_cw70_mass",
+      "ch10.open.yuanjie_cw300_dev"
+    ]
+  },
+  "sumi_x": {
+    "value": 4.0,
+    "unit": "x",
+    "digits": 1,
+    "inputs": [
+      "ch10.open.sumitomo_cpo_cw_power"
+    ]
+  },
+  "pls_ports": {
+    "value": 8.0,
+    "unit": "ports",
+    "digits": 1,
+    "inputs": [
+      "ch04.cpo.meta_pls_8ports"
+    ]
+  }
+}

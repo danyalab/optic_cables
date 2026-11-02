@@ -1,0 +1,193 @@
+{
+  "tpp_a1": {
+    "value": 4800.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.ctl.3a090a_tpp_4800"
+    ]
+  },
+  "tpp_a2": {
+    "value": 1600.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "pd_a2": {
+    "value": 5.92,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "mac_int8": {
+    "value": 300.0,
+    "unit": "MacTOPS",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090_example_fp16"
+    ]
+  },
+  "tflops16": {
+    "value": 300.0,
+    "unit": "TFLOPS",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090_example_fp16"
+    ]
+  },
+  "mac_fp16": {
+    "value": 150.0,
+    "unit": "MacTOPS",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090_example_fp16"
+    ]
+  },
+  "tflops8_at_a1": {
+    "value": 600.0,
+    "unit": "TFLOPS",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a_tpp_4800"
+    ]
+  },
+  "adie_at_1600": {
+    "value": 270.27027027027026,
+    "unit": "mm²",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92"
+    ]
+  },
+  "adie_at_4800": {
+    "value": 810.8108108108108,
+    "unit": "mm²",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.3a090a2_tpp_1600_pd_5p92",
+      "ch10.ctl.3a090a_tpp_4800"
+    ]
+  },
+  "asof_to_aff_end": {
+    "value": 7.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch10.ctl.affiliates_rule_stayed"
+    ]
+  },
+  "asof_to_m70_end": {
+    "value": 8.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch10.ctl.mofcom2025_70_suspension"
+    ]
+  },
+  "asof_to_m72_end": {
+    "value": 25.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch10.ctl.mofcom2025_72_suspend46"
+    ]
+  },
+  "m72_len": {
+    "value": 383.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.mofcom2025_72_suspend46"
+    ]
+  },
+  "m70_len": {
+    "value": 368.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.mofcom2025_70_suspension"
+    ]
+  },
+  "aid_gap": {
+    "value": 2.0,
+    "unit": "days",
+    "digits": 1,
+    "inputs": [
+      "ch10.ctl.ai_diffusion_compliance",
+      "ch10.ctl.ai_diffusion_rescission"
+    ]
+  },
+  "aff_in_force_to_stay_pub": {
+    "value": 44.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch10.ctl.affiliates_rule_50pct"
+    ]
+  },
+  "m23_notice": {
+    "value": 29.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch10.ctl.mofcom2023_23_effective"
+    ]
+  },
+  "m46_to_m72_len": {
+    "value": 341.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.mofcom2024_46_us_ban"
+    ]
+  },
+  "s5548_years": {
+    "value": 5.0,
+    "unit": "years",
+    "digits": 1,
+    "inputs": [
+      "ch10.ctl.s5548_transition"
+    ]
+  },
+  "asof_year": {
+    "value": 2026.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": []
+  },
+  "cv": {
+    "value": 1000.0,
+    "unit": "USD",
+    "digits": 4,
+    "inputs": []
+  },
+  "duty_tx": {
+    "value": 75.0,
+    "unit": "USD",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.s301_transceiver_7p5pct"
+    ]
+  },
+  "duty_pd": {
+    "value": 500.0,
+    "unit": "USD",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.s301_semis_50pct"
+    ]
+  },
+  "duty_ratio": {
+    "value": 6.666666666666667,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.s301_semis_50pct",
+      "ch10.ctl.s301_transceiver_7p5pct"
+    ]
+  }
+}

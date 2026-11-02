@@ -1,0 +1,414 @@
+{
+  "oh_pct": {
+    "value": 15.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "eta100": {
+    "value": 1.7391304347826089,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": []
+  },
+  "rs_gbd": {
+    "value": 28.749999999999996,
+    "unit": "GBd",
+    "digits": 4,
+    "inputs": []
+  },
+  "shannon100_db": {
+    "value": 3.6890746045086025,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "gap_db": {
+    "value": 2.810925395491398,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "th50": {
+    "value": 1.9865695776400325,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "m50": {
+    "value": -4.513430422359967,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "th150": {
+    "value": 9.886218164482116,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "m150": {
+    "value": 3.3862181644821163,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "th175": {
+    "value": 11.411168037969654,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "m175": {
+    "value": 4.911168037969654,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "th200": {
+    "value": 12.873234781746222,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "m200": {
+    "value": 6.373234781746222,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "step_100_150": {
+    "value": 3.3862181644821163,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "step_150_175": {
+    "value": 1.5249498734875377,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "step_175_200": {
+    "value": 1.4620667437765675,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "rate_at_102": {
+    "value": 155.04014368300074,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_150g_example",
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "rate_at_3": {
+    "value": 59.32541760504774,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g",
+      "ch08.radwan.snr_req_50g"
+    ]
+  },
+  "dRdB_hi": {
+    "value": 19.10108654560233,
+    "unit": "Gb/s per dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "dRdB_100": {
+    "value": 13.379352792562711,
+    "unit": "Gb/s per dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "db_per_bit": {
+    "value": 3.010299956639812,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "pt_bol": {
+    "value": 14.5,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_eol": {
+    "value": 9.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_len": {
+    "value": 600.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_dmargin": {
+    "value": 2.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_rate_eol": {
+    "value": 210.96549252168322,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol",
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "pt_rate_bol": {
+    "value": 311.2002680669781,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol",
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "implied_step_8qam": {
+    "value": 1.5490195998574317,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reach_8qam",
+      "ch08.radwan.reach_qpsk"
+    ]
+  },
+  "model_step_8qam": {
+    "value": 3.3862181644821163,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "model_reach_8qam": {
+    "value": 1375.6230310051085,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reach_qpsk",
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "implied_step_16qam": {
+    "value": 5.740312677277188,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reach_16qam",
+      "ch08.radwan.reach_qpsk"
+    ]
+  },
+  "model_step_16qam": {
+    "value": 6.373234781746222,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "model_reach_16qam": {
+    "value": 691.5089040087018,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reach_qpsk",
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "dR75": {
+    "value": 75.0,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": [
+      "ch08.radwan.above_100g_threshold",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "per_link_lo": {
+    "value": 48.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "per_link_hi": {
+    "value": 79.5,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.above_100g_threshold",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "fleet_lo_2k": {
+    "value": 96.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.links_analyzed_preprint",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "fleet_hi_2k": {
+    "value": 159.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.above_100g_threshold",
+      "ch08.radwan.links_analyzed_preprint",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "fleet_lo_8k": {
+    "value": 384.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.links_analyzed",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "fleet_hi_8k": {
+    "value": 636.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.above_100g_threshold",
+      "ch08.radwan.links_analyzed",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "n_implied": {
+    "value": 2791.6666666666665,
+    "unit": "links",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.capacity_gain",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "n_implied_hi": {
+    "value": 1685.5345911949685,
+    "unit": "links",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.above_100g_threshold",
+      "ch08.radwan.capacity_gain",
+      "ch08.radwan.upgradable_fraction"
+    ]
+  },
+  "avg_gain_2k": {
+    "value": 67.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.capacity_gain",
+      "ch08.radwan.links_analyzed_preprint"
+    ]
+  },
+  "avg_gain_8k": {
+    "value": 16.75,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.capacity_gain",
+      "ch08.radwan.links_analyzed"
+    ]
+  },
+  "churn_gb_100": {
+    "value": 850.0,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_latency"
+    ]
+  },
+  "churn_fast_gb_100": {
+    "value": 0.4375,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_fast"
+    ]
+  },
+  "churn_gb_175": {
+    "value": 1487.5,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_latency"
+    ]
+  },
+  "churn_fast_gb_175": {
+    "value": 0.765625,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_fast"
+    ]
+  },
+  "churn_ratio": {
+    "value": 1942.8571428571427,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_fast",
+      "ch08.radwan.reconfig_latency"
+    ]
+  },
+  "swing_db": {
+    "value": 2.0,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": [
+      "ch08.radwan.snr_weekly_variation"
+    ]
+  }
+}

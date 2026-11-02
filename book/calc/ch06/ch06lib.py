@@ -164,3 +164,16 @@ def savefig(fig, name):
     FIGDIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGDIR / f"{name}.svg", format="svg", bbox_inches="tight", transparent=True,
                 metadata={"Date": None})
+
+
+def mmse_penalty_db(Rs, B, bw_otf, n, snr0_db, npts=4001):
+    """Linear-MMSE equalizer penalty, 10 log10(SNR0 / SNR_MMSE), Nyquist signal.
+
+    SNR_MMSE = 1 / < 1 / (1 + SNR0 |H|^2) > - 1 over |f| <= Rs/2 (noise added after the filters).
+    """
+    import numpy as np
+    f = np.linspace(-Rs / 2, Rs / 2, npts)
+    h2 = wss_power_transfer(f, B, bw_otf, n)
+    s0 = 10 ** (snr0_db / 10)
+    s = 1.0 / float(np.mean(1.0 / (1.0 + s0 * h2))) - 1.0
+    return 10 * math.log10(s0 / s)

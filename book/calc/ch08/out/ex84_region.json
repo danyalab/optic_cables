@@ -1,0 +1,250 @@
+{
+  "ng": {
+    "value": 1.4682,
+    "unit": "1",
+    "digits": 5,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "us_per_km": {
+    "value": 4.897388045699269,
+    "unit": "µs/km",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "km_per_ms_rtt": {
+    "value": 102.09523838714071,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "ow_120": {
+    "value": 0.5876865654839122,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.iris.max_dc_distance"
+    ]
+  },
+  "rtt_120": {
+    "value": 1.1753731309678244,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.iris.max_dc_distance"
+    ]
+  },
+  "rtt_dev_pct": {
+    "value": -2.052239086014633,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.iris.max_dc_distance",
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "d_from_rtt": {
+    "value": 122.51428606456885,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "hub_km": {
+    "value": 60.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.max_dc_distance"
+    ]
+  },
+  "d_vacuum": {
+    "value": 179.8754748,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "rtt_120_vac": {
+    "value": 0.8005538284755649,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch08.iris.max_dc_distance"
+    ]
+  },
+  "alpha_iris": {
+    "value": 0.25,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.unamplified_reach"
+    ]
+  },
+  "loss_80": {
+    "value": 20.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.iris.unamplified_reach"
+    ]
+  },
+  "loss_120": {
+    "value": 30.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch08.iris.max_dc_distance",
+      "ch08.iris.unamplified_reach"
+    ]
+  },
+  "loss_extra": {
+    "value": 10.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.max_dc_distance",
+      "ch08.iris.unamplified_reach"
+    ]
+  },
+  "osnr_tol": {
+    "value": 11.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.osnr_penalty_tolerance"
+    ]
+  },
+  "wl_rate": {
+    "value": 400.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.iris.dc_capacity_example"
+    ]
+  },
+  "wl_count": {
+    "value": 40.0,
+    "unit": "wavelengths",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.dc_capacity_example"
+    ]
+  },
+  "per_pair": {
+    "value": 16.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch08.iris.dc_capacity_example"
+    ]
+  },
+  "pairs": {
+    "value": 10.0,
+    "unit": "fiber pairs",
+    "digits": 2,
+    "inputs": [
+      "ch08.iris.dc_capacity_example"
+    ]
+  },
+  "chisel_band": {
+    "value": 4.8,
+    "unit": "THz",
+    "digits": 2,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "chisel_px": {
+    "value": 128.0,
+    "unit": "pixels",
+    "digits": 3,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "chisel_pxw": {
+    "value": 37.5,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "free_thz": {
+    "value": 3.6,
+    "unit": "THz",
+    "digits": 2,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "free_px": {
+    "value": 96.0,
+    "unit": "pixels",
+    "digits": 2,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "se_long": {
+    "value": 2.0,
+    "unit": "b/s/Hz",
+    "digits": 2,
+    "inputs": []
+  },
+  "free_cap_long": {
+    "value": 7.2,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "se_zr": {
+    "value": 5.333333333333333,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_channel_plans"
+    ]
+  },
+  "free_cap_zr": {
+    "value": 19.2,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_channel_plans",
+      "ch08.chisel.unused_spectrum"
+    ]
+  },
+  "austin_ow_ms": {
+    "value": 13.712686527957953,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.chisel.austin_nyc_reach"
+    ]
+  }
+}

@@ -88,3 +88,26 @@ def savefig(fig, name):
     FIGDIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGDIR / f"{name}.svg", format="svg", bbox_inches="tight", transparent=True,
                 metadata={"Date": None})
+
+
+# ---------- values reported by the Chapter 8 blind verifier ----------
+# The verifier (book/verify/ch08_report.yaml) quotes superseding values that are not
+# yet separate ledger records. We read them from its verbatim `evidence`/`action` text,
+# assert the quoted string, and use them only inside contested boxes (tier C sources).
+def verifier_entry(rid):
+    import yaml
+    path = pathlib.Path(__file__).resolve().parents[2] / "verify" / "ch08_report.yaml"
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    for e in data["results"]:
+        if e["id"] == rid:
+            return e
+    raise KeyError(rid)
+
+
+def verifier_number(rid, pattern, field="action"):
+    import re
+    text = str(verifier_entry(rid)[field])
+    m = re.search(pattern, text)
+    if not m:
+        raise KeyError(f"{pattern!r} not in verifier {field} of {rid}")
+    return float(m.group(1))

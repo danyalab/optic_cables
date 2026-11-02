@@ -1,0 +1,201 @@
+{
+  "p1_V_kv": {
+    "value": 20.0,
+    "unit": "kV",
+    "digits": 2,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.pfe_voltage_range_dry_plant",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "p1_P_kw": {
+    "value": 9.955201592832255,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.pfe_voltage_range_dry_plant",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "p1_I_a": {
+    "value": 0.9955201592832255,
+    "unit": "A",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.pfe_voltage_range_dry_plant",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "p1_Prep_w": {
+    "value": 34.68711356387545,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.pfe_voltage_range_dry_plant",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "p1_ratio": {
+    "value": 3.9682539682539684,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.pfe_voltage_range_dry_plant",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "p2_Pdouble_kw": {
+    "value": 10.034843205574912,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": []
+  },
+  "p2_I_a": {
+    "value": 0.8362369337979094,
+    "unit": "A",
+    "digits": 3,
+    "inputs": []
+  },
+  "p3_exact_db": {
+    "value": 6.921022223625423,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p3_highgain_db": {
+    "value": 8.685889638065035,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p3_margin_db": {
+    "value": 9.12291529502247,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p3_km": {
+    "value": 52.64175538221233,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "p4_q": {
+    "value": 0.5738134648681904,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "p4_exact": {
+    "value": 1.2490384781796833,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "p4_approx": {
+    "value": 1.0712735083704725,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "p4_err_pct": {
+    "value": -14.232145199264068,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "p4_qsmall": {
+    "value": 0.01,
+    "unit": "",
+    "digits": 1,
+    "inputs": []
+  },
+  "p4_small_err_pct": {
+    "value": -2.2771783483905073,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "p5_frac_pct": {
+    "value": 44.46344558806195,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_cinf_gbps_per_w": {
+    "value": 229.6698114552368,
+    "unit": "Gb/s per W",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_pj_per_bit_opt": {
+    "value": 9.792486282499631,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_pj_per_bit_8": {
+    "value": 13.935494313255981,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": []
+  },
+  "p7_N": {
+    "value": 140.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "p7_snr_db": {
+    "value": 5.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "p7_pen_db": {
+    "value": 0.6990450888222384,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "p8_drop_db": {
+    "value": 1.2493873660829993,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p8_pen_db": {
+    "value": 0.010328054377678406,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "p9_fit": {
+    "value": 97.78038525471791,
+    "unit": "FIT",
+    "digits": 2,
+    "inputs": [
+      "ch07.arch.design_life_25y",
+      "ch07.arch.reliability_lt3_ship_repairs"
+    ]
+  },
+  "p10_pch_dbm": {
+    "value": -4.466061958398867,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": []
+  },
+  "p10_osnr_db": {
+    "value": 17.293026901115134,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  }
+}

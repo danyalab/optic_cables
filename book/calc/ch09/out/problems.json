@@ -1,0 +1,295 @@
+{
+  "p1_ow_1": {
+    "value": 204.19047677428145,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "p1_rtt_1": {
+    "value": 102.09523838714072,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "p1_ow_5": {
+    "value": 1020.9523838714073,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "p1_rtt_5": {
+    "value": 510.47619193570364,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "p1_ow_20": {
+    "value": 4083.809535485629,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "p1_rtt_20": {
+    "value": 2041.9047677428146,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "p2_geo_min": {
+    "value": 474.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.dsxs.latency_1p5x_theory",
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "p2_tau": {
+    "value": 3.4820429004921793,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "p2_tau_theory_min": {
+    "value": 2.321361933661453,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_1p5x_theory",
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "p3_nch": {
+    "value": 120.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cmcc_qpsk_130gbd_150ghz",
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "p3_cap": {
+    "value": 48.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.cmcc_capacity_32t",
+      "ch09.l400.cmcc_qpsk_130gbd_150ghz",
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "p3_se": {
+    "value": 4.0,
+    "unit": "b/(s·Hz)",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.cmcc_capacity_32t",
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "p3_bits": {
+    "value": 2.2222222222222223,
+    "unit": "bit",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cmcc_capacity_32t",
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "p3_shannon": {
+    "value": 5.642062211585115,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cmcc_capacity_32t",
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "p4_fixed_psd": {
+    "value": 4.128768,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cu_400g_cl_1650km",
+      "ch09.l400.srs_peak_13p4",
+      "ch09.l400.srs_power_transfer_7db"
+    ]
+  },
+  "p4_fixed_ptot": {
+    "value": 5.376,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cu_400g_cl_1650km",
+      "ch09.l400.srs_peak_13p4",
+      "ch09.l400.srs_power_transfer_7db"
+    ]
+  },
+  "p5_dnf": {
+    "value": 1.5999999999999996,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.ecoc2023_edfa_nf"
+    ]
+  },
+  "p5_pen": {
+    "value": 1.0666666666666664,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.ecoc2023_edfa_nf"
+    ]
+  },
+  "p5_reach_frac": {
+    "value": 78.22279563860026,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.ecoc2023_edfa_nf"
+    ]
+  },
+  "p6_cagr": {
+    "value": 25.812585215825877,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "p6_double": {
+    "value": 3.018628764214336,
+    "unit": "yr",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.exit_bw_2022"
+    ]
+  },
+  "p6_yrs_to_fiber": {
+    "value": 2.393441242702779,
+    "unit": "yr",
+    "digits": 2,
+    "inputs": [
+      "ch09.intl.exit_bw_2022",
+      "ch09.l400.cmcc_capacity_32t"
+    ]
+  },
+  "p7_k": {
+    "value": 7.526881720430108,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025",
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "p7_share": {
+    "value": 1328.5714285714284,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025",
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "p8_ng": {
+    "value": 1.4634633611235754,
+    "unit": "",
+    "digits": 5,
+    "inputs": [
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "p8_us_per_km": {
+    "value": 4.881588319088319,
+    "unit": "µs/km",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "p8_dkm": {
+    "value": 18.118079233074315,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "p9_spans_d3": {
+    "value": 3.6666666666666665,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "p9_km_d3": {
+    "value": 293.3333333333333,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "p9_spans_d4": {
+    "value": 3.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "p9_km_d4": {
+    "value": 240.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "p10_ratio": {
+    "value": 1.4,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.avg_util",
+      "ch09.op.cn2_light_loading_50pct"
+    ]
+  },
+  "p10_extra_pct": {
+    "value": 39.99999999999999,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.avg_util",
+      "ch09.op.cn2_light_loading_50pct"
+    ]
+  }
+}

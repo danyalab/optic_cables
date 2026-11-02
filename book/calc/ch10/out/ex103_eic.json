@@ -1,0 +1,100 @@
+{
+  "mrvl_opt_share_pct": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.chain.marvell_optical_share_of_dc"
+    ]
+  },
+  "mrvl_opt_est": {
+    "value": 3.05015,
+    "unit": "BUSD",
+    "digits": 2,
+    "inputs": [
+      "ch10.chain.marvell_fy26_datacenter",
+      "ch10.chain.marvell_optical_share_of_dc"
+    ]
+  },
+  "ux25": {
+    "value": 1.6708,
+    "unit": "CNY million",
+    "digits": 5,
+    "inputs": [
+      "ch10.eic.youxun_25g_plus_sales_h1_2025"
+    ]
+  },
+  "uxtot": {
+    "value": 238.4077,
+    "unit": "CNY million",
+    "digits": 5,
+    "inputs": [
+      "ch10.eic.youxun_total_rev_h1_2025"
+    ]
+  },
+  "ux25_pct": {
+    "value": 0.7008162907489985,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.eic.youxun_25g_plus_sales_h1_2025",
+      "ch10.eic.youxun_total_rev_h1_2025"
+    ]
+  },
+  "mxl_infra_pct": {
+    "value": 32.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.eic.maxlinear_infra_share"
+    ]
+  },
+  "p16_total": {
+    "value": 22.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p16_dsp_share_pct": {
+    "value": 59.6,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p16_dsp_w": {
+    "value": 13.112,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p8_dsp_share_pct": {
+    "value": 70.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "p8_dsp_w_hi": {
+    "value": 8.399999999999999,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "p8_total_hi": {
+    "value": 12.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  }
+}

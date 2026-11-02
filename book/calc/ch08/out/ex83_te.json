@@ -1,0 +1,218 @@
+{
+  "sp_total": {
+    "value": 2.4,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "sp_util": {
+    "value": 48.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "sp_f1": {
+    "value": 0.5,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "sp_f2": {
+    "value": 0.8,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "sp_f3": {
+    "value": 0.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "sp_f4": {
+    "value": 0.5,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "mmf_total": {
+    "value": 3.1,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "mmf_util": {
+    "value": 76.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "mmf_f1": {
+    "value": 1.2,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "mmf_f2": {
+    "value": 0.8,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "mmf_f3": {
+    "value": 0.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "mmf_f4": {
+    "value": 0.5,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan_total": {
+    "value": 3.1,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan_util": {
+    "value": 76.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan_f1": {
+    "value": 1.2,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan_f2": {
+    "value": 0.8,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan_f3": {
+    "value": 0.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan_f4": {
+    "value": 0.5,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan10_total": {
+    "value": 2.85,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan10_util": {
+    "value": 67.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan10_f1": {
+    "value": 0.9500000000000001,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan10_f2": {
+    "value": 0.8,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan10_f3": {
+    "value": 0.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "swan10_f4": {
+    "value": 0.5,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "gain_mmf_vs_sp": {
+    "value": 29.166666666666675,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "cap_total": {
+    "value": 5.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "dem_total": {
+    "value": 3.9,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "into_c": {
+    "value": 2.5,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "alpha": {
+    "value": 2.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "U0": {
+    "value": 0.1,
+    "unit": "Tb/s",
+    "digits": 1,
+    "inputs": []
+  },
+  "scratch": {
+    "value": 10.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "swan10_loss": {
+    "value": 8.064516129032262,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "d1": {
+    "value": 2.0,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "d2": {
+    "value": 0.8,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "d3": {
+    "value": 0.6,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "d4": {
+    "value": 0.5,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  }
+}

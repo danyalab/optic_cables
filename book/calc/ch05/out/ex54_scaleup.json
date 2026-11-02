@@ -1,0 +1,330 @@
+{
+  "nvl4_dir_tbps": {
+    "value": 3.6,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "nvl4_link_GBps": {
+    "value": 50.0,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "nvl4_links": {
+    "value": 18.0,
+    "unit": "links",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "nvl4_ratio": {
+    "value": 9.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.cx7_400g",
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "nvl5_dir_tbps": {
+    "value": 7.2,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "nvl5_link_GBps": {
+    "value": 100.0,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "nvl5_links": {
+    "value": 18.0,
+    "unit": "links",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "nvl5_ratio": {
+    "value": 9.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.cx8_800g",
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "nvl6_dir_tbps": {
+    "value": 12.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink6_3000"
+    ]
+  },
+  "nvl6_link_GBps": {
+    "value": 83.33333333333333,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink6_3000"
+    ]
+  },
+  "nvl6_links": {
+    "value": 36.0,
+    "unit": "links",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvlink6_3000"
+    ]
+  },
+  "nvl6_ratio": {
+    "value": 15.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.cx8_800g",
+      "ch05.su.nvlink6_3000"
+    ]
+  },
+  "nvl72_ports": {
+    "value": 1296.0,
+    "unit": "ports",
+    "digits": 4,
+    "inputs": [
+      "ch05.su.nvl72_switch_tray"
+    ]
+  },
+  "nvl72_agg": {
+    "value": 129.6,
+    "unit": "TB/s",
+    "digits": 4,
+    "inputs": [
+      "ch05.su.nvl72_130tbs"
+    ]
+  },
+  "nvl72_gpus": {
+    "value": 72.0,
+    "unit": "GPUs",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvl72_130tbs"
+    ]
+  },
+  "cables_per_link": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch05.su.nvl72_5184_cables"
+    ]
+  },
+  "link_dir_gbps": {
+    "value": 400.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "lane_gbps": {
+    "value": 200.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvl72_5184_cables",
+      "ch05.su.nvl72_switch_tray"
+    ]
+  },
+  "spine_kw_blog": {
+    "value": 19.439999999999998,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.transceiver_1p6t_30w"
+    ]
+  },
+  "spine_vs_claim_blog": {
+    "value": 97.19999999999999,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvl72_optics_20kw_claim"
+    ]
+  },
+  "spine_tbps": {
+    "value": 518.4,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "spine_xcvr": {
+    "value": 647.9999999999999,
+    "unit": "transceivers",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "spine_kw": {
+    "value": 16.199999999999996,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch05.su.nvlink5_1800"
+    ]
+  },
+  "spine_vs_claim": {
+    "value": 80.99999999999999,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvl72_optics_20kw_claim"
+    ]
+  },
+  "cpo_ratio_bcm": {
+    "value": 2.5454545454545454,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "spine_kw_cpo": {
+    "value": 6.364285714285713,
+    "unit": "kW",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "spine_w_per_gpu": {
+    "value": 224.99999999999994,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "ua_oh": {
+    "value": 1.0625,
+    "unit": "",
+    "digits": 5,
+    "inputs": [
+      "ch05.su.ualink_lane_rate"
+    ]
+  },
+  "ua_station": {
+    "value": 800.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.ualink_station_800g"
+    ]
+  },
+  "ua_stations_for_nvl5": {
+    "value": 9.0,
+    "unit": "stations",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvlink5_1800",
+      "ch05.su.ualink_station_800g"
+    ]
+  },
+  "iw_dir_tbps": {
+    "value": 4.8,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.ironwood_ici"
+    ]
+  },
+  "iw_ratio": {
+    "value": 48.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.ironwood_dcn_100g",
+      "ch05.su.ironwood_ici"
+    ]
+  },
+  "cm_die_gbps": {
+    "value": 1568.0,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch05.su.cloudmatrix_ub_bw"
+    ]
+  },
+  "cm_dir_tbps": {
+    "value": 3.136,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.cloudmatrix_ub_bw"
+    ]
+  },
+  "cm_out_gbps": {
+    "value": 400.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.cloudmatrix_ub_bw"
+    ]
+  },
+  "cm_ratio": {
+    "value": 7.84,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.cloudmatrix_ub_bw"
+    ]
+  },
+  "bc_links_per_gpu": {
+    "value": 64.0,
+    "unit": "links",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.broadcom_512_scaleup"
+    ]
+  },
+  "bc_tot_pbps": {
+    "value": 6.5536,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.broadcom_512_scaleup"
+    ]
+  },
+  "lat_ratio": {
+    "value": 10.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "tp_vs_nvl4": {
+    "value": 15.52854938271605,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.nvlink4_900"
+    ]
+  }
+}

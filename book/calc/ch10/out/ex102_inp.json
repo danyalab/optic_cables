@@ -1,0 +1,218 @@
+{
+  "yj_rev": {
+    "value": 601.43,
+    "unit": "CNY million",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_revenue"
+    ]
+  },
+  "yj_growth_pct": {
+    "value": 138.5,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_revenue"
+    ]
+  },
+  "yj_rev24": {
+    "value": 252.17190775681343,
+    "unit": "CNY million",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_revenue"
+    ]
+  },
+  "yj_dc_share_pct": {
+    "value": 65.38749314134647,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue",
+      "ch10.inp.yuanjie_2025_revenue"
+    ]
+  },
+  "yj_dc_growth_pct": {
+    "value": 719.06,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue"
+    ]
+  },
+  "yj_dc_x": {
+    "value": 8.1906,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue"
+    ]
+  },
+  "yj_asp": {
+    "value": 22.193002257336342,
+    "unit": "CNY/chip",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_revenue",
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "yj_unit_cost": {
+    "value": 6.16743532731377,
+    "unit": "CNY/chip",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_gm",
+      "ch10.inp.yuanjie_2025_dc_revenue",
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "yj_dc_gm_pct": {
+    "value": 72.21,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_gm"
+    ]
+  },
+  "yj_export_pct": {
+    "value": 0.31757644281129976,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_export_share",
+      "ch10.inp.yuanjie_2025_revenue"
+    ]
+  },
+  "yj_prod": {
+    "value": 19.26,
+    "unit": "million chips",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "yj_units": {
+    "value": 17.72,
+    "unit": "million chips",
+    "digits": 4,
+    "inputs": [
+      "ch10.inp.yuanjie_2025_dc_units"
+    ]
+  },
+  "axt_na24_pct": {
+    "value": 8.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.inp.axt_na_revenue_share_2025"
+    ]
+  },
+  "axt_na25_pct": {
+    "value": 2.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.inp.axt_na_revenue_share_2025"
+    ]
+  },
+  "axt_na_factor": {
+    "value": 4.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch10.inp.axt_na_revenue_share_2025"
+    ]
+  },
+  "axt_sub_pct": {
+    "value": 67.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch10.inp.axt_substrate_share_of_revenue"
+    ]
+  },
+  "axt_permit_days": {
+    "value": 127.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch10.ctl.mofcom2025_10_inp",
+      "ch10.inp.axt_inp_permit_first"
+    ]
+  },
+  "mel_cagr_pct": {
+    "value": 31.60740129524924,
+    "unit": "%/yr",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.mitsubishi_eml_capacity_x3_fy2028_press",
+      "ch10.inp.mitsubishi_eml_capacity_x3_fy2030"
+    ]
+  },
+  "mel_2030_over_2024": {
+    "value": 5.196152422706632,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch10.inp.mitsubishi_eml_capacity_x3_fy2028_press"
+    ]
+  },
+  "loc_x1_pct": {
+    "value": 55.00000000000001,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "loc_d1_pct": {
+    "value": 70.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "loc_d2_pct": {
+    "value": 3.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": []
+  },
+  "loc_P": {
+    "value": 20.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "loc_unit_pct": {
+    "value": 39.85,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "loc_value_pct": {
+    "value": 6.858638743455497,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "loc_eml_pct": {
+    "value": 3.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": []
+  },
+  "loc_ratio": {
+    "value": 5.810190839694656,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "loc_claim_ratio": {
+    "value": 10.25,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch10.open.eetchina_25g_localization_41pct",
+      "ch10.open.kaiyuan_25g_localization_4pct"
+    ]
+  }
+}

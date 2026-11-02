@@ -1,0 +1,447 @@
+{
+  "gs_ult": {
+    "value": 1.53293104213742,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.ir.shaping_gain_ultimate"
+    ]
+  },
+  "gs_ult_ratio": {
+    "value": 1.423289037112261,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch02.ir.shaping_gain_ultimate"
+    ]
+  },
+  "gs_ult_bits": {
+    "value": 0.25461433482006296,
+    "unit": "bit/dim",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.shaping_gain_ultimate"
+    ]
+  },
+  "snr_u_4ask": {
+    "value": 5.118327286649437,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.uniform_4ask_snr_rate1"
+    ]
+  },
+  "snr_c_4ask": {
+    "value": 4.771212547196624,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.uniform_4ask_snr_rate1"
+    ]
+  },
+  "gap_u_4ask": {
+    "value": 0.3471147394528131,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.uniform_4ask_snr_rate1"
+    ]
+  },
+  "snr_u_8ask": {
+    "value": 12.61873478596147,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.uniform_8ask_snr_rate2"
+    ]
+  },
+  "snr_c_8ask": {
+    "value": 11.760912590556813,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.uniform_8ask_snr_rate2"
+    ]
+  },
+  "gap_u_8ask": {
+    "value": 0.8578221954046565,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.uniform_8ask_snr_rate2"
+    ]
+  },
+  "snr_u_16ask": {
+    "value": 19.168119660743915,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.uniform_16ask_snr_rate3"
+    ]
+  },
+  "snr_c_16ask": {
+    "value": 17.993405494535818,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.uniform_16ask_snr_rate3"
+    ]
+  },
+  "gap_u_16ask": {
+    "value": 1.1747141662080978,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.uniform_16ask_snr_rate3"
+    ]
+  },
+  "snr_mb_8ask": {
+    "value": 11.84243187630059,
+    "unit": "dB",
+    "digits": 5,
+    "inputs": [
+      "ch02.ir.mb_gain_8ask_rate2"
+    ]
+  },
+  "gain_mb_8ask": {
+    "value": 0.7763029096608793,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch02.ir.mb_gain_8ask_rate2"
+    ]
+  },
+  "gap_mb_8ask": {
+    "value": 0.0815192857437772,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.mb_gain_8ask_rate2"
+    ]
+  },
+  "lam_mb_8ask": {
+    "value": 0.05042470874035144,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "h_mb_8ask": {
+    "value": 2.6327001715711282,
+    "unit": "bit/dim",
+    "digits": 4,
+    "inputs": []
+  },
+  "gain_mb_64ask": {
+    "value": 1.3307828993173985,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.mb_gain_64ask_rate5"
+    ]
+  },
+  "gap_u_64ask": {
+    "value": 1.439680901807403,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.mb_gain_64ask_rate5"
+    ]
+  },
+  "frac_ult_64": {
+    "value": 0.868129656675124,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.mb_gain_64ask_rate5",
+      "ch02.ir.shaping_gain_ultimate"
+    ]
+  },
+  "snrmi_16_3p0": {
+    "value": 9.304042097733369,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrgmi_16_3p0": {
+    "value": 9.30863146088921,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrc_16_3p0": {
+    "value": 8.450980400142567,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "gapmi_16_3p0": {
+    "value": 0.8530616975908014,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "gapgmi_16_3p0": {
+    "value": 0.8576510607466421,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "snrmi_16_3p5": {
+    "value": 11.570633768836792,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrgmi_16_3p5": {
+    "value": 11.570699902139538,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrc_16_3p5": {
+    "value": 10.134148525824852,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "gapmi_16_3p5": {
+    "value": 1.4364852430119406,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "gapgmi_16_3p5": {
+    "value": 1.4365513763146858,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "snrmi_64_4p0": {
+    "value": 12.61873478596147,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrgmi_64_4p0": {
+    "value": 12.720710689655998,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrc_64_4p0": {
+    "value": 11.760912590556813,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "gapmi_64_4p0": {
+    "value": 0.8578221954046565,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "gapgmi_64_4p0": {
+    "value": 0.959798099099185,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "snrmi_64_5p0": {
+    "value": 16.142067383932087,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrgmi_64_5p0": {
+    "value": 16.144411278341657,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "snrc_64_5p0": {
+    "value": 14.913616938342727,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "gapmi_64_5p0": {
+    "value": 1.2284504455893597,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "gapgmi_64_5p0": {
+    "value": 1.2307943399989298,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "c_10": {
+    "value": 3.4594316186372973,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "mi16_10": {
+    "value": 3.1639431880510465,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "gmi16_10": {
+    "value": 3.163578935129859,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "mi64_10": {
+    "value": 3.268572356453994,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "gmi64_10": {
+    "value": 3.168520106417862,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "c_15": {
+    "value": 5.0278076733505195,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "mi16_15": {
+    "value": 3.9285316965372106,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "gmi16_15": {
+    "value": 3.9285316965226196,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "mi64_15": {
+    "value": 4.681432889304967,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "gmi64_15": {
+    "value": 4.677996976642712,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "c_20": {
+    "value": 6.658211482751795,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "mi16_20": {
+    "value": 3.9999499881141647,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "gmi16_20": {
+    "value": 3.9999499881141647,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "mi64_20": {
+    "value": 5.801461798592775,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "gmi64_20": {
+    "value": 5.8014617875615855,
+    "unit": "bit/2D",
+    "digits": 4,
+    "inputs": []
+  },
+  "pas_rc": {
+    "value": 0.8,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.ir.pcs_fixed_rate_loss"
+    ]
+  },
+  "pas_ir": {
+    "value": 4.0,
+    "unit": "bit/2D",
+    "digits": 2,
+    "inputs": []
+  },
+  "pas_h": {
+    "value": 2.5999999999999996,
+    "unit": "bit/dim",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.pcs_fixed_rate_loss"
+    ]
+  },
+  "pas_lam": {
+    "value": 0.05370972684962243,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "pas_p_inner": {
+    "value": 0.24972825639977284,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "pas_p_outer": {
+    "value": 0.018959525373956,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "pas_snr": {
+    "value": 11.844531810018495,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "pas_snr_bmd": {
+    "value": 11.848550589918728,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": []
+  },
+  "pas_gain_vs_u64": {
+    "value": 0.7742029759429752,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.uniform_8ask_snr_rate2"
+    ]
+  },
+  "pas_loss_vs_opt": {
+    "value": 0.002099933717904179,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "pas_pow_ratio_db": {
+    "value": 3.815529381132576,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "u64_rc": {
+    "value": 0.6666666666666666,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  }
+}

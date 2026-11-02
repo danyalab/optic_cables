@@ -1,0 +1,207 @@
+{
+  "p1_n2": {
+    "value": 2048.0,
+    "unit": "hosts",
+    "digits": 6,
+    "inputs": []
+  },
+  "p1_s2": {
+    "value": 96.0,
+    "unit": "switches",
+    "digits": 5,
+    "inputs": []
+  },
+  "p1_x2": {
+    "value": 4096.0,
+    "unit": "transceiver ports",
+    "digits": 6,
+    "inputs": []
+  },
+  "p1_n3": {
+    "value": 65536.0,
+    "unit": "hosts",
+    "digits": 6,
+    "inputs": []
+  },
+  "p1_s3": {
+    "value": 5120.0,
+    "unit": "switches",
+    "digits": 5,
+    "inputs": []
+  },
+  "p1_x3": {
+    "value": 262144.0,
+    "unit": "transceiver ports",
+    "digits": 6,
+    "inputs": []
+  },
+  "p1_paths": {
+    "value": 1024.0,
+    "unit": "paths",
+    "digits": 4,
+    "inputs": []
+  },
+  "p2_ratio": {
+    "value": 18.67366596101028,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.clos_n1000_crosspoints"
+    ]
+  },
+  "p2_breakeven": {
+    "value": 29.696938456699062,
+    "unit": "inputs",
+    "digits": 3,
+    "inputs": []
+  },
+  "p3_hpn": {
+    "value": 6.666666666666667,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.hpn_core_oversub_15"
+    ]
+  },
+  "p3_meta7": {
+    "value": 14.285714285714286,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_oversub_1to7"
+    ]
+  },
+  "p3_meta28": {
+    "value": 35.714285714285715,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.meta_oversub_2p8"
+    ]
+  },
+  "p3_gain": {
+    "value": 2.5,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.llama3_oversub_1to7",
+      "ch05.ai.meta_oversub_2p8"
+    ]
+  },
+  "p4_p": {
+    "value": 0.8342815981456464,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "p4_skin": {
+    "value": 2.18079855854253,
+    "unit": "m",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_40gcr4_7m"
+    ]
+  },
+  "p4_diel": {
+    "value": 0.6794117647058824,
+    "unit": "m",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_40gcr4_7m"
+    ]
+  },
+  "p5_sstar": {
+    "value": 2.4576,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p5_ringlat": {
+    "value": 98.3,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": []
+  },
+  "p5_treelat_us": {
+    "value": 58.339850002884624,
+    "unit": "µs",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_flat": {
+    "value": 1.998046875,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_hier": {
+    "value": 0.248046875,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_ratio": {
+    "value": 8.05511811023622,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "p7_pp16": {
+    "value": 3.3275462962962967,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "p7_dp_pp16": {
+    "value": 100.0213623046875,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "p8_spare_pct": {
+    "value": 5.88235294117647,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_ports"
+    ]
+  },
+  "p9_sir99": {
+    "value": 380.1599999999997,
+    "unit": "ns",
+    "digits": 3,
+    "inputs": []
+  },
+  "p9_sir99_bits": {
+    "value": 2.375999999999998,
+    "unit": "kB",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.sirius_reconfig"
+    ]
+  },
+  "p10_links": {
+    "value": 32768.0,
+    "unit": "links",
+    "digits": 5,
+    "inputs": [
+      "ch05.su.broadcom_512_scaleup"
+    ]
+  },
+  "p10_ends": {
+    "value": 65536.0,
+    "unit": "port ends",
+    "digits": 5,
+    "inputs": [
+      "ch05.su.broadcom_512_scaleup"
+    ]
+  },
+  "p10_ends_per_gpu": {
+    "value": 128.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.broadcom_512_scaleup"
+    ]
+  }
+}

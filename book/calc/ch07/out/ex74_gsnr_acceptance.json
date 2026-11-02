@@ -1,0 +1,229 @@
+{
+  "droop_opt_snr_db": {
+    "value": 1.9657581756045104,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "droop_opt_pen_db": {
+    "value": 1.4473957951738572,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "droop_gn_snr_db": {
+    "value": 10.370906393153565,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "droop_gn_pen_db": {
+    "value": 0.200170142482607,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "droop_opt_limit_db": {
+    "value": 1.453891537803657,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "rolloff": {
+    "value": 0.1,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch07.open.g9771_rolloff"
+    ]
+  },
+  "spacing": {
+    "value": 1.15,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.g9771_carrier_spacing"
+    ]
+  },
+  "guard_pct": {
+    "value": 4.999999999999982,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch07.open.g9771_carrier_spacing",
+      "ch07.open.g9771_rolloff"
+    ]
+  },
+  "fill_pct": {
+    "value": 86.95652173913044,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.g9771_carrier_spacing"
+    ]
+  },
+  "tr_mid_db": {
+    "value": 17.5,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.gap.transceiver_snr_range"
+    ]
+  },
+  "tr_true_db": {
+    "value": 10.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "tr_meas_db": {
+    "value": 9.289181473504676,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.gap.transceiver_snr_range"
+    ]
+  },
+  "tr_err_lo_db": {
+    "value": 0.09527187577508478,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.gap.transceiver_snr_range"
+    ]
+  },
+  "tr_err_hi_db": {
+    "value": -0.08318479523019917,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.gap.transceiver_snr_range"
+    ]
+  },
+  "gawbs_pen_10": {
+    "value": 0.41392685158225073,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "gawbs_pen_15": {
+    "value": 0.13520922108038202,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "gawbs_pen_20": {
+    "value": 0.043213737826425784,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "se2": {
+    "value": 2.0,
+    "unit": "b/s/Hz",
+    "digits": 2,
+    "inputs": [
+      "ch07.open.faster_design_se"
+    ]
+  },
+  "se2_snr_db": {
+    "value": 0.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.faster_design_se"
+    ]
+  },
+  "se4": {
+    "value": 4.0,
+    "unit": "b/s/Hz",
+    "digits": 2,
+    "inputs": [
+      "ch07.open.faster_live_4bpshz"
+    ]
+  },
+  "se4_snr_db": {
+    "value": 4.771212547196624,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.faster_live_4bpshz"
+    ]
+  },
+  "se6": {
+    "value": 6.0,
+    "unit": "b/s/Hz",
+    "digits": 2,
+    "inputs": [
+      "ch07.open.faster_ps64_6bpshz"
+    ]
+  },
+  "se6_snr_db": {
+    "value": 8.450980400142567,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.faster_ps64_6bpshz"
+    ]
+  },
+  "se3_snr_db": {
+    "value": 2.620776554307988,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.faster_design_se"
+    ]
+  },
+  "faster_L_km": {
+    "value": 11017.0,
+    "unit": "km",
+    "digits": 5,
+    "inputs": [
+      "ch07.open.faster_live_4bpshz"
+    ]
+  },
+  "faster_sed": {
+    "value": 66102.0,
+    "unit": "b/s/Hz·km",
+    "digits": 5,
+    "inputs": [
+      "ch07.open.faster_design_se",
+      "ch07.open.faster_live_4bpshz",
+      "ch07.open.faster_ps64_6bpshz"
+    ]
+  },
+  "faster_sed_pub": {
+    "value": 66102.0,
+    "unit": "b/s/Hz·km",
+    "digits": 5,
+    "inputs": [
+      "ch07.open.faster_se_distance"
+    ]
+  },
+  "faster_spacing_ghz": {
+    "value": 75.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch07.open.faster_live_4bpshz"
+    ]
+  },
+  "faster_slot_gbps": {
+    "value": 300.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch07.open.faster_live_4bpshz"
+    ]
+  }
+}

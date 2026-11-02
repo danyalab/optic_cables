@@ -1,0 +1,144 @@
+{
+  "lam_nm": {
+    "value": 1550.0000000000002,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch01.cd.g652_link_typ_d1550"
+    ]
+  },
+  "photon_e": {
+    "value": 1.2815779723541474,
+    "unit": "×10⁻¹⁹ J",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c"
+    ]
+  },
+  "rs_gbd": {
+    "value": 64.0,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": []
+  },
+  "eta": {
+    "value": 0.8,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "resp": {
+    "value": 1.0001274482313025,
+    "unit": "A/W",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.planck_h",
+      "ch01.const.speed_of_light_c"
+    ]
+  },
+  "qpsk_snr_req_db": {
+    "value": 8.289951227701186,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.hd_threshold_4p7e3"
+    ]
+  },
+  "np_sym_ideal": {
+    "value": 6.7452045263096405,
+    "unit": "photons/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.hd_threshold_4p7e3"
+    ]
+  },
+  "np_bit_ideal": {
+    "value": 3.3726022631548203,
+    "unit": "photons/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.hd_threshold_4p7e3"
+    ]
+  },
+  "sens_pol_ideal_dbm": {
+    "value": -42.57079869055814,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.hd_threshold_4p7e3"
+    ]
+  },
+  "sens_dp_ideal_dbm": {
+    "value": -39.56049873391832,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.hd_threshold_4p7e3"
+    ]
+  },
+  "sens_dp_eta_dbm": {
+    "value": -38.59139860383776,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch02.ir.hd_threshold_4p7e3"
+    ]
+  },
+  "hom_gain": {
+    "value": 3.0,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": [
+      "ch02.coh.single_quadrature_homodyne_gain"
+    ]
+  },
+  "ith_pa": {
+    "value": 20.0,
+    "unit": "pA/√Hz",
+    "digits": 2,
+    "inputs": []
+  },
+  "plo_min_dbm": {
+    "value": 13.972942510562277,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": []
+  },
+  "plo_min_mw": {
+    "value": 24.962854826147197,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": []
+  },
+  "amp_g_db": {
+    "value": 20.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "amp_nf": {
+    "value": 5.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "amp_nsp": {
+    "value": 1.5920594243274644,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "ase_over_shot_db": {
+    "value": 21.00684455528745,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  }
+}

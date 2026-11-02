@@ -149,6 +149,169 @@
       "ch08.carrier.lumen_pcf_contracts_q2_2025"
     ]
   },
+  "pcf_2026": {
+    "value": 13.0,
+    "unit": "billion USD",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_contracts_8p5b"
+    ]
+  },
+  "pcf_2026_ratio": {
+    "value": 1.5294117647058822,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_contracts_8p5b"
+    ]
+  },
+  "pcf_rev_share_2026": {
+    "value": 61.53846153846154,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_annual_revenue",
+      "ch08.carrier.lumen_pcf_contracts_8p5b"
+    ]
+  },
+  "lumen_fm_actual_2025": {
+    "value": 17.0,
+    "unit": "million fiber-mi",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025"
+    ]
+  },
+  "lumen_avg_fibers_lb_actual": {
+    "value": 50.0,
+    "unit": "fibers",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025",
+      "ch08.carrier.lumen_route_miles_2025"
+    ]
+  },
+  "lumen_fm_actual_km": {
+    "value": 27.358848,
+    "unit": "million fiber-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025"
+    ]
+  },
+  "lumen_fm_proj_err": {
+    "value": 2.4096385542168677,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025"
+    ]
+  },
+  "lumen_fm_growth_actual": {
+    "value": 2.764705882352941,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2028"
+    ]
+  },
+  "lc_old": {
+    "value": 0.22,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_new": {
+    "value": 0.17,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_red_pct": {
+    "value": 22.727272727272723,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_claim_pct": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_g652": {
+    "value": 0.3,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g652d_max_1530_1565"
+    ]
+  },
+  "lc_vs_g652_pct": {
+    "value": 43.33333333333333,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.g652d_max_1530_1565",
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_g654": {
+    "value": 0.23,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.g654e_max_1550"
+    ]
+  },
+  "lc_vs_g654_pct": {
+    "value": 26.08695652173913,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.g654e_max_1550",
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_smf28u": {
+    "value": 0.18,
+    "unit": "dB/km",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "lc_vs_smf28u_pct": {
+    "value": 5.555555555555546,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550",
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
+  "lc_span": {
+    "value": 100.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": []
+  },
+  "lc_span_db": {
+    "value": 4.999999999999999,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_loss_claim"
+    ]
+  },
   "lumen_fiber_km_2025": {
     "value": 26.715110400000004,
     "unit": "million fiber-km",

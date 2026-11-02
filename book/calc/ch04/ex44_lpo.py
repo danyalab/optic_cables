@@ -59,8 +59,6 @@ r.emit("ev_eb_lpo", cl.pj_per_bit(o_lpo, 102400), "pJ/bit", 3, [ev])
 r.emit("ev_eb_dsp", cl.pj_per_bit(o_dsp, 102400), "pJ/bit", 3, [ev])
 # the Evans switch-level saving exceeds optics-delta / total because cooling and PSU scale too
 r.emit("ev_direct_only", 100 * (o_dsp - o_lpo) / dsp_tot, "%", 3, [ev])
-# Bechtolsheim projection at 200G/lane (tier C), Eoptolink annual-report target (tier B)
-r.emit("eo_ar_eb", cl.pj_per_bit(L("ch04.lpo.eoptolink_lpo_lt11w"), 800), "pJ/bit", 3, ["ch04.lpo.eoptolink_lpo_lt11w"])
 
 # Multimode: MACOM data cited by Innolight (>13 W with DSP, <4 W linear)
 mm_lo, mm_hi = L("ch04.pw.macom_800g_mm", "lo"), L("ch04.pw.macom_800g_mm", "hi")

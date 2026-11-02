@@ -138,6 +138,22 @@ r.emit("ppump_opt_mw", 1e3 * eta_pump * (P_el - P_0), "mW", 3, base_ins + ["ch07
 r.emit("perin_lin_pump_mw", L("ch07.power.perin_linear_regime_pump"), "mW", 3, ["ch07.power.perin_linear_regime_pump"])
 assert 1e3 * eta_pump * (P_el - P_0) < L("ch07.power.perin_linear_regime_pump")
 
+# droop correction (G.977.1 product rule, Section 7.4): with constant-output amplifiers the
+# ASE consumes part of each amplifier's output; for identical amplifiers and large N_s,
+# SNR_d = 1/(exp(1/SNR) - 1).
+def cap_droop(n):
+    g = m.gsnr(n)
+    gd = 1 / math.expm1(1 / g) if g > 0 else 0.0
+    return n * 2 * B * math.log2(1 + Gamma * gd)
+
+
+capd = np.array([cap_droop(int(n)) for n in grid])
+nd = int(grid[np.argmax(capd)])
+r.emit("n_opt_droop", nd, "", 3, base_ins)
+r.emit("c_opt_droop_tbps", capd.max() / 1e12, "Tb/s", 3, base_ins)
+r.emit("se_opt_droop", 2 * math.log2(1 + Gamma / math.expm1(1 / m.gsnr(nd))), "b/s/Hz", 3, base_ins)
+assert nd < n_num
+
 # table of capacity vs N_fp
 for n in (1, 2, 4, 8, 12, 16, 24, 32, 48, 64):
     r.emit(f"c_{n}", m.capacity(n) / 1e12, "Tb/s", 3, base_ins)

@@ -297,19 +297,19 @@
     ]
   },
   "pj_opt1600": {
-    "value": 18.75,
+    "value": 15.625,
     "unit": "pJ/bit",
     "digits": 2,
     "inputs": [
-      "ch05.pw.transceiver_1p6t_30w"
+      "ch04.pmd.1p6t_dr8_power"
     ]
   },
   "w_opt1600": {
-    "value": 30.0,
+    "value": 25.0,
     "unit": "W",
     "digits": 3,
     "inputs": [
-      "ch05.pw.transceiver_1p6t_30w"
+      "ch04.pmd.1p6t_dr8_power"
     ]
   },
   "aec_over_lacc": {
@@ -321,12 +321,12 @@
     ]
   },
   "aec_over_opt1600": {
-    "value": 90.0,
+    "value": 108.0,
     "unit": "%",
     "digits": 2,
     "inputs": [
-      "ch05.cu.nvidia_aec_lacc_power",
-      "ch05.pw.transceiver_1p6t_30w"
+      "ch04.pmd.1p6t_dr8_power",
+      "ch05.cu.nvidia_aec_lacc_power"
     ]
   },
   "dr_reach_ratio": {

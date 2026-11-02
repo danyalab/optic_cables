@@ -1,0 +1,350 @@
+{
+  "pen4_e": {
+    "value": 9.542425094393248,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.pam4_penalty_electrical"
+    ]
+  },
+  "pen4_o": {
+    "value": 4.771212547196624,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.pam4_penalty_optical"
+    ]
+  },
+  "pen16_o": {
+    "value": 11.760912590556813,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.pam16_penalty_optical"
+    ]
+  },
+  "pen8_e": {
+    "value": 16.901960800285135,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "pen8_o": {
+    "value": 8.450980400142567,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "pen4_e_samerate": {
+    "value": 6.532125137753436,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "pen4_o_samerate": {
+    "value": 3.266062568876718,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "q_nrz": {
+    "value": 3.4916760634039634,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit"
+    ]
+  },
+  "q_pam4": {
+    "value": 3.4140705542274303,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit"
+    ]
+  },
+  "qt_calc": {
+    "value": 3.4140705542274303,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch02.imdd.tdecq_target_ser"
+    ]
+  },
+  "tdecq_noise_ratio": {
+    "value": 0.4570881896148751,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.tdecq_max_100g_fr"
+    ]
+  },
+  "oma_at_tdecq_max": {
+    "value": 1.7999999999999998,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.oma_minus_tdecq_100g_fr",
+      "ch02.imdd.tdecq_max_100g_fr"
+    ]
+  },
+  "tdecq_cross": {
+    "value": 1.4000000000000001,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.oma_min_100g_fr",
+      "ch02.imdd.oma_minus_tdecq_100g_fr"
+    ]
+  },
+  "pavg_at_oma": {
+    "value": 2.9637001136971812,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.er_min_100g_fr"
+    ]
+  },
+  "bn_ghz": {
+    "value": 26.5625,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch02.sym.lambda_pam4_rate"
+    ]
+  },
+  "rin_k_db": {
+    "value": -31.75731052605613,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.rin_oma_max_100g"
+    ]
+  },
+  "q_rin_pam4": {
+    "value": 6.452295902298903,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.rin_oma_max_100g"
+    ]
+  },
+  "rin_pen_pam4": {
+    "value": 0.7132566354608305,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit",
+      "ch02.imdd.rin_oma_max_100g"
+    ]
+  },
+  "rin_pen_nrz": {
+    "value": 0.07183142584465986,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit",
+      "ch02.imdd.rin_oma_max_100g"
+    ]
+  },
+  "rin_floor_pam4": {
+    "value": -130.47116431921233,
+    "unit": "dB/Hz",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit"
+    ]
+  },
+  "mpi_A2": {
+    "value": 1.4285786536973057,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_A4": {
+    "value": 5.240221697044193,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_C2": {
+    "value": 0.5497841032838837,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_C4": {
+    "value": 1.04921170311767,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_C6": {
+    "value": 1.764362741301684,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_A2_sum": {
+    "value": 0.015071318589057477,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_A2_x": {
+    "value": 0.28031552430055706,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_ee1": {
+    "value": 1.5499391700210403,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_A2_nrz": {
+    "value": 0.4260273245426084,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "mpi_gap": {
+    "value": 9.542425094393248,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.imdd.mpi_pam2_pam4_gap"
+    ]
+  },
+  "lb_il": {
+    "value": 4.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "lb_disc": {
+    "value": 0.6,
+    "unit": "1",
+    "digits": 1,
+    "inputs": []
+  },
+  "lb_rx_oma": {
+    "value": -2.2,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": []
+  },
+  "lb_eff": {
+    "value": -5.6,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": []
+  },
+  "lb_mpi_disc": {
+    "value": 0.32145316296762344,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.mpi_bound_casea_2conn",
+      "ch02.imdd.mpi_bound_casec_4conn"
+    ]
+  },
+  "lb_sens": {
+    "value": -6.863040738744713,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": []
+  },
+  "lb_sens_disc": {
+    "value": -6.634709798428453,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": []
+  },
+  "lb_resp": {
+    "value": 0.8,
+    "unit": "A/W",
+    "digits": 2,
+    "inputs": []
+  },
+  "lb_sigma_ua": {
+    "value": 8.042131052117371,
+    "unit": "µA",
+    "digits": 3,
+    "inputs": []
+  },
+  "lb_in_density": {
+    "value": 49.344263621570335,
+    "unit": "pA/√Hz",
+    "digits": 3,
+    "inputs": []
+  },
+  "lpo_total": {
+    "value": 6.7,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_loss": {
+    "value": 3.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_mpi": {
+    "value": 0.3,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_tdecq": {
+    "value": 3.4,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "ber_shift_24": {
+    "value": 4.673598009135022,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch02.fec.kp4_ber_limit"
+    ]
+  }
+}

@@ -55,6 +55,37 @@ undiscounted = L(REV) * 1e6 * YEARS
 r.emit("pcf_rev_x20", undiscounted / 1e9, "billion USD", 2, [REV])
 r.emit("pcf_ratio", undiscounted / (L(PCF) * 1e9), "1", 2, [REV, PCF])
 r.emit("pcf_growth", L(PCF2) - L(PCF), "billion USD", 1, [PCF, PCF2])
+# Superseding figures reported by the verifier (tier C company releases, box only)
+pcf13 = cl.verifier_number(PCF, r"nearly \$([0-9.]+) billion")
+r.emit("pcf_2026", pcf13, "billion USD", 2, [PCF])
+r.emit("pcf_2026_ratio", pcf13 / L(PCF), "1", 2, [PCF])
+r.emit("pcf_rev_share_2026", 100 * undiscounted / (pcf13 * 1e9), "%", 2, [PCF, REV])
+fm17 = cl.verifier_number("ch08.carrier.lumen_intercity_fiber_miles_2025", r"Deployed ([0-9.]+) million") * 1e6
+r.emit("lumen_fm_actual_2025", fm17 / 1e6, "million fiber-mi", 2, ["ch08.carrier.lumen_intercity_fiber_miles_2025"])
+r.emit("lumen_avg_fibers_lb_actual", fm17 / rm, "fibers", 2, ["ch08.carrier.lumen_intercity_fiber_miles_2025", RM])
+r.emit("lumen_fm_actual_km", fm17 * MI / 1e6, "million fiber-km", 3, ["ch08.carrier.lumen_intercity_fiber_miles_2025"])
+r.emit("lumen_fm_proj_err", 100 * (fm17 - 16.6e6) / 16.6e6, "%", 2, ["ch08.carrier.lumen_intercity_fiber_miles_2025"])
+assert 16.6e6 == L("ch08.carrier.lumen_intercity_fiber_miles_2025")
+r.emit("lumen_fm_growth_actual", L("ch08.carrier.lumen_intercity_fiber_miles_2028") / fm17, "1", 3, ["ch08.carrier.lumen_intercity_fiber_miles_2028"])
+# Lumen '25 % less loss' (footnote 2: vintage-2000 fiber, 0.22 -> 0.17 dB/km) vs ITU/datasheet records
+LC = "ch08.carrier.lumen_pcf_loss_claim"
+a_old = cl.verifier_number(LC, r"from \.?([0-9.]+) ?db/km", "evidence")
+a_new = cl.verifier_number(LC, r"to ?\.?([0-9.]+) db/km", "evidence")
+a_old = a_old if a_old < 1 else a_old / 100      # '.22' written without the leading zero
+a_new = a_new if a_new < 1 else a_new / 100
+assert abs(a_old - 0.22) < 1e-9 and abs(a_new - 0.17) < 1e-9
+r.emit("lc_old", a_old, "dB/km", 2, [LC])
+r.emit("lc_new", a_new, "dB/km", 2, [LC])
+r.emit("lc_red_pct", 100 * (a_old - a_new) / a_old, "%", 3, [LC])
+r.emit("lc_claim_pct", L(LC, "lo"), "%", 2, [LC])
+for tag, rid in (("g652", "ch01.att.g652d_max_1530_1565"), ("g654", "ch01.att.g654e_max_1550"),
+                 ("smf28u", "ch01.att.smf28ultra_max_1550")):
+    r.emit(f"lc_{tag}", L(rid), "dB/km", 3, [rid])
+    r.emit(f"lc_vs_{tag}_pct", 100 * (L(rid) - a_new) / L(rid), "%", 2, [rid, LC])
+# Span-loss consequence over an assumed 100 km span (ASSUMPTION: 100 km, fiber loss only)
+SPAN = 100.0
+r.emit("lc_span", SPAN, "km", 3)
+r.emit("lc_span_db", (a_old - a_new) * SPAN, "dB", 2, [LC])
 
 FM25 = "ch08.carrier.lumen_intercity_fiber_miles_2025"
 FM28 = "ch08.carrier.lumen_intercity_fiber_miles_2028"

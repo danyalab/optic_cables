@@ -1,0 +1,304 @@
+{
+  "inno_os_pct": {
+    "value": 90.58,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "inno_os_rev": {
+    "value": 34.637737652000006,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "inno_os24_pct": {
+    "value": 86.81,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "inno_os_dpp": {
+    "value": 3.7700000000000067,
+    "unit": "pp",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "eop_os_pct": {
+    "value": 96.16,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_overseas_share",
+      "ch10.chain.eoptolink_2025_revenue"
+    ]
+  },
+  "eop_os_rev": {
+    "value": 23.88792296,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_overseas_share",
+      "ch10.chain.eoptolink_2025_revenue"
+    ]
+  },
+  "eop_os24_pct": {
+    "value": 78.7,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_overseas_share",
+      "ch10.chain.eoptolink_2025_revenue"
+    ]
+  },
+  "eop_os_dpp": {
+    "value": 17.459999999999997,
+    "unit": "pp",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_overseas_share",
+      "ch10.chain.eoptolink_2025_revenue"
+    ]
+  },
+  "acc_os_pct": {
+    "value": 26.69,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.accelink_2025_overseas_share",
+      "ch10.chain.accelink_2025_revenue"
+    ]
+  },
+  "acc_os_rev": {
+    "value": 3.1837700300000007,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.accelink_2025_overseas_share",
+      "ch10.chain.accelink_2025_revenue"
+    ]
+  },
+  "acc_os24_pct": {
+    "value": 28.27,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.accelink_2025_overseas_share",
+      "ch10.chain.accelink_2025_revenue"
+    ]
+  },
+  "acc_os_dpp": {
+    "value": -1.579999999999998,
+    "unit": "pp",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.accelink_2025_overseas_share",
+      "ch10.chain.accelink_2025_revenue"
+    ]
+  },
+  "yofc_os_pct": {
+    "value": 42.699999999999996,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.yofc_2025_overseas_share",
+      "ch10.chain.yofc_2025_revenue"
+    ]
+  },
+  "yofc_os_rev": {
+    "value": 6.085604,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.yofc_2025_overseas_share",
+      "ch10.chain.yofc_2025_revenue"
+    ]
+  },
+  "two_os_rev": {
+    "value": 58.52566061200001,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_overseas_share",
+      "ch10.chain.eoptolink_2025_revenue",
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "two_os_pct": {
+    "value": 92.7774253267068,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_overseas_share",
+      "ch10.chain.eoptolink_2025_revenue",
+      "ch10.chain.innolight_2025_overseas_share",
+      "ch10.chain.innolight_2025_revenue"
+    ]
+  },
+  "inno_os_growth_pct": {
+    "value": 67.2,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_overseas_share"
+    ]
+  },
+  "inno_cap": {
+    "value": 28.06,
+    "unit": "million units",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "inno_prod": {
+    "value": 23.76,
+    "unit": "million units",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "inno_sold": {
+    "value": 21.09,
+    "unit": "million units",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "inno_util_pct": {
+    "value": 84.67569493941554,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "inno_sell_pct": {
+    "value": 88.76262626262626,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "eop_cap": {
+    "value": 17.47,
+    "unit": "million units",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "eop_prod": {
+    "value": 16.34,
+    "unit": "million units",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "eop_sold": {
+    "value": 16.03,
+    "unit": "million units",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "eop_util_pct": {
+    "value": 93.53176874642244,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "eop_sell_pct": {
+    "value": 98.10281517747858,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "inno_arpu": {
+    "value": 1776.0322427690846,
+    "unit": "CNY/unit",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.innolight_2025_module_revenue",
+      "ch10.chain.innolight_2025_units_sold"
+    ]
+  },
+  "eop_arpu": {
+    "value": 1545.2997926936991,
+    "unit": "CNY/unit",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "inno_gm_pct": {
+    "value": 42.61,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.innolight_2025_module_gm"
+    ]
+  },
+  "eop_gm_pct": {
+    "value": 47.81,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_units_sold"
+    ]
+  },
+  "eop_th_ratio_pct": {
+    "value": 88.19588718231533,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_2025_revenue",
+      "ch10.chain.eoptolink_thailand_sub_revenue"
+    ]
+  },
+  "eop_th_rev": {
+    "value": 21.90949,
+    "unit": "CNY bn",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.eoptolink_thailand_sub_revenue"
+    ]
+  },
+  "hg_month": {
+    "value": 150.0,
+    "unit": "thousand units/month",
+    "digits": 3,
+    "inputs": [
+      "ch10.mod.hgtech_overseas_800g_capacity"
+    ]
+  },
+  "hg_year": {
+    "value": 1.8,
+    "unit": "million units/yr",
+    "digits": 2,
+    "inputs": [
+      "ch10.mod.hgtech_overseas_800g_capacity"
+    ]
+  }
+}

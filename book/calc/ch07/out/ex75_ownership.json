@@ -1,0 +1,138 @@
+{
+  "eo_initial_days": {
+    "value": 120.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch07.own.eo13913_review_periods"
+    ]
+  },
+  "eo_secondary_days": {
+    "value": 90.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.eo13913_review_periods"
+    ]
+  },
+  "eo_total_days": {
+    "value": 210.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch07.own.eo13913_review_periods"
+    ]
+  },
+  "prc_lead_days": {
+    "value": 60.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.prc_route_application_lead_time"
+    ]
+  },
+  "prc_reply_days": {
+    "value": 30.0,
+    "unit": "days",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.prc_route_application_lead_time"
+    ]
+  },
+  "prc_min_two_step_days": {
+    "value": 120.0,
+    "unit": "days",
+    "digits": 3,
+    "inputs": [
+      "ch07.own.prc_route_application_lead_time"
+    ]
+  },
+  "share_subcom": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "share_asn": {
+    "value": 29.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "share_hmn": {
+    "value": 18.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "share_nec": {
+    "value": 7.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "share_sum": {
+    "value": 94.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "share_systems": {
+    "value": 106.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "share_other": {
+    "value": 6.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": [
+      "ch07.own.caict_supplier_share_2018_2022"
+    ]
+  },
+  "cp_2005_pct": {
+    "value": 5.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": [
+      "ch07.own.content_provider_share_2021"
+    ]
+  },
+  "cp_growth_factor": {
+    "value": 13.8,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.content_provider_share_2021"
+    ]
+  },
+  "hmn_projects": {
+    "value": 180.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.own.hmn_projects_km"
+    ]
+  },
+  "hmn_km_per_project": {
+    "value": 722.2222222222222,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch07.own.hmn_projects_km"
+    ]
+  }
+}

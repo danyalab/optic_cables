@@ -1,0 +1,328 @@
+{
+  "snr_cfec": {
+    "value": 13.54931714691196,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.cfec_threshold"
+    ]
+  },
+  "snr_ofec": {
+    "value": 12.710795955365327,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold"
+    ]
+  },
+  "d_fec_db": {
+    "value": 0.8385211915466313,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold",
+      "ch06.zr.cfec_threshold"
+    ]
+  },
+  "reach_ratio_fec": {
+    "value": 1.2129757519109092,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold",
+      "ch06.zr.cfec_threshold"
+    ]
+  },
+  "reach_ratio_fec_pct": {
+    "value": 21.29757519109092,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold",
+      "ch06.zr.cfec_threshold"
+    ]
+  },
+  "snr_ofec_qpsk": {
+    "value": 6.250946921615002,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold"
+    ]
+  },
+  "rosnr_400zr": {
+    "value": 26.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud"
+    ]
+  },
+  "snr_from_rosnr": {
+    "value": 19.19891213023321,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "rosnr_gap": {
+    "value": 5.649594983321251,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud",
+      "ch06.zr.cfec_threshold"
+    ]
+  },
+  "osnr_to_snr_zr": {
+    "value": 6.801087869766791,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "snr_from_rosnr_800": {
+    "value": 17.2429253646282,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud"
+    ]
+  },
+  "rs_ratio_800_400": {
+    "value": 1.9751436031331593,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch06.zr.400zr_vs_800zr_baud",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "wl6e_rate": {
+    "value": 1.6,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch06.coh.wl6e_200gbd_1p6t"
+    ]
+  },
+  "wl6e_bits": {
+    "value": 8.0,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.wl6e_200gbd_1p6t"
+    ]
+  },
+  "wl6e_snr_sh": {
+    "value": 11.760912590556813,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.wl6e_200gbd_1p6t"
+    ]
+  },
+  "pse6s_rate": {
+    "value": 1.2,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch06.coh.pse6s_130gbd_1p2t"
+    ]
+  },
+  "pse6s_bits": {
+    "value": 9.23076923076923,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.pse6s_130gbd_1p2t"
+    ]
+  },
+  "pse6s_snr_sh": {
+    "value": 13.71279630233256,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.pse6s_130gbd_1p2t"
+    ]
+  },
+  "ice7_rate": {
+    "value": 1.2,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch06.coh.ice7_148gbd"
+    ]
+  },
+  "ice7_bits": {
+    "value": 8.108108108108109,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.ice7_148gbd"
+    ]
+  },
+  "ice7_snr_sh": {
+    "value": 11.934265697326618,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.ice7_148gbd"
+    ]
+  },
+  "mard_rate": {
+    "value": 1.6,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": [
+      "ch06.coh.mardoyan_300gbd_1p6t_9075km"
+    ]
+  },
+  "mard_bits": {
+    "value": 5.333333333333333,
+    "unit": "bit/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.mardoyan_300gbd_1p6t_9075km"
+    ]
+  },
+  "mard_snr_sh": {
+    "value": 7.28321651797799,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.mardoyan_300gbd_1p6t_9075km"
+    ]
+  },
+  "pse6s_vs_wl6e_db": {
+    "value": 1.9518837117757464,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.coh.pse6s_130gbd_1p2t",
+      "ch06.coh.wl6e_200gbd_1p6t"
+    ]
+  },
+  "pse6s_se": {
+    "value": 8.0,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.pse6s_130gbd_1p2t"
+    ]
+  },
+  "wl6e_rs_ratio": {
+    "value": 1.5384615384615385,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch06.coh.pse6s_130gbd_1p2t",
+      "ch06.coh.wl6e_200gbd_1p6t"
+    ]
+  },
+  "hbh_100": {
+    "value": 12.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "exp_100": {
+    "value": 20.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "transit_100": {
+    "value": 1.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "hbh_200": {
+    "value": 20.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "exp_200": {
+    "value": 20.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "transit_200": {
+    "value": 2.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "hbh_400": {
+    "value": 40.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "exp_400": {
+    "value": 20.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "transit_400": {
+    "value": 4.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "hbh_800": {
+    "value": 80.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "exp_800": {
+    "value": 40.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": []
+  },
+  "transit_800": {
+    "value": 8.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "crossover_d": {
+    "value": 150.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "k_nodes": {
+    "value": 5.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "cap_gbps": {
+    "value": 400.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "pairs": {
+    "value": 10.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "exp_saving_400_pct": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  }
+}

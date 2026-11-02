@@ -152,6 +152,14 @@
       "ch05.pw.broadcom_51t_128_modules"
     ]
   },
+  "k400_l2_tot": {
+    "value": 3.2768,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
   "k400_l2_sw_per_khost": {
     "value": 23.4375,
     "unit": "switches per 1000 hosts",
@@ -202,6 +210,14 @@
   },
   "k400_l3_bis": {
     "value": 104.8576,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_tot": {
+    "value": 209.7152,
     "unit": "Pb/s",
     "digits": 3,
     "inputs": [
@@ -280,6 +296,14 @@
       "ch05.pw.broadcom_51t_128_modules"
     ]
   },
+  "k800_l2_tot": {
+    "value": 1.6384,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
   "k800_l2_sw_per_khost": {
     "value": 46.875,
     "unit": "switches per 1000 hosts",
@@ -330,6 +354,14 @@
   },
   "k800_l3_bis": {
     "value": 26.2144,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_tot": {
+    "value": 52.4288,
     "unit": "Pb/s",
     "digits": 3,
     "inputs": [

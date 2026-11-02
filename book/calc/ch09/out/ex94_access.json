@@ -1,0 +1,459 @@
+{
+  "tot25_mkm": {
+    "value": 74.99,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2025"
+    ]
+  },
+  "tot24_mkm": {
+    "value": 72.880293,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2024_exact"
+    ]
+  },
+  "lh25_mkm": {
+    "value": 1.143,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "lt25_mkm": {
+    "value": 30.06,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "ac25_mkm": {
+    "value": 43.79,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "lh24_mkm": {
+    "value": 1.127,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2024"
+    ]
+  },
+  "lt24_mkm": {
+    "value": 27.69,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2024"
+    ]
+  },
+  "ac24_mkm": {
+    "value": 44.06,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2024"
+    ]
+  },
+  "lh25_pct": {
+    "value": 1.5242032270969463,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.cable_length_2025",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "lt25_pct": {
+    "value": 40.08534471262835,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.cable_length_2025",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "ac25_pct": {
+    "value": 58.394452593679155,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.cable_length_2025",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "added25_mkm": {
+    "value": 2.113,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2025"
+    ]
+  },
+  "added24_mkm": {
+    "value": 8.562352,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2024_exact"
+    ]
+  },
+  "growth25_pct": {
+    "value": 2.8947564741541365,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.cable_length_2024_exact",
+      "ch09.acc.cable_length_2025"
+    ]
+  },
+  "d_lh_kkm": {
+    "value": 16.0,
+    "unit": "thousand km",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.cable_length_2024",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "d_lt_mkm": {
+    "value": 2.37,
+    "unit": "million km",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.cable_length_2024",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "d_ac_mkm": {
+    "value": -0.27,
+    "unit": "million km",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.cable_length_2024",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "d_sum_mkm": {
+    "value": 2.116,
+    "unit": "million km",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.cable_length_2024",
+      "ch09.acc.cable_length_2024_exact",
+      "ch09.acc.cable_length_2025",
+      "ch09.acc.cable_split_2025"
+    ]
+  },
+  "ftth_b": {
+    "value": 1.21,
+    "unit": "billion",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "allports_b": {
+    "value": 1.251,
+    "unit": "billion",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "ftth_share_calc": {
+    "value": 96.72262190247801,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "users_m": {
+    "value": 691.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "ports_per_user": {
+    "value": 1.8104196816208393,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "port_util_pct": {
+    "value": 55.23581135091926,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.ftth_ports_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "p10_m": {
+    "value": 31.62,
+    "unit": "million",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025"
+    ]
+  },
+  "p10b_m": {
+    "value": 28.2,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2024"
+    ]
+  },
+  "p10_add_m": {
+    "value": 3.419,
+    "unit": "million",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025"
+    ]
+  },
+  "p10_growth_pct": {
+    "value": 12.127659574468087,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2024",
+      "ch09.acc.10gpon_ports_2025"
+    ]
+  },
+  "gu_m": {
+    "value": 238.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "gub_m": {
+    "value": 207.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_users_2024"
+    ]
+  },
+  "gu_growth_pct": {
+    "value": 14.975845410628018,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_users_2024",
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "gu_share_calc": {
+    "value": 34.44283646888567,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_users_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "gu_per_p10": {
+    "value": 7.526881720430108,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025",
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "ftth_per_p10": {
+    "value": 38.26691967109424,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025",
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "p10_over_ftth_pct": {
+    "value": 2.613223140495868,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025",
+      "ch09.acc.ftth_ports_2025"
+    ]
+  },
+  "r10g": {
+    "value": 10.0,
+    "unit": "Gb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "bw_per_gu": {
+    "value": 1328.5714285714284,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2025",
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "fttr_m": {
+    "value": 59.39,
+    "unit": "million",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.fttr_users_2025"
+    ]
+  },
+  "fttr_pct": {
+    "value": 8.59479015918958,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.fttr_users_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "hh_bw": {
+    "value": 553.4,
+    "unit": "Mb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.household_bw_2025"
+    ]
+  },
+  "tot_bw_ptbps": {
+    "value": 346.0,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.household_bw_2025"
+    ]
+  },
+  "bw_per_user": {
+    "value": 500.7235890014472,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.household_bw_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "bw_per_hh": {
+    "value": 593.4819897084047,
+    "unit": "Mb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.household_bw_2025",
+      "ch09.cmp.cn_fixed_bb_household_penetration"
+    ]
+  },
+  "hh_m": {
+    "value": 583.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.cn_fixed_bb_household_penetration"
+    ]
+  },
+  "hh_share_pct": {
+    "value": 84.37047756874095,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.cn_fixed_bb_household_penetration",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "t_p10_m": {
+    "value": 10.0,
+    "unit": "million",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.dual_gigabit_2023_targets"
+    ]
+  },
+  "t_gu_m": {
+    "value": 30.0,
+    "unit": "million",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.dual_gigabit_2023_targets"
+    ]
+  },
+  "t_gc": {
+    "value": 100.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.dual_gigabit_2023_targets"
+    ]
+  },
+  "gc24": {
+    "value": 207.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_cities_2024"
+    ]
+  },
+  "x_p10": {
+    "value": 2.82,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.10gpon_ports_2024",
+      "ch09.acc.dual_gigabit_2023_targets"
+    ]
+  },
+  "x_gu": {
+    "value": 6.9,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.dual_gigabit_2023_targets",
+      "ch09.acc.gigabit_users_2024"
+    ]
+  },
+  "x_gc": {
+    "value": 2.07,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.dual_gigabit_2023_targets",
+      "ch09.acc.gigabit_cities_2024"
+    ]
+  },
+  "gc25_share_pct": {
+    "value": 66.7,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.acc.gigabit_cities_2025_share"
+    ]
+  },
+  "f5g_otn_vs_cmcc": {
+    "value": 1.25,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.f5g_otn_40t",
+      "ch09.l400.cmcc_capacity_32t"
+    ]
+  }
+}

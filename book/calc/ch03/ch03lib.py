@@ -102,3 +102,22 @@ def savefig(fig, name):
     FIGDIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGDIR / f"{name}.svg", format="svg", bbox_inches="tight",
                 transparent=True, metadata={"Date": None})
+
+
+# ---------- equation records ----------
+def eq_record(eid):
+    """An equation record from book/ledger/*_equations.yaml."""
+    import yaml
+    book = pathlib.Path(__file__).resolve().parents[2]
+    for p in sorted((book / "ledger").glob("ch*_equations.yaml")):
+        for e in (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("equations") or []:
+            if e["id"] == eid:
+                return e
+    raise KeyError(eid)
+
+
+def eq_coeffs(eid):
+    """Numeric coefficients written as 'a\\times10^{b}' in an equation's LaTeX, in order."""
+    import re
+    tex = eq_record(eid)["latex"]
+    return [float(m) * 10.0 ** int(e) for m, e in re.findall(r"([0-9.]+)\\times10\^\{(-?\d+)\}", tex)]

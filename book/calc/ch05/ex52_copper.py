@@ -102,12 +102,12 @@ add("aec100", "DSP AEC (Credo), 100G/lane", cl.cond("ch05.cu.credo_aec_800g_7m",
     "ch05.cu.credo_aec_800g_7m", L("ch05.cu.credo_aec_800g_7m"))
 add("opt800", "800G 2xDR4 optics", L("ch04.pmd.800g_2xdr4_power"), 100, "ch04.pmd.800g_2xdr4_power",
     L("ch04.std.8023dj_dr_reach", "lo"))
-add("opt1600", "1.6T optics", L("ch05.pw.transceiver_1p6t_30w"), 200, "ch05.pw.transceiver_1p6t_30w",
+add("opt1600", "1.6T DR8 optics", L("ch04.pmd.1p6t_dr8_power"), 200, "ch04.pmd.1p6t_dr8_power",
     L("ch04.std.8023dj_dr_reach", "lo"))
 r.emit("aec_over_lacc", cl.cond("ch05.cu.nvidia_aec_lacc_power", "aec_W_per_end") /
        cl.cond("ch05.cu.nvidia_aec_lacc_power", "lacc_W"), "", 2, ["ch05.cu.nvidia_aec_lacc_power"])
 r.emit("aec_over_opt1600", cl.cond("ch05.cu.nvidia_aec_lacc_power", "aec_W_per_end") /
-       L("ch05.pw.transceiver_1p6t_30w") * 100, "%", 2, ["ch05.cu.nvidia_aec_lacc_power", "ch05.pw.transceiver_1p6t_30w"])
+       L("ch04.pmd.1p6t_dr8_power") * 100, "%", 2, ["ch05.cu.nvidia_aec_lacc_power", "ch04.pmd.1p6t_dr8_power"])
 r.emit("dr_reach_ratio", L("ch04.std.8023dj_dr_reach", "lo") / L("ch05.cu.ieee_200g_lane_cr_1m"), "", 2,
        ["ch04.std.8023dj_dr_reach", "ch05.cu.ieee_200g_lane_cr_1m"])
 

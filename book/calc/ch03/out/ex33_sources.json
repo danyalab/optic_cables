@@ -1,0 +1,348 @@
+{
+  "rs_400zr": {
+    "value": 59.84375,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "prod_4qam": {
+    "value": 0.00041,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.dsp.bps_lw_4qam"
+    ]
+  },
+  "dnu_tol_4qam": {
+    "value": 24.5359375,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_4qam",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "prod_16qam": {
+    "value": 0.00014,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam"
+    ]
+  },
+  "dnu_tol_16qam": {
+    "value": 8.378124999999999,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "prod_64qam": {
+    "value": 4e-05,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam"
+    ]
+  },
+  "dnu_tol_64qam": {
+    "value": 2.39375,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "prod_256qam": {
+    "value": 8e-06,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.dsp.bps_lw_256qam"
+    ]
+  },
+  "dnu_tol_256qam": {
+    "value": 0.47875,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_256qam",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "itla_sum": {
+    "value": 10.0,
+    "unit": "MHz",
+    "digits": 2,
+    "inputs": [
+      "ch03.itla.oif_linewidth_app1"
+    ]
+  },
+  "itla_vs_16qam": {
+    "value": 1.193584483401716,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch03.itla.oif_linewidth_app1"
+    ]
+  },
+  "furukawa_sum": {
+    "value": 0.2,
+    "unit": "MHz",
+    "digits": 2,
+    "inputs": [
+      "ch03.itla.furukawa_linewidth"
+    ]
+  },
+  "furukawa_margin_16qam": {
+    "value": 41.89062499999999,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch03.itla.furukawa_linewidth"
+    ]
+  },
+  "furukawa_margin_64qam": {
+    "value": 11.96875,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam",
+      "ch03.itla.furukawa_linewidth"
+    ]
+  },
+  "furukawa_margin_256qam": {
+    "value": 2.39375,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_256qam",
+      "ch03.itla.furukawa_linewidth"
+    ]
+  },
+  "sedi_sum": {
+    "value": 0.6,
+    "unit": "MHz",
+    "digits": 2,
+    "inputs": [
+      "ch03.itla.sedi_linewidth"
+    ]
+  },
+  "sedi_margin_16qam": {
+    "value": 13.963541666666664,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch03.itla.sedi_linewidth"
+    ]
+  },
+  "sedi_margin_64qam": {
+    "value": 3.9895833333333335,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_64qam",
+      "ch03.itla.sedi_linewidth"
+    ]
+  },
+  "sedi_margin_256qam": {
+    "value": 0.7979166666666667,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_256qam",
+      "ch03.itla.sedi_linewidth"
+    ]
+  },
+  "rs_min_itla_16qam": {
+    "value": 71.42857142857144,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch03.itla.oif_linewidth_app1"
+    ]
+  },
+  "itla_foff": {
+    "value": 5.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch03.itla.oif_freq_error"
+    ]
+  },
+  "itla_foff_frac": {
+    "value": 0.0835509138381201,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch02.sym.400zr_symbol_rate",
+      "ch03.itla.oif_freq_error"
+    ]
+  },
+  "furukawa_foff": {
+    "value": 1.0,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch03.itla.furukawa_freq_accuracy"
+    ]
+  },
+  "p_for_16qam_budget": {
+    "value": 27.213726221559124,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch02.dsp.bps_lw_16qam",
+      "ch03.las.henry_linewidth_1mw"
+    ]
+  },
+  "agg": {
+    "value": 1.6,
+    "unit": "Tb/s",
+    "digits": 2,
+    "inputs": []
+  },
+  "gokhale_pel": {
+    "value": 400.0,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.gokhale_100mw_pce"
+    ]
+  },
+  "gokhale_pj": {
+    "value": 0.25,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch03.cw.gokhale_100mw_pce"
+    ]
+  },
+  "gokhale_heat": {
+    "value": 300.00000000000006,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.gokhale_100mw_pce"
+    ]
+  },
+  "lam_pel": {
+    "value": 500.0,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.lam_100mw_75c"
+    ]
+  },
+  "lam_pj": {
+    "value": 0.3125,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch03.cw.lam_100mw_75c"
+    ]
+  },
+  "lam_heat": {
+    "value": 400.0,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.lam_100mw_75c"
+    ]
+  },
+  "inoue_pel_max": {
+    "value": 1.4000000000000001,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.inoue_350mw"
+    ]
+  },
+  "lam_coupled": {
+    "value": 81.28305161640994,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.lam_100mw_75c"
+    ]
+  },
+  "ntt_dc_power": {
+    "value": 121.6,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.dml.ntt_membrane_pam4"
+    ]
+  },
+  "ntt_baud": {
+    "value": 128.0,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch03.dml.ntt_membrane_pam4"
+    ]
+  },
+  "ntt_bw_over_baud": {
+    "value": 0.84375,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.dml.ntt_membrane_bw",
+      "ch03.dml.ntt_membrane_pam4"
+    ]
+  },
+  "ntt_ppr_gain": {
+    "value": 1.8,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.dml.ntt_membrane_bw",
+      "ch03.dml.ntt_membrane_intrinsic"
+    ]
+  },
+  "bcm_ratio": {
+    "value": 0.5333333333333333,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.eml.broadcom_uncooled_bw"
+    ]
+  },
+  "mit_baud": {
+    "value": 112.5,
+    "unit": "GBd",
+    "digits": 4,
+    "inputs": [
+      "ch03.eml.mitsubishi_225g_bw"
+    ]
+  },
+  "mit_ratio": {
+    "value": 0.5777777777777777,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch03.eml.mitsubishi_225g_bw"
+    ]
+  },
+  "qcse_coeff": {
+    "value": 0.002194522924080303,
+    "unit": "1",
+    "digits": 4,
+    "inputs": []
+  },
+  "qcse_coeff_num": {
+    "value": 0.00219373044438124,
+    "unit": "1",
+    "digits": 4,
+    "inputs": []
+  }
+}

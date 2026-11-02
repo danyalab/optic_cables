@@ -1,0 +1,627 @@
+{
+  "w3": {
+    "value": 42.8,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w05": {
+    "value": 33.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w1": {
+    "value": 36.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "b_fit": {
+    "value": 42.82370565059289,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "bw_fit": {
+    "value": 9.3792220849879,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "sigma_fit": {
+    "value": 3.9829888932615356,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w1_pred": {
+    "value": 36.2794048455376,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "deficit": {
+    "value": 7.176294349407108,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "th_w05": {
+    "value": 26.608059043273176,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf"
+    ]
+  },
+  "th_w3": {
+    "value": 37.47395558546321,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf"
+    ]
+  },
+  "edge_05_3": {
+    "value": 4.899999999999999,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w3_n2": {
+    "value": 38.46318257200883,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w3_n6": {
+    "value": 33.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w3_n12": {
+    "value": 30.159341082636416,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w3_n24": {
+    "value": 27.646321900232564,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "w3_n48": {
+    "value": 25.383933723640666,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "riz_bw_otf": {
+    "value": 6.8,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.sg_order_bwotf_map"
+    ]
+  },
+  "riz_nojit": {
+    "value": 67.87774427849065,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.rizzelli_6wss_63ghz",
+      "ch06.wss.sg_order_bwotf_map"
+    ]
+  },
+  "riz_worst": {
+    "value": 62.76,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.rizzelli_6wss_63ghz",
+      "ch06.wss.sg_order_bwotf_map"
+    ]
+  },
+  "riz_off": {
+    "value": 3.75,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.rizzelli_6wss_63ghz"
+    ]
+  },
+  "snr0": {
+    "value": 15.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": []
+  },
+  "rs_100g": {
+    "value": 32.0,
+    "unit": "GBd",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014"
+    ]
+  },
+  "zr75_zf_1": {
+    "value": 0.10964961078430954,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_mm_1": {
+    "value": 0.10902092827965261,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_zf_4": {
+    "value": 0.5772629459597258,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_mm_4": {
+    "value": 0.5566939903954471,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_zf_8": {
+    "value": 1.7335241034760385,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_mm_8": {
+    "value": 1.5114690948541858,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_zf_12": {
+    "value": 3.888645037351047,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_mm_12": {
+    "value": 2.7527389775071933,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_zf_24": {
+    "value": 16.466084872894506,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_mm_24": {
+    "value": 5.329962509193064,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "zr75_n1db": {
+    "value": 6.0,
+    "unit": "ROADMs",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz",
+      "ch06.zr.oif400zr_baud"
+    ]
+  },
+  "q50_zf_1": {
+    "value": 0.09260909294368358,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_mm_1": {
+    "value": 0.09237412542537221,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_zf_4": {
+    "value": 0.4184332596907908,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_mm_4": {
+    "value": 0.41313679220601024,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_zf_8": {
+    "value": 0.993944495231833,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_mm_8": {
+    "value": 0.9596632666774717,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_zf_12": {
+    "value": 1.7821855621298779,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_mm_12": {
+    "value": 1.6566180312421754,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_zf_24": {
+    "value": 5.885117291914408,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_mm_24": {
+    "value": 4.242264746691985,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q50_n1db": {
+    "value": 9.0,
+    "unit": "ROADMs",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_zf_1": {
+    "value": 1.954170787924792,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_mm_1": {
+    "value": 1.87497480468391,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_zf_4": {
+    "value": 16.288669512311543,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_mm_4": {
+    "value": 8.580009079884835,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_zf_8": {
+    "value": 43.337488038572154,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_mm_8": {
+    "value": 11.312197266348342,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_zf_12": {
+    "value": 71.93939086765144,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_mm_12": {
+    "value": 12.468705453722285,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_zf_24": {
+    "value": 160.1984952607705,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_mm_24": {
+    "value": 14.085397517545989,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "q375_n1db": {
+    "value": 1.0,
+    "unit": "ROADMs",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_cascade_pan2017",
+      "ch06.wss.filter_cascade_rahman2014",
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "bs24_w3": {
+    "value": 27.646321900232564,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "rs24_w3": {
+    "value": 25.383933723640666,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "bs24_zf": {
+    "value": 1.7821855621298779,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "rs24_zf": {
+    "value": 5.885117291914408,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "bs24_mm": {
+    "value": 1.6566180312421754,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "rs24_mm": {
+    "value": 4.242264746691985,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.wss.filter_model_bwotf",
+      "ch06.wss.huang_passband_50ghz"
+    ]
+  },
+  "express_il": {
+    "value": 11.92,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "express_il_hi": {
+    "value": 14.4,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "deg": {
+    "value": 8.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "ad_ports": {
+    "value": 28.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.lumentum_twin_1x35"
+    ]
+  },
+  "wss_count": {
+    "value": 16.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "lcos_granularity": {
+    "value": 3.125,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch06.grid.flex_center_granularity"
+    ]
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "sim_ok": {
+    "value": 1.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": []
+  },
+  "tau_us": {
+    "value": 2.0,
+    "unit": "µs",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "bw_GBps": {
+    "value": 50.0,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "sstar_seg_MB": {
+    "value": 102.4,
+    "unit": "MB",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "ringlat_seg_ms": {
+    "value": 4.0920000000000005,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "lat_ratio_seg": {
+    "value": 102.3,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "log2_seg": {
+    "value": 10.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "sstar_sum_MB": {
+    "value": 2457.6,
+    "unit": "MB",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "ringlat_sum_ms": {
+    "value": 98.3,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "lat_ratio_sum": {
+    "value": 1684.9546235573032,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "log2_sum": {
+    "value": 14.584962500721156,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "n_sum": {
+    "value": 24576.0,
+    "unit": "GPUs",
+    "digits": 5,
+    "inputs": [
+      "ch05.ai.nccl_tree_latency_180x"
+    ]
+  },
+  "n_seg": {
+    "value": 1024.0,
+    "unit": "GPUs",
+    "digits": 4,
+    "inputs": [
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "busbw_seg": {
+    "value": 1.998046875,
+    "unit": "",
+    "digits": 4,
+    "inputs": [
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "g": {
+    "value": 8.0,
+    "unit": "GPUs per node",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.megascale_nics"
+    ]
+  },
+  "nvl_dir_GBps": {
+    "value": 450.0,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "s_ex_GB": {
+    "value": 1.0,
+    "unit": "GB",
+    "digits": 2,
+    "inputs": []
+  },
+  "t_flat_ms": {
+    "value": 44.0529375,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "t_hier_ms": {
+    "value": 9.360626388888889,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency",
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "t_hier_in_ms": {
+    "value": 3.8916888888888885,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency",
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "t_hier_out_ms": {
+    "value": 5.4689375,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "hier_speedup": {
+    "value": 4.70619546917192,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency",
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "nic_bytes_flat_GB": {
+    "value": 1.998046875,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  },
+  "nic_bytes_hier_GB": {
+    "value": 0.248046875,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  },
+  "n_nodes": {
+    "value": 128.0,
+    "unit": "nodes",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "n_gpu": {
+    "value": 12288.0,
+    "unit": "GPUs",
+    "digits": 5,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "p_B": {
+    "value": 175.0,
+    "unit": "billion parameters",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "mfu": {
+    "value": 55.2,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "fpeak": {
+    "value": 1.0,
+    "unit": "PFLOP/s",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "tp": {
+    "value": 8.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "pp": {
+    "value": 8.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "dp": {
+    "value": 192.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "h": {
+    "value": 12288.0,
+    "unit": "",
+    "digits": 5,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "nl": {
+    "value": 96.0,
+    "unit": "layers",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "tok_M": {
+    "value": 4.194304,
+    "unit": "million tokens",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "t_r": {
+    "value": 21845.333333333332,
+    "unit": "tokens",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "phi": {
+    "value": 0.6666666666666666,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "p_check_B": {
+    "value": 173.946175488,
+    "unit": "billion parameters",
+    "digits": 4,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "t_step": {
+    "value": 0.6492753623188405,
+    "unit": "s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "s_grad_GB": {
+    "value": 5.46875,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "b_dp_gbps": {
+    "value": 201.0955810546875,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "b_dp_GBps": {
+    "value": 25.136947631835938,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "b_tp_gbps": {
+    "value": 559.0277777777778,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "b_tp_GBps": {
+    "value": 69.87847222222223,
+    "unit": "GB/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "b_pp_gbps": {
+    "value": 1.6637731481481484,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "tp_over_dp": {
+    "value": 2.7799108008532096,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "dp_over_pp": {
+    "value": 120.86718749999999,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "dp_lat_ms": {
+    "value": 0.7639999999999999,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.megascale_mfu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "dp_lat2_ms": {
+    "value": 1.5279999999999998,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.megascale_mfu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "sstar_seg2_MB": {
+    "value": 204.8,
+    "unit": "MB",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "dp_bw_s": {
+    "value": 0.21761067708333331,
+    "unit": "s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.megascale_mfu",
+      "ch05.ai.tencent_nvlink_roce_latency"
+    ]
+  },
+  "tp_frac_nic": {
+    "value": 139.75694444444446,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "tp_frac_nvl": {
+    "value": 15.52854938271605,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.megascale_mfu",
+      "ch05.su.nvlink4_900"
+    ]
+  },
+  "dp_frac_400": {
+    "value": 50.273895263671875,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.megascale_mfu"
+    ]
+  },
+  "megascale_nic": {
+    "value": 200.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_nics"
+    ]
+  },
+  "meta_xz_7": {
+    "value": 57.142857142857146,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.llama3_oversub_1to7"
+    ]
+  },
+  "meta_xz_2p8": {
+    "value": 142.85714285714286,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.llama3_400g_per_gpu",
+      "ch05.ai.meta_oversub_2p8"
+    ]
+  },
+  "b_dp_2x_gbps": {
+    "value": 402.191162109375,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.megascale_mfu"
+    ]
+  }
+}

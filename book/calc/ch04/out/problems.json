@@ -1,0 +1,320 @@
+{
+  "p1_lanes_16": {
+    "value": 8.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch04.ff.osfpxd_lanes"
+    ]
+  },
+  "p1_line16": {
+    "value": 1700.0,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch04.ff.osfpxd_lanes"
+    ]
+  },
+  "p1_nyq200": {
+    "value": 53.125,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch04.ff.osfpxd_lanes"
+    ]
+  },
+  "p2_c8": {
+    "value": 39.599999999999994,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_icc8_steady"
+    ]
+  },
+  "p2_c8_eb1600": {
+    "value": 24.749999999999996,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_icc8_steady"
+    ]
+  },
+  "p2_ratio_xd": {
+    "value": 2.8,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfpxd_40w_target",
+      "ch04.ff.qsfpdd_class7_max"
+    ]
+  },
+  "p3_cut": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "p3_newp": {
+    "value": 18.722,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p3_neweb": {
+    "value": 11.701250000000002,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p3_save_pct": {
+    "value": 14.899999999999999,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p3_newshare": {
+    "value": 52.526439482961216,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p4_mod": {
+    "value": 42.85714285714286,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "p4_extra": {
+    "value": 1.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "p4_sys": {
+    "value": 21.42857142857143,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.bechtolsheim_50pct",
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "p5_plug": {
+    "value": 1600.0,
+    "unit": "W",
+    "digits": 4,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "p5_cpo": {
+    "value": 704.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.bailly_5p5w"
+    ]
+  },
+  "p5_save": {
+    "value": 896.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.bailly_5p5w",
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "p5_save_pct": {
+    "value": 56.00000000000001,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.bailly_5p5w",
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "p5_frac_sw": {
+    "value": 14.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "p6_fit": {
+    "value": 100.0,
+    "unit": "FIT",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_hours": {
+    "value": 29957322.7355399,
+    "unit": "port-h",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_ratio": {
+    "value": 28.530783557657045,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_1m_hours"
+    ]
+  },
+  "p6_years_128": {
+    "value": 26.698788942665463,
+    "unit": "years",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_ub": {
+    "value": 2853.078355765705,
+    "unit": "FIT",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.meta_1m_hours"
+    ]
+  },
+  "p7_snr800": {
+    "value": 17.2429253646282,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_osnr"
+    ]
+  },
+  "p7_snr400": {
+    "value": 19.198912130233207,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_osnr_26"
+    ]
+  },
+  "p7_naive": {
+    "value": 28.95598676560501,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_osnr_26",
+      "ch04.coh.800zr_baud"
+    ]
+  },
+  "p7_diff": {
+    "value": 1.9559867656050116,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.400zr_osnr_26",
+      "ch04.coh.800zr_osnr"
+    ]
+  },
+  "p8_deficit": {
+    "value": 2.2069734592890176,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800zr_osnr"
+    ]
+  },
+  "p8_nf_need": {
+    "value": 2.7930265407109824,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max"
+    ]
+  },
+  "p8_nf_limit": {
+    "value": 3.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.nf_quantum_limit_3db_carney"
+    ]
+  },
+  "p8_lmax": {
+    "value": 111.70722976911047,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800zr_osnr"
+    ]
+  },
+  "p9_rs": {
+    "value": 123.63636363636364,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch04.coh.800lr_baud"
+    ]
+  },
+  "p9_o": {
+    "value": 4.8,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800lr_loss_budget"
+    ]
+  },
+  "p9_c": {
+    "value": 3.2,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.coh.800lr_loss_budget"
+    ]
+  },
+  "p9_vs_zr": {
+    "value": 4.598984771573589,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.coh.800lr_baud",
+      "ch04.coh.800zr_baud"
+    ]
+  },
+  "p10_mw": {
+    "value": 398.1071705534973,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.elsfp_power_classes"
+    ]
+  },
+  "p10_nout": {
+    "value": 8.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": []
+  },
+  "p10_opt_total": {
+    "value": 3.1848573644279785,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.elsfp_power_classes"
+    ]
+  },
+  "p10_wpe_min": {
+    "value": 10.723425469454474,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.elsfp_power_classes",
+      "ch04.cpo.elsfp_supply"
+    ]
+  }
+}

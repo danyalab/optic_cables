@@ -1,0 +1,249 @@
+{
+  "pal_usable": {
+    "value": 128.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.palomar_ports"
+    ]
+  },
+  "pal_yield": {
+    "value": 77.27272727272727,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.palomar_mirrors",
+      "ch05.ocs.palomar_ports"
+    ]
+  },
+  "pal_w_port": {
+    "value": 0.7941176470588235,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_ports",
+      "ch05.ocs.palomar_power"
+    ]
+  },
+  "pal_w_usable": {
+    "value": 0.84375,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_ports",
+      "ch05.ocs.palomar_power"
+    ]
+  },
+  "pal_vs_2x800": {
+    "value": 2.4816176470588234,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "pal_unavail_min": {
+    "value": 105.19199999998841,
+    "unit": "min/yr",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_availability"
+    ]
+  },
+  "rl_margin": {
+    "value": 8.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_rl"
+    ]
+  },
+  "il_diff": {
+    "value": 1.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.il_target_apollo",
+      "ch05.ocs.il_target_lightwave"
+    ]
+  },
+  "il_ratio_lin": {
+    "value": 1.2589254117941673,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.il_target_apollo",
+      "ch05.ocs.il_target_lightwave"
+    ]
+  },
+  "v4_cube_side": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch05.ocs.tpuv4_chips"
+    ]
+  },
+  "v4_cubes": {
+    "value": 64.0,
+    "unit": "cubes",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.tpuv4_48_ocs"
+    ]
+  },
+  "v4_ports_per_ocs": {
+    "value": 128.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.tpuv4_48_ocs",
+      "ch05.ocs.tpuv4_6144_links"
+    ]
+  },
+  "v4_links_per_chip": {
+    "value": 1.5,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.tpuv4_6144_links"
+    ]
+  },
+  "v4_ends_per_chip": {
+    "value": 3.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.tpuv4_6144_links"
+    ]
+  },
+  "v4_ocs_kw": {
+    "value": 5.184,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.palomar_power",
+      "ch05.ocs.tpuv4_48_ocs"
+    ]
+  },
+  "v4_ocs_w_chip": {
+    "value": 1.265625,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.palomar_power",
+      "ch05.ocs.tpuv4_48_ocs"
+    ]
+  },
+  "lw_vs_eps_cost": {
+    "value": 14.516129032258062,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.lightwave_vs_static_cost"
+    ]
+  },
+  "lw_vs_eps_power": {
+    "value": 8.18181818181819,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.lightwave_vs_static_cost"
+    ]
+  },
+  "jp_transit": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.jupiter_pathlen"
+    ]
+  },
+  "jp_ports_both": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.jupiter_circulator_halving"
+    ]
+  },
+  "jp_vs_clos": {
+    "value": 30.000000000000004,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.jupiter_pathlen"
+    ]
+  },
+  "mems_hold99_lo": {
+    "value": 0.9899999999999992,
+    "unit": "s",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.commercial_switch_time"
+    ]
+  },
+  "mems_hold99_hi": {
+    "value": 1.9799999999999984,
+    "unit": "s",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.commercial_switch_time"
+    ]
+  },
+  "sir_guard_bits": {
+    "value": 192.0,
+    "unit": "bits",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.sirius_reconfig"
+    ]
+  },
+  "sir_hold90_ns": {
+    "value": 34.56000000000001,
+    "unit": "ns",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.sirius_reconfig"
+    ]
+  },
+  "sir_hold99_ns": {
+    "value": 380.1599999999997,
+    "unit": "ns",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.sirius_reconfig"
+    ]
+  },
+  "sir_vs_mems": {
+    "value": 2604166.6666666665,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.commercial_switch_time",
+      "ch05.ocs.sirius_reconfig"
+    ]
+  },
+  "ring_step_ms": {
+    "value": 0.5696614583333334,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": []
+  },
+  "ring_step_vs_mems": {
+    "value": 17.554285714285715,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.commercial_switch_time"
+    ]
+  },
+  "fiber_vs_free": {
+    "value": 1.5151515151515151,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.fiber_latency"
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "gauss_const": {
+    "value": 0.1873906251292776,
+    "unit": "1",
+    "digits": 4,
+    "inputs": []
+  },
+  "kappa": {
+    "value": 0.5,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "rs": {
+    "value": 25.78125,
+    "unit": "GBd",
+    "digits": 7,
+    "inputs": [
+      "ch03.mmf.swdm4_reach_om5"
+    ]
+  },
+  "sr4_bm_om3": {
+    "value": 28.57142857142857,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om3_emb",
+      "ch03.mmf.sr4_reach_om3"
+    ]
+  },
+  "sr4_bm_ratio_om3": {
+    "value": 1.1082251082251082,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om3_emb",
+      "ch03.mmf.sr4_reach_om3"
+    ]
+  },
+  "lmax_modal_om3": {
+    "value": 155.15151515151516,
+    "unit": "m",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om3_emb"
+    ]
+  },
+  "sr4_bm_om4": {
+    "value": 47.0,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om4_emb",
+      "ch03.mmf.sr4_reach_om4"
+    ]
+  },
+  "sr4_bm_ratio_om4": {
+    "value": 1.823030303030303,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om4_emb",
+      "ch03.mmf.sr4_reach_om4"
+    ]
+  },
+  "lmax_modal_om4": {
+    "value": 364.6060606060606,
+    "unit": "m",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om4_emb"
+    ]
+  },
+  "reach_ratio_ieee": {
+    "value": 1.4285714285714286,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.sr4_reach_om3",
+      "ch03.mmf.sr4_reach_om4"
+    ]
+  },
+  "emb_ratio": {
+    "value": 2.35,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om3_emb",
+      "ch03.mmf.om4_emb"
+    ]
+  },
+  "reach_ratio_fotc": {
+    "value": 1.5,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.fotc_sr4_conflict_om3",
+      "ch03.mmf.fotc_sr4_conflict_om4"
+    ]
+  },
+  "sr4_il_om4_calc": {
+    "value": 1.85,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.sr4_cable_atten",
+      "ch03.mmf.sr4_channel_il_om4",
+      "ch03.mmf.sr4_reach_om4"
+    ]
+  },
+  "sr4_fiber_loss_om4": {
+    "value": 0.35,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch03.mmf.sr4_cable_atten",
+      "ch03.mmf.sr4_reach_om4"
+    ]
+  },
+  "swdm_bm": {
+    "value": 16.466666666666665,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_sigcd": {
+    "value": 5.46045,
+    "unit": "ps",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_bcd": {
+    "value": 34.31779892303337,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_bt": {
+    "value": 14.846071347378341,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_bt_ratio": {
+    "value": 0.5758476158983115,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_lmax": {
+    "value": 172.75428476949347,
+    "unit": "m",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_lmax_modal": {
+    "value": 191.6121212121212,
+    "unit": "m",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_cd_cost_pct": {
+    "value": 9.841671979483724,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "swdm_emb_need": {
+    "value": 2086.375435198264,
+    "unit": "MHz*km",
+    "digits": 3,
+    "inputs": [
+      "ch03.mmf.om5_cd_953",
+      "ch03.mmf.om5_emb_953",
+      "ch03.mmf.swdm4_reach_om5",
+      "ch03.mmf.swdm4_rms_width"
+    ]
+  },
+  "lane_width": {
+    "value": 14.0,
+    "unit": "nm",
+    "digits": 2,
+    "inputs": [
+      "ch03.mmf.swdm4_wavelengths_l0"
+    ]
+  },
+  "lane_spacing": {
+    "value": 30.0,
+    "unit": "nm",
+    "digits": 2,
+    "inputs": [
+      "ch03.mmf.swdm4_wavelengths_l0",
+      "ch03.mmf.swdm4_wavelengths_l1"
+    ]
+  },
+  "lane_dT": {
+    "value": 199.99999999999997,
+    "unit": "K",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_thermal_shift",
+      "ch03.mmf.swdm4_wavelengths_l0"
+    ]
+  },
+  "heat_40": {
+    "value": 2.9200000000000004,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.vcsel.chalmers_hdr_40g"
+    ]
+  },
+  "heat_50": {
+    "value": 4.750000000000001,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.vcsel.chalmers_hdr_50g"
+    ]
+  }
+}
