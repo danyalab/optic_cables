@@ -1,0 +1,271 @@
+{
+  "s_node": {
+    "value": 1.0,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "l_cal_km": {
+    "value": 200.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": []
+  },
+  "c_cal": {
+    "value": 241.47220723151645,
+    "unit": "mult/symbol",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "e22_pj": {
+    "value": 0.3460063366961894,
+    "unit": "pJ",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "fougstedt_pj_bit": {
+    "value": 12.5,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "zr7_core_pj": {
+    "value": 3.2779045733869983,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "zr7_adc_pj": {
+    "value": 0.06999999999999999,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.adc_40nm_fom"
+    ]
+  },
+  "zr7_p_w": {
+    "value": 1.6028093145090254,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.adc_40nm_fom",
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "zr7_budget_w": {
+    "value": 10.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "zr7_frac_pct": {
+    "value": 16.028093145090253,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "budget_pj_bit_line": {
+    "value": 20.887728459530027,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.ntt_400zr_dsp_budget",
+      "ch02.sym.400zr_line_rate"
+    ]
+  },
+  "budget_pj_bit_net": {
+    "value": 25.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "zr7_p_flat_w": {
+    "value": 5.123575702742652,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.adc_40nm_fom",
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "module_from_budget_w": {
+    "value": 20.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.dsp_share_of_module",
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "module_from_budget_pj": {
+    "value": 50.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.dsp_share_of_module",
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "ntt_module_w": {
+    "value": 15.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "ntt_dsp_share_pct": {
+    "value": 66.66666666666667,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.ntt_400zr_dsp_budget"
+    ]
+  },
+  "putt_dsp_lo": {
+    "value": 20.0,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.dsp_share_of_module",
+      "ch02.pwr.puttegowda_7nm_pj_bit"
+    ]
+  },
+  "putt_dsp_hi": {
+    "value": 30.0,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.dsp_share_of_module",
+      "ch02.pwr.puttegowda_7nm_pj_bit"
+    ]
+  },
+  "eb_5nm_120": {
+    "value": 2.4805707727253883,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "p_5nm_120": {
+    "value": 2.3813479418163728,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "eb_5nm_200": {
+    "value": 2.542330431059856,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "p_5nm_200": {
+    "value": 4.06772868969577,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "eb_3nm_120": {
+    "value": 1.4883424636352331,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "p_3nm_120": {
+    "value": 1.4288087650898238,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "eb_3nm_200": {
+    "value": 1.5253982586359136,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "p_3nm_200": {
+    "value": 2.4406372138174617,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch02.pwr.fougstedt_22nm"
+    ]
+  },
+  "baud_ratio_core": {
+    "value": 1.0643460517683805,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "lh_over_dci": {
+    "value": 1.0858812671735683,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "enob": {
+    "value": 5.5,
+    "unit": "bit",
+    "digits": 2,
+    "inputs": []
+  },
+  "adc5_w": {
+    "value": 0.7240773439350248,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.adc_5nm_fom"
+    ]
+  },
+  "adc5_conv_pj": {
+    "value": 0.905096679918781,
+    "unit": "pJ",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.adc_5nm_fom"
+    ]
+  },
+  "adc5_model_pj": {
+    "value": 0.05,
+    "unit": "pJ",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.adc_40nm_fom"
+    ]
+  },
+  "ntt_save_lo": {
+    "value": 20.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch02.pwr.ntt_mode_saving"
+    ]
+  }
+}

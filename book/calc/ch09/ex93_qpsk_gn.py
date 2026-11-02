@@ -381,4 +381,22 @@ ax.set_ylabel("SRS power transfer, edge to edge (dB)")
 ax.set_ylim(0, 10)
 ax.legend(loc="upper left", fontsize=9)
 cl.savefig(fig, "srs_tilt")
+# ---------------------------------------------------------------- misc ledger values
+SL = "ch09.l400.ecoc2023_span_loss"
+FT = "ch09.l400.field_5616km"
+r.emit("margin_db_km", float(cl.cond(SL, "margin_dB_per_km")), "dB/km", 2, [SL])
+r.emit("share_gt20", float(cl.cond(SL, "share_spans_gt_20dB_pct")), "%", 2, [SL])
+r.emit("field_margin", float(cl.cond(FT, "osnr_margin_dB")), "dB", 2, [FT])
+r.emit("pcs_oxc_km", float(cl.cond(PB2B, "oxc_reach_km")), "km", 3, [PB2B])
+r.emit("pcs_p2p_km", float(cl.cond(PB2B, "p2p_reach_km")), "km", 4, [PB2B])
+r.emit("g654_gain_pct", float(cl.cond("ch09.l400.reach_1500_g652d_edfa", "g654e_reach_gain_pct")), "%", 2,
+       ["ch09.l400.reach_1500_g652d_edfa"])
+r.emit("gain_l", float(cl.cond(NFR, "L_gain_dB")), "dB", 3, [NFR])
+lo_p, hi_p = (float(v) for v in cl.cond("ch09.l400.ct_l6t_penalty_1db", "c6t_vs_100g_penalty_dB"))
+r.emit("ct_c6t_pen_lo", lo_p, "dB", 1, ["ch09.l400.ct_l6t_penalty_1db"])
+r.emit("ct_c6t_pen_hi", hi_p, "dB", 1, ["ch09.l400.ct_l6t_penalty_1db"])
+r.emit("ccsa_ch_lo", float(cl.cond(CCSA, "channels")[0]), "", 2, [CCSA])
+r.emit("ccsa_ch_hi", float(cl.cond(CCSA, "channels")[1]), "", 2, [CCSA])
+r.emit("srs_gain_peak", float(cl.cond(SRSB, "srs_gain_peak_THz")), "THz", 3, [SRSB])
+r.emit("ofc_rs", float(cl.cond("ch09.l400.ofc2023_3075km", "symbol_rate_GBd")), "GBd", 3, ["ch09.l400.ofc2023_3075km"])
 r.save()

@@ -25,6 +25,38 @@
       "ch01.fiber.smf28ultra_group_index_1550"
     ]
   },
+  "t1": {
+    "value": 1.0,
+    "unit": "ms",
+    "digits": 1,
+    "inputs": [
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "t5": {
+    "value": 5.0,
+    "unit": "ms",
+    "digits": 1,
+    "inputs": [
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "t20": {
+    "value": 20.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "t10": {
+    "value": 10.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.edge_latency_10ms"
+    ]
+  },
   "L_1ms": {
     "value": 204.19047677428145,
     "unit": "km",

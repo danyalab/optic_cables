@@ -25,6 +25,10 @@ T10 = "ch09.dsxs.edge_latency_10ms"
 TC = "ch09.dsxs.latency_circles_1_5_20"
 t1, t5, t20c = (float(v) for v in cl.rec(TC)["value"])
 assert t20c == L(T20)
+r.emit("t1", t1, "ms", 1, [TC])
+r.emit("t5", t5, "ms", 1, [TC])
+r.emit("t20", t20c, "ms", 2, [TC])
+r.emit("t10", L(T10), "ms", 2, [T10])
 r.emit("L_1ms", t1 * km_per_ms, "km", 3, [TC, NG])
 r.emit("L_5ms", t5 * km_per_ms, "km", 3, [TC, NG])
 r.emit("L_10ms", L(T10) * km_per_ms, "km", 3, [T10, NG])

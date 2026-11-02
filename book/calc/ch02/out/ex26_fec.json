@@ -238,9 +238,9 @@
     ]
   },
   "apx_err_cfec": {
-    "value": -5.657533108660573e-09,
+    "value": 5.657533108660573e-09,
     "unit": "dB",
-    "digits": 2,
+    "digits": 1,
     "inputs": []
   },
   "bref_ghz": {

@@ -1,0 +1,154 @@
+# Independent verification (pass b) of the 21 ch02 items left UNREACHABLE in book/verify/ch02_report.yaml.
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: all sources read through Exa search highlights / Exa fetch (full text for Alvarado ar5iv, Bocherer ar5iv,
+# Bosco slides, Welch/Mazzini/Zhang IEEE decks, Zhang thesis Ch. 1-2; long excerpts for Ip 2008 p. 758, Kikuchi 2016 Sect. II,
+# Smith 2012 (arXiv) pp. 3-4, CableLabs P2PCO PHYv2.0 Sect. 7.2 and 8.2.1, P802.3bs D1.0 comment #30; abstract for Fei 2025).
+# Calc checks: Zhang Eq. (2.6) -> (2.7): -10log10(snr) + 10log10(2R) = -10log10(snr/2) + 10log10(R) (consistent);
+# 544/514 - 1 = 5.84 %; 255/239 - 1 = 6.69 %; Kikuchi 1/2 field factors give |E1|^2-|E2|^2 = Re(Es ELO*) -> R sqrt(Ps PLO) cos (consistent).
+# No MISMATCH found.
+summary:
+  checked: 21
+  match: 14
+  mismatch: 0
+  partial: 7
+  unreachable: 0
+results:
+- id: ch02.nyq.min_spacing_equals_rs
+  status: PARTIAL
+  found_value: R_s
+  found_locator: Bosco, OFC 2012 OM3H.1 slides, slide 'The "Nyquist" spectrum'
+  evidence: The minimum channel spacing with potentially no penalty with respect to the ideal matched filter case is equal to the symbol-rate Rs
+  action: 'Value, quote, locator verified. Fix source title: slides are titled ''Spectral Shaping in Ultra-Dense WDM Systems: Optical vs. Electrical Approaches'' (not ''Nyquist-WDM: optimization of pulse and filter shape'', which is PDF metadata). Tier B correct; tier-A Bosco et al. JLT 29(1) 2011 still unread.'
+- id: ch02.sym.p2pco_200g_qpsk_rate
+  status: MATCH
+  found_value: 63.139467923 GBd, +/- 20 ppm
+  found_locator: CableLabs P2PCO-SP-PHYv2.0, Sect. 8.2.1 Symbol Rate (200G QPSK)
+  evidence: The transceiver MUST support a symbol rate of 63.139467923 Gbaud with the modulation format described in Section 8.2.2.
+  action: none; tolerance '+/- 20 ppm' confirmed in next sentence. Note an I02 issue dated 2020-05-01 (P2PCO-SP-PHYv2.0-I02-200501) carries identical text; cite latest issue.
+- id: ch02.imdd.mpi_penalty_200g_dr4
+  status: PARTIAL
+  found_value: 0.1 dB
+  found_locator: 'welch_3bs_01a_0516, slide ''200G-DR4 : Link Parameters'''
+  evidence: Allocation for penalties, at max TDECQ (dB) ‡ 2.6 dB MPI Penalty 0.1 dB Power margin, at min TDECQ 9.1 dB
+  action: 'Value, conditions (26.5625 GBd PAM4, 500 m, -45 dB x4 reflections) and quote verified. Fix source title: deck is ''200GBASE-DR4: A Baseline Proposal for the 200G 500m Objective'' (Welch, Luxtera, May 2016); ''400G-PSM4...'' is stale PDF metadata.'
+- id: ch02.imdd.mpi_penalty_dr4_mazzini
+  status: PARTIAL
+  found_value: 0.15 dB
+  found_locator: mazzini_01a_1215_smf, slide 'List of proposed steps for PAM4 link budget harmonization', item 4
+  evidence: Consider 55dB for MPO APC connector -> proposed max 0.15 dB for 400GBASE-DR4.
+  action: Quote and value verified; change locator from 'Conclusions, item 4' to the slide title above. 26 dB Tx/Rx reflectance assumption is from preceding slide ('MPI penalty - further works and proposal').
+- id: ch02.imdd.mpi_penalty_fr8_mazzini
+  status: PARTIAL
+  found_value: 0.5 dB
+  found_locator: mazzini_01a_1215_smf, slide 'List of proposed steps for PAM4 link budget harmonization', item 3
+  evidence: Considering 35dB RL for duplex LC connector’s return loss and 26dB TX/RX reflectance -> bring maximum deterministic MPI to be 0.5 dB for the 400GBASE-FR8
+  action: Quote and value verified; change locator from 'Conclusions, item 3' to the slide title above.
+- id: ch02.imdd.mpi_pam2_pam4_gap
+  status: MATCH
+  found_value: ~9.5 dB
+  found_locator: zhang_3df_01_220524, slide 'MPI tolerance vs. modulation formats and FEC schemes'
+  evidence: As expected, MPI tolerance strongly depends on the modulation, for example, the well-know 9.5dB gap between PAM2 and PAM4.
+  action: none; conditions ER 8 dB, BER floor 1e-15, 0.5 dB sensitivity penalty confirmed. Gap is in MPI tolerance (MPI strength, dB), not in sensitivity; say so in prose.
+- id: ch02.imdd.mpi_postfec_penalty_fei
+  status: PARTIAL
+  found_value: '>1.5 dB (pre-FEC 0.5 dB)'
+  found_locator: Fei et al., JLT 43(24) 10947 (2025), Abstract
+  evidence: while pre-FEC metrics indicate an MPI penalty of merely 0.5dB, cases involving multiple reflection paths show a penalty exceeding 1.5dB in terms of post-FEC performance.
+  action: 'Quote verbatim, value correct (lower bound). Supersession: paper now in issue, JLT vol. 43, no. 24, p. 10947 (Dec 2025); update source venue from ''early access''. Still abstract-only; keep confidence med.'
+- id: ch02.coh.first_realtime_coherent
+  status: MATCH
+  found_value: 800 Mbit/s 4-QAM, 5-bit ADC, FPGA, 2006
+  found_locator: Ip et al., Opt. Express 16(2) 2008, Sect. 1, p. 758 (ref. [8])
+  evidence: The first demonstration of real-time coherent detection occurred in 2006, when an 800 Mbit/s 4-QAM signal was coherently detected using a receiver with 5-bit analog-to-digital converters
+  action: none; secondary report of Pfau et al. 2006 (ref. [8]) as noted.
+- id: ch02.dsp.cd_edc_6400km_penalty
+  status: MATCH
+  found_value: 1.2 dB OSNR penalty, 6,400 km SMF, 42.8 Gb/s
+  found_locator: Ip et al. 2008, Sect. 1, p. 758 (ref. [10])
+  evidence: Savory showed the feasibility of digitally compensating the chromatic dispersion (CD) in 6,400 km of SMF without inline dispersion compensating fiber (DCF), with only 1.2 dB OSNR penalty at 42.8 Gbit/s
+  action: none; 'PDM-QPSK' condition is not stated in Ip text (comes from the primary Savory OFC 2007, unread); mark it as from primary.
+- id: ch02.ir.pas_16ask_gap
+  status: PARTIAL
+  found_value: 0.61 to 0.69 dB
+  found_locator: Bocherer et al. (arXiv 1502.02733 / TCOM 2015), Sect. IX-1 'Spectral Efficiency'
+  evidence: The rate 5/6 code with 16-ASK has a gap of only 0.61 to 0.69 dB, while the rate 9/10 code with 64-ASK has a gap of 1 dB.
+  action: 'Value and quote verified. Fix locator: Sect. IX (Numerical Results), IX-1, not Sect. VI (which is Bit-Metric Decoding). Add conditions: DVB-S2 LDPC, FER 1e-3, gap to (1/2)log2(1+SNR).'
+- id: ch02.ir.gmi_not_proven_max
+  status: MATCH
+  found_value: open problem
+  found_locator: Alvarado et al., JLT 36(2) 2018, Sect. III-D, Remark 1
+  evidence: The GMI has not been proven to be the largest achievable rate for the BICM receiver.
+  action: none; add 'Remark 1' to locator. Same remark names the LM rate as an alternative.
+- id: ch02.fec.kp4_relax_penalty
+  status: MATCH
+  found_value: 0.1 dB (2e-4 -> 2.4e-4)
+  found_locator: 'P802.3bs D1.0 comments, Cl 00 SC 0 P145 L33 comment #30 (Anslow), remedy in 121.1.1/122.1.1/123.1.1; ACCEPT'
+  evidence: the BER requirement for all four PMDs could be relaxed to 2.4E-4 (0.1 dB optical penalty)
+  action: 'none; add ''comment #30'' to locator. Total electrical sub-link BER 3.5E-5 also stated.'
+- id: ch02.fec.ofec_min_distance
+  status: MATCH
+  found_value: '>= 42'
+  found_locator: CableLabs P2PCO-SP-PHYv2.0, Sect. 7.2 (oFEC)
+  evidence: The presence of the “ ^ r” permutation can be observed to eliminate error events of weight 36. Consequently, the minimum Hamming distance of the oFEC encoder is at least 42.
+  action: none; tier-A target ITU-T G.709.6 still unread.
+- id: ch02.fec.staircase_dataflow
+  status: PARTIAL
+  found_value: ~293 Gb/s
+  found_locator: Smith et al., JLT 30(1) 2012 (arXiv 1201.4106), product-code decoder data-flow analysis, pp. 3-4
+  evidence: n1 = n2 ≈ 1000, r1 = r2 = 32, t1 = t2 = 3 ... fc ≈ 400 MHz. For v = 4, we then have a dataflow of approximately 293 Gb/s.
+  action: 'Value verified (100 Gb/s system). Analysis is for the syndrome-domain product-code decoder (staircase decoding is analogous), not literally a staircase decoder: reword claim; add r1 = r2 = 32; locator is the product-code section before staircase codes are defined, not ''Sect. III''. ''more than two orders of magnitude smaller'' than LDPC confirmed.'
+- id: ch02.eq.hybrid_outputs
+  status: MATCH
+  found_value: form verified
+  found_locator: Kikuchi, JLT 34(1) 2016, Sect. II-D, Eqs. (18)-(23)
+  evidence: E1 = 1/2 (Es + ELO), (18) ... E4 = 1/2 (Es − iELO). (21) ... II(t) = R PsP cos{θsig(t) − θ(t)}, (22)
+  action: none; square roots lost in extraction; Kikuchi 2011 IEICE ELEX Eqs. (3)-(8) give identical form. 1/2 factors consistent with balanced-detection algebra.
+- id: ch02.eq.complex_baseband
+  status: MATCH
+  found_value: form verified
+  found_locator: Kikuchi 2016, Eq. (24)
+  evidence: Ic (t) = II (t) + iIQ (t) = R Ps (t) P exp[i { θs (t) + θn (t)} ] , (24)
+  action: none; θn = θsn − θLO (per Kikuchi 2011 Eq. (10)).
+- id: ch02.eq.mi_def
+  status: MATCH
+  found_value: form verified
+  found_locator: Alvarado 2018, Sect. III-C, Eqs. (3)-(4)
+  evidence: I = E X,Y [ log2 fY|X(Y|X) / fY(Y) ] (4)
+  action: none; Eq. (3) is the joint-density form, Eq. (4) the ledger form.
+- id: ch02.eq.gmi_bitwise
+  status: MATCH
+  found_value: form verified
+  found_locator: Alvarado 2018, Sect. III-D, Eqs. (13)-(15)
+  evidence: where the optimization over s in this case gives s = 1 ... G = sum_k E Bk,Y [ log2 fY|Bk(Y|B) / fY(Y) ] (15)
+  action: none; paper writes B for B_k inside (15) (typo); ledger B_k is correct. Assumptions (independent bits, bit-wise metric) confirmed.
+- id: ch02.eq.mb_distribution
+  status: MATCH
+  found_value: form verified
+  found_locator: Bocherer 2015, Sect. III-C, Eq. (8); ν fixed by Eq. (9)
+  evidence: P_{Xν}(x) = Aν e^{−ν|x|²}, Aν = 1 / Σ_{x'∈X} e^{−ν|x'|²}. (8)
+  action: none; ν chosen so that E[|ΔXν|²] = P (Eq. 9). Symbol clash with optical frequency remains a notation issue.
+- id: ch02.eq.fec_overhead
+  status: MATCH
+  found_value: form verified
+  found_locator: Zhang thesis 2017, Sect. 2.2.1, Eqs. (2.3)-(2.4)
+  evidence: The rate of a code is defined as R , K N . (2.3) ... OH , N − K K = N K − 1 = 1 R − 1. (2.4)
+  action: none; thesis symbol is R (ledger R_c). Arithmetic 544/514-1 = 5.84 %, 255/239-1 = 6.69 % checked.
+- id: ch02.eq.ncg_sd
+  status: MATCH
+  found_value: form verified
+  found_locator: Zhang thesis 2017, Sect. 2.2.2, Eq. (2.7)
+  evidence: NCGSD(Es/N0) = 20 log10 erfc−1 (2 · 10−15) − Es/N0 + 10 log10 R. (2.7)
+  action: none; Es/N0 = 10log10(snr/2) definition confirmed; consistent with Eq. (2.6) (10log10 2R term).
+tier_a_replacements:
+- for: ch02.imdd.mpi_postfec_penalty_fei
+  citation: L. Fei, Y. Xu, Y. Guo, W. Hu, Q. Zhuge, JLT 43(24), 10947 (2025)
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-43-24-10947
+  locator: Abstract
+  value: '>1.5 dB post-FEC vs 0.5 dB pre-FEC'
+  note: Same paper, final issue citation (supersedes early access).
+- for: ch02.nyq.min_spacing_equals_rs
+  citation: G. Bosco et al., JLT 29(1), 53-61 (2011)
+  url: https://doi.org/10.1109/JLT.2010.2091254
+  locator: not read
+  value: not obtained
+  note: Candidate only; not verified in this pass.

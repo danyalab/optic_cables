@@ -1506,5 +1506,109 @@
     "inputs": [
       "ch09.l400.srs_power_transfer_7db"
     ]
+  },
+  "margin_db_km": {
+    "value": 0.06,
+    "unit": "dB/km",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.ecoc2023_span_loss"
+    ]
+  },
+  "share_gt20": {
+    "value": 57.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.ecoc2023_span_loss"
+    ]
+  },
+  "field_margin": {
+    "value": 2.2,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "pcs_oxc_km": {
+    "value": 720.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.pcs16qam_b2b_17p5"
+    ]
+  },
+  "pcs_p2p_km": {
+    "value": 1000.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.pcs16qam_b2b_17p5"
+    ]
+  },
+  "g654_gain_pct": {
+    "value": 30.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.reach_1500_g652d_edfa"
+    ]
+  },
+  "gain_l": {
+    "value": 25.9,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.ecoc2023_edfa_nf"
+    ]
+  },
+  "ct_c6t_pen_lo": {
+    "value": 0.5,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": [
+      "ch09.l400.ct_l6t_penalty_1db"
+    ]
+  },
+  "ct_c6t_pen_hi": {
+    "value": 1.0,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": [
+      "ch09.l400.ct_l6t_penalty_1db"
+    ]
+  },
+  "ccsa_ch_lo": {
+    "value": 40.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "ccsa_ch_hi": {
+    "value": 80.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.ct_ccsa_400g_qpsk_params"
+    ]
+  },
+  "srs_gain_peak": {
+    "value": 13.4,
+    "unit": "THz",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.srs_peak_13p4"
+    ]
+  },
+  "ofc_rs": {
+    "value": 120.0,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.ofc2023_3075km"
+    ]
   }
 }

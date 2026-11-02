@@ -65,11 +65,12 @@ r.emit("p6_hi_asym", ex84["dRdB_hi"]["value"], "Gb/s per dB", 3)
 RC, RF = "ch08.radwan.reconfig_latency", "ch08.radwan.reconfig_fast"
 r.emit("p7_slow", 150e9 * L(RC) / 8 / 1e9, "GB", 3, [RC])
 r.emit("p7_fast", 150e9 * L(RF) * 1e-3 / 8 / 1e6, "MB", 3, [RF])
-# How many slow changes per day before downtime exceeds the 99.99 % availability budget (per day)
+# How many slow changes fit in the 99.99 % unavailability budget of a 30-day window
 A = "ch08.b4after.availability"
-budget = 86400 * (1 - L(A, "hi") / 100)
+budget = 30 * 86400 * (1 - L(A, "hi") / 100)
 r.emit("p7_budget_s", budget, "s", 3, [A])
-r.emit("p7_changes", budget / L(RC), "changes per day", 2, [A, RC])
+r.emit("p7_changes", budget / L(RC), "changes per 30 days", 3, [A, RC])
+r.emit("p7_changes_fast", budget / (L(RF) * 1e-3), "changes per 30 days", 3, [A, RF])
 
 # P8: regional distance under the 1.2 ms RTT, SMF vs hollow core (n_g of NANF, Chapter 1)
 RTT = "ch08.iris.rtt_example"

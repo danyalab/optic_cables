@@ -211,28 +211,12 @@
     "digits": 2,
     "inputs": []
   },
-  "gokhale_pel": {
-    "value": 400.0,
-    "unit": "mW",
-    "digits": 3,
-    "inputs": [
-      "ch03.cw.gokhale_100mw_pce"
-    ]
-  },
-  "gokhale_pj": {
-    "value": 0.25,
-    "unit": "pJ/bit",
+  "lam_pce": {
+    "value": 20.0,
+    "unit": "%",
     "digits": 2,
     "inputs": [
-      "ch03.cw.gokhale_100mw_pce"
-    ]
-  },
-  "gokhale_heat": {
-    "value": 300.00000000000006,
-    "unit": "mW",
-    "digits": 3,
-    "inputs": [
-      "ch03.cw.gokhale_100mw_pce"
+      "ch03.cw.lam_100mw_75c"
     ]
   },
   "lam_pel": {
@@ -259,17 +243,17 @@
       "ch03.cw.lam_100mw_75c"
     ]
   },
-  "inoue_pel_max": {
-    "value": 1.4000000000000001,
-    "unit": "W",
-    "digits": 3,
-    "inputs": [
-      "ch03.cw.inoue_350mw"
-    ]
-  },
   "lam_coupled": {
     "value": 81.28305161640994,
     "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.cw.lam_100mw_75c"
+    ]
+  },
+  "lam_per_lane_dbm": {
+    "value": 10.069100130080564,
+    "unit": "dBm",
     "digits": 3,
     "inputs": [
       "ch03.cw.lam_100mw_75c"
@@ -309,12 +293,12 @@
       "ch03.dml.ntt_membrane_intrinsic"
     ]
   },
-  "bcm_ratio": {
-    "value": 0.5333333333333333,
+  "hhi_ratio": {
+    "value": 0.42,
     "unit": "1",
     "digits": 2,
     "inputs": [
-      "ch03.eml.broadcom_uncooled_bw"
+      "ch03.eml.hhi_array_bw"
     ]
   },
   "mit_baud": {

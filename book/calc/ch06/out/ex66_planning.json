@@ -1,0 +1,699 @@
+{
+  "pt_us_pub": {
+    "value": 12.5,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_ratio": {
+    "value": 12.5,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_us": {
+    "value": 10.969100130080564,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_lmax_implied": {
+    "value": 10669.676460233537,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "pt_eol_used": {
+    "value": 5.5,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_example_bol"
+    ]
+  },
+  "rs": {
+    "value": 63.1,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch06.openroadm.w_63p1gbd"
+    ]
+  },
+  "lspan_bol": {
+    "value": 16.35,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.att.smf28ultra_max_1550"
+    ]
+  },
+  "eta1_db": {
+    "value": 27.41816785480919,
+    "unit": "dB(1/W²)",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.openroadm.w_63p1gbd"
+    ]
+  },
+  "node_loss": {
+    "value": 11.92,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "spans_per_roadm": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "nf_age": {
+    "value": 0.7,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "filt_age": {
+    "value": 0.05,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "trx_age": {
+    "value": 0.5,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "fast": {
+    "value": 0.4,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "fib_age": {
+    "value": 1.6,
+    "unit": "mdB/(km·yr)",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "years": {
+    "value": 10.0,
+    "unit": "yr",
+    "digits": 2,
+    "inputs": []
+  },
+  "d_span_eol": {
+    "value": 1.28,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "d_margin": {
+    "value": 1.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.gnpy.gsnr_accuracy"
+    ]
+  },
+  "snr_tr": {
+    "value": 21.0,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.gap.transceiver_snr_range"
+    ]
+  },
+  "req_m16": {
+    "value": 12.710795955365327,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold"
+    ]
+  },
+  "req_mqp": {
+    "value": 6.250946921615002,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch06.openroadm.ofec_threshold"
+    ]
+  },
+  "ns": {
+    "value": 12.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": []
+  },
+  "route_km": {
+    "value": 960.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": []
+  },
+  "n_int": {
+    "value": 2.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "n_wss": {
+    "value": 6.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": []
+  },
+  "popt_dbm": {
+    "value": 0.07252075682032057,
+    "unit": "dBm",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "gsnr_bol": {
+    "value": 16.8737656238773,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "gsnr_eol": {
+    "value": 15.497498358332615,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "gsnr_eol_re": {
+    "value": 15.587582149958678,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "pen": {
+    "value": 0.9639919778720238,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "tot_bol": {
+    "value": 14.489941824749142,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "tot_eol": {
+    "value": 13.45572388001035,
+    "unit": "dB",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "lin_deg": {
+    "value": 1.9292752108779303,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "gsnr_deg": {
+    "value": 1.3762672655446853,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "gsnr_deg_re": {
+    "value": 1.2861834739186229,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "node_ase_pct": {
+    "value": 5.598901076844242,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "filt_total": {
+    "value": 0.30000000000000004,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch06.margin.pointurier_table"
+    ]
+  },
+  "m16_m_bol": {
+    "value": 1.7791458693838145,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_s_res": {
+    "value": 2.234217944738792,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_u_bol": {
+    "value": -1.4550720753549777,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_m_eol": {
+    "value": -0.05507207535497827,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_ok": {
+    "value": 0.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_m_bol": {
+    "value": 8.23899490313414,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_s_res": {
+    "value": 2.234217944738792,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_u_bol": {
+    "value": 5.004776958395348,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_m_eol": {
+    "value": 6.404776958395347,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_ok": {
+    "value": 1.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_nmax_bol": {
+    "value": 16.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_nmax_plan": {
+    "value": 8.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_reach_bol": {
+    "value": 1280.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_reach_plan": {
+    "value": 640.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "m16_reach_loss_pct": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_nmax_bol": {
+    "value": 40.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_nmax_plan": {
+    "value": 24.0,
+    "unit": "spans",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_reach_bol": {
+    "value": 3200.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_reach_plan": {
+    "value": 1920.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  },
+  "mqp_reach_loss_pct": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.accelink_mw_nf_max",
+      "ch01.att.smf28ultra_max_1550",
+      "ch01.cd.g652_link_typ_d1550",
+      "ch01.gap.transceiver_snr_range",
+      "ch01.kerr.aeff_g652d_typ",
+      "ch01.kerr.n2_kato1995_smf",
+      "ch06.margin.pointurier_table",
+      "ch06.openroadm.w_63p1gbd",
+      "ch06.wss.huang_twin1x35_il"
+    ]
+  }
+}

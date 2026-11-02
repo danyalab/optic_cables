@@ -56,6 +56,16 @@ r.emit("v4_ocs_w_chip", L("ch05.ocs.tpuv4_48_ocs") * L("ch05.ocs.palomar_power")
 LW = "ch05.ocs.lightwave_vs_static_cost"
 c_lw, p_lw = 1 + cl.cond(LW, "cost_pct") / 100, 1 + cl.cond(LW, "power_pct") / 100
 c_eps, p_eps = 1 + cl.cond(LW, "eps_cost_pct") / 100, 1 + cl.cond(LW, "eps_power_pct") / 100
+r.emit("v4_cost_pct", L("ch05.ocs.tpuv4_cost_share", "lo"), "%", 1, ["ch05.ocs.tpuv4_cost_share"])
+r.emit("v4_power_pct", L("ch05.ocs.tpuv4_cost_share", "hi"), "%", 1, ["ch05.ocs.tpuv4_cost_share"])
+for key in ("cost_pct", "power_pct", "eps_cost_pct", "eps_power_pct"):
+    r.emit(f"lw_{key}", cl.cond(LW, key), "%", 2, [LW])
+r.emit("rl_typ", L("ch05.ocs.palomar_rl", "lo"), "dB", 2, ["ch05.ocs.palomar_rl"])
+r.emit("rl_spec", L("ch05.ocs.palomar_rl", "hi"), "dB", 2, ["ch05.ocs.palomar_rl"])
+r.emit("lumorph_coll", L("ch05.su.lumorph_speedup", "lo"), "%", 2, ["ch05.su.lumorph_speedup"])
+r.emit("lumorph_train", L("ch05.su.lumorph_speedup", "hi"), "", 2, ["ch05.su.lumorph_speedup"])
+r.emit("sir_gen1_guard", 100, "ns", 3, ["ch05.ocs.sirius_reconfig"])
+assert "100 ns guardband" in cl.rec("ch05.ocs.sirius_reconfig")["notes"]
 r.emit("lw_vs_eps_cost", (1 - c_lw / c_eps) * 100, "%", 3, [LW])
 r.emit("lw_vs_eps_power", (1 - p_lw / p_eps) * 100, "%", 2, [LW])
 

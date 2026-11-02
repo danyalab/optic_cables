@@ -135,6 +135,94 @@
       "ch05.ocs.tpuv4_48_ocs"
     ]
   },
+  "v4_cost_pct": {
+    "value": 5.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": [
+      "ch05.ocs.tpuv4_cost_share"
+    ]
+  },
+  "v4_power_pct": {
+    "value": 3.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": [
+      "ch05.ocs.tpuv4_cost_share"
+    ]
+  },
+  "lw_cost_pct": {
+    "value": 6.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.lightwave_vs_static_cost"
+    ]
+  },
+  "lw_power_pct": {
+    "value": 1.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.lightwave_vs_static_cost"
+    ]
+  },
+  "lw_eps_cost_pct": {
+    "value": 24.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.lightwave_vs_static_cost"
+    ]
+  },
+  "lw_eps_power_pct": {
+    "value": 10.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.lightwave_vs_static_cost"
+    ]
+  },
+  "rl_typ": {
+    "value": -46.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_rl"
+    ]
+  },
+  "rl_spec": {
+    "value": -38.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch05.ocs.palomar_rl"
+    ]
+  },
+  "lumorph_coll": {
+    "value": 74.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.lumorph_speedup"
+    ]
+  },
+  "lumorph_train": {
+    "value": 1.7,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.su.lumorph_speedup"
+    ]
+  },
+  "sir_gen1_guard": {
+    "value": 100.0,
+    "unit": "ns",
+    "digits": 3,
+    "inputs": [
+      "ch05.ocs.sirius_reconfig"
+    ]
+  },
   "lw_vs_eps_cost": {
     "value": 14.516129032258062,
     "unit": "%",

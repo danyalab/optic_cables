@@ -25,9 +25,14 @@ nu = c / LAM
 PE = "ch06.margin.pointurier_example_bol"
 lmax, lpath = c6.cond(PE, "max_reach_km"), c6.cond(PE, "length_km")
 us = 10 * math.log10(lmax / lpath)
-assert abs(us - (c6.cond(PE, "u_margin_dB") + c6.cond(PE, "s_margin_dB"))) < 0.05
-assert abs(us + c6.cond(PE, "d_margin_dB") - L(PE)) < 0.05
-r.emit("pt_us", us, "dB", 3, [PE])
+us_pub = c6.cond(PE, "u_margin_dB") + c6.cond(PE, "s_margin_dB")
+assert abs(us_pub + c6.cond(PE, "d_margin_dB") - L(PE)) < 0.05, "U + S + D = BoL total"
+# The ledger note states U + S = 10 log10(7500/600) = 12.5 dB, but 7500/600 = 12.5 is the
+# *linear* ratio; in decibels it is 10.97 dB. We report the discrepancy rather than resolve it.
+r.emit("pt_us_pub", us_pub, "dB", 3, [PE])
+r.emit("pt_ratio", lmax / lpath, "1", 3, [PE])
+r.emit("pt_us", us, "dB", 4, [PE])
+r.emit("pt_lmax_implied", lpath * 10 ** (us_pub / 10), "km", 3, [PE])
 r.emit("pt_eol_used", L(PE) - c6.cond(PE, "eol_margin_dB"), "dB", 2, [PE])
 
 # ---------------------------------------------------------------- Step 1

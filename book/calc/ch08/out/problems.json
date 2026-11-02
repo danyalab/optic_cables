@@ -1,0 +1,297 @@
+{
+  "p1_F": {
+    "value": 144.0,
+    "unit": "fibers",
+    "digits": 3,
+    "inputs": []
+  },
+  "p1_route_km": {
+    "value": 547.1769600000001,
+    "unit": "thousand route-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_route_miles_2025"
+    ]
+  },
+  "p1_fiber_km": {
+    "value": 78.79348224,
+    "unit": "million fiber-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_route_miles_2025"
+    ]
+  },
+  "p1_D": {
+    "value": 4000.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": []
+  },
+  "p1_ow": {
+    "value": 19.589552182797075,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "p1_rtt": {
+    "value": 39.17910436559415,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "p2_exact23": {
+    "value": 36.162361623616235,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge4"
+    ]
+  },
+  "p2_two_cuts": {
+    "value": 28.622500000000002,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.share_ge4"
+    ]
+  },
+  "p2_ek_lo": {
+    "value": 3.374538745387454,
+    "unit": "ISPs",
+    "digits": 3,
+    "inputs": []
+  },
+  "p2_ek_hi": {
+    "value": 10.086715867158672,
+    "unit": "ISPs",
+    "digits": 3,
+    "inputs": []
+  },
+  "p3_pstar": {
+    "value": 1.3157894736842106,
+    "unit": "USD/(Mb/s·month)",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw"
+    ]
+  },
+  "p3_save_port": {
+    "value": 4788.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "p3_ratio": {
+    "value": 0.4788,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.cost_assumption",
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "p3_cost_needed": {
+    "value": 4788.0,
+    "unit": "USD/month",
+    "digits": 3,
+    "inputs": [
+      "ch08.peering.effective_10g_bw",
+      "ch08.peering.transit_price_2015"
+    ]
+  },
+  "p4_months_1000": {
+    "value": 89.69205856195879,
+    "unit": "months",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.doubling_time"
+    ]
+  },
+  "p4_years_1000": {
+    "value": 7.474338213496566,
+    "unit": "years",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.doubling_time"
+    ]
+  },
+  "p4_ebb_td": {
+    "value": 14.449439791871095,
+    "unit": "months",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.traffic_growth"
+    ]
+  },
+  "p5_k1": {
+    "value": 87.5,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.planes"
+    ]
+  },
+  "p5_k2": {
+    "value": 75.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.ebb.planes"
+    ]
+  },
+  "p5_b4": {
+    "value": 70.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.b4.avg_util"
+    ]
+  },
+  "p6_m200": {
+    "value": 6.373234781746222,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_reach_ratio": {
+    "value": 23.050296800290063,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "p6_reach_200": {
+    "value": 691.5089040087018,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reach_qpsk",
+      "ch08.radwan.snr_req_100g"
+    ]
+  },
+  "p6_hi_asym": {
+    "value": 19.10108654560233,
+    "unit": "Gb/s per dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "p7_slow": {
+    "value": 1275.0,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_latency"
+    ]
+  },
+  "p7_fast": {
+    "value": 656.25,
+    "unit": "MB",
+    "digits": 3,
+    "inputs": [
+      "ch08.radwan.reconfig_fast"
+    ]
+  },
+  "p7_budget_s": {
+    "value": 259.20000000025925,
+    "unit": "s",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.availability"
+    ]
+  },
+  "p7_changes": {
+    "value": 3.8117647058861657,
+    "unit": "changes per 30 days",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.availability",
+      "ch08.radwan.reconfig_latency"
+    ]
+  },
+  "p7_changes_fast": {
+    "value": 7405.714285721692,
+    "unit": "changes per 30 days",
+    "digits": 3,
+    "inputs": [
+      "ch08.b4after.availability",
+      "ch08.radwan.reconfig_fast"
+    ]
+  },
+  "p8_smf": {
+    "value": 122.51428606456886,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "p8_hcf": {
+    "value": 179.8754748,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.hcf.ng_nanf_vs_smf28",
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "p8_gain": {
+    "value": 46.81999999999999,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch01.hcf.ng_nanf_vs_smf28",
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "p8_area": {
+    "value": 2.15561124,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.iris.rtt_example"
+    ]
+  },
+  "p9_T": {
+    "value": 5.0,
+    "unit": "s",
+    "digits": 2,
+    "inputs": []
+  },
+  "p9_D": {
+    "value": 9.72,
+    "unit": "Tb",
+    "digits": 3,
+    "inputs": []
+  },
+  "p9_bw": {
+    "value": 3.957777988591902,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": []
+  },
+  "p9_lat": {
+    "value": 44.076492411293415,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": []
+  },
+  "p9_bdp": {
+    "value": 7.268540478323129,
+    "unit": "GB",
+    "digits": 3,
+    "inputs": []
+  }
+}

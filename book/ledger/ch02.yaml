@@ -51,8 +51,10 @@ records:
   notes: 'Tutorial slides accompanying OFC 2012 OM3H.1; same slides use square-root raised cosine with roll-off 0.05 at spacing
     1.1 Rs for 14-GBd PM-16QAM. Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not
     opened); re-verify before prose use Bosco OFC 2012 slides are tier B; tier-A candidate Bosco et al., JLT 29(1) 53-61 (2011)
-    not read.'
-  verified: unreachable
+    not read. Verifier (PARTIAL): Value, quote, locator verified. Fix source title: slides are titled ''Spectral Shaping in
+    Ultra-Dense WDM Systems: Optical vs. Electrical Approaches'' (not ''Nyquist-WDM: optimization of pulse and filter shape'',
+    which is PDF metadata). Tier B correct; tier-A Bosco et al. JLT 29(1) 2011 still unread.'
+  verified: partial
 - id: ch02.sym.400zr_symbol_rate
   section: '2.1'
   claim: 400ZR DP-16QAM nominal symbol rate
@@ -163,7 +165,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: match
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
     prose use'
 - id: ch02.sym.lambda_pam4_rate
@@ -475,9 +477,11 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: partial
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
-    prose use'
+    prose use Verifier (PARTIAL): Value, conditions (26.5625 GBd PAM4, 500 m, -45 dB x4 reflections) and quote verified. Fix
+    source title: deck is ''200GBASE-DR4: A Baseline Proposal for the 200G 500m Objective'' (Welch, Luxtera, May 2016); ''400G-PSM4...''
+    is stale PDF metadata.'
 - id: ch02.imdd.mpi_penalty_dr4_mazzini
   section: '2.2'
   claim: Proposed maximum deterministic MPI penalty for 400GBASE-DR4 (55 dB MPO APC return loss, 26 dB Tx/Rx reflectance)
@@ -488,14 +492,15 @@ records:
     interface: 400GBASE-DR4 (proposal)
     note: 400GBASE-FR8 proposal 0.5 dB with 35 dB LC return loss
   source_id: mazzini_ieee8023bs_2015
-  locator: Conclusions, item 4
+  locator: slide 'List of proposed steps for PAM4 link budget harmonization'
   quote: Consider 55dB for MPO APC connector -> proposed max 0.15 dB for 400GBASE-DR4.
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: partial_fixed
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
-    prose use'
+    prose use Verifier (PARTIAL): Quote and value verified; change locator from ''Conclusions, item 4'' to the slide title
+    above. 26 dB Tx/Rx reflectance assumption is from preceding slide (''MPI penalty - further works and proposal'').'
 - id: ch02.imdd.mpi_penalty_fr8_mazzini
   section: '2.2'
   claim: Maximum deterministic MPI penalty for 400GBASE-FR8 with 35 dB LC return loss and 26 dB Tx/Rx reflectance
@@ -505,15 +510,16 @@ records:
   conditions:
     interface: 400GBASE-FR8 (proposal)
   source_id: mazzini_ieee8023bs_2015
-  locator: Conclusions, item 3
+  locator: slide 'List of proposed steps for PAM4 link budget harmonization'
   quote: Considering 35dB RL for duplex LC connector’s return loss and 26dB TX/RX reflectance -> bring maximum deterministic
     MPI to be 0.5 dB for the 400GBASE-FR8
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: partial_fixed
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
-    prose use'
+    prose use Verifier (PARTIAL): Quote and value verified; change locator from ''Conclusions, item 3'' to the slide title
+    above.'
 - id: ch02.imdd.mpi_bound_casea_2conn
   section: '2.2'
   claim: Upper-bound MPI penalty, PAM4 ER 4.5 dB, Tx/Rx/connector reflectance 26 dB, 2 connectors
@@ -566,7 +572,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: match
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
     prose use'
 - id: ch02.imdd.mpi_postfec_penalty_fei
@@ -586,8 +592,10 @@ records:
   confidence: med
   notes: 'Abstract only. Simulation result, not measurement; kind ''measured'' used for a reported study outcome. Verifier
     (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before prose use Abstract-only
-    journal record; keep confidence med.'
-  verified: unreachable
+    journal record; keep confidence med. Verifier (PARTIAL): Quote verbatim, value correct (lower bound). Supersession: paper
+    now in issue, JLT vol. 43, no. 24, p. 10947 (Dec 2025); update source venue from ''early access''. Still abstract-only;
+    keep confidence med. Published in JLT 43(24) 10947 (2025); still abstract-only.'
+  verified: partial
 - id: ch02.coh.balanced_sqrt_plo
   section: '2.3'
   claim: Balanced-detector output current is proportional to the square root of LO power, so high LO power lifts the signal
@@ -734,7 +742,7 @@ records:
   confidence: med
   notes: 'Secondary report of Pfau et al. PTL 2006 (not read). Verifier (UNREACHABLE): not re-read in this verification pass
     (session budget; source not opened); re-verify before prose use'
-  verified: unreachable
+  verified: match
 - id: ch02.dsp.cd_edc_6400km_penalty
   section: '2.4'
   claim: OSNR penalty for digital CD compensation of 6400 km SMF without inline DCF at 42.8 Gb/s
@@ -754,7 +762,7 @@ records:
   confidence: med
   notes: 'Secondary report within review; primary Savory OFC 2007 OTuA1 not read. Verifier (UNREACHABLE): not re-read in this
     verification pass (session budget; source not opened); re-verify before prose use'
-  verified: unreachable
+  verified: match
 - id: ch02.dsp.savory_taps_per_ps_nm
   section: '2.4'
   claim: Simulated bound on CD-compensating FIR taps, 2.2 taps per 1000 ps/nm at 10.7 GBd
@@ -1171,14 +1179,15 @@ records:
     code_rate: 5/6
     constellation: 16-ASK
   source_id: bocherer_tcom_2015
-  locator: Sect. VI (numerical results)
+  locator: Sect. IX-1
   quote: The rate 5/6 code with 16-ASK has a gap of only 0.61 to 0.69 dB
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  verified: unreachable
+  verified: partial_fixed
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
-    prose use'
+    prose use Verifier (PARTIAL): Value and quote verified. Fix locator: Sect. IX (Numerical Results), IX-1, not Sect. VI
+    (which is Bit-Metric Decoding). Add conditions: DVB-S2 LDPC, FER 1e-3, gap to (1/2)log2(1+SNR).'
 - id: ch02.ir.pcs_fixed_rate_loss
   section: '2.5'
   claim: Maximum loss from using a single fixed FEC rate 0.8 with ideal PCS, versus fully optimized code rate, for square
@@ -1278,7 +1287,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  verified: unreachable
+  verified: match
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
     prose use'
 - id: ch02.ir.hd_threshold_4p7e3
@@ -1367,7 +1376,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: match
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
     prose use'
 - id: ch02.fec.kp4_inner_fec_2cw
@@ -1586,7 +1595,7 @@ records:
   retrieved: 2026-11-02
   tier: B
   confidence: high
-  verified: unreachable
+  verified: match
   notes: 'Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before
     prose use'
 - id: ch02.fec.800lr_threshold
@@ -1691,8 +1700,8 @@ records:
   verified: match
 - id: ch02.fec.staircase_dataflow
   section: '2.6'
-  claim: Staircase decoder internal data-flow for n1 = n2 about 1000, t = 3, fc about 400 MHz, v = 4 iterations (two orders
-    below LDPC)
+  claim: Decoder dataflow estimate (293 Gb/s) from Smith et al. analysis of a product-code decoder with r = 32, used as a
+    reference point for staircase decoding throughput
   value: 293
   unit: Gb/s
   kind: model_param
@@ -1707,8 +1716,11 @@ records:
   confidence: high
   notes: 'Useful qualitative support for HD-FEC power advantage. Verifier (UNREACHABLE): not re-read in this verification
     pass (session budget; source not opened); re-verify before prose use (the fetched part of Sect. III stopped before the
-    v = 4 example).'
-  verified: unreachable
+    v = 4 example). Verifier (PARTIAL): Value verified (100 Gb/s system). Analysis is for the syndrome-domain product-code
+    decoder (staircase decoding is analogous), not literally a staircase decoder: reword claim; add r1 = r2 = 32; locator
+    is the product-code section before staircase codes are defined, not ''Sect. III''. ''more than two orders of magnitude
+    smaller'' than LDPC confirmed.'
+  verified: partial_fixed
 - id: ch02.fec.fec_power_5nm
   section: '2.6'
   claim: Module FEC power for 800G at 5 nm CMOS (feasibility study)

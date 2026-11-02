@@ -137,7 +137,7 @@ equations:
     the loss of the factor 2 relative to Eq. (13) reflect the 4-way split. Square roots dropped in extraction (''R PsP cos'').
     Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before prose
     use'
-  verified: unreachable
+  verified: match
 - id: ch02.eq.complex_baseband
   section: '2.3'
   latex: I_c(t) = I_I(t) + iI_Q(t) = R\sqrt{P_s(t)P_{\mathrm{LO}}}\exp[i\{\theta_s(t) + \theta_n(t)\}]
@@ -150,7 +150,7 @@ equations:
   notes: 'θ_n is the combined laser phase noise. Recovers the complex field up to phase noise; dual-polarization recovery
     uses two such receivers with a polarization-diversity front end. Verifier (UNREACHABLE): not re-read in this verification
     pass (session budget; source not opened); re-verify before prose use'
-  verified: unreachable
+  verified: match
 - id: ch02.eq.shot_noise
   section: '2.3'
   latex: \langle \Delta \hat I^2 \rangle = 2qIB, \qquad B = \frac{1}{2T}
@@ -237,7 +237,7 @@ equations:
   notes: 'AIR for symbol-wise (nonbinary or MLC-MSD) decoding. Discrete-constellation, equal-probability form in Eqs. (5)-(7).
     Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before prose
     use'
-  verified: unreachable
+  verified: match
 - id: ch02.eq.gmi_bitwise
   section: '2.5'
   latex: G = \sum_{k=1}^{m} I(B_k;\boldsymbol{Y}) = \sum_{k=1}^{m}\mathbb{E}_{B_k,\boldsymbol{Y}}\left[\log_2\frac{f_{\boldsymbol{Y}|B_k}(\boldsymbol{Y}|B_k)}{f_{\boldsymbol{Y}}(\boldsymbol{Y})}\right]
@@ -248,7 +248,7 @@ equations:
   notes: 'Valid for independent, uniform bits and bit-wise metric; the general GMI Eq. (12) maximizes over s >= 0 and here
     s = 1. m = log2 M bits per symbol. Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source
     not opened); re-verify before prose use'
-  verified: unreachable
+  verified: match
 - id: ch02.eq.awgn_capacity
   section: '2.5'
   latex: C = \tfrac{1}{2}\log_2(1+\mathrm{SNR})\ \text{bit per real dimension};\qquad C = \log_2(1+\mathrm{SNR})\ \text{bit
@@ -273,7 +273,7 @@ equations:
     Propose a new symbol (e.g. \lambda_{\mathrm{MB}} or \kappa) in book/notation/ch02_proposals.yaml. ν chosen so that E|ΔX|²
     = P (Eq. 9). Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify
     before prose use'
-  verified: unreachable
+  verified: match
 - id: ch02.eq.entropy
   section: '2.5'
   latex: H(X) = -\sum_{x\in\mathcal{X}} P_X(x)\log_2 P_X(x)
@@ -327,7 +327,7 @@ equations:
   notes: 'K information bits, N coded bits (N clashes with tap count; use n, k in prose). Check cases CFEC 14.8%, oFEC 15.32%,
     KP4 544/514-1 = 5.84%. Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened);
     re-verify before prose use (definitions are standard; arithmetic: KP4 544/514-1 = 5.84%, 255/239-1 = 6.69%).'
-  verified: unreachable
+  verified: match
 - id: ch02.eq.ncg_hd
   section: '2.6'
   latex: \mathrm{NCG}_{\mathrm{HD}}(p^*) = 20\log_{10}\mathrm{erfc}^{-1}(2\cdot 10^{-15}) - 20\log_{10}\mathrm{erfc}^{-1}(2p^*)
@@ -349,4 +349,4 @@ equations:
   locator: Eq. (2.7)
   notes: 'Es/N0 defined as 10log10(snr/2) in the thesis; SD NCG for BPSK-equivalent channel. Verifier (UNREACHABLE): not re-read
     in this verification pass (session budget; source not opened); re-verify before prose use'
-  verified: unreachable
+  verified: match

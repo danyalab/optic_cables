@@ -55,6 +55,12 @@ TAU_NVL = cl.cond("ch05.ai.tencent_nvlink_roce_latency", "nvlink_ns") * 1e-9  # 
 BW = L("ch05.ai.llama3_400g_per_gpu") * 1e9 / 8                               # B/s per GPU
 lat_ins = ["ch05.ai.tencent_nvlink_roce_latency", "ch05.ai.llama3_400g_per_gpu"]
 r.emit("tau_us", TAU * 1e6, "µs", 2, lat_ins)
+r.emit("tau_nvl_ns", TAU_NVL * 1e9, "ns", 3, lat_ins)
+for i, nm in enumerate(("rack", "zone", "bldg")):
+    r.emit(f"meta_lat_{nm}", cl.rec("ch05.ai.meta_latency_hierarchy")["value"][i], "", 2, ["ch05.ai.meta_latency_hierarchy"])
+r.emit("meta_zone_racks", cl.cond("ch05.ai.meta_zone_4k", "racks"), "racks", 3, ["ch05.ai.meta_zone_4k"])
+r.emit("llama_racks", cl.cond("ch05.ai.llama3_pod_3072", "racks"), "racks", 3, ["ch05.ai.llama3_pod_3072"])
+r.emit("gpus_per_rack", cl.cond("ch05.ai.llama3_pod_3072", "gpus_per_rack"), "GPUs", 2, ["ch05.ai.llama3_pod_3072"])
 r.emit("bw_GBps", BW / 1e9, "GB/s", 3, lat_ins)
 
 N_SEG = L("ch05.ai.hpn_segment_1k")

@@ -53,27 +53,22 @@ r.emit("p_for_16qam_budget", L("ch03.las.henry_linewidth_1mw") * 1e6 / (tol["16q
        ["ch03.las.henry_linewidth_1mw", "ch02.dsp.bps_lw_16qam"])
 
 # ------------------------------------------------------------ 2. CW lasers for silicon photonics
+# Only the tier-A journal record (Lam et al. 2023) is used for the worked numbers; the OFC
+# abstract-only claims (Gokhale, Inoue; tier C) appear only in a contested box.
 # ASSUMPTION: one CW laser feeds 8 lanes of 200 Gb/s (1.6 Tb/s).
 AGG = 8 * 200e9
 r.emit("agg", AGG / 1e12, "Tb/s", 2)
-for tag, p_rid, eff in (("gokhale", "ch03.cw.gokhale_100mw_pce", None),
-                        ("lam", "ch03.cw.lam_100mw_75c", float(cl.cond("ch03.cw.lam_100mw_75c", "pce_percent")))):
-    if tag == "gokhale":
-        p = float(cl.cond(p_rid, "power_mW")) * 1e-3
-        pce = L(p_rid) / 100
-    else:
-        p = L(p_rid) * 1e-3
-        pce = eff / 100
-    pel = p / pce
-    r.emit(f"{tag}_pel", pel * 1e3, "mW", 3, [p_rid])
-    r.emit(f"{tag}_pj", pel / AGG * 1e12, "pJ/bit", 2, [p_rid])
-    r.emit(f"{tag}_heat", (pel - p) * 1e3, "mW", 3, [p_rid])
-p_in = L("ch03.cw.inoue_350mw") * 1e-3
-pce_in = float(str(cl.cond("ch03.cw.inoue_350mw", "pce_percent")).strip("> ")) / 100
-r.emit("inoue_pel_max", p_in / pce_in, "W", 3, ["ch03.cw.inoue_350mw"])
-# Coupling loss of the Lam laser into lensed fiber
-r.emit("lam_coupled", L("ch03.cw.lam_100mw_75c") * cl.db2lin(-float(cl.cond("ch03.cw.lam_100mw_75c", "lensed_fiber_coupling_loss_dB"))),
-       "mW", 3, ["ch03.cw.lam_100mw_75c"])
+p = L("ch03.cw.lam_100mw_75c") * 1e-3
+pce = float(cl.cond("ch03.cw.lam_100mw_75c", "pce_percent")) / 100
+pel = p / pce
+r.emit("lam_pce", pce * 100, "%", 2, ["ch03.cw.lam_100mw_75c"])
+r.emit("lam_pel", pel * 1e3, "mW", 3, ["ch03.cw.lam_100mw_75c"])
+r.emit("lam_pj", pel / AGG * 1e12, "pJ/bit", 2, ["ch03.cw.lam_100mw_75c"])
+r.emit("lam_heat", (pel - p) * 1e3, "mW", 3, ["ch03.cw.lam_100mw_75c"])
+cpl = float(cl.cond("ch03.cw.lam_100mw_75c", "lensed_fiber_coupling_loss_dB"))
+coupled = p * cl.db2lin(-cpl)
+r.emit("lam_coupled", coupled * 1e3, "mW", 3, ["ch03.cw.lam_100mw_75c"])
+r.emit("lam_per_lane_dbm", cl.w2dbm(coupled / 8), "dBm", 3, ["ch03.cw.lam_100mw_75c"])
 
 # ------------------------------------------------------------ 3. DML/EML bandwidth vs symbol rate
 pam = float(cl.cond("ch03.dml.ntt_membrane_pam4", "energy_fJ_per_bit"))
@@ -83,8 +78,8 @@ r.emit("ntt_bw_over_baud", L("ch03.dml.ntt_membrane_bw") / (L("ch03.dml.ntt_memb
        ["ch03.dml.ntt_membrane_bw", "ch03.dml.ntt_membrane_pam4"])
 r.emit("ntt_ppr_gain", L("ch03.dml.ntt_membrane_bw") / L("ch03.dml.ntt_membrane_intrinsic"), "1", 2,
        ["ch03.dml.ntt_membrane_bw", "ch03.dml.ntt_membrane_intrinsic"])
-bb = float(cl.cond("ch03.eml.broadcom_uncooled_bw", "symbol_rate_GBd"))
-r.emit("bcm_ratio", L("ch03.eml.broadcom_uncooled_bw") / bb, "1", 2, ["ch03.eml.broadcom_uncooled_bw"])
+hb = float(cl.cond("ch03.eml.hhi_array_bw", "symbol_rate_GBd"))
+r.emit("hhi_ratio", L("ch03.eml.hhi_array_bw") / hb, "1", 2, ["ch03.eml.hhi_array_bw"])
 mit_br = float(str(cl.cond("ch03.eml.mitsubishi_225g_bw", "bit_rate")).split()[0])   # Gb/s, PAM4
 r.emit("mit_baud", mit_br / 2, "GBd", 4, ["ch03.eml.mitsubishi_225g_bw"])
 r.emit("mit_ratio", L("ch03.eml.mitsubishi_225g_bw") / (mit_br / 2), "1", 2, ["ch03.eml.mitsubishi_225g_bw"])
