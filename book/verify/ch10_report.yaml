@@ -1,0 +1,838 @@
+# Independent verification of book/ledger/ch10.yaml and book/ledger/ch10_equations.yaml (Supply chain and geopolitics)
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: federalregister.gov blocked for direct curl (proxy 403); all FR texts read through the Exa crawler copy of the
+# federalregister.gov full_text/html pages, and FR page citations / dates for all 11 FR documents were confirmed through the
+# FR API (documents.json) via the same crawler. MOFCOM announcements read on mofcom.gov.cn; S. 5548 on govinfo.gov;
+# Chinese annual reports read from cninfo PDFs (Innolight, Eoptolink, Yuanjie, Accelink, FiberHome, YOFC, HGTECH, ZTE);
+# US filings from sec.gov / company IR. No record had a wrong value, date, document number or amount.
+# Main issues: tier labels (agency guidelines, introduced bill, government press release), two NVIDIA quotes taken from an
+# AI-generated summary box, a draft (Application Proof) HK document labelled as a listing document, one quote not located
+# (Accelink AR chip platforms), one quote reworded (Youxun 167.08), and supersession (Coherent/Lumentum FY2026 10-Ks; affiliates
+# stay and MOFCOM Nos. 70/72 near expiry with an announced but unpublished extension to 10 Jan 2027).
+summary:
+  checked: 131
+  match: 119
+  mismatch: 0
+  partial: 12
+  unreachable: 0
+results:
+- id: ch10.chain.hhi_highly_concentrated
+  status: PARTIAL
+  found_value: 1,800 (value correct)
+  found_locator: 2023 Merger Guidelines, sec. 2.1 (Guideline 1), p. 5
+  evidence: Markets with an HHI greater than 1,800 are highly concentrated, and a change of more than 100 points is a significant increase.
+  action: 'Value and quote verified. Tier: the Merger Guidelines are an agency policy statement, not a statute or regulation; PIPELINE tier A list does not cover them. Either record tier B (government report)
+    or have the orchestrator rule that agency guidelines count as A.'
+- id: ch10.chain.hhi_monopoly
+  status: PARTIAL
+  found_value: 10,000 (value correct)
+  found_locator: 2023 Merger Guidelines, sec. 2.1, p. 5
+  evidence: grows larger as the market becomes more concentrated, reaching 10,000 in a market with a single firm.
+  action: 'Value and quote verified. Tier: the Merger Guidelines are an agency policy statement, not a statute or regulation; PIPELINE tier A list does not cover them. Either record tier B (government report)
+    or have the orchestrator rule that agency guidelines count as A.'
+- id: ch10.chain.hhi_significant_change
+  status: PARTIAL
+  found_value: 100 (value correct)
+  found_locator: 2023 Merger Guidelines, sec. 2.1, p. 5
+  evidence: a change of more than 100 points is a significant increase.
+  action: 'Value and quote verified. Tier: the Merger Guidelines are an agency policy statement, not a statute or regulation; PIPELINE tier A list does not cover them. Either record tier B (government report)
+    or have the orchestrator rule that agency guidelines count as A.'
+- id: ch10.chain.coherent_fy25_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Coherent FY2025 10-K (FY ended 30 Jun 2025), Item 7 MD&A consolidated table; XBRL statement of earnings
+  evidence: Revenues for the year ended June 30, 2025 increased 23% to $5,810 million, compared to $4,708 million for the prior fiscal year.
+  action: 'Superseded for ''latest year'': Coherent FY2026 10-K (FY ended 30 Jun 2026, filed Aug 2026) reports revenue USD 7,118.2 M and new segments Datacenter & Communications 5,274.6 M (FY2025 recast
+    3,755.2 M) / Industrial. Keep FY2025 record only if the chapter deliberately uses FY2025 to match Chinese CY2025 filings; say so in prose.'
+- id: ch10.chain.coherent_fy25_networking
+  status: MATCH
+  found_value: ''
+  found_locator: Coherent FY2025 10-K, Item 7 MD&A, Networking segment table
+  evidence: Revenues for the year ended June 30, 2025 for Networking increased 49% to $3,421 million, compared to $2,296 million for last fiscal year.
+  action: Fiscal basis correct (FY ended 30 Jun 2025). Note 'Networking' segment no longer exists from FY2026 (realigned; recast FY2025 D&C = 3,755.2 MUSD, not 3,421). Do not mix the two segment definitions.
+- id: ch10.chain.coherent_fy24_networking
+  status: MATCH
+  found_value: ''
+  found_locator: Coherent FY2025 10-K, Item 7 MD&A, Networking table
+  evidence: Revenues | $ | 3,421 | $ | 2,296 | 49 | %
+  action: none
+- id: ch10.chain.lumentum_fy25_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Lumentum Q4/FY2025 earnings release (12 Aug 2025), 'Full Fiscal Year 2025 Highlights'
+  evidence: Net revenue for fiscal year 2025 was $1,645.0 million, with GAAP net income of $25.9 million, or $0.37 per diluted share.
+  action: 'Fiscal basis correct (FY ended 28 Jun 2025). Superseded for ''latest year'': Lumentum FY2026 (ended 27 Jun 2026) net revenue USD 3,014.0 M; segment reporting changed to Components 2,005.6 / Systems
+    1,008.4 (FY2025 recast 1,116.3 / 528.7). Source is the 8-K earnings release, not the 10-K; label it so in prose.'
+- id: ch10.chain.lumentum_fy25_cloud_networking
+  status: MATCH
+  found_value: ''
+  found_locator: Lumentum FY2025 earnings release, Net Revenue by Segment, FY 2025 column
+  evidence: Cloud & Networking $ 1,410.8 1,084.9 30.0% Industrial Tech 234.2 274.3 (14.6)%
+  action: 'Fiscal basis correct (FY ended 28 Jun 2025). Superseded for ''latest year'': Lumentum FY2026 (ended 27 Jun 2026) net revenue USD 3,014.0 M; segment reporting changed to Components 2,005.6 / Systems
+    1,008.4 (FY2025 recast 1,116.3 / 528.7). Source is the 8-K earnings release, not the 10-K; label it so in prose.'
+- id: ch10.chain.marvell_fy26_datacenter
+  status: MATCH
+  found_value: ''
+  found_locator: Marvell FY2026 10-K (FY ended 31 Jan 2026), Item 7, net revenue by end market table
+  evidence: Data center | $6,100.3 | 74% | $4,164.2 | 72% | $2,216.7 | 40%
+  action: none
+- id: ch10.chain.marvell_optical_share_of_dc
+  status: MATCH
+  found_value: ''
+  found_locator: Marvell 2026 proxy/ARS CEO letter dated 13 May 2026, 'Sustained Value Creation'
+  evidence: Optical interconnect ... represents roughly half of our data center revenue
+  action: none (letter is in the 2026 Proxy Statement package dated 13 May 2026; add date to source venue)
+- id: ch10.chain.innolight_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 AR (cninfo 1225056459), 第二节 五、主要会计数据和财务指标
+  evidence: 营业收入（元） | 38,239,935,640.67 | 23,862,159,738.37 | | 60.25%
+  action: none
+- id: ch10.chain.innolight_2025_module_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 AR, 第三节 2、收入与成本 (1) 营业收入构成
+  evidence: 光通信收发模块 | 37,456,518,745.90 | 97.95% | 22,885,756,727.93 | 95.91% | 63.67%
+  action: none
+- id: ch10.chain.innolight_2025_overseas_share
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 AR, 营业收入构成 分地区
+  evidence: 境外 | 34,636,523,292.07 | 90.58% | 20,715,714,496.46 | 86.81% | 67.20%
+  action: none (90.58% exact; 90.6% if rounded)
+- id: ch10.chain.innolight_2025_units_sold
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 AR, 公司生产经营和投资项目情况 table
+  evidence: 光通 信收 发模 块 | 2,806 万只 | 2,376 万只 | 2,109 万只 | 37,456,518,745.90 | 42.61%
+  action: none
+- id: ch10.chain.innolight_2025_module_gm
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 AR, 占营业收入10%以上的产品 table
+  evidence: 光通信收发模 块 | 37,456,518,745.90 | 21,497,622,345.11 | 42.61% | 63.67% | 43.74% | 7.96%
+  action: none
+- id: ch10.chain.eoptolink_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 AR (cninfo 1225172598), 第三节 四、主营业务分析 1、概述; also 主要会计数据 24,841,854,840.22 元
+  evidence: 2025 年度公司实现营业收入 2,484,185.48 万元，归属于母公司股东的净利润 953,192.27 万元，较去年分别增加 187.29%和 235.89%
+  action: none (CNY 24.84 bn confirmed)
+- id: ch10.chain.eoptolink_2025_overseas_share
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 AR, 营业收入构成 分地区
+  evidence: 境外 | 23,887,512,078.75 | 96.16% | 6,804,933,855.42 | 78.70% | 251.03%
+  action: none (96.16% exact; 96.2% if rounded)
+- id: ch10.chain.eoptolink_2025_units_sold
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 AR, 公司生产经营和投资项目情况 table (column-split in PDF text)
+  evidence: 光互联 | 万 1,747 | 万 1,634 | 万 1,603 | 24,771,15 ... 5,676.88 ... 47.81%
+  action: none
+- id: ch10.chain.eoptolink_thailand_sub_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: 'Eoptolink 2025 AR, 主要控股参股公司分析, 泰国新易盛 row (cols: 注册资本, 总资产, 净资产, 营业收入, 营业利润, 净利润)'
+  evidence: 生产光模 | 亿泰 46.61 | 15,143,687, ... 049.80 | 2,061,231,2 ... 24.56 | 21,909,491, ... 080.87
+  action: 'none (column order confirmed: revenue is the third numeric column)'
+- id: ch10.chain.eoptolink_thailand_phase2
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 AR, 第三节 四、1、概述
+  evidence: 报告期内，公司泰国工厂二期已于 2025 年初正式运行，产能处于持续释放过程中。
+  action: none
+- id: ch10.chain.accelink_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Accelink 2025 AR (cninfo 1225148212), 主要会计数据和财务指标
+  evidence: 营业收入（元） | 11,928,697,127.38 | 8,272,310,184.75 | | 44.20% 6,060,944,999.12
+  action: none (cninfo PDF read directly; Sina mirror no longer needed)
+- id: ch10.chain.accelink_2025_datacom_access
+  status: MATCH
+  found_value: ''
+  found_locator: Accelink 2025 AR, 营业收入构成 分产品
+  evidence: 数据与接入 | 8,462,891,520.32 | 70.94% | 5,101,462,259.15 | 61.67% | 65.89%
+  action: none
+- id: ch10.chain.accelink_2025_overseas_share
+  status: MATCH
+  found_value: ''
+  found_locator: Accelink 2025 AR, 营业收入构成 分地区
+  evidence: 国外 | | 3,184,040,718.85 | 26.69% | 2,338,321,756.63 | 28.27% | 36.17%
+  action: none
+- id: ch10.chain.yofc_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: YOFC 2025 AR (cninfo 1225048080), 管理层讨论与分析 2、收入和成本分析
+  evidence: 本年度内，本集团营业收入约为人民币 142.52 亿元，较二零二四年约人民币121.97 亿元增长 约 16.85%。
+  action: none
+- id: ch10.chain.yofc_2025_interconnect
+  status: MATCH
+  found_value: ''
+  found_locator: YOFC 2025 AR, 光互联组件分部 paragraph; table row 3,143,858,396
+  evidence: 报告期内，该分部实现收入约 人民币 31.44 亿元，同比增长约 48.58%，实现毛利率 39.73%。
+  action: none
+- id: ch10.chain.yofc_2025_overseas_share
+  status: MATCH
+  found_value: ''
+  found_locator: YOFC 2025 AR, 海外业务 paragraph
+  evidence: 二零二五年，公司海外业务收入约人民币60.92 亿元，同比增 长约 47.8%，占营业收入的比例进一步增长至 42.7%。
+  action: none
+- id: ch10.chain.hgtech_2025_connect_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: HGTECH 2025 AR (cninfo 1225031509), 1、概述 (1) 联接业务; 光电器件系列产品 6,096,823,863.78
+  evidence: 报告期内，公司联接业务实现营业收入60.97 亿元，同比增 长 53.39%
+  action: none
+- id: ch10.chain.lightcounting_top10_china7
+  status: MATCH
+  found_value: ''
+  found_locator: Xiamen UX (优迅) prospectus, 第二节 概览 (五) 行业竞争情况 (final Dec 2025 version also)
+  evidence: 根据 LightCounting 2024 年全球光模块厂商排名，中国企业在前十强中占据七席，市场主导地位显 著。
+  action: none (tier C datum correctly flagged)
+- id: ch10.inp.coherent_inp_fabs
+  status: MATCH
+  found_value: ''
+  found_locator: Coherent FY2025 10-K, Item 1, Datacom market vertical
+  evidence: We also have multiple InP fabs in the U.S. and Europe, and we are moving to 6-inch wafer capability.
+  action: 'Supersession note: Aug 2026 investor deck says 6-inch platform now producing EMLs, CW lasers and photodiodes; internal InP output to double by end-2026.'
+- id: ch10.inp.lumentum_inp_expansion
+  status: MATCH
+  found_value: ''
+  found_locator: Lumentum letter to stockholders dated 7 Oct 2025 (proxy/ARS)
+  evidence: In fiscal year 2025, we expanded capacity at our indium phosphide fabs in Japan, the United States and the United Kingdom
+  action: none
+- id: ch10.inp.lumentum_mfg_locations
+  status: MATCH
+  found_value: ''
+  found_locator: Lumentum FY2025 10-K, Item 1, Manufacturing
+  evidence: Our significant manufacturing facilities are located in the United States, Thailand, China, the United Kingdom, Slovenia, and Japan.
+  action: none (FY2026 10-K repeats the same sentence and CM list; adds Greensboro NC facility acquisition)
+- id: ch10.inp.broadcom_inp_sole_source
+  status: MATCH
+  found_value: ''
+  found_locator: Broadcom FY2025 10-K (FY ended 2 Nov 2025), Item 1A risk factors
+  evidence: facilities are the sole sources for the FBAR filters ... and for the InP-based wafers used in our fibre optics products, respectively.
+  action: none
+- id: ch10.inp.mitsubishi_200g_eml_mp
+  status: MATCH
+  found_value: ''
+  found_locator: Mitsubishi Electric web page, Semiconductor & Device, 200Gbps EML paragraph
+  evidence: our optical device business began mass production of a 200Gbps EML *1 chip for optical transmission in April 2024
+  action: none
+- id: ch10.inp.mitsubishi_eml_capacity_x3_fy2030
+  status: MATCH
+  found_value: ''
+  found_locator: Same page, same paragraph
+  evidence: with a plan to more than triple capacity by fiscal 2030 compared with fiscal 2026.
+  action: none (undated web page; record access date)
+- id: ch10.inp.mitsubishi_eml_capacity_x3_fy2028_press
+  status: MATCH
+  found_value: ''
+  found_locator: sangyo-times 19 Sep 2025, 三菱電機はEMLチップを3倍増
+  evidence: 28年度に24年度比3倍に拡大する投資計画を策定した。
+  action: 'none (same article: 26年度に24年比1.5倍、28年度には26年度比2倍; 約100億円)'
+- id: ch10.inp.mitsubishi_eml_share_claim
+  status: MATCH
+  found_value: ''
+  found_locator: Mitsubishi IR deck 28 May 2025, Executive Summary footnote *2
+  evidence: No.1 global market share in optical devices for data centers (actual results in EML for data centers for FY2023, according to Mitsubishi Electric estimate)
+  action: none
+- id: ch10.inp.sumitomo_6inch_inp_ready
+  status: MATCH
+  found_value: ''
+  found_locator: Sumitomo Electric Q&A summary (10 Dec 2025) of 13 Nov 2025 briefing, Optical Devices/Compound Semiconductor Substrates
+  evidence: We will expand capacity to meet both internal and external sales demand. Additionally, 6-inch substrates are already ready for mass production.
+  action: none
+- id: ch10.inp.axt_substrate_share_of_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: AXT FY2025 10-K, Item 1
+  evidence: Our substrate product group generated 67%, 68%, and 63% of our consolidated revenue and our raw materials product group generated 33%
+  action: none
+- id: ch10.inp.axt_inp_permit_first
+  status: MATCH
+  found_value: ''
+  found_locator: AXT FY2025 10-K, Item 1A export-controls paragraph
+  evidence: On June 11, 2025, Tongmei was informed that it had satisfied the applicable requirements for a permit to export indium phosphide
+  action: none
+- id: ch10.inp.axt_na_revenue_share_2025
+  status: MATCH
+  found_value: ''
+  found_locator: AXT FY2025 10-K, International Sales / tariff paragraph
+  evidence: In 2024, 8% of our total worldwide revenue was from sales in North America, primarily in the U.S.; however, in 2025, only approximately 2%
+  action: none
+- id: ch10.inp.yuanjie_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR (cninfo 1225028582), 第三节 二、1、主要经营情况; 主要会计数据 601,434,509.56 元
+  evidence: 2025 年，公司实现营业收入 60,143.45 万元，同比增加 138.50%
+  action: none
+- id: ch10.inp.yuanjie_2025_dc_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 第三节 二、1
+  evidence: 公司的数据中心业务实现收入 39,325.78 万元，较上年同期上升 719.06%。
+  action: none
+- id: ch10.inp.yuanjie_2025_dc_gm
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 主营业务分产品情况
+  evidence: 数据中 心类产 品 | 393,257,791.72 | 109,278,706.32 | 72.21 | | 719.06 | 685.46
+  action: none
+- id: ch10.inp.yuanjie_2025_dc_units
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 产销量情况分析表
+  evidence: 数据中心 | 万颗 | 1,926 | 1,772 | 161 | 738.04 | 675.70
+  action: none
+- id: ch10.inp.yuanjie_2025_export_share
+  status: MATCH
+  found_value: 1.9145 MCNY (1,914,520.14 元)
+  found_locator: Yuanjie 2025 AR, 主营业务分地区情况
+  evidence: 境外 | 1,914,520.14 | 549,950.05 | 71.27 | | 706.57
+  action: none (id says 'share' but value is an amount; consider renaming to yuanjie_2025_export_revenue)
+- id: ch10.inp.yuanjie_cw70_mass
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 第三节 二、2、技术与研发情况
+  evidence: 报告期内，公司的 CW 70mW 激光器产品实现大批量交付，并逐步优化工 艺水平。
+  action: none
+- id: ch10.inp.yuanjie_hk_cw_2024_volume
+  status: PARTIAL
+  found_value: 1 million chips (value correct)
+  found_locator: HKEX document sehk26032500760_c.pdf, 里程碑表 2024 row
+  evidence: 2024年 我們實現70mW CW激光器芯片的量產，銷量超過100萬顆。
+  action: 'The HKEX file is an Application Proof (草擬本: ''其所載資料並不完整及可作更改''), not a final listing document. Relabel source title/venue as ''H-share Application Proof (draft), filed 25 Mar 2026''; or cite
+    the same fact from Yuanjie 2024 AR (cninfo 1223315235): ''报告期内该产品实现百万颗以上出货''.'
+- id: ch10.inp.accelink_chip_platforms
+  status: PARTIAL
+  found_value: consistent, AR sentence not located
+  found_locator: Accelink 2025 AR 三、核心竞争力分析 not reached in extract; Accelink placement prospectus 1-1-31 has same content
+  evidence: 公司拥有PLC（平面光波导）、III-V（激光器芯片FP、DFB、EML、VCSEL，探测器芯片FP、APD）、SIP（硅光）三大光芯片平台
+  action: Re-open the AR at 核心竞争力分析 to confirm the quoted wording, or switch source to accelink_placement_2025 with the sentence above. Placement doc also states 马来西亚槟城的生产基地已投产 (relevant to gap 15).
+- id: ch10.inp.cetc_800g_pd_volume
+  status: MATCH
+  found_value: ''
+  found_locator: CETC news item 17 Feb 2025, body
+  evidence: 光电探测器大批量导入400G/800G光模块产品供货超千万只
+  action: Claim text says '800G-class'; source says 400G/800G modules. Edit claim to '400G/800G-module photodetectors'.
+- id: ch10.eic.coherent_buys_dsps
+  status: MATCH
+  found_value: ''
+  found_locator: Coherent FY2025 10-K, Item 1, Sources of Supply
+  evidence: These include ICs, DSPs, mechanical housings, and optical components, and we commonly refer to them as raw materials.
+  action: none
+- id: ch10.eic.marvell_interconnect_portfolio
+  status: MATCH
+  found_value: ''
+  found_locator: Marvell FY2026 10-K, Item 1, Interconnects
+  evidence: Our interconnect products include PAM (pulse amplitude modulation), coherent and coherent-lite DSPs (digital signal processors), laser drivers, TIAs
+  action: none
+- id: ch10.eic.maxlinear_keystone_ramp
+  status: MATCH
+  found_value: ''
+  found_locator: MaxLinear 2025 ARS CEO letter (accession 0001104659-26-039215)
+  evidence: Our Keystone 800G DSP ramped at multiple hyperscale customers during 2025
+  action: none
+- id: ch10.eic.maxlinear_rushmore_timing
+  status: MATCH
+  found_value: ''
+  found_locator: MaxLinear 2025 ARS CEO letter
+  evidence: Our next-generation Rushmore 1.6T DSP platform is progressing well and is expected to enter production later in 2026, with revenue ramping in 2027.
+  action: Forward-looking; 'later in 2026' is now. Check MaxLinear Q3 2026 results for production status before writing.
+- id: ch10.eic.maxlinear_infra_share
+  status: MATCH
+  found_value: ''
+  found_locator: MaxLinear 2025 ARS CEO letter
+  evidence: Broadband Access at 44%, Infrastructure at 32%, Connectivity at 17%, and Industrial and Multi-Market at 8%
+  action: none
+- id: ch10.eic.youxun_product_mix
+  status: MATCH
+  found_value: ''
+  found_locator: 优迅 prospectus, 重大事项提示 (also final prospectus 12 Dec 2025, 688807)
+  evidence: 当前，公司产品结构以 10Gbps 及以下产品为主，25Gbps 及以上速率产品仍 处于逐步渗透及拓展阶段。
+  action: none (company listed on STAR as 688807; consider citing final prospectus cninfo 1224870082)
+- id: ch10.eic.youxun_25g_plus_sales_h1_2025
+  status: PARTIAL
+  found_value: 167.08 万元 (value correct)
+  found_locator: First-round inquiry reply, SSE 31 Aug 2025 (002088_20250831_24KI.pdf); ledger cites 9 Sep 2025 second-round reply
+  evidence: 2025 年 1-6 月，相关产品合计销售额 已达 167.08 万元，超过了 2022 年度、2023 年度和 2024 年度这三年的销售收入 总和
+  action: 'Value confirmed (table: 25G 50.30 + >25G 116.78 = 167.08 万元). The ledger quote wording was not found; confirm it in the 9 Sep reply or replace with the 31 Aug wording and URL above.'
+- id: ch10.eic.youxun_total_rev_h1_2025
+  status: MATCH
+  found_value: ''
+  found_locator: 优迅 prospectus, 主营业务收入按产品类型分类 合计 row (万元)
+  evidence: 合计 | 23,840.77 | 100.00% | 41,044.45 | 100.00% | 31,296.67 | 100.00%
+  action: none (total 营业收入 for H1 2025 is 23,849.87 万元; keep 'main-business' wording)
+- id: ch10.eic.icc_china_share_25g_plus
+  status: MATCH
+  found_value: ''
+  found_locator: ICC讯石 news 10 Jan 2025, 三、光通信电芯片市场国产化发展
+  evidence: 2025年中国的全球整体光通信电芯片市场占有率将达10%，而在25G速率及以上的光通信电芯片领域，中国将占全球市场7%。
+  action: none
+- id: ch10.eic.icc_china_share_tia_25g
+  status: MATCH
+  found_value: ''
+  found_locator: ICC讯石 news 10 Jan 2025, 1、跨阻放大器（TIA）
+  evidence: 中国厂商的占比约为8%左右，其余90%以上的市场由MACOM、Semtech、ADI和Renesas等美日厂商所有
+  action: none
+- id: ch10.eic.chengkewei_dsp_localization
+  status: MATCH
+  found_value: ''
+  found_locator: 科创板日报 9 Jul 2025, lead paragraph
+  evidence: DSP（数字信号处理）芯片在中国市场目前的国产化率可能不到1%。
+  action: none
+- id: ch10.eic.chengkewei_pam4_plan
+  status: MATCH
+  found_value: ''
+  found_locator: 科创板日报 9 Jul 2025, 橙科微DSP芯片验证平台 section
+  evidence: 按照橙科微的产品规划，今年内其400G/800G PAM4 DSP芯片计划完成量产，1.6T PAM4 DSP芯片正在研发攻坚阶段。
+  action: none
+- id: ch10.eic.hgtech_dsp_supply_tight
+  status: MATCH
+  found_value: ''
+  found_locator: HGTECH IR record 2026-01 (26 Mar 2026), Q6 (read via gubit mirror)
+  evidence: 电芯片方面，DSP供应紧张源于全球AI产业链需求翻倍，且上游先进工艺产能不足，目前电芯片供应可基本满足需求
+  action: none
+- id: ch10.mod.innolight_raw_material_risk
+  status: MATCH
+  found_value: ''
+  found_locator: Innolight 2025 AR, 对主要收入来源地的销售情况 note
+  evidence: 公司产品主要面向北美、欧洲等国家或地区，其部分关键原材料亦源自海外采购
+  action: none
+- id: ch10.mod.hgtech_overseas_800g_capacity
+  status: MATCH
+  found_value: ''
+  found_locator: HGTECH IR record 26 Mar 2026, Q5
+  evidence: 目前，公司海外800G光模块的月产能已达到15万只以上
+  action: none
+- id: ch10.mod.hgtech_thailand_base
+  status: MATCH
+  found_value: ''
+  found_locator: HGTECH 2025 AR, (1) 联接业务 paragraph
+  evidence: 泰国海外高速光模块产业基地、孝感智能终端产业基地均已顺利竣工投产
+  action: none
+- id: ch10.mod.eoptolink_1p6t_400g_lane
+  status: MATCH
+  found_value: ''
+  found_locator: Eoptolink 2025 AR, （三）公司在产业链位置及市场地位
+  evidence: 2026 年 3 月，公司在行业内率先发布了多款面向 AI 数据中心算力互联的新产品，包括基于 单波 400G IMDD 技术的 1.6T DR4 光模块
+  action: none
+- id: ch10.sys.huawei_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Huawei 2025 AR, business review narrative; Five-Year Financial Highlights table (880,941)
+  evidence: In 2025, Huawei's annual revenue was CNY880,941 million, an increase of 2.2% year-over-year.
+  action: 'Locator: quote is from the narrative, the table shows only the figure; adjust locator.'
+- id: ch10.sys.huawei_2025_ict_infra
+  status: MATCH
+  found_value: ''
+  found_locator: Huawei 2025 AR, By business segment table
+  evidence: ICT Infrastructure | 375,014 | 365,424 | 2.6%
+  action: none
+- id: ch10.sys.huawei_2025_china_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Huawei 2025 AR, By region table
+  evidence: China 616,249 615,264 0.2% EMEA 161,356 148,355 8.8%
+  action: none
+- id: ch10.sys.zte_2025_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: ZTE 2025 AR, 2.2.2 本集团业务和财务分析
+  evidence: 2025 年，本集团实现营业收入 133,895.5 百万元，同比增长 10.38%
+  action: none
+- id: ch10.sys.zte_2025_operator
+  status: MATCH
+  found_value: ''
+  found_locator: ZTE 2025 AR, 3、分业务分析 (1) 运营商网络
+  evidence: 2025 年，公司运营商网络营业收入 62,857.0 百万元，同比减少 10.62%
+  action: none
+- id: ch10.sys.zte_omdia_dco_claim
+  status: MATCH
+  found_value: ''
+  found_locator: ZTE 2025 AR, 光传输网络 paragraph
+  evidence: 根据 Omdia 最新报告，本集团连续 6 个季度保持 OTN 800G 可插拔 DCO 端口发货量全球第一。
+  action: none
+- id: ch10.sys.fiberhome_2025_revenue
+  status: MATCH
+  found_value: 24,918.55 MCNY exact (24,918,554,533.91 元)
+  found_locator: FiberHome 2025 AR, 五、报告期内主要经营情况; 主要会计数据 table
+  evidence: 2025 年，受宏观经济增长放缓影响，公司实现营业总收入 249.19 亿元，同比下降 12.72%
+  action: Value 24919 is the rounded 249.19 亿; for exactness use 24918.55 MCNY from the table (营业收入 24,918,554,533.91).
+- id: ch10.sys.fiberhome_2025_systems
+  status: MATCH
+  found_value: ''
+  found_locator: FiberHome 2025 AR, 主营业务分产品情况
+  evidence: 通信系统设备 | 18,654,767,364.94 | 15,145,138,144.98 | 18.81% | -16.40%
+  action: none
+- id: ch10.sys.fiberhome_2025_overseas
+  status: MATCH
+  found_value: ''
+  found_locator: FiberHome 2025 AR, 主营业务分地区情况
+  evidence: 国外 | 7,993,275,878.43 | 5,984,134,499.67 | 25.14% | -0.09%
+  action: none
+- id: ch10.sys.ciena_fy25_revenue
+  status: MATCH
+  found_value: ''
+  found_locator: Ciena FY2025 10-K (FY ended 1 Nov 2025), XBRL R10 Revenue note
+  evidence: Total revenue by product line$3,676,377$363,830$115,547$613,753$4,769,507
+  action: none
+- id: ch10.sys.ciena_fy25_optical
+  status: MATCH
+  found_value: ''
+  found_locator: Ciena FY2025 10-K R10, product-line table
+  evidence: 'Product lines: Optical Networking$3,246,239$—$—$—$3,246,239'
+  action: none
+- id: ch10.sys.ciena_fy25_cloud_customer
+  status: MATCH
+  found_value: ''
+  found_locator: Ciena FY2025 10-K R10, customer concentration paragraph
+  evidence: Ciena's revenue from a certain cloud provider includes $851.6 million, $532.3 million, and $561.4 million for fiscal 2025
+  action: none
+- id: ch10.sys.ciena_fy25_apac
+  status: MATCH
+  found_value: ''
+  found_locator: Ciena FY2025 10-K R10, geographic distribution
+  evidence: EMEA 731,912 648,870 643,142 APAC 431,188 414,170 633,060
+  action: none
+- id: ch10.sys.nokia_2025_optical
+  status: MATCH
+  found_value: ''
+  found_locator: Nokia Q4/FY2025 report (29 Jan 2026), Network Infrastructure segment table
+  evidence: Optical Networks | | 982 | 521 | 88% | 17% | 3 019 | 1 636 | 85% 14%
+  action: 'Note: Nokia''s recast (new 2026 structure, published 29 Jan 2026) gives Optical Networks FY2025 = 3,018 MEUR; use 3,019 only with the original segment basis.'
+- id: ch10.sys.nokia_infinera_close
+  status: MATCH
+  found_value: ''
+  found_locator: Nokia Annual Report 2025, 'Our strategy evolution during 2025', Infinera acquisition
+  evidence: the acquisition was completed on 28 February 2025. Nokia acquired Infinera for a purchase consideration of EUR 2.5 billion
+  action: none
+- id: ch10.sys.delloro_2025_market
+  status: MATCH
+  found_value: ''
+  found_locator: Dell'Oro press release 18 Feb 2026, headline and para 1
+  evidence: the Optical Transport equipment market grew 10 percent in 2025, driven by demand for data center interconnect (DCI).
+  action: none
+- id: ch10.sys.delloro_2025_top5
+  status: MATCH
+  found_value: ''
+  found_locator: Dell'Oro press release 18 Feb 2026, highlights bullet 3
+  evidence: The top five system vendors in 2025, ranked by revenue share, were Huawei, Ciena, Nokia, ZTE, and Cisco.
+  action: none
+- id: ch10.ctl.oct2022_ifr_effective
+  status: MATCH
+  found_value: ''
+  found_locator: 87 FR 62186 (FR Doc 2022-21658, pub. 13 Oct 2022), DATES item a
+  evidence: 'Effective on October 7, 2022, are the following instructions: 7 (§ 740.2), 9 (§ 740.10), 11 (§ 742.6), 17 (§ 744.23), and 25'
+  action: none (citation 87 FR 62186-62215 confirmed via FR API)
+- id: ch10.ctl.oct2022_fdp_28_entities
+  status: MATCH
+  found_value: ''
+  found_locator: 87 FR 62186, SUMMARY
+  evidence: this rule expands the scope of foreign-produced items subject to license requirements for twenty-eight existing entities on the Entity List that are located in China.
+  action: none
+- id: ch10.ctl.oct2023_acs_effective
+  status: MATCH
+  found_value: ''
+  found_locator: 88 FR 73458 (FR Doc 2023-23055, pub. 25 Oct 2023), DATES
+  evidence: This rule is effective November 17, 2023, except for amendatory instruction 11 amending supplement no. 1 to part 736
+  action: none (citation 88 FR 73458-73517 confirmed)
+- id: ch10.ctl.3a090a_tpp_4800
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 9604, at 9606 (FR Doc 2025-02655), Supp. No. 1 to Part 774, ECCN 3A090 Items a.1
+  evidence: a.1. A `total processing performance' of 4800 or more; or
+  action: 'Fill missing citation in source bis_fr_2025_02655: 90 FR 9604-9607 (pub. 14 Feb 2025, effective 11 Feb 2025). It is a ''correcting amendment'' to the 16 Jan 2025 IFR (90 FR 5298).'
+- id: ch10.ctl.3a090a2_tpp_1600_pd_5p92
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 9604, ECCN 3A090 Items a.2
+  evidence: a.2. A `total processing performance' of 1600 or more and a `performance density' of 5.92 or more.
+  action: Add FR page citation (90 FR 9606) as above.
+- id: ch10.ctl.3a090_example_fp16
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 9604, at 9607, Technical Note 2 to 3A090.a and 3A090.b, item 2
+  evidence: the ‘TPP’ threshold of 4800 can be met with ... 300 tera FLOPS (or 2 × 150 ‘MacTOPS’) at 16 bits
+  action: Value 300 TFLOPS at 16 bits correct (=2x150 MacTOPS). Extend quote to include '(or 2 x 150 MacTOPS) at 16 bits' so the 16-bit condition is in the quote.
+- id: ch10.ctl.dec2024_hbm_ifr_effective
+  status: MATCH
+  found_value: ''
+  found_locator: 89 FR 96790 (FR Doc 2024-28270, pub. 5 Dec 2024), DATES
+  evidence: 'Effective date: This rule is effective December 2, 2024.'
+  action: none (citation 89 FR 96790-96830 confirmed; HBM/3A090 compliance date 31 Dec 2024 confirmed)
+- id: ch10.ctl.dec2024_140_entities
+  status: MATCH
+  found_value: ''
+  found_locator: 89 FR 96830 (FR Doc 2024-28267, pub. 5 Dec 2024, effective 2 Dec 2024), SUMMARY
+  evidence: the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 140 entities to the Entity List.
+  action: none (citation 89 FR 96830-96854 confirmed; same rule modifies 14 China entries; Footnote 5 compliance date 31 Dec 2024)
+- id: ch10.ctl.ai_diffusion_compliance
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 4544 (FR Doc 2025-00636, pub. 15 Jan 2025), DATES
+  evidence: exporters, reexporters, and transferors are not required to comply with the changes made in this rule until May 15, 2025
+  action: none (effective 13 Jan 2025; citation 90 FR 4544-4584 confirmed)
+- id: ch10.ctl.ai_diffusion_rescission
+  status: PARTIAL
+  found_value: 2025-05-13 (date correct)
+  found_locator: BIS press release 13 May 2025 (PDF version dated 12 May 2025 says 'initiated')
+  evidence: BIS plans to publish a regulation formalizing the rescission and will issue a replacement rule in the future.
+  action: 'Tier: a press release is tier C under PIPELINE, not B. Supersession: GAO decision B-337935 (12 May 2026) holds the press release is a ''rule'' under the CRA and records Commerce''s position that
+    the AI Diffusion Rule ''remains in the Code of Federal Regulations'' pending rulemaking; Unified Agenda RIN 0694-AJ90 targeted final rescission 07/2026. No FR rescission found. Reword claim to ''announced
+    non-enforcement and initiated rescission''.'
+- id: ch10.ctl.affiliates_rule_50pct
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 47201 (FR Doc 2025-19001, pub. 30 Sep 2025, effective 29 Sep 2025), SUMMARY
+  evidence: any entity that is at least 50 percent owned by one or more entities on the Entity List will itself automatically be subject
+  action: none (citation 90 FR 47201-47214 confirmed; also covers MEU list and certain SDNs)
+- id: ch10.ctl.affiliates_rule_stayed
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 50857 (FR Doc 2025-19846, pub. 12 Nov 2025, effective 10 Nov 2025), SUMMARY and DATES
+  evidence: The suspension is set to end November 9, 2026, absent a future extension.
+  action: 'Citation 90 FR 50857-50858 confirmed. Supersession watch: on 23 Sep 2026 the US announced the trade truce extended to 10 Jan 2027 and a matching stay extension was expected, but as of late Oct
+    2026 (Dechert 28 Oct; Pillsbury 22 Oct) no BIS FR notice had been published. Re-check FR after 9 Nov 2026 before finalizing.'
+- id: ch10.ctl.el_2021_hengtong_ztt_hmn
+  status: MATCH
+  found_value: ''
+  found_locator: 86 FR 71557 (FR Doc 2021-27406, effective 17 Dec 2021), Additions to the Entity List
+  evidence: for acquiring and attempting to acquire U.S.-origin items in support of military modernization for the People's Liberation Army.
+  action: none
+- id: ch10.ctl.el_2021_hmn_alias
+  status: MATCH
+  found_value: ''
+  found_locator: 86 FR 71557, Revisions of Entity on the Entity List
+  evidence: 'this rule adds three additional aliases (HMN Technologies, Huahai Zhihui Technology Co., Ltd., and HMN Tech) under one of its affiliated entities: Huawei Marine Networks.'
+  action: none
+- id: ch10.ctl.el_2020_fiberhome
+  status: MATCH
+  found_value: ''
+  found_locator: 85 FR 34503 (FR Doc 2020-10868, effective 5 Jun 2020), Additions paragraph and list
+  evidence: FiberHome Technologies Group and its subsidiary Nanjing FiberHome Starrysky Communication Development Co.; NetPosa and its subsidiary SenseNets; Intellifusion; and IS'Vision are enabling activities
+  action: none (eight aliases include 'FiberHome Telecommunication Technologies Co., Ltd.'; Accelink not named; citation 85 FR 34503-34508 confirmed)
+- id: ch10.ctl.dod1260h_innolight
+  status: MATCH
+  found_value: ''
+  found_locator: 91 FR 35189 at 35194 (FR Doc 2026-11571), notice published 10 Jun 2026, signed 5 Jun 2026, filed 8 Jun 2026
+  evidence: Zhongji Innolight Co., Ltd. (Innolight) InnoLight is indirectly owned by SASAC and directly affiliated with MIIT (Section 1260H(g)(2)(B)(i)(I)).
+  action: 'Locator: entry is on p. 35194 (last entity listed). Eoptolink is not on the list (confirmed by reading the full notice). Docket DOD-2026-OS-1288.'
+- id: ch10.ctl.s5548_introduced
+  status: PARTIAL
+  found_value: 2026-09-24 (date correct)
+  found_locator: S. 5548 IS, header; Sec. 2(8)(B) inserting new subsec. (j)(3) 'covered optical transceiver'
+  evidence: “(i) Zhongji Innolight Co., Ltd. (InnoLight); “(ii) Eoptolink Technology Inc., Ltd. (Eoptolink);
+  action: 'Text and status verified: still only ''read twice and referred to HSGAC'' (congress.gov update 14 Oct 2026); no House companion found. Tier: an introduced bill is not a statute; record as tier
+    B (official legislative text) or have orchestrator rule. Locator: Sec. 2(8)(B), amending NDAA FY2023 sec. 5949(j).'
+- id: ch10.ctl.s5548_transition
+  status: PARTIAL
+  found_value: 5 years (value correct)
+  found_locator: S. 5548 IS, Sec. 2(3)(A)(ii), new sec. 5949(c)(1)(B)
+  evidence: shall take effect five years after the date of the enactment of the Securing National Security Systems from Chinese Optical Transceivers Act of 2026.
+  action: 'Same tier caveat as s5548_introduced. Note also: FAR Council must update regulations within 3 years; prohibition applies to ''critical systems'' only (new 5949(a)(2)(A)(v)).'
+- id: ch10.ctl.s301_semis_50pct
+  status: MATCH
+  found_value: ''
+  found_locator: 89 FR 76581 (FR Doc 2024-21217, pub. 18 Sep 2024), Annex table, Semiconductors, printed p. 76592
+  evidence: 8541.49.10 | Other photosensitive semiconductor diodes, other than light-emitting | 50 | 2025
+  action: none (citation 89 FR 76581-76614 confirmed; 8541.41 laser diodes absent from list, confirmed)
+- id: ch10.ctl.s301_transceiver_7p5pct
+  status: MATCH
+  found_value: ''
+  found_locator: CBP NY N336394, ruling dated 16 Nov 2023 (request 7 Nov 2023), duty paragraph
+  evidence: products of China classified under subheading 8517.62.0090, HTSUS, unless specifically excluded, are subject to an additional 7.5 percent ad valorem rate of duty.
+  action: 'Replace note ''Ruling dated after Nov 2023 request'' with exact date 16 Nov 2023. Tier: ruling letter is binding only on the requester; tier A acceptable as an agency legal determination but
+    prefer citing USTR List 4A notice (Aug 2019 action, Jan 2020 7.5% rate) once located and read.'
+- id: ch10.ctl.axt_tariff_70pct
+  status: MATCH
+  found_value: ''
+  found_locator: AXT FY2025 10-K, trade restrictions paragraph
+  evidence: On March 4, 2025, the United States further increased the tariff on imports of many products, including our wafer substrates, to 70%.
+  action: 'Historical value only. Same 10-K: Supreme Court invalidated IEEPA tariffs 20 Feb 2026 and CBP terminated them effective 24 Feb 2026, so 70% is no longer the current rate; prose must say so.'
+- id: ch10.ctl.mofcom2023_23_effective
+  status: MATCH
+  found_value: ''
+  found_locator: MOFCOM/GAC Announcement 2023 No. 23 (dated 3 Jul 2023), Article 8
+  evidence: 八、本公告自2023年8月1日起正式实施。
+  action: 'none (scope confirmed: Ga items 1-8 = metal Ga, GaN, Ga2O3, GaP, GaAs, InGaAs, GaSe, GaSb; Ge items 1-6 = metal Ge, zone-refined Ge ingot, ZnGeP2, Ge epi substrate, GeO2, GeCl4)'
+- id: ch10.ctl.mofcom2023_23_ingaas
+  status: MATCH
+  found_value: ''
+  found_locator: 2023 No. 23, Article 1 (一) item 6
+  evidence: 6.铟镓砷（参考海关商品编号：2853909028、3818009005、3825690005）。
+  action: none
+- id: ch10.ctl.mofcom2024_46_us_ban
+  status: MATCH
+  found_value: ''
+  found_locator: MOFCOM Announcement 2024 No. 46 (3 Dec 2024), Article 2
+  evidence: 二、原则上不予许可镓、锗、锑、超硬材料相关两用物项对美国出口；对石墨两用物项对美国出口，实施更严格的最终用户和最终用途审查。
+  action: 'none (effective on publication; Article 2 also imposes stricter end-user review for graphite: add to claim/notes)'
+- id: ch10.ctl.mofcom2025_10_inp
+  status: MATCH
+  found_value: ''
+  found_locator: MOFCOM/GAC Announcement 2025 No. 10 (4 Feb 2025), Part 五 indium items
+  evidence: （一）3C004.a．磷化铟(参考海关商品编号：2853904051)。
+  action: 'none (scope confirmed: 3C004.a InP, 3C004.b trimethylindium, 3C004.c triethylindium, 3E004 production technology; effective on publication 4 Feb 2025; Part 五 is ''Part 5'', not ''Article 5'')'
+- id: ch10.ctl.mofcom2025_18_rare_earths
+  status: MATCH
+  found_value: ''
+  found_locator: MOFCOM/GAC Announcement 2025 No. 18 (4 Apr 2025), Parts 一 to 七 (1C902-1C908)
+  evidence: 一、钐相关物项 ... 二、钆相关物项 ... 三、铽相关物项 ... 四、镝相关物项 ... 七、钇相关物项
+  action: Value 7 confirmed (Sm, Gd, Tb, Dy, Lu, Sc, Y; ECCN-style 1C902-1C908). Quote is only the title, which does not contain the value; replace with item headings.
+- id: ch10.ctl.mofcom2025_70_suspension
+  status: MATCH
+  found_value: ''
+  found_locator: MOFCOM/GAC Announcement 2025 No. 70 (7 Nov 2025), full text
+  evidence: 经批准，自即日起至2026年11月10日，商务部、海关总署公告2025年第55号、56号、57号、58号，及商务部公告2025年第61号、62号暂停实施。
+  action: 'Supersession watch: MOFCOM 美大司 (28 Sep 2026) said the Kuala Lumpur joint arrangement is extended to 10 Jan 2027, but no new announcement amending No. 70''s end date was found as of Oct 2026.
+    Re-check after 10 Nov 2026.'
+- id: ch10.ctl.mofcom2025_72_suspend46
+  status: MATCH
+  found_value: ''
+  found_locator: MOFCOM Announcement 2025 No. 72 (9 Nov 2025), full text
+  evidence: 经批准，自即日起至2026年11月27日，商务部公告2024年第46号（《关于加强相关两用物项对美国出口管制的公告》）第二款暂停实施。
+  action: 'Scope: suspends Art. 2 of No. 46 (Ga, Ge, Sb, superhard licensing denial and graphite stricter review). Re-check after 27 Nov 2026 for extension.'
+- id: ch10.open.kaiyuan_25g_localization_4pct
+  status: MATCH
+  found_value: ''
+  found_locator: Kaiyuan Securities 公司深度报告 on 源杰科技, 18 Sep 2025, sec. 2.2, citing 中商产业研究院 (Figs. 15-16)
+  evidence: 25G 以上光芯片的国产化率仅 4%，仍以海外光芯片厂商为主，未来国产化的提升潜力广阔。
+  action: 'Source metadata error: report is a ''公司深度报告'' with rating ''买入（维持）'', not a ''首次覆盖报告''; fix title in sources/ch10.yaml. Publisher chain: 中商产业研究院 (original) -> 开源证券 (relay). No year/method.'
+- id: ch10.open.eetchina_25g_localization_41pct
+  status: MATCH
+  found_value: ''
+  found_locator: EET-China column by 飙叔科技洞察, 6 Jul 2026
+  evidence: 虽然2025年整体25G以上高速光芯片国产化率已提升至41%，但高端25G/100G市场仍由国际巨头主导。
+  action: 'Note fix: the same article cites ~4% (''有数据显示，这一数字仅约4%'') without labelling it historical, and separately says ''国产化率一度不足5%''; it is internally inconsistent. Overall <20% confirmed.'
+- id: ch10.open.kaiyuan_10g_localization
+  status: MATCH
+  found_value: ''
+  found_locator: Kaiyuan 18 Sep 2025, sec. 2.2
+  evidence: 低于 10G 及以下速率光 芯片国产化率约 90%；10G 光芯片国产化率约 60%，部分性能要求较高、难度较大。
+  action: Same source-title fix as above.
+- id: ch10.open.yuanjie_dc_overseas_dominant
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 第三节 一、2 行业地位
+  evidence: 比如主要为 100G PAM4 EML 光芯片、 70mW、100mW 大功率激光器等。目前数据中心市场仍以海外供应商为主。
+  action: none
+- id: ch10.open.yuanjie_eml_status
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 第三节 二、2
+  evidence: 公司的 高速 EML 产品，在 100G PAM4 EML 产品完成客户验证的基础上，更高速率的 200G PAM4 EML 产品 也开始推进客户验证。
+  action: none (R&D-table budget CNY 74.90 M not seen in the extract; unverified detail in notes)
+- id: ch10.open.everbright_100g_eml_claim
+  status: MATCH
+  found_value: ''
+  found_locator: STCN 7 Jul 2025, paragraph quoting 闵大勇
+  evidence: 其中，公司的100G EML已实现量产出货，200G EML已经开始送样
+  action: none
+- id: ch10.open.hgtech_chip_self_production
+  status: MATCH
+  found_value: ''
+  found_locator: HGTECH IR record 26 Mar 2026, Q3
+  evidence: 是国内唯一覆盖InP/GaAs/SiP三大光电子平台的企业，并布局薄膜铌酸锂和量子点激光器等下一代技术，高端光芯片今年自主规模量产
+  action: none
+- id: ch10.open.accelink_localization_view
+  status: MATCH
+  found_value: ''
+  found_locator: Accelink placement offering document, (六) 上游行业 paragraph (1-1-36)
+  evidence: 我国高功率激光芯片和部分高速率激光芯片（如 10Gbps 和 25Gbps 等）已经进入了国产化加速突破的阶段
+  action: 'none (placement completed Jun 2026: 20,889,286 shares at CNY 167.55)'
+- id: ch10.open.nvidia_cpo_efficiency
+  status: MATCH
+  found_value: ''
+  found_locator: NVIDIA press release 18 Mar 2025, para 2
+  evidence: They integrate optics innovations with 4x fewer lasers to deliver 3.5x more power efficiency, 63x greater signal integrity
+  action: none
+- id: ch10.open.nvidia_cpo_availability
+  status: PARTIAL
+  found_value: early 2026 / 2H 2026 (value as stated)
+  found_locator: NVIDIA Technical Blog 18 Aug 2025, 'AI-Generated Summary' box (Nemotron), not the authored text
+  evidence: Commercial availability is planned for early 2026 for Quantum-X InfiniBand switches and the second half of 2026 for Spectrum-X Ethernet switches.
+  action: Quote comes from an AI-generated summary flagged 'may summarize information incompletely'. Re-source from the authored blog body or an NVIDIA press release; also check actual shipment status as
+    of 2026-11 (superseded timeline).
+- id: ch10.open.nvidia_cpo_loss
+  status: PARTIAL
+  found_value: '[22, 4] dB (as stated)'
+  found_locator: NVIDIA Technical Blog 18 Aug 2025, 'AI-Generated Summary' box
+  evidence: Co-packaged optics integration reduces electrical signal loss from 22 dB to approximately 4 dB
+  action: 'Same issue: the quoted sentence is machine-generated summary text. Find the authored sentence/figure in the blog body and quote that.'
+- id: ch10.open.broadcom_th6_davisson
+  status: MATCH
+  found_value: ''
+  found_locator: Broadcom press release 8 Oct 2025, World-Class Energy Efficiency
+  evidence: The result is a 70% reduction in optical interconnect power consumption—more than 3.5x lower than traditional pluggable solutions
+  action: 'none (shipping/sampling inconsistency confirmed: ''now shipping'' vs ''currently sampling'')'
+- id: ch10.open.sumitomo_cpo_cw_power
+  status: MATCH
+  found_value: ''
+  found_locator: Sumitomo Q&A summary, CW laser/CPO question
+  evidence: since CW lasers for CPO applications require over four times the current output and demand higher added value
+  action: none
+- id: ch10.open.yuanjie_cpo_barriers
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 3、(2) CPO/NPO paragraph
+  evidence: 但目前 CPO/NPO 仍面临成本、解耦 程度低、产业不成熟等问题，仍需产业链上下游协同发力突破。
+  action: none
+- id: ch10.open.yuanjie_cw300_dev
+  status: MATCH
+  found_value: ''
+  found_locator: Yuanjie 2025 AR, 第三节 二、2
+  evidence: 公司瞄准这一机遇，研发了 300mW 等更高功率的 CW 光源，目前正在进一步了解客户需求来完善产品的相关研发工作。
+  action: none
+- id: ch10.eq.hhi
+  status: PARTIAL
+  found_value: definition correct
+  found_locator: 2023 Merger Guidelines, sec. 2.1, p. 5
+  evidence: The HHI is defined as the sum of the squares of the market shares
+  action: Correct; shares in percent gives 0-10,000. Tier caveat as for HHI records.
+- id: ch10.eq.hhi_equal_firms
+  status: MATCH
+  found_value: derived form correct
+  found_locator: 2023 Merger Guidelines, footnote 13
+  evidence: the HHI for a market of five equal firms is 2,000 (5 x 20 2 = 2,000) and for six equal firms is 1,667
+  action: none (present 10^4/N as derived; footnote 14 also gives delta-HHI = 2ab)
+- id: ch10.eq.tpp
+  status: MATCH
+  found_value: factor 2 and bit length correct
+  found_locator: 90 FR 9604 at 9607, Technical Note 2 to 3A090.a and 3A090.b, item 1 and 1.b-1.c
+  evidence: ‘Total processing performance’ (‘TPP’) is 2 × ‘MacTOPS’ × ‘bit length of the operation’, aggregated over all processing units on the integrated circuit.
+  action: none (factor 2 = one MAC counted as 2 ops; b_op = largest input bit length of the multiply; dense rate per item 3)
+- id: ch10.eq.tpp_aggregate
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 9607, Technical Note 2 item 1.d
+  evidence: ‘TPP’ = TPP1 + TPP2 + . . . . + TPPn (where n is the number or processing units on the integrated circuit).
+  action: none
+- id: ch10.eq.performance_density
+  status: MATCH
+  found_value: ''
+  found_locator: 90 FR 9607, Technical Note 2 item 4
+  evidence: ‘Performance density’ is ‘TPP’ divided by ‘applicable die area’. For purposes of 3A090, ‘applicable die area’ is measured in millimeters squared
+  action: none
+tier_a_replacements:
+- for: ch10.ctl.3a090a_tpp_4800 / ch10.ctl.3a090a2_tpp_1600_pd_5p92 / ch10.ctl.3a090_example_fp16 / ch10.eq.tpp* (source bis_fr_2025_02655)
+  citation: BIS, 'Correction to ECCN 3A090 license requirements', correcting amendment, 90 FR 9604-9607 (14 Feb 2025), FR Doc. 2025-02655
+  url: https://www.federalregister.gov/documents/2025/02/14/2025-02655
+  locator: ECCN 3A090 at 90 FR 9606-9607; Technical Note 2 at 9607
+  value: TPP >= 4800; TPP >= 1600 and PD >= 5.92; TPP = 2 x MacTOPS x bit length
+  note: Fills the missing FR page citation flagged in gaps item 12.
+- for: ch10.ctl.ai_diffusion_rescission
+  citation: 'U.S. GAO, B-337935, ''Department of Commerce, BIS: Applicability of the Congressional Review Act to the Rescission of the AI Diffusion Rule'' (12 May 2026); reprinted Cong. Rec. vol. 172 no.
+    84, S2321 (18 May 2026)'
+  url: https://www.gao.gov/products/b-337935
+  locator: Background and conclusion
+  value: Press release = CRA rule; AI Diffusion Framework remains in the CFR until rescission rulemaking completes
+  note: Official legal decision, better than the press release for the legal status; Unified Agenda RIN 0694-AJ90 lists final rescission for 07/2026 (not yet seen in FR).
+- for: ch10.ctl.s301_transceiver_7p5pct
+  citation: USTR Section 301 List 4A notices (Aug 2019 action; Jan 2020 reduction of List 4A rate to 7.5%); FR citations not located in this session
+  url: ''
+  locator: not located
+  value: 7.5% additional duty on List 4A (incl. 8517.62.00)
+  note: Candidate only; read and confirm HTS 8517.62.0090 coverage before replacing the CBP ruling.

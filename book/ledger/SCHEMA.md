@@ -58,7 +58,8 @@ equations:
 
 ## Tiers
 
-- **A**: peer-reviewed journal or conference paper (JLT, OE, PTL, Nature Photonics, OFC, ECOC), ITU-T/IEEE/OIF standard, textbook, CODATA constant.
+- **A**: peer-reviewed journal or conference paper with full text read (JLT, OE, PTL, Nature Photonics, OFC, ECOC), ratified ITU-T/IEEE/IEC standard, textbook, CODATA constant, statute or regulation.
+- OIF implementation agreements and MSA specifications are **B** (industry agreements, not ratified standards). Vendor blogs and slide decks are **C**.
 - **B**: vendor datasheet or application note, operator or CAICT white paper, company annual report.
 - **C**: news, press release, market research, blog, Wikipedia. Allowed in the ledger only to record a claim that is itself the subject of discussion (e.g. a press-release record claim in a "contested" box), with `confidence: low`. Never the sole support for a technical value in prose.
 

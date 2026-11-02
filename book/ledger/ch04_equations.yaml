@@ -11,6 +11,7 @@ equations:
   notes: 'Source states the relation numerically, not as a formula. R_s matches notation.yaml (1.2). Proposed new symbols:
     R_b (line bit rate per lane, Gb/s), M (number of PAM or QAM levels). For PAM6 the source''s 90 GBd uses log2(6)~2.5 with
     framing.'
+  verified: match
 - id: ch04.eq.aggregate_rate
   section: '4.2'
   latex: R_{\mathrm{mod}} = N_{\lambda}\, R_b
@@ -22,6 +23,7 @@ equations:
   locator: Section 10.4 (16 lanes of 200 Gb/s for a total of 3.2 Tb/s)
   notes: 'N_lambda here = number of lanes (electrical or optical). Proposed symbols: R_mod (module aggregate rate), N_lambda
     (lane count). Same structure in 802.3dj objectives (8 x 200G = 1.6T).'
+  verified: match
 - id: ch04.eq.coherent_bitrate
   section: '4.6'
   latex: R_{\mathrm{line}} = 2\, R_s \log_2 M
@@ -32,6 +34,7 @@ equations:
   source_id: oif_400zr_01_2020
   locator: Section 12.5 (DP-16QAM at 59.84375 GBd gives 478.750 Gb/s)
   notes: Factor 2 = two polarizations. 59.84375 x 2 x 4 = 478.75 Gb/s checks. Also 800ZR 118.2 GBd x 8 = 945.6 Gb/s (juniper_jco800_zr_spec).
+  verified: match
 - id: ch04.eq.800lr_expansion
   section: '4.6'
   latex: R_s = \frac{R_{\mathrm{client}}}{8}\cdot\frac{126}{110}\cdot\frac{64}{63}
@@ -42,6 +45,7 @@ equations:
   locator: Section 7.3, Table 7 (850 Gb/s RS-coded client -> 973.64 -> 989.09 Gb/s -> 123.636 GBd)
   notes: 126/110 = BCH inner-FEC expansion; 64/63 = pilot insertion; divide by 8 bits per DP-16QAM symbol. R_client = 850
     Gb/s (800GbE after RS(544,514) and transcoding).
+  verified: match
 - id: ch04.eq.energy_per_bit
   section: '4.3'
   latex: E_b = \frac{P_{\mathrm{mod}}}{R_{\mathrm{mod}}}
@@ -53,6 +57,7 @@ equations:
   locator: 'Slide 5 (power quoted per 800G: 5.5 W/800G CPO, 14 W/800G pluggable)'
   notes: 'Definitional; W per Gb/s = nJ/bit, so 14 W/800 Gb/s = 17.5 pJ/bit. Bechtolsheim OFC 2023 slides compute ''pJ/Bit
     Calculated at 100G'' the same way. Proposed symbols: E_b (energy per bit, pJ/bit), P_mod (module power, W).'
+  verified: match
 - id: ch04.eq.fec_overhead_ofec
   section: '4.6'
   latex: \mathrm{OH} = \frac{n-k}{k} = \frac{17}{111} \approx 15.3\%
@@ -61,9 +66,12 @@ equations:
   - k
   source_id: openzrplus_spec_rev3_2023
   locator: 'Section 7 (OFEC: parity fraction 17/128, rate 0.867, overhead 17/111 = 15.3%)'
-  notes: Code rate k/n = 111/128. Compare 400ZR C-FEC ~14.8% overhead (oif_400zr_ia_2020 Sec. 10) and 800LR BCH 14.5% (oif_800lr_ia_2025
+  notes: 'Code rate k/n = 111/128. Compare 400ZR C-FEC ~14.8% overhead (oif_400zr_ia_2020 Sec. 10) and 800LR BCH 14.5% (oif_800lr_ia_2025
     Sec. 5). Symbols n,k (codeword/information length) are local; propose as subscripted n_{FEC}, k_{FEC} to avoid clash with
-    refractive index n.
+    refractive index n. Verifier (PARTIAL): Numbers correct, but the source defines k = 239 (component code, 2N = 256); the
+    equation''s n = 128, k = 111 are per-row quantities. State the mapping in notes. Also fix notes typo: ''oif_400zr_ia_2020''
+    should be ''oif_400zr_01_2020''.'
+  verified: partial
 - id: ch04.eq.qsfpdd_class8_current
   section: '4.1'
   latex: I_{\mathrm{cc,ip,8}} \le \frac{P_8}{2.5\,\mathrm{V}},\qquad I_{\mathrm{cc,sp,8}} \le \frac{P_8}{3.03\,\mathrm{V}}
@@ -74,6 +82,7 @@ equations:
   locator: Section 4.7.3, Table 13, Power Class 8 rows
   notes: Source writes 'P_8/2.5' and 'P_8/3.03' with unit A; the divisors carry units of V implicitly. Instantaneous (ip)
     and sustained (sp) peak current at hot plug.
+  verified: match
 - id: ch04.eq.switch_power_sum
   section: '4.5'
   latex: P_{\mathrm{sw}} = P_{\mathrm{ASIC+sup}} + P_{\mathrm{optics}} + P_{\mathrm{SerDes}} + P_{\mathrm{cool}} + P_{\mathrm{PSU}}
@@ -83,3 +92,4 @@ equations:
   locator: 'Table on abstract page (102.4 Tbps switch, 128 x 800G): 2854+2112+410+640+384 = 6400 W (DSP case)'
   notes: Decomposition used for DSP/LPO/CPO comparison; values per case in ledger record ch04.cpo.evans_switch_power. Cooling
     and PSU terms scale with the rest in Evans' model (inferred from table, not read in full text).
+  verified: match

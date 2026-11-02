@@ -16,6 +16,7 @@ records:
   tier: B
   confidence: high
   notes: 'Classes 2-6 in the same table: 3.5, 7, 8, 10, 12 W; Class 1 / low-power mode 1.5 W.'
+  verified: match
 - id: ch04.ff.qsfpdd_class_ladder
   section: '4.1'
   claim: QSFP-DD power-class ladder (Classes 1 to 7) maximum power
@@ -33,6 +34,7 @@ records:
   tier: B
   confidence: high
   notes: Range record; individual class values listed in conditions, all read from Table 13.
+  verified: match
 - id: ch04.ff.qsfpdd_class8
   section: '4.1'
   claim: 'QSFP-DD Power Class 8 is open-ended: power above 14 W, value reported by CMIS byte 201'
@@ -48,6 +50,7 @@ records:
   tier: B
   confidence: high
   notes: Steady-state current limit Icc_8 = 12 A at 3.3 V nominal, i.e. about 40 W ceiling (derived, not stated in Table 13).
+  verified: match
 - id: ch04.ff.qsfpdd_icc8_steady
   section: '4.1'
   claim: QSFP-DD Power Class 8 maximum steady-state supply current
@@ -64,6 +67,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.ff.qsfpdd_rev6_25w
   section: '4.2'
   claim: QSFP-DD Rev 6.0 (20 May 2021, adds QSFP-DD800) raised contact rating to 1.5 A and module power to at least 25 W
@@ -81,6 +85,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.ff.qsfpdd1600_40w
   section: '4.2'
   claim: QSFP-DD Rev 7.0 (29 Sep 2023) defines QSFP-DD1600 with 2 A contacts and feasibility of at least 40 W
@@ -99,6 +104,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.ff.qsfpdd_msa_first_release
   section: '4.2'
   claim: QSFP-DD MSA hardware specification first public release date
@@ -114,6 +120,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.ff.osfp_rev40_33w
   section: '4.1'
   claim: OSFP MSA Rev 4.0 maximum module current and power (at 3.3 V nominal)
@@ -132,6 +139,7 @@ records:
   confidence: med
   notes: 'Same table: Rev 1.0 6 A 19.8 W; Rev 2.0/3.0 6.4 A 21.1 W. Read from Exa crawler highlight of the PDF; table layout
     flattened. Revision-history text says ''Max current ... increased to 10A, supporting 30W module''.'
+  verified: match
 - id: ch04.ff.osfp_rev10_19w8
   section: '4.2'
   claim: OSFP MSA Rev 1.0 (Mar 2017) maximum module power
@@ -149,6 +157,7 @@ records:
   tier: B
   confidence: med
   notes: ''
+  verified: match
 - id: ch04.ff.osfp1600_42w9
   section: '4.1'
   claim: OSFP1600 maximum module power raised from 33 W to 42.9 W in OSFP MSA Rev 5.2 (17 Apr 2025)
@@ -166,6 +175,7 @@ records:
   tier: B
   confidence: high
   notes: Spec site lists later editorial revs 5.21 (May 2025) and 5.22 (Aug 2025) not read.
+  verified: match
 - id: ch04.ff.osfpxd_lanes
   section: '4.1'
   claim: 'OSFP-XD: 16 electrical lanes; 3.2TAUI-16 mode at 106.25 GBd PAM4 gives 16 x 200 Gb/s = 3.2 Tb/s'
@@ -184,6 +194,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.ff.osfpxd_40w_target
   section: '4.1'
   claim: 'OSFP-XD design objective: support up to 40 W for 1600-ZR and 3200G modules'
@@ -200,6 +211,7 @@ records:
   tier: B
   confidence: high
   notes: 'Same paper: ''1.6T Datacenter optics are expected to consume less than 25W''; 1.6T-ZR expected 35-40 W.'
+  verified: match
 - id: ch04.ff.osfpxd_1p6t_dc_lt25w
   section: '4.3'
   claim: OSFP MSA 2022 expectation for 1.6T datacenter optics power
@@ -216,6 +228,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.el.cei_lr_evolution_table
   section: '4.1'
   claim: 'OIF CEI long-reach generations: per-lane rate 25/56/112/224 Gb/s with timelines 2011-2014, 2014-2018, 2018-2021,
@@ -237,6 +250,7 @@ records:
   tier: B
   confidence: high
   notes: 'Same table: switch capacity 3.2T / 12.5T / 25T-50T / 50T-100T; IL 25 dB@12.5 GHz, 30 dB@14 GHz, 28 dB@28 GHz.'
+  verified: match
 - id: ch04.el.cei224_pam4_112gbd
   section: '4.1'
   claim: 224 Gb/s per lane with PAM4 requires about 112 GBd signaling
@@ -253,6 +267,7 @@ records:
   confidence: high
   notes: Framework also lists PAM6 ~90 GBd and PAM8 ~75 GBd alternatives. IEEE 802.3dj ultimately uses 106.25 GBd PAM4 for
     212.5 Gb/s (see OSFP-XD record).
+  verified: match
 - id: ch04.el.cei40_date
   section: '4.2'
   claim: OIF CEI-4.0 (56G) Implementation Agreement publication
@@ -268,6 +283,7 @@ records:
   tier: B
   confidence: high
   notes: Lightwave (2022) says CEI 4.0 was 'released in 2018'; OIF list says December 2017. Use OIF date.
+  verified: match
 - id: ch04.el.cei50_date
   section: '4.2'
   claim: OIF CEI-5.0 (112G XSR/MR/LR) Implementation Agreement date
@@ -283,6 +299,7 @@ records:
   confidence: high
   notes: CEI-112G-VSR clause added in CEI-05.1 (29 Dec 2022); later revisions 05.2 (Jan 2024) and 05.3 (Jul 2025) per OIF
     IA list.
+  verified: match
 - id: ch04.el.cei224_ia_status
   section: '4.2'
   claim: 'Status of OIF CEI-224G implementation agreements at 2026-11: still listed as current projects (XSR, VSR, MR, LR,
@@ -301,6 +318,7 @@ records:
   confidence: med
   notes: 'Negative finding: OIF IA list crawled 2026 shows latest electrical IA OIF-CEI-05.3 (July 2025). CEI-448G-VSR and
     -LR projects also listed. Re-check before publication.'
+  verified: match
 - id: ch04.el.cei224_mr_lr_range
   section: '4.1'
   claim: OIF CEI-224G-MR and -LR projects target 144 to 232 Gb/s signaling (500 mm PCB, 1000 mm backplane)
@@ -318,7 +336,9 @@ records:
   retrieved: '2026-11-02'
   tier: B
   confidence: high
-  notes: ''
+  notes: 'Verifier (PARTIAL): Value and quote correct, but the quote is not on oif_current_work_2026 (that page now says ''at
+    least 500 mm ... over advanced materials'' with no rate range). Create a source for the hot-topics page and re-point source_id/locator.'
+  verified: partial
 - id: ch04.std.8023bs_approval
   section: '4.2'
   claim: IEEE Std 802.3bs-2017 (200/400 GbE) IEEE-SA Standards Board approval date
@@ -335,6 +355,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023cd_approval
   section: '4.2'
   claim: IEEE Std 802.3cd-2018 (50/100/200 GbE, 50 Gb/s PAM4 lanes) Board approval date
@@ -351,6 +372,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023cu_approval
   section: '4.2'
   claim: IEEE Std 802.3cu-2021 (100G/400G over SMF at 100 Gb/s per wavelength, up to 10 km) Board approval date
@@ -366,6 +388,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023ck_approval
   section: '4.2'
   claim: IEEE Std 802.3ck-2022 (100/200/400G electrical interfaces at 100 Gb/s per lane) Board approval date
@@ -382,6 +405,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023df_approval_sa
   section: '4.2'
   claim: IEEE Std 802.3df-2024 (800 GbE MAC, 400G/800G PHYs at 100 Gb/s lanes) Board approval date per IEEE SA page
@@ -399,6 +423,7 @@ records:
   confidence: high
   notes: 'DISAGREEMENT: IEEE P802.3df task-force page says 16 February 2024 (see ch04.std.8023df_approval_tf). Likely a timezone/meeting-day
     difference; cite IEEE SA metadata as primary.'
+  verified: match
 - id: ch04.std.8023df_approval_tf
   section: '4.2'
   claim: IEEE 802.3df-2024 approval date as stated on the task-force page
@@ -412,7 +437,12 @@ records:
   retrieved: '2026-11-02'
   tier: B
   confidence: high
-  notes: Disagrees by one day with IEEE SA metadata (2024-02-15).
+  notes: 'Disagrees by one day with IEEE SA metadata (2024-02-15). Verifier (PARTIAL): Quote is verbatim, but the page is
+    wrong. The task-force chair''s own March 2024 opening report (2403_3df_open_report.pdf, slide 3) says ''15 Feb 2024 -
+    Approved by IEEE SA Standards Board''; 16 Feb is the date of D''Ambrosia''s announcement email (''I was informed today'',
+    Fri 16 Feb 2024). Keep only as a noted erratum; cite 2024-02-15 in prose. IEEE-SA board approval date is 15 Feb 2024;
+    16 Feb is the announcement email.'
+  verified: partial_fixed
 - id: ch04.std.8023dj_status
   section: '4.2'
   claim: 'IEEE P802.3dj (200G/lane; 1.6TbE) status: conditional approval to proceed to RevCom granted at 6 Oct 2026 LMSC teleconference;
@@ -431,6 +461,7 @@ records:
   confidence: high
   notes: Original PAR projected RevCom submittal Mar 2026 (ec-22-0198 draft PAR); slipped about 7 months. Final IEEE-SA board
     approval date not yet known; flag as open.
+  verified: match
 - id: ch04.std.8023dj_ballot_approval
   section: '4.2'
   claim: IEEE P802.3dj 3rd SA recirculation ballot approval rate
@@ -449,6 +480,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023dj_dr_reach
   section: '4.1'
   claim: 'IEEE P802.3dj objective: 200 Gb/s per lane over SMF up to at least 500 m (DR) and 2 km (FR); 1.6 Tb/s over 8 pairs
@@ -468,6 +500,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023dj_800g_lr1_10km
   section: '4.6'
   claim: 'IEEE P802.3dj objective: 800 Gb/s over 1 wavelength over a single SMF up to at least 10 km (800GBASE-LR1, coherent)'
@@ -483,6 +516,7 @@ records:
   tier: B
   confidence: high
   notes: Also 800G over 4 wavelengths up to 10 km (800GBASE-LR4, IM-DD), 20 km (ER1-20, added 14 Mar 2024) and 40 km (ER1).
+  verified: match
 - id: ch04.std.8023dj_coherent_dp16qam
   section: '4.6'
   claim: IEEE P802.3dj adopted DP-16QAM on a single wavelength as basis for 800G 10 km (LR1) and 40 km (ER1) objectives
@@ -498,6 +532,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.std.8023dj_lr1_oband_strawpoll
   section: '4.6'
   claim: IEEE P802.3dj Nov 2023 straw poll on O-band vs C-band for 800GBASE-LR1 (O-band votes)
@@ -518,6 +553,7 @@ records:
   confidence: high
   notes: Shows the coherent-lite wavelength choice was contested (intra-DC O-band, low latency vs telecom C-band interop with
     40 km). BCH FEC adopted for LR1 (July 2023).
+  verified: match
 - id: ch04.std.8023dv_par
   section: '4.2'
   claim: IEEE P802.3dv (400 Gb/s per lane; 400G/800G/1.6T electrical and SMF up to 500 m) PAR approval date
@@ -535,6 +571,7 @@ records:
   confidence: high
   notes: 'Projected completion for submittal to RevCom: Sep 2029. Study group chartered 13 Mar 2026 (ieee_8023_400gpl_sg_2026).
     A separate >=3.2 TbE effort was being incubated in the E4AI ad hoc.'
+  verified: match
 - id: ch04.pmd.100g_fr_lr_wavelength
   section: '4.1'
   claim: 100G-FR / 100G-LR (single-lambda) lane wavelength range
@@ -553,6 +590,7 @@ records:
   tier: B
   confidence: high
   notes: Same O-band 1311 nm window used for DR (500 m) parallel PMDs, e.g. LPO MSA Table 13 and 1.6T DR8 datasheets.
+  verified: match
 - id: ch04.pmd.400g_fr4_grid
   section: '4.1'
   claim: 400G-FR4 CWDM4 lane centre wavelengths (20 nm grid, 1271 to 1331 nm)
@@ -571,6 +609,7 @@ records:
   tier: B
   confidence: high
   notes: Reuses chapter 1 source; quote shows first two lanes; L2/L3 at 1311/1331 per same table (see ch01 record).
+  verified: match
 - id: ch04.pmd.400g_dr4_power_qdd
   section: '4.3'
   claim: Cisco QDD-400G-DR4-S (400GBASE-DR4, 500 m, 8x50G electrical) maximum power
@@ -587,6 +626,7 @@ records:
   tier: B
   confidence: high
   notes: QSFP112 400G-DR4 (4x100G electrical) listed at 10 W max in Cisco QSFP-400G-DR4 data sheet.
+  verified: match
 - id: ch04.pmd.400g_dr4_power_qsfp112
   section: '4.3'
   claim: Cisco QSFP-400G-DR4 (QSFP112, 4x100G electrical) maximum power
@@ -602,6 +642,7 @@ records:
   tier: B
   confidence: high
   notes: Moving from 8x50G to 4x100G electrical lanes cut max power from 12 W (QSFP-DD) to 10 W in Cisco's 400G-DR4 offerings.
+  verified: match
 - id: ch04.pmd.800g_2xdr4_power
   section: '4.3'
   claim: NVIDIA MMS4X00-NM 800G twin-port OSFP 2xDR4 (8x100G, EML) maximum power dissipation
@@ -619,6 +660,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.pmd.1p6t_dr8_power
   section: '4.3'
   claim: Third-party 1.6T OSFP DR8 (8x106.25 GBd PAM4, SiPh MZM) maximum power dissipation
@@ -634,7 +676,12 @@ records:
   retrieved: '2026-11-02'
   tier: B
   confidence: high
-  notes: Pre-FEC BER max 2.4e-4 in same table. Broadcom Sian3 press claims sub-23 W 1.6T modules with 3 nm DSP.
+  notes: 'Pre-FEC BER max 2.4e-4 in same table. Broadcom Sian3 press claims sub-23 W 1.6T modules with 3 nm DSP. Verifier
+    (PARTIAL): Value correct for this small third-party part, but not representative as ''the'' 1.6T DR8 maximum. NVIDIA''s
+    formal datasheet for MMS4A00 (1.6T twin-port OSFP 2xDR4, 8x106.25 GBd, 500 m) gives ''Maximum Power Dissipation | PD |
+    - | - | 33.5 | W'' (case temp 20-64 C). Add an NVIDIA record (tier B) and present 25-33.5 W as the vendor spread. Not
+    representative: NVIDIA MMS4A00 1.6T twin-port datasheet gives 33.5 W max.'
+  verified: partial_fixed
 - id: ch04.gen.innolight_800g_launch
   section: '4.2'
   claim: Innolight launched first 800G pluggable OSFP and QSFP-DD800 modules at ECOC 2020 (virtual) on 4 Dec 2020
@@ -651,6 +698,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''On 4 Dec 2020 the company launched the industry''s first 800G pluggable OSFP and QSFP-DD800 modules
     at the ECOC2020 online exhibition.'' Vendor self-claim of ''industry first''.'
+  verified: match
 - id: ch04.gen.innolight_1p6t_demo_2023
   section: '4.2'
   claim: Innolight demonstrated 1.6T OSFP-XD DR8+ (200G/lane, 2 km) at OFC 2023 with power below 23 W
@@ -668,6 +716,7 @@ records:
   tier: C
   confidence: low
   notes: Press release; same release claims 2nd-gen 5 nm-DSP 800G DR8+/2xFR4 below 14 W.
+  verified: match
 - id: ch04.gen.innolight_1p6t_ship_2025q2
   section: '4.2'
   claim: 'Innolight: 1.6T modules began shipping gradually in Q2 2025; scale shipments expected in following two quarters'
@@ -684,6 +733,7 @@ records:
   confidence: low
   notes: 'zh gloss: ''In Q2 1.6T began gradual shipment; 1.6T expected in continued mass production and scale shipment over
     the next two quarters.'' Secondary report of company IR record (tier C).'
+  verified: match
 - id: ch04.gen.eoptolink_1p6t_first
   section: '4.2'
   claim: Eoptolink claims to be among the first to mass-produce and deliver 1.6T modules, and the first to launch and mass-produce
@@ -701,6 +751,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''one of the world''s first companies to mass-produce and deliver 1.6T modules; the world''s first to
     launch and mass-produce LPO modules.'' Self-claim; contested by other vendors'' ''first'' claims.'
+  verified: match
 - id: ch04.gen.eoptolink_1p6t_dr4_400g
   section: '4.2'
   claim: Eoptolink (Mar 2026) announced a 1.6T DR4 module based on single-wavelength 400G IM-DD, plus 6.4T NPO and 12.8T XPO
@@ -718,6 +769,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''In March 2026 the company was first in the industry to release new products incl. a 1.6T DR4 module
     based on single-wavelength 400G IM-DD.'' Precedes IEEE P802.3dv (PAR Sep 2026).'
+  verified: match
 - id: ch04.gen.innolight_3p2t_2028
   section: '4.2'
   claim: 'Innolight annual report (citing LightCounting): 3.2T modules expected to ramp gradually from 2028'
@@ -734,6 +786,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''Over the next three years 800G and 1.6T will dominate demand; 3.2T modules are expected to ramp gradually
     from 2028.'' Forecast, not fact.'
+  verified: match
 - id: ch04.gen.innolight_units_2025
   section: '4.2'
   claim: Innolight optical transceiver units sold in 2025 (all rates)
@@ -752,6 +805,7 @@ records:
   confidence: high
   notes: 'Columns: capacity 28.06M, production 23.76M, sales 21.09M units; revenue RMB 37.46 bn; gross margin 42.61%. 2024
     sales 14.59M units.'
+  verified: match
 - id: ch04.gen.eoptolink_units_2025
   section: '4.2'
   claim: Eoptolink optical interconnect units sold in 2025
@@ -770,6 +824,7 @@ records:
   tier: B
   confidence: med
   notes: Table cells partly garbled in crawl; gross margin 47.81% (2025) vs 44.85% (2024).
+  verified: match
 - id: ch04.gen.hgtech_3p2t_cpo_npo
   section: '4.2'
   claim: 'HG Tech (parent of HG Genuine 华工正源): first-tier launch of 1.6T modules and industry-first 3.2T CPO/NPO solutions
@@ -787,6 +842,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''achieved first-tier launch of 1.6T modules; industry-first 3.2T CPO/NPO solutions.'' A 400k-unit 1.6T
     order figure appears only in a third-party IR summary (reportify.cn, 26 Mar 2026) and was not recorded.'
+  verified: match
 - id: ch04.pw.dsp_half_module
   section: '4.3'
   claim: DSP share of a DSP-based pluggable module power (nominal)
@@ -796,13 +852,16 @@ records:
   conditions:
     applies: IM-DD and coherent DSP modules; power conversion overhead 10-15% additional
   source_id: nagarajan_ieee_2024
-  locator: Section II, discussion of Fig. 2
+  locator: Sec. I (Introduction), Fig. 2
   quote: The DSP power is nominally about 50% of the module.
   retrieved: '2026-11-02'
   tier: A
   confidence: med
   notes: 'Read from IEEE Xplore page text (excerpt). Same paper: DC-DC and distribution losses ''between 10% and 15% of the
-    total power consumption''.'
+    total power consumption''. Verifier (PARTIAL): Value and quote correct. Fix locator to ''Sec. I (Introduction), Fig. 2''
+    (the paragraph precedes ''Section II discusses...''). Fix source nagarajan_ieee_2024: venue JLT 42(12), DOI 10.1109/JLT.2024.3399032,
+    published online 9 May 2024; full text open (CC BY-NC-ND) so confidence can be high.'
+  verified: partial_fixed
 - id: ch04.pw.power_overhead
   section: '4.3'
   claim: Power-distribution and DC-DC conversion overhead inside a pluggable module
@@ -814,12 +873,13 @@ records:
   conditions:
     note: '>10 A at 0.6 V DSP rail'
   source_id: nagarajan_ieee_2024
-  locator: Section II
+  locator: Sec. I (Introduction), Fig. 2
   quote: These losses are between 10% and 15% of the total power consumption and are labeled “power overhead” in Fig. 2.
   retrieved: '2026-11-02'
   tier: A
   confidence: med
-  notes: ''
+  notes: 'Verifier (PARTIAL): Same locator/venue fix as ch04.pw.dsp_half_module.'
+  verified: partial_fixed
 - id: ch04.pw.1p6t_breakdown_dsp
   section: '4.3'
   claim: Estimated DSP share of a 1.6T (8x200G) DR8/2xFR4 module power at 70 C (5 nm DSP, <22 W)
@@ -838,6 +898,7 @@ records:
   confidence: med
   notes: Pie-chart readout; mapping of percentages to legend order inferred (9.2, 8.9, 59.6, 8.6, 0.9, 12.8). Verify on the
     slide image.
+  verified: match
 - id: ch04.pw.800g_breakdown_dsp
   section: '4.3'
   claim: Estimated DSP share of an 800G (4x200G) DR4/FR4 module power at 70 C (~11-12 W)
@@ -854,6 +915,7 @@ records:
   tier: B
   confidence: med
   notes: Pie-chart readout; percentages 7.0, 10.0, 70.0, 9.0, 1.0, 3.0 assigned in legend order.
+  verified: match
 - id: ch04.pw.broadcom_pluggable_14w_800g
   section: '4.3'
   claim: 'Broadcom 2023 reference: pluggable optics power per 800G vs Bailly CPO'
@@ -866,9 +928,12 @@ records:
   locator: Slide 5 'Co-Packaged Optics vs. Pluggables'
   quote: 5.5W/800G Power 14W/800G
   retrieved: '2026-11-02'
-  tier: B
-  confidence: med
-  notes: 'Equivalent energy per bit: 14 W / 800 Gb/s = 17.5 pJ/bit (derived).'
+  tier: C
+  confidence: low
+  notes: 'Equivalent energy per bit: 14 W / 800 Gb/s = 17.5 pJ/bit (derived). Verifier (PARTIAL): Value correct. Tier: a vendor
+    marketing slide deck is not a formal datasheet; per the brief''s rule it is C, so this can only appear in a contested
+    box.'
+  verified: partial_fixed
 - id: ch04.pw.sian3_1p6t_sub23w
   section: '4.3'
   claim: Broadcom Sian3 (3 nm, 200G/lane) DSP enables sub-23 W 1.6T and sub-13 W 800G transceivers
@@ -886,6 +951,7 @@ records:
   tier: C
   confidence: low
   notes: Press release. Claims >20% power reduction vs Sian2 (5 nm).
+  verified: match
 - id: ch04.pw.marvell_ara_20pct
   section: '4.3'
   claim: Marvell Ara (3 nm 1.6T PAM4 DSP) claimed module power reduction vs prior generation
@@ -902,6 +968,7 @@ records:
   tier: C
   confidence: low
   notes: Body says 'by over 20%'; prior generation Nova 2 (5 nm).
+  verified: match
 - id: ch04.pw.eoptolink_3nm_20pct
   section: '4.3'
   claim: 'Eoptolink 2nd-gen 1.6T OSFP with 3 nm DSP: overall module power reduced about 20%'
@@ -918,6 +985,7 @@ records:
   confidence: low
   notes: 'zh gloss: ''The 3 nm DSP-based module design reduces overall power by about 20%.'' Agrees with Broadcom and Marvell
     20% claims.'
+  verified: match
 - id: ch04.pw.innolight_800g_5nm_lt14w
   section: '4.3'
   claim: 'Innolight 2nd-gen 800G DR8+/2xFR4 with 5 nm DSP: power below 14 W'
@@ -934,6 +1002,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch04.pw.macom_800g_mm
   section: '4.4'
   claim: 'Innolight annual report cites MACOM: 800G multimode with DSP >13 W vs <4 W with linear PURE DRIVE'
@@ -953,6 +1022,7 @@ records:
   confidence: low
   notes: 'zh gloss: ''800G multimode module with DSP can exceed 13 W, while 800G multimode with MACOM PURE DRIVE is below
     4 W.'' Secondhand vendor data inside an annual report.'
+  verified: match
 - id: ch04.lpo.msa_formed
   section: '4.4'
   claim: LPO MSA formation announced with 12 founding members
@@ -969,6 +1039,7 @@ records:
   tier: C
   confidence: low
   notes: 'Chair Mark Nowell: ''LPO materially reduces power consumption both for the module and the system'' (no number given).'
+  verified: match
 - id: ch04.lpo.spec_rev1_date
   section: '4.4'
   claim: LPO MSA 100G-DR-LPO specification Rev 1.0 date
@@ -984,6 +1055,7 @@ records:
   tier: B
   confidence: high
   notes: Public release announced 25 Mar 2025 at OFC 2025. A 400G-FR4-LPO Rev 1 spec is also listed on the MSA site (not read).
+  verified: match
 - id: ch04.lpo.host_loss
   section: '4.4'
   claim: LPO MSA host electrical channel loss allowed for LEI-xxxG-PAM4 host interfaces
@@ -1001,6 +1073,7 @@ records:
   tier: B
   confidence: high
   notes: Host must have DSP-based SerDes and RS(544,514) FEC (abstract).
+  verified: match
 - id: ch04.lpo.power_budget
   section: '4.4'
   claim: LPO MSA illustrative optical link power budget (500 m, 3.0 dB channel loss, 3.4 dB TDECQ)
@@ -1018,6 +1091,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.lpo.tx_launch_power_min
   section: '4.4'
   claim: LPO MSA minimum average launch power per lane
@@ -1034,6 +1108,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.lpo.interop_2025
   section: '4.4'
   claim: 'LPO MSA Feb 2025 interoperability event: margins above required link performance across a diverse ecosystem'
@@ -1050,6 +1125,7 @@ records:
   tier: C
   confidence: low
   notes: Self-reported by the MSA; no published BER statistics found. Contested-box material.
+  verified: match
 - id: ch04.lpo.eoptolink_40pct
   section: '4.4'
   claim: 'Eoptolink: LPO reduces module power by about 40% (14 W to below 8 W for 800G)'
@@ -1065,9 +1141,12 @@ records:
   quote: The module power consumption gets reduced by around 40% when keeping the Host ASIC/system power consumption equal.
     This means that instead of 14W
   retrieved: '2026-11-02'
-  tier: B
-  confidence: med
-  notes: ''
+  tier: C
+  confidence: low
+  notes: 'Verifier (PARTIAL): Value and quote correct. Tier: this is an Eoptolink promotional flyer hosted on oiforum.com,
+    not an OIF document or datasheet; reclassify source eoptolink_oif_lpo_ecoc2023 as C (press) and keep the record in the
+    contested LPO-savings box. Attribution is Eoptolink, not OIF.'
+  verified: partial_fixed
 - id: ch04.lpo.bechtolsheim_50pct
   section: '4.4'
   claim: 'Bechtolsheim (Arista), OFC 2023: linear drive can cut optics module power by 50% and system power by up to 25%'
@@ -1084,6 +1163,7 @@ records:
   confidence: low
   notes: 'Same slides: LPO vs direct-drive CPO at 200G projected 6.3 pJ/bit (SiPh) / 5 pJ/bit (TFLN) vs CPO 5 pJ/bit; ''Very
     similar''.'
+  verified: match
 - id: ch04.lpo.bechtolsheim_lpo_vs_cpo_200g
   section: '4.5'
   claim: 'Bechtolsheim projection at 200G/lane: LPO 6.3 pJ/bit (SiPh) vs direct-drive CPO 5 pJ/bit'
@@ -1101,6 +1181,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch04.lpo.marvell_20pct
   section: '4.4'
   claim: 'Marvell (Patra) estimate: LPO power savings only about 20%; requires 25-50% higher-bandwidth components and 25%
@@ -1118,6 +1199,7 @@ records:
   tier: C
   confidence: low
   notes: 'Contested: compare Eoptolink ~40%, Bechtolsheim 50%. Secondhand via analyst note.'
+  verified: match
 - id: ch04.lpo.arista_14c_cooler
   section: '4.4'
   claim: 'Arista (Chaouch) infrared comparison: 64-port switch with LPO modules ran 14 C cooler than with 64 retimed 800G
@@ -1134,6 +1216,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch04.lpo.hgtech_800g_lpo_volume
   section: '4.4'
   claim: 'HG Tech: 800G LPO modules delivered in volume to a North American customer in 2025'
@@ -1150,10 +1233,11 @@ records:
   confidence: med
   notes: 'zh gloss: ''the connectivity business''s 800G LPO modules achieved volume delivery to North American customers.''
     Evidence for LPO deployment (pro side of interop debate).'
+  verified: match
 - id: ch04.lpo.eoptolink_lpo_lt11w
   section: '4.4'
-  claim: 'Eoptolink annual report: high-speed direct-drive (linear) 800G QSFP-DD/OSFP module project target power below 11
-    W, IEEE 802.3ck compliant'
+  claim: Eoptolink 800G AEC (active electrical cable) project target power below 11 W (IEEE 802.3ck electrical interface);
+    not a linear-drive optical module figure
   value: 11
   unit: W
   kind: spec_max
@@ -1163,10 +1247,13 @@ records:
   locator: 研发投入 table, row 高速直驱技术光模块
   quote: 功耗低于 11W，满足 IEEE 802.3ck 协议要 求。
   retrieved: '2026-11-02'
-  tier: B
+  tier: C
   confidence: low
   notes: 'zh gloss: ''power below 11 W, meeting IEEE 802.3ck requirements.'' Table cells misaligned in crawl; association
-    to the direct-drive row is likely but not certain.'
+    to the direct-drive row is likely but not certain. Verifier (MISMATCH): The <11 W / IEEE 802.3ck target belongs to the
+    800G AEC (active electrical cable) project, not the direct-drive (linear) optical module. 802.3ck is an electrical-interface
+    standard, which fits AEC. Delete the record or re-scope it to ''Eoptolink 800G AEC target <11 W'' (not LPO evidence).'
+  verified: mismatch_fixed
 - id: ch04.lpo.accelink_lro_lpo_products
   section: '4.4'
   claim: Accelink 800G portfolio includes 800G DR8 LRO and 800G 2xFR4 LPO; 1.6T includes DR8
@@ -1181,6 +1268,7 @@ records:
   tier: B
   confidence: high
   notes: 'zh gloss: ''800G series mainly includes 800G VR8, DR8, 2xFR4, 2xLR4, 800G DR8 LRO and 800G 2xFR4 LPO.'''
+  verified: match
 - id: ch04.lpo.innolight_lro_definition
   section: '4.4'
   claim: 'Innolight annual report: LRO keeps a retiming DSP only on the electrical-in to optical-out path; receive path linear;
@@ -1197,6 +1285,7 @@ records:
   confidence: high
   notes: 'zh gloss: ''LRO is defined as a transitional technology between DSP and LPO modules.'' OIF also published OIF-EEI-112G-RTLR-01.0
     (Retimed Transmitter Linear Receiver), Oct 2025, per oif_ia_list_2026.'
+  verified: match
 - id: ch04.lpo.oif_rtlr_ia
   section: '4.4'
   claim: OIF Implementation Agreement for 112 Gb/s Retimed Transmitter Linear Receiver (RTLR, i.e. LRO)
@@ -1212,6 +1301,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.cpo.bailly_5p5w
   section: '4.5'
   claim: Broadcom TH5-Bailly 51.2T CPO optical power per 800G
@@ -1225,9 +1315,12 @@ records:
   locator: Slide 'Tomahawk 5 – Bailly 51.2T CPO'
   quote: '8 Silicon Photonic Engines @ 6.4T (64ch) 51.2T CPO links, no electrical links Optical Power: 5.5W/800G'
   retrieved: '2026-11-02'
-  tier: B
-  confidence: med
-  notes: 5.5 W / 800 Gb/s = 6.9 pJ/bit (derived).
+  tier: C
+  confidence: low
+  notes: '5.5 W / 800 Gb/s = 6.9 pJ/bit (derived). Verifier (PARTIAL): Value correct. Tier: marketing deck = C by the brief''s
+    rule. Use the tier-A Meta ECOC 2025 Fig. 1(a) (measured optics power per 800 Gb/s, about 5.2-5.6 W across OE die temperature
+    on 16 OEs) as primary support; see tier_a_replacements. Note the same slide says ''30% Power Savings'', not 70%.'
+  verified: partial_fixed
 - id: ch04.cpo.humboldt_102w
   section: '4.5'
   claim: Broadcom TH4-Humboldt 25.6T CPO measured optics power for 128 lanes (vs TH4 switch 367 W)
@@ -1243,9 +1336,10 @@ records:
   locator: Slide 'Tomahawk 4 – Humboldt 25.6T CPO'
   quote: TH4 Power W 367 CPO Power (128 lanes) W 102 Air Temp C 24
   retrieved: '2026-11-02'
-  tier: B
-  confidence: med
-  notes: ''
+  tier: C
+  confidence: low
+  notes: 'Verifier (PARTIAL): Value correct; tier C (marketing deck), same as bailly_5p5w.'
+  verified: partial_fixed
 - id: ch04.cpo.bailly_70pct_claim
   section: '4.5'
   claim: 'Broadcom claim: Bailly CPO optical interconnect power 70% lower than pluggables; delivered to customers 14 Mar 2024'
@@ -1263,6 +1357,7 @@ records:
   tier: C
   confidence: low
   notes: 'Same release: pluggables ''consume approximately 50% of system power''. Contrast Meta-measured 65% (ECOC 2025).'
+  verified: match
 - id: ch04.cpo.meta_65pct
   section: '4.5'
   claim: 'Meta measurement: Bailly 51.2T CPO optics power saving vs retimed 100G/lane pluggables'
@@ -1280,6 +1375,7 @@ records:
   tier: A
   confidence: high
   notes: Disagrees with Broadcom's 70% press claim (different baseline/conditions).
+  verified: match
 - id: ch04.cpo.meta_1m_hours
   section: '4.5'
   claim: 'Meta: >1 million 400G-port device hours of CPO operation at 40 C ambient with no uncorrectable codewords'
@@ -1296,6 +1392,7 @@ records:
   tier: A
   confidence: high
   notes: 'Also: ''we did not see any failures or uncorrectable codewords (UCWs) in the links''.'
+  verified: match
 - id: ch04.cpo.meta_laser_tj
   section: '4.5'
   claim: Laser junction temperature in CPO with external pluggable laser sources (worst case) vs about 80 C in uncooled pluggables
@@ -1311,6 +1408,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.cpo.meta_pls_8ports
   section: '4.5'
   claim: 'Bailly system: each field-replaceable pluggable laser source (PLS) feeds eight 400G ports'
@@ -1326,6 +1424,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.cpo.meta_15m_hours_5x_mtbf
   section: '4.7'
   claim: 'Meta (Alduino, Oct 2025): ~15 million CPO device-hours; ~5x MTBF improvement over comparable pluggables'
@@ -1342,6 +1441,7 @@ records:
   tier: C
   confidence: low
   notes: News report of a talk; Alduino cautions link interruption (blast radius), not component MTBF, is the deciding metric.
+  verified: match
 - id: ch04.cpo.nvidia_3p5x
   section: '4.5'
   claim: 'NVIDIA GTC 2025 claim: photonics (CPO) switches deliver 3.5x power efficiency, 4x fewer lasers, 10x resiliency'
@@ -1360,6 +1460,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch04.cpo.nvidia_5x_2026
   section: '4.7'
   claim: 'NVIDIA product page (2026): CPO gives 5x better power efficiency over pluggable transceivers'
@@ -1375,6 +1476,7 @@ records:
   tier: C
   confidence: low
   notes: DISAGREEMENT with NVIDIA's own 3.5x (Mar 2025, Aug 2025 blog, Hot Chips 2025). Baseline undefined in both.
+  verified: match
 - id: ch04.cpo.nvidia_quantumx_ports
   section: '4.5'
   claim: 'NVIDIA Quantum-X Photonics InfiniBand CPO switch: 144 ports of 800 Gb/s (115 Tb/s), liquid cooled, 200G SerDes'
@@ -1391,6 +1493,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch04.cpo.nvidia_electrical_loss
   section: '4.5'
   claim: 'NVIDIA: CPO reduces electrical channel loss from 22 dB (pluggable) to about 4 dB'
@@ -1405,7 +1508,10 @@ records:
   retrieved: '2026-11-02'
   tier: C
   confidence: low
-  notes: ''
+  notes: 'Verifier (PARTIAL): Values correct, but the recorded quote is from the page''s ''AI-Generated Summary'' box (machine-written,
+    flagged by NVIDIA as possibly incomplete), not the author''s text. Replace the quote with the body sentence above. Also
+    note ''up to 22 dB'' is an upper bound. Recorded quote came from the page AI-generated summary; replace with body text.'
+  verified: partial
 - id: ch04.cpo.nvidia_availability_slip
   section: '4.7'
   claim: 'NVIDIA CPO availability: Mar 2025 said Quantum-X ''later this year'' (2025), Spectrum-X 2026; Aug 2025 said Quantum-X
@@ -1424,7 +1530,13 @@ records:
   tier: C
   confidence: low
   notes: 'Compare nvidia_photonics_press_2025: ''expected to be available later this year''. Actual shipment status at 2026-11
-    not verified.'
+    not verified. Verifier (PARTIAL): (1) Recorded quote is from the AI-Generated Summary; replace with the body sentence
+    above. (2) Superseded as of 2026-11: NVIDIA announced on 14 Aug 2026 that Spectrum-X Ethernet Photonics entered full production
+    (first customers CoreWeave, Lambda, Oracle), and Quantum-X Q3450-LD units were delivered to Lambda by June 2026 (Lambda
+    blog, 1 Jun 2026). Only secondary copies of the Aug 2026 NVIDIA announcement were reachable (StorageReview 15 Aug 2026);
+    find the NVIDIA primary before citing. SUPERSEDED: NVIDIA announced Spectrum-X Photonics in full production on 2026-08-14
+    (secondary copies only). Recorded quote came from an AI-generated page summary.'
+  verified: partial
 - id: ch04.cpo.elsfp_power_classes
   section: '4.5'
   claim: OIF ELSFP optical power classes per wavelength per fibre core (LP to SHP)
@@ -1448,6 +1560,7 @@ records:
   tier: B
   confidence: high
   notes: Table text flattened by crawler. ELSFP-01.0 published 8 Aug 2023; 02.0 on 8 Jan 2025.
+  verified: match
 - id: ch04.cpo.elsfp_supply
   section: '4.5'
   claim: 'ELSFP electrical supply: six pairs of 3.3 V power/ground pins, up to 1.5 A each'
@@ -1463,6 +1576,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.cpo.oif_3p2t_module_ia
   section: '4.5'
   claim: OIF Implementation Agreement for a 3.2 Tb/s Co-Packaged (CPO) Module
@@ -1478,6 +1592,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.cpo.minkenberg_50pct
   section: '4.5'
   claim: 'Minkenberg et al. (2021): CPO can realize cost and power reductions of up to 50%; adoption needs >=50% gains in
@@ -1495,6 +1610,7 @@ records:
   confidence: high
   notes: 'Venue is IET Optoelectronics (not JOCN as the brief assumed). Also: ''the main hurdle to CPO adoption is not of
     a technical nature''.'
+  verified: match
 - id: ch04.cpo.evans_eff_vs_dsp
   section: '4.5'
   claim: 'Evans (JLT 2026): current CPO transceivers 67% (23%) better energy efficiency than DSP (LPO) transceivers; 69% (44%)
@@ -1514,6 +1630,7 @@ records:
   tier: A
   confidence: med
   notes: Abstract only.
+  verified: match
 - id: ch04.cpo.evans_switch_power
   section: '4.5'
   claim: 'Evans (JLT 2026) modelled 102.4T switch (128x800G) total power: DSP 6400 W, LPO 4983 W, CPO 4093 W'
@@ -1539,6 +1656,7 @@ records:
   confidence: med
   notes: 'Switch-level reduction CPO vs DSP 36%, vs LPO 18%. Implied optics energy: 2112 W/102.4 Tb/s = 20.6 pJ/bit (DSP),
     9.0 (LPO), 5.0 (CPO) (derived).'
+  verified: match
 - id: ch04.coh.400zr_reach
   section: '4.6'
   claim: 'OIF 400ZR applications: amplified point-to-point DWDM 120 km or less; unamplified single-wavelength loss-limited'
@@ -1558,6 +1676,7 @@ records:
   confidence: high
   notes: Targeted amplified reach 'is 80km or more' (Sec. 7.1). Press release (2020-04-29) gives unamplified loss budget 11
     dB.
+  verified: match
 - id: ch04.coh.400zr_baud
   section: '4.6'
   claim: 400ZR symbol rate (DP-16QAM)
@@ -1573,6 +1692,7 @@ records:
   tier: B
   confidence: high
   notes: '''per polarization'' wording is the IA''s; 478.75 Gb/s is the total line rate.'
+  verified: match
 - id: ch04.coh.400zr_cfec
   section: '4.6'
   claim: '400ZR C-FEC: pre-FEC BER 1.25e-2 yields 1e-15 post-FEC; ~10.8 dB NCG, ~14.8% overhead'
@@ -1591,6 +1711,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.400zr_osnr_26
   section: '4.6'
   claim: 400ZR (0x01 DWDM) receiver OSNR requirement, worst case EOL back-to-back (module implementation)
@@ -1608,6 +1729,7 @@ records:
   confidence: med
   notes: Value is from a module spec in 400ZR mode; OIF IA Table 13.1.3 itself not read (gap). Consistent with IEEE 802.3ct
     contribution (OSNR 26 dB at BER 1.25e-2) and van den Borne ECOC 2024 (26.0 dB/0.1 nm).
+  verified: match
 - id: ch04.coh.400zr_module_power
   section: '4.6'
   claim: Juniper QDD-400G-ZR-M-HP maximum power in OIF 400ZR mode (QSFP-DD, high-power +1 dBm Tx)
@@ -1625,6 +1747,7 @@ records:
   confidence: high
   notes: 'Columns: OIF 400ZR, OpenZR+ metro, regional, long-haul, ULH. OIF targeted ~15 W at project start (OpenZR+ white
     paper).'
+  verified: match
 - id: ch04.coh.400zr_15w_target
   section: '4.6'
   claim: OIF 400ZR project (started 2016) targeted module power consumption/dissipation of 15 W
@@ -1641,6 +1764,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.openzrplus_ofec
   section: '4.6'
   claim: 'OpenZR+ 400G: OFEC, 60.14 GBd, pre-FEC BER threshold 2.0e-2, NCG 11.6 dB'
@@ -1659,6 +1783,7 @@ records:
   tier: B
   confidence: high
   notes: Rev 1.0 first release 4 Sep 2020 (100 GHz grid); Rev 2.0 29 Jul 2022 added 75 GHz grid.
+  verified: match
 - id: ch04.coh.openzrplus_osnr24
   section: '4.6'
   claim: OpenZR+ 400G receiver OSNR requirement used in 2023 multi-vendor interop tests
@@ -1676,6 +1801,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.800zr_reach
   section: '4.6'
   claim: 'OIF 800ZR: single-span amplified DWDM 80-120 km, DP-16QAM with OFEC'
@@ -1695,6 +1821,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.800zr_baud
   section: '4.6'
   claim: 800ZR symbol rate (DP-16QAM, OFEC 15.3%)
@@ -1712,6 +1839,7 @@ records:
   confidence: high
   notes: Agrees with van den Borne ECOC 2024 ('DP-16QAM modulation with 118.2 Gbaud symbol rate'). IA Table 20 expansion rate
     not read directly.
+  verified: match
 - id: ch04.coh.800zr_osnr
   section: '4.6'
   claim: 800ZR receiver OSNR requirement (vs 26.0 dB for 400ZR)
@@ -1725,10 +1853,14 @@ records:
   locator: Slide 'From 400ZR to 800ZR' comparison table
   quote: Rx recevied OSNR 26.0 dB/0.1 nm 27.0 dB/0.1 nm
   retrieved: '2026-11-02'
-  tier: B
-  confidence: med
+  tier: C
+  confidence: low
   notes: 'DISAGREEMENT-ish: Juniper JCO800 module spec lists 26 dB worst-case EOL in OIF 800ZR mode; O-Net OFC 2026 material
-    says <25.5 dB. Different definitions (IA requirement vs module capability).'
+    says <25.5 dB. Different definitions (IA requirement vs module capability). Verifier (PARTIAL): Value correct. Source
+    is vendor marketing slides (C by the brief''s rule). Better support: OIF ''OFC 2025 800ZR Interop White Paper'' (Gass):
+    ''met the 800ZR Rx OSNR tolerance requirement of ≤27 dB/0.1 nm ... following the OIF reference 6.1.330''. Re-source to
+    that (B) and, ideally, to IA ref 6.1.330 (Table 22) itself.'
+  verified: partial_fixed
 - id: ch04.coh.800zr_module_power
   section: '4.6'
   claim: 800ZR QSFP-DD module (Juniper JCO800-QDD-ZR-M-HP) maximum power in OIF 800ZR mode
@@ -1747,6 +1879,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.800zrplus_nokia_31w
   section: '4.6'
   claim: Nokia QSFP112-DD 800G ZR+ (131.3 GBd PCS, 0 dBm) power consumption
@@ -1765,6 +1898,7 @@ records:
   confidence: high
   notes: Nokia 800G ZR (-2 dBm) power listed 29 W in 400G long-haul mode table; Cisco datasheet only states 'QSFP-DD type
     2B compliant, OSFP power class 8'.
+  verified: match
 - id: ch04.coh.800g_openzrplus_modes
   section: '4.6'
   claim: '800G OpenZR+ (2025) reuses OpenROADM modes: 800G oFEC at 118 GBd (no PCS) and 131 GBd (PCS)'
@@ -1780,6 +1914,7 @@ records:
   tier: B
   confidence: high
   notes: OpenZR+ chose to point to OIF 800ZR + OpenROADM specs rather than write a new 800G spec.
+  verified: match
 - id: ch04.coh.800lr_baud
   section: '4.6'
   claim: OIF 800LR (coherent-lite, <=10 km unamplified) symbol rate, DP-16QAM with KP4+BCH(126,110)
@@ -1798,6 +1933,7 @@ records:
   tier: B
   confidence: high
   notes: Supports 1x800GE or 2x400GE.
+  verified: match
 - id: ch04.coh.800lr_loss_budget
   section: '4.6'
   claim: 'OIF 800LR maximum loss budgets: 8 dB O-band (800LR-O), 5 dB C-band (800LR-C)'
@@ -1817,6 +1953,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.800lr_fec
   section: '4.6'
   claim: '800LR inner FEC BCH(126,110) on top of host RS(544,514): net coding gain'
@@ -1832,6 +1969,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.1600zr_ia
   section: '4.6'
   claim: OIF 1600ZR IA (single-wavelength 1.6T, amplified DWDM up to 120 km, DP-16QAM, OFEC) published
@@ -1848,8 +1986,8 @@ records:
   retrieved: '2026-11-02'
   tier: B
   confidence: high
-  notes: Fig. 15 gives 1600ZR line bit rate 1891.253609648 Gbit/s; with DP-16QAM (8 bits/symbol) this implies ~236.4 GBd (derived,
-    not stated in text read). OIF press release 9 Sep 2026.
+  notes: Symbol rate ~236.41 GBd is stated in Fig. 15 of the IA.
+  verified: partial_fixed
 - id: ch04.coh.innolight_800g_lr2
   section: '4.6'
   claim: Innolight showed an 800G LR2 OSFP 'coherent-lite' (相干精简型) module at OFC 2025
@@ -1865,6 +2003,7 @@ records:
   tier: B
   confidence: high
   notes: 'zh gloss: ''At OFC2025 the company showed a 3 nm 1.6T OSFP 2xFR4 module and an 800G LR2 OSFP coherent-lite module.'''
+  verified: match
 - id: ch04.oio.intel_oci_5pj
   section: '4.7'
   claim: 'Intel OCI chiplet (OFC 2024): 4 Tb/s bidirectional, 64 x 32 Gb/s per direction, 5 pJ/bit vs ~15 pJ/bit for pluggables'
@@ -1884,6 +2023,7 @@ records:
   confidence: low
   notes: 'Hot Chips 2024 slides (intel_hotchips_2024): end-to-end incl. host I/O ''<5pJ/b'' target vs ''<10pJ/b'' for SerDes-attached;
     on-chip lasers, no external laser.'
+  verified: match
 - id: ch04.oio.intel_oci_bw
   section: '4.7'
   claim: Intel OCI first-generation chiplet bandwidth (bidirectional)
@@ -1899,6 +2039,7 @@ records:
   tier: B
   confidence: med
   notes: ''
+  verified: match
 - id: ch04.oio.ayar_8tbps
   section: '4.7'
   claim: 'Ayar Labs TeraPHY UCIe optical I/O chiplet: 8.192 Tb/s bidirectional, 16 wavelengths, 32 Gb/s NRZ per lane'
@@ -1917,6 +2058,7 @@ records:
   confidence: med
   notes: 'Ayar product page simultaneously lists ''512 Gbps per port (4 Tbps per chiplet)'' and ''8 Tbps bi-directional'':
     internal inconsistency (4 Tb/s per direction = 8 Tb/s bidirectional). No pJ/bit figure published (gap).'
+  verified: match
 - id: ch04.oio.ayar_claim_4to8x
   section: '4.7'
   claim: 'Ayar Labs claim: optical I/O gives 4x-8x more power efficiency and 10x lower latency than pluggable optics plus
@@ -1935,6 +2077,7 @@ records:
   tier: C
   confidence: low
   notes: ''
+  verified: match
 - id: ch04.oio.innolight_cpo_caution
   section: '4.7'
   claim: 'Innolight 2025 annual report: CPO is moving from breakthrough to early commercialization; industry standards will
@@ -1951,6 +2094,7 @@ records:
   confidence: high
   notes: 'zh gloss: ''CPO is currently going from technical breakthrough to early commercialization; formation of industry
     standards is expected to take some time.'' Cautious side of CPO-timing debate.'
+  verified: match
 - id: ch04.oio.hgtech_cpo_2026_27
   section: '4.7'
   claim: 'HG Tech annual report cites LightCounting: CPO expected to start volume ramp 2026-2027 (hyperscale short-reach)'
@@ -1970,6 +2114,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''CPO products are expected to begin scale ramp in 2026-2027, mainly in hyperscaler datacom short-reach.''
     Same paragraph: 800G 2025 shipments 18-19.9 M; 1.6T demand 2.5-3.5 M in 2025.'
+  verified: match
 - id: ch04.oio.minkenberg_hurdle
   section: '4.7'
   claim: 'Minkenberg et al. (2021): main hurdle to CPO adoption is industry inertia, not technology'
@@ -1985,6 +2130,7 @@ records:
   tier: A
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.cpo.broadcom_meta_flapfree
   section: '4.7'
   claim: 'Broadcom press (Oct 2025) on Meta tests: one million 400G-equivalent port device hours with no link flap; CPO cuts
@@ -2002,6 +2148,7 @@ records:
   confidence: low
   notes: Vendor framing of the Meta ECOC 2025 paper (amiralizadeh_ecoc_2025), which reports no UCWs in a high-temperature
     lab, not production traffic.
+  verified: match
 - id: ch04.std.400gpl_sg_chartered
   section: '4.2'
   claim: IEEE 802 LMSC chartered the 400 Gb/s/Lane Signaling Study Group (electrical and SMF up to 500 m)
@@ -2016,6 +2163,7 @@ records:
   tier: B
   confidence: high
   notes: ''
+  verified: match
 - id: ch04.coh.cisco_800zr_power_class
   section: '4.6'
   claim: 'Cisco 800G ZR/ZR+ modules: power stated only as QSFP-DD Type 2B / OSFP power class 8 compliance'
@@ -2029,4 +2177,5 @@ records:
   retrieved: '2026-11-02'
   tier: B
   confidence: high
-  notes: Shows 800ZR modules exceed QSFP-DD Class 7 (14 W) and sit in open-ended Class 8.
+  notes: '''Type 2B'' is a QSFP-DD module type (mechanical/thermal), not a power class.'
+  verified: partial_fixed

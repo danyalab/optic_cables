@@ -1,0 +1,939 @@
+# Independent verification of book/ledger/ch02.yaml and book/ledger/ch02_equations.yaml
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: direct curl/WebFetch blocked (proxy 403 / DNS); all sources read through Exa search highlights or Exa fetch.
+# Full or near-full text read: OIF-400ZR 01.0/02.0/03.0/03.0.1 (FEC, framing), 100G Lambda MSA Rev 2.0, Smith 2012 (arXiv),
+# Bocherer 2015 (ar5iv + IEEE abstract), Pfau 2009 (author PDF excerpts), Ip 2008 (Stanford PDF excerpts), Kikuchi 2016,
+# Nagarajan 2024, OpenROADM 6.0, OpenZR+, Cho & Winzer 2019 (excerpts), Alvarado 2018 (arXiv), Ishihara 2021, Fougstedt 2020,
+# IEEE 802.3 task-force decks (Anslow, King, Cole x2, Dawe, Bhatt, Ran, Yin), NTT article, Zhang thesis (Eq. 2.5).
+# Items marked UNREACHABLE were not re-read in this pass (budget), not shown to be wrong.
+# Calc checks: NCG_HD(KP4, 2.4e-4, 514/544) = 6.89 dB; staircase 239/255 gives 9.41 dB at p* = 4.63e-3;
+# Bocherer Table I uniform-to-capacity gaps 0.347 dB (4ASK, 1 b/1D) and 0.858 dB (8ASK, 2 b/1D); 2 x 59.84375 x 4 = 478.75.
+# No MISMATCH found. Main corrections: OIF IA tier A->B; abstract-only OFC/ISSCC claims tier A->C; Ip locators 5.1 -> 5.1.4/Eq. (35);
+# Alvarado 4.7e-3 is for a 6.25%-OH staircase (not the 239/255 code); Pfau linewidths are sum linewidths (x~2 with joint-pol CR).
+summary:
+  checked: 138
+  match: 87
+  mismatch: 0
+  partial: 30
+  unreachable: 21
+results:
+- id: ch02.nyq.rc_bandwidth
+  status: MATCH
+  found_value: ''
+  found_locator: Ishihara, Sugiura, Hanzo, IEEE Access 9 (2021), Sect. II after Eqs. (18)-(19)
+  evidence: the bandwidth of an RC shaping filter is given by 2(1 + β)W , where β denotes a roll-off factor
+  action: none; T0 = 1/(2W) confirmed in same sentence group. Paper title 'The Evolution of Faster-Than-Nyquist Signaling' (add to source record).
+- id: ch02.nyq.rc_rolloff_zero_rect
+  status: MATCH
+  found_value: ''
+  found_locator: Ishihara 2021, Sect. II after Eq. (19)
+  evidence: The RC shaping filter having a roll-off factor of β = 0 corresponds to the rectangular shaping filter.
+  action: none
+- id: ch02.nyq.min_spacing_equals_rs
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use Bosco OFC 2012 slides are tier B; tier-A candidate Bosco et al., JLT 29(1) 53-61 (2011) not
+    read.
+- id: ch02.sym.400zr_symbol_rate
+  status: PARTIAL
+  found_value: 59.843750000 Gbaud
+  found_locator: OIF-400ZR-01.0 (2020), Sect. 12.5 Frame Expansion Rate
+  evidence: The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization.
+  action: 'Value/locator/quote verified. Tier: OIF IA is tier B per PIPELINE/verifier brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.sym.400zr_line_rate
+  status: PARTIAL
+  found_value: 478.750 Gbps
+  found_locator: OIF-400ZR-01.0 Sect. 12.5; Table 14 nominal 400ZR bit rate 478 750 000 000
+  evidence: The 400ZR optical signal is DP-16QAM with a symbol rate of 59.843750000 Gbaud (478.750 Gbps) per polarization.
+  action: 'Value correct as aggregate (Table 14: 478 750 000 000 bps); add note that the IA''s ''per polarization'' wording is misleading (per-pol rate is 239.375 Gb/s). Tier: OIF IA is tier B per PIPELINE/verifier
+    brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.sym.400zr_bits_per_symbol
+  status: PARTIAL
+  found_value: '8'
+  found_locator: OIF-400ZR-01.0/02.0 Sect. 11 DP-16QAM Symbol mapping
+  evidence: Each 128-bit code word is mapped to 16 DP-16QAM symbols (S)
+  action: 'Tier: OIF IA is tier B per PIPELINE/verifier brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.sym.400zr_pilot_period
+  status: PARTIAL
+  found_value: '32'
+  found_locator: OIF-400ZR-02.0/03.0.1 Sect. 12 DSP framing
+  evidence: Pilot symbols are inserted every 32 symbols, starting with the first symbol of each DSP super-frame.
+  action: 'Tier: OIF IA is tier B per PIPELINE/verifier brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest). Locator ok; conditions (pilots on outer 4 points, Sect. 12.3)
+    verified.'
+- id: ch02.sym.400zr_superframe
+  status: PARTIAL
+  found_value: 181888 (03.0.1 prints 181,888)
+  found_locator: OIF-400ZR-02.0 Sect. 12
+  evidence: A DSP super-frame is defined as a set of 181888 symbols in each of the X/Y polarization. A DSP sub frame consists of 3712 symbols.
+  action: 'Value verified (49 sub-frames x 3712). 02.0 prints ''sub frame'' without hyphen; 03.0.1 ''sub-frame''. Tier: OIF IA is tier B per PIPELINE/verifier brief (ledger says A); change tier to B. Supersession:
+    cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.sym.p2pco_200g_qpsk_rate
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.sym.lambda_pam4_rate
+  status: MATCH
+  found_value: 53.125 ± 100 ppm GBd
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: PAM4 Signaling rate, (range) | | 53.125 ± 100 ppm | 53.125 ± 100 ppm | GBd
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary.'
+- id: ch02.sym.binary_se_limit
+  status: PARTIAL
+  found_value: 0.8 bit/s/Hz per polarization
+  found_locator: Ip et al. OE 2008, Sect. 1, p. 757 (text read via a verbatim reproduction, CORDIS D7.2)
+  evidence: these are able to achieve spectral efficiencies of 0.8 bit/s/Hz per polarization.
+  action: Sentence confirmed only in a verbatim copy; the Stanford PDF crawl stopped one sentence earlier. Re-read p. 757 to close.
+- id: ch02.sym.kikuchi_40g_16ghz
+  status: MATCH
+  found_value: 2.5 bit/s/Hz
+  found_locator: Ip et al. OE 2008, Sect. 1, p. 758
+  evidence: Kikuchi demonstrated polarization-multiplexed 4-ary quadrature-amplitude modulation (4-QAM) transmission at 40 Gbit/s with a channel bandwidth of 16 GHz (2.5 bit/s/Hz)
+  action: none (offline, sampling-oscilloscope experiment; secondary citation of Kikuchi OFC 2006 [7])
+- id: ch02.imdd.pam4_penalty_optical
+  status: MATCH
+  found_value: 4.8 dB
+  found_locator: Cole, IEEE 802.3bs Sept 2014 (cole_3bs_01_0914), slide 'PAM, QAM SNR Modulation Penalty'
+  evidence: PAM-M modulation penalty = 10*log10(M-1) ● PAM-2 (NRZ) = 0 dB ● PAM-4 = 4.8 dB
+  action: none; slide states 'All penalties on this and following pages are in dB optical'. Tier B ok; for tier A see Szczerba et al. JOCN 2012 (tier_a_replacements).
+- id: ch02.imdd.pam16_penalty_optical
+  status: MATCH
+  found_value: 11.8 dB
+  found_locator: Cole, IEEE 802.3bs Sept 2014 (cole_3bs_01_0914), slide 'PAM, QAM SNR Modulation Penalty'
+  evidence: PAM-4 = 4.8 dB ● PAM-16 = 11.8 dB ■ QAM-M modulation penalty = 10*log10(√M -1)
+  action: none; slide states 'All penalties on this and following pages are in dB optical'. Tier B ok; for tier A see Szczerba et al. JOCN 2012 (tier_a_replacements).
+- id: ch02.imdd.qam16_penalty_optical
+  status: MATCH
+  found_value: 4.8 dB
+  found_locator: Cole, IEEE 802.3bs Sept 2014 (cole_3bs_01_0914), slide 'PAM, QAM SNR Modulation Penalty'
+  evidence: QAM-M modulation penalty = 10*log10(√M -1) ● QAM-4 = 0 dB ● QAM-16 = 4.8 dB
+  action: none; slide states 'All penalties on this and following pages are in dB optical'. Tier B ok; for tier A see Szczerba et al. JOCN 2012 (tier_a_replacements).
+- id: ch02.imdd.pam4_penalty_electrical
+  status: MATCH
+  found_value: 9.5 dB
+  found_locator: Lu, Wang, Wu, ISLPED 2018, Sect. 1
+  evidence: PAM-4 suffers a 9.5-dB reduction in signal-to-noise-ratio (SNR) due to the splitting of signal levels from 2 to 4 in the voltage domain
+  action: none; quote truncated before 'from 2 to 4 in the voltage domain' (acceptable). Electrical-link context; optics tier-A alternative is Szczerba JOCN 2012.
+- id: ch02.imdd.pamn_eye_height
+  status: MATCH
+  found_value: N-1
+  found_locator: Pang et al., JLT 38(2) 492-503 (2020), Sect. III.A (PAM)
+  evidence: its eye height is reduced by a factor of (N-1) compared to that of NRZ OOK, given the same signal amplitude peak-to-peak
+  action: Tighten locator to 'Sect. III.A'. Pang cites Szczerba JOCN 2012 [77] for this.
+- id: ch02.imdd.tdecq_max_100g_fr
+  status: MATCH
+  found_value: 3.4 dB (FR and LR); TDECQ-10log10(Ceq) max 3.4 dB
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: Transmitter and dispersion penalty eye closure for PAM4 (TDECQ), (max) | | 3.4 | 3.4 | dB
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary.'
+- id: ch02.imdd.oma_min_100g_fr
+  status: MATCH
+  found_value: -0.2 dBm
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: Outer Optical Modulation Amplitude (OMAouter), | | b (min) -0.2 | 0.7 | dBm
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary. Footnote b: OMAouter min applies even if TDECQ < 1.4
+    dB (ER>=4.5) or < 1.3 dB (ER<4.5).'
+- id: ch02.imdd.oma_min_100g_lr
+  status: MATCH
+  found_value: 0.7 dBm
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: Outer Optical Modulation Amplitude (OMAouter), | | b (min) -0.2 | 0.7 | dBm
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary.'
+- id: ch02.imdd.oma_minus_tdecq_100g_fr
+  status: MATCH
+  found_value: -1.6 dBm (ER>=4.5 dB); -1.5 dBm (ER<4.5 dB)
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: for extinction ratio ≥ 4.5 dB | -1.6 | -0.7 | dBm
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary. Note: 802.3cu D2.1 comment resolution moved to a single
+    ER range using the ER<4.5 values, so the ER>=4.5 row may not survive in the standard.'
+- id: ch02.imdd.er_min_100g_fr
+  status: MATCH
+  found_value: 3.5 dB
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: Extinction ratio (min) | | 3.5 | 3.5 | dB
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary.'
+- id: ch02.imdd.rin_oma_max_100g
+  status: MATCH
+  found_value: -136 dB/Hz
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2; Sect. 3.9
+  evidence: RIN17.1 | OMA (max) for LR OMA (max) for FR, RIN15.6 | -136 | -136 | dB/Hz
+  action: 'none for value; Sect. 3.9: measurement per 802.3-2018 52.9.6 with ORL 17.1 dB (FR)/15.6 dB (LR), upper -3 dB limit ~53.2 GHz. Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1,
+    Table 140-6) is the tier-A ratified successor; read it and add as primary.'
+- id: ch02.imdd.orl_tolerance_100g_fr
+  status: MATCH
+  found_value: 17.1 dB (FR), 15.6 dB (LR)
+  found_locator: 100G Lambda MSA 100G-FR/LR Rev 2.0 (2018-09-18), Table 2-2
+  evidence: Optical return loss tolerance (max) | | 17.1 | 15.6 | dB
+  action: 'Supersession: IEEE Std 802.3cu-2021 Clause 140 (100GBASE-FR1/LR1, Table 140-6) is the tier-A ratified successor; read it and add as primary.'
+- id: ch02.imdd.tdecq_qt
+  status: MATCH
+  found_value: '3.414'
+  found_locator: King, IEEE 802.3bs May 2016 (king_3bs_01a_0516), proposed 123.8.5.3 text
+  evidence: where Qt= 3.414 consistent with the BER and target symbol error ratio for Gray coded PAM4.
+  action: 'none; draft text (tier B). Published equivalent: IEEE 802.3-2022 Eq. (121-12) (not read).'
+- id: ch02.imdd.tdecq_target_ser
+  status: MATCH
+  found_value: '4.8e-4'
+  found_locator: king_3bs_01a_0516, proposed 123.8.5.3
+  evidence: The smallest size of σG is found that makes the sum of the partial SERs equal to the target SER = 4.8 x 10-4
+  action: none
+- id: ch02.imdd.tdecq_ref_filter_bw
+  status: MATCH
+  found_value: 19.34 GHz
+  found_locator: king_3bs_01a_0516, proposed 123.8.5.1/123.8.5.3
+  evidence: white noise filtered by a fourth-order Bessel-Thomson response filter with a bandwidth of 19.34 GHz.
+  action: none; 19.34 GHz is the 26.5625 GBd draft value. Cole 3cu 2019 confirms 26.6 GHz ('4th B-T w/ BW = 26.6 GHZ') for 53.125 GBd.
+- id: ch02.imdd.mpi_penalty_200g_dr4
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.imdd.mpi_penalty_dr4_mazzini
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.imdd.mpi_penalty_fr8_mazzini
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.imdd.mpi_bound_casea_2conn
+  status: MATCH
+  found_value: 1.43 dB (Pmpi(2)); 5.24 dB (Pmpi(4))
+  found_locator: Bhatt, King, Smith, IEEE 802.3bs Jan 2016 (bhatt_3bs_01a_0116), Table 1 (ER 4.5 dB, D = 1)
+  evidence: Cases Tx Rx Conn Pmpi(2) Pmpi(4) Pmpi(6) Case A 26 26 26 1.43 5.24
+  action: none. Note the smf ad hoc version (bhatt_01_0116_smf) uses ER 6 dB and gives 1.20 dB; cite the 01a deck explicitly.
+- id: ch02.imdd.mpi_bound_casec_4conn
+  status: MATCH
+  found_value: 1.05 dB (Pmpi(4))
+  found_locator: bhatt_3bs_01a_0116, Table 1, Case C
+  evidence: Case C 26 26 35 0.55 1.05 1.76
+  action: none
+- id: ch02.imdd.mpi_pam2_pam4_gap
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.imdd.mpi_postfec_penalty_fei
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use Abstract-only journal record; keep confidence med.
+- id: ch02.coh.balanced_sqrt_plo
+  status: MATCH
+  found_value: proportional to sqrt(P_LO)
+  found_locator: Kikuchi, JLT 34(1) 157-179 (2016), Sect. II.A after Eq. (13)
+  evidence: It should be emphasized that the photocurrent given by Eq. (13) is proportional to √P . Therefore, as the LO power in creases, a gain
+  action: none
+- id: ch02.coh.balanced_removes_dc
+  status: MATCH
+  found_value: ''
+  found_locator: Kikuchi 2016, Sect. II.A after Eq. (13)
+  evidence: We find that only the beat between the signal and the LO is measured with balanced detection.
+  action: none
+- id: ch02.coh.lo_shot_noise_psd
+  status: MATCH
+  found_value: q R P_LO A^2/Hz (two-sided)
+  found_locator: Ip et al. OE 2008, Sect. 3, text after Eq. (7), p. 763
+  evidence: Assuming PLO >> Ps , I ( )t sh,l has a two-sided psd of ( ) SIsh f = qRPLO A 2/Hz.
+  action: none; add page p. 763 to locator.
+- id: ch02.coh.ase_vs_shot_limited
+  status: MATCH
+  found_value: ''
+  found_locator: Ip et al. 2008, Sect. 3, after Eqs. (10)-(11), p. 763
+  evidence: In long-haul systems, the psd of LO-spontaneous beat noise is typically much larger than that of LO shot noise; such systems are thus ASE-limited.
+  action: none
+- id: ch02.coh.heterodyne_equals_homodyne
+  status: MATCH
+  found_value: ''
+  found_locator: Ip et al. 2008, Sect. 3, p. 763
+  evidence: Hence, the heterodyne and the two-quadrature homodyne downconverters have the same performance [23].
+  action: none; conditional on image-band ASE being optically rejected for heterodyne (same page).
+- id: ch02.coh.single_quadrature_homodyne_gain
+  status: MATCH
+  found_value: 3 dB
+  found_locator: Ip et al. 2008, Sect. 3, p. 763
+  evidence: thus yielding a sensitivity improvement of 3 dB compared to heterodyne or two-quadrature homodyne downconversion.
+  action: none
+- id: ch02.coh.opll_bandwidth
+  status: MATCH
+  found_value: below 1 MHz
+  found_locator: Kikuchi 2016, Sect. I
+  evidence: The OPLL bandwidth was usually limited below 1 MHz because of large loop delay
+  action: none
+- id: ch02.coh.quantum_limit_with_lo
+  status: MATCH
+  found_value: ''
+  found_locator: Kikuchi 2016, Sect. I
+  evidence: quantum-noise-limited receiver sensitivity (also called shot-noise-limited receiver sensitivity) could be achieved by injecting a sufficiently high LO power into the coherent receiver
+  action: none
+- id: ch02.coh.first_realtime_coherent
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.dsp.cd_edc_6400km_penalty
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.dsp.savory_taps_per_ps_nm
+  status: MATCH
+  found_value: 2.2 taps per 1000 ps/nm
+  found_locator: Savory, OE 16(2) 804-817 (2008), Abstract
+  evidence: with simulation revealing an improved bound of 2.2 taps per 1000ps/nm for 10.7GBaud data.
+  action: none (abstract-only read; OE is open access, full text still not crawlable from this session)
+- id: ch02.dsp.savory_pol_tracking
+  status: MATCH
+  found_value: 100 krad/s
+  found_locator: Savory OE 2008, Abstract
+  evidence: it is demonstrated that 100krad/s polarization rotations could be tracked using DSP with a clock frequency of less than 500MHz.
+  action: none
+- id: ch02.dsp.fse_oversampling_min
+  status: PARTIAL
+  found_value: M/K >= 3/2
+  found_locator: Ip et al. 2008, Sect. 5.1.4, before Eqs. (35)-(36), p. 773
+  evidence: CD and first-order PMD can be compensated with less than 2 dB power penalty provided the oversampling rate M K ≥ 3 2
+  action: 'Value/conditions verified (5th-order Butterworth, 3-dB bandwidth 0.4(M/K)Rs). Fix locator: Sect. 5.1.4, not 5.1.'
+- id: ch02.dsp.td_fir_complexity
+  status: PARTIAL
+  found_value: 4 N R_s complex multiplications/s
+  found_locator: Ip et al. 2008, Sect. 5.1.4, after Eqs. (35)-(36) and Table 7
+  evidence: The complexity of directly implementing Eq. (32) is NRs 4 complex multiplications per second.
+  action: Fix locator to Sect. 5.1.4. Note Table 7 tap counts assume inline DCF with 2% CD under-compensation (residual CD only).
+- id: ch02.dsp.bps_lw_4qam
+  status: MATCH
+  found_value: '4.1e-4'
+  found_locator: Pfau, Hoffmann, Noé, JLT 27(8) 989-999 (2009), Abstract; Table I (p. 994)
+  evidence: For a 1 dB penalty at BER = 10-3, linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM)
+  action: 'Value verified. Add conditions: Δf is the SUM linewidth of signal and LO lasers (Sect. II, Eq. 2); text after Table I says values ''can be approximately doubled'' with a common carrier recovery
+    for both polarizations; differential encoding assumed.'
+- id: ch02.dsp.bps_lw_16qam
+  status: MATCH
+  found_value: '1.4e-4'
+  found_locator: Pfau, Hoffmann, Noé, JLT 27(8) 989-999 (2009), Abstract; Table I (p. 994)
+  evidence: For a 1 dB penalty at BER = 10-3, linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM)
+  action: 'Value verified. Add conditions: Δf is the SUM linewidth of signal and LO lasers (Sect. II, Eq. 2); text after Table I says values ''can be approximately doubled'' with a common carrier recovery
+    for both polarizations; differential encoding assumed.'
+- id: ch02.dsp.bps_lw_64qam
+  status: MATCH
+  found_value: '4.0e-5'
+  found_locator: Pfau, Hoffmann, Noé, JLT 27(8) 989-999 (2009), Abstract; Table I (p. 994)
+  evidence: For a 1 dB penalty at BER = 10-3, linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM)
+  action: 'Value verified. Add conditions: Δf is the SUM linewidth of signal and LO lasers (Sect. II, Eq. 2); text after Table I says values ''can be approximately doubled'' with a common carrier recovery
+    for both polarizations; differential encoding assumed.'
+- id: ch02.dsp.bps_lw_256qam
+  status: MATCH
+  found_value: '8.0e-6'
+  found_locator: Pfau, Hoffmann, Noé, JLT 27(8) 989-999 (2009), Abstract; Table I (p. 994)
+  evidence: For a 1 dB penalty at BER = 10-3, linewidth times symbol duration products of 4.1 x 10-4(4-QAM), 1.4 x 10-4(16-QAM)
+  action: 'Value verified. Add conditions: Δf is the SUM linewidth of signal and LO lasers (Sect. II, Eq. 2); text after Table I says values ''can be approximately doubled'' with a common carrier recovery
+    for both polarizations; differential encoding assumed.'
+- id: ch02.dsp.bps_test_phases
+  status: PARTIAL
+  found_value: B = 32 used for 4-QAM and 16-QAM
+  found_locator: Pfau 2009, Sect. V.A (p. 993-994)
+  evidence: Therefore, in all following simulations for 4-QAM and 16-QAM is set to 32.
+  action: The '16 to 64' sentence in Sect. IV.D was not re-seen; the B=32 simulation choice was. Record both.
+- id: ch02.dsp.bps_16qam_min_penalty
+  status: MATCH
+  found_value: 0.6 dB (0.4 dB ideal)
+  found_locator: Pfau 2009, Sect. V.A, p. 994
+  evidence: For 16-QAM the minimum penalties decreases (0.4 dB for the ideal receiver, 0.6 dB for the proposed algorithm)
+  action: none; add condition 'differential encoding of quadrant bits' (reason given in source).
+- id: ch02.dsp.bps_estimator_efficiency
+  status: MATCH
+  found_value: 85% (4-QAM), 60% (16/64-QAM), ~30% (256-QAM)
+  found_locator: Pfau 2009, Sect. V.C, p. 995
+  evidence: the maximum achievable efficiency reduces from 85% for 4-QAM to 60% for 16-QAM and 64-QAM to finally around 30% for 256-QAM.
+  action: none
+- id: ch02.dsp.gardner_two_samples
+  status: MATCH
+  found_value: 2 samples/symbol
+  found_locator: Gardner, IEEE Trans. Commun. 34(5) 423-429 (1986), Abstract
+  evidence: The algorithm requires only two samples per symbol for its operation. One of the two samples is also used for the symbol decision.
+  action: none; full text (TED equation) still not obtained, see tier_a_replacements.
+- id: ch02.dsp.crivelli_cd_range
+  status: MATCH
+  found_value: 55 ns/nm, 0.5 dB
+  found_locator: Crivelli et al., IEEE TCAS-I 61(4) (2014), Abstract
+  evidence: OSNR penalty when compensating 55 ns/nm CD (corresponding to 3,500 km of standard single-mode fiber) is 0.5 dB.
+  action: none
+- id: ch02.dsp.crivelli_dgd
+  status: MATCH
+  found_value: 200 ps DGD, 8000 ps^2, 0.1 dB
+  found_locator: Crivelli et al., IEEE TCAS-I 61(4) (2014), Abstract
+  evidence: Measured optical signal-to-noise ratio (OSNR) penalty when compensating 200 ps DGD and 8000 ps2is 0.1 dB
+  action: none
+- id: ch02.dsp.crivelli_parallelism
+  status: MATCH
+  found_value: 16-way
+  found_locator: Crivelli et al., IEEE TCAS-I 61(4) (2014), Abstract
+  evidence: Each ADC channel is based on an 8-way interleaved flash architecture. The DSP uses a 16-way parallel processing architecture.
+  action: none
+- id: ch02.ir.shaping_gain_ultimate
+  status: MATCH
+  found_value: 1.53 dB
+  found_locator: Böcherer, Steiner, Schulte, IEEE TCOM 63(12) 2015 (read via ar5iv of arXiv 1502.02733v2), Sect. III-D
+  evidence: approaches the upper bound of 10log10(πe/6) ≈ 1.53 dB [13, Sec. IV.B]
+  action: none; primary is Forney et al. IEEE JSAC 1984 (see tier_a_replacements).
+- id: ch02.ir.mb_gain_64ask_rate5
+  status: MATCH
+  found_value: '1.33 dB (Table I: -1.3307)'
+  found_locator: Böcherer, Steiner, Schulte, IEEE TCOM 63(12) 2015 (read via ar5iv of arXiv 1502.02733v2), Sect. III-D; Table I
+  evidence: For 64-ASK and a rate of 5 bits per channel use, the shaping gain is 1.33 dB .
+  action: none
+- id: ch02.ir.mb_gain_8ask_rate2
+  status: MATCH
+  found_value: -0.7761 dB (gap of MB input to uniform; magnitude 0.7761)
+  found_locator: Böcherer, Steiner, Schulte, IEEE TCOM 63(12) 2015 (read via ar5iv of arXiv 1502.02733v2), Table I
+  evidence: '| 8ASK | 2 | 11.8425 | 12.6187 | -0.7761 | 11.7609 | 0.0816 |'
+  action: none; value stored as positive gain, table prints negative SNR gap; keep the sign convention explicit in notes.
+- id: ch02.ir.uniform_4ask_snr_rate1
+  status: MATCH
+  found_value: 5.1181 dB (capacity 4.7712 dB; uniform gap 0.347 dB)
+  found_locator: Böcherer, Steiner, Schulte, IEEE TCOM 63(12) 2015 (read via ar5iv of arXiv 1502.02733v2), Table I
+  evidence: '| 4ASK | 1 | 4.8180 | 5.1181 | -0.3001 | 4.7712 | 0.0468 |'
+  action: 'none. Derived uniform-to-capacity gaps (calc): 0.347 dB at 1 b/1D (16QAM-class), 0.858 dB at 2 b/1D (64QAM-class); these are MI-based, per real dimension.'
+- id: ch02.ir.uniform_8ask_snr_rate2
+  status: MATCH
+  found_value: 12.6187 dB (capacity 11.7609 dB)
+  found_locator: Böcherer, Steiner, Schulte, IEEE TCOM 63(12) 2015 (read via ar5iv of arXiv 1502.02733v2), Table I
+  evidence: '| 8ASK | 2 | 11.8425 | 12.6187 | -0.7761 | 11.7609 | 0.0816 |'
+  action: none
+- id: ch02.ir.uniform_16ask_snr_rate3
+  status: MATCH
+  found_value: 19.1681 dB (capacity 17.9934 dB)
+  found_locator: Böcherer, Steiner, Schulte, IEEE TCOM 63(12) 2015 (read via ar5iv of arXiv 1502.02733v2), Table I
+  evidence: '| 16ASK | 3 | 18.0910 | 19.1681 | -1.0772 | 17.9934 | 0.0975 |'
+  action: none
+- id: ch02.ir.pas_gap_published
+  status: MATCH
+  found_value: < 1.1 dB
+  found_locator: IEEE TCOM 63(12) 4651-4665, published abstract (IEEE Xplore 7307154)
+  evidence: At a frame error rate of 10-3, the new scheme operates within less than 1.1 dB of the AWGN capacity 1/2 log2(1 + SNR)
+  action: none; published wording governs. Spectral efficiency range is 'between 1 and 5 bits/s/Hz' (abstract does not say 'per real dimension').
+- id: ch02.ir.pas_gap_arxiv
+  status: PARTIAL
+  found_value: < 1 dB
+  found_locator: arXiv 1502.02733v2 (22 Apr 2015) abstract
+  evidence: At a frame error rate of 1e-3, the new scheme operates within less than 1 dB of the AWGN capacity 0.5log2(1+SNR)
+  action: Value verified. Source_id points to the published TCOM record although the text is the arXiv v2; add a separate source id (bocherer_arxiv_2015, tier B preprint) and repoint this record.
+- id: ch02.ir.pas_16ask_gap
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.ir.pcs_fixed_rate_loss
+  status: MATCH
+  found_value: 0.07 bit/symbol per 2D or 0.3 dB of SNR
+  found_locator: Cho & Winzer, JLT 37(6) 1590-1607 (2019), Sect. II, after Eq. (7)
+  evidence: fixed-rate FEC with R c = 0.8 does not exceed 0.07 bits/symbol of IR per two dimensions or 0.3 dB of SNR
+  action: 'Add conditions: AWGN channel, valid for all square M^2-QAM with M^2 <= 1024, ideal DM (CCDM); result is from Cho & Winzer ref [55].'
+- id: ch02.ir.pcs_opt_code_rate_range
+  status: MATCH
+  found_value: 0.74 < R*c <= 1
+  found_locator: Cho & Winzer, JLT 37(6) 1590-1607 (2019), Sect. II, Fig. 4 discussion
+  evidence: we have 0.74 < R * c ≤ 1 for PCS, instead of 0.18 < R * c ≤ 1 for uniform QAM.
+  action: none
+- id: ch02.ir.ldpc_gap_0p04
+  status: MATCH
+  found_value: 0.04 dB
+  found_locator: Cho & Winzer, JLT 37(6) 1590-1607 (2019), Sect. II
+  evidence: may approach the (modulation-constrained) AIR to within 0.04 dB at BER = 10 -6 using belief-propagation decoding with up to 2000 decoding iterations
+  action: 'none; conditions in source: rate-1/2 irregular unstructured LDPC, block length 1e7, max variable degree 200 (ref [64]).'
+- id: ch02.ir.mb_max_entropy
+  status: PARTIAL
+  found_value: ''
+  found_locator: Cho & Winzer, JLT 37(6) 1590-1607 (2019), Sect. II, around Eqs. (4)-(5)
+  evidence: which is controlled by the rate parameter λ for an MB distribution
+  action: Eq. (4) sentence itself not re-seen; MB/λ usage confirmed. Re-read Eq. (4).
+- id: ch02.ir.gmi_for_bmd
+  status: PARTIAL
+  found_value: ''
+  found_locator: Alvarado et al. JLT 36(2) 2018 (arXiv 1709.10393), Sect. II-A
+  evidence: In this case the decoder is binary and the normalized GMI is the quantity that correctly predicts the post-FEC BER
+  action: Same claim confirmed in Sect. II-A; the exact recorded sentence (Sect. I) not re-seen.
+- id: ch02.ir.gmi_not_proven_max
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.ir.hd_threshold_4p7e3
+  status: PARTIAL
+  found_value: '4.7e-3'
+  found_locator: Alvarado et al. 2018 (arXiv 1709.10393v2), Sect. II-A, Table I discussion
+  evidence: The GMI is estimated at the HD-FEC decoding threshold of BER = 4.7 × 10−3
+  action: 'Value verified. Add condition: outer staircase code with 6.25% OH (rate 1/1.0625) from Zhang & Kschischang JLT 2014 [35, Table 1], NOT the 6.69% G.709 (239/255) code of Smith 2012; gaps-file
+    ''disagreement'' with Smith 4.8e-3 compares different codes.'
+- id: ch02.fec.kp4_ber_limit
+  status: MATCH
+  found_value: '2.4e-4'
+  found_locator: Anslow, IEEE P802.3cd ad hoc, 26 Oct 2016, proposed text for 139.1.1 and 140.1.1
+  evidence: The bit error ratio (BER) when processed by the PMA (Clause 135) shall be less than 2.4 × 10–4
+  action: none; tier B (task-force text). Ratified equivalent IEEE 802.3-2022 140.1.1 not read.
+- id: ch02.fec.kp4_flr_100g
+  status: PARTIAL
+  found_value: '9.2e-13'
+  found_locator: Anslow, IEEE P802.3cd ad hoc, 26 Oct 2016, slide 'FLR corresponding to 2.4E-4 for random errors'
+  evidence: This results in a FLR of 9.2 x 10–13
+  action: Quote does not contain the value; replace quote with 'This results in a FLR of 9.2 x 10–13'. Same slide gives 1.7e-12 for 200G/400G.
+- id: ch02.fec.kp4_flr_400g
+  status: MATCH
+  found_value: 1.7e-12 (200G/400G); 3.4e-12 (800G/1.6T)
+  found_locator: Ran, IEEE P802.3dj logic ad hoc 29 June 2023, first slide
+  evidence: this results in a frame loss ratio of less than 1.7e-12 (200G and 400G) or 3.4e-12 (800G and 1.6T)
+  action: 'none; supersession: check whether IEEE Std 802.3dj has been published (cite clause 167.1.1 / 802.3dj equivalent if so).'
+- id: ch02.fec.kp4_relax_penalty
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.fec.kp4_inner_fec_2cw
+  status: MATCH
+  found_value: '2.1e-5'
+  found_locator: Ran 802.3dj 2023, Executive summary
+  evidence: With 2-CW interleaving (200G/400G links without additional interleaving), BER<2.1e-5 (1 order of magnitude lower)
+  action: none
+- id: ch02.fec.rs544_symbol_size
+  status: MATCH
+  found_value: 10-bit symbols
+  found_locator: Nagarajan et al., JLT 42(12) (2024), Sect. III Low power FEC designs
+  evidence: The outer hard-decision code based on a RS code of length 544 and dimension 514 10-bit symbols is good at correcting burst errors
+  action: none
+- id: ch02.fec.cfec_ber_in
+  status: PARTIAL
+  found_value: '1.25E-2'
+  found_locator: OIF-400ZR-01.0 (2020); same text in 02.0 (2022), 03.0 (2024), 03.0.1, Sect. 10
+  evidence: ~10.8dB of NCG with ~14.8% overhead (e.g., BER_in = 1.25E-2 results in BER_out = 1.0E-15).
+  action: 'Value verified; also corroborated by Nagarajan 2024 (''CFEC, has an overhead of 14.8% and a threshold of 1.25e-2''). Quote: source has ''e.g.,'' (comma). Tier: OIF IA is tier B per PIPELINE/verifier
+    brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.fec.cfec_ncg
+  status: PARTIAL
+  found_value: ~10.8 dB
+  found_locator: OIF-400ZR-01.0 (2020); same text in 02.0 (2022), 03.0 (2024), 03.0.1, Sect. 10
+  evidence: ~10.8dB of NCG with ~14.8% overhead (e.g., BER_in = 1.25E-2 results in BER_out = 1.0E-15).
+  action: 'Value verified; also corroborated by Nagarajan 2024 (''CFEC, has an overhead of 14.8% and a threshold of 1.25e-2''). Quote: source has ''e.g.,'' (comma). Tier: OIF IA is tier B per PIPELINE/verifier
+    brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.fec.cfec_overhead
+  status: PARTIAL
+  found_value: ~14.8%
+  found_locator: OIF-400ZR-01.0 (2020); same text in 02.0 (2022), 03.0 (2024), 03.0.1, Sect. 10
+  evidence: ~10.8dB of NCG with ~14.8% overhead (e.g., BER_in = 1.25E-2 results in BER_out = 1.0E-15).
+  action: 'Value verified; also corroborated by Nagarajan 2024 (''CFEC, has an overhead of 14.8% and a threshold of 1.25e-2''). Quote: source has ''e.g.,'' (comma). Tier: OIF IA is tier B per PIPELINE/verifier
+    brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest).'
+- id: ch02.fec.cfec_hamming_gain
+  status: PARTIAL
+  found_value: 9.4 dB -> ~10.8 dB, +7.56% OH
+  found_locator: OIF-400ZR-01.0 (2020); same text in 02.0 (2022), 03.0 (2024), 03.0.1, Sect. 10.5 Inner Hamming Code
+  evidence: The inner FEC of C-FEC is a double-extended Hamming Code SD-FEC (128,119), increasing NCG from 9.4 dB to ~10.8 dB with ~7.56% added overhead.
+  action: 'Tier: OIF IA is tier B per PIPELINE/verifier brief (ledger says A); change tier to B. Supersession: cite OIF-400ZR-03.0.1 (latest). Outer code is a (512x510) generalized staircase with error
+    de-correlator, not the G.709 239/255 staircase.'
+- id: ch02.fec.ofec_ber_threshold
+  status: MATCH
+  found_value: '2.0e-2'
+  found_locator: Open ROADM MSA 6.0 W-Port B400G Digital Specification Rev 1.0.1 (7 Dec 2023), Abstract
+  evidence: 11.6 dB @ 10 -15 (DP-16QAM), with pre-FEC BER threshold of 2.0×10 -2.
+  action: 'none; same numbers in OpenZR+ white paper (2020) and Nagarajan 2024 (''threshold of 2e-2''). Tier-A successor: ITU-T G.709.6 (oFEC), not read.'
+- id: ch02.fec.ofec_ncg_qpsk
+  status: MATCH
+  found_value: 11.1 dB
+  found_locator: Open ROADM MSA 6.0 W-Port B400G Digital Specification Rev 1.0.1 (7 Dec 2023), Abstract
+  evidence: With 3 SD iterations the Net Coding Gain is 11.1 dB @ 10 -15 (DP-QPSK) and 11.6 dB @ 10 -15 (DP-16QAM)
+  action: none
+- id: ch02.fec.ofec_ncg_16qam
+  status: MATCH
+  found_value: 11.6 dB
+  found_locator: Open ROADM MSA 6.0 W-Port B400G Digital Specification Rev 1.0.1 (7 Dec 2023), Abstract
+  evidence: With 3 SD iterations the Net Coding Gain is 11.1 dB @ 10 -15 (DP-QPSK) and 11.6 dB @ 10 -15 (DP-16QAM)
+  action: none
+- id: ch02.fec.ofec_latency_openroadm
+  status: MATCH
+  found_value: < 2 µs at 800G
+  found_locator: Open ROADM MSA 6.0 W-Port B400G Digital Specification Rev 1.0.1 (7 Dec 2023), Abstract
+  evidence: The combined latency of the encoder and decoder is less than 2 µs at 800G.
+  action: none; Nagarajan 2024 also gives '≤2µs for the OFEC', '≤4µs for the CFEC' and '≤75 ns for the SFECL' (fills gaps item 16 for latency).
+- id: ch02.fec.ofec_latency_openzrplus
+  status: MATCH
+  found_value: < 3 µs
+  found_locator: OpenZR+ MSA white paper, 29 Sept 2020, oFEC paragraph
+  evidence: The combined latency of the encoder and decoder is less than 3 µs.
+  action: none
+- id: ch02.fec.ofec_overhead
+  status: MATCH
+  found_value: 15.32%
+  found_locator: Nagarajan et al., JLT 42(12) (2024), Sect. III Low power FEC designs
+  evidence: This code has an overhead of 15.32% and a threshold of 2e-2 as shown in Fig. 12.
+  action: none
+- id: ch02.fec.ofec_min_distance
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.fec.800lr_threshold
+  status: MATCH
+  found_value: 1.15e-2; 21.23% OH
+  found_locator: Nagarajan et al., JLT 42(12) (2024), Sect. III Low power FEC designs
+  evidence: a total overhead of 21.23% and a bit error rate (BER) threshold of 1.15e-2 (see SFECL in Fig. 12)
+  action: none; inner code BCH(126,110) Chase-decoded + outer RS(544,514). OIF 800LR IA itself not read (secondary via Nagarajan, who co-authored it).
+- id: ch02.fec.staircase_ncg
+  status: MATCH
+  found_value: 9.41 dB at 1e-15
+  found_locator: Smith et al., JLT 30(1) 110-117 (2012) (arXiv 1201.4106v1), Abstract; Sect. VI
+  evidence: exhibiting a net coding gain (NCG) of 9.41 dB at an output error rate of 10^-15 , an improvement of 0.42 dB
+  action: 'none. Calc check: NCG_HD formula with R=239/255 gives 9.41 dB at p* = 4.63e-3 (9.43 dB at 4.7e-3).'
+- id: ch02.fec.staircase_shannon_gap
+  status: MATCH
+  found_value: 0.56 dB
+  found_locator: Smith et al., JLT 30(1) 110-117 (2012) (arXiv 1201.4106v1), Sect. I (end) and Sect. VI
+  evidence: an improvement of 0.42 dB relative to the best code from the ITU-T G.975.1 recommendation, and only 0.56 dB from the Shannon Limit.
+  action: Fix quote spacing ('only0.56' -> 'only 0.56').
+- id: ch02.fec.staircase_error_floor
+  status: MATCH
+  found_value: '4.0e-21'
+  found_locator: Smith et al., JLT 30(1) 110-117 (2012) (arXiv 1201.4106v1), Abstract; Sect. V
+  evidence: the proposed code is shown to have an error floor at 4.0×10^-21 .
+  action: none
+- id: ch02.fec.staircase_p_operating
+  status: PARTIAL
+  found_value: p = 4.8e-3 (zeta = 5.8e-4)
+  found_locator: Smith et al., JLT 30(1) 110-117 (2012) (arXiv 1201.4106v1), Sect. V, text before Table II
+  evidence: in Table II, we provide values for various K and L , when ζ=5.8×10^-4 and p=4.8×10^-3 .
+  action: Value verified; arXiv wording differs from ledger quote ('when ... and p=' vs 'where ... when p ='); re-copy quote from the JLT PDF or use arXiv wording. Calc-derived threshold for 9.41 dB is
+    4.63e-3.
+- id: ch02.fec.rs255_ncg
+  status: MATCH
+  found_value: 6.2 dB (3.77 dB from capacity)
+  found_locator: Smith et al., JLT 30(1) 110-117 (2012) (arXiv 1201.4106v1), Sect. II-A
+  evidence: For an output-error-rate of 10^-15 , the NCG of the RS code is 6.2 dB, which is 3.77 dB from capacity.
+  action: none
+- id: ch02.fec.staircase_dataflow
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use (the fetched part of Sect. III stopped before the v = 4 example).
+- id: ch02.fec.fec_power_5nm
+  status: MATCH
+  found_value: ~0.2 W/800G @5nm
+  found_locator: Yin, Zhou, Lam, IEEE P802.3df July 2022 (yin_3df_01b_2207), slide 'FEC Requirements - Power'
+  evidence: Example study showed module FEC power of ~0.2 W/800G @5nm CMOS node (oif2022.274.00) is feasible
+  action: none (IM/DD concatenated KP4+Hamming context; not coherent oFEC/CFEC power)
+- id: ch02.pwr.puttegowda_7nm_pj_bit
+  status: PARTIAL
+  found_value: 40-60 pJ/bit
+  found_locator: Puttegowda et al., OFC 2022 M1D.3, Abstract (full text not accessible)
+  evidence: The ASIC enables pluggable coherent modules with energy efficiency of 40-60pJ/bit for various 400G DWDM applications.
+  action: 'Value verified but abstract only: per PIPELINE/verifier brief abstract-only conference claims are tier C; change tier A->C (or obtain full text). Module-level, not DSP-only.'
+- id: ch02.pwr.fougstedt_22nm
+  status: PARTIAL
+  found_value: 5 W (+1.4 W for ADC)
+  found_locator: Fougstedt et al., OFC 2020 Th2A.38, Abstract and Sect. 4 (full text, research.chalmers.se 525930)
+  evidence: we estimate the total power of the major DSP and FEC units to 5 W (+1.4 W for ADC)
+  action: 'Full text found: upgrade confidence to high, set access open, add URL https://research.chalmers.se/publication/525930/file/525930_Fulltext.pdf; add conditions 22-nm FD-SOI, Eb/N0 = 12 dB, 129-tap
+    CDC (~200 km), ADC 1.4 W extra.'
+- id: ch02.pwr.ntt_400zr_dsp_budget
+  status: MATCH
+  found_value: < 10 W in 15 W module
+  found_locator: NTT Innovative Devices tech-info article (3 Mar 2021)
+  evidence: A 7nm DSP for 400ZR application needs to have less than 10W power dissipation in order to fit into a 15W transceiver module.
+  action: none
+- id: ch02.pwr.ntt_mode_saving
+  status: MATCH
+  found_value: 20-25%
+  found_locator: NTT Innovative Devices article 2021, Fig. 1 discussion
+  evidence: suitably selecting the options of FEC elements, equalizers for the CD compensation and Nyquist filter to optimize the power dissipation by 20-25%
+  action: none
+- id: ch02.pwr.dsp_share_of_module
+  status: MATCH
+  found_value: ~50%
+  found_locator: Nagarajan et al., JLT 42(12) (2024), Sect. II, Fig. 2 discussion
+  evidence: The DSP power is nominally about 50% of the module.
+  action: none; Nagarajan attributes the breakdown to ref [3].
+- id: ch02.pwr.power_delivery_overhead
+  status: MATCH
+  found_value: 10-15%
+  found_locator: Nagarajan 2024, Sect. II
+  evidence: These losses are between 10% and 15% of the total power consumption and are labeled “power overhead” in Fig. 2.
+  action: none
+- id: ch02.pwr.adc_5nm_fom
+  status: PARTIAL
+  found_value: 20 fJ/c-s (Walden FoM at 0.3 GHz input), >60 GHz
+  found_locator: Nguyen et al., ISSCC 2024 paper 18.4, Abstract; ISSCC 2024 Session 18 overview
+  evidence: we present an energy efficient 8b 200GS/s receiver fully integrated in an 800G coherent DSP with a 20fJ/c-s and 60GHz AFE bandwidth
+  action: 'Add DOI 10.1109/ISSCC49657.2024.10454385 and replace synapsesocial URL; add condition ''Walden FoM at 0.3 GHz input'' (session overview). Abstract-only conference claim: tier C per brief.'
+- id: ch02.pwr.adc_40nm_fom
+  status: MATCH
+  found_value: 0.4 pJ/conversion
+  found_locator: Crivelli et al., IEEE TCAS-I 61(4) (2014), Abstract
+  evidence: features a 4-channel 25 Gs/s 6-bit ADC with a figure of merit (FOM) of 0.4 pJ/conversion.
+  action: none
+- id: ch02.pwr.imdd_800g_module_7nm
+  status: MATCH
+  found_value: ~16 W @7nm
+  found_locator: Yin, Zhou, Lam, IEEE P802.3df July 2022 (yin_3df_01b_2207), slide 'FEC Requirements - Power'
+  evidence: Current 100G per lane 800GbE module at ~16 W @7nm CMOS node ● Target at < 30 W for 200G-per-lane 1.6TbE module @5nm
+  action: none; note earlier rev yin_3df_01_2207 says '~20 W' without node; cite rev 01b explicitly.
+- id: ch02.pwr.pillai_rx_dominates
+  status: MATCH
+  found_value: ''
+  found_locator: Pillai et al., JLT 32(18) 3093-3111 (2014), Abstract
+  evidence: We have found that receiver energy consumption dominates in transmission systems that use electronic dispersion compensation over long transmission distances.
+  action: none; full text still paywalled (no per-block pJ/bit obtained).
+- id: ch02.eq.rc_spectrum
+  status: MATCH
+  found_value: form verified
+  found_locator: Ishihara 2021, Eq. (18)
+  evidence: T0 2 1 + cos πT0 β |f | -1-β 2T0 otherwise, (18)
+  action: none (layout garbled in crawl; band edges (1∓β)/2T0 and cosine argument consistent with ledger LaTeX)
+- id: ch02.eq.rc_impulse
+  status: MATCH
+  found_value: form verified
+  found_locator: Ishihara 2021, Eq. (19)
+  evidence: g(t) = sinc t T 0 cos βπt T0 1 -4 βt T0 2 , (19)
+  action: none; denominator 1-(2βt/T0)^2 is the standard form
+- id: ch02.eq.rc_bandwidth
+  status: MATCH
+  found_value: 2(1+β)W with T0 = 1/(2W) -> (1+ρ)R_s
+  found_locator: Ishihara 2021, Sect. II
+  evidence: the relationship T 0 = 1/(2W ) holds. Moreover, the bandwidth of an RC shaping filter is given by 2(1 + β)W
+  action: none
+- id: ch02.eq.bit_rate
+  status: PARTIAL
+  found_value: derived
+  found_locator: Cho & Winzer 2019 Eq. (5); OIF-400ZR Sect. 12.5
+  evidence: the term 2m(1 -R c ) quantifies the FEC overhead in bits/symbol per two dimensions
+  action: Derivation correct; 400ZR check 2 x 59.84375 x 4 = 478.75 Gb/s verified. For 400ZR, R_c must absorb pilot, FAW/TS and framing overheads (Table 14), not only FEC; say so.
+- id: ch02.eq.pam_penalty
+  status: MATCH
+  found_value: ''
+  found_locator: cole_3bs_01_0914
+  evidence: PAM-M modulation penalty = 10*log10(M-1) ... QAM-M modulation penalty = 10*log10(√M -1)
+  action: none; electrical 20log10(M-1) = 9.54 dB for PAM4 is a derivation (consistent with Lu 2018 and Pang 2020)
+- id: ch02.eq.tdecq
+  status: MATCH
+  found_value: R = sqrt(σG^2 + σS^2)
+  found_locator: Cole, P802.3cu ad hoc 11 Dec 2019, slide TDECQ, Ceq 121.8.5 Definition
+  evidence: TDECQ = 10log10(OMAouter / (6 Qt R)) (121-12) R = √(σG 2 + σS 2) (121-11)
+  action: Published form confirmed via Cole quoting Eqs. (121-11)/(121-12); King 2016 draft R = (Ceq σG² + σS²)^½ is superseded. Tier-A target IEEE 802.3-2022 121.8.5.3 still unread.
+- id: ch02.eq.tdecq_minus_ceq
+  status: MATCH
+  found_value: ''
+  found_locator: Dawe, P802.3cd July 2018 (dawe_3cd_01b_0718), slide In algebra
+  evidence: So TDECQ = 10log10(OMAouter/(6Qtseq/Ceq)) • = 10log10(OMAouter/(6Qtseq)) + 10log10(Ceq)
+  action: none (σS set to 0, as noted)
+- id: ch02.eq.mpi_penalty_bound
+  status: MATCH
+  found_value: x = (m-1)4NR E/(E-1)
+  found_locator: bhatt_3bs_01a_0116, slide MPI Penalty Upper Bound
+  evidence: MPI Penalty, dB = 10 log10( 1 1− x), x = (m − 1)4NR( E E− 1) I This is an upper bound.
+  action: none; E/(E-1) reconstruction confirmed by OMAinner = (Am²-A1²)/(m-1) and E = Am²/A1² on the same slide. Connector form uses S in place of NR.
+- id: ch02.eq.balanced_output
+  status: MATCH
+  found_value: I = 2R sqrt(Ps PLO) cos(...)
+  found_locator: Kikuchi 2016, Eq. (13); R = qη/(ħω_s), Eq. (12)
+  evidence: I(t) = I1 (t) − I2 (t) = 2R Ps (t)P × cos { ωIF t + θsig (t) − θ (t)} . (13)
+  action: none (square root dropped in crawl; text confirms √P_LO)
+- id: ch02.eq.hybrid_outputs
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.eq.complex_baseband
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.eq.shot_noise
+  status: MATCH
+  found_value: ''
+  found_locator: Kikuchi 2016, Eqs. (34)-(36), Sect. IV
+  evidence: the sampling theorem determines the minimum required bandwidth B as B = 1 2T . (35) ... ΔˆI 2 = 2qIB. (36)
+  action: none
+- id: ch02.eq.lo_shot_psd
+  status: MATCH
+  found_value: ''
+  found_locator: Ip 2008, Sect. 3, after Eq. (7), p. 763
+  evidence: I ( )t sh,l has a two-sided psd of ( ) SIsh f = qRPLO A 2/Hz.
+  action: none
+- id: ch02.eq.cd_taps_ip
+  status: PARTIAL
+  found_value: N = 2π|β2| L Rs^2 (M/K)^2
+  found_locator: Ip 2008, Sect. 5.1.4, Eq. (35), p. 773
+  evidence: 'and the filter length N satisfies: (35) (36) N LRs ( ) M K 2 2 = 2π β'
+  action: Formula verified; fix locator to Eq. (35) (not 'after Eq. (33)'). Equivalence to Savory's N = 2⌊|D|λ²z/(2cT²)⌋+1 holds with D = -2πcβ2/λ² and T = (K/M)Ts (both ~ 2π|β2|z/T²).
+- id: ch02.eq.td_eq_complexity
+  status: PARTIAL
+  found_value: 4NRs
+  found_locator: Ip 2008, Sect. 5.1.4
+  evidence: The complexity of directly implementing Eq. (32) is NRs 4 complex multiplications per second.
+  action: Fix locator to Sect. 5.1.4.
+- id: ch02.eq.fde_complexity
+  status: PARTIAL
+  found_value: Rs (N+B-1)(2log2(N+B-1)+4)/B
+  found_locator: Ip 2008, Sect. 5.1.4
+  evidence: An FFT-based implementation has a complexity of Rs ( ) ( ) N + B −1 ( ) 2log2 N + B −1 + 4 B
+  action: Glyph order consistent with division by B (only dimensionally valid reading); still confirm against typeset PDF. Fix locator to 5.1.4.
+- id: ch02.eq.lms_mmse
+  status: PARTIAL
+  found_value: A = E[y_k y_k^{*T}], α = E[y_k x_k^{*T}]
+  found_locator: Ip 2008, Eqs. (32)-(33), p. 772
+  evidence: where [ ] T E k k A y y * = and [ ] T E k k α y x * = .
+  action: Definitions confirmed (^{*T} = Hermitian, matches ledger ^H). W_opt = A^{-1}α form not re-seen; K separate Wiener solutions for non-integer M/K (e.g. 3/2).
+- id: ch02.eq.mi_def
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.eq.gmi_bitwise
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.eq.awgn_capacity
+  status: PARTIAL
+  found_value: C(P) = 1/2 log2(1+P/1)
+  found_locator: Böcherer TCOM 2015, Eq. (1), Sect. I
+  evidence: the capacity-power function C(P)=1/2 log2(1+P/1)
+  action: Real-dimension form verified as Eq. (1) (add to locator). Complex-symbol form is the trivial doubling; Conclusions sentence not re-seen.
+- id: ch02.eq.mb_distribution
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+- id: ch02.eq.entropy
+  status: PARTIAL
+  found_value: ''
+  found_locator: Cho & Winzer 2019, Sect. II
+  evidence: 2H(P X ) ... is the largest number of information bits that can be contained within a complex symbol
+  action: Per-dimension entropy usage confirmed; explicit definition sentence not re-seen.
+- id: ch02.eq.pas_rate
+  status: MATCH
+  found_value: IR = 2(H(X) - m(1-Rc))
+  found_locator: Cho & Winzer 2019, Eq. (5) and following text
+  evidence: The term 2H(P X ) ... and the term 2m(1 -R c ) quantifies the FEC overhead in bits/symbol per two dimensions.
+  action: none
+- id: ch02.eq.pas_code_rate
+  status: PARTIAL
+  found_value: ''
+  found_locator: Cho & Winzer 2019, Eq. (6)
+  evidence: From ( 5 ), the required code rate R c to achieve an IR with a channel input distribution P X can be calculated as
+  action: Eq. (6) is the inverse of Eq. (5) as stated; typeset form not seen but algebra is correct.
+- id: ch02.eq.shaping_gain_ultimate
+  status: MATCH
+  found_value: 10log10(πe/6) ≈ 1.53 dB
+  found_locator: Böcherer 2015, Sect. III-D
+  evidence: approaches the upper bound of 10log10(πe/6) ≈ 1.53 dB [13, Sec. IV.B].
+  action: none
+- id: ch02.eq.fec_overhead
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: 'not re-read in this verification pass (session budget; source not opened); re-verify before prose use (definitions are standard; arithmetic: KP4 544/514-1 = 5.84%, 255/239-1 = 6.69%).'
+- id: ch02.eq.ncg_hd
+  status: MATCH
+  found_value: ''
+  found_locator: Zhang, PhD thesis U Toronto 2017, Eq. (2.5), Sect. 2.2.2
+  evidence: NCGHD(p∗) = 20 log10 erfc− 1 (2 · 10− 15) − 20 log10 erfc− 1 (2p∗) + 10 log10 R. (2.5)
+  action: 'Formula and factors correct (√2 in Q = √2 erfc^-1(2p) cancels). Calc: KP4 at 2.4e-4, R=514/544 -> 6.89 dB. Source is a thesis: add tier-A Zhang & Kschischang JLT 2014.'
+- id: ch02.eq.ncg_sd
+  status: UNREACHABLE
+  found_value: ''
+  found_locator: ''
+  evidence: ''
+  action: not re-read in this verification pass (session budget; source not opened); re-verify before prose use
+tier_a_replacements:
+- for: ch02.imdd.tdecq_max_100g_fr, oma_*, er_min_100g_fr, rin_oma_max_100g, orl_tolerance_100g_fr, sym.lambda_pam4_rate
+  citation: IEEE Std 802.3cu-2021 (Amendment 11), Clause 140, 100GBASE-FR1/100GBASE-LR1; consolidated in IEEE Std 802.3-2022
+  url: https://standards.ieee.org/ieee/2883/7515/
+  locator: Table 140-6 (transmit characteristics), 140.7.5 TDECQ, 140.7.8 RIN
+  value: not read (paywalled); table of contents confirmed
+  note: Ratified successor of the 100G Lambda MSA FR/LR spec; 802.3cu comment resolution changed to a single ER range, so values may differ from the MSA.
+- for: ch02.eq.tdecq, ch02.imdd.tdecq_qt
+  citation: IEEE Std 802.3-2022, clause 121.8.5.3, Eqs. (121-11), (121-12)
+  url: https://standards.ieee.org/ieee/802.3/10422/
+  locator: 121.8.5.3
+  value: TDECQ = 10log10(OMAouter/(6 Qt R)), R = sqrt(σG²+σS²) (as quoted by Cole 2019)
+  note: Not read directly; Cole 3cu 2019 quotes it verbatim.
+- for: ch02.ir.hd_threshold_4p7e3; gaps item 15 (staircase threshold)
+  citation: L. M. Zhang and F. R. Kschischang, "Staircase codes with 6% to 33% overhead," J. Lightwave Technol. 32(10), 1999-2002 (2014)
+  url: https://doi.org/10.1109/JLT.2014.2316732
+  locator: Table I (cited as [35, Table 1] by Alvarado 2018)
+  value: 6.25% OH staircase, threshold 4.7e-3 for 1e-15 output (per Alvarado 2016/2018 citing it)
+  note: DOI not verified in this pass; table not read directly. Also replaces the thesis for the NCG_HD definition.
+- for: ch02.ir.hd_threshold_4p7e3
+  citation: A. Alvarado, E. Agrell, D. Lavery, R. Maher, P. Bayvel, "Replacing the soft-decision FEC limit paradigm in the design of optical communication systems," JLT 34(2), 707-721 (2016)
+  url: https://doi.org/10.1109/jlt.2015.2450537
+  locator: 'Sect. II, HD-FEC: Staircase Codes'
+  value: For a BSC, this staircase code [6.25% OH] guarantees an output BER of 10^-15 for a crossover probability of 4.7e-3
+  note: Read via Exa; peer-reviewed tier A.
+- for: ch02.imdd.pam4_penalty_optical / pam4_penalty_electrical (gaps item 6)
+  citation: K. Szczerba et al., "4-PAM for high-speed short-range optical communications," J. Opt. Commun. Netw. 4(11), 885-894 (2012)
+  url: ''
+  locator: not read
+  value: source of the (N-1) eye-height factor cited by Pang 2020 [77]
+  note: Candidate only; read before use.
+- for: ch02.ir.shaping_gain_ultimate
+  citation: G. D. Forney, R. G. Gallager, G. R. Lang, F. M. Longstaff, S. U. Qureshi, "Efficient modulation for band-limited channels," IEEE JSAC 2(5), 632-647 (1984)
+  url: https://doi.org/10.1109/JSAC.1984.1146101
+  locator: Sec. IV.B (as cited by Böcherer [13])
+  value: 1.53 dB ultimate shaping gain
+  note: Not read; locator from Böcherer citation.
+- for: CMA (gaps item 8)
+  citation: D. N. Godard, "Self-recovering equalization and carrier tracking in two-dimensional data communication systems," IEEE Trans. Commun. 28(11), 1867-1875 (1980)
+  url: https://doi.org/10.1109/tcom.1980.1094608
+  locator: abstract only read
+  value: original constant-modulus (Godard p=2) cost
+  note: 'Optics-specific CMA equations: K. Kikuchi, "Performance analyses of polarization demultiplexing based on constant-modulus algorithm...", Opt. Express 19(10), 9868-9880 (2011), doi:10.1364/OE.19.009868
+    (open access; equations not extracted here).'
+- for: Viterbi-Viterbi estimator (gaps item 9)
+  citation: A. J. Viterbi and A. M. Viterbi, "Nonlinear estimation of PSK-modulated carrier phase with application to burst digital transmission," IEEE Trans. Inf. Theory 29(4), 543-551 (1983)
+  url: https://doi.org/10.1109/tit.1983.1056713
+  locator: abstract only read
+  value: class of nonlinear (M-th power) phase estimators for m-ary PSK
+  note: Full text paywalled; Ip & Kahn JLT 25 2675 (2007) is an open optics alternative.
+- for: BPS (gaps item 9)
+  citation: T. Pfau, S. Hoffmann, R. Noé, JLT 27(8), 989-999 (2009) (already in sources)
+  url: https://ei.uni-paderborn.de/fileadmin/elektrotechnik/fg/ont/docs/auto/publication/HardwareEfficient_Coherent_Digital_Receiver_Concept_With_Feedforward_Carrier_Recovery_for_MQAM_Constellations.pdf
+  locator: Sect. III, Eqs. (5)-(10)
+  value: equation glyphs lost in crawl again
+  note: Author-posted full text is reachable; equations need a PDF render, not text extraction.
+- for: Gardner TED (gaps item 10)
+  citation: F. M. Gardner, IEEE Trans. Commun. 34(5), 423-429 (1986) (already in sources)
+  url: https://doi.org/10.1109/tcom.1986.1096561
+  locator: abstract only
+  value: two samples per symbol; sinusoidal S-curve
+  note: TED equation not obtained.
+- for: Savory CD tap formula (gaps item 8)
+  citation: S. J. Savory, "Digital filters for coherent optical receivers," Opt. Express 16(2), 804-817 (2008) (already in sources)
+  url: https://doi.org/10.1364/oe.16.000804
+  locator: not reached (Optica full text not crawlable)
+  value: N = 2⌊|D|λ²z/(2cT²)⌋+1 seen only in secondary peer-reviewed reproductions (Gomes et al., Aston AAM, Eq. (2), citing Savory [23])
+  note: Ip Eq. (35) remains the verified primary form; algebraic equivalence checked.
+- for: ch02.fec.ofec_*
+  citation: ITU-T Recommendation G.709.6, FlexO-LR / oFEC
+  url: https://www.itu.int/rec/T-REC-G.709.6
+  locator: not read
+  value: oFEC definition
+  note: Tier-A standard referenced by OpenROADM 6.0 abstract; not read.
