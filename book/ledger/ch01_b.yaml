@@ -632,7 +632,7 @@ records:
     section: "1.6"
     claim: "GN 2012 reference system (RS-SMF): span 100 km, 50 GHz spacing, 32 GBd, raised-cosine roll-off 0.3, 101 channels (~5 THz C-band)"
     value: "Ls=100 km; Δf=50 GHz; Rs=32 GBd; roll-off 0.3; Nch=101; SMF α=0.2 dB/km, D=16.5 ps/(nm·km), γ=1.3 1/(W·km)"
-    unit: ""
+    unit: "mixed (see value)"
     kind: model_param
     conditions:
       note: "Nyquist variant NY-SMF uses Nch = 157 rectangular channels at 32 GBd, BWDM ~ 5 THz"
