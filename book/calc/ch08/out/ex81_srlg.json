@@ -1,0 +1,401 @@
+{
+  "n_1": {
+    "value": 56.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "p_1": {
+    "value": 10.33210332103321,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "n_2": {
+    "value": 143.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "p_2": {
+    "value": 26.383763837638377,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "n_3": {
+    "value": 53.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "p_3": {
+    "value": 9.77859778597786,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "n_4_17": {
+    "value": 278.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "p_4_17": {
+    "value": 51.291512915129154,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "n_18_20": {
+    "value": 12.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "p_18_20": {
+    "value": 2.2140221402214024,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "n_cond": {
+    "value": 542.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.map_size"
+    ]
+  },
+  "n_isp": {
+    "value": 20.0,
+    "unit": "ISPs",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.isp_count"
+    ]
+  },
+  "c3": {
+    "value": 343.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.share_ge3"
+    ]
+  },
+  "c4": {
+    "value": 290.0,
+    "unit": "conduits",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.share_ge4"
+    ]
+  },
+  "p_ge2": {
+    "value": 89.67,
+    "unit": "%",
+    "digits": 4,
+    "inputs": [
+      "ch08.intertubes.share_ge2"
+    ]
+  },
+  "p_ge18": {
+    "value": 2.2140221402214024,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.map_size"
+    ]
+  },
+  "ek_lo": {
+    "value": 3.374538745387454,
+    "unit": "ISPs",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "q_lo": {
+    "value": 21.904405628615006,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "tenancy_ge4_lo": {
+    "value": 72.6079825041006,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "ek_mid": {
+    "value": 6.730627306273063,
+    "unit": "ISPs",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "q_mid": {
+    "value": 53.32987072945521,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "tenancy_ge4_mid": {
+    "value": 86.26644736842104,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "ek_hi": {
+    "value": 10.086715867158672,
+    "unit": "ISPs",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "q_hi": {
+    "value": 77.76804366871085,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "tenancy_ge4_hi": {
+    "value": 90.83592463874155,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "m_path": {
+    "value": 5.0,
+    "unit": "conduits",
+    "digits": 1,
+    "inputs": []
+  },
+  "path_shared_lo": {
+    "value": 70.95090057860286,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "path_shared_mid": {
+    "value": 97.78591128107963,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "path_shared_hi": {
+    "value": 99.94568892443216,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.conduits_gt17",
+      "ch08.intertubes.isp_count",
+      "ch08.intertubes.map_size",
+      "ch08.intertubes.share_ge2",
+      "ch08.intertubes.share_ge3",
+      "ch08.intertubes.share_ge4",
+      "ch08.intertubes.shared_by_ge2_count"
+    ]
+  },
+  "los_med_km": {
+    "value": 20.419047677428143,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.intertubes.los_vs_row_latency_median"
+    ]
+  },
+  "los_p75_km": {
+    "value": 102.09523838714071,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.intertubes.los_vs_row_latency_p75"
+    ]
+  },
+  "los_med_rtt": {
+    "value": 0.2,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.los_vs_row_latency_median"
+    ]
+  },
+  "lh_def_km": {
+    "value": 48.28032,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch08.intertubes.longhaul_definition"
+    ]
+  }
+}

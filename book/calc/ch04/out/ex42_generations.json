@@ -1,0 +1,202 @@
+{
+  "eb_dr4_qdd": {
+    "value": 30.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.400g_dr4_power_qdd"
+    ]
+  },
+  "eb_dr4_q112": {
+    "value": 25.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.400g_dr4_power_qsfp112"
+    ]
+  },
+  "eb_m800_2xdr4": {
+    "value": 21.25,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "eb_m1600_dr8": {
+    "value": 15.625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "eb_m800_typ": {
+    "value": 20.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "dr4_saving_w": {
+    "value": 2.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.400g_dr4_power_qdd",
+      "ch04.pmd.400g_dr4_power_qsfp112"
+    ]
+  },
+  "dr4_saving_pct": {
+    "value": 16.666666666666668,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.400g_dr4_power_qdd",
+      "ch04.pmd.400g_dr4_power_qsfp112"
+    ]
+  },
+  "eb_ratio_1600_800": {
+    "value": 0.7352941176470589,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "p_ratio_1600_800": {
+    "value": 1.4705882352941178,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "eb_factor_per_doubling": {
+    "value": 0.7216878364870323,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pmd.400g_dr4_power_qdd"
+    ]
+  },
+  "bs_years": {
+    "value": 1.5668949771691132,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.std.8023bs_approval"
+    ]
+  },
+  "ck_years": {
+    "value": 4.352511415525441,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.std.8023ck_approval"
+    ]
+  },
+  "df_years": {
+    "value": 1.1995433789952585,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.std.8023df_approval_sa"
+    ]
+  },
+  "dv_years": {
+    "value": 2.9726027397259713,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.std.8023dv_par"
+    ]
+  },
+  "lead_800g": {
+    "value": 3.1968036529676738,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.gen.innolight_800g_launch",
+      "ch04.std.8023df_approval_sa"
+    ]
+  },
+  "lead_1600g": {
+    "value": 1.3886986301370143,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.gen.innolight_1p6t_ship_2025q2",
+      "ch04.std.8023dj_status"
+    ]
+  },
+  "lead_400gl": {
+    "value": 3.5,
+    "unit": "years",
+    "digits": 2,
+    "inputs": [
+      "ch04.gen.eoptolink_1p6t_dr4_400g",
+      "ch04.std.8023dv_par"
+    ]
+  },
+  "inno_units_2025": {
+    "value": 21.09,
+    "unit": "million",
+    "digits": 4,
+    "inputs": [
+      "ch04.gen.innolight_units_2025"
+    ]
+  },
+  "inno_units_2024": {
+    "value": 14.59,
+    "unit": "million",
+    "digits": 4,
+    "inputs": [
+      "ch04.gen.innolight_units_2025"
+    ]
+  },
+  "inno_growth": {
+    "value": 44.55106237148732,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.gen.innolight_units_2025"
+    ]
+  },
+  "eo_units_2025": {
+    "value": 16.03,
+    "unit": "million",
+    "digits": 4,
+    "inputs": [
+      "ch04.gen.eoptolink_units_2025"
+    ]
+  },
+  "eo_units_2024": {
+    "value": 8.77,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch04.gen.eoptolink_units_2025"
+    ]
+  },
+  "eo_growth": {
+    "value": 82.78221208665909,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.gen.eoptolink_units_2025"
+    ]
+  },
+  "inno_rev_per_unit": {
+    "value": 1776.0321833048838,
+    "unit": "RMB",
+    "digits": 3,
+    "inputs": [
+      "ch04.gen.innolight_units_2025"
+    ]
+  }
+}

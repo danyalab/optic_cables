@@ -1,0 +1,181 @@
+{
+  "zr_rb_gross": {
+    "value": 478.75,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "zr_rs": {
+    "value": 59.84375,
+    "unit": "GBd",
+    "digits": 7,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "zr_pilot_oh_pct": {
+    "value": 3.125,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch02.sym.400zr_pilot_period"
+    ]
+  },
+  "zr_rb_nopilot": {
+    "value": 463.7890625,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_pilot_period",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "zr_rb_after_fec": {
+    "value": 404.1245320638022,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.cfec_overhead",
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "zr_residual_pct": {
+    "value": 1.0311330159505472,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "rho_assumed": {
+    "value": 0.1,
+    "unit": "1",
+    "digits": 2,
+    "inputs": []
+  },
+  "zr_bocc": {
+    "value": 65.828125,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "zr_se_net": {
+    "value": 6.076430097317826,
+    "unit": "bit/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "zr_se_gross": {
+    "value": 7.2727272727272725,
+    "unit": "bit/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch02.sym.400zr_bits_per_symbol",
+      "ch02.sym.400zr_line_rate",
+      "ch02.sym.400zr_symbol_rate"
+    ]
+  },
+  "fr_rs": {
+    "value": 53.125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch02.sym.lambda_pam4_rate"
+    ]
+  },
+  "fr_rb_gross": {
+    "value": 106.25,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch02.sym.lambda_pam4_rate"
+    ]
+  },
+  "fr_rb_after_kp4": {
+    "value": 100.390625,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch02.sym.lambda_pam4_rate"
+    ]
+  },
+  "kp4_oh_pct": {
+    "value": 5.836575875486383,
+    "unit": "%",
+    "digits": 3,
+    "inputs": []
+  },
+  "p2_rs": {
+    "value": 63.139467923,
+    "unit": "GBd",
+    "digits": 6,
+    "inputs": [
+      "ch02.sym.p2pco_200g_qpsk_rate"
+    ]
+  },
+  "p2_rb_gross": {
+    "value": 252.557871692,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch02.sym.p2pco_200g_qpsk_rate"
+    ]
+  },
+  "p2_rb_after_fec": {
+    "value": 219.00613223378426,
+    "unit": "Gb/s",
+    "digits": 4,
+    "inputs": [
+      "ch02.fec.ofec_overhead",
+      "ch02.sym.p2pco_200g_qpsk_rate"
+    ]
+  },
+  "kikuchi_se": {
+    "value": 2.5,
+    "unit": "bit/s/Hz",
+    "digits": 2,
+    "inputs": [
+      "ch02.sym.kikuchi_40g_16ghz"
+    ]
+  },
+  "binary_se": {
+    "value": 0.8,
+    "unit": "bit/s/Hz",
+    "digits": 2,
+    "inputs": [
+      "ch02.sym.binary_se_limit"
+    ]
+  },
+  "efrac_out_rho": {
+    "value": 0.5811807015116932,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "efrac_out_05": {
+    "value": 3.2391493713980806,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  }
+}

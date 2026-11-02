@@ -1,0 +1,556 @@
+{
+  "af_k": {
+    "value": 48.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.fattree_hosts_k48"
+    ]
+  },
+  "af_hosts": {
+    "value": 27648.0,
+    "unit": "hosts",
+    "digits": 5,
+    "inputs": [
+      "ch05.clos.fattree_hosts_k48"
+    ]
+  },
+  "af_switches": {
+    "value": 2880.0,
+    "unit": "switches",
+    "digits": 4,
+    "inputs": [
+      "ch05.clos.fattree_hosts_k48"
+    ]
+  },
+  "af_core": {
+    "value": 576.0,
+    "unit": "switches",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.fattree_hosts_k48"
+    ]
+  },
+  "af_pods": {
+    "value": 48.0,
+    "unit": "pods",
+    "digits": 2,
+    "inputs": [
+      "ch05.clos.fattree_hosts_k48"
+    ]
+  },
+  "af_sw_links": {
+    "value": 55296.0,
+    "unit": "links",
+    "digits": 5,
+    "inputs": [
+      "ch05.clos.fattree_hosts_k48"
+    ]
+  },
+  "dgx_k": {
+    "value": 64.0,
+    "unit": "ports",
+    "digits": 2,
+    "inputs": [
+      "ch05.clos.dgx_h100_16k_cables"
+    ]
+  },
+  "dgx_max3": {
+    "value": 65536.0,
+    "unit": "GPUs",
+    "digits": 5,
+    "inputs": [
+      "ch05.clos.dgx_h100_16k_cables"
+    ]
+  },
+  "dgx_fill": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.clos.dgx_h100_16k_cables"
+    ]
+  },
+  "dgx4_ports": {
+    "value": 1024.0,
+    "unit": "GPU ports",
+    "digits": 4,
+    "inputs": [
+      "ch05.clos.dgx_h100_16k_cables",
+      "ch05.clos.dgx_h100_4su_switches"
+    ]
+  },
+  "dgx_max2": {
+    "value": 2048.0,
+    "unit": "GPUs",
+    "digits": 4,
+    "inputs": [
+      "ch05.clos.dgx_h100_16k_cables"
+    ]
+  },
+  "sw_cap": {
+    "value": 51.2,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400": {
+    "value": 128.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_hosts": {
+    "value": 8192.0,
+    "unit": "hosts",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_sw": {
+    "value": 192.0,
+    "unit": "switches",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_swlinks": {
+    "value": 8192.0,
+    "unit": "links",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_xcvr": {
+    "value": 16384.0,
+    "unit": "transceiver ports",
+    "digits": 5,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_xcvr_per_host": {
+    "value": 2.0,
+    "unit": "per host",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_bis": {
+    "value": 1.6384,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l2_sw_per_khost": {
+    "value": 23.4375,
+    "unit": "switches per 1000 hosts",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_hosts": {
+    "value": 524288.0,
+    "unit": "hosts",
+    "digits": 6,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_sw": {
+    "value": 20480.0,
+    "unit": "switches",
+    "digits": 5,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_swlinks": {
+    "value": 1.048576,
+    "unit": "million links",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_xcvr": {
+    "value": 2.097152,
+    "unit": "million transceiver ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_xcvr_per_host": {
+    "value": 4.0,
+    "unit": "per host",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_bis": {
+    "value": 104.8576,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_l3_sw_per_khost": {
+    "value": 39.0625,
+    "unit": "switches per 1000 hosts",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k400_paths3": {
+    "value": 4096.0,
+    "unit": "paths",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800": {
+    "value": 64.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_hosts": {
+    "value": 2048.0,
+    "unit": "hosts",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_sw": {
+    "value": 96.0,
+    "unit": "switches",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_swlinks": {
+    "value": 2048.0,
+    "unit": "links",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_xcvr": {
+    "value": 4096.0,
+    "unit": "transceiver ports",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_xcvr_per_host": {
+    "value": 2.0,
+    "unit": "per host",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_bis": {
+    "value": 0.8192,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l2_sw_per_khost": {
+    "value": 46.875,
+    "unit": "switches per 1000 hosts",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_hosts": {
+    "value": 65536.0,
+    "unit": "hosts",
+    "digits": 5,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_sw": {
+    "value": 5120.0,
+    "unit": "switches",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_swlinks": {
+    "value": 131072.0,
+    "unit": "links",
+    "digits": 6,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_xcvr": {
+    "value": 262144.0,
+    "unit": "transceiver ports",
+    "digits": 6,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_xcvr_per_host": {
+    "value": 4.0,
+    "unit": "per host",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_bis": {
+    "value": 26.2144,
+    "unit": "Pb/s",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_l3_sw_per_khost": {
+    "value": 78.125,
+    "unit": "switches per 1000 hosts",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "k800_paths3": {
+    "value": 1024.0,
+    "unit": "paths",
+    "digits": 4,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "meta_tiers_k400": {
+    "value": 3.0,
+    "unit": "tiers",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.meta_129k_h100",
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "meta_tiers_k800": {
+    "value": 4.0,
+    "unit": "tiers",
+    "digits": 1,
+    "inputs": [
+      "ch05.ai.meta_129k_h100",
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "os_lo": {
+    "value": 2.5,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.clos.oversub_typical_2008"
+    ]
+  },
+  "os_gain_lo": {
+    "value": 1.4285714285714286,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.oversub_typical_2008"
+    ]
+  },
+  "os_frac_lo": {
+    "value": 40.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.oversub_typical_2008"
+    ]
+  },
+  "os_hi": {
+    "value": 8.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.clos.oversub_typical_2008"
+    ]
+  },
+  "os_gain_hi": {
+    "value": 1.7777777777777777,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.oversub_typical_2008"
+    ]
+  },
+  "os_frac_hi": {
+    "value": 12.5,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.oversub_typical_2008"
+    ]
+  },
+  "ex_sigma": {
+    "value": 3.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": []
+  },
+  "ex_sigma_hosts": {
+    "value": 786432.0,
+    "unit": "hosts",
+    "digits": 6,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "ex_sigma_xcvr_per_host": {
+    "value": 1.3333333333333333,
+    "unit": "per host",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "ex_sigma_sw": {
+    "value": 14336.0,
+    "unit": "switches",
+    "digits": 5,
+    "inputs": [
+      "ch05.pw.broadcom_51t_128_modules"
+    ]
+  },
+  "hpn_k": {
+    "value": 256.0,
+    "unit": "ports",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.hpn_host_3p2t",
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "hpn_bound2": {
+    "value": 32768.0,
+    "unit": "GPUs",
+    "digits": 5,
+    "inputs": [
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "hpn_bound2_400": {
+    "value": 8192.0,
+    "unit": "GPUs",
+    "digits": 4,
+    "inputs": [
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "hpn_gpu_per_tor": {
+    "value": 64.0,
+    "unit": "GPUs per ToR",
+    "digits": 3,
+    "inputs": [
+      "ch05.ai.hpn_segment_1k"
+    ]
+  },
+  "ms_k": {
+    "value": 64.0,
+    "unit": "ports",
+    "digits": 2,
+    "inputs": [
+      "ch05.ai.megascale_tor_split"
+    ]
+  },
+  "ms_max3": {
+    "value": 65536.0,
+    "unit": "400G ports",
+    "digits": 5,
+    "inputs": [
+      "ch05.ai.megascale_tor_split"
+    ]
+  },
+  "clos_c3_36": {
+    "value": 1188.0,
+    "unit": "crosspoints",
+    "digits": 6,
+    "inputs": [
+      "ch05.clos.clos_n36_crosspoints"
+    ]
+  },
+  "clos_sq_36": {
+    "value": 1296.0,
+    "unit": "crosspoints",
+    "digits": 7,
+    "inputs": [
+      "ch05.clos.clos_n36_crosspoints"
+    ]
+  },
+  "clos_ratio_36": {
+    "value": 91.66666666666666,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.clos_n36_crosspoints"
+    ]
+  },
+  "clos_c3_1000": {
+    "value": 186736.65961010277,
+    "unit": "crosspoints",
+    "digits": 6,
+    "inputs": [
+      "ch05.clos.clos_n1000_crosspoints"
+    ]
+  },
+  "clos_sq_1000": {
+    "value": 1.0,
+    "unit": "million crosspoints",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.clos_n1000_crosspoints"
+    ]
+  },
+  "clos_ratio_1000": {
+    "value": 18.67366596101028,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch05.clos.clos_n1000_crosspoints"
+    ]
+  },
+  "clos_m36": {
+    "value": 11.0,
+    "unit": "middle switches",
+    "digits": 2,
+    "inputs": [
+      "ch05.clos.clos_n36_crosspoints"
+    ]
+  }
+}

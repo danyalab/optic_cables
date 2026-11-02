@@ -1,0 +1,284 @@
+{
+  "rs100": {
+    "value": 53.125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch04.pmd.100g_fr_lr_wavelength"
+    ]
+  },
+  "rs200": {
+    "value": 106.25,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch04.ff.osfpxd_lanes"
+    ]
+  },
+  "rb100": {
+    "value": 106.25,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch04.pmd.100g_fr_lr_wavelength"
+    ]
+  },
+  "rb200": {
+    "value": 212.5,
+    "unit": "Gb/s",
+    "digits": 5,
+    "inputs": [
+      "ch04.ff.osfpxd_lanes"
+    ]
+  },
+  "rb224": {
+    "value": 224.0,
+    "unit": "Gb/s",
+    "digits": 3,
+    "inputs": [
+      "ch04.el.cei224_pam4_112gbd"
+    ]
+  },
+  "lane_oh_pct": {
+    "value": 6.25,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.100g_fr_lr_wavelength"
+    ]
+  },
+  "xd_lanes": {
+    "value": 16.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch04.ff.osfpxd_lanes"
+    ]
+  },
+  "rs_pam6_ideal": {
+    "value": 86.65502882053732,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch04.el.cei224_pam4_112gbd"
+    ]
+  },
+  "rs_pam8_ideal": {
+    "value": 74.66666666666667,
+    "unit": "GBd",
+    "digits": 3,
+    "inputs": [
+      "ch04.el.cei224_pam4_112gbd"
+    ]
+  },
+  "vcc": {
+    "value": 3.3,
+    "unit": "V",
+    "digits": 2,
+    "inputs": [
+      "ch04.ff.qsfpdd_class7_max"
+    ]
+  },
+  "qdd_c8_ceiling": {
+    "value": 39.599999999999994,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_class7_max",
+      "ch04.ff.qsfpdd_icc8_steady"
+    ]
+  },
+  "osfp_r4_amps": {
+    "value": 10.0,
+    "unit": "A",
+    "digits": 2,
+    "inputs": [
+      "ch04.ff.osfp_rev40_33w"
+    ]
+  },
+  "osfp_r1_amps": {
+    "value": 6.0,
+    "unit": "A",
+    "digits": 2,
+    "inputs": [
+      "ch04.ff.osfp_rev10_19w8"
+    ]
+  },
+  "osfp_growth": {
+    "value": 2.1666666666666665,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfp1600_42w9",
+      "ch04.ff.osfp_rev10_19w8"
+    ]
+  },
+  "qdd_c8_ip": {
+    "value": 15.839999999999998,
+    "unit": "A",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_icc8_steady"
+    ]
+  },
+  "qdd_c8_sp": {
+    "value": 13.069306930693068,
+    "unit": "A",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_icc8_steady"
+    ]
+  },
+  "eb_qdd_c7_400": {
+    "value": 35.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_class7_max"
+    ]
+  },
+  "eb_qdd800_800": {
+    "value": 31.25,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd_rev6_25w"
+    ]
+  },
+  "eb_osfp_r4_800": {
+    "value": 41.25,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfp_rev40_33w"
+    ]
+  },
+  "eb_qdd1600_1600": {
+    "value": 25.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.qsfpdd1600_40w"
+    ]
+  },
+  "eb_osfp1600_1600": {
+    "value": 26.8125,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfp1600_42w9"
+    ]
+  },
+  "eb_osfpxd_3200": {
+    "value": 12.5,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfpxd_40w_target"
+    ]
+  },
+  "dr_reach": {
+    "value": 500.0,
+    "unit": "m",
+    "digits": 3,
+    "inputs": [
+      "ch04.std.8023dj_dr_reach"
+    ]
+  },
+  "fr_reach": {
+    "value": 2.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch04.std.8023dj_dr_reach"
+    ]
+  },
+  "lr_reach": {
+    "value": 10.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.100g_fr_lr_wavelength"
+    ]
+  },
+  "fr4_reach": {
+    "value": 2.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.400g_fr4_grid"
+    ]
+  },
+  "dr_lam_c": {
+    "value": 1311.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch04.pmd.100g_fr_lr_wavelength"
+    ]
+  },
+  "dr_lam_w": {
+    "value": 13.0,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.100g_fr_lr_wavelength"
+    ]
+  },
+  "fr4_spacing": {
+    "value": 20.0,
+    "unit": "nm",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.400g_fr4_grid"
+    ]
+  },
+  "fr4_lam0": {
+    "value": 1271.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch04.pmd.400g_fr4_grid"
+    ]
+  },
+  "fr4_lam3": {
+    "value": 1331.0,
+    "unit": "nm",
+    "digits": 4,
+    "inputs": [
+      "ch04.pmd.400g_fr4_grid"
+    ]
+  },
+  "fr4_nlanes": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch04.pmd.400g_fr4_grid"
+    ]
+  },
+  "fr4_passband": {
+    "value": 13.0,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.400g_fr4_grid"
+    ]
+  },
+  "node_3nm": {
+    "value": 3.0,
+    "unit": "nm",
+    "digits": 1,
+    "inputs": [
+      "ch04.pw.sian3_1p6t_sub23w"
+    ]
+  },
+  "node_5nm": {
+    "value": 5.0,
+    "unit": "nm",
+    "digits": 1,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  }
+}

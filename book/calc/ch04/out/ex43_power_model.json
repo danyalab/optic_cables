@@ -1,0 +1,577 @@
+{
+  "p16": {
+    "value": 22.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "p8": {
+    "value": 11.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "p8_lo": {
+    "value": 11.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "p8_hi": {
+    "value": 12.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "eb16": {
+    "value": 13.75,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "eb8": {
+    "value": 14.375,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "w16_TEC": {
+    "value": 2.024,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_TEC": {
+    "value": 1.2650000000000001,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_TEC": {
+    "value": 9.2,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "w16_laser": {
+    "value": 1.9580000000000002,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_laser": {
+    "value": 1.2237500000000001,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_laser": {
+    "value": 8.9,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "w16_DSP": {
+    "value": 13.112,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_DSP": {
+    "value": 8.195,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_DSP": {
+    "value": 59.599999999999994,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "w16_TIA": {
+    "value": 1.892,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_TIA": {
+    "value": 1.1824999999999999,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_TIA": {
+    "value": 8.6,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "w16_MCU": {
+    "value": 0.198,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_MCU": {
+    "value": 0.12375,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_MCU": {
+    "value": 0.9000000000000001,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "w16_other": {
+    "value": 2.816,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_other": {
+    "value": 1.7599999999999998,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_other": {
+    "value": 12.8,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "e16_optics": {
+    "value": 3.6712500000000006,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "s16_cooled_laser": {
+    "value": 18.099999999999998,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "w8_TEC": {
+    "value": 0.805,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_TEC": {
+    "value": 1.00625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_TEC": {
+    "value": 7.000000000000001,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "w8_laser": {
+    "value": 1.1500000000000001,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_laser": {
+    "value": 1.4375000000000002,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_laser": {
+    "value": 10.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "w8_DSP": {
+    "value": 8.049999999999999,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_DSP": {
+    "value": 10.062499999999998,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_DSP": {
+    "value": 70.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "w8_TIA": {
+    "value": 1.035,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_TIA": {
+    "value": 1.29375,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_TIA": {
+    "value": 9.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "w8_MCU": {
+    "value": 0.115,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_MCU": {
+    "value": 0.14375,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_MCU": {
+    "value": 1.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "w8_other": {
+    "value": 0.345,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_other": {
+    "value": 0.43124999999999997,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_other": {
+    "value": 3.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "e8_optics": {
+    "value": 3.7375000000000003,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "s8_cooled_laser": {
+    "value": 17.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "p_lane": {
+    "value": 2.625,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp",
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "p0": {
+    "value": 1.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp",
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "dsp_per_lane16": {
+    "value": 1.639,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "dsp_per_lane8": {
+    "value": 2.0124999999999997,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "laser_per_lane16": {
+    "value": 0.24475000000000002,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "tia_per_lane16": {
+    "value": 236.5,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "nag_dsp_pct": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "dsp16_minus_nag": {
+    "value": 9.599999999999998,
+    "unit": "percentage points",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp",
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "other16_in_overhead": {
+    "value": 1.0,
+    "unit": "1",
+    "digits": 1,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp",
+      "ch04.pw.power_overhead"
+    ]
+  },
+  "nag_ds_dsp": {
+    "value": 12.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "nag_ds_oh": {
+    "value": 3.125,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pw.power_overhead"
+    ]
+  },
+  "nag_ds_rest": {
+    "value": 9.375,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pw.dsp_half_module",
+      "ch04.pw.power_overhead"
+    ]
+  },
+  "ds16_eb": {
+    "value": 15.625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "ds16_over_model": {
+    "value": 1.1363636363636365,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "ds16_minus_model": {
+    "value": 3.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.1p6t_dr8_power",
+      "ch04.pw.1p6t_breakdown_dsp"
+    ]
+  },
+  "ds16_frac_osfp1600": {
+    "value": 58.27505827505828,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.ff.osfp1600_42w9",
+      "ch04.pmd.1p6t_dr8_power"
+    ]
+  },
+  "ref8_eb": {
+    "value": 17.5,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "ds8_eb": {
+    "value": 21.25,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "ds8_over_model": {
+    "value": 1.4782608695652173,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power",
+      "ch04.pw.800g_breakdown_dsp"
+    ]
+  },
+  "ref8_over_model": {
+    "value": 1.2173913043478262,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.800g_breakdown_dsp",
+      "ch04.pw.broadcom_pluggable_14w_800g"
+    ]
+  },
+  "dsp_cut_needed": {
+    "value": 33.557046979865774,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp",
+      "ch04.pw.marvell_ara_20pct"
+    ]
+  },
+  "p16_after_20": {
+    "value": 17.6,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.1p6t_breakdown_dsp",
+      "ch04.pw.marvell_ara_20pct"
+    ]
+  },
+  "sian3_eb": {
+    "value": 14.375,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.sian3_1p6t_sub23w"
+    ]
+  },
+  "sian3_800_eb": {
+    "value": 16.25,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.pw.sian3_1p6t_sub23w"
+    ]
+  }
+}

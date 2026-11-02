@@ -1,0 +1,458 @@
+{
+  "ng": {
+    "value": 1.4682,
+    "unit": "",
+    "digits": 5,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "us_per_km": {
+    "value": 4.897388045699269,
+    "unit": "µs/km",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "km_per_ms": {
+    "value": 204.19047677428145,
+    "unit": "km/ms",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "L_1ms": {
+    "value": 204.19047677428145,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "L_5ms": {
+    "value": 1020.9523838714073,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "L_10ms": {
+    "value": 2041.9047677428146,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.edge_latency_10ms"
+    ]
+  },
+  "L_20ms": {
+    "value": 4083.809535485629,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "rtt_20ms_oneway": {
+    "value": 40.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "L_20ms_if_rtt": {
+    "value": 2041.9047677428146,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "L_1ms_if_rtt": {
+    "value": 102.09523838714072,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "L_5ms_if_rtt": {
+    "value": 510.47619193570364,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.latency_circles_1_5_20"
+    ]
+  },
+  "k_theory": {
+    "value": 1.5,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.latency_1p5x_theory"
+    ]
+  },
+  "geo_max_20ms": {
+    "value": 2722.539690323753,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.dsxs.latency_1p5x_theory"
+    ]
+  },
+  "ng_oneway_km": {
+    "value": 2808.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "ng_spans_ow": {
+    "value": 45.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "ng_avg_span": {
+    "value": 62.4,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "ng_ila_ow": {
+    "value": 44.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "ng_tau_pred_loop": {
+    "value": 27.503731264647094,
+    "unit": "ms",
+    "digits": 4,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "ng_tau_meas_loop": {
+    "value": 27.415,
+    "unit": "ms",
+    "digits": 5,
+    "inputs": [
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "ng_tau_meas_ow": {
+    "value": 13.7075,
+    "unit": "ms",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "ng_tau_pred_ow": {
+    "value": 13.751865632323547,
+    "unit": "ms",
+    "digits": 4,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "ng_implied": {
+    "value": 1.4634633611235754,
+    "unit": "",
+    "digits": 5,
+    "inputs": [
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "ng_impl_dev_pct": {
+    "value": -0.3226153709593005,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "ng_dtau_us": {
+    "value": 88.73126464709458,
+    "unit": "µs",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "ng_dtau_km": {
+    "value": 18.118079233075186,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.field_5616km",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "ng_ow_frac_20": {
+    "value": 68.5375,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.field_5616km_latency"
+    ]
+  },
+  "bj_km": {
+    "value": 711.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "bj_spans": {
+    "value": 9.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "bj_avg_span": {
+    "value": 79.0,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "bj_tau_ow": {
+    "value": 3.48204290049218,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.l400.cmcc_first_link_2024"
+    ]
+  },
+  "span_a": {
+    "value": 80.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": []
+  },
+  "bud_spans_a": {
+    "value": 52.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "bud_ila_a": {
+    "value": 51.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms"
+    ]
+  },
+  "bud_spans_b": {
+    "value": 66.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "bud_ila_b": {
+    "value": 65.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "reach_1500": {
+    "value": 1500.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.reach_1500_g652d_edfa"
+    ]
+  },
+  "reach_2502": {
+    "value": 2502.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.ecoc2023_reach_2502"
+    ]
+  },
+  "reach_pcs": {
+    "value": 1000.0,
+    "unit": "km",
+    "digits": 4,
+    "inputs": [
+      "ch09.l400.pcs16qam_b2b_17p5"
+    ]
+  },
+  "reg_1500": {
+    "value": 2.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.reach_1500_g652d_edfa"
+    ]
+  },
+  "reg_2502": {
+    "value": 1.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.ecoc2023_reach_2502"
+    ]
+  },
+  "reg_5616": {
+    "value": 0.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "reg_pcs": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.dsxs.cluster_latency_20ms",
+      "ch09.l400.pcs16qam_b2b_17p5"
+    ]
+  },
+  "reg_ng_pcs": {
+    "value": 2.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch09.l400.field_5616km",
+      "ch09.l400.pcs16qam_b2b_17p5"
+    ]
+  },
+  "reg_ng_1500": {
+    "value": 1.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch09.l400.field_5616km",
+      "ch09.l400.reach_1500_g652d_edfa"
+    ]
+  },
+  "reg_ng_2502": {
+    "value": 1.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": [
+      "ch09.l400.ecoc2023_reach_2502",
+      "ch09.l400.field_5616km"
+    ]
+  },
+  "vz_rtt": {
+    "value": 45.0,
+    "unit": "ms",
+    "digits": 2,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "vz_oneway": {
+    "value": 22.5,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "vz_L": {
+    "value": 4594.285727421333,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "vz_meas_lo": {
+    "value": 33.335,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "vz_meas_hi": {
+    "value": 36.421,
+    "unit": "ms",
+    "digits": 3,
+    "inputs": [
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "vz_L_lo": {
+    "value": 3403.344771635336,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  },
+  "vz_L_hi": {
+    "value": 3718.410677298052,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch09.cmp.us_verizon_na_latency"
+    ]
+  }
+}

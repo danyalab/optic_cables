@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="684pt" height="391.392pt" viewBox="0 0 684 391.392" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 391.392 
+L 684 391.392 
+L 684 0 
+L 0 0 
+L 0 391.392 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 15.9048 326.7456 
+L 149.1552 326.7456 
+Q 157.1904 326.7456 157.1904 319.5648 
+L 157.1904 53.8752 
+Q 157.1904 46.6944 149.1552 46.6944 
+L 15.9048 46.6944 
+Q 7.8696 46.6944 7.8696 53.8752 
+L 7.8696 319.5648 
+Q 7.8696 326.7456 15.9048 326.7456 
+z
+" clip-path="url(#pe5ae48763b)" style="fill: #2f7fd8; fill-opacity: 0.094118; stroke: #2f7fd8; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 186.6528 326.7456 
+L 319.9032 326.7456 
+Q 327.9384 326.7456 327.9384 319.5648 
+L 327.9384 53.8752 
+Q 327.9384 46.6944 319.9032 46.6944 
+L 186.6528 46.6944 
+Q 178.6176 46.6944 178.6176 53.8752 
+L 178.6176 319.5648 
+Q 178.6176 326.7456 186.6528 326.7456 
+z
+" clip-path="url(#pe5ae48763b)" style="fill: #e2622c; fill-opacity: 0.094118; stroke: #e2622c; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 357.4008 326.7456 
+L 490.6512 326.7456 
+Q 498.6864 326.7456 498.6864 319.5648 
+L 498.6864 53.8752 
+Q 498.6864 46.6944 490.6512 46.6944 
+L 357.4008 46.6944 
+Q 349.3656 46.6944 349.3656 53.8752 
+L 349.3656 319.5648 
+Q 349.3656 326.7456 357.4008 326.7456 
+z
+" clip-path="url(#pe5ae48763b)" style="fill: #1a9f73; fill-opacity: 0.094118; stroke: #1a9f73; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 528.1488 326.7456 
+L 661.3992 326.7456 
+Q 669.4344 326.7456 669.4344 319.5648 
+L 669.4344 53.8752 
+Q 669.4344 46.6944 661.3992 46.6944 
+L 528.1488 46.6944 
+Q 520.1136 46.6944 520.1136 53.8752 
+L 520.1136 319.5648 
+Q 520.1136 326.7456 528.1488 326.7456 
+z
+" clip-path="url(#pe5ae48763b)" style="fill: #7a64dc; fill-opacity: 0.094118; stroke: #7a64dc; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #2f7fd8" transform="translate(41.079805 70.008863)">Materials and</text>
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #2f7fd8" transform="translate(49.869844 85.133375)">substrates</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="115.193926" transform="rotate(-0 18.5832 115.193926)">InP substrates:</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="138.531526" transform="rotate(-0 18.5832 138.531526)"> Sumitomo Electric (JP)</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="161.869126" transform="rotate(-0 18.5832 161.869126)"> AXT/Tongmei (made in CN)</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="185.206726" transform="rotate(-0 18.5832 185.206726)">In-house InP wafers:</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="208.544326" transform="rotate(-0 18.5832 208.544326)"> Broadcom (US)</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="231.881926" transform="rotate(-0 18.5832 231.881926)">MOCVD precursors:</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="18.5832" y="255.219526" transform="rotate(-0 18.5832 255.219526)"> TMIn, TEIn</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 162.538699 186.72 
+Q 169.913192 186.72 175.49883 186.72 
+" style="fill: none; stroke: #8a8a8a; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 171.09883 184.52 
+L 175.49883 186.72 
+L 171.09883 188.92 
+z
+" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #e2622c" x="253.278" y="77.571119" transform="rotate(-0 253.278 77.571119)">Chips</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="115.193926" transform="rotate(-0 189.3312 115.193926)">Lasers (EML, DML, CW):</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="138.531526" transform="rotate(-0 189.3312 138.531526)"> Coherent, Lumentum,</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="161.869126" transform="rotate(-0 189.3312 161.869126)"> Broadcom (US)</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="185.206726" transform="rotate(-0 189.3312 185.206726)"> Mitsubishi Electric (JP)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="208.544326" transform="rotate(-0 189.3312 208.544326)"> Yuanjie, Accelink (CN)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="231.881926" transform="rotate(-0 189.3312 231.881926)">DSP, driver, TIA:</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="255.219526" transform="rotate(-0 189.3312 255.219526)"> Marvell, Broadcom,</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="278.557126" transform="rotate(-0 189.3312 278.557126)"> MaxLinear (US)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="189.3312" y="301.894726" transform="rotate(-0 189.3312 301.894726)"> Xiamen UX (CN, mostly 10G)</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 333.286699 186.72 
+Q 340.661192 186.72 346.24683 186.72 
+" style="fill: none; stroke: #8a8a8a; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 341.84683 184.52 
+L 346.24683 186.72 
+L 341.84683 188.92 
+z
+" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1a9f73" x="424.026" y="77.571119" transform="rotate(-0 424.026 77.571119)">Modules</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="115.193926" transform="rotate(-0 360.0792 115.193926)">Innolight, Eoptolink,</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="138.531526" transform="rotate(-0 360.0792 138.531526)"> Accelink, HGTECH,</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="161.869126" transform="rotate(-0 360.0792 161.869126)"> YOFC (CN)</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="185.206726" transform="rotate(-0 360.0792 185.206726)">Coherent, Lumentum (US)</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="208.544326" transform="rotate(-0 360.0792 208.544326)">Plants named in filings:</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="231.881926" transform="rotate(-0 360.0792 231.881926)"> CN, Thailand, Vietnam,</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="255.219526" transform="rotate(-0 360.0792 255.219526)"> US, UK, JP, Slovenia;</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="360.0792" y="278.557126" transform="rotate(-0 360.0792 278.557126)"> CMs in Malaysia etc.</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 504.034699 186.72 
+Q 511.409192 186.72 516.99483 186.72 
+" style="fill: none; stroke: #8a8a8a; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 512.59483 184.52 
+L 516.99483 186.72 
+L 512.59483 188.92 
+z
+" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #7a64dc" x="594.774" y="77.571119" transform="rotate(-0 594.774 77.571119)">Systems</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="530.8272" y="115.193926" transform="rotate(-0 530.8272 115.193926)">Huawei, ZTE,</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="530.8272" y="138.531526" transform="rotate(-0 530.8272 138.531526)"> FiberHome (CN)</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="530.8272" y="161.869126" transform="rotate(-0 530.8272 161.869126)">Ciena, Cisco (US)</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="530.8272" y="185.206726" transform="rotate(-0 530.8272 185.206726)">Nokia incl. Infinera</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="530.8272" y="231.881926" transform="rotate(-0 530.8272 231.881926)">Switch / CPO platforms:</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #8a8a8a" x="530.8272" y="255.219526" transform="rotate(-0 530.8272 255.219526)"> NVIDIA, Broadcom (US)</text>
+   </g>
+   <g id="text_35">
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #2f7fd8" transform="translate(24.94225 355.189586)">MOFCOM/GAC 2025 No. 10:</text>
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #2f7fd8" transform="translate(32.676875 365.59525)">InP, TMIn, TEIn licensing</text>
+   </g>
+   <g id="text_36">
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #e2622c" transform="translate(194.828906 355.189586)">MOFCOM/GAC 2023 No. 23:</text>
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #e2622c" transform="translate(205.713953 365.59525)">GaAs, InGaAs licensing</text>
+   </g>
+   <g id="text_37">
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #1a9f73" transform="translate(363.744031 355.189586)">Sec. 301 List 4A: HTS 8517.62</text>
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #1a9f73" transform="translate(371.879094 365.59525)">(US imports of CN-origin)</text>
+   </g>
+   <g id="text_38">
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #7a64dc" transform="translate(535.920438 355.189586)">BIS Entity List entries include</text>
+    <text style="font-style: italic; font-size: 8.6px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #7a64dc" transform="translate(519.398359 365.59525)">Huawei, FiberHome, Hengtong, HMN</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 10.5px; font-family: 'Inter', 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #8a8a8a" x="342" y="22.98758" transform="rotate(-0 342 22.98758)">Customers: hyperscale cloud operators (AI clusters), telecom operators</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 596.448 42.302968 
+Q 596.448 36.820313 596.448 32.679298 
+" style="fill: none; stroke: #8a8a8a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 594.248 37.079298 
+L 596.448 32.679298 
+L 598.648 37.079298 
+z
+" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 422.352 42.302968 
+Q 422.352 36.820313 422.352 32.679298 
+" style="fill: none; stroke: #8a8a8a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 420.152 37.079298 
+L 422.352 32.679298 
+L 424.552 37.079298 
+z
+" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe5ae48763b">
+   <rect x="7.2" y="7.2" width="669.6" height="376.992"/>
+  </clipPath>
+ </defs>
+</svg>

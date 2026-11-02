@@ -1,0 +1,271 @@
+{
+  "mi_km": {
+    "value": 1.609344,
+    "unit": "km",
+    "digits": 7,
+    "inputs": []
+  },
+  "lumen_route_km": {
+    "value": 547176.9600000001,
+    "unit": "route-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_route_miles_2025"
+    ]
+  },
+  "lumen_route_km_k": {
+    "value": 547.1769600000001,
+    "unit": "thousand route-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_route_miles_2025"
+    ]
+  },
+  "lumen_metros": {
+    "value": 226.0,
+    "unit": "metro markets",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_onnet_buildings_2025"
+    ]
+  },
+  "lumen_bldg_per_metro": {
+    "value": 721.2389380530974,
+    "unit": "buildings per market",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_onnet_buildings_2025"
+    ]
+  },
+  "us_per_km": {
+    "value": 4.897388045699269,
+    "unit": "µs/km",
+    "digits": 4,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "us_per_mi": {
+    "value": 7.8815820670178445,
+    "unit": "µs/mi",
+    "digits": 3,
+    "inputs": [
+      "ch01.const.speed_of_light_c",
+      "ch01.fiber.smf28ultra_group_index_1550"
+    ]
+  },
+  "sale_states": {
+    "value": 11.0,
+    "unit": "states",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_att_sale_proceeds"
+    ]
+  },
+  "sale_per_location": {
+    "value": 1437.5,
+    "unit": "USD per location",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.att_lumen_fiber_locations",
+      "ch08.carrier.lumen_att_sale_proceeds"
+    ]
+  },
+  "sale_per_customer": {
+    "value": 5750.0,
+    "unit": "USD per customer",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.att_lumen_fiber_locations",
+      "ch08.carrier.lumen_att_sale_proceeds"
+    ]
+  },
+  "sale_customers_m": {
+    "value": 1.0,
+    "unit": "million customers",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.att_lumen_fiber_locations"
+    ]
+  },
+  "sale_take_rate": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.att_lumen_fiber_locations"
+    ]
+  },
+  "att_take_rate": {
+    "value": 32.5,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.att_fiber_customers_2025",
+      "ch08.carrier.att_fiber_locations_2025"
+    ]
+  },
+  "att_loc_growth": {
+    "value": 1.25,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.att_fiber_locations_2025"
+    ]
+  },
+  "att_lumen_share": {
+    "value": 12.5,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.att_fiber_locations_2025",
+      "ch08.carrier.att_lumen_fiber_locations"
+    ]
+  },
+  "pcf_rev_x20": {
+    "value": 8.0,
+    "unit": "billion USD",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_annual_revenue"
+    ]
+  },
+  "pcf_ratio": {
+    "value": 0.9411764705882353,
+    "unit": "1",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_annual_revenue",
+      "ch08.carrier.lumen_pcf_contracts_8p5b"
+    ]
+  },
+  "pcf_growth": {
+    "value": 0.5,
+    "unit": "billion USD",
+    "digits": 1,
+    "inputs": [
+      "ch08.carrier.lumen_pcf_contracts_8p5b",
+      "ch08.carrier.lumen_pcf_contracts_q2_2025"
+    ]
+  },
+  "lumen_fiber_km_2025": {
+    "value": 26.715110400000004,
+    "unit": "million fiber-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025"
+    ]
+  },
+  "lumen_fiber_km_2028": {
+    "value": 75.639168,
+    "unit": "million fiber-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2028"
+    ]
+  },
+  "lumen_fm_growth": {
+    "value": 2.8313253012048194,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025",
+      "ch08.carrier.lumen_intercity_fiber_miles_2028"
+    ]
+  },
+  "lumen_avg_fibers_lb": {
+    "value": 48.8235294117647,
+    "unit": "fibers",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_intercity_fiber_miles_2025",
+      "ch08.carrier.lumen_route_miles_2025"
+    ]
+  },
+  "lumen_new_fibers_per_route": {
+    "value": 880.0,
+    "unit": "fibers",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_2025_new_fiber_vs_route_miles"
+    ]
+  },
+  "lumen_new_route_km": {
+    "value": 4023.36,
+    "unit": "route-km",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.lumen_2025_new_fiber_vs_route_miles"
+    ]
+  },
+  "zayo_fm_diff_pct": {
+    "value": 0.6060606060606061,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.zayo_fiber_miles_na_2024",
+      "ch08.carrier.zayo_fiber_miles_na_2024_bw"
+    ]
+  },
+  "zayo_fiber_km": {
+    "value": 26.715110400000004,
+    "unit": "million fiber-km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.zayo_fiber_miles_na_2024"
+    ]
+  },
+  "zayo_msp_diff_mi": {
+    "value": 16.0,
+    "unit": "mi",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.zayo_chi_msp_route_blog",
+      "ch08.carrier.zayo_chi_msp_route_pr"
+    ]
+  },
+  "zayo_msp_diff_pct": {
+    "value": 3.1683168316831685,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.zayo_chi_msp_route_blog",
+      "ch08.carrier.zayo_chi_msp_route_pr"
+    ]
+  },
+  "zayo_msp_km_pr": {
+    "value": 838.4682240000001,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.zayo_chi_msp_route_pr"
+    ]
+  },
+  "zayo_msp_km_blog": {
+    "value": 812.7187200000001,
+    "unit": "km",
+    "digits": 3,
+    "inputs": [
+      "ch08.carrier.zayo_chi_msp_route_blog"
+    ]
+  },
+  "zayo_msp_diff_us": {
+    "value": 126.10531307228551,
+    "unit": "µs",
+    "digits": 2,
+    "inputs": [
+      "ch01.fiber.smf28ultra_group_index_1550",
+      "ch08.carrier.zayo_chi_msp_route_blog",
+      "ch08.carrier.zayo_chi_msp_route_pr"
+    ]
+  },
+  "zayo_overbuild_share": {
+    "value": 49.056603773584904,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch08.carrier.zayo_completed_longhaul_5y"
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "oh_pam4": {
+    "value": 1.0625,
+    "unit": "",
+    "digits": 5,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m"
+    ]
+  },
+  "oh_nrz": {
+    "value": 1.03125,
+    "unit": "",
+    "digits": 5,
+    "inputs": []
+  },
+  "fn_10": {
+    "value": 5.15625,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch05.cu.ieee_40gcr4_7m"
+    ]
+  },
+  "rs_10": {
+    "value": 10.3125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch05.cu.ieee_40gcr4_7m"
+    ]
+  },
+  "fn_25": {
+    "value": 12.890625,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch05.cu.ieee_100gcr4_5m"
+    ]
+  },
+  "rs_25": {
+    "value": 25.78125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch05.cu.ieee_100gcr4_5m"
+    ]
+  },
+  "fn_50": {
+    "value": 13.28125,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "rs_50": {
+    "value": 26.5625,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "fn_100": {
+    "value": 26.5625,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m"
+    ]
+  },
+  "rs_100": {
+    "value": 53.125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m"
+    ]
+  },
+  "fn_200": {
+    "value": 53.125,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch05.cu.ieee_200g_lane_cr_1m"
+    ]
+  },
+  "rs_200": {
+    "value": 106.25,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch05.cu.ieee_200g_lane_cr_1m"
+    ]
+  },
+  "p_10_25": {
+    "value": 0.3672112190123348,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_100gcr4_5m",
+      "ch05.cu.ieee_40gcr4_7m"
+    ]
+  },
+  "p_50_100": {
+    "value": 0.5849625007211562,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m",
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "p_100_200": {
+    "value": 1.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m",
+      "ch05.cu.ieee_200g_lane_cr_1m"
+    ]
+  },
+  "p_10_200": {
+    "value": 0.8342815981456464,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_200g_lane_cr_1m",
+      "ch05.cu.ieee_40gcr4_7m"
+    ]
+  },
+  "x_50_100": {
+    "value": 0.2047104198266045,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m",
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "fgeo_50_100": {
+    "value": 18.782523875267668,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m",
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "fc_50_100": {
+    "value": 448.20226988308525,
+    "unit": "GHz",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_100g_lane_cr_2m",
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "fn_ratio_25_50": {
+    "value": 1.0303030303030303,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.ieee_100gcr4_5m",
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "reach_ratio_25_50": {
+    "value": 0.6,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_100gcr4_5m",
+      "ch05.cu.ieee_50g_cr_3m"
+    ]
+  },
+  "pam4_pen": {
+    "value": 9.5,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch02.imdd.pam4_penalty_electrical"
+    ]
+  },
+  "nv_vs_ieee": {
+    "value": 70.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_200g_lane_cr_1m",
+      "ch05.cu.nvidia_xdr_dac_lt_0p7m"
+    ]
+  },
+  "nv_extra_frac": {
+    "value": 30.000000000000004,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.ieee_200g_lane_cr_1m",
+      "ch05.cu.nvidia_xdr_dac_lt_0p7m"
+    ]
+  },
+  "pj_dac100": {
+    "value": 0.125,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.nvidia_ndr_dac_2m"
+    ]
+  },
+  "w_dac100": {
+    "value": 0.1,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.nvidia_ndr_dac_2m"
+    ]
+  },
+  "pj_acc100": {
+    "value": 1.875,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.nvidia_ndr_acc_5m"
+    ]
+  },
+  "w_acc100": {
+    "value": 1.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.nvidia_ndr_acc_5m"
+    ]
+  },
+  "pj_lacc200": {
+    "value": 2.5,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.nvidia_aec_lacc_power"
+    ]
+  },
+  "w_lacc200": {
+    "value": 4.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.nvidia_aec_lacc_power"
+    ]
+  },
+  "pj_aec200": {
+    "value": 16.875,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.nvidia_aec_lacc_power"
+    ]
+  },
+  "w_aec200": {
+    "value": 27.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.nvidia_aec_lacc_power"
+    ]
+  },
+  "pj_aec100": {
+    "value": 12.5,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.credo_aec_800g_7m"
+    ]
+  },
+  "w_aec100": {
+    "value": 10.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.cu.credo_aec_800g_7m"
+    ]
+  },
+  "pj_opt800": {
+    "value": 21.25,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "w_opt800": {
+    "value": 17.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.pmd.800g_2xdr4_power"
+    ]
+  },
+  "pj_opt1600": {
+    "value": 18.75,
+    "unit": "pJ/bit",
+    "digits": 2,
+    "inputs": [
+      "ch05.pw.transceiver_1p6t_30w"
+    ]
+  },
+  "w_opt1600": {
+    "value": 30.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch05.pw.transceiver_1p6t_30w"
+    ]
+  },
+  "aec_over_lacc": {
+    "value": 6.75,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.nvidia_aec_lacc_power"
+    ]
+  },
+  "aec_over_opt1600": {
+    "value": 90.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch05.cu.nvidia_aec_lacc_power",
+      "ch05.pw.transceiver_1p6t_30w"
+    ]
+  },
+  "dr_reach_ratio": {
+    "value": 500.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch04.std.8023dj_dr_reach",
+      "ch05.cu.ieee_200g_lane_cr_1m"
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "eo_from": {
+    "value": 14.0,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "eo_to": {
+    "value": 8.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "eo_saving_pct": {
+    "value": 42.85714285714286,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "eo_eb_from": {
+    "value": 17.5,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "eo_eb_to": {
+    "value": 10.0,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct"
+    ]
+  },
+  "ideal_saving_pct": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "eo_implied_extra": {
+    "value": 1.0,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct",
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "eo_implied_extra_pct": {
+    "value": 14.285714285714286,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct",
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "marv_extra_frac": {
+    "value": 30.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.marvell_20pct",
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "marv_extra_w": {
+    "value": 4.2,
+    "unit": "W",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.eoptolink_40pct",
+      "ch04.lpo.marvell_20pct",
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "swing_factor": {
+    "value": 1.5625,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "bech_optics_share": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.bechtolsheim_50pct"
+    ]
+  },
+  "ev_opt_saving_lpo": {
+    "value": 56.34469696969697,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_sw_saving_lpo": {
+    "value": 22.140625000000004,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_optics_share_dsp": {
+    "value": 33.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_lpo_module_w": {
+    "value": 7.203125,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_dsp_module_w": {
+    "value": 16.5,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_eb_lpo": {
+    "value": 9.00390625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_eb_dsp": {
+    "value": 20.625,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "ev_direct_only": {
+    "value": 18.59375,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch04.cpo.evans_switch_power"
+    ]
+  },
+  "eo_ar_eb": {
+    "value": 13.75,
+    "unit": "pJ/bit",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.eoptolink_lpo_lt11w"
+    ]
+  },
+  "mm_saving_pct": {
+    "value": 69.23076923076923,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.macom_800g_mm"
+    ]
+  },
+  "lro_saving_pct": {
+    "value": 25.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.pw.dsp_half_module"
+    ]
+  },
+  "lro_frx": {
+    "value": 50.0,
+    "unit": "%",
+    "digits": 2,
+    "inputs": []
+  },
+  "lpo_chan": {
+    "value": 3.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_mpi": {
+    "value": 0.3,
+    "unit": "dB",
+    "digits": 1,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_tdecq": {
+    "value": 3.4,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_tdecq_frac": {
+    "value": 50.74626865671642,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget"
+    ]
+  },
+  "lpo_rx_min": {
+    "value": -5.9,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.power_budget",
+      "ch04.lpo.tx_launch_power_min"
+    ]
+  },
+  "lpo_tx_max": {
+    "value": 4.0,
+    "unit": "dBm",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.tx_launch_power_min"
+    ]
+  },
+  "host_max": {
+    "value": 16.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch04.lpo.host_loss"
+    ]
+  },
+  "host_amp_ratio": {
+    "value": 6.309573444801933,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch04.lpo.host_loss"
+    ]
+  },
+  "lpo_rs": {
+    "value": 53.125,
+    "unit": "GBd",
+    "digits": 5,
+    "inputs": [
+      "ch04.lpo.spec_rev1_date"
+    ]
+  },
+  "lpo_nyq": {
+    "value": 26.5625,
+    "unit": "GHz",
+    "digits": 4,
+    "inputs": [
+      "ch04.lpo.spec_rev1_date"
+    ]
+  }
+}

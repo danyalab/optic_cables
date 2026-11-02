@@ -1,0 +1,1059 @@
+{
+  "ta_L_km": {
+    "value": 7000.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_Ns": {
+    "value": 140.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_Pe_kw": {
+    "value": 16.53061224489796,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_nopt": {
+    "value": 25.18310791204485,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_copt": {
+    "value": 256.1873184215842,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_seopt": {
+    "value": 2.338616687997699,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_q": {
+    "value": 0.5738134648681904,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c8": {
+    "value": 180.02309390685522,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fp8": {
+    "value": 22.502886738356903,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_se8": {
+    "value": 5.173077411116529,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c12": {
+    "value": 217.08650774035846,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fp12": {
+    "value": 18.090542311696538,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_se12": {
+    "value": 4.158745359010699,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c16": {
+    "value": 239.0919648821917,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fp16": {
+    "value": 14.94324780513698,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_se16": {
+    "value": 3.43522938049126,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c24": {
+    "value": 255.85844120863794,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fp24": {
+    "value": 10.660768383693249,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_se24": {
+    "value": 2.4507513525731603,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c32": {
+    "value": 249.3806372100921,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fp32": {
+    "value": 7.793144912815378,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_se32": {
+    "value": 1.7915275661644547,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c48": {
+    "value": 195.15221370059092,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fp48": {
+    "value": 4.06567111876231,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_se48": {
+    "value": 0.9346370387959334,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_nopt": {
+    "value": 414.6530992985668,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_copt": {
+    "value": 5522.094237419883,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_seopt": {
+    "value": 3.0614674128287542,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_q": {
+    "value": 1.1763176029797902,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c8": {
+    "value": 294.24833201630906,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fp8": {
+    "value": 36.78104150203863,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_se8": {
+    "value": 8.455411839549111,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c12": {
+    "value": 441.37249802446365,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fp12": {
+    "value": 36.78104150203863,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_se12": {
+    "value": 8.455411839549111,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c16": {
+    "value": 588.4966640326181,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fp16": {
+    "value": 36.78104150203863,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_se16": {
+    "value": 8.455411839549111,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c24": {
+    "value": 882.7449960489273,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fp24": {
+    "value": 36.78104150203863,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_se24": {
+    "value": 8.455411839549111,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c32": {
+    "value": 1176.9933280652363,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fp32": {
+    "value": 36.78104150203863,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_se32": {
+    "value": 8.455411839549111,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c48": {
+    "value": 1764.090504686412,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fp48": {
+    "value": 36.75188551430025,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_se48": {
+    "value": 8.448709313632241,
+    "unit": "b/s/Hz",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_over_tp_pe": {
+    "value": 6.589285714285714,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "fifo_db": {
+    "value": 0.3,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.sdm.fifo_loss_xt"
+    ]
+  },
+  "xt_db": {
+    "value": -50.0,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.sdm.fifo_loss_xt"
+    ]
+  },
+  "tp_xt_tot_db": {
+    "value": -22.410881076020264,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c48_ideal": {
+    "value": 195.15221370059092,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_c48_fifo": {
+    "value": 170.62526641676695,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_mcf_gain_pct": {
+    "value": -33.31262958894064,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_fifo_removal_pct": {
+    "value": 14.374745193900406,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "tp_xt_only_pct": {
+    "value": 0.2355652320167989,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_xt_tot_db": {
+    "value": -25.528419686577806,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c48_ideal": {
+    "value": 1764.090504686412,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_c48_fifo": {
+    "value": 1671.0039159658497,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_mcf_gain_pct": {
+    "value": 89.29633398604192,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_fifo_removal_pct": {
+    "value": 5.570698418546649,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "ta_xt_only_pct": {
+    "value": 1.9523289536207633,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "downie_paths": {
+    "value": 64.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "downie_case_gain_pct": {
+    "value": 6.335254206033514,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "downie_pub_gain_pct": {
+    "value": 8.0,
+    "unit": "%",
+    "digits": 1,
+    "inputs": [
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "downie_case_c_fifo": {
+    "value": 2137.0288641248812,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch01.amp.cband_range_itu",
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.arch.pce_typical_5pct",
+      "ch07.power.desbruslais_8fp_example",
+      "ch07.power.desbruslais_span_loss_min_voltage",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.fifo_loss_xt",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "share_M2_drop_db": {
+    "value": 3.010299956639812,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "share_M2_pen_db": {
+    "value": 0.01510591025238513,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "share_M4_drop_db": {
+    "value": 1.2493873660829993,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "share_M4_pen_db": {
+    "value": 0.005041143710580293,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "share_M8_drop_db": {
+    "value": 0.5799194697768675,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": []
+  },
+  "share_M8_pen_db": {
+    "value": 0.002161206722397275,
+    "unit": "dB",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  }
+}

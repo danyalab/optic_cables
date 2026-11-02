@@ -1,0 +1,241 @@
+{
+  "V_kv": {
+    "value": 12.0,
+    "unit": "kV",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance"
+    ]
+  },
+  "rprime": {
+    "value": 1.0,
+    "unit": "Ω/km",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance"
+    ]
+  },
+  "L_km": {
+    "value": 14350.0,
+    "unit": "km",
+    "digits": 5,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "N_s": {
+    "value": 287.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "span_km": {
+    "value": 50.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Rc_kohm": {
+    "value": 14.35,
+    "unit": "kΩ",
+    "digits": 4,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Pmax_kw": {
+    "value": 2.508710801393728,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Pmax_pub_kw": {
+    "value": 2.5,
+    "unit": "kW",
+    "digits": 2,
+    "inputs": [
+      "ch07.power.perin_total_electrical_power"
+    ]
+  },
+  "Iopt_a": {
+    "value": 0.4181184668989547,
+    "unit": "A",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Ploss_kw": {
+    "value": 2.5087108013937285,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Ppfe_kw": {
+    "value": 5.017421602787456,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Prep_w": {
+    "value": 8.741152618096613,
+    "unit": "W",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Vrep_v": {
+    "value": 20.905923344947734,
+    "unit": "V",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Vrep_total_kv": {
+    "value": 6.0,
+    "unit": "kV",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Pfrac_80_pct": {
+    "value": 96.00000000000001,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Pfrac_120_pct": {
+    "value": 96.00000000000001,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "P18_kw": {
+    "value": 8.063713290194126,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "P18_ratio": {
+    "value": 3.2142857142857144,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "P18_vratio_sq": {
+    "value": 2.25,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "P18_rratio": {
+    "value": 1.4285714285714286,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "Pdouble_kw": {
+    "value": 10.034843205574912,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.power.perin_feed_voltage_resistance",
+      "ch07.power.perin_link_reference"
+    ]
+  },
+  "L7_km": {
+    "value": 7000.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "P7_kw": {
+    "value": 16.53061224489796,
+    "unit": "kW",
+    "digits": 3,
+    "inputs": [
+      "ch07.arch.cable_resistance_low_end",
+      "ch07.arch.max_single_end_voltage_18kv",
+      "ch07.power.perin_link_reference",
+      "ch07.sdm.mcedfa_capacity_gain_no_fifo"
+    ]
+  },
+  "Vrating_kv": {
+    "value": 12.0,
+    "unit": "kV",
+    "digits": 2,
+    "inputs": [
+      "ch07.arch.cable_joint_voltage_rating_12kv"
+    ]
+  },
+  "rel_rate_per_yr": {
+    "value": 0.12,
+    "unit": "per year",
+    "digits": 2,
+    "inputs": [
+      "ch07.arch.design_life_25y",
+      "ch07.arch.reliability_lt3_ship_repairs"
+    ]
+  },
+  "rel_fit_per_rep": {
+    "value": 47.69774890474044,
+    "unit": "FIT",
+    "digits": 2,
+    "inputs": [
+      "ch07.arch.design_life_25y",
+      "ch07.arch.reliability_lt3_ship_repairs",
+      "ch07.power.perin_link_reference"
+    ]
+  }
+}

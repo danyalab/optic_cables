@@ -1,0 +1,95 @@
+{
+  "n_star": {
+    "value": 5.555555555555555,
+    "unit": "firms",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated",
+      "ch10.chain.hhi_monopoly"
+    ]
+  },
+  "n_min_ok": {
+    "value": 6.0,
+    "unit": "firms",
+    "digits": 1,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated",
+      "ch10.chain.hhi_monopoly"
+    ]
+  },
+  "hhi5": {
+    "value": 2000.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated",
+      "ch10.chain.hhi_monopoly"
+    ]
+  },
+  "hhi6": {
+    "value": 1666.666666666667,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated",
+      "ch10.chain.hhi_monopoly"
+    ]
+  },
+  "threshold": {
+    "value": 1800.0,
+    "unit": "1",
+    "digits": 4,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "delta": {
+    "value": 100.0,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_significant_change"
+    ]
+  },
+  "s1_sure_high": {
+    "value": 42.42640687119285,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "s1_sure_low": {
+    "value": 18.0,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "cr4_sure_high": {
+    "value": 84.8528137423857,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "cr1_equiv": {
+    "value": 42.42640687119285,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated"
+    ]
+  },
+  "neq_threshold": {
+    "value": 5.555555555555555,
+    "unit": "firms",
+    "digits": 3,
+    "inputs": [
+      "ch10.chain.hhi_highly_concentrated",
+      "ch10.chain.hhi_monopoly"
+    ]
+  }
+}

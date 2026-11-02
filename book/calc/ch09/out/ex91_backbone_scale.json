@@ -1,0 +1,260 @@
+{
+  "ct_roadm": {
+    "value": 500.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "ct_oa": {
+    "value": 2000.0,
+    "unit": "",
+    "digits": 4,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "ct_oa_per_roadm": {
+    "value": 4.0,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "deg_assumed": {
+    "value": 3.0,
+    "unit": "",
+    "digits": 1,
+    "inputs": []
+  },
+  "ct_links": {
+    "value": 750.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "ct_oa_per_link": {
+    "value": 2.6666666666666665,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "ct_spans_per_link": {
+    "value": 3.6666666666666665,
+    "unit": "",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "span_km": {
+    "value": 80.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": []
+  },
+  "ct_link_km": {
+    "value": 293.3333333333333,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.ct_allotical_backbone_scale_2023"
+    ]
+  },
+  "cmcc_bw_tbps": {
+    "value": 1098.0,
+    "unit": "Tb/s",
+    "digits": 4,
+    "inputs": [
+      "ch09.op.cmcc_interprovincial_bw_2025"
+    ]
+  },
+  "cmcc_fiber_equiv": {
+    "value": 34.3125,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.l400.cmcc_capacity_32t",
+      "ch09.op.cmcc_interprovincial_bw_2025"
+    ]
+  },
+  "cmcc_400g_waves_equiv": {
+    "value": 2745.0,
+    "unit": "",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cmcc_interprovincial_bw_2025"
+    ]
+  },
+  "cmcc_sheath_mkm": {
+    "value": 36.91,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.op.cmcc_cable_sheath_km_2025"
+    ]
+  },
+  "nat_cable_mkm": {
+    "value": 74.99,
+    "unit": "million km",
+    "digits": 4,
+    "inputs": [
+      "ch09.acc.cable_length_2025"
+    ]
+  },
+  "cmcc_share_pct": {
+    "value": 49.21989598613148,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.cable_length_2025",
+      "ch09.op.cmcc_cable_sheath_km_2025"
+    ]
+  },
+  "cu_total_kkm": {
+    "value": 198.0,
+    "unit": "thousand km",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cu_new_88_total_198k"
+    ]
+  },
+  "cu_added_km": {
+    "value": 9000.0,
+    "unit": "km",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.cu_new_88_cable_2025"
+    ]
+  },
+  "cu_added_pct": {
+    "value": 4.545454545454546,
+    "unit": "%",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.cu_new_88_cable_2025",
+      "ch09.op.cu_new_88_total_198k"
+    ]
+  },
+  "cmcc_state_pct": {
+    "value": 68.8,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cmcc_ownership_2025"
+    ]
+  },
+  "ct_state_pct": {
+    "value": 63.9,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_ownership_2025"
+    ]
+  },
+  "nat_fbb_m": {
+    "value": 691.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "ct_fbb_m": {
+    "value": 201.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_users_2025"
+    ]
+  },
+  "ct_fbb_share_pct": {
+    "value": 29.088277858176557,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_users_2025",
+      "ch09.op.national_fixed_bb_users_2025"
+    ]
+  },
+  "ct_gig_m": {
+    "value": 63.516,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_users_2025"
+    ]
+  },
+  "ct_gig_pen_pct": {
+    "value": 31.6,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.ct_users_2025"
+    ]
+  },
+  "cmcc_gig_m": {
+    "value": 109.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cmcc_gigabit_users_2025"
+    ]
+  },
+  "nat_gig_m": {
+    "value": 238.0,
+    "unit": "million",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_users_2025"
+    ]
+  },
+  "ct_cm_gig_share_pct": {
+    "value": 72.48571428571428,
+    "unit": "%",
+    "digits": 3,
+    "inputs": [
+      "ch09.acc.gigabit_users_2025",
+      "ch09.op.cmcc_gigabit_users_2025",
+      "ch09.op.ct_users_2025"
+    ]
+  },
+  "cbn_5g_m": {
+    "value": 42.0,
+    "unit": "million",
+    "digits": 2,
+    "inputs": [
+      "ch09.op.cbn_5g_users_2025"
+    ]
+  },
+  "cn2_pop_223": {
+    "value": 223.0,
+    "unit": "cities",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cn2_domestic_pop_coverage"
+    ]
+  },
+  "cn2_pop_161": {
+    "value": 161.0,
+    "unit": "cities",
+    "digits": 3,
+    "inputs": [
+      "ch09.op.cn2_dual_pop_161"
+    ]
+  },
+  "cmcc_intl_tbps": {
+    "value": 406.0,
+    "unit": "Tb/s",
+    "digits": 3,
+    "inputs": [
+      "ch09.intl.cmcc_intl_2025"
+    ]
+  }
+}

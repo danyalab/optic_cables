@@ -1,0 +1,310 @@
+{
+  "t_room": {
+    "value": 300.0,
+    "unit": "K",
+    "digits": 3,
+    "inputs": []
+  },
+  "eg_gaas_300": {
+    "value": 1.4224821428571428,
+    "unit": "eV",
+    "digits": 4,
+    "inputs": [
+      "ch03.mat.gaas_eg_0k",
+      "ch03.mat.gaas_varshni_alpha"
+    ]
+  },
+  "eg_inp_300": {
+    "value": 1.3528857142857142,
+    "unit": "eV",
+    "digits": 4,
+    "inputs": [
+      "ch03.mat.inp_eg_0k",
+      "ch03.mat.inp_varshni_alpha"
+    ]
+  },
+  "lam_gaas_300": {
+    "value": 871.6046036554834,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch03.mat.gaas_eg_0k",
+      "ch03.mat.gaas_varshni_alpha"
+    ]
+  },
+  "lam_inp_300": {
+    "value": 916.442513391905,
+    "unit": "nm",
+    "digits": 3,
+    "inputs": [
+      "ch03.mat.inp_eg_0k",
+      "ch03.mat.inp_varshni_alpha"
+    ]
+  },
+  "shift_gaas": {
+    "value": 96.5178571428571,
+    "unit": "meV",
+    "digits": 3,
+    "inputs": [
+      "ch03.mat.gaas_eg_0k",
+      "ch03.mat.gaas_varshni_alpha"
+    ]
+  },
+  "shift_inp": {
+    "value": 70.71428571428572,
+    "unit": "meV",
+    "digits": 3,
+    "inputs": [
+      "ch03.mat.inp_eg_0k",
+      "ch03.mat.inp_varshni_alpha"
+    ]
+  },
+  "degdt_gaas": {
+    "value": 0.45194869614512473,
+    "unit": "meV/K",
+    "digits": 3,
+    "inputs": [
+      "ch03.mat.gaas_eg_0k",
+      "ch03.mat.gaas_varshni_alpha"
+    ]
+  },
+  "degdt_inp": {
+    "value": 0.31836734693877544,
+    "unit": "meV/K",
+    "digits": 3,
+    "inputs": [
+      "ch03.mat.inp_eg_0k",
+      "ch03.mat.inp_varshni_alpha"
+    ]
+  },
+  "henry_factor": {
+    "value": 30.160000000000004,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_alpha_fit"
+    ]
+  },
+  "henry_factor_lo": {
+    "value": 22.159999999999997,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_alpha_measured"
+    ]
+  },
+  "henry_factor_hi": {
+    "value": 39.440000000000005,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_alpha_measured"
+    ]
+  },
+  "dnu_st_1mw": {
+    "value": 3.7798408488063657,
+    "unit": "MHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.henry_alpha_fit",
+      "ch03.las.henry_linewidth_1mw"
+    ]
+  },
+  "vcsel_factor_lo": {
+    "value": 5.0,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_alpha_range"
+    ]
+  },
+  "vcsel_factor_hi": {
+    "value": 50.0,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_alpha_range"
+    ]
+  },
+  "p_for_5mhz": {
+    "value": 22.8,
+    "unit": "mW",
+    "digits": 3,
+    "inputs": [
+      "ch03.itla.oif_linewidth_app1",
+      "ch03.las.henry_linewidth_1mw"
+    ]
+  },
+  "ratio_undamped": {
+    "value": 1.5537739740300374,
+    "unit": "1",
+    "digits": 3,
+    "inputs": []
+  },
+  "fmax_lo": {
+    "value": 59.23843917544489,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "fr_at_fmax_lo": {
+    "value": 59.23844121110624,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "fmax_hi": {
+    "value": 44.428829381583654,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "fr_at_fmax_hi": {
+    "value": 44.42883008632567,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "fr_opt_hi": {
+    "value": 44.428829381583654,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "k_ref": {
+    "value": 0.20000000000000004,
+    "unit": "ns",
+    "digits": 2,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "mcef_over_d": {
+    "value": 1.1771428571428573,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.vcsel.chalmers_dfactor",
+      "ch03.vcsel.chalmers_mcef"
+    ]
+  },
+  "mcef_theory": {
+    "value": 27.191044545525653,
+    "unit": "GHz/sqrt(mA)",
+    "digits": 3,
+    "inputs": [
+      "ch03.vcsel.chalmers_dfactor"
+    ]
+  },
+  "fr18_lo": {
+    "value": 19.953069939234915,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_ith_temp",
+      "ch03.vcsel.chalmers_bw_low_bias",
+      "ch03.vcsel.chalmers_dfactor"
+    ]
+  },
+  "fr18_hi": {
+    "value": 21.433035249352805,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_ith_temp",
+      "ch03.vcsel.chalmers_bw_low_bias",
+      "ch03.vcsel.chalmers_dfactor"
+    ]
+  },
+  "f3_undamped18_hi": {
+    "value": 33.30209235491278,
+    "unit": "GHz",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_ith_temp",
+      "ch03.vcsel.chalmers_bw_low_bias",
+      "ch03.vcsel.chalmers_dfactor"
+    ]
+  },
+  "ntt_ratio": {
+    "value": 1.4285714285714286,
+    "unit": "1",
+    "digits": 3,
+    "inputs": [
+      "ch03.dml.ntt_membrane_fr",
+      "ch03.dml.ntt_membrane_intrinsic"
+    ]
+  },
+  "rin_shot_1ma": {
+    "value": -154.9425961060103,
+    "unit": "dB/Hz",
+    "digits": 4,
+    "inputs": [
+      "ch03.las.rin_shot_limit_1ma"
+    ]
+  },
+  "rin_shot_10ma": {
+    "value": -164.94259610601034,
+    "unit": "dB/Hz",
+    "digits": 4,
+    "inputs": [
+      "ch03.las.rin_shot_limit_1ma"
+    ]
+  },
+  "gamma0": {
+    "value": 10.0,
+    "unit": "1/ns",
+    "digits": 2,
+    "inputs": []
+  },
+  "rin_peak_10": {
+    "value": 22.493405747090844,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "gamma_10": {
+    "value": 30.000000000000004,
+    "unit": "1/ns",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "rin_peak_20": {
+    "value": 24.91095794737437,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "gamma_20": {
+    "value": 90.00000000000001,
+    "unit": "1/ns",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  },
+  "rin_peak_asym": {
+    "value": 25.906594821044976,
+    "unit": "dB",
+    "digits": 3,
+    "inputs": [
+      "ch03.las.vcsel_min_kfactor"
+    ]
+  }
+}
