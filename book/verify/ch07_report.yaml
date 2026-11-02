@@ -1,0 +1,738 @@
+# Independent verification of book/ledger/ch07.yaml and book/ledger/ch07_equations.yaml
+# Verifier: independent agent (did not read book/chapters/). Date: 2026-11-02.
+# Access: direct curl blocked by the proxy (403) for all hosts; mdpi.com and ttnews.com not resolvable via WebFetch.
+# All sources read through the Exa crawler copy of the URL in book/sources/ch07.yaml (or ch01_c.yaml), except where noted.
+# Full text read: Perin (ar5iv), Desbruslais (Xtera PDF), Downie 2023 (Soton ePrints), Papapavlou (MDPI), Kamalov (NEC PDF),
+#   G.977 (01/2015), G.977.1 (10/2020; confirmed still the in-force edition), FCC 25-49 (FR 90 FR 48648), eCFR Subpart FF,
+#   FCC 26-42 Second R&O (91 FR 46844, govinfo), EO 13913 (FR), BIS 86 FR 71557 (FR), PRC SC Order 27 (MOJ), SOA Order 3 (gov.cn),
+#   Hengtong AR2024/AR2025/HY2025/HY2026 (cninfo/SSE PDFs), all press/blog sources, Bloomberg text (via TT, gCaptain, Al Arabiya syndications).
+# Abstract only (full text not reachable after trying IEEE, Optica, scholar.archive.org, KipHub, author pages): Dar 2018,
+#   Sinkin 2018, Bolshtyansky 2020, Srinivas 2021, Bergano 2005, Caoui & Steck 2025, Pilipetskii SubOptic 2019.
+# Numerical checks: 12000^2/(4*14350*1) = 2509 W (2.5 kW OK); 287*50 = 14350 (OK); 0.33*0.67*0.30*0.50*0.50 = 1.66 % (Downie 1.6 % OK);
+#   980/1550 = 0.632 (PCE < 63 % OK); Desbruslais Eq. (1) minimized: I = sqrt(nr Pr/Rc), V = 2 sqrt(Rc nr Pr) (OK); Eq. (14) from (4)+(5) (OK);
+#   Papapavlou 12 x 25 = 300, 16 x 22 = 352, 16 x 19.2 = 307.2 (internally consistent); 24 x 20 = 480 (Anjana).
+# Supersession found: FCC 26-42 Second Report and Order (adopted 2026, 91 FR 46844, 2026-07-27) adopts a blanket licence for SLTE owners/operators
+#   and revises 47 CFR 1.70003 (delayed indefinitely); Helsinki District Court dismissed the Eagle S case on 2025-10-03 (not final).
+summary: {checked: 112, match: 104, mismatch: 0, partial: 8, unreachable: 0}
+results:
+  # ------------------------------------------------------------------ 7.1 architecture
+  - id: ch07.arch.pfe_voltage_typical_range
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou et al., Telecom 3(2) 2022, Section 6 'Submarine Power Feeding', para 1"
+    evidence: "Typical voltages of PFE are in the range of 12–18 kVs and more recently 20 kVs [3]."
+    action: "none"
+  - id: ch07.arch.pfe_voltage_range_dry_plant
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 2.5 'Basic Segments (Plants) of a Submarine System', para after Figure 8"
+    evidence: "the PFE, which as its name suggests supplies power (in the range of 15–20 kV) to the wet plant"
+    action: "Locator: Section 2.5 (not 'Section 2'). Internal 12-18 vs 15-20 kV inconsistency confirmed. Same Sec. 6 (Fig. 32 text) says 15 kV legacy to 18 kV latest."
+  - id: ch07.arch.repeater_spacing_review
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 2.5; also Section 6 'one every 75–100 km [3]'"
+    evidence: "the necessary repeaters (installed every 75–100 km), which provide the necessary amplification for optical signals."
+    action: "Locator: Section 2.5."
+  - id: ch07.arch.google_amplified_every_100km
+    status: MATCH
+    found_value: ""
+    found_locator: "Google Cloud blog 2021-06-09 (Firmina), para 3"
+    evidence: "That light signal is amplified every 100 km with a high-voltage electrical current supplied at landing stations in each country."
+    action: "none (tier C correct)"
+  - id: ch07.arch.cable_joint_voltage_rating_12kv
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais NOC 2015, Section I para 1; Section II after Eq. (1)"
+    evidence: "does not exceed the maximum rating of the cable and joints, which is typically 12 kV."
+    action: "none"
+  - id: ch07.arch.max_single_end_voltage_18kv
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie et al. JLT 2023 accepted MS, Section II para 1"
+    evidence: "Currently, the largest cable voltage applied for single-ended powering is 18 kV so we used this value here for our modeling"
+    action: "none"
+  - id: ch07.arch.cable_resistance_low_end
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Section II para 1"
+    evidence: "A cable resistance value of 0.7 Ω/km was used in this analysis for the first design approach, at the low end of practical cable conductors"
+    action: "none"
+  - id: ch07.arch.subcom_18kv_single_end_firmina
+    status: MATCH
+    found_value: ""
+    found_locator: "SubCom press release 2021-06-09, subhead and para 2 ('twelve-fiber pair trunk' in para 1)"
+    evidence: "SubCom's 18kV technology will enable the longest cable in the world capable of running entirely from a single power source"
+    action: "none (tier C correct); Google blog '20% higher' voltage also confirmed"
+  - id: ch07.arch.hmn_20kv_rating
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2025 AR, Section 3, 海洋通信 (pp. ~22 and ~39 of 329)"
+    evidence: "全系列产品具备20kV耐压能力显著提升系统可靠性，能够保证在8000米水深下稳定工作25年"
+    action: "none"
+  - id: ch07.arch.hmn_claims_first_18kv
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2024 AR, Section 3 核心竞争力 paragraph (repeated verbatim in 2025 AR)"
+    evidence: "发布全球首个中继海缆系统18kV供电方案，引领海洋通信行业SDM技术变革"
+    action: "none"
+  - id: ch07.arch.design_life_25y
+    status: MATCH
+    found_value: ""
+    found_locator: "ITU-T G.977 (01/2015) clause 6.3"
+    evidence: "Usually, a system's designed lifetime is a period of 25 years starting at the provisional acceptance date"
+    action: "none (G.977 2015 is the edition cited by G.977.1 (10/2020))"
+  - id: ch07.arch.reliability_lt3_ship_repairs
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977 (01/2015) clause 6.3"
+    evidence: "The usual requirement for system reliability is less than three failures requiring cable ship intervention"
+    action: "none"
+  - id: ch07.arch.bu_definition
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977 (01/2015) clause 3.2.1"
+    evidence: "branching unit (BU): A piece of optical submarine equipment ... of three cable sections is necessary."
+    action: "none"
+  - id: ch07.arch.bu_power_switching
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977 (01/2015) clause 9.3.2"
+    evidence: "Any two incoming cables with power feed conductors may be connected together and isolated from the BU sea electrode"
+    action: "none"
+  - id: ch07.arch.pfe_constant_current_sea_return
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977 (01/2015) Annex A, clause A.4.2.1"
+    evidence: "The PFE provides, through the cable power conductor with return through the sea, a stabilized electric"
+    action: "none"
+  - id: ch07.arch.pce_typical_5pct
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais 2015, Section I para 1; Table I (ηc = 5 %)"
+    evidence: "the ratio of the amplifier optical output power to the supplied electrical power, and this figure is typically only 5%."
+    action: "none"
+  - id: ch07.arch.pce_low_1p2pct
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais 2015, Section III, text after Eq. (5), citing [5] Frisch & Desbruslais SubOptic 2013"
+    evidence: "The power conversion efficiency ηc between the electrical amplifier power and the total optical output power can be as low as 1.2% [5]"
+    action: "none"
+  - id: ch07.arch.power_rebalancing_interval
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin et al. (arXiv 1803.07905), Section 2 para 2; Sec. 3.2 says 'intervals of five or so spans'"
+    evidence: "periodic power rebalancing after every five or six spans corrects for any residual mismatches."
+    action: "none"
+  - id: ch07.arch.bergano_2005_deployed_tbps
+    status: MATCH
+    found_value: ""
+    found_locator: "Bergano JLT 23(12) 2005, abstract (Optica)"
+    evidence: "Newly installed state-of-the-art transoceanic systems now have terabit per second maximum capacity"
+    action: "none (abstract only; confidence med correct)"
+  - id: ch07.arch.bergano_2005_lab_4tbps
+    status: MATCH
+    found_value: ""
+    found_locator: "Bergano 2005, abstract"
+    evidence: "made possible the demonstration of capacities approaching 4 Tb/s over transoceanic distances in laboratory experiments."
+    action: "none"
+  # ------------------------------------------------------------------ 7.2 power-limited capacity
+  - id: ch07.power.perin_feed_voltage_resistance
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin et al., Section 3.5 para 1"
+    evidence: "We consider the feed voltage V=12 kV, cable resistivity ρ=1 Ω km-1, and the reference link of Table 1."
+    action: "Source perin_jlt_2019 has empty DOI; add published JLT 2019 DOI (not captured by verifier either)."
+  - id: ch07.power.perin_total_electrical_power
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.5; P = V^2/(4Lρ) in Section 2"
+    evidence: "Thus, the total electrical power available for all amplifiers is 2.5 kW."
+    action: "none (2509 W recomputed)"
+  - id: ch07.power.perin_pump_efficiency
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.5 with Eq. (2)"
+    evidence: "assuming efficiency η=0.4 and overhead power Po, we can compute the pump power per amplifier Pp according to (2)"
+    action: "none. Same para: optimum S = 20, 12, 8 for Po = 0.1, 0.2, 0.3 W; ~383 Tb/s at S = 20 (useful for 7.2)."
+  - id: ch07.power.perin_link_reference
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Table 1 and Section 3 para 1"
+    evidence: "We consider M=287 spans of l=50 km of low-loss large-effective area single-mode fiber, resulting in a total link length of L=14,350 km."
+    action: "Note fix: Perin says parameters are consistent with ref. [9] = Sinkin et al. JLT 2018 (not Turukhin OFC 2016 directly)."
+  - id: ch07.power.pce_upper_bound_980
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.3, Fig. 4c discussion"
+    evidence: "which for 980 nm pump results in PCE<63% [17]."
+    action: "none"
+  - id: ch07.power.pce_gain_doubling_pump
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.3"
+    evidence: "doubling the pump power from 50 mW to 100 mW increases PCE by only 7.43%."
+    action: "none (ambiguity note is fair)"
+  - id: ch07.power.perin_linear_regime_pump
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.3, Fig. 4a"
+    evidence: "Below about 100 mW of pump power, the system operates in the linear regime."
+    action: "none"
+  - id: ch07.power.perin_ase_over_nli_high_pump
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.3, Fig. 4b"
+    evidence: "At high pump powers, ASE is only about 4 dB higher than nonlinear noise."
+    action: "none"
+  - id: ch07.power.perin_capacity_gain_70pct
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.4"
+    evidence: "thus offering 70% higher capacity when compared to the theoretical estimate for a system consistent with [9]."
+    action: "none"
+  - id: ch07.power.perin_optimal_span_length
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.3, last paragraph"
+    evidence: "the optimal span length is achieved for 40–50 km, resulting in an optimal span attenuation of 8.1–9.75 dB."
+    action: "none (P_p,total = 287 x 50 = 14350 mW confirmed)"
+  - id: ch07.power.turukhin_12core_reference
+    status: PARTIAL
+    found_value: "105 Tb/s, 8.2 Tb/s per core (values match)"
+    found_locator: "Perin Section 3.4, citing [9] Sinkin et al., JLT 36:361 (2018)"
+    evidence: "In their experimental setup, Sinkin et al used 82 channels ... 8.2 Tb s-1 per core, and 105 Tb s-1 over the 12 cores."
+    action: "Values correct. Perin attributes the experiment to Sinkin et al. JLT 2018 [9]; claim/notes say Turukhin OFC 2016. Reword as 'Sinkin et al. JLT 2018 (experiment first reported as Turukhin et al., OFC 2016 Th4C.1, 105.1 Tb/s over 14,350 km)'. Span loss 9.7 dB."
+  - id: ch07.power.dar_min_cost_paths
+    status: MATCH
+    found_value: ""
+    found_locator: "Dar et al. JLT 36(18) 2018, abstract (Optica and IEEE); full text unreachable"
+    evidence: "Systems with about 100 parallel optical paths, e.g., ~50 fiber pairs are shown to provide minimum cost/bit"
+    action: "none; full text not obtainable (IEEE/Optica paywall, scholar.archive.org blocked). Keep confidence med; do not derive cost-model numbers."
+  - id: ch07.power.bolshtyansky_32_fiber_sweet_spot
+    status: MATCH
+    found_value: ""
+    found_locator: "Bolshtyansky et al. JLT 38(6) 2020, abstract"
+    evidence: "The model results suggest that 32-fiber SDM systems are a practical spot for near-future systems close to cost-per-unit-capacity limit of the wet-plant."
+    action: "none. Abstract also: 'show existence of optimum SNR'."
+  - id: ch07.power.sinkin_optimum_exists
+    status: MATCH
+    found_value: ""
+    found_locator: "Sinkin et al. JLT 36(2) 2018, abstract; full text unreachable"
+    evidence: "shows the existence of optimal values of spectral efficiency, signal-to-noise ratio, and span length that maximize power efficiency."
+    action: "none. Abstract adds: experimentally confirmed optimal SE; 12-core MCF demo. No fiber-pair optimum is stated in the abstract."
+  - id: ch07.power.srinivas_low_pump
+    status: MATCH
+    found_value: ""
+    found_locator: "Srinivas et al. JLT 39(8) 2021, abstract (IEEE Xplore)"
+    evidence: "the utility of amplifier pump powers as low as 20 mW and output powers as low as 6.5 dBm in reaching Pb/s cable capacities."
+    action: "none"
+  - id: ch07.power.asn_optimum_se
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 3.1, 'The SDM 1 system powered by ASN [8]'"
+    evidence: "working in the optimum spectral efficiency of submarine line terminal equipment (SLTE): 2–3 b/s/Hz"
+    action: "none"
+  - id: ch07.power.desbruslais_ideal_span_loss
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais 2015, Abstract; Sec. III-B (8-9 dB); Sec. IV (8.5 dB optimum, 10 dB little loss)"
+    evidence: "It is found that the ideal span loss is in the range 8 – 10 dB"
+    action: "none"
+  - id: ch07.power.desbruslais_span_loss_min_voltage
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Section III-A, worked example with Table I"
+    evidence: "power overhead P0/Pr of 10%. Then the optimum span loss is determined to be 15.1 dB."
+    action: "none (conditions match Table I)"
+  - id: ch07.power.doran_ellis_span_gain
+    status: PARTIAL
+    found_value: "13 dB (value correct)"
+    found_locator: "Desbruslais Section III-A after Eq. (13); reference [3] = Doran & Ellis, ECOC 2013"
+    evidence: "This is essentially equivalent to the result ln G = 3, or 10 log10 G = 13 dB derived in [3]"
+    action: "Note error: Desbruslais [3] is Doran & Ellis ECOC 2013; Opt. Express 22(16):19810 (2014) is [4]. The OE 2014 paper also states the 13 dB (e^3) result; cite it directly (see tier_a_replacements)."
+  - id: ch07.power.desbruslais_8fp_example
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Section IV, Design examples, para 1"
+    evidence: "then 12 kV is reached if we have 132 channels per fibre pair occupying 37 nm. The total system capacity is 111 Tb/s."
+    action: "none. Same section: capacity-maximizing design 257 Tb/s, 16 FP at 43 nm, span 8.5 dB, -8.4 dBm."
+  - id: ch07.power.desbruslais_250tbps_10sdm
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Abstract; Conclusion"
+    evidence: "transpacific systems of up to 250 Tb/s over 10 SDM channels are feasible using amplifier bandwidths of 70 nm."
+    action: "none"
+  - id: ch07.power.pump_ld_efficiency
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Section II, paragraph before Table II"
+    evidence: "E O conversion efficiencies of ~30% and ~45% were used as typical values for single- and multi-mode pump LDs, respectively"
+    action: "none"
+  - id: ch07.power.downie_overall_eo_eff_c
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Table II, row Core-pumped C-band"
+    evidence: "Core | C-band | Er | SM980nm | ~30% | ~50% | 1.6% | -"
+    action: "none; crawler table still garbled (shared 33 % / 67 % / 50 % row), product check 1.66 % consistent. Keep med."
+  # ------------------------------------------------------------------ 7.3 SDM systems
+  - id: ch07.sdm.dunant_12fp
+    status: MATCH
+    found_value: ""
+    found_locator: "Google Cloud blog 2021-02-03, para 2"
+    evidence: "Dunant is the first long-haul subsea cable to feature a 12 fiber pair space-division multiplexing (SDM) design"
+    action: "none"
+  - id: ch07.sdm.dunant_250tbps
+    status: MATCH
+    found_value: ""
+    found_locator: "Google Cloud blog 2021-02-03, heading and para 2"
+    evidence: "will deliver record-breaking capacity of 250 terabits per second (Tbps) across the ocean"
+    action: "Locator: quote is in para 2 (also section heading). 250 vs 300 disagreement is real: owner (C) 250, review (A) 300; no tier-A primary found."
+  - id: ch07.sdm.dunant_300tbps_review
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 3.1, Dunant paragraph (after Table 3)"
+    evidence: "employs a 12 FPs SDM-based design, featuring a capacity of 25 Tb/s/FP and thus a total of 300 Tb/s."
+    action: "none; the review gives no source for 25 Tb/s/FP. Present as review figure vs owner's 250."
+  - id: ch07.sdm.dunant_pump_sharing
+    status: MATCH
+    found_value: ""
+    found_locator: "Google blog 2021-02-03, para 2"
+    evidence: "the SDM technology used in Dunant allows pump lasers and associated optical components to be shared among multiple fiber pairs."
+    action: "Locator: para 2."
+  - id: ch07.sdm.grace_hopper_16fp
+    status: MATCH
+    found_value: ""
+    found_locator: "Google blog 2020-07-28, para 4"
+    evidence: "The Grace Hopper cable will be equipped with 16 fiber pairs (32 fibers)"
+    action: "none"
+  - id: ch07.sdm.grace_hopper_fiber_switching
+    status: MATCH
+    found_value: ""
+    found_locator: "Google blog 2020-07-28, para 5"
+    evidence: "Grace Hopper is the world's first submarine cable to use this technology"
+    action: "none"
+  - id: ch07.sdm.grace_hopper_352tbps_review
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 3.1, Grace Hopper paragraph"
+    evidence: "It incorporates 16 FPs and it transports 22 Tb/s/FP, thus delivering a total of 352 Tb/s"
+    action: "none"
+  - id: ch07.sdm.h2he_first_16fp
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 3.1, H2HE paragraph"
+    evidence: "The H2HE cable system is the first 16 fiber-pair repeated submarine cable system in the world, achieving 19.2 Tb/s per fiber"
+    action: "none (675 km, 307.2 Tb/s, in service since September 2021 all confirmed; Hengtong AR2024/2025 '建设全球首个16纤对中继海底光缆系统' confirmed)"
+  - id: ch07.sdm.hmn_repeater_39p5nm
+    status: MATCH
+    found_value: ""
+    found_locator: "Papapavlou 2022, Section 3.1, 'The SDM system powered by HMN [12]'"
+    evidence: "an industry-leading 39.5 nm ultrawide bandwidth, which covers C-band and extended C-band, to maximize the capacity of one fiber pair"
+    action: "none"
+  - id: ch07.sdm.nec_24fp_half_petabit
+    status: MATCH
+    found_value: ""
+    found_locator: "NEC press release 2021-10-08, para 1"
+    evidence: "NEC's newly developed 24 fiber pair cable and repeaters (*1), a system can deliver a maximum transmission capacity of a half Petabit per second"
+    action: "none. Release does not name the system; Anjana link supported by Sumitomo 2026 Petal release ('Anjana, the world's first transoceanic 24 fiber-pair system')."
+  - id: ch07.sdm.anjana_480tbps
+    status: PARTIAL
+    found_value: "7,121 km, 480 Tb/s (match); 24 FP not in this source"
+    found_locator: "DC BLOX press release 2023-05-26, para 3"
+    evidence: "The 7,121km cable will connect Myrtle Beach, SC to Santander in Spain and is capable of carrying 480 Terabits per second"
+    action: "DC BLOX gives no fiber-pair count. Cite 24 FP to sumitomo_press_2026_petal or FCC file SCL-LIC-20230429-00012 (20 Tb/s/FP per submarinenetworks summary). FCC 'pending applications' page still lists Anjana as pending (2026): RFS unconfirmed."
+  - id: ch07.sdm.petal_48_core_pairs
+    status: MATCH
+    found_value: ""
+    found_locator: "Sumitomo Electric press release 2026-09-22, para 1"
+    evidence: "With 48 pairs of spatial channels (core-pairs), Petal will achieve a transoceanic transmission capacity that doubles Anjana"
+    action: "none (7,000 km, 2029, two-core fiber, single-end feeding confirmed)"
+  - id: ch07.sdm.tpu_first_mcf
+    status: MATCH
+    found_value: ""
+    found_locator: "Google Cloud blog 2023-09-12, paras 4-5"
+    evidence: "With MCF, we double the number of cores in the cladding, meaning it can carry more light and information at a reduced cost per bit."
+    action: "none"
+  - id: ch07.sdm.tpu_fp_counts
+    status: MATCH
+    found_value: ""
+    found_locator: "submarinenetworks.com TPU profile, paras 4-5"
+    evidence: "The TPU cable system features 16 fiber pairs on its trans-pacific trunk and 20 fiber pairs on its branches to Taiwan and the Philippine"
+    action: "none (13 Tb/s/FP, 260 Tb/s, MCF on branches only confirmed; page says RFS expected 2026). Tier C."
+  - id: ch07.sdm.nec_occ_4core_cable_trial
+    status: MATCH
+    found_value: ""
+    found_locator: "NEC press release 2021-10-04, 'Multicore fiber submarine cable features'"
+    evidence: "LW (Lightweight) cable, which has a 17mm outer diameter and withstands 8,000 meter water depth. This cable can accommodate up to 32 fibers."
+    action: "none"
+  - id: ch07.sdm.mic_mcf_1p7pbps
+    status: MATCH
+    found_value: ""
+    found_locator: "NEC press release 2022-03-28, overview and item 2"
+    evidence: "enhanced the transmission capacity of a 3,000 km class submarine optical cable system (covering the Asian-Pacific region) to about 1.7 Petabit per second"
+    action: "none. Same release: 1.74 Pb/s with 32 fibers (16 pairs) of 4-core fiber."
+  - id: ch07.sdm.hmn_4core_mcf_trial
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2025 AR, Section 3, 海洋通信 (p. ~40 of 329)"
+    evidence: "在10,700千米超长距离系统中实现51.2Tbps容量传输，在500千米系统中实现152.4Tbps容量传输"
+    action: "none"
+  - id: ch07.sdm.hmn_32_48fp
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2025 AR, Section 3, 海洋通信"
+    evidence: "通过成熟的32纤对与48纤对海缆空分复用解决方案，系统可实现Petabit级传输容量。"
+    action: "none"
+  - id: ch07.sdm.big3_24fp_standard_hmn_32fp
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2026 HY report, Section 3 (p. 28 of 308)"
+    evidence: "SubCom、ASN、NEC以成熟的24纤对中继作为标准化主力商用方案"
+    action: "Attribution caveat: the report names 《全球海底光缆产业发展研究报告（2026年）》 for the preceding sentence; whether the 24-FP sentence is CAICT's or Hengtong's is ambiguous."
+  - id: ch07.sdm.fp_count_evolution
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Section I"
+    evidence: "from traditional designs with 2-6 fiber pairs (FPs) to 8, 16, and now up to 24 FPs of standard diameter fiber (~250 µm)."
+    action: "none (200 µm, 32-36 FP confirmed)"
+  - id: ch07.sdm.mcedfa_capacity_gain_no_fifo
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Section III, Fig. 3 discussion"
+    evidence: "For no efficiency penalty such as expected with a core-pumped MC-EDFA, there is a capacity gain of approximately 8%"
+    action: "none"
+  - id: ch07.sdm.mcedfa_capex_saving
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Section II, Table I discussion"
+    evidence: "~15% capital expenditure (CAPEX) cost saving benefit from device integration in core-pumped MC-EDFAs and ~50% in cladding pumped MC-EDFAs"
+    action: "none"
+  - id: ch07.sdm.fifo_loss_xt
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023, Section II para 1"
+    evidence: "The FIFOs had 0.3 dB average loss and generated -50 dB crosstalk per individual device (fan-in or fan-out)."
+    action: "none"
+  # ------------------------------------------------------------------ 7.4 open cables
+  - id: ch07.open.g9771_gsnr_key_parameter
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 (10/2020) Annex A, clause A.2"
+    evidence: "The key measurement parameter for the interoperable cable portion is the GSNR."
+    action: "none (10/2020 is the only, in-force edition per ITU page)"
+  - id: ch07.open.g9771_carrier_spacing
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 Annex A.2, condition 3"
+    evidence: "carrier spacing for adjacent channels: ≤1.15x baud,"
+    action: "none"
+  - id: ch07.open.g9771_rolloff
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 Annex A.2, condition 3"
+    evidence: "spectral shaping: root raised cosine with ≤0.1 roll-off, ... nonlinearity compensation: disabled."
+    action: "none"
+  - id: ch07.open.g9771_key_parameter_table
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 Annex A, Table A.1"
+    evidence: "1.2 GSNR [dB] (under agreed equalization conditions) ... 5.1 Total SNRASE penalty for repairs and aging [dB]"
+    action: "none"
+  - id: ch07.open.g9771_gosnr_includes_gawbs
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 clause 9.1.12"
+    evidence: "The GOSNR measurement should adequately remove all transponder distortion and implementation noises; these should be stated if any."
+    action: "none. Clause 3.2.1 defines GOSNR as 'linear noise and fibre nonlinearity' yet the equation adds GAWBS; flag in prose."
+  - id: ch07.open.suboptic_qbudget_to_gsnr
+    status: PARTIAL
+    found_value: "quote matches"
+    found_locator: "Pilipetskii et al. SubOptic 2019, abstract (research.google page)"
+    evidence: "Since many years, the Q-budget table (normalized by the ITU-T G.977) has been widely used to characterize the transmission performance of subsea cables"
+    action: "Quote OK. Tier: PIPELINE lists abstract-only conference claims as tier C; record says B. Set tier C (or keep B only as unrefereed industry paper, with justification)."
+  - id: ch07.open.faster_live_4bpshz
+    status: MATCH
+    found_value: ""
+    found_locator: "Kamalov et al. OFC 2018 (NEC-hosted PDF), abstract"
+    evidence: "We report on the evolution of the longest segment of FASTER cable at 11,017 km, with 8QAM transponders at 4b/s/Hz spectral efficiency (SE) in service."
+    action: "none (75 GHz spacing, dual-carrier 300G in Sec. 2 confirmed)"
+  - id: ch07.open.faster_design_se
+    status: MATCH
+    found_value: ""
+    found_locator: "Kamalov 2018, Section 1"
+    evidence: "was initially designed at spectral efficiency (SE) of 2 b/s/Hz, and within few months upgraded to 3 b/s/Hz."
+    action: "none"
+  - id: ch07.open.faster_ps64_6bpshz
+    status: MATCH
+    found_value: ""
+    found_locator: "Kamalov 2018, Section 3"
+    evidence: "PS-64QAM achieves 5.5 b/s/Hz SE with 0.45 dB margin without NLC, and 6 b/s/Hz with 0.25 dB margin with NLC."
+    action: "none (49 GBd confirmed)"
+  - id: ch07.open.faster_se_distance
+    status: MATCH
+    found_value: ""
+    found_locator: "Kamalov 2018, abstract"
+    evidence: "resulting in the largest SE-distance product 66,102 b/s/Hz km over live-traffic carrying cable."
+    action: "none"
+  # ------------------------------------------------------------------ 7.5 ownership, policy, faults
+  - id: ch07.own.fcc_license_term_25y
+    status: MATCH
+    found_value: ""
+    found_locator: "FCC 25-49, 90 FR 48648, R&O para. 75 '3. Twenty-Five Year License Term' (printed p. 48661); codified 47 CFR 1.70007(o)"
+    evidence: "we retain the routine condition that a cable landing license shall expire twenty-five (25) years from the in-service date, unless renewed or extended."
+    action: "none; FCC 26-42 (2026) did not change the term."
+  - id: ch07.own.fcc_5pct_applicants
+    status: PARTIAL
+    found_value: "5 % (match)"
+    found_locator: "47 CFR 1.70003(b) as added by FCC 25-49 (90 FR 48694-95; 'Delayed indefinitely'); FCC 26-42 revises it to 1.70003(a)(2) (also delayed)"
+    evidence: "All other entities owning or controlling a five percent (5%) or greater interest in the cable system and using the U.S. points"
+    action: "Fill locator: § 1.70003(b) (not yet effective; § 1.767(h)(2) still governs). FCC 26-42 (91 FR 46844, 2026-07-27) renumbers to (a)(2) and adds (b) SLTE blanket licence; 5 % unchanged."
+  - id: ch07.own.fcc_2025_foreign_adversary_presumption
+    status: MATCH
+    found_value: ""
+    found_locator: "FCC 25-49 R&O para. 28; para. 33 names the five entities; 'clear and convincing' at para. 29-30"
+    evidence: "we adopt a presumption that a foreign adversary applicant, as further described below, is not qualified to hold a cable landing license"
+    action: "none"
+  - id: ch07.own.fcc_2025_landing_in_adversary_country
+    status: MATCH
+    found_value: ""
+    found_locator: "FCC 25-49 R&O paras. 40-41"
+    evidence: "denial of an application, as specified below, is warranted where an applicant seeks to land a submarine cable in a foreign adversary country"
+    action: "none"
+  - id: ch07.own.fcc_2025_slte_iru_condition
+    status: PARTIAL
+    found_value: "condition matches; note superseded"
+    found_locator: "FCC 25-49 Summary para 1; R&O para. 76; superseded in part by FCC 26-42 Second R&O"
+    evidence: "FCC 26-42: 'establishes a regulatory regime for licensing owners and/or operators of submarine line terminal equipment (SLTE), including granting a blanket license'"
+    action: "Value/quote OK. Update note: para. 76 declined SLTE licensing in 2025, but FCC 26-42 (91 FR 46844, 2026-07-27, eff. 2026-09-25 except delayed sections incl. § 1.70003) adopted SLTE blanket licensing. Add source fcc_26_42_fr_2026."
+  - id: ch07.own.fcc_2025_effective_date
+    status: MATCH
+    found_value: ""
+    found_locator: "90 FR 48648, DATES"
+    evidence: "These rules are effective November 26, 2025, except for amendatory instructions 6 (§ 1.767), 7 (§ 1.768), 10"
+    action: "none"
+  - id: ch07.own.fcc_plcn_hong_kong
+    status: MATCH
+    found_value: ""
+    found_locator: "FCC 25-49 R&O para. 43"
+    evidence: "The Executive Branch agencies recommended that the Commission partially deny the PLCN cable system application due to national security and law enforcement risks"
+    action: "none"
+  - id: ch07.own.eo13913_review_periods
+    status: MATCH
+    found_value: ""
+    found_locator: "EO 13913, 85 FR 19643, Sec. 5(b)(iii) and 5(c)"
+    evidence: "any initial review shall be completed before the end of the 120-day period beginning on the date the Chair determines"
+    action: "none (90-day secondary assessment confirmed; FR notes EO 14117 cross-reference, timelines unchanged)"
+  - id: ch07.own.bis_hmn_entity_list
+    status: MATCH
+    found_value: ""
+    found_locator: "86 FR 71557, 'Revisions of Entity on the Entity List'; Supp. No. 4 to Part 744, Huawei entry (printed p. 71564)"
+    evidence: "this rule adds three additional aliases (HMN Technologies, Huahai Zhihui Technology Co., Ltd., and HMN Tech) under one of its affiliated entities: Huawei Marine Networks."
+    action: "none (effective 2021-12-17; HMN International, Hengtong Marine, Hengtong Optic-Electric, ZTT Submarine added; presumption of denial)"
+  - id: ch07.own.prc_foreign_laying_approval
+    status: MATCH
+    found_value: ""
+    found_locator: "国务院令第27号 (1989), 第四条第二款"
+    evidence: "应当依照本规定报经主管机关批准；需要在中华人民共和国大陆架上进行上述活动的，应当事先通知主管机关"
+    action: "none"
+  - id: ch07.own.prc_route_application_lead_time
+    status: MATCH
+    found_value: ""
+    found_locator: "国务院令第27号, 第五条 and 第六条"
+    evidence: "须在为铺设所进行的路由调查、勘测实施60天前，向主管机关提出书面申请 ... 主管机关应当自收到申请之日起30天内作出答复。"
+    action: "none"
+  - id: ch07.own.prc_soa_approves_international
+    status: MATCH
+    found_value: ""
+    found_locator: "国家海洋局令第3号 (1992), 第四条"
+    evidence: "下列海底电缆、管道由国家海洋局负责审批∶ 一、路经中国管辖海域和大陆架的外国海底电缆、管道;"
+    action: "none (gov.cn now files it under 自然资源部)"
+  - id: ch07.own.caict_supplier_share_2018_2022
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2025 HY report, Section 3 (p. 25 of 262)"
+    evidence: "按交付海缆长度看，SubCom、ASN、华海通信和 NEC 占比分别为 40%、29%、18%和7%。"
+    action: "none (106 systems, 2018-2022, CAICT 2023 report confirmed)"
+  - id: ch07.own.hmn_projects_km
+    status: MATCH
+    found_value: ""
+    found_locator: "Hengtong 2026 HY report, Section 3 (p. 28 of 308)"
+    evidence: "华海通信2008年成立，市场份额逐步扩大，迄今已承建超180个海缆项目，签约交付超13万公里海缆。"
+    action: "none (2025 HY report said 150 projects / 100,000 km; use the 2026 figure)"
+  - id: ch07.own.content_provider_share_2021
+    status: MATCH
+    found_value: ""
+    found_locator: "Caoui & Steck, Inf. Econ. Policy 2025, abstract"
+    evidence: "their share of global used bandwidth has grown dramatically (from 5% to 69%) over the period 2005–2021"
+    action: "none"
+  - id: ch07.own.telegeography_cp_share_2023
+    status: MATCH
+    found_value: ""
+    found_locator: "TeleGeography State of the Network 2025, 'The Role of Content Providers'"
+    evidence: "As of 2023, content and cloud networks accounted for more than 70% of all bandwidth usage."
+    action: "none (80 % or more on transatlantic, transpacific, intra-Asia confirmed)"
+  - id: ch07.own.telegeography_cp_capacity_2025
+    status: MATCH
+    found_value: ""
+    found_locator: "TeleGeography blog (A. Mauldin, dated Aug 17, 2026), 'Content providers use the most international bandwidth capacity'"
+    evidence: "Between 2021 and 2025 the amount of international capacity deployed by content networks more than tripled, reaching 6.3 Pbps."
+    action: "Source metadata: post dated 2026-08-17 (source says 'table updated September 2026')."
+  - id: ch07.own.redsea_2024_hgc_four_cables
+    status: MATCH
+    found_value: ""
+    found_locator: "HGC statement 2024-03-04, item 1"
+    evidence: "Among 15+ submarine cables in the Red Sea, 4 of them (Seacom, TGN, AAE-1, EIG) are cut which we estimated impact 25% of traffic"
+    action: "none"
+  - id: ch07.own.redsea_2024_three_cables
+    status: MATCH
+    found_value: ""
+    found_locator: "Bloomberg via Transport Topics 2024-03-06 (identical text in gCaptain, Al Arabiya syndications)"
+    evidence: "Some reports have mentioned a fourth damaged cable, known as Tata TGN-Eurasia, but this is another name for the Seacom system, according to Tim Stronge"
+    action: "none. Same article names the three: Seacom, AAE-1, EIG. Count: 3 (TeleGeography/Bloomberg) vs 4 (HGC); both tier C."
+  - id: ch07.own.redsea_2024_rubymar_anchor
+    status: MATCH
+    found_value: ""
+    found_locator: "Bloomberg via TT 2024-03-06, para 2"
+    evidence: "It's generally accepted that the Rubymar dropped an anchor when fired upon and as a result it damaged cables in proximity"
+    action: "none"
+  - id: ch07.own.redsea_2025_azure
+    status: MATCH
+    found_value: ""
+    found_locator: "Azure status (isdown.app mirror), Impact Summary"
+    evidence: "Starting at 05:45 UTC on 06 September 2025, ... may experience increased latency due to multiple undersea fiber cuts in the Red Sea."
+    action: "none"
+  - id: ch07.own.baltic_2023_newnew_polar_bear
+    status: MATCH
+    found_value: ""
+    found_locator: "Finnish Police (NBI) release 2023-10-24, paras 1-3"
+    evidence: "a 1.5 to 4 metre-wide dragging trail is seen to lead to the point of damage in the gas pipeline."
+    action: "none (pipeline, not telecom cable, as noted)"
+  - id: ch07.own.baltic_2024_eagle_s
+    status: PARTIAL
+    found_value: "90 km, 5 cables, EUR 60 M (match); status superseded"
+    found_locator: "Finnish NPA release 2025-08-11, para 2; Helsinki District Court judgment R 706/2025/12270 (2025-10-03)"
+    evidence: "The District Court has today issued a judgment dismissing the charge ... as it was not possible to apply Finnish criminal law to the case."
+    action: "Values OK. Add that the District Court dismissed the case on 2025-10-03 (UNCLOS Art. 97 'incident of navigation'; judgment not final). Do not present charges as pending."
+  # ================================================================== equations
+  - id: ch07.eq.max_power_transfer
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 2, text after Eq. (1)"
+    evidence: "the total electrical power available to all undersea amplifiers is at most P=V^2/(4Lρ)"
+    action: "none"
+  - id: ch07.eq.pump_affine
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Eq. (2)"
+    evidence: "P_p = η( P/(2SM) − P_o ) ... The factor of 2S appears because there are S spatial dimensions in each direction."
+    action: "none (η is electrical-to-pump; renaming to η_EO fine but keep distinct from Desbruslais ηc and Downie η)"
+  - id: ch07.eq.ase_chain
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Eq. (3); NF_n = 2 n_sp (G-1)/G in Appendix A Eq. (12) text"
+    evidence: "P_ASE,n = M NF_n h ν_n Δf ... we defined P_n as the input power to the amplifier"
+    action: "none (both polarizations: 2 n_sp convention)"
+  - id: ch07.eq.capacity_sum
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Eq. (5)"
+    evidence: "C = 2Δf Σ 1{𝒢(λn) ≥ 𝒜(λn)} log2(1 + Γ SNRn) ... 𝒢, 𝒜 denote ... amplifier gain and span attenuation in dB units."
+    action: "Note fix: in Eq. (5) G and A are in dB (Eq. (1) uses linear). Indicator is the same either way. Γ = 0.79 (-1 dB) confirmed."
+  - id: ch07.eq.pce_definition
+    status: MATCH
+    found_value: ""
+    found_locator: "Perin Section 3.3"
+    evidence: "PCE ≡ (total output optical power − total input optical power)/optical pump power ... upper bounded by the ratio between pump and signal wavelengths"
+    action: "none"
+  - id: ch07.eq.pfe_voltage
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Eq. (1)"
+    evidence: "VPFE = IRc + nr Pr/I (1) where the number of spans ns = nr + 1."
+    action: "none"
+  - id: ch07.eq.pfe_optimum_current
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Eqs. (2)-(4)"
+    evidence: "Iopt = sqrt(nrPr/Rc) (2) ... Rc = nrRr (3) ... V min PFE = 2 sqrt(RcnrPr) (4)"
+    action: "none (square roots verified by minimizing Eq. (1))"
+  - id: ch07.eq.repeater_power
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Eq. (5)"
+    evidence: "Pr = 2nfpnchPch/ηc + P0 ... The factor of 2 ... bidirectional amplifiers but Pch represents the unidirectional channel power."
+    action: "none (n_ch is channels per fibre pair)"
+  - id: ch07.eq.max_channels_fixed_voltage
+    status: MATCH
+    found_value: ""
+    found_locator: "Desbruslais Eq. (14)"
+    evidence: "nch = ( V^2/(4Rcnr) − P0 ) ηc / (2nfpPch). (14)"
+    action: "none (consistent with Eqs. (4)-(5))"
+  - id: ch07.eq.energy_opt_span_gain
+    status: PARTIAL
+    found_value: "ln G = 3 (13 dB) correct"
+    found_locator: "Desbruslais Sec. III-A after Eq. (13); Doran & Ellis OE 22(16):19810 (2014) Sec. 3 after Eq. (7)"
+    evidence: "this gives a universal optimum gain of 13 dB (or expressed linearly; e 3) to ensure the minimum power consumption"
+    action: "Desbruslais attributes it to [3] (Doran & Ellis ECOC 2013), not the 2014 OE paper; fix note. Better: cite OE 2014 directly (tier A, read). Note Desbruslais Eq. (13) minimizes voltage, Doran-Ellis minimizes power."
+  - id: ch07.eq.eo_efficiency_chain
+    status: MATCH
+    found_value: ""
+    found_locator: "Downie 2023 Section II (citing [28,29])"
+    evidence: "η=ηdriver·ηaging·ηpump·ηEDF·ηGFF"
+    action: "none"
+  - id: ch07.eq.gosnr_g9771
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 clause 9.1.12"
+    evidence: "1/GOSNR = 1/OSNRASE + 1/OSNRNLI + 1/OSNRGAWBS ... 1/GSNR = 1/SNRASE + 1/SNRNLI + 1/SNRGAWBS"
+    action: "Note: GSNR form is fully legible (not inferred). Same clause also gives droop form 1+1/GSNR = (1+1/SNR_ASE)(1+1/SNR_NLI)(1+1/SNR_GAWBS)."
+  - id: ch07.eq.droop_product_rule
+    status: MATCH
+    found_value: ""
+    found_locator: "G.977.1 clause 9.1.7 (general rule in 9.1.6), citing [b-Antona]"
+    evidence: "1 + 1/SNRASE = ∏ (1 + 1/SNRn), n=1..N, Where SNRn denotes the ASE contribution of each EDFA."
+    action: "none"
+tier_a_replacements:
+  - for: ch07.power.doran_ellis_span_gain
+    citation: "N. J. Doran and A. D. Ellis, 'Minimising total energy requirements in amplified links by optimising amplifier spacing', Optics Express 22(16):19810-19817 (2014), doi:10.1364/OE.22.019810"
+    url: "https://publications.aston.ac.uk/id/eprint/23894/1/Minimising_total_energy_requirements_in_amplified_links_by_optimising_amplifier_spacing.pdf"
+    locator: "Section 3, text after Eq. (7); abstract; Conclusions"
+    value: "optimum gain 13 dB (e^3) for minimum power at the nonlinear threshold"
+    note: "Read via Aston open-access copy. Also gives 65 km at 0.2 dB/km and 80 km at 0.16 dB/km."
+  - for: ch07.eq.energy_opt_span_gain
+    citation: "Doran and Ellis, Opt. Express 22(16):19810 (2014)"
+    url: "https://doi.org/10.1364/OE.22.019810"
+    locator: "Section 3, after Eq. (7)"
+    value: "ln G = 3, i.e. 10 log10 G = 13 dB"
+    note: "Use as the primary citation; keep Desbruslais Eq. (13) as the voltage-minimizing generalization with the P0/Pr overhead term."
+  - for: ch07.arch.subcom_18kv_single_end_firmina
+    citation: "J. D. Downie et al., JLT 41(11):3559 (2023)"
+    url: "https://eprints.soton.ac.uk/477307/1/JLT_ECOC2022_MC_EDFA.pdf"
+    locator: "Section II para 1"
+    value: "18 kV largest cable voltage for single-ended powering"
+    note: "Already in ledger as ch07.arch.max_single_end_voltage_18kv; use it for the technical value, keep SubCom only for the 'first' claim."
+  - for: ch07.arch.google_amplified_every_100km
+    citation: "Papapavlou et al., Telecom 3(2):234 (2022)"
+    url: "https://doi.org/10.3390/telecom3020015"
+    locator: "Section 2.5 and Section 6"
+    value: "repeaters every 75-100 km"
+    note: "Already in ledger as ch07.arch.repeater_spacing_review."
+  - for: ch07.sdm.anjana_480tbps
+    citation: "FCC cable landing license application, Edge Cable Holdings USA, LLC, Anjana, File No. SCL-LIC-20230429-00012 (accepted for filing 2023-06-02, Report SCL-00418S)"
+    url: "https://www.fcc.gov/pending-submarine-cable-applications"
+    locator: "Application narrative (not read; file number from FCC pending-applications table)"
+    value: "24 fiber pairs, ~20 Tb/s per FP (per submarinenetworks.com summary of the application)"
+    note: "Government filing, not a ruling; read the application before use. FCC lists it as still pending in 2026."
+  - for: ch07.own.baltic_2024_eagle_s
+    citation: "Helsinki District Court, judgment R 706/2025/12270, 3 October 2025 (press summary)"
+    url: "https://www.tuomioistuimet.fi/app/uploads/sites/12/2026/03/ratkaisutiedote_R_706-2025-12270_EN.pdf"
+    locator: "Judgment summary, paras 1-3"
+    value: "charges dismissed; incident of navigation under UNCLOS Art. 97; not final"
+    note: "Primary court document; supersedes the 2025-08-11 charging release as the current status."
+  - for: ch07.own.fcc_2025_slte_iru_condition
+    citation: "FCC 26-42, Second Report and Order, OI Docket 24-523, 91 FR 46844-46866 (2026-07-27), Doc. 2026-15123"
+    url: "https://www.federalregister.gov/documents/2026/07/27/2026-15123/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security"
+    locator: "SUMMARY; DATES; amendatory instruction 8 (§ 1.70003(b) blanket licence)"
+    value: "SLTE owners/operators licensed via blanket licence; effective 2026-09-25 except delayed sections (incl. § 1.70003)"
+    note: "Tier A regulation; record as a new source and new record for 7.5."

@@ -1,5 +1,3 @@
-# Chapter 7 (Subsea systems) ledger records - retrieval agent ch07, retrieved 2026-11-02.
-# See book/ledger/SCHEMA.md. Tier C records are only for contested boxes.
 records:
 - id: ch07.arch.pfe_voltage_typical_range
   section: '7.1'
@@ -19,6 +17,7 @@ records:
   confidence: med
   notes: Same review elsewhere (Section 2, Basic Segments) gives 15-20 kV for the PFE; see ch07.arch.pfe_voltage_range_dry_plant.
     Text read via crawler copy; secondary review citing [3].
+  verified: match
 - id: ch07.arch.pfe_voltage_range_dry_plant
   section: '7.1'
   claim: PFE supply voltage range stated for the dry plant of SDM-era systems
@@ -36,6 +35,7 @@ records:
   confidence: high
   notes: 'Internal inconsistency in the same review: 12-18 kV (Section 6) versus 15-20 kV here. Writer should present 12 to
     20 kV as the span across generations.'
+  verified: match
 - id: ch07.arch.repeater_spacing_review
   section: '7.1'
   claim: Repeater spacing in long-haul submarine wet plant
@@ -53,6 +53,7 @@ records:
   confidence: high
   notes: 'Power-efficient SDM designs use shorter spans: Perin et al. model 50 km and find 40-50 km optimal (ch07.power.perin_optimal_span_length);
     Google states ''every 100 km'' for Firmina (ch07.arch.google_amplified_every_100km).'
+  verified: match
 - id: ch07.arch.google_amplified_every_100km
   section: '7.1'
   claim: Amplification interval stated by Google for its subsea cables (Firmina announcement)
@@ -68,6 +69,7 @@ records:
   tier: C
   confidence: low
   notes: Popular-audience round number; not a design value for Firmina.
+  verified: match
 - id: ch07.arch.cable_joint_voltage_rating_12kv
   section: '7.1'
   claim: Typical maximum voltage rating of cable and joints (limits the PFE voltage across the line)
@@ -82,6 +84,7 @@ records:
   tier: A
   confidence: high
   notes: 2015 view; later systems use 15-18 kV (ch07.arch.max_single_end_voltage_18kv).
+  verified: match
 - id: ch07.arch.max_single_end_voltage_18kv
   section: '7.1'
   claim: Largest cable voltage applied for single-ended powering (as of the 2023 paper)
@@ -96,6 +99,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.arch.cable_resistance_low_end
   section: '7.1'
   claim: Cable conductor resistance at the low end of practical submarine cable conductors
@@ -111,6 +115,7 @@ records:
   tier: A
   confidence: high
   notes: Perin et al. and Desbruslais both use 1 Ω/km (ch07.power.perin_feed_voltage_resistance; Desbruslais Table I).
+  verified: match
 - id: ch07.arch.subcom_18kv_single_end_firmina
   section: '7.1'
   claim: SubCom 18 kV powering technology enabling single-end feed of Firmina (US to Argentina, 12 fiber pairs)
@@ -128,6 +133,7 @@ records:
   confidence: low
   notes: Vendor press claim. Google blog (google_blog_2021_firmina) says the design supplies 'a voltage 20% higher than with
     previous systems'.
+  verified: match
 - id: ch07.arch.hmn_20kv_rating
   section: '7.1'
   claim: HMN Tech (华海通信) full product series rated for 20 kV, 8000 m depth, 25-year operation
@@ -145,6 +151,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''the full product series has 20 kV withstand-voltage capability ... guaranteed stable operation for 25
     years at 8000 m depth''. Company claim (tier B).'
+  verified: match
 - id: ch07.arch.hmn_claims_first_18kv
   section: '7.1'
   claim: Hengtong/HMN claim to have released the world's first 18 kV power-feeding scheme for repeatered submarine cable systems
@@ -160,6 +167,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''released the world''s first 18 kV power-supply scheme for repeatered submarine cable systems''. Competes
     with SubCom''s 18 kV claim (ch07.arch.subcom_18kv_single_end_firmina). Contested ''first'' claim; no date given.'
+  verified: match
 - id: ch07.arch.design_life_25y
   section: '7.1'
   claim: Usual designed lifetime of a submarine optical cable system
@@ -174,6 +182,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.arch.reliability_lt3_ship_repairs
   section: '7.1'
   claim: 'Usual reliability requirement: fewer than three failures requiring cable-ship intervention over the design life'
@@ -188,6 +197,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.arch.bu_definition
   section: '7.1'
   claim: 'Definition of a branching unit (BU): submerged equipment interconnecting three cable sections electrically and optically'
@@ -202,6 +212,7 @@ records:
   tier: A
   confidence: high
   notes: 'Clause 9.1: a BU may offer full-fibre drop, WDM add/drop, FOADM-BU or ROADM-BU functions.'
+  verified: match
 - id: ch07.arch.bu_power_switching
   section: '7.1'
   claim: 'BU power switching: any two powered cables can be connected while the third is grounded to the BU sea electrode'
@@ -215,6 +226,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.arch.pfe_constant_current_sea_return
   section: '7.1'
   claim: PFE supplies a stabilized constant current through the cable conductor with sea return
@@ -229,6 +241,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.arch.pce_typical_5pct
   section: '7.1'
   claim: Typical electrical-to-optical power conversion efficiency of submarine amplifiers (optical output / electrical input)
@@ -243,6 +256,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.arch.pce_low_1p2pct
   section: '7.1'
   claim: Electrical-to-optical conversion efficiency can be as low as 1.2 % in older repeaters
@@ -258,6 +272,7 @@ records:
   tier: A
   confidence: high
   notes: Downie 2023 Table II gives overall 1.6 % for a core-pumped C-band EDFA chain (ch07.power.downie_overall_eo_eff_c).
+  verified: match
 - id: ch07.arch.power_rebalancing_interval
   section: '7.1'
   claim: Periodic power rebalancing (in addition to per-span GFF) every five or six spans
@@ -274,6 +289,7 @@ records:
   tier: A
   confidence: high
   notes: 'Same paragraph: a 0.1 dB gain mismatch would accumulate to tens of dB over hundreds of amplifiers.'
+  verified: match
 - id: ch07.arch.bergano_2005_deployed_tbps
   section: '7.1'
   claim: State-of-the-art transoceanic systems in 2005 had terabit-per-second maximum capacity
@@ -288,6 +304,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: med
+  verified: match
 - id: ch07.arch.bergano_2005_lab_4tbps
   section: '7.1'
   claim: Laboratory transoceanic WDM demonstrations approaching 4 Tb/s (as of 2005)
@@ -302,6 +319,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: med
+  verified: match
 - id: ch07.power.perin_feed_voltage_resistance
   section: '7.2'
   claim: Reference feed voltage and cable resistivity used in power-constrained capacity example
@@ -318,6 +336,7 @@ records:
   tier: A
   confidence: high
   notes: LaTeX in source flattened to plain text in the quote.
+  verified: match
 - id: ch07.power.perin_total_electrical_power
   section: '7.2'
   claim: Total electrical power available to all undersea amplifiers for V = 12 kV, ρ = 1 Ω/km, L = 14,350 km (maximum power
@@ -336,6 +355,7 @@ records:
   tier: A
   confidence: high
   notes: 'Check: 12000^2/(4*14350*1) = 2509 W. Use as calc self-check.'
+  verified: match
 - id: ch07.power.perin_pump_efficiency
   section: '7.2'
   claim: Assumed electrical-to-pump-optical efficiency η in the affine pump-power model
@@ -350,6 +370,7 @@ records:
   tier: A
   confidence: high
   notes: Electrical->pump efficiency only; distinct from total E/O efficiency (~1-5 %).
+  verified: match
 - id: ch07.power.perin_link_reference
   section: '7.2'
   claim: 'Reference link for power-limited optimization: 287 spans of 50 km (14,350 km), 0.165 dB/km, 9.75 dB span attenuation
@@ -374,6 +395,7 @@ records:
   tier: A
   confidence: high
   notes: Parameters consistent with the Turukhin et al. OFC 2016 12-core experiment.
+  verified: match
 - id: ch07.power.pce_upper_bound_980
   section: '7.2'
   claim: Upper bound of EDFA power conversion efficiency for 980 nm pumping (pump/signal photon-energy ratio)
@@ -389,6 +411,7 @@ records:
   tier: A
   confidence: high
   notes: Bound = λp/λs ≈ 980/1550. PCE here is optical-to-optical.
+  verified: match
 - id: ch07.power.pce_gain_doubling_pump
   section: '7.2'
   claim: Increase in PCE when pump power is doubled from 50 mW to 100 mW (diminishing returns)
@@ -406,6 +429,7 @@ records:
   tier: A
   confidence: high
   notes: Ambiguous whether percentage points or relative; source says 'by only 7.43%'.
+  verified: match
 - id: ch07.power.perin_linear_regime_pump
   section: '7.2'
   claim: Pump power below which the power-limited link operates in the linear (ASE-dominated) regime
@@ -419,6 +443,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.power.perin_ase_over_nli_high_pump
   section: '7.2'
   claim: At high pump power ASE exceeds nonlinear noise by only about 4 dB
@@ -432,6 +457,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.power.perin_capacity_gain_70pct
   section: '7.2'
   claim: Capacity gain of optimized channel power allocation over the flat-allocation 12-core reference system at 60 mW pump
@@ -447,6 +473,7 @@ records:
   tier: A
   confidence: high
   notes: Optimized ~22 Tb/s per core vs ~13 Tb/s theoretical for the reference.
+  verified: match
 - id: ch07.power.perin_optimal_span_length
   section: '7.2'
   claim: Optimal span length and span attenuation under fixed total pump power per fiber
@@ -466,6 +493,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.power.turukhin_12core_reference
   section: '7.2'
   claim: 'Turukhin et al. 12-core MCF experiment: 105 Tb/s over 14,350 km (8.2 Tb/s per core), as summarized by Perin et al.'
@@ -485,7 +513,10 @@ records:
   tier: A
   confidence: high
   notes: 'Secondary description of Turukhin et al., OFC 2016 Th4C.1 (primary not read). Same paragraph: 60 mW pump, 12 dBm
-    EDFA output.'
+    EDFA output. Verifier (PARTIAL): Values correct. Perin attributes the experiment to Sinkin et al. JLT 2018 [9]; claim/notes
+    say Turukhin OFC 2016. Reword as ''Sinkin et al. JLT 2018 (experiment first reported as Turukhin et al., OFC 2016 Th4C.1,
+    105.1 Tb/s over 14,350 km)''. Span loss 9.7 dB. Perin attributes the experiment to Sinkin et al. JLT 2018.'
+  verified: partial_fixed
 - id: ch07.power.dar_min_cost_paths
   section: '7.2'
   claim: Minimum cost/bit for power-constrained submarine cables at about 100 parallel optical paths (~50 fiber pairs)
@@ -502,6 +533,7 @@ records:
   confidence: med
   notes: 'Abstract also: operation at reduced spectral efficiency, deep in the linear regime; nonlinearity-optimized fibers
     and DBP give little to no gain.'
+  verified: match
 - id: ch07.power.bolshtyansky_32_fiber_sweet_spot
   section: '7.2'
   claim: 'Physical-economic model: 32-fiber SDM systems are a practical spot near the wet-plant cost-per-capacity limit'
@@ -518,6 +550,7 @@ records:
   confidence: med
   notes: '32 fibers = 16 fiber pairs. Disagrees with Dar et al. (~50 FP optimum): different cost models and assumptions (''least
     amount of technological change''). Record both in a contested box.'
+  verified: match
 - id: ch07.power.sinkin_optimum_exists
   section: '7.2'
   claim: EDFA-based SDM theory shows optimal spectral efficiency, SNR and span length that maximize power efficiency
@@ -532,6 +565,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: med
+  verified: match
 - id: ch07.power.srinivas_low_pump
   section: '7.2'
   claim: Pump powers as low as 20 mW and amplifier outputs as low as 6.5 dBm useful for Pb/s cable capacity
@@ -546,6 +580,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: med
+  verified: match
 - id: ch07.power.asn_optimum_se
   section: '7.2'
   claim: Optimum SLTE spectral efficiency targeted by ASN's first-generation SDM design
@@ -562,6 +597,7 @@ records:
   tier: A
   confidence: high
   notes: Review paraphrasing an ASN source.
+  verified: match
 - id: ch07.power.desbruslais_ideal_span_loss
   section: '7.2'
   claim: Ideal span loss for maximum capacity at fixed PFE voltage, with linear-regime operation
@@ -577,6 +613,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.power.desbruslais_span_loss_min_voltage
   section: '7.2'
   claim: Optimum span loss minimizing PFE voltage at the optimum channel power (11,000 km, 10 % power overhead)
@@ -597,6 +634,7 @@ records:
   tier: A
   confidence: high
   notes: Contrast with 8-10 dB for the capacity-maximizing strategy; the two objectives differ.
+  verified: match
 - id: ch07.power.doran_ellis_span_gain
   section: '7.2'
   claim: Energy-minimizing span gain ln G = 3 (13 dB) from Doran & Ellis, cited by Desbruslais
@@ -610,7 +648,10 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: '[3] = N. J. Doran, A. D. Ellis, Opt. Express 22(16):19810, 2014 (not read).'
+  notes: '[3] = N. J. Doran, A. D. Ellis, Opt. Express 22(16):19810, 2014 (not read). Verifier (PARTIAL): Note error: Desbruslais
+    [3] is Doran & Ellis ECOC 2013; Opt. Express 22(16):19810 (2014) is [4]. The OE 2014 paper also states the 13 dB (e^3)
+    result; cite it directly (see tier_a_replacements).'
+  verified: partial
 - id: ch07.power.desbruslais_8fp_example
   section: '7.2'
   claim: 'Worked example: 8 fiber pairs reach the 12 kV limit at 132 channels per pair (37 nm), 111 Tb/s total'
@@ -630,6 +671,7 @@ records:
   tier: A
   confidence: high
   notes: Operating 1 dB below optimum channel power raises capacity by a factor 1.2 to 133 Tb/s (same section).
+  verified: match
 - id: ch07.power.desbruslais_250tbps_10sdm
   section: '7.2'
   claim: 'Optimized transpacific design: up to 250 Tb/s over 10 SDM channels with 70 nm amplifier bandwidth'
@@ -643,6 +685,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.power.pump_ld_efficiency
   section: '7.2'
   claim: 'Typical electrical-to-optical efficiency of pump laser diodes: single-mode ~30 %, multimode ~45 %'
@@ -658,6 +701,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.power.downie_overall_eo_eff_c
   section: '7.2'
   claim: Overall repeater amplifier electrical-to-optical efficiency, core-pumped C-band EDFA (SM 980 nm pump)
@@ -675,6 +719,7 @@ records:
   confidence: med
   notes: Table text garbled by crawler. A shared row lists 33 %, 67 %, 50 % for the other factors; 0.33*0.67*0.30*0.50*0.50
     = 1.66 %, consistent. L-band core-pumped 0.9 %; cladding-pumped 1.5 %. Re-read PDF table before use.
+  verified: match
 - id: ch07.sdm.dunant_12fp
   section: '7.3'
   claim: 'Dunant (Virginia Beach to Saint-Hilaire-de-Riez): first long-haul subsea cable with a 12 fiber-pair SDM design'
@@ -688,6 +733,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.sdm.dunant_250tbps
   section: '7.3'
   claim: Dunant design capacity per Google
@@ -703,6 +749,7 @@ records:
   tier: C
   confidence: low
   notes: Disagrees with Papapavlou et al. review (300 Tb/s, 25 Tb/s/FP), see ch07.sdm.dunant_300tbps_review.
+  verified: match
 - id: ch07.sdm.dunant_300tbps_review
   section: '7.3'
   claim: Dunant capacity as stated in a peer-reviewed review
@@ -718,6 +765,7 @@ records:
   tier: A
   confidence: high
   notes: Conflicts with owner's figure of 250 Tb/s (google_blog_2021_dunant). Prefer owner figure; note review discrepancy.
+  verified: match
 - id: ch07.sdm.dunant_pump_sharing
   section: '7.3'
   claim: Dunant shares pump lasers and associated optical components among multiple fiber pairs ('pump sharing')
@@ -732,6 +780,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.sdm.grace_hopper_16fp
   section: '7.3'
   claim: 'Grace Hopper (New York to Bude and Bilbao): 16 fiber pairs, SubCom supplier'
@@ -745,6 +794,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.sdm.grace_hopper_fiber_switching
   section: '7.3'
   claim: Grace Hopper is the first submarine cable with optical fiber switching (SubCom/Google)
@@ -758,6 +808,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.sdm.grace_hopper_352tbps_review
   section: '7.3'
   claim: 'Grace Hopper capacity per review: 22 Tb/s per fiber pair, 352 Tb/s total'
@@ -773,6 +824,7 @@ records:
   tier: A
   confidence: high
   notes: Trade press (DCD, 2022) gives 350 Tb/s; Google's own capacity figure not located.
+  verified: match
 - id: ch07.sdm.h2he_first_16fp
   section: '7.3'
   claim: 'H2HE (Hainan-Hong Kong, China Mobile, HMN supplier): first 16 fiber-pair repeatered system, 19.2 Tb/s per fiber,
@@ -793,6 +845,7 @@ records:
   confidence: high
   notes: Hengtong 2025 AR also claims '建设全球首个16纤对中继海底光缆系统' (built the world's first 16-FP repeatered system). Competes with
     ASN's 'first 16-FP' framing in the same review (SubOptic'16 reference).
+  verified: match
 - id: ch07.sdm.hmn_repeater_39p5nm
   section: '7.3'
   claim: HMN SDM repeater bandwidth covering C and extended C band
@@ -809,6 +862,7 @@ records:
   tier: A
   confidence: high
   notes: Review quoting vendor material.
+  verified: match
 - id: ch07.sdm.nec_24fp_half_petabit
   section: '7.3'
   claim: 'NEC 24 fiber-pair cable and repeaters for Meta transatlantic system: maximum half-petabit capacity'
@@ -825,6 +879,7 @@ records:
   tier: C
   confidence: low
   notes: System later named Anjana (FCC filing, 2023).
+  verified: match
 - id: ch07.sdm.anjana_480tbps
   section: '7.3'
   claim: 'Anjana (Myrtle Beach to Santander, Meta, NEC): 7,121 km, 480 Tb/s (24 FP at ~20 Tb/s)'
@@ -841,7 +896,11 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
-  notes: NEC 2021 states 'half Petabit' max; 480 = 24 x 20 Tb/s per FCC application summary.
+  notes: 'NEC 2021 states ''half Petabit'' max; 480 = 24 x 20 Tb/s per FCC application summary. Verifier (PARTIAL): DC BLOX
+    gives no fiber-pair count. Cite 24 FP to sumitomo_press_2026_petal or FCC file SCL-LIC-20230429-00012 (20 Tb/s/FP per
+    submarinenetworks summary). FCC ''pending applications'' page still lists Anjana as pending (2026): RFS unconfirmed. FCC
+    application still pending; fiber-pair count not stated by DC BLOX.'
+  verified: partial_fixed
 - id: ch07.sdm.petal_48_core_pairs
   section: '7.3'
   claim: 'Petal (Meta/NEC/Sumitomo, US-France, ~7,000 km, 2029): two-core fiber, 48 core-pairs, petabit class, single-end
@@ -862,6 +921,7 @@ records:
   confidence: low
   notes: 'Same paragraph: ''single-housing repeater technology with reduced power consumption, enabling single-end feeding''.
     Announced 2026-09-22; future claim.'
+  verified: match
 - id: ch07.sdm.tpu_first_mcf
   section: '7.3'
   claim: 'Google/NEC Taiwan-Philippines-U.S. (TPU) cable: first submarine use of multicore fiber, doubling cores per fiber'
@@ -877,6 +937,7 @@ records:
   tier: C
   confidence: low
   notes: Reuses source from ch01 (ch01.sdm.google_tpu_first_mcf_subsea).
+  verified: match
 - id: ch07.sdm.tpu_fp_counts
   section: '7.3'
   claim: 'TPU: 16 fiber pairs on the trans-Pacific trunk, 20 on branches; MCF only on Taiwan and Philippines branches; ~260
@@ -897,6 +958,7 @@ records:
   confidence: low
   notes: Trade site summarizing FCC filings; FCC grant itself not read (gap). Daily Tribune (2026-05-17) states the 4 Taiwan-Philippines
     pairs carry 2-core MCF.
+  verified: match
 - id: ch07.sdm.nec_occ_4core_cable_trial
   section: '7.3'
   claim: 'NEC/OCC/Sumitomo first uncoupled 4-core MCF submarine cable trial: 17 mm lightweight cable for up to 32 fibers,
@@ -916,6 +978,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.sdm.mic_mcf_1p7pbps
   section: '7.3'
   claim: 'Japanese MIC project: 128-core MCF submarine cable, feasibility of ~1.7 Pb/s over a 3,000 km class system'
@@ -933,6 +996,7 @@ records:
   tier: C
   confidence: low
   notes: Laboratory feasibility claim; 'seven-fold higher than the existing system'.
+  verified: match
 - id: ch07.sdm.hmn_4core_mcf_trial
   section: '7.3'
   claim: 'HMN Tech 4-core weakly coupled MCF transmission: 51.2 Tb/s over 10,700 km and 152.4 Tb/s over 500 km'
@@ -950,6 +1014,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''achieved 51.2 Tbps over a 10,700 km ultra-long-haul system and 152.4 Tbps over a 500 km system''. Per
     fiber? Not stated.'
+  verified: match
 - id: ch07.sdm.hmn_32_48fp
   section: '7.3'
   claim: HMN Tech offers 32 and 48 fiber-pair SDM cable solutions targeting petabit capacity
@@ -965,6 +1030,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''through mature 32-FP and 48-FP SDM cable solutions, systems can reach petabit-class capacity''. Vendor
     claim.'
+  verified: match
 - id: ch07.sdm.big3_24fp_standard_hmn_32fp
   section: '7.3'
   claim: 'Per Hengtong (citing CAICT 2026 report): SubCom, ASN, NEC use 24-FP repeatered designs as standard; HMN first commercialized
@@ -981,6 +1047,7 @@ records:
   confidence: med
   notes: 'zh gloss: ''SubCom, ASN and NEC use mature 24-FP repeaters as their standardized mainstream commercial solution''.
     Next sentence: HMN ''率先实现了 32 纤对全套解决方案商用化''. Interested party.'
+  verified: match
 - id: ch07.sdm.fp_count_evolution
   section: '7.3'
   claim: 'Evolution of fiber-pair counts: 2-6 FP traditional, then 8, 16 and up to 24 FP of 250 µm fiber; 200 µm fiber may
@@ -1000,6 +1067,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.sdm.mcedfa_capacity_gain_no_fifo
   section: '7.3'
   claim: 'Core-pumped MC-EDFA with no E-O efficiency penalty: ~8 % cable capacity gain from removing FIFOs (16 FP of 4-core
@@ -1019,6 +1087,7 @@ records:
   tier: A
   confidence: high
   notes: Break-even E-O efficiency penalty about 15 %.
+  verified: match
 - id: ch07.sdm.mcedfa_capex_saving
   section: '7.3'
   claim: 'Estimated amplifier CAPEX saving from integration: ~15 % core-pumped, ~50 % cladding-pumped MC-EDFA vs parallel
@@ -1036,6 +1105,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.sdm.fifo_loss_xt
   section: '7.3'
   claim: 'Fan-in/fan-out device assumptions for submarine MCF: 0.3 dB average loss, -50 dB crosstalk per device'
@@ -1051,6 +1121,7 @@ records:
   tier: A
   confidence: high
   notes: Authors note <0.15 dB has been demonstrated.
+  verified: match
 - id: ch07.open.g9771_gsnr_key_parameter
   section: '7.4'
   claim: GSNR is the key acceptance parameter for the interoperable (open) cable portion
@@ -1064,6 +1135,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.open.g9771_carrier_spacing
   section: '7.4'
   claim: 'GSNR measurement transponder condition: adjacent carrier spacing at most 1.15 times the baud rate'
@@ -1079,6 +1151,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.open.g9771_rolloff
   section: '7.4'
   claim: 'GSNR measurement transponder condition: root-raised-cosine shaping with roll-off at most 0.1, NLC disabled'
@@ -1092,6 +1165,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.open.g9771_key_parameter_table
   section: '7.4'
   claim: 'G.977.1 key parameter table: commissioning SNR_ASE and GSNR per fiber pair, plus repair and ageing SNR_ASE penalty
@@ -1108,6 +1182,7 @@ records:
   confidence: high
   notes: 'Row 5.1: ''Total SNRASE penalty for repairs and aging [dB]''. Other rows: repeater TOP, NF, gain, span loss, fibre
     Aeff, CD, loss, nonlinear coefficient.'
+  verified: match
 - id: ch07.open.g9771_gosnr_includes_gawbs
   section: '7.4'
   claim: G.977.1 GOSNR/GSNR include ASE, NLI and GAWBS contributions; transponder distortion excluded
@@ -1122,6 +1197,7 @@ records:
   tier: A
   confidence: high
   notes: GSNR here includes GAWBS, unlike notation.yaml GSNR (ASE + NLI). Flag in prose.
+  verified: match
 - id: ch07.open.suboptic_qbudget_to_gsnr
   section: '7.4'
   claim: Industry proposal to replace the G.977 Q-budget table by a transponder-independent GSNR-based fiber performance spec
@@ -1134,10 +1210,12 @@ records:
   quote: Since many years, the Q-budget table (normalized by the ITU-T G.977) has been widely used to characterize the transmission
     performance of subsea cables
   retrieved: 2026-11-02
-  tier: B
-  confidence: med
+  tier: C
+  confidence: low
   notes: 'Abstract also: ''relies on the General Signal to Noise ratio (GSNR) to remove the effect of baud rate''. Authors
-    from Google, SubCom, ASN, NEC.'
+    from Google, SubCom, ASN, NEC. Verifier (PARTIAL): Quote OK. Tier: PIPELINE lists abstract-only conference claims as tier
+    C; record says B. Set tier C (or keep B only as unrefereed industry paper, with justification).'
+  verified: partial_fixed
 - id: ch07.open.faster_live_4bpshz
   section: '7.4'
   claim: 'FASTER open cable, 11,017 km Taiwan-USA segment: live 300G 8QAM traffic at 4 b/s/Hz'
@@ -1154,6 +1232,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.open.faster_design_se
   section: '7.4'
   claim: FASTER TWN-USA segment initial design SE 2 b/s/Hz, upgraded to 3 then 4 b/s/Hz
@@ -1168,6 +1247,7 @@ records:
   tier: A
   confidence: high
   notes: 'Illustrates open-cable upgrade path: SLTE replaced while wet plant fixed.'
+  verified: match
 - id: ch07.open.faster_ps64_6bpshz
   section: '7.4'
   claim: 'Offline PS-64QAM on FASTER: 5.5 b/s/Hz without NLC, 6 b/s/Hz with NLC (DBP)'
@@ -1184,6 +1264,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.open.faster_se_distance
   section: '7.4'
   claim: SE-distance product over a live-traffic cable (FASTER)
@@ -1197,6 +1278,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.own.fcc_license_term_25y
   section: '7.5'
   claim: 'US cable landing license term: expires 25 years from in-service date unless renewed (retained by FCC 2025 Report
@@ -1213,6 +1295,7 @@ records:
   tier: A
   confidence: high
   notes: Same text in 47 CFR 1.767(g)(15) before amendment and in new Subpart FF.
+  verified: match
 - id: ch07.own.fcc_5pct_applicants
   section: '7.5'
   claim: 'Required applicants/licensees: entities controlling a US landing station, and all entities with >= 5 % interest
@@ -1222,14 +1305,17 @@ records:
   kind: spec_min
   conditions: {}
   source_id: cfr_47_part1_cable_landing_2025
-  locator: 47 CFR Part 1 Subpart FF, applicants/licensees section (b); formerly 47 CFR 1.767(h)(2)
+  locator: 47 CFR Part 1 Subpart FF, applicants/licensees section (b); formerly 47 CFR 1.767(h)(2); renumbered 47 CFR 1.70003(a)(2)
+    by FCC 26-42
   quote: All other entities owning or controlling a five percent (5%) or greater interest in the cable system and using the
     U.S. points
   retrieved: 2026-11-02
   tier: A
   confidence: high
   notes: '2025 change: entities that merely own (do not control) a landing station no longer must be licensees (R&O para.
-    76). Subpart FF section number not captured.'
+    76). Subpart FF section number not captured. Verifier (PARTIAL): Fill locator: § 1.70003(b) (not yet effective; § 1.767(h)(2)
+    still governs). FCC 26-42 (91 FR 46844, 2026-07-27) renumbers to (a)(2) and adds (b) SLTE blanket licence; 5 % unchanged.'
+  verified: partial_fixed
 - id: ch07.own.fcc_2025_foreign_adversary_presumption
   section: '7.5'
   claim: 'FCC 2025: presumption of denial for applicants owned/controlled by a foreign adversary, on the Covered List, or
@@ -1247,6 +1333,7 @@ records:
   confidence: high
   notes: Rebuttable only by clear and convincing evidence (para. 30). Para. 33 names China Mobile USA, China Telecom Americas,
     China Unicom Americas, Pacific Networks, ComNet.
+  verified: match
 - id: ch07.own.fcc_2025_landing_in_adversary_country
   section: '7.5'
   claim: 'FCC 2025: presumption of denial for new landings in a foreign adversary country'
@@ -1261,6 +1348,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.own.fcc_2025_slte_iru_condition
   section: '7.5'
   claim: 'FCC 2025: licensees may not enter new IRUs or capacity leases letting foreign-adversary entities install, own or
@@ -1276,7 +1364,11 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
-  notes: 'Para. 76: FCC declined to adopt SLTE-owner licensing for now; one-time information collection instead.'
+  notes: 'Para. 76: FCC declined to adopt SLTE-owner licensing for now; one-time information collection instead. Verifier
+    (PARTIAL): Value/quote OK. Update note: para. 76 declined SLTE licensing in 2025, but FCC 26-42 (91 FR 46844, 2026-07-27,
+    eff. 2026-09-25 except delayed sections incl. § 1.70003) adopted SLTE blanket licensing. Add source fcc_26_42_fr_2026.
+    SUPERSEDED: FCC 26-42 Second Report and Order (91 FR 46844, July 2026) adopts SLTE blanket licensing; present as historical.'
+  verified: partial_fixed
 - id: ch07.own.fcc_2025_effective_date
   section: '7.5'
   claim: Effective date of FCC 25-49 rules (except sections pending information-collection approval, e.g. 1.767)
@@ -1291,6 +1383,7 @@ records:
   tier: A
   confidence: high
   notes: Published 90 FR 48648, 2025-10-27; adopted August 2025 (FCC 25-49).
+  verified: match
 - id: ch07.own.fcc_plcn_hong_kong
   section: '7.5'
   claim: Executive Branch recommended partial denial of PLCN (Hong Kong landing) on national-security grounds
@@ -1305,6 +1398,7 @@ records:
   retrieved: 2026-11-02
   tier: A
   confidence: high
+  verified: match
 - id: ch07.own.eo13913_review_periods
   section: '7.5'
   claim: 'Team Telecom (EO 13913 Committee) initial review limit: 120 days; secondary assessment: 90 days'
@@ -1321,6 +1415,7 @@ records:
   confidence: high
   notes: 'Sec. 5(c): ''no more than 90 days after the Committee''s determination that a secondary assessment is warranted''.
     Signed 2020-04-04.'
+  verified: match
 - id: ch07.own.bis_hmn_entity_list
   section: '7.5'
   claim: BIS adds HMN Technologies / HMN Tech / Huahai Zhihui as aliases of Huawei Marine Networks on the Entity List, and
@@ -1338,6 +1433,7 @@ records:
   confidence: high
   notes: Same rule added HMN International, Jiangsu Hengtong Marine Cable Systems, Jiangsu Hengtong Optic-Electric and Zhongtian
     Technology Submarine Cable for supporting PLA modernization; license policy presumption of denial.
+  verified: match
 - id: ch07.own.prc_foreign_laying_approval
   section: '7.5'
   claim: 'PRC: foreign entities laying cables in China''s internal waters or territorial sea need approval; on the continental
@@ -1355,6 +1451,7 @@ records:
   notes: 'Quote is the second half of Art. 4 para. 2, whose subject is foreign companies laying cables in PRC internal waters/territorial
     sea. Gloss: ''shall report to the competent authority for approval; for such activities on the PRC continental shelf,
     shall notify the competent authority in advance''. Competent authority then SOA (now Ministry of Natural Resources).'
+  verified: match
 - id: ch07.own.prc_route_application_lead_time
   section: '7.5'
   claim: 'PRC: owner applies 60 days before route survey and 60 days before laying; authority answers within 30 days'
@@ -1370,6 +1467,7 @@ records:
   tier: A
   confidence: high
   notes: 'Gloss: ''must submit a written application to the competent authority 60 days before route survey''. Art. 5/6: ''主管机关应当自收到申请之日起30天内作出答复''.'
+  verified: match
 - id: ch07.own.prc_soa_approves_international
   section: '7.5'
   claim: 'PRC implementing measures: SOA itself approves foreign cables crossing Chinese jurisdictional waters and international
@@ -1386,6 +1484,7 @@ records:
   confidence: high
   notes: 'Gloss: ''the following are approved by the SOA: (1) foreign cables passing through Chinese jurisdictional waters
     and shelf; (2) international cables laid from China to other countries''.'
+  verified: match
 - id: ch07.own.caict_supplier_share_2018_2022
   section: '7.5'
   claim: 'Share of submarine cable length delivered 2018-2022 (106 systems): SubCom 40 %, ASN 29 %, HMN 18 %, NEC 7 % (CAICT,
@@ -1410,6 +1509,7 @@ records:
   confidence: med
   notes: Secondary citation of CAICT 《全球海底光缆产业发展研究报告（2023年）》 by an interested party (HMN's parent). CAICT report itself not
     read.
+  verified: match
 - id: ch07.own.hmn_projects_km
   section: '7.5'
   claim: 'HMN Tech cumulative record: more than 180 cable projects, more than 130,000 km contracted/delivered (as of mid-2026)'
@@ -1426,6 +1526,7 @@ records:
   confidence: med
   notes: 'Gloss: ''HMN, founded 2008, ... has built over 180 projects and contracted/delivered over 130,000 km''. HMN was
     Huawei Marine until 2020; now Hengtong subsidiary.'
+  verified: match
 - id: ch07.own.content_provider_share_2021
   section: '7.5'
   claim: Content providers' share of global used international bandwidth grew from 5 % (2005) to 69 % (2021)
@@ -1442,6 +1543,7 @@ records:
   tier: A
   confidence: med
   notes: Underlying data likely TeleGeography.
+  verified: match
 - id: ch07.own.telegeography_cp_share_2023
   section: '7.5'
   claim: 'TeleGeography: content and cloud networks accounted for more than 70 % of all bandwidth usage in 2023; 80 %+ on
@@ -1459,6 +1561,7 @@ records:
   confidence: low
   notes: Market research (tier C). An EU Commission-initiated 2025 report reportedly states 71 % in 2024 (via heise; primary
     not read).
+  verified: match
 - id: ch07.own.telegeography_cp_capacity_2025
   section: '7.5'
   claim: International capacity deployed by content networks more than tripled 2021-2025, reaching 6.3 Pb/s
@@ -1473,6 +1576,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.own.redsea_2024_hgc_four_cables
   section: '7.5'
   claim: 'HGC: four of 15+ Red Sea cables (Seacom, TGN, AAE-1, EIG) cut in Feb 2024, estimated 25 % of traffic affected'
@@ -1489,6 +1593,7 @@ records:
   tier: C
   confidence: low
   notes: 'Contested: TeleGeography says ''TGN-Eurasia'' is another name for Seacom, so three cables (ch07.own.redsea_2024_three_cables).'
+  verified: match
 - id: ch07.own.redsea_2024_three_cables
   section: '7.5'
   claim: 'TeleGeography (via Bloomberg): only three Red Sea cables damaged; ''fourth'' (TGN-Eurasia) is another name for Seacom'
@@ -1504,6 +1609,7 @@ records:
   tier: C
   confidence: low
   notes: 'HGC named ''TGN'' (BBC: ''TGN-Gulf''). Unresolved naming dispute; present both.'
+  verified: match
 - id: ch07.own.redsea_2024_rubymar_anchor
   section: '7.5'
   claim: 'ICPC: drifting Rubymar''s dropped anchor generally accepted as cause of Feb 2024 Red Sea cable damage'
@@ -1517,6 +1623,7 @@ records:
   retrieved: 2026-11-02
   tier: C
   confidence: low
+  verified: match
 - id: ch07.own.redsea_2025_azure
   section: '7.5'
   claim: 'Microsoft Azure: multiple subsea fiber cuts in the Red Sea from 05:45 UTC 6 Sept 2025, traffic rerouted with higher
@@ -1532,6 +1639,7 @@ records:
   tier: C
   confidence: low
   notes: Cables not named by Microsoft; press (Reuters/NetBlocks, PTCL) locate cuts near Jeddah.
+  verified: match
 - id: ch07.own.baltic_2023_newnew_polar_bear
   section: '7.5'
   claim: 'Finnish NBI: anchor of Hong Kong-flagged Newnew Polar Bear believed to have caused Oct 2023 Balticconnector damage;
@@ -1550,6 +1658,7 @@ records:
   confidence: low
   notes: 'Same incident: telecom cable fault in Estonia''s EEZ identified at about the same time (Finnish police release,
     2023-10-11). Pipeline, not telecom cable, is the subject of the quote.'
+  verified: match
 - id: ch07.own.baltic_2024_eagle_s
   section: '7.5'
   claim: 'Finnish prosecution: Eagle S suspected of cutting five submarine cables by dragging its anchor about 90 km (25 Dec
@@ -1568,4 +1677,7 @@ records:
   tier: C
   confidence: low
   notes: 'Defendants deny and contest Finnish jurisdiction (outside territorial waters). Charges: aggravated criminal mischief,
-    aggravated interference with communications.'
+    aggravated interference with communications. Verifier (PARTIAL): Values OK. Add that the District Court dismissed the
+    case on 2025-10-03 (UNCLOS Art. 97 ''incident of navigation''; judgment not final). Do not present charges as pending.
+    Update: Helsinki District Court dismissed the case 2025-10-03 (R 706/2025/12270); ruling not final.'
+  verified: partial_fixed
