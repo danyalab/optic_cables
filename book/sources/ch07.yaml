@@ -1,0 +1,491 @@
+# Chapter 7 sources. Reused from sources/ch01_c.yaml (not duplicated): google_cloud_blog_2023_mcf, sumitomo_press_2026_petal.
+sources:
+- id: perin_jlt_2019
+  type: journal
+  title: Importance of Amplifier Physics in Maximizing the Capacity of Submarine Links
+  authors: J. Krause Perin, J. M. Kahn, J. D. Downie, J. Hurley, K. Bennett
+  venue: Journal of Lightwave Technology (2019); author version arXiv:1803.07905 read via ar5iv
+  year: 2019
+  doi: ''
+  url: https://arxiv.org/abs/1803.07905
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: dar_jlt_2018
+  type: journal
+  title: Cost-Optimized Submarine Cables Using Massive Spatial Parallelism
+  authors: R. Dar, P. J. Winzer, A. R. Chraplyvy, S. Zsigmond, K.-Y. Huang, H. Fevrier, S. Grubb
+  venue: Journal of Lightwave Technology 36(18):3855-3865
+  year: 2018
+  doi: 10.1109/JLT.2018.2841810
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-36-18-3855
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: downie_jlt_2023_mcedfa
+  type: journal
+  title: Cable Capacity and Cost/Bit Modeling of Submarine MCF Systems With MC-EDFA Alternatives
+  authors: J. D. Downie, Y. Jung, S. Makovejs, M. Edwards, D. J. Richardson
+  venue: Journal of Lightwave Technology 41(11):3559-3566 (accepted manuscript, ePrints Soton)
+  year: 2023
+  doi: 10.1109/JLT.2023.3253259
+  url: https://eprints.soton.ac.uk/477307/1/JLT_ECOC2022_MC_EDFA.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: desbruslais_noc_2015
+  type: conference
+  title: Maximizing the Capacity of Ultra-Long Haul Submarine Systems (invited)
+  authors: S. Desbruslais
+  venue: European Conference on Networks and Optical Communications (NOC) 2015, pp. 1-6
+  year: 2015
+  doi: 10.1109/NOC.2015.7238603
+  url: https://www.xtera.com/wp-content/uploads/2017/06/NOC-paper-SRD.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: papapavlou_telecom_2022
+  type: journal
+  title: 'Toward SDM-Based Submarine Optical Networks: A Review of Their Evolution and Upcoming Trends'
+  authors: C. Papapavlou, K. Paximadis, D. Uzunidis, I. Tomkos
+  venue: Telecom (MDPI) 3(2):234-280
+  year: 2022
+  doi: 10.3390/telecom3020015
+  url: https://doi.org/10.3390/telecom3020015
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bergano_jlt_2005
+  type: journal
+  title: Wavelength Division Multiplexing in Long-Haul Transoceanic Transmission Systems
+  authors: N. S. Bergano
+  venue: Journal of Lightwave Technology 23(12):4125-4139
+  year: 2005
+  doi: 10.1109/JLT.2005.858255
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-23-12-4125
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g977_2015
+  type: standard
+  title: Characteristics of optically amplified optical fibre submarine cable systems
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.977 (01/2015)
+  year: 2015
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.977-201501-I!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: itu_t_g977_1_2020
+  type: standard
+  title: Transverse compatible dense wavelength division multiplexing applications for repeatered optical fibre submarine
+    cable systems
+  authors: ITU-T Study Group 15
+  venue: ITU-T Recommendation G.977.1 (10/2020)
+  year: 2020
+  doi: ''
+  url: https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.977.1-202010-I!!PDF-E&lang=e&type=items
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: pilipetskii_suboptic_2019
+  type: conference
+  title: The subsea fiber as a Shannon channel
+  authors: A. Pilipetskii, D. Kovsh, E. Mateo, E. Rivera Hartling, G. Mohs, L. Jovanovski, M. Salsi, M. Cantono, M. Bolshtyansky,
+    O. Courtois, O. Gautheron, O. Ait Sab, P. Pecci, P. Mehta, S. Grubb, T. Inoue, V. Kamalov, V. Vusirikala, V. Letellier,
+    Y. Inada
+  venue: SubOptic 2019, New Orleans (abstract via Google Research publication page)
+  year: 2019
+  doi: ''
+  url: https://research.google/pubs/the-subsea-fiber-as-a-shannon-channel/
+  access: abstract_only
+  language: en
+  tier: B
+  retrieved: 2026-11-02
+- id: kamalov_ofc_2018
+  type: conference
+  title: Evolution from 8QAM live traffic to PS 64-QAM with Neural-Network Based Nonlinearity Compensation on 11000 km Open
+    Subsea Cable
+  authors: V. Kamalov, L. Jovanovski, V. Vusirikala, S. Zhang, F. Yaman, K. Nakamura, T. Inoue, E. Mateo, Y. Inada
+  venue: Optical Fiber Communication Conference 2018, postdeadline Th4D.5 (full text hosted by NEC)
+  year: 2018
+  doi: 10.1364/OFC.2018.Th4D.5
+  url: https://www.nec.com/en/press/201805/images/1502-01-01.pdf
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bolshtyansky_jlt_2020
+  type: journal
+  title: Single-Mode Fiber SDM Submarine Systems
+  authors: M. A. Bolshtyansky, O. V. Sinkin, M. Paskov, Y. Hu, M. Cantono, L. Jovanovski, A. N. Pilipetskii, G. Mohs, V. Kamalov,
+    V. Vusirikala
+  venue: Journal of Lightwave Technology 38(6):1296-1304
+  year: 2020
+  doi: 10.1109/JLT.2019.2957725
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-38-6-1296
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: sinkin_jlt_2018
+  type: journal
+  title: SDM for Power-Efficient Undersea Transmission
+  authors: O. V. Sinkin, A. V. Turukhin, Y. Sun, H. G. Batshon, M. V. Mazurczyk, C. R. Davidson, J.-X. Cai, W. W. Patterson,
+    M. A. Bolshtyansky, D. G. Foursa, A. N. Pilipetskii
+  venue: Journal of Lightwave Technology 36(2):361-371
+  year: 2018
+  doi: 10.1109/JLT.2017.2771315
+  url: https://opg.optica.org/jlt/abstract.cfm?uri=jlt-36-2-361
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: srinivas_jlt_2021
+  type: journal
+  title: Modeling and Experimental Measurement of Power Efficiency for Power-Limited SDM Submarine Transmission Systems
+  authors: H. Srinivas, J. D. Downie, J. E. Hurley, X. Liang, J. Himmelreich, J. Krause Perin, et al.
+  venue: Journal of Lightwave Technology 39(8):2376-2386
+  year: 2021
+  doi: 10.1109/JLT.2021.3049709
+  url: https://ieeexplore.ieee.org/document/9314868
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: google_blog_2021_dunant
+  type: press
+  title: Google's Dunant subsea cable is now ready for service
+  authors: Google Cloud
+  venue: Google Cloud blog, 2021-02-03
+  year: 2021
+  doi: ''
+  url: https://cloud.google.com/blog/products/infrastructure/googles-dunant-subsea-cable-is-now-ready-for-service
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: google_blog_2020_grace_hopper
+  type: press
+  title: Announcing the Grace Hopper subsea cable, linking the U.S., U.K. and Spain
+  authors: Google Cloud
+  venue: Google Cloud blog, 2020-07-28
+  year: 2020
+  doi: ''
+  url: https://cloud.google.com/blog/products/infrastructure/announcing-googles-grace-hopper-subsea-cable-system
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: google_blog_2021_firmina
+  type: press
+  title: Google-built Firmina subsea cable runs from the US to Argentina
+  authors: B. Koley (Google Cloud)
+  venue: Google Cloud blog, 2021-06-09
+  year: 2021
+  doi: ''
+  url: https://cloud.google.com/blog/products/infrastructure/announcing-the-firmina-subsea-cable
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: subcom_press_2021_firmina
+  type: press
+  title: SubCom announces contract-in-force for Firmina
+  authors: SubCom
+  venue: SubCom press release, 2021-06-09
+  year: 2021
+  doi: ''
+  url: https://www.subcom.com/documents/2021/Firmina_CIF_SubCom_9JUNE2021.pdf
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: nec_press_2021_24fp
+  type: press
+  title: NEC to build a transatlantic cable
+  authors: NEC Corporation
+  venue: NEC press release, 2021-10-08
+  year: 2021
+  doi: ''
+  url: https://www.nec.com/en/press/202110/global_20211008_01.html
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: nec_press_2021_mcf_trial
+  type: press
+  title: NEC, OCC and Sumitomo Electric complete first trial of submarine cable with multicore fiber
+  authors: NEC Corporation, OCC Corporation, Sumitomo Electric
+  venue: NEC press release, 2021-10-04
+  year: 2021
+  doi: ''
+  url: https://www.nec.com/en/press/202110/global_20211004_01.html
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: nec_press_2022_mic_mcf
+  type: press
+  title: New Technologies Increase Submarine Optical Cable Capacity with Multicore Fiber
+  authors: KDDI Research, Tohoku Univ., Sumitomo Electric, Furukawa Electric, NEC, Optoquest
+  venue: NEC press release, 2022-03-28
+  year: 2022
+  doi: ''
+  url: https://www.nec.com/en/press/202203/global_20220328_01.html
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: dcblox_press_2023_anjana
+  type: press
+  title: DC BLOX, Inc. Announces 2nd Subsea Cable in Horry County
+  authors: DC BLOX
+  venue: DC BLOX press release, 2023-05-26
+  year: 2023
+  doi: ''
+  url: https://www.dcblox.com/dc-blox-announces-second-subsea-cable-in-horry-county/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: submarinenetworks_tpu
+  type: press
+  title: TPU (Taiwan-Philippines-US) cable system profile
+  authors: Submarine Networks (W. Qiu)
+  venue: submarinenetworks.com system page (summarizes FCC filings), accessed 2026-11-02
+  year: 2026
+  doi: ''
+  url: https://www.submarinenetworks.com/en/systems/trans-pacific/tpu
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: hengtong_ar_2024
+  type: report
+  title: 江苏亨通光电股份有限公司2024年年度报告 (Hengtong Optic-Electric 2024 annual report)
+  authors: 江苏亨通光电股份有限公司
+  venue: SSE-listed company annual report (600487), published 2025-04-25
+  year: 2025
+  doi: ''
+  url: http://static.cninfo.com.cn/finalpage/2025-04-25/1223276243.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: hengtong_ar_2025
+  type: report
+  title: 江苏亨通光电股份有限公司2025年年度报告 (Hengtong Optic-Electric 2025 annual report)
+  authors: 江苏亨通光电股份有限公司
+  venue: SSE-listed company annual report (600487), published 2026-04-25
+  year: 2026
+  doi: ''
+  url: https://static.cninfo.com.cn/finalpage/2026-04-25/1225195764.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: hengtong_hy_2025
+  type: report
+  title: 江苏亨通光电股份有限公司2025年半年度报告 (Hengtong Optic-Electric 2025 half-year report)
+  authors: 江苏亨通光电股份有限公司
+  venue: SSE-listed company half-year report (600487), published 2025-08-26
+  year: 2025
+  doi: ''
+  url: http://static.cninfo.com.cn/finalpage/2025-08-26/1224567735.PDF
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: hengtong_hy_2026
+  type: report
+  title: 江苏亨通光电股份有限公司2026年半年度报告 (Hengtong Optic-Electric 2026 half-year report)
+  authors: 江苏亨通光电股份有限公司
+  venue: SSE-listed company half-year report (600487), published 2026-08-27
+  year: 2026
+  doi: ''
+  url: http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-27/600487_20260827_TVUA.pdf
+  access: open
+  language: zh
+  tier: B
+  retrieved: 2026-11-02
+- id: fcc_25_49_fr_2025
+  type: report
+  title: Review of Submarine Cable Landing License Rules and Procedures To Assess Evolving National Security, Law Enforcement,
+    Foreign Policy, and Trade Policy Risks (Report and Order, FCC 25-49)
+  authors: Federal Communications Commission
+  venue: Federal Register 90 FR 48648-48703, 2025-10-27, Doc. 2025-19658 (OI Docket 24-523)
+  year: 2025
+  doi: ''
+  url: https://www.federalregister.gov/documents/2025/10/27/2025-19658/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: cfr_47_part1_cable_landing_2025
+  type: standard
+  title: 47 CFR 1.767 Cable landing licenses and 47 CFR Part 1 Subpart FF (Cable Landing Licenses)
+  authors: Federal Communications Commission
+  venue: Electronic Code of Federal Regulations, versions of 2025-12-04 and current
+  year: 2025
+  doi: ''
+  url: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: eo_13913_2020
+  type: standard
+  title: 'Executive Order 13913: Establishing the Committee for the Assessment of Foreign Participation in the United States
+    Telecommunications Services Sector'
+  authors: Executive Office of the President
+  venue: Federal Register 85 FR 19643-19650, 2020-04-08 (signed 2020-04-04)
+  year: 2020
+  doi: ''
+  url: https://www.federalregister.gov/documents/2020/04/08/2020-07530/establishing-the-committee-for-the-assessment-of-foreign-participation-in-the-united-states
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: bis_entity_list_2021_12_17
+  type: standard
+  title: Addition of Certain Entities to the Entity List and Revision of an Entry on the Entity List
+  authors: Bureau of Industry and Security, U.S. Department of Commerce
+  venue: Federal Register 86 FR 71557-71568, 2021-12-17, Doc. 2021-27406
+  year: 2021
+  doi: ''
+  url: https://www.federalregister.gov/documents/2021/12/17/2021-27406/addition-of-certain-entities-to-the-entity-list-and-revision-of-an-entry-on-the-entity-list
+  access: open
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: prc_sc_order27_1989
+  type: standard
+  title: 铺设海底电缆管道管理规定 (Provisions Governing the Laying of Submarine Cables and Pipelines), State Council Order No. 27
+  authors: 中华人民共和国国务院 (State Council of the PRC)
+  venue: 国家行政法规库 (Ministry of Justice national administrative regulations database)
+  year: 1989
+  doi: ''
+  url: https://xzfg.moj.gov.cn/front/law/detail?LawID=241
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: prc_soa_order3_1992
+  type: standard
+  title: 铺设海底电缆管道管理规定实施办法 (Implementing Measures), State Oceanic Administration Order No. 3
+  authors: 国家海洋局 (State Oceanic Administration)
+  venue: 中国政府网 gov.cn policy archive
+  year: 1992
+  doi: ''
+  url: https://www.gov.cn/zhengce/1992-08/26/content_5711422.htm
+  access: open
+  language: zh
+  tier: A
+  retrieved: 2026-11-02
+- id: caoui_steck_iep_2025
+  type: journal
+  title: Content providers and the deployment of Internet infrastructure
+  authors: E. H. Caoui, A. Steck
+  venue: Information Economics and Policy (2025), article S0167624525000083
+  year: 2025
+  doi: ''
+  url: https://www.sciencedirect.com/science/article/pii/S0167624525000083
+  access: abstract_only
+  language: en
+  tier: A
+  retrieved: 2026-11-02
+- id: telegeography_sotn_2025
+  type: report
+  title: The State of the Network, 2025 Edition
+  authors: TeleGeography
+  venue: TeleGeography ebook (market research)
+  year: 2025
+  doi: ''
+  url: https://www2.telegeography.com/hubfs/LP-Assets/Ebooks/state-of-the-network-2025.pdf
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: telegeography_cp_holdings_2026
+  type: report
+  title: A (Refreshed) List of Content Providers' Submarine Cable Holdings
+  authors: TeleGeography
+  venue: TeleGeography blog, table updated September 2026
+  year: 2026
+  doi: ''
+  url: https://resources.telegeography.com/telegeography-content-providers-submarine-cable-holdings-list-new
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: hgc_statement_2024_03_04
+  type: press
+  title: Statement - Supplementary Information of HGC Global Communications Regarding Submarine Cable Damage in the Red Sea
+  authors: HGC Global Communications
+  venue: HGC press release, 2024-03-04
+  year: 2024
+  doi: ''
+  url: https://www.hgc.com.hk/press-releases/statement-supplementary-information-of-hgc-global-communications-regarding-submarine-cable-damage-in-the-red-sea-to-demonstrate-hong-kong-as-international-telecommunication-hub-to-demonstrate-hong-kong-as-international-telecommunication-hub
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: bloomberg_ttnews_2024_03_06
+  type: press
+  title: Anchor From Houthi-Sunk Ship May Have Severed Red Sea Cables
+  authors: O. Solon, M. Hatem (Bloomberg)
+  venue: Bloomberg via Transport Topics, 2024-03-06
+  year: 2024
+  doi: ''
+  url: https://www.ttnews.com/articles/anchor-severed-cables
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: poliisi_2023_10_24
+  type: press
+  title: National Bureau of Investigation has clarified technically the cause of gas pipeline damage
+  authors: Finnish Police (National Bureau of Investigation)
+  venue: poliisi.fi press release, 2023-10-24
+  year: 2023
+  doi: ''
+  url: https://poliisi.fi/en/-/national-bureau-of-investigation-has-clarified-technically-the-cause-of-gas-pipeline-damage
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: fi_prosecution_2025_08_11
+  type: press
+  title: Charges have been brought in the case concerning the cutting of submarine cables in the Gulf of Finland during Christmas
+    2024
+  authors: National Prosecution Authority of Finland
+  venue: syyttajalaitos.fi news, 2025-08-11
+  year: 2025
+  doi: ''
+  url: https://www.syyttajalaitos.fi/en/news/news-archive/charges-have-been-brought-in-the-case-concerning-the-cutting-of-submarine-cables-in-the-gulf-of-finland-during-christmas-2024/
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02
+- id: azure_status_2025_09_06
+  type: press
+  title: Multiple subsea fiber cuts in the Red Sea impacting global communications (Azure status advisory)
+  authors: Microsoft Azure
+  venue: Azure status page, 2025-09-06 (read via isdown.app mirror)
+  year: 2025
+  doi: ''
+  url: https://isdown.app/status/azure/incidents/441417-multiple-subsea-fiber-cuts-in-the-red-sea-impacting-global-communications
+  access: open
+  language: en
+  tier: C
+  retrieved: 2026-11-02

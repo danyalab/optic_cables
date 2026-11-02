@@ -15,6 +15,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent / "book"
+PARSE_ERRORS = []
 
 
 def load(name):
@@ -73,7 +74,11 @@ ID_RE = re.compile(r"^ch\d{2}\.[a-z0-9_.]+$")
 def load_all(subdir, pattern, key):
     out = []
     for path in sorted((ROOT / subdir).glob(pattern)):
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        try:
+            data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        except yaml.YAMLError as e:
+            PARSE_ERRORS.append(f"{path.name}: YAML parse error: {str(e).splitlines()[0]}")
+            continue
         for rec in data.get(key) or []:
             out.append((path.name, rec))
     return out
@@ -136,6 +141,7 @@ def main():
     check_glossary(errors, order)
     n_rec, n_eq, n_src = check_ledger(errors, order)
     check_chapters(errors)
+    errors.extend(sorted(set(PARSE_ERRORS)))
     print(f"ledger: {n_rec} records, {n_eq} equations, {n_src} sources")
     for e in errors:
         print(e)

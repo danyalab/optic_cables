@@ -1,0 +1,151 @@
+# Chapter 7 (Subsea systems) equations - retrieval agent ch07, retrieved 2026-11-02.
+# See book/ledger/SCHEMA.md. Tier C records are only for contested boxes.
+equations:
+- id: ch07.eq.max_power_transfer
+  section: '7.2'
+  latex: P_{\mathrm{e,max}} = \frac{V^{2}}{4 L \rho}
+  symbols:
+  - V
+  - L
+  - \rho
+  source_id: perin_jlt_2019
+  locator: Section 2, text after Eq. (1)
+  notes: 'Total electrical power deliverable to all undersea amplifiers (maximum power transfer theorem). V: feed voltage;
+    rho: cable resistance per km; L: link length. Source writes P (roman) for this total; rename P_e to avoid clash with optical
+    P. New symbols V, rho, P_e need notation proposals.'
+- id: ch07.eq.pump_affine
+  section: '7.2'
+  latex: P_{p} = \eta_{\mathrm{EO}}\left(\frac{P_{\mathrm{e}}}{2 S N_s} - P_{0}\right)
+  symbols:
+  - \eta_{\mathrm{EO}}
+  - S
+  - N_s
+  - P_0
+  source_id: perin_jlt_2019
+  locator: Eq. (2)
+  notes: 'Source uses eta (efficiency) and M (number of spans); eta conflicts with notation.yaml NLI efficiency, so use eta_EO;
+    M -> N_s. S: spatial dimensions per direction; factor 2 for both directions. P_0: per-amplifier overhead.'
+- id: ch07.eq.ase_chain
+  section: '7.2'
+  latex: P_{\mathrm{ASE},n} = N_s\, F_n\, h \nu_n\, \Delta f
+  symbols:
+  - N_s
+  - F
+  - h
+  - \nu
+  - \Delta f
+  source_id: perin_jlt_2019
+  locator: Eq. (3)
+  notes: Accumulated ASE in bandwidth Delta f after N_s amplifiers, referred to amplifier input (P_n defined as amplifier
+    input power, so independent of gain). Source writes NF_n for the linear noise figure, i.e. F of notation.yaml.
+- id: ch07.eq.capacity_sum
+  section: '7.2'
+  latex: C = 2\Delta f \sum_{n=1}^{N} \mathbb{1}\{G(\lambda_n)\ge A(\lambda_n)\}\log_{2}\left(1+\Gamma\,\mathrm{SNR}_n\right)
+  symbols:
+  - C
+  - \Delta f
+  - G
+  - \Gamma
+  - \mathrm{SNR}
+  source_id: perin_jlt_2019
+  locator: Eq. (5)
+  notes: 'Capacity per spatial dimension (both polarizations). Gamma: coding gap (0.79, i.e. -1 dB). A(lambda): span attenuation
+    (linear in source); conflicts with notation A (field envelope) and A_R; rename A_span. SNR_n from Eq. (1): P_n/(P_ASE,n
+    + NL_n).'
+- id: ch07.eq.pce_definition
+  section: '7.2'
+  latex: \mathrm{PCE} \equiv \frac{P_{\mathrm{out}} - P_{\mathrm{in}}}{P_{p}} < \frac{\lambda_p}{\lambda_s}
+  symbols:
+  - \lambda
+  source_id: perin_jlt_2019
+  locator: Section 3.3, Fig. 4c discussion (definition from ref. [17])
+  notes: Optical power conversion efficiency; the bound lambda_p/lambda_s is stated in words ('upper bounded by the ratio
+    between pump and signal wavelengths'), giving < 63 % for 980 nm pump.
+- id: ch07.eq.pfe_voltage
+  section: '7.1'
+  latex: V_{\mathrm{PFE}} = I R_c + n_r \frac{P_r}{I}
+  symbols:
+  - I
+  - R_c
+  - n_r
+  - P_r
+  source_id: desbruslais_noc_2015
+  locator: Eq. (1)
+  notes: 'I: line current; R_c = n_s R_s total cable resistance; n_r repeaters each dissipating P_r; n_s = n_r + 1 spans.'
+- id: ch07.eq.pfe_optimum_current
+  section: '7.1'
+  latex: I_{\mathrm{opt}} = \sqrt{\frac{n_r P_r}{R_c}}, \qquad V_{\mathrm{PFE}}^{\min} = 2\sqrt{R_c\, n_r P_r}
+  symbols:
+  - I
+  - R_c
+  - n_r
+  - P_r
+  source_id: desbruslais_noc_2015
+  locator: Eqs. (2) and (4)
+  notes: 'At optimum, R_c = n_r R_r (Eq. 3): cable resistance equals total repeater resistance (maximum power transfer); voltage
+    drop split equally. Crawler flattened the square roots; structure verified by differentiating Eq. (1).'
+- id: ch07.eq.repeater_power
+  section: '7.2'
+  latex: P_r = \frac{2 n_{\mathrm{fp}} n_{\mathrm{ch}} P_{\mathrm{ch}}}{\eta_c} + P_0
+  symbols:
+  - P_r
+  - n_{\mathrm{fp}}
+  - n_{\mathrm{ch}}
+  - P_{\mathrm{ch}}
+  - \eta_c
+  - P_0
+  source_id: desbruslais_noc_2015
+  locator: Eq. (5)
+  notes: 'eta_c: electrical-to-optical conversion efficiency (5 % assumed); factor 2 for bidirectional amplifier pairs. P_ch
+    here is per-channel amplifier output power (notation P_ch).'
+- id: ch07.eq.max_channels_fixed_voltage
+  section: '7.2'
+  latex: n_{\mathrm{ch}} = \frac{\left(\frac{V^{2}}{4 R_c n_r} - P_0\right)\eta_c}{2 n_{\mathrm{fp}} P_{\mathrm{ch}}}
+  symbols:
+  - V
+  - R_c
+  - n_r
+  - P_0
+  - \eta_c
+  - n_{\mathrm{fp}}
+  - P_{\mathrm{ch}}
+  source_id: desbruslais_noc_2015
+  locator: Eq. (14)
+  notes: 'Combines Eqs. (4) and (5). Shows capacity scaling: total channels x fiber pairs fixed by V^2 for given P_ch; trading
+    P_ch down raises n_ch n_fp. Crawler layout garbled; reconstructed from Eqs. (4)-(5), consistent with source text.'
+- id: ch07.eq.energy_opt_span_gain
+  section: '7.2'
+  latex: \ln G \approx 3 \quad (10\log_{10} G \approx 13\ \mathrm{dB})
+  symbols:
+  - G
+  source_id: desbruslais_noc_2015
+  locator: Section III-A, discussion of Eq. (13) (result attributed to ref. [3], Doran and Ellis 2014)
+  notes: Limit of Eq. (13) for zero overhead and large F G. Eq. (13) itself (with P_0/P_r and F) was garbled in the crawler
+    text and is not recorded.
+- id: ch07.eq.eo_efficiency_chain
+  section: '7.2'
+  latex: \eta_{\mathrm{EO}} = \eta_{\mathrm{driver}}\,\eta_{\mathrm{aging}}\,\eta_{\mathrm{pump}}\,\eta_{\mathrm{EDF}}\,\eta_{\mathrm{GFF}}
+  symbols:
+  - \eta_{\mathrm{EO}}
+  source_id: downie_jlt_2023_mcedfa
+  locator: Section II (citing refs [28,29])
+  notes: 'Overall repeater E-O efficiency: current driver, pump-ageing current allowance (25 yr), pump LD E-O, EDF optical
+    PCE, GFF loss. Source writes eta; rename eta_EO.'
+- id: ch07.eq.gosnr_g9771
+  section: '7.4'
+  latex: \frac{1}{\mathrm{GOSNR}} = \frac{1}{\mathrm{OSNR}_{\mathrm{ASE}}} + \frac{1}{\mathrm{OSNR}_{\mathrm{NLI}}} + \frac{1}{\mathrm{OSNR}_{\mathrm{GAWBS}}}
+  symbols:
+  - \mathrm{OSNR}
+  source_id: itu_t_g977_1_2020
+  locator: Clause 9.1.12
+  notes: Same clause gives the SNR form 1/GSNR = 1/SNR_ASE + 1/SNR_NLI + 1/SNR_GAWBS (middle term elided in crawler text;
+    inferred by parallel with the GOSNR line). G.977.1 GSNR includes GAWBS, wider than notation.yaml GSNR.
+- id: ch07.eq.droop_product_rule
+  section: '7.4'
+  latex: 1 + \frac{1}{\mathrm{SNR}_{\mathrm{ASE}}} = \prod_{n=1}^{N}\left(1 + \frac{1}{\mathrm{SNR}_n}\right)
+  symbols:
+  - \mathrm{SNR}
+  source_id: itu_t_g977_1_2020
+  locator: Clause 9.1.7 (product rule for inverse droop, citing Antona et al.)
+  notes: 'Constant-output-power amplifier chain: signal droop. SNR_n is the ASE contribution of the n-th EDFA. Reduces to
+    the additive 1/SNR sum when all SNR_n >> 1.'
