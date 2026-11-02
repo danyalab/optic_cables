@@ -1,203 +1,352 @@
 equations:
-# ---------------------------------------------------------------- 2.1
 - id: ch02.eq.rc_spectrum
   section: '2.1'
-  latex: H_{\mathrm{RC}}(f) = \begin{cases} T_0, & |f| \le \frac{1-\rho}{2T_0} \\ \frac{T_0}{2}\left[1 + \cos\left(\frac{\pi T_0}{\rho}\left(|f| - \frac{1-\rho}{2T_0}\right)\right)\right], & \frac{1-\rho}{2T_0} < |f| \le \frac{1+\rho}{2T_0} \\ 0, & |f| > \frac{1+\rho}{2T_0} \end{cases}
-  symbols: ["\\rho", "T_0", "f"]
+  latex: H_{\mathrm{RC}}(f) = \begin{cases} T_0, & |f| \le \frac{1-\rho}{2T_0} \\ \frac{T_0}{2}\left[1 + \cos\left(\frac{\pi
+    T_0}{\rho}\left(|f| - \frac{1-\rho}{2T_0}\right)\right)\right], & \frac{1-\rho}{2T_0} < |f| \le \frac{1+\rho}{2T_0} \\
+    0, & |f| > \frac{1+\rho}{2T_0} \end{cases}
+  symbols:
+  - \rho
+  - T_0
+  - f
   source_id: ishihara_access_2021
   locator: Eq. (18)
-  notes: Source uses beta for the roll-off; book symbol is rho (proposal, not yet in notation.yaml). Extraction garbled the piecewise layout; the form above is the standard RC spectrum consistent with the printed band edges (1-β)/2T0 and (1+β)/2T0. T_0 = 1/R_s. Note f here is baseband frequency (notation.yaml f).
+  notes: Source uses beta for the roll-off; book symbol is rho (proposal, not yet in notation.yaml). Extraction garbled the
+    piecewise layout; the form above is the standard RC spectrum consistent with the printed band edges (1-β)/2T0 and (1+β)/2T0.
+    T_0 = 1/R_s. Note f here is baseband frequency (notation.yaml f).
+  verified: match
 - id: ch02.eq.rc_impulse
   section: '2.1'
   latex: g(t) = \mathrm{sinc}\left(\frac{t}{T_0}\right)\frac{\cos(\rho\pi t/T_0)}{1 - (2\rho t/T_0)^2}
-  symbols: ["\\rho", "T_0"]
+  symbols:
+  - \rho
+  - T_0
   source_id: ishihara_access_2021
   locator: Eq. (19)
-  notes: Extraction shows 'sinc t T0 cos βπt T0 1 -4 βt T0 2'; the denominator 1-4β²t²/T0² = 1-(2βt/T0)². Verify against PDF. Root-raised-cosine pair given in Eq. (20).
+  notes: Extraction shows 'sinc t T0 cos βπt T0 1 -4 βt T0 2'; the denominator 1-4β²t²/T0² = 1-(2βt/T0)². Verify against PDF.
+    Root-raised-cosine pair given in Eq. (20).
+  verified: match
 - id: ch02.eq.rc_bandwidth
   section: '2.1'
   latex: B = (1+\rho) R_s
-  symbols: ["B", "\\rho", "R_s"]
+  symbols:
+  - B
+  - \rho
+  - R_s
   source_id: ishihara_access_2021
   locator: Sect. II, text after Eq. (19)
-  notes: Source states 'the bandwidth of an RC shaping filter is given by 2(1+β)W' with T0 = 1/(2W); substituting W = R_s/2 gives (1+ρ)R_s (two-sided passband occupancy of the optical field). Proposed symbol B for occupied bandwidth; B_ch in notation.yaml is the channel bandwidth.
+  notes: Source states 'the bandwidth of an RC shaping filter is given by 2(1+β)W' with T0 = 1/(2W); substituting W = R_s/2
+    gives (1+ρ)R_s (two-sided passband occupancy of the optical field). Proposed symbol B for occupied bandwidth; B_ch in
+    notation.yaml is the channel bandwidth.
+  verified: match
 - id: ch02.eq.bit_rate
   section: '2.1'
-  latex: R_b = N_{\mathrm{pol}}\, R_s \log_2(M)\, R_c \quad(\text{uniform QAM}); \qquad R_b = N_{\mathrm{pol}}\, R_s\, \mathrm{IR} \quad(\text{PAS})
-  symbols: ["R_b", "N_{\\mathrm{pol}}", "R_s", "M", "R_c"]
+  latex: R_b = N_{\mathrm{pol}}\, R_s \log_2(M)\, R_c \quad(\text{uniform QAM}); \qquad R_b = N_{\mathrm{pol}}\, R_s\, \mathrm{IR}
+    \quad(\text{PAS})
+  symbols:
+  - R_b
+  - N_{\mathrm{pol}}
+  - R_s
+  - M
+  - R_c
   source_id: cho_jlt_2019
   locator: Eq. (5) with H(X) = m (uniform, lambda = 0)
-  notes: DERIVED, not printed in this form. Cho & Winzer Eq. (5) gives IR = 2(H(X) - m(1 - R_c)) bit per 2D symbol; for uniform M-QAM, H(X) = m = log2(M)/2 per dimension, so IR = log2(M) R_c per polarization; multiply by R_s and N_pol. Check case 400ZR, ch02.sym.400zr_line_rate (2 x 59.84375 GBd x 4 = 478.75 Gb/s gross).
-# ---------------------------------------------------------------- 2.2
+  notes: 'DERIVED, not printed in this form. Cho & Winzer Eq. (5) gives IR = 2(H(X) - m(1 - R_c)) bit per 2D symbol; for uniform
+    M-QAM, H(X) = m = log2(M)/2 per dimension, so IR = log2(M) R_c per polarization; multiply by R_s and N_pol. Check case
+    400ZR, ch02.sym.400zr_line_rate (2 x 59.84375 GBd x 4 = 478.75 Gb/s gross). Verifier (PARTIAL): Derivation correct; 400ZR
+    check 2 x 59.84375 x 4 = 478.75 Gb/s verified. For 400ZR, R_c must absorb pilot, FAW/TS and framing overheads (Table 14),
+    not only FEC; say so.'
+  verified: partial
 - id: ch02.eq.pam_penalty
   section: '2.2'
-  latex: \Delta_{\mathrm{PAM}\text{-}M}^{\mathrm{opt}} = 10\log_{10}(M-1)\ \mathrm{dB}, \qquad \Delta_{\mathrm{QAM}\text{-}M}^{\mathrm{opt}} = 10\log_{10}(\sqrt{M}-1)\ \mathrm{dB}
-  symbols: ["M"]
+  latex: \Delta_{\mathrm{PAM}\text{-}M}^{\mathrm{opt}} = 10\log_{10}(M-1)\ \mathrm{dB}, \qquad \Delta_{\mathrm{QAM}\text{-}M}^{\mathrm{opt}}
+    = 10\log_{10}(\sqrt{M}-1)\ \mathrm{dB}
+  symbols:
+  - M
   source_id: cole_ieee8023bs_2014
   locator: Slide 'PAM, QAM SNR Modulation Penalty'
-  notes: Optical-dB penalty at equal OMA. In electrical SNR the penalty is 20 log10(M-1) (9.54 dB for PAM4); see ch02.imdd.pam4_penalty_electrical and ch02.imdd.pamn_eye_height (Pang JLT 2020, eye height reduced by N-1).
+  notes: Optical-dB penalty at equal OMA. In electrical SNR the penalty is 20 log10(M-1) (9.54 dB for PAM4); see ch02.imdd.pam4_penalty_electrical
+    and ch02.imdd.pamn_eye_height (Pang JLT 2020, eye height reduced by N-1).
+  verified: match
 - id: ch02.eq.tdecq
   section: '2.2'
-  latex: \mathrm{TDECQ} = 10\log_{10}\left(\frac{\mathrm{OMA}_{\mathrm{outer}}}{6\,Q_t\,\sqrt{\sigma_G^2+\sigma_S^2}}\right), \quad Q_t = 3.414
-  symbols: ["\\mathrm{OMA}_{\\mathrm{outer}}", "Q_t", "\\sigma_G", "\\sigma_S"]
+  latex: \mathrm{TDECQ} = 10\log_{10}\left(\frac{\mathrm{OMA}_{\mathrm{outer}}}{6\,Q_t\,\sqrt{\sigma_G^2+\sigma_S^2}}\right),
+    \quad Q_t = 3.414
+  symbols:
+  - \mathrm{OMA}_{\mathrm{outer}}
+  - Q_t
+  - \sigma_G
+  - \sigma_S
   source_id: cole_ieee8023cu_2019
   locator: Slide 'TDECQ, Ceq 121.8.5 Definition' (quotes IEEE 802.3 Eqs. (121-11), (121-12))
-  notes: DISAGREEMENT in R. Cole (quoting the published 121-11) gives R = sqrt(σG² + σS²). The earlier draft text in King 3bs 2016 printed R = (Ceq σG² + σS²)^½. Dawe 3cd 2018 writes σG = σeq/Ceq so TDECQ = 10log10(OMA/(6 Qt σeq)) + 10log10(Ceq). Use the published form; verify against IEEE 802.3-2022 clause 121.8.5.3.
+  notes: DISAGREEMENT in R. Cole (quoting the published 121-11) gives R = sqrt(σG² + σS²). The earlier draft text in King
+    3bs 2016 printed R = (Ceq σG² + σS²)^½. Dawe 3cd 2018 writes σG = σeq/Ceq so TDECQ = 10log10(OMA/(6 Qt σeq)) + 10log10(Ceq).
+    Use the published form; verify against IEEE 802.3-2022 clause 121.8.5.3.
+  verified: match
 - id: ch02.eq.tdecq_minus_ceq
   section: '2.2'
-  latex: \mathrm{TDECQ} = 10\log_{10}\left(\frac{\mathrm{OMA}_{\mathrm{outer}}}{6\,Q_t\,\sigma_{\mathrm{eq}}}\right) + 10\log_{10} C_{\mathrm{eq}}
-  symbols: ["\\mathrm{OMA}_{\\mathrm{outer}}", "Q_t", "C_{\\mathrm{eq}}"]
+  latex: \mathrm{TDECQ} = 10\log_{10}\left(\frac{\mathrm{OMA}_{\mathrm{outer}}}{6\,Q_t\,\sigma_{\mathrm{eq}}}\right) + 10\log_{10}
+    C_{\mathrm{eq}}
+  symbols:
+  - \mathrm{OMA}_{\mathrm{outer}}
+  - Q_t
+  - C_{\mathrm{eq}}
   source_id: dawe_ieee8023cd_2018
   locator: Slide 'In algebra'
-  notes: With σS set to 0; σeq is the noise that could be added after the ideal reference equalizer; Ceq the noise enhancement coefficient. Splits TDECQ into 'how bad' and 'cost of equalizing'.
+  notes: With σS set to 0; σeq is the noise that could be added after the ideal reference equalizer; Ceq the noise enhancement
+    coefficient. Splits TDECQ into 'how bad' and 'cost of equalizing'.
+  verified: match
 - id: ch02.eq.mpi_penalty_bound
   section: '2.2'
   latex: \mathrm{PP}_{\mathrm{MPI}} = 10\log_{10}\frac{1}{1-x}, \qquad x = (m-1)\,4NR\,\frac{E}{E-1}
-  symbols: ["m", "N", "R", "E"]
+  symbols:
+  - m
+  - N
+  - R
+  - E
   source_id: bhatt_ieee8023bs_2016
   locator: Slides deriving 'MPI Penalty, dB'
-  notes: m = number of PAM levels, N = number of interferer pairs, R = product reflectance per path, E = extinction ratio (linear). Upper bound (worst-case phase, aligned polarization). Discounted version multiplies x by D (0 < D <= 1; 0.4 to 0.8 suggested). Extraction garbled the fraction 'E E− 1'; reconstructed from OMAinner = (Am²-A1²)/(m-1) and peak-to-peak noise 4NRAm². R here clashes with responsivity R; rename in prose.
-# ---------------------------------------------------------------- 2.3
+  notes: m = number of PAM levels, N = number of interferer pairs, R = product reflectance per path, E = extinction ratio
+    (linear). Upper bound (worst-case phase, aligned polarization). Discounted version multiplies x by D (0 < D <= 1; 0.4
+    to 0.8 suggested). Extraction garbled the fraction 'E E− 1'; reconstructed from OMAinner = (Am²-A1²)/(m-1) and peak-to-peak
+    noise 4NRAm². R here clashes with responsivity R; rename in prose.
+  verified: match
 - id: ch02.eq.balanced_output
   section: '2.3'
   latex: I(t) = I_1(t) - I_2(t) = 2R\sqrt{P_s(t)P_{\mathrm{LO}}}\cos\{\omega_{\mathrm{IF}}t + \theta_{\mathrm{sig}}(t) - \theta_{\mathrm{LO}}(t)\}
-  symbols: ["R", "P_s", "P_{\\mathrm{LO}}", "\\omega_{\\mathrm{IF}}"]
+  symbols:
+  - R
+  - P_s
+  - P_{\mathrm{LO}}
+  - \omega_{\mathrm{IF}}
   source_id: kikuchi_jlt_2016
   locator: Eq. (13), with Eqs. (8)-(12)
-  notes: Square root lost in extraction but the text states the current 'is proportional to √P'. R = qη/(ħω_s) is the photodiode responsivity (Eq. 12); R is a new symbol (proposal). Source writes P_LO as P with subscript LO glyph dropped.
+  notes: Square root lost in extraction but the text states the current 'is proportional to √P'. R = qη/(ħω_s) is the photodiode
+    responsivity (Eq. 12); R is a new symbol (proposal). Source writes P_LO as P with subscript LO glyph dropped.
+  verified: match
 - id: ch02.eq.hybrid_outputs
   section: '2.3'
-  latex: E_{1,2} = \tfrac{1}{2}(E_s \pm E_{\mathrm{LO}}),\ E_{3,4} = \tfrac{1}{2}(E_s \pm iE_{\mathrm{LO}});\quad I_I(t) = R\sqrt{P_sP_{\mathrm{LO}}}\cos\{\theta_{\mathrm{sig}}(t)-\theta_{\mathrm{LO}}(t)\},\ I_Q(t) = R\sqrt{P_sP_{\mathrm{LO}}}\sin\{\theta_{\mathrm{sig}}(t)-\theta_{\mathrm{LO}}(t)\}
-  symbols: ["R", "P_s", "P_{\\mathrm{LO}}"]
+  latex: E_{1,2} = \tfrac{1}{2}(E_s \pm E_{\mathrm{LO}}),\ E_{3,4} = \tfrac{1}{2}(E_s \pm iE_{\mathrm{LO}});\quad I_I(t) =
+    R\sqrt{P_sP_{\mathrm{LO}}}\cos\{\theta_{\mathrm{sig}}(t)-\theta_{\mathrm{LO}}(t)\},\ I_Q(t) = R\sqrt{P_sP_{\mathrm{LO}}}\sin\{\theta_{\mathrm{sig}}(t)-\theta_{\mathrm{LO}}(t)\}
+  symbols:
+  - R
+  - P_s
+  - P_{\mathrm{LO}}
   source_id: kikuchi_jlt_2016
   locator: Eqs. (18)-(23)
-  notes: 2x4 90-degree hybrid followed by two balanced photodiodes (phase-diversity homodyne). The 1/2 field factors and the loss of the factor 2 relative to Eq. (13) reflect the 4-way split. Square roots dropped in extraction ('R PsP cos').
+  notes: '2x4 90-degree hybrid followed by two balanced photodiodes (phase-diversity homodyne). The 1/2 field factors and
+    the loss of the factor 2 relative to Eq. (13) reflect the 4-way split. Square roots dropped in extraction (''R PsP cos'').
+    Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before prose
+    use'
+  verified: unreachable
 - id: ch02.eq.complex_baseband
   section: '2.3'
   latex: I_c(t) = I_I(t) + iI_Q(t) = R\sqrt{P_s(t)P_{\mathrm{LO}}}\exp[i\{\theta_s(t) + \theta_n(t)\}]
-  symbols: ["R", "P_s", "P_{\\mathrm{LO}}"]
+  symbols:
+  - R
+  - P_s
+  - P_{\mathrm{LO}}
   source_id: kikuchi_jlt_2016
   locator: Eq. (24)
-  notes: θ_n is the combined laser phase noise. Recovers the complex field up to phase noise; dual-polarization recovery uses two such receivers with a polarization-diversity front end.
+  notes: 'θ_n is the combined laser phase noise. Recovers the complex field up to phase noise; dual-polarization recovery
+    uses two such receivers with a polarization-diversity front end. Verifier (UNREACHABLE): not re-read in this verification
+    pass (session budget; source not opened); re-verify before prose use'
+  verified: unreachable
 - id: ch02.eq.shot_noise
   section: '2.3'
   latex: \langle \Delta \hat I^2 \rangle = 2qIB, \qquad B = \frac{1}{2T}
-  symbols: ["q", "I", "B", "T"]
+  symbols:
+  - q
+  - I
+  - B
+  - T
   source_id: kikuchi_jlt_2016
   locator: Eqs. (35)-(36)
-  notes: Shot-noise formula derived from coherent-state photon statistics; B is the minimum (Nyquist) bandwidth for symbol duration T. Conflicts with B for occupied bandwidth in ch02.eq.rc_bandwidth; writer should use B_n for noise bandwidth.
+  notes: Shot-noise formula derived from coherent-state photon statistics; B is the minimum (Nyquist) bandwidth for symbol
+    duration T. Conflicts with B for occupied bandwidth in ch02.eq.rc_bandwidth; writer should use B_n for noise bandwidth.
+  verified: match
 - id: ch02.eq.lo_shot_psd
   section: '2.3'
   latex: S_{I_{\mathrm{sh}}}(f) = qRP_{\mathrm{LO}} \quad (P_{\mathrm{LO}} \gg P_s,\ \text{two-sided})
-  symbols: ["q", "R", "P_{\\mathrm{LO}}"]
+  symbols:
+  - q
+  - R
+  - P_{\mathrm{LO}}
   source_id: ip_oe_2008
   locator: Sect. 3.3, text after Eq. (7)
-  notes: Together with signal current 2R sqrt(P_s P_LO), gives the LO-shot-noise-limited SNR proportional to P_s and independent of P_LO; derive in prose.
-# ---------------------------------------------------------------- 2.4
+  notes: Together with signal current 2R sqrt(P_s P_LO), gives the LO-shot-noise-limited SNR proportional to P_s and independent
+    of P_LO; derive in prose.
+  verified: match
 - id: ch02.eq.cd_taps_ip
   section: '2.4'
   latex: N_{\mathrm{CD}} = 2\pi|\beta_2| L R_s^2 \left(\frac{M}{K}\right)^2
-  symbols: ["N_{\\mathrm{CD}}", "\\beta", "L", "R_s"]
+  symbols:
+  - N_{\mathrm{CD}}
+  - \beta
+  - L
+  - R_s
   source_id: ip_oe_2008
   locator: Sect. 5.1, text after Eq. (33) (from Ip and Kahn JLT 2007)
-  notes: M/K is the rational oversampling ratio (samples per symbol); conflicts with M = constellation order, rename to n_ss in prose. Extraction 'N LRs ( ) M K 2 2 = 2π β'. Equivalent to Savory's truncated-impulse-response bound N = 2 floor(|D| λ² z /(2 c T²)) + 1 with T the sample period and D = -2πcβ2/λ² (that form was seen only in secondary transcriptions; see gaps).
+  notes: 'M/K is the rational oversampling ratio (samples per symbol); conflicts with M = constellation order, rename to n_ss
+    in prose. Extraction ''N LRs ( ) M K 2 2 = 2π β''. Equivalent to Savory''s truncated-impulse-response bound N = 2 floor(|D|
+    λ² z /(2 c T²)) + 1 with T the sample period and D = -2πcβ2/λ² (that form was seen only in secondary transcriptions; see
+    gaps). Verifier (PARTIAL): Formula verified; fix locator to Eq. (35) (not ''after Eq. (33)''). Equivalence to Savory''s
+    N = 2⌊|D|λ²z/(2cT²)⌋+1 holds with D = -2πcβ2/λ² and T = (K/M)Ts (both ~ 2π|β2|z/T²).'
+  verified: partial
 - id: ch02.eq.td_eq_complexity
   section: '2.4'
   latex: C_{\mathrm{TD}} = 4NR_s \ \ \text{complex multiplications per second}
-  symbols: ["N", "R_s"]
+  symbols:
+  - N
+  - R_s
   source_id: ip_oe_2008
   locator: Sect. 5.1
-  notes: Dual-polarization 2x2 butterfly with N taps per filter, one output per symbol. Divide by the net bit rate for multiplications per bit.
+  notes: 'Dual-polarization 2x2 butterfly with N taps per filter, one output per symbol. Divide by the net bit rate for multiplications
+    per bit. Verifier (PARTIAL): Fix locator to Sect. 5.1.4.'
+  verified: partial
 - id: ch02.eq.fde_complexity
   section: '2.4'
   latex: C_{\mathrm{FD}} = R_s\,\frac{(N+B-1)\left[2\log_2(N+B-1) + 4\right]}{B} \ \ \text{complex multiplications per second}
-  symbols: ["N", "R_s"]
+  symbols:
+  - N
+  - R_s
   source_id: ip_oe_2008
   locator: Sect. 5.1
-  notes: Overlap-save FFT block processing with block length B (here B is block length, not bandwidth). Extraction 'Rs ( ) ( ) N + B −1 ( ) 2log2 N + B −1 + 4 B' leaves the placement of B ambiguous; division by B is required dimensionally (per-symbol cost). VERIFY against PDF. Ip states asymptotic growth R_s² log R_s.
+  notes: 'Overlap-save FFT block processing with block length B (here B is block length, not bandwidth). Extraction ''Rs (
+    ) ( ) N + B −1 ( ) 2log2 N + B −1 + 4 B'' leaves the placement of B ambiguous; division by B is required dimensionally
+    (per-symbol cost). VERIFY against PDF. Ip states asymptotic growth R_s² log R_s. Verifier (PARTIAL): Glyph order consistent
+    with division by B (only dimensionally valid reading); still confirm against typeset PDF. Fix locator to 5.1.4.'
+  verified: partial
 - id: ch02.eq.lms_mmse
   section: '2.4'
-  latex: \mathbf{W}_{\mathrm{opt}} = \mathbf{A}^{-1}\boldsymbol{\alpha}, \quad \mathbf{A} = E[\mathbf{y}_k\mathbf{y}_k^{H}],\ \boldsymbol{\alpha} = E[\mathbf{y}_k\mathbf{x}_k^{H}]
+  latex: \mathbf{W}_{\mathrm{opt}} = \mathbf{A}^{-1}\boldsymbol{\alpha}, \quad \mathbf{A} = E[\mathbf{y}_k\mathbf{y}_k^{H}],\
+    \boldsymbol{\alpha} = E[\mathbf{y}_k\mathbf{x}_k^{H}]
   symbols: []
   source_id: ip_oe_2008
   locator: Eq. (32)
-  notes: Wiener (MMSE) solution for an N = 2L+1 tap fractionally spaced 2x2 equalizer; the adaptive LMS update that follows in Ip (Eq. 34) was not captured in extraction. Extraction shows 'A = E[y_k y_k^*T]' and 'α = E[y_k x_k^*T]'; conjugate-transpose convention to be checked.
-# ---------------------------------------------------------------- 2.5
+  notes: 'Wiener (MMSE) solution for an N = 2L+1 tap fractionally spaced 2x2 equalizer; the adaptive LMS update that follows
+    in Ip (Eq. 34) was not captured in extraction. Extraction shows ''A = E[y_k y_k^*T]'' and ''α = E[y_k x_k^*T]''; conjugate-transpose
+    convention to be checked. Verifier (PARTIAL): Definitions confirmed (^{*T} = Hermitian, matches ledger ^H). W_opt = A^{-1}α
+    form not re-seen; K separate Wiener solutions for non-integer M/K (e.g. 3/2).'
+  verified: partial
 - id: ch02.eq.mi_def
   section: '2.5'
   latex: I(\boldsymbol{X};\boldsymbol{Y}) = \mathbb{E}_{\boldsymbol{X},\boldsymbol{Y}}\left[\log_2\frac{f_{\boldsymbol{Y}|\boldsymbol{X}}(\boldsymbol{Y}|\boldsymbol{X})}{f_{\boldsymbol{Y}}(\boldsymbol{Y})}\right]
   symbols: []
   source_id: alvarado_jlt_2018
   locator: Eqs. (3)-(4)
-  notes: AIR for symbol-wise (nonbinary or MLC-MSD) decoding. Discrete-constellation, equal-probability form in Eqs. (5)-(7).
+  notes: 'AIR for symbol-wise (nonbinary or MLC-MSD) decoding. Discrete-constellation, equal-probability form in Eqs. (5)-(7).
+    Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify before prose
+    use'
+  verified: unreachable
 - id: ch02.eq.gmi_bitwise
   section: '2.5'
   latex: G = \sum_{k=1}^{m} I(B_k;\boldsymbol{Y}) = \sum_{k=1}^{m}\mathbb{E}_{B_k,\boldsymbol{Y}}\left[\log_2\frac{f_{\boldsymbol{Y}|B_k}(\boldsymbol{Y}|B_k)}{f_{\boldsymbol{Y}}(\boldsymbol{Y})}\right]
-  symbols: ["m"]
+  symbols:
+  - m
   source_id: alvarado_jlt_2018
   locator: Eqs. (14)-(15)
-  notes: Valid for independent, uniform bits and bit-wise metric; the general GMI Eq. (12) maximizes over s >= 0 and here s = 1. m = log2 M bits per symbol.
+  notes: 'Valid for independent, uniform bits and bit-wise metric; the general GMI Eq. (12) maximizes over s >= 0 and here
+    s = 1. m = log2 M bits per symbol. Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source
+    not opened); re-verify before prose use'
+  verified: unreachable
 - id: ch02.eq.awgn_capacity
   section: '2.5'
-  latex: C = \tfrac{1}{2}\log_2(1+\mathrm{SNR})\ \text{bit per real dimension};\qquad C = \log_2(1+\mathrm{SNR})\ \text{bit per complex symbol}
-  symbols: ["C", "\\mathrm{SNR}"]
+  latex: C = \tfrac{1}{2}\log_2(1+\mathrm{SNR})\ \text{bit per real dimension};\qquad C = \log_2(1+\mathrm{SNR})\ \text{bit
+    per complex symbol}
+  symbols:
+  - C
+  - \mathrm{SNR}
   source_id: bocherer_tcom_2015
   locator: Abstract; Sect. VII (Conclusions)
-  notes: Both forms are printed (real-ASK abstract and complex-QAM conclusion 'log2(1+P/1)'). C and SNR already in notation.yaml (1.6, 1.5).
+  notes: 'Both forms are printed (real-ASK abstract and complex-QAM conclusion ''log2(1+P/1)''). C and SNR already in notation.yaml
+    (1.6, 1.5). Verifier (PARTIAL): Real-dimension form verified as Eq. (1) (add to locator). Complex-symbol form is the trivial
+    doubling; Conclusions sentence not re-seen.'
+  verified: partial
 - id: ch02.eq.mb_distribution
   section: '2.5'
   latex: P_{X_\nu}(x) = A_\nu e^{-\nu|x|^2}, \qquad A_\nu = \frac{1}{\sum_{x'\in\mathcal{X}} e^{-\nu|x'|^2}}
-  symbols: ["\\nu"]
+  symbols:
+  - \nu
   source_id: bocherer_tcom_2015
   locator: Eq. (8)
-  notes: CONFLICT - ν is optical frequency in notation.yaml (1.5). Cho & Winzer Eq. (4) use λ (also clashes with wavelength). Propose a new symbol (e.g. \lambda_{\mathrm{MB}} or \kappa) in book/notation/ch02_proposals.yaml. ν chosen so that E|ΔX|² = P (Eq. 9).
+  notes: 'CONFLICT - ν is optical frequency in notation.yaml (1.5). Cho & Winzer Eq. (4) use λ (also clashes with wavelength).
+    Propose a new symbol (e.g. \lambda_{\mathrm{MB}} or \kappa) in book/notation/ch02_proposals.yaml. ν chosen so that E|ΔX|²
+    = P (Eq. 9). Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened); re-verify
+    before prose use'
+  verified: unreachable
 - id: ch02.eq.entropy
   section: '2.5'
   latex: H(X) = -\sum_{x\in\mathcal{X}} P_X(x)\log_2 P_X(x)
-  symbols: ["H"]
+  symbols:
+  - H
   source_id: cho_jlt_2019
   locator: Sect. II, text after Eq. (4)
-  notes: Per-dimension entropy; the 2D PS-QAM entropy is 2H(X). Cho & Winzer call it 'binary entropy' loosely; it is the Shannon entropy in bits.
+  notes: 'Per-dimension entropy; the 2D PS-QAM entropy is 2H(X). Cho & Winzer call it ''binary entropy'' loosely; it is the
+    Shannon entropy in bits. Verifier (PARTIAL): Per-dimension entropy usage confirmed; explicit definition sentence not re-seen.'
+  verified: partial
 - id: ch02.eq.pas_rate
   section: '2.5'
   latex: \mathrm{IR} = 2\left(H(X) - m(1-R_c)\right)
-  symbols: ["H", "m", "R_c"]
+  symbols:
+  - H
+  - m
+  - R_c
   source_id: cho_jlt_2019
   locator: Eq. (5)
-  notes: Bits per 2D symbol; m = log2 of the PAM order per dimension (bits per dimension); R_c FEC code rate. Requires symmetric MB distribution and systematic FEC with parity used as sign bits.
+  notes: Bits per 2D symbol; m = log2 of the PAM order per dimension (bits per dimension); R_c FEC code rate. Requires symmetric
+    MB distribution and systematic FEC with parity used as sign bits.
+  verified: match
 - id: ch02.eq.pas_code_rate
   section: '2.5'
   latex: R_c = 1 - \frac{H(X) - \mathrm{IR}/2}{m}
-  symbols: ["R_c", "H", "m"]
+  symbols:
+  - R_c
+  - H
+  - m
   source_id: cho_jlt_2019
   locator: Eq. (6)
-  notes: Inverse of Eq. (5).
+  notes: 'Inverse of Eq. (5). Verifier (PARTIAL): Eq. (6) is the inverse of Eq. (5) as stated; typeset form not seen but algebra
+    is correct.'
+  verified: partial
 - id: ch02.eq.shaping_gain_ultimate
   section: '2.5'
   latex: G_{s}^{\max} = 10\log_{10}\frac{\pi e}{6} \approx 1.53\ \mathrm{dB}
   symbols: []
   source_id: bocherer_tcom_2015
   locator: Sect. III-D
-  notes: Ratio of the power of a uniform (cube) input to a Gaussian input at equal entropy, high-SNR limit; Böcherer cites Forney et al. 1984 [13, Sec. IV.B]. Derive in prose from differential entropies of uniform and Gaussian densities.
-# ---------------------------------------------------------------- 2.6
+  notes: Ratio of the power of a uniform (cube) input to a Gaussian input at equal entropy, high-SNR limit; Böcherer cites
+    Forney et al. 1984 [13, Sec. IV.B]. Derive in prose from differential entropies of uniform and Gaussian densities.
+  verified: match
 - id: ch02.eq.fec_overhead
   section: '2.6'
   latex: R_c = \frac{K}{N}, \qquad \mathrm{OH} = \frac{N-K}{K} = \frac{1}{R_c} - 1
-  symbols: ["R_c"]
+  symbols:
+  - R_c
   source_id: zhang_thesis_utoronto_2017
   locator: Eqs. (2.3)-(2.4)
-  notes: K information bits, N coded bits (N clashes with tap count; use n, k in prose). Check cases CFEC 14.8%, oFEC 15.32%, KP4 544/514-1 = 5.84%.
+  notes: 'K information bits, N coded bits (N clashes with tap count; use n, k in prose). Check cases CFEC 14.8%, oFEC 15.32%,
+    KP4 544/514-1 = 5.84%. Verifier (UNREACHABLE): not re-read in this verification pass (session budget; source not opened);
+    re-verify before prose use (definitions are standard; arithmetic: KP4 544/514-1 = 5.84%, 255/239-1 = 6.69%).'
+  verified: unreachable
 - id: ch02.eq.ncg_hd
   section: '2.6'
-  latex: \mathrm{NCG}_{\mathrm{HD}}(p^*) = 20\log_{10}\mathrm{erfc}^{-1}(2\cdot 10^{-15}) - 20\log_{10}\mathrm{erfc}^{-1}(2p^*) + 10\log_{10}R_c
-  symbols: ["R_c"]
+  latex: \mathrm{NCG}_{\mathrm{HD}}(p^*) = 20\log_{10}\mathrm{erfc}^{-1}(2\cdot 10^{-15}) - 20\log_{10}\mathrm{erfc}^{-1}(2p^*)
+    + 10\log_{10}R_c
+  symbols:
+  - R_c
   source_id: zhang_thesis_utoronto_2017
   locator: Eq. (2.5)
-  notes: Binary-input (BPSK/QPSK per quadrature) reference; p* is the pre-FEC BER threshold giving 1e-15 output. Use to compute KP4, staircase and CFEC NCGs in calc and compare with ch02.fec.* stated values. Zhang calls it 'the commonly used expression ... in fibre-optic communications [9]'.
+  notes: Binary-input (BPSK/QPSK per quadrature) reference; p* is the pre-FEC BER threshold giving 1e-15 output. Use to compute
+    KP4, staircase and CFEC NCGs in calc and compare with ch02.fec.* stated values. Zhang calls it 'the commonly used expression
+    ... in fibre-optic communications [9]'.
+  verified: match
 - id: ch02.eq.ncg_sd
   section: '2.6'
   latex: \mathrm{NCG}_{\mathrm{SD}}(E_s/N_0) = 20\log_{10}\mathrm{erfc}^{-1}(2\cdot 10^{-15}) - E_s/N_0\,[\mathrm{dB}] + 10\log_{10}R_c
-  symbols: ["R_c"]
+  symbols:
+  - R_c
   source_id: zhang_thesis_utoronto_2017
   locator: Eq. (2.7)
-  notes: Es/N0 defined as 10log10(snr/2) in the thesis; SD NCG for BPSK-equivalent channel.
+  notes: 'Es/N0 defined as 10log10(snr/2) in the thesis; SD NCG for BPSK-equivalent channel. Verifier (UNREACHABLE): not re-read
+    in this verification pass (session budget; source not opened); re-verify before prose use'
+  verified: unreachable
